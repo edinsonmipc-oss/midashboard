@@ -9,17 +9,17 @@
       "description": "57 herramientas online. Meta: $5k/mes en 6 meses.",
       "url": "",
       "metrics": {
-        "herramientas": 57,
+        "herramientas": 60,
         "meta_ingresos": "$5k/mes",
         "plazo": "6 meses"
       },
-      "last_update": "2026-04-30",
+      "last_update": "2026-05-02",
       "next_steps": [
-        "Mejorar SEO de cada herramienta",
-        "Agregar más herramientas",
-        "Configurar analytics"
+        "Subir ZIP a Hostinger",
+        "Agregar más herramientas populares",
+        "Configurar analytics real"
       ],
-      "notes": "Proyecto inicial, necesita más desarrollo"
+      "notes": "60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator"
     },
     {
       "id": "primeproperty",
@@ -99,5 +99,9 @@
     "activos": 3,
     "pendientes": 1,
     "ideas": 1
+  },
+  "toolshubpro": {
+    "tools_count": 60,
+    "categories": 10
   }
 }

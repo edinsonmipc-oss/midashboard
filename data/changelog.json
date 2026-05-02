@@ -2,6 +2,27 @@
   "entries": [
     {
       "date": "2026-05-02",
+      "time": "12:30",
+      "project": "toolshubpro",
+      "type": "mejora",
+      "text": "Agregadas 3 herramientas nuevas: Currency Converter (16 monedas), QR Code Generator, Date Duration Calculator"
+    },
+    {
+      "date": "2026-05-02",
+      "time": "12:30",
+      "project": "toolshubpro",
+      "type": "infra",
+      "text": "Sitemap.xml generado con 74 URLs + robots.txt — SEO listo"
+    },
+    {
+      "date": "2026-05-02",
+      "time": "12:30",
+      "project": "toolshubpro",
+      "type": "infra",
+      "text": "ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger"
+    },
+    {
+      "date": "2026-05-02",
       "time": "12:00",
       "project": "toolshubpro",
       "type": "mejora",
