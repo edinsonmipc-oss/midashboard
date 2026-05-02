@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-03T02:27",
-  "total_leads": 20,
+  "updated": "2026-05-03T07:01",
+  "total_leads": 30,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -168,6 +168,88 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales"
+      }
+    ],
+    "2026-05-03_batch2": [
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Buscan contractors para mantenimiento"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "website": "johnholland.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Cushman & Wakefield",
+        "email": "property@cushwake.com",
+        "website": "cushwake.com",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Administran propiedades comerciales y residenciales"
+      },
+      {
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "website": "kayburton.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
+        "website": "ispt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "website": "laingorourke.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
       }
     ]
   }
