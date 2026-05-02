@@ -2,6 +2,20 @@
   "entries": [
     {
       "date": "2026-05-02",
+      "time": "12:00",
+      "project": "toolshubpro",
+      "type": "mejora",
+      "text": "YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org (muerto) por nuestro servidor con yt-dlp"
+    },
+    {
+      "date": "2026-05-02",
+      "time": "12:00",
+      "project": "toolshubpro",
+      "type": "analisis",
+      "text": "Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan correctamente"
+    },
+    {
+      "date": "2026-05-02",
       "time": "11:38",
       "project": "dashboard",
       "type": "mejora",
