@@ -1,0 +1,174 @@
+{
+  "updated": "2026-05-03T02:27",
+  "total_leads": 20,
+  "businesses": [
+    "PrimeScape Construction",
+    "Prime Property Maintenance"
+  ],
+  "leads_by_date": {
+    "2026-05-02": [
+      {
+        "company": "BuildCorp Australia",
+        "email": "info@buildcorp.com.au",
+        "website": "buildcorp.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos comerciales en Melbourne CBD"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Líderes en construcción modular"
+      },
+      {
+        "company": "Mirvac Real Estate",
+        "email": "partnerships@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Desarrollos residenciales premium"
+      },
+      {
+        "company": "Frasers Property Australia",
+        "email": "procurement@frasersproperty.com.au",
+        "website": "frasersproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Grandes desarrollos mixtos"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "Metricon Homes",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas #1 en Australia"
+      },
+      {
+        "company": "Porter Davis Homes",
+        "email": "supplier@porterdavis.com.au",
+        "website": "porterdavis.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas Melbourne"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "website": "stockland.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Desarrollador de comunidades master-planned"
+      },
+      {
+        "company": "Kennards Hire",
+        "email": "hire@kennards.com.au",
+        "website": "kennards.com.au",
+        "type": "construction_supply",
+        "contact": "",
+        "notes": "Alquiler de equipos de construcción"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Desarrollos comerciales de alta calidad"
+      }
+    ],
+    "2026-05-03_batch1": [
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Volumen alto de proyectos"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Buscan contractors para mantenimiento"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "website": "hockingstuart.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Boutique Homes",
+        "email": "info@boutiquehomes.com.au",
+        "website": "boutiquehomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Dexus",
+        "email": "leasing@dexus.com",
+        "website": "dexus.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Brookfield Multiplex",
+        "email": "procurement@brookfieldmultiplex.com",
+        "website": "brookfieldmultiplex.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "Knight Frank Australia",
+        "email": "property@knightfrank.com.au",
+        "website": "knightfrank.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Administran propiedades comerciales y residenciales"
+      }
+    ]
+  }
+}
