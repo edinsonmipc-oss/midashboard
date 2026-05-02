@@ -1,0 +1,81 @@
+{
+  "entries": [
+    {
+      "date": "2026-05-02",
+      "time": "11:38",
+      "project": "dashboard",
+      "type": "mejora",
+      "text": "Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático"
+    },
+    {
+      "date": "2026-05-02",
+      "time": "11:30",
+      "project": "dashboard",
+      "type": "infra",
+      "text": "Dashboard desplegado en GitHub Pages + túnel Cloudflare como respaldo"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "18:00",
+      "project": "primeproperty",
+      "type": "mejora",
+      "text": "SEO: FAQPage schema agregado a páginas top-10/15"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "17:30",
+      "project": "primeproperty",
+      "type": "mejora",
+      "text": "Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "17:00",
+      "project": "primeproperty",
+      "type": "mejora",
+      "text": "SEO: Sitemap actualizado con 82 URLs y prioridades 0.8-0.85"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "16:30",
+      "project": "primeproperty",
+      "type": "mejora",
+      "text": "Imágenes optimizadas a WebP (de 20MB a 8.7MB)"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "16:00",
+      "project": "primeproperty",
+      "type": "mejora",
+      "text": "WhatsApp reemplazado por SMS/call/email para Australia"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "15:00",
+      "project": "primeproperty",
+      "type": "analisis",
+      "text": "Análisis competitivo: competidores con 10-30 URLs vs 965 URLs propias"
+    },
+    {
+      "date": "2026-05-01",
+      "time": "14:00",
+      "project": "primeproperty",
+      "type": "analisis",
+      "text": "Análisis Google Search Console: 31 clicks, 3986 impresiones en 28 días"
+    },
+    {
+      "date": "2026-04-30",
+      "time": "20:00",
+      "project": "dashboard",
+      "type": "creacion",
+      "text": "Dominio midashboard.xyz comprado en Namecheap ($0.90)"
+    },
+    {
+      "date": "2026-04-30",
+      "time": "19:00",
+      "project": "dashboard",
+      "type": "creacion",
+      "text": "Dashboard creado en Flask con vista general + 3 proyectos"
+    }
+  ]
+}

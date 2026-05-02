@@ -1,0 +1,103 @@
+{
+  "updated": "2026-05-02T11:38",
+  "projects": [
+    {
+      "id": "toolshubpro",
+      "name": "ToolshubPro",
+      "emoji": "🛠️",
+      "status": "activo",
+      "description": "57 herramientas online. Meta: $5k/mes en 6 meses.",
+      "url": "",
+      "metrics": {
+        "herramientas": 57,
+        "meta_ingresos": "$5k/mes",
+        "plazo": "6 meses"
+      },
+      "last_update": "2026-04-30",
+      "next_steps": [
+        "Mejorar SEO de cada herramienta",
+        "Agregar más herramientas",
+        "Configurar analytics"
+      ],
+      "notes": "Proyecto inicial, necesita más desarrollo"
+    },
+    {
+      "id": "primeproperty",
+      "name": "Prime Property Maintenance",
+      "emoji": "🏡",
+      "status": "activo",
+      "description": "Servicios de mantenimiento de propiedades en Melbourne.",
+      "url": "https://primepropertymaintenance.au",
+      "metrics": {
+        "urls_en_sitemap": 965,
+        "clicks_28d": 31,
+        "impresiones_28d": 3986,
+        "avg_position": 41.87,
+        "ctr": "0.77%"
+      },
+      "last_update": "2026-05-01",
+      "next_steps": [
+        "Agregar GA4 con G-XXXXXXXXXX",
+        "Mejorar top-10 keywords",
+        "Construir backlinks"
+      ],
+      "notes": "965 URLs, tráfico creciendo"
+    },
+    {
+      "id": "tradeos",
+      "name": "Tradeos",
+      "emoji": "📦",
+      "status": "pendiente",
+      "description": "Plataforma de comercio/negocios.",
+      "url": "",
+      "metrics": {},
+      "last_update": "2026-04-30",
+      "next_steps": [
+        "Desplegar en Hostinger/GitHub Pages",
+        "Configurar funcionalidad básica"
+      ],
+      "notes": "Requiere deploy y pruebas"
+    },
+    {
+      "id": "antoniopaving",
+      "name": "Antonio Paving",
+      "emoji": "🏗️",
+      "status": "idea",
+      "description": "Servicios de pavimentación y construcción.",
+      "url": "",
+      "metrics": {},
+      "last_update": "2026-05-01",
+      "next_steps": [
+        "Definir servicios exactos",
+        "Crear sitio web",
+        "Buscar leads: builders, contractors"
+      ],
+      "notes": "Nuevo proyecto, en fase de definición"
+    },
+    {
+      "id": "leadgen",
+      "name": "Lead Generation",
+      "emoji": "🎯",
+      "status": "activo",
+      "description": "Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.",
+      "url": "",
+      "metrics": {
+        "targets": "Builders, contractors, real estate en Melbourne"
+      },
+      "last_update": "2026-05-01",
+      "next_steps": [
+        "Identificar top 50 builders en Melbourne",
+        "Recolectar emails",
+        "Preparar template de outreach",
+        "Enviar propuestas"
+      ],
+      "notes": "Idea recién iniciada"
+    }
+  ],
+  "stats": {
+    "total_projects": 5,
+    "activos": 3,
+    "pendientes": 1,
+    "ideas": 1
+  }
+}
