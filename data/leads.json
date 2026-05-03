@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-03T19:01",
-  "total_leads": 40,
+  "updated": "2026-05-04T07:00",
+  "total_leads": 50,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -332,6 +332,88 @@
         "type": "constructora",
         "contact": "",
         "notes": "Buscan subcontratistas calificados"
+      }
+    ],
+    "2026-05-04_batch4": [
+      {
+        "company": "Multiplex",
+        "email": "subcontractors@multiplex.com",
+        "website": "multiplex.global",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Necesitan tradies para subcontratos"
+      },
+      {
+        "company": "Watpac",
+        "email": "projects@watpac.com.au",
+        "website": "watpac.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "website": "century21.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Savills Australia",
+        "email": "property@savills.com.au",
+        "website": "savills.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
       }
     ]
   }
