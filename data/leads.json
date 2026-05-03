@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-03T07:01",
-  "total_leads": 30,
+  "updated": "2026-05-03T19:01",
+  "total_leads": 40,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -247,6 +247,88 @@
         "company": "Kane Constructions",
         "email": "projects@kane.com.au",
         "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      }
+    ],
+    "2026-05-03_batch3": [
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "website": "hockingstuart.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Built",
+        "email": "enquiries@built.com.au",
+        "website": "built.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos de construcción en Melbourne"
+      },
+      {
+        "company": "Mirvac",
+        "email": "partnerships@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "website": "goodman.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "First National Real Estate",
+        "email": "commercial@fnre.com.au",
+        "website": "fnre.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
         "type": "constructora",
         "contact": "",
         "notes": "Buscan subcontratistas calificados"
