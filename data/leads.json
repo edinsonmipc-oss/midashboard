@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-04T19:01",
-  "total_leads": 60,
+  "updated": "2026-05-05T07:00",
+  "total_leads": 70,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -496,6 +496,88 @@
         "type": "builder",
         "contact": "",
         "notes": "Necesitan tradies para subcontratos"
+      }
+    ],
+    "2026-05-05_batch6": [
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Mirvac",
+        "email": "partnerships@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "website": "century21.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "website": "stockland.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "website": "kayburton.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Volumen alto de proyectos"
+      },
+      {
+        "company": "Simonds Homes",
+        "email": "trades@simonds.com.au",
+        "website": "simonds.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
       }
     ]
   }
