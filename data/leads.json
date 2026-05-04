@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-04T07:00",
-  "total_leads": 50,
+  "updated": "2026-05-04T19:01",
+  "total_leads": 60,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -414,6 +414,88 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne"
+      }
+    ],
+    "2026-05-04_batch5": [
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Administran propiedades comerciales y residenciales"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Porter Davis",
+        "email": "supplier@porterdavis.com.au",
+        "website": "porterdavis.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Volumen alto de proyectos"
+      },
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "website": "laingorourke.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "website": "stockland.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Charter Hall",
+        "email": "leasing@charterhall.com.au",
+        "website": "charterhall.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Necesitan tradies para subcontratos"
       }
     ]
   }
