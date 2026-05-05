@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-05T07:00",
-  "total_leads": 70,
+  "updated": "2026-05-05T19:00",
+  "total_leads": 80,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -578,6 +578,88 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne"
+      }
+    ],
+    "2026-05-05_batch7": [
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos de construcción en Melbourne"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "website": "hockingstuart.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Mirvac",
+        "email": "info@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Volumen alto de proyectos"
+      },
+      {
+        "company": "Henley Homes",
+        "email": "trades@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Necesitan tradies para subcontratos"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
+        "website": "ispt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "Savills Australia",
+        "email": "property@savills.com.au",
+        "website": "savills.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Administran propiedades comerciales y residenciales"
+      },
+      {
+        "company": "Fletchers Real Estate",
+        "email": "property@fletcher.com.au",
+        "website": "fletcher.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
       }
     ]
   }
