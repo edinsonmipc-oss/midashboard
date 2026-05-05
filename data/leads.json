@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-05T19:00",
-  "total_leads": 80,
+  "updated": "2026-05-06T07:00",
+  "total_leads": 90,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -660,6 +660,88 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular"
+      }
+    ],
+    "2026-05-06_batch8": [
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "website": "century21.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos de construcción en Melbourne"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Contratistas principales nivel 1"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "website": "hockingstuart.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "Brookfield Multiplex",
+        "email": "procurement@brookfieldmultiplex.com",
+        "website": "brookfieldmultiplex.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "Charter Hall",
+        "email": "leasing@charterhall.com.au",
+        "website": "charterhall.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "First National Real Estate",
+        "email": "commercial@fnre.com.au",
+        "website": "fnre.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Portfolio grande en Melbourne"
       }
     ]
   }
