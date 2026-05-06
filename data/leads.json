@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-06T07:00",
-  "total_leads": 90,
+  "updated": "2026-05-06T19:01",
+  "total_leads": 100,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -742,6 +742,88 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne"
+      }
+    ],
+    "2026-05-06_batch9": [
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "website": "carltonhomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Savills Australia",
+        "email": "property@savills.com.au",
+        "website": "savills.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Buscan subcontratistas calificados"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "CBRE Australia",
+        "email": "facilities@cbre.com.au",
+        "website": "cbre.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Administran propiedades comerciales y residenciales"
+      },
+      {
+        "company": "Dexus",
+        "email": "leasing@dexus.com",
+        "website": "dexus.com",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "website": "johnholland.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Knight Frank Australia",
+        "email": "property@knightfrank.com.au",
+        "website": "knightfrank.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
       }
     ]
   }
