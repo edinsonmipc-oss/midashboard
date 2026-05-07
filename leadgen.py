@@ -143,7 +143,8 @@ def main():
             "website": l["website"],
             "type": l["type"],
             "contact": "",
-            "notes": get_notes(l["type"])
+            "notes": get_notes(l["type"]),
+            "verified": "unknown"
         })
     
     # Store with timestamp

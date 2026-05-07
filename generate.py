@@ -56,13 +56,26 @@ def generate():
         if t not in groups: t = "other"
         groups[t].append(l)
 
+    def verify_badge(status):
+        return {'verified':'&#x2705;','risky':'&#x26A0;&#xFE0F;','invalid':'&#x274C;'}.get(status,'&#x2753;')
+
     def elist(leads, label):
         if not leads:
             return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">0</span></div><p class="egm">Sin emails</p></div>' % label
-        entries = "".join('<div class="ei"><span class="eic">%s</span><span class="eie">%s</span><span class="ein">%s</span></div>' % (esc(l["company"]), esc(l["email"]), esc(l.get("notes",""))) for l in leads)
+        entries = "".join(
+            '<div class="ei" id="e-%s"><span class="eic">%s</span>'
+            '<span class="eie">%s <span class="evb">%s</span></span>'
+            '<span class="ein">%s</span>'
+            '<button class="eb eb-sm" onclick="mc(\'%s\')">&#x2705; Hecho</button></div>'
+            % (esc(l["email"]), esc(l["company"]), esc(l["email"]),
+               verify_badge(l.get("verified","")),
+               esc(l.get("notes","")),
+               esc(l["email"]))
+            for l in leads)
         text = "; ".join(l["email"] for l in leads).replace("'","\\'")
         n = len(leads)
-        return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><button class="eb" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar</button></div><div class="eil">%s</div></div>' % (label, n, text, n, entries)
+        verified_count = sum(1 for l in leads if l.get("verified") == "verified")
+        return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><span class="egv"> &#x2705;%d</span><button class="eb" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar</button></div><div class="eil">%s</div></div>' % (label, n, verified_count, text, n, entries)
 
     outreach = ""
     if today_leads:
@@ -180,11 +193,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .eb:hover{background:var(--c3);color:var(--fg)}
 .egm{padding:14px;font-size:.82em;color:var(--t2);text-align:center}
 .eil{max-height:220px;overflow-y:auto}
-.ei{display:flex;gap:6px;padding:5px 12px;border-bottom:1px solid #0d0d14;font-size:.78em;flex-wrap:wrap}
+.ei{display:flex;gap:6px;padding:5px 12px;border-bottom:1px solid #0d0d14;font-size:.78em;flex-wrap:wrap;align-items:center}
 .ei:last-child{border:none}
 .eic{color:var(--fg);font-weight:500;min-width:100px}
-.eie{color:#818cf8}
-.ein{color:var(--t2);font-size:.9em}
+.eie{color:#818cf8;display:inline-flex;align-items:center;gap:4px}
+.evb{font-size:1.1em;cursor:help}
+.eb-sm{font-size:.7em;padding:1px 6px;margin-left:auto;background:var(--c2)}
 .sc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--a)}
 .sch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
 .sch h3{font-size:.9em;font-weight:600}
@@ -366,6 +380,22 @@ navigator.clipboard.writeText(t).then(function(){toast('\\u2705 '+c+' emails cop
 }else{fb(t)}
 }
 function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('\\u2705 Copiado')}catch(e){toast('\\u274c Error')}document.body.removeChild(ta)}
+
+// Lead contact tracking (localStorage)
+function cm(){try{return JSON.parse(localStorage.getItem('contacted')||'{}')}catch(e){return{}}}
+function mc(email){
+var m=cm();m[email]=new Date().toISOString().slice(0,10);
+try{localStorage.setItem('contacted',JSON.stringify(m))}catch(e){}
+var el=document.getElementById('e-'+email);
+if(el){el.style.opacity='0.5';el.querySelector('.eb-sm').textContent='\\u2705 Enviado'}
+toast('\\u2705 Marcado como contactado')
+}
+// Hide already contacted on load
+(function(){
+var m=cm();Object.keys(m).forEach(function(email){
+var el=document.getElementById('e-'+email);
+if(el){el.style.opacity='0.5';var btn=el.querySelector('.eb-sm');if(btn)btn.textContent='\\u2705 '+m[email]}
+})})();
 
 function lt(){try{return JSON.parse(localStorage.getItem('htasks'))||{today:[],urgent:[],week:[],done:[]}}catch(e){return{today:[],urgent:[],week:[],done:[]}}}
 function st(d){try{localStorage.setItem('htasks',JSON.stringify(d))}catch(e){}}

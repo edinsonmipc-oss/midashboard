@@ -19,7 +19,7 @@
         "Agregar más herramientas populares",
         "Configurar analytics real"
       ],
-      "notes": "60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator"
+      "notes": "60 herramientas. Auditado y optimizado. Backlinks en progreso."
     },
     {
       "id": "primeproperty",
@@ -41,7 +41,7 @@
         "Mejorar top-10 keywords",
         "Construir backlinks"
       ],
-      "notes": "965 URLs, tráfico creciendo"
+      "notes": "965 URLs. Optimizado con GA4 real. Tráfico creciendo."
     },
     {
       "id": "tradeos",
@@ -62,17 +62,21 @@
       "id": "antoniopaving",
       "name": "Antonio Paving",
       "emoji": "🏗️",
-      "status": "idea",
-      "description": "Servicios de pavimentación y construcción.",
-      "url": "",
-      "metrics": {},
+      "status": "activo",
+      "description": "Pavimentación residencial y comercial en Melbourne.",
+      "url": "https://antoniopaving.com.au",
+      "metrics": {
+        "servicios": 6,
+        "paginas": 370,
+        "ubicacion": "Melbourne VIC"
+      },
       "last_update": "2026-05-01",
       "next_steps": [
-        "Definir servicios exactos",
-        "Crear sitio web",
-        "Buscar leads: builders, contractors"
+        "Mejorar SEO de páginas de servicios",
+        "Agregar más fotos de proyectos",
+        "Conseguir backlinks AU"
       ],
-      "notes": "Nuevo proyecto, en fase de definición"
+      "notes": "Sitio live con 370+ páginas SEO. Auditado y optimizado en mayo 2026."
     },
     {
       "id": "leadgen",
@@ -96,7 +100,7 @@
   ],
   "stats": {
     "total_projects": 5,
-    "activos": 3,
+    "activos": 4,
     "pendientes": 1,
     "ideas": 1
   },

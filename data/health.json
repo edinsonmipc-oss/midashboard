@@ -65,6 +65,26 @@
         "Mejorar SEO de las páginas de herramientas",
         "Agregar analytics para tracking de uso"
       ]
+    },
+    {
+      "name": "Antonio Paving",
+      "url": "https://antoniopaving.com.au",
+      "status": "online",
+      "uptime_24h": "99.3%",
+      "last_checked": "2026-05-07T12:00",
+      "seo_metrics": {
+        "pages_indexed": 370,
+        "clicks_28d": 12,
+        "impressions_28d": 1500,
+        "avg_position": 35.5,
+        "ctr": "0.8%"
+      },
+      "issues": [],
+      "improvements": [
+        "Mejorar velocidad de carga (CSS minificado ✅)",
+        "Agregar Google Business Profile",
+        "Conseguir reseñas de clientes"
+      ]
     }
   ]
 }
