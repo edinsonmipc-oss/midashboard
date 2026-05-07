@@ -19,6 +19,7 @@ def generate():
     leads_data = load_json("leads.json")
     health = load_json("health.json")
     ideas_data = load_json("ideas.json")
+    templates = load_json("templates.json") if os.path.exists(os.path.join(DIR, "data", "templates.json")) else {"templates":[]}
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     today_str = date.today().isoformat()
 
@@ -27,6 +28,22 @@ def generate():
     total_leads = leads_data.get("total_leads", 0)
     sites_online = sum(1 for s in health["sites"] if s["status"] == "online")
     sites_total = len(health["sites"])
+
+    # ── Business target mapping ──
+    BIZ_TARGET = {
+        "builder": "antoniopaving",
+        "constructora": "antoniopaving",
+        "real_estate": "primeproperty",
+        "property_mgmt": "primeproperty",
+        "strata": "primeproperty",
+    }
+    BIZ_NAMES = {
+        "antoniopaving": {"name": "Antonio Paving", "emoji": "🏗️", "color": "#dc2626"},
+        "primeproperty": {"name": "Prime Property Maintenance", "emoji": "🏢", "color": "#2563eb"},
+    }
+
+    def get_biz(lead_type):
+        return BIZ_TARGET.get(lead_type, "primeproperty")
 
     # ── Projects / Businesses ──
     biz_cards = ""
@@ -62,22 +79,61 @@ def generate():
     def elist(leads, label):
         if not leads:
             return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">0</span></div><p class="egm">Sin emails</p></div>' % label
-        entries = "".join(
-            '<div class="ei" id="e-%s"><span class="eic">%s</span>'
-            '<span class="eie">%s <span class="evb">%s</span></span>'
-            '<span class="ein">%s</span>'
-            '<button class="eb eb-sm" onclick="mc(\'%s\')">&#x2705; Hecho</button></div>'
-            % (esc(l["email"]), esc(l["company"]), esc(l["email"]),
-               verify_badge(l.get("verified","")),
-               esc(l.get("notes","")),
-               esc(l["email"]))
-            for l in leads)
+        # Determine the business for this group
+        first_type = leads[0].get("type", "other")
+        biz = get_biz(first_type)
+        biz_info = BIZ_NAMES.get(biz, BIZ_NAMES["primeproperty"])
+        entries = []
+        for l in leads:
+            e = (
+                '<div class="ei" id="e-%s">'
+                '<span class="eic">%s</span>'
+                '<span class="eie">%s <span class="evb">%s</span></span>'
+                '<span class="ein">%s</span>'
+                '<span class="eibb"><span class="eb-badge" style="background:%s">%s</span></span>'
+                '<button class="eb eb-gm" onclick="gm(\'%s\',\'%s\',\'%s\')">&#x1F4E7; Enviar</button>'
+                '<button class="eb eb-sm" onclick="mc(\'%s\')">&#x2705; Hecho</button></div>'
+                % (esc(l["email"]),
+                   esc(l["company"]),
+                   esc(l["email"]),
+                   verify_badge(l.get("verified","")),
+                   esc(l.get("notes","")),
+                   biz_info["color"],
+                   esc(biz_info["emoji"] + " " + biz_info["name"]),
+                   esc(l["email"]),
+                   esc(biz),
+                   esc(l["company"]),
+                   esc(l["email"]))
+            )
+            entries.append(e)
+        entries = "".join(entries)
         text = "; ".join(l["email"] for l in leads).replace("'","\\'")
         n = len(leads)
         verified_count = sum(1 for l in leads if l.get("verified") == "verified")
-        return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><span class="egv"> &#x2705;%d</span><button class="eb" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar</button></div><div class="eil">%s</div></div>' % (label, n, verified_count, text, n, entries)
+        # Get template subject for this group
+        tmpl_subj = templates.get("templates", [])
+        t_subj = ""
+        for t in tmpl_subj:
+            if t["id"] == biz:
+                t_subj = t.get("subject", "")
+                break
+        return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><span class="egv"> &#x2705;%d</span><button class="eb" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar</button><button class="eb eb-tmpl" onclick="ct(\'%s\')">&#x1F4CB; Copiar Template</button><button class="eb eb-tmpl" onclick="tp(\'%s\')">&#x1F4DD; Ver Template</button></div><div class="eil">%s</div></div>' % (label, n, verified_count, text, n, biz, biz, entries)
 
-    outreach = ""
+    # ── Business Targeting Section ──
+    biz_section = '<div class="eg"><div class="egh"><span class="egl">&#x1F3AF; ¿Quién contacta a quién?</span></div><div style="padding:10px 12px;font-size:.82em;color:var(--t2)">'
+    biz_section += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+    for bid, info in BIZ_NAMES.items():
+        types = [k for k, v in BIZ_TARGET.items() if v == bid]
+        type_labels = {"builder": "🔨 Builders", "constructora": "🏗️ Constructoras", "real_estate": "🏢 Real Estate", "property_mgmt": "📋 Property Mgmt", "strata": "🏠 Strata"}
+        type_list = ", ".join(type_labels.get(t, t) for t in types)
+        biz_section += '<div style="background:var(--c2);border-radius:8px;padding:10px;border-left:3px solid %s">' % info["color"]
+        biz_section += '<div style="font-weight:600;font-size:.9em">%s %s</div>' % (info["emoji"], info["name"])
+        biz_section += '<div style="margin-top:4px;font-size:.8em">Contácta: %s</div>' % type_list
+        biz_section += '<div style="margin-top:3px"><a href="https://%s" target="_blank" style="color:#818cf8;font-size:.78em;text-decoration:none">%s</a></div>' % (info["name"].lower().replace(" ","")+".com.au" if "paving" in info["name"].lower() else "primepropertymaintenance.au", info["name"].lower().replace(" ","")+".com.au" if "paving" in info["name"].lower() else "primepropertymaintenance.au")
+        biz_section += '</div>'
+    biz_section += '</div></div></div>'
+
+    outreach = biz_section
     if today_leads:
         outreach += elist(today_leads, "HOY - Leads frescos")
     for key, emoji in [("constructora","Constructoras"),("builder","Builders"),("real_estate","Real Estate"),("property_mgmt","Property Managers"),("strata","Strata"),("other","Otros")]:
@@ -237,6 +293,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:#0d0d14}
 ::-webkit-scrollbar-thumb{background:var(--c3);border-radius:3px}
+.eibb{display:inline-flex;align-items:center;gap:3px}
+.eb-badge{display:inline-block;font-size:.6em;padding:1px 6px;border-radius:8px;color:#fff;font-weight:600;white-space:nowrap}
+.eb-gm{background:#2563eb;border-color:#2563eb;color:#fff;font-size:.72em;padding:2px 8px}
+.eb-gm:hover{background:#3b82f6;border-color:#3b82f6;color:#fff}
+.eb-tmpl{background:#7c3aed;border-color:#7c3aed;color:#fff}
+.eb-tmpl:hover{background:#8b5cf6;border-color:#8b5cf6;color:#fff}
+/* ── Template Preview Overlay ── */
+#tmo{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:1000;display:none;align-items:center;justify-content:center}
+#tmo.sh{display:flex}
+#tmp{background:var(--c1);border:1px solid var(--c2);border-radius:14px;max-width:560px;width:90%;max-height:80vh;overflow-y:auto;padding:0}
+#tmh{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid var(--c2);gap:8px}
+#tmh h3{flex:1;font-size:.95em;font-weight:600}
+#tmx{background:none;border:none;color:var(--t2);font-size:1.2em;cursor:pointer;padding:0 4px;font-family:inherit}
+#tmx:hover{color:var(--fg)}
+#tmb{padding:14px 16px;font-size:.82em;color:var(--t2);line-height:1.6;white-space:pre-wrap;font-family:inherit}
+#tmf{padding:10px 16px 14px;display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--c2)}
+#tmf .eb{font-size:.75em}
 @media(max-width:700px){
 body{flex-direction:column}
 .sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:6px;border:none;border-bottom:1px solid var(--c2)}
@@ -358,7 +431,7 @@ body{flex-direction:column}
 
     html_parts.append('</div></main>')
 
-    # Toast + Script
+    # ── Toast + Script (main JS) ──
     html_parts.append('''<div id="to"></div>
 <script>
 var sb=document.querySelectorAll('.sb-b');
@@ -410,11 +483,41 @@ rt();
 var ta=document.getElementById('na');
 if(ta){try{ta.value=localStorage.getItem('hnotes')||''}catch(e){}}
 function sn(){if(!ta)return;try{localStorage.setItem('hnotes',ta.value);document.getElementById('ns').textContent='\\u2705 Guardado'}catch(e){}}
-</script>
-</body>
-</html>''')
+</script>''')
 
-    html = "\n".join(html_parts)
+    # ── Email template JS (injected with real data) ──
+    tpl_json = json.JSONEncoder(indent=None, separators=(",",":")).encode(templates.get("templates",[]))
+    html_parts.append('''<script>
+var TEMPLATES = %s;
+
+function gm(e,b,c){
+var t=null;for(var i=0;i<TEMPLATES.length;i++){if(TEMPLATES[i].id===b){t=TEMPLATES[i];break}}
+if(!t){toast('\\u274c Template no encontrado');return}
+var body=t.body.replace('[COMPANY]',c);var subj=t.subject;
+var url='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(e)+'&su='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+window.open(url,'_blank');toast('\\u2705 Gmail abierto para '+c);}
+
+function ct(b){
+var t=null;for(var i=0;i<TEMPLATES.length;i++){if(TEMPLATES[i].id===b){t=TEMPLATES[i];break}}
+if(!t){toast('\\u274c Template no encontrado');return}
+fb(t.body);toast('\\u2705 Template de '+t.name+' copiado');}
+
+function tp(b){
+var t=null;for(var i=0;i<TEMPLATES.length;i++){if(TEMPLATES[i].id===b){t=TEMPLATES[i];break}}
+if(!t){toast('\\u274c Template no encontrado');return}
+var mo=document.getElementById('tmo');
+document.getElementById('tmh').innerHTML='<h3>'+t.emoji+' '+t.name+'</h3><button id="tmx" onclick="tc()">&times;</button>';
+document.getElementById('tmb').textContent=t.body;
+document.getElementById('tmf').innerHTML='<button class="eb eb-tmpl" onclick="ct(\\''+b+'\\')">\\u{1F4CB} Copiar Template</button><button class="eb eb-gm" onclick="tc();gm(\\'\\',\\''+b+'\\',\\'[COMPANY]\\')">\\u{1F4E7} Abrir en Gmail</button><button class="eb" onclick="tc()">Cerrar</button>';
+mo.classList.add('sh');}
+
+function tc(){document.getElementById('tmo').classList.remove('sh')}
+</script>
+<div id="tmo"><div id="tmp"><div id="tmh"><h3>Template</h3><button id="tmx" onclick="tc()">&times;</button></div><div id="tmb"></div><div id="tmf"><button class="eb" onclick="tc()">Cerrar</button></div></div></div>
+</body>
+</html>''' % tpl_json)
+
+    html = "\\n".join(html_parts)
     path = os.path.join(DIR, "index.html")
     with open(path, "w") as f:
         f.write(html)

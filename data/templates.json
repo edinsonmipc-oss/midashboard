@@ -1,0 +1,30 @@
+{
+  "templates": [
+    {
+      "id": "antoniopaving",
+      "name": "Antonio Paving",
+      "business": "antoniopaving",
+      "website": "antoniopaving.com.au",
+      "audience": "Builders & Constructoras",
+      "colors": "#dc2626,#991b1b",
+      "emoji": "🏗️",
+      "subject": "Colaboración en Pavimentación - Antonio Paving",
+      "body": "Hola [COMPANY],\n\nMe comunico desde Antonio Paving, empresa especializada en pavimentación con amplia experiencia en Melbourne.\n\nOfrecemos servicios de subcontratación para:\n• Calzadas de hormigón y asfalto\n• Hormigón pulido (exposed aggregate)\n• Pavimento permeable\n• Pavimento de piedra y ladrillo\n\nTrabajamos con constructoras y builders, asegurando calidad, cumplimiento de plazos y precios competitivos.\n\nVisite nuestro sitio web: https://antoniopaving.com.au\n\n¿Le interesaría recibir un presupuesto gratuito para su próximo proyecto? Estamos disponibles para conversar.\n\nSaludos cordiales,\nAntonio Paving\nhttps://antoniopaving.com.au\ninfo@antoniopaving.com.au",
+      "html_gmail": "Hola%20[COMPANY]%2C%0A%0AMe%20comunico%20desde%20Antonio%20Paving%2C%20empresa%20especializada%20en%20pavimentaci%C3%B3n%20con%20amplia%20experiencia%20en%20Melbourne.%0A%0AOfrecemos%20servicios%20de%20subcontrataci%C3%B3n%20para%3A%0A%E2%80%A2%20Calzadas%20de%20hormig%C3%B3n%20y%20asfalto%0A%E2%80%A2%20Hormig%C3%B3n%20pulido%20(exposed%20aggregate)%0A%E2%80%A2%20Pavimento%20permeable%0A%E2%80%A2%20Pavimento%20de%20piedra%20y%20ladrillo%0A%0ATrabajamos%20con%20constructoras%20y%20builders%2C%20asegurando%20calidad%2C%20cumplimiento%20de%20plazos%20y%20precios%20competitivos.%0A%0AVisite%20nuestro%20sitio%20web%3A%20https%3A%2F%2Fantoniopaving.com.au%0A%0A%C2%BFLe%20interesar%C3%ADa%20recibir%20un%20presupuesto%20gratuito%20para%20su%20pr%C3%B3ximo%20proyecto%3F%20Estamos%20disponibles%20para%20conversar.%0A%0ASaludos%20cordiales%2C%0AAntonio%20Paving%0Ahttps%3A%2F%2Fantoniopaving.com.au%0Ainfo%40antoniopaving.com.au",
+      "subject_encoded": "Colaboraci%C3%B3n%20en%20Pavimentaci%C3%B3n%20-%20Antonio%20Paving"
+    },
+    {
+      "id": "primeproperty",
+      "name": "Prime Property Maintenance",
+      "business": "primeproperty",
+      "website": "primepropertymaintenance.au",
+      "audience": "Real Estate, Property Managers & Strata",
+      "colors": "#2563eb,#1e40af",
+      "emoji": "🏢",
+      "subject": "Mantenimiento de Propiedades - Prime Property Maintenance",
+      "body": "Hola [COMPANY],\n\nMe comunico desde Prime Property Maintenance, su socio confiable en mantenimiento de propiedades en Melbourne.\n\nOfrecemos servicios profesionales para propiedades comerciales y residenciales:\n• Decking y decks de madera/compuesto\n• Cercas y fencing\n• Limpieza de canaletas (gutter cleaning)\n• Hidrolavado (pressure washing)\n• Corte de césped y jardinería\n• Reparaciones generales (handyman)\n\nTrabajamos con agencias inmobiliarias, property managers y administradores de strata, garantizando trabajos de calidad y respuesta rápida.\n\nVisite nuestro sitio web: https://primepropertymaintenance.au\n\n¿Le gustaría recibir un presupuesto gratuito? Estamos listos para ayudarle con el mantenimiento de sus propiedades.\n\nSaludos cordiales,\nPrime Property Maintenance\nhttps://primepropertymaintenance.au\ninfo@primepropertymaintenance.au",
+      "html_gmail": "Hola%20[COMPANY]%2C%0A%0AMe%20comunico%20desde%20Prime%20Property%20Maintenance%2C%20su%20socio%20confiable%20en%20mantenimiento%20de%20propiedades%20en%20Melbourne.%0A%0AOfrecemos%20servicios%20profesionales%20para%20propiedades%20comerciales%20y%20residenciales%3A%0A%E2%80%A2%20Decking%20y%20decks%20de%20madera%2Fcompuesto%0A%E2%80%A2%20Cercas%20y%20fencing%0A%E2%80%A2%20Limpieza%20de%20canaletas%20(gutter%20cleaning)%0A%E2%80%A2%20Hidrolavado%20(pressure%20washing)%0A%E2%80%A2%20Corte%20de%20c%C3%A9sped%20y%20jardiner%C3%ADa%0A%E2%80%A2%20Reparaciones%20generales%20(handyman)%0A%0ATrabajamos%20con%20agencias%20inmobiliarias%2C%20property%20managers%20y%20administradores%20de%20strata%2C%20garantizando%20trabajos%20de%20calidad%20y%20respuesta%20r%C3%A1pida.%0A%0AVisite%20nuestro%20sitio%20web%3A%20https%3A%2F%2Fprimepropertymaintenance.au%0A%0A%C2%BFLe%20gustar%C3%ADa%20recibir%20un%20presupuesto%20gratuito%3F%20Estamos%20listos%20para%20ayudarle%20con%20el%20mantenimiento%20de%20sus%20propiedades.%0A%0ASaludos%20cordiales%2C%0APrime%20Property%20Maintenance%0Ahttps%3A%2F%2Fprimepropertymaintenance.au%0Ainfo%40primepropertymaintenance.au",
+      "subject_encoded": "Mantenimiento%20de%20Propiedades%20-%20Prime%20Property%20Maintenance"
+    }
+  ]
+}

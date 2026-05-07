@@ -78,6 +78,34 @@ TYPE_EMOJI = {
     "other": "📌",
 }
 
+# ════════════════════════════════════════════════════════════
+# Email Outreach: qué negocio contacta cada tipo de lead
+# ════════════════════════════════════════════════════════════
+BUSINESS_TARGET = {
+    "builder": "antoniopaving",
+    "constructora": "antoniopaving",
+    "real_estate": "primeproperty",
+    "property_mgmt": "primeproperty",
+    "strata": "primeproperty",
+    "construction_supply": "primeproperty",
+    "other": "primeproperty",
+}
+
+BUSINESS_INFO = {
+    "antoniopaving": {
+        "name": "Antonio Paving",
+        "emoji": "🏗️",
+        "url": "antoniopaving.com.au",
+        "service": "Pavimentación (calzadas, exposed aggregate, permeable)",
+    },
+    "primeproperty": {
+        "name": "Prime Property Maintenance",
+        "emoji": "🏢",
+        "url": "primepropertymaintenance.au",
+        "service": "Mantenimiento de propiedades (decking, fencing, gutter, pressure washing, lawn)",
+    },
+}
+
 NOTES = {
     "constructora": ["Grandes proyectos de construcción en Melbourne", "Contratistas principales nivel 1", "Proyectos comerciales y residenciales", "Buscan subcontratistas calificados"],
     "builder": ["Constructora de viviendas en Melbourne", "Volumen alto de proyectos", "Necesitan tradies para subcontratos"],
@@ -137,12 +165,14 @@ def main():
     # Format them
     formatted = []
     for l in new_leads:
+        biz = BUSINESS_TARGET.get(l["type"], "primeproperty")
         formatted.append({
             "company": l["company"],
             "email": l["email"],
             "website": l["website"],
             "type": l["type"],
             "contact": "",
+            "business_target": biz,
             "notes": get_notes(l["type"]),
             "verified": "unknown"
         })
@@ -168,7 +198,8 @@ def main():
     print(f"✅ {len(formatted)} leads generados para {today}")
     for l in formatted:
         emoji = TYPE_EMOJI.get(l["type"], "📌")
-        print(f"  {emoji} {l['company']:30s} → {l['email']:35s} ({l['type']})")
+        biz = BUSINESS_INFO.get(l["business_target"], {}).get("emoji", "")
+        print(f"  {emoji} {l['company']:30s} → {l['email']:35s} ({l['type']:15s}) {biz}{l['business_target']}")
     print(f"\n📊 Total acumulado: {total} leads")
     return True
 
