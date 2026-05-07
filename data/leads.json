@@ -55,7 +55,9 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "Metricon Homes",
@@ -105,7 +107,9 @@
         "contact": "",
         "notes": "Desarrollos comerciales de alta calidad",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-03_batch1": [
@@ -147,7 +151,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "Boutique Homes",
@@ -157,7 +163,9 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "Colliers International",
@@ -207,7 +215,9 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-03_batch2": [
@@ -219,7 +229,9 @@
         "contact": "",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "John Holland",
@@ -249,7 +261,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "ISPT",
@@ -259,7 +273,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "Lendlease",
@@ -647,7 +663,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-07T19:26",
+        "contact_status": "dry-run"
       },
       {
         "company": "ACE Body Corporate",

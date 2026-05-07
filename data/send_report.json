@@ -1,0 +1,72 @@
+{
+  "reports": [
+    {
+      "date": "2026-05-07",
+      "time": "2026-05-07T19:26",
+      "sent": 10,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@boutiquehomes.com.au",
+          "company": "Boutique Homes",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "commercial@kayburton.com.au",
+          "company": "Kay & Burton",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@knightfrank.com.au",
+          "company": "Knight Frank Australia",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "property@ispt.com.au",
+          "company": "ISPT",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "procurement@downergroup.com",
+          "company": "Downer Group",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@cbusproperty.com.au",
+          "company": "Cbus Property",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        }
+      ]
+    }
+  ]
+}

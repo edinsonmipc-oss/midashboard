@@ -25,11 +25,12 @@
       "uptime_24h": "99.2%",
       "last_checked": "2026-05-07T19:00",
       "seo_metrics": {
-        "pages_indexed": 965,
-        "clicks_28d": 31,
-        "impressions_28d": 3986,
-        "avg_position": 41.87,
-        "ctr": "0.77%"
+        "pages_analyzed": 50,
+        "pages_good": 26,
+        "pages_bad": 24,
+        "missing_meta": 0,
+        "missing_titles": 0,
+        "content_suggestions": 14
       },
       "issues": [],
       "improvements": [
@@ -37,7 +38,8 @@
         "Construir backlinks (directorios, partnerships locales)",
         "Agregar más contenido por suburbio de Melbourne",
         "Optimizar Google Business Profile con fotos"
-      ]
+      ],
+      "seo_score": 52.0
     },
     {
       "name": "Dashboard (GitHub Pages)",
@@ -73,11 +75,12 @@
       "uptime_24h": "99.3%",
       "last_checked": "2026-05-07T19:00",
       "seo_metrics": {
-        "pages_indexed": 370,
-        "clicks_28d": 12,
-        "impressions_28d": 1500,
-        "avg_position": 35.5,
-        "ctr": "0.8%"
+        "pages_analyzed": 50,
+        "pages_good": 50,
+        "pages_bad": 0,
+        "missing_meta": 0,
+        "missing_titles": 0,
+        "content_suggestions": 13
       },
       "issues": [
         "⚠️ Sitio offline: <urlopen error [Errno -2] Name or service not known>"
@@ -86,7 +89,25 @@
         "Mejorar velocidad de carga (CSS minificado ✅)",
         "Agregar Google Business Profile",
         "Conseguir reseñas de clientes"
-      ]
+      ],
+      "seo_score": 100.0
     }
-  ]
+  ],
+  "email_stats": {
+    "last_send": "2026-05-07T19:26",
+    "total_sent": 9
+  },
+  "seo_audit": {
+    "updated": "2026-05-07T19:27",
+    "summary": {
+      "primeproperty": {
+        "score": "good",
+        "pages_ok": 26,
+        "pages_bad": 24,
+        "total_pages": 50,
+        "issues_count": 60,
+        "content_suggestions": 14
+      }
+    }
+  }
 }

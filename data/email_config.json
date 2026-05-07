@@ -1,0 +1,25 @@
+{
+  "sender_email": "info@antoniopaving.com.au",
+  "sender_name": "Antonio Paving",
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "use_tls": true,
+  "password": "",
+  "gmail_app_password": "",
+  "daily_limit": 10,
+  "min_delay_seconds": 180,
+  "max_delay_seconds": 420,
+  "business_addresses": {
+    "antoniopaving": {
+      "from_name": "Antonio Paving",
+      "from_email": "info@antoniopaving.com.au",
+      "signature": "Antonio Paving\nhttps://antoniopaving.com\ninfo@antoniopaving.com.au"
+    },
+    "primeproperty": {
+      "from_name": "Prime Property Maintenance",
+      "from_email": "info@primepropertymaintenance.au",
+      "signature": "Prime Property Maintenance\nhttps://primepropertymaintenance.au\ninfo@primepropertymaintenance.au"
+    }
+  },
+  "setup_instructions": "Para activar el envío automático:\n1. Ve a https://myaccount.google.com/security\n2. Activa 'Verificación en dos pasos' si no está activada\n3. Ve a 'Contraseñas de aplicaciones'\n4. Crea una nueva app password para 'Correo'\n5. Copia la contraseña de 16 caracteres a 'gmail_app_password' en este archivo\n6. El sender_email debe ser el Gmail que generó la app password"
+}
