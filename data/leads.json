@@ -13,7 +13,9 @@
         "website": "buildcorp.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos comerciales en Melbourne CBD"
+        "notes": "Grandes proyectos comerciales en Melbourne CBD",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -21,7 +23,9 @@
         "website": "hickory.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Líderes en construcción modular"
+        "notes": "Líderes en construcción modular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac Real Estate",
@@ -29,7 +33,9 @@
         "website": "mirvac.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Desarrollos residenciales premium"
+        "notes": "Desarrollos residenciales premium",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Frasers Property Australia",
@@ -37,7 +43,9 @@
         "website": "frasersproperty.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Grandes desarrollos mixtos"
+        "notes": "Grandes desarrollos mixtos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -45,7 +53,9 @@
         "website": "lendlease.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon Homes",
@@ -53,7 +63,9 @@
         "website": "metricon.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas #1 en Australia"
+        "notes": "Constructora de viviendas #1 en Australia",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis Homes",
@@ -61,7 +73,9 @@
         "website": "porterdavis.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas Melbourne"
+        "notes": "Constructora de viviendas Melbourne",
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "Stockland",
@@ -69,7 +83,9 @@
         "website": "stockland.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Desarrollador de comunidades master-planned"
+        "notes": "Desarrollador de comunidades master-planned",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kennards Hire",
@@ -77,7 +93,9 @@
         "website": "kennards.com.au",
         "type": "construction_supply",
         "contact": "",
-        "notes": "Alquiler de equipos de construcción"
+        "notes": "Alquiler de equipos de construcción",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -85,7 +103,9 @@
         "website": "cbusproperty.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Desarrollos comerciales de alta calidad"
+        "notes": "Desarrollos comerciales de alta calidad",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-03_batch1": [
@@ -95,7 +115,9 @@
         "website": "metricon.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Volumen alto de proyectos"
+        "notes": "Volumen alto de proyectos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "LJ Hooker",
@@ -103,7 +125,9 @@
         "website": "ljhooker.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -111,7 +135,9 @@
         "website": "acebodycorporate.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Buscan contractors para mantenimiento"
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hockingstuart",
@@ -119,7 +145,9 @@
         "website": "hockingstuart.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Boutique Homes",
@@ -127,7 +155,9 @@
         "website": "boutiquehomes.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Colliers International",
@@ -135,7 +165,9 @@
         "website": "colliers.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Dexus",
@@ -143,7 +175,9 @@
         "website": "dexus.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Jellis Craig",
@@ -151,7 +185,9 @@
         "website": "jelliscraig.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Brookfield Multiplex",
@@ -159,7 +195,9 @@
         "website": "brookfieldmultiplex.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Knight Frank Australia",
@@ -167,7 +205,9 @@
         "website": "knightfrank.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-03_batch2": [
@@ -177,7 +217,9 @@
         "website": "picagroup.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Buscan contractors para mantenimiento"
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -185,7 +227,9 @@
         "website": "johnholland.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -193,7 +237,9 @@
         "website": "cushwake.com",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kay & Burton",
@@ -201,7 +247,9 @@
         "website": "kayburton.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ISPT",
@@ -209,7 +257,9 @@
         "website": "ispt.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -217,7 +267,9 @@
         "website": "lendlease.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -225,7 +277,9 @@
         "website": "gpt.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Marshall White",
@@ -233,7 +287,9 @@
         "website": "marshallwhite.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Laing O'Rourke",
@@ -241,7 +297,9 @@
         "website": "laingorourke.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kane Constructions",
@@ -249,7 +307,9 @@
         "website": "kane.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-03_batch3": [
@@ -259,7 +319,9 @@
         "website": "hockingstuart.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Collins Simms",
@@ -267,7 +329,9 @@
         "website": "collinssimms.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Built",
@@ -275,7 +339,9 @@
         "website": "built.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne"
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -283,7 +349,9 @@
         "website": "mirvac.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Colliers International",
@@ -291,7 +359,9 @@
         "website": "colliers.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -299,7 +369,9 @@
         "website": "cbusproperty.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -307,7 +379,9 @@
         "website": "raywhite.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Goodman Group",
@@ -315,7 +389,9 @@
         "website": "goodman.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "First National Real Estate",
@@ -323,7 +399,9 @@
         "website": "fnre.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -331,7 +409,9 @@
         "website": "probuild.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-04_batch4": [
@@ -341,7 +421,9 @@
         "website": "multiplex.global",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -349,7 +431,9 @@
         "website": "picagroup.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -357,7 +441,9 @@
         "website": "acebodycorporate.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -365,7 +451,9 @@
         "website": "cbusproperty.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -373,7 +461,9 @@
         "website": "avjennings.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Necesitan tradies para subcontratos"
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Watpac",
@@ -381,7 +471,9 @@
         "website": "watpac.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -389,7 +481,9 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -397,7 +491,9 @@
         "website": "century21.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Savills Australia",
@@ -405,7 +501,9 @@
         "website": "savills.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -413,7 +511,9 @@
         "website": "metricon.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-04_batch5": [
@@ -423,7 +523,9 @@
         "website": "colliers.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -431,7 +533,9 @@
         "website": "cbusproperty.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kane Constructions",
@@ -439,7 +543,9 @@
         "website": "kane.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis",
@@ -447,7 +553,9 @@
         "website": "porterdavis.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Volumen alto de proyectos"
+        "notes": "Volumen alto de proyectos",
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "Laing O'Rourke",
@@ -455,7 +563,9 @@
         "website": "laingorourke.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -463,7 +573,9 @@
         "website": "lendlease.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -471,7 +583,9 @@
         "website": "hickory.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Stockland",
@@ -479,7 +593,9 @@
         "website": "stockland.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Charter Hall",
@@ -487,7 +603,9 @@
         "website": "charterhall.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -495,7 +613,9 @@
         "website": "avjennings.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Necesitan tradies para subcontratos"
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-05_batch6": [
@@ -505,7 +625,9 @@
         "website": "colliers.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -513,7 +635,9 @@
         "website": "mirvac.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -521,7 +645,9 @@
         "website": "downergroup.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -529,7 +655,9 @@
         "website": "acebodycorporate.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -537,7 +665,9 @@
         "website": "century21.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Stockland",
@@ -545,7 +675,9 @@
         "website": "stockland.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -553,7 +685,9 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kay & Burton",
@@ -561,7 +695,9 @@
         "website": "kayburton.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -569,7 +705,9 @@
         "website": "avjennings.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Volumen alto de proyectos"
+        "notes": "Volumen alto de proyectos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Simonds Homes",
@@ -577,7 +715,9 @@
         "website": "simonds.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-05_batch7": [
@@ -587,7 +727,9 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne"
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hockingstuart",
@@ -595,7 +737,9 @@
         "website": "hockingstuart.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -603,7 +747,9 @@
         "website": "mirvac.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -611,7 +757,9 @@
         "website": "avjennings.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Volumen alto de proyectos"
+        "notes": "Volumen alto de proyectos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Henley Homes",
@@ -619,7 +767,9 @@
         "website": "henley.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Necesitan tradies para subcontratos"
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -627,7 +777,9 @@
         "website": "raywhite.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ISPT",
@@ -635,7 +787,9 @@
         "website": "ispt.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -643,7 +797,9 @@
         "website": "acebodycorporate.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Savills Australia",
@@ -651,7 +807,9 @@
         "website": "savills.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -659,7 +817,9 @@
         "website": "fletcher.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-06_batch8": [
@@ -669,7 +829,9 @@
         "website": "century21.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -677,7 +839,9 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne"
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -685,7 +849,9 @@
         "website": "lendlease.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -693,7 +859,9 @@
         "website": "downergroup.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Contratistas principales nivel 1"
+        "notes": "Contratistas principales nivel 1",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -701,7 +869,9 @@
         "website": "picagroup.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hockingstuart",
@@ -709,7 +879,9 @@
         "website": "hockingstuart.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Brookfield Multiplex",
@@ -717,7 +889,9 @@
         "website": "brookfieldmultiplex.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Charter Hall",
@@ -725,7 +899,9 @@
         "website": "charterhall.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "First National Real Estate",
@@ -733,7 +909,9 @@
         "website": "fnre.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "McGrath Estate Agents",
@@ -741,7 +919,9 @@
         "website": "mcgrath.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Portfolio grande en Melbourne"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-06_batch9": [
@@ -751,7 +931,9 @@
         "website": "carltonhomes.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -759,7 +941,9 @@
         "website": "downergroup.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Savills Australia",
@@ -767,7 +951,9 @@
         "website": "savills.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -775,7 +961,9 @@
         "website": "probuild.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Buscan subcontratistas calificados"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "LJ Hooker",
@@ -783,7 +971,9 @@
         "website": "ljhooker.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "CBRE Australia",
@@ -791,7 +981,9 @@
         "website": "cbre.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Dexus",
@@ -799,7 +991,9 @@
         "website": "dexus.com",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -807,7 +1001,9 @@
         "website": "metricon.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -815,7 +1011,9 @@
         "website": "johnholland.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Knight Frank Australia",
@@ -823,7 +1021,9 @@
         "website": "knightfrank.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-07_batch10": [
@@ -833,7 +1033,9 @@
         "website": "simonds.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Necesitan tradies para subcontratos"
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PRDnationwide",
@@ -841,7 +1043,9 @@
         "website": "prd.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Gestionan propiedades comerciales"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -849,7 +1053,9 @@
         "website": "hickory.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Proyectos comerciales y residenciales"
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Laing O'Rourke",
@@ -857,7 +1063,9 @@
         "website": "laingorourke.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne"
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "First National Real Estate",
@@ -865,7 +1073,9 @@
         "website": "fnre.com.au",
         "type": "real_estate",
         "contact": "",
-        "notes": "Necesitan mantenimiento regular"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -873,7 +1083,9 @@
         "website": "acebodycorporate.com.au",
         "type": "strata",
         "contact": "",
-        "notes": "Necesitan servicios regulares"
+        "notes": "Necesitan servicios regulares",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Henley Homes",
@@ -881,7 +1093,9 @@
         "website": "henley.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Constructora de viviendas en Melbourne"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -889,7 +1103,9 @@
         "website": "downergroup.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne"
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "CBRE Australia",
@@ -897,7 +1113,9 @@
         "website": "cbre.com.au",
         "type": "property_mgmt",
         "contact": "",
-        "notes": "Multiples propiedades en su cartera"
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -905,7 +1123,9 @@
         "website": "metricon.com.au",
         "type": "builder",
         "contact": "",
-        "notes": "Necesitan tradies para subcontratos"
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }
