@@ -55,12 +55,11 @@
     },
     {
       "name": "ToolshubPro",
-      "url": "https://toolshubpro.com",
-      "status": "offline",
+      "url": "https://toolshubpro.com.au",
+      "status": "online",
       "uptime_24h": "99.5%",
       "last_checked": "2026-05-06T19:01",
       "issues": [
-        "⚠️ Sitio offline: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1016)>"
       ],
       "improvements": [
         "Agregar más herramientas (meta: 80)",
