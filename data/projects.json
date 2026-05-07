@@ -118,11 +118,33 @@
         "Impulsar tráfico"
       ],
       "notes": "LIVE Stripe. 3 packs (Pro $174.99, Starter $99.00, Maintenance $44.99)"
+    },
+    {
+      "id": "claude-skills",
+      "name": "Claude Skills Pack",
+      "emoji": "🧠",
+      "status": "activo",
+      "description": "5 templates de IA para tradies AU. Basado en método Adrián Sáenz.",
+      "url": "",
+      "metrics": {
+        "skills": 5,
+        "precio_min": "$19",
+        "precio_max": "$47",
+        "target": "Tradies AU"
+      },
+      "last_update": "2026-05-07",
+      "next_steps": [
+        "Landing page de venta",
+        "Publicar en Gumroad",
+        "Promocionar a 51 leads",
+        "Video demo"
+      ],
+      "notes": "5 skills. Pack completo sugerido: $97 AUD."
     }
   ],
   "stats": {
-    "total_projects": 6,
-    "activos": 5,
+    "total_projects": 7,
+    "activos": 6,
     "pendientes": 1
   }
 }

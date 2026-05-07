@@ -2,6 +2,13 @@
   "entries": [
     {
       "date": "2026-05-07",
+      "time": "22:04",
+      "project": "claude-skills",
+      "type": "creacion",
+      "text": "5 Claude Skills creados para tradies AU: SEO Auditor, Quote Generator, Lead Automator, Content, GBP"
+    },
+    {
+      "date": "2026-05-07",
       "time": "21:15",
       "project": "dashboard",
       "type": "mejora",
