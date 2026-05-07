@@ -51,17 +51,17 @@
       "description": "Plataforma de comercio/negocios.",
       "url": "",
       "metrics": {
-        "paginas": 27,
+        "paginas_utiles": 11,
         "ai_features": 4,
-        "db_tables": 20
+        "sidebar": "Simplified"
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Agregar gst column a DB (SQL manual)",
-        "Probar AI Assistant en producción",
-        "Conseguir beta users tradies AU"
+        "Agregar gst column a DB",
+        "Probar en producción",
+        "Beta users"
       ],
-      "notes": "AI Assistant con fallback automático. Quotes, Invoices, Clients, Visits, Calendar, Expenses, Payments, Gallery, Messages, Insurance, Inventory, Accounting, Follow-ups."
+      "notes": "App simplificada: sidebar 19→11, 4 páginas duplicadas redirigidas, AI Assistant integrado, bugfix gst"
     },
     {
       "id": "antoniopaving",

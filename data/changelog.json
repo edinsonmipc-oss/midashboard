@@ -2,6 +2,13 @@
   "entries": [
     {
       "date": "2026-05-08",
+      "time": "02:10",
+      "project": "tradeos",
+      "type": "mejora",
+      "text": "App simplificada: sidebar 19→11 items, duplicados redirigidos, AI Assistant integrado"
+    },
+    {
+      "date": "2026-05-08",
       "time": "02:03",
       "project": "tradeos",
       "type": "mejora",
