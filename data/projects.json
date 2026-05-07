@@ -50,13 +50,18 @@
       "status": "pendiente",
       "description": "Plataforma de comercio/negocios.",
       "url": "",
-      "metrics": {},
+      "metrics": {
+        "paginas": 27,
+        "ai_features": 4,
+        "db_tables": 20
+      },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Desplegar en Hostinger/GitHub Pages",
-        "Configurar funcionalidad básica"
+        "Agregar gst column a DB (SQL manual)",
+        "Probar AI Assistant en producción",
+        "Conseguir beta users tradies AU"
       ],
-      "notes": "Requiere deploy y pruebas"
+      "notes": "AI Assistant con fallback automático. Quotes, Invoices, Clients, Visits, Calendar, Expenses, Payments, Gallery, Messages, Insurance, Inventory, Accounting, Follow-ups."
     },
     {
       "id": "antoniopaving",

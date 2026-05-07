@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "date": "2026-05-08",
+      "time": "02:03",
+      "project": "tradeos",
+      "type": "mejora",
+      "text": "Bugfix: quotes.gst column error corregido (cambiado a tax)"
+    },
+    {
+      "date": "2026-05-08",
+      "time": "02:03",
+      "project": "tradeos",
+      "type": "creacion",
+      "text": "AI Assistant creado con fallback Gemini→OpenRouter→offline + chat flotante en app"
+    },
+    {
       "date": "2026-05-07",
       "time": "22:04",
       "project": "claude-skills",
