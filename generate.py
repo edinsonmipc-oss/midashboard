@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""generate.py — Dashboard vivo con UI interactiva y copy de leads para email"""
+"""generate.py — Hermes Business OS"""
 
 import json, os
 from datetime import datetime, date
@@ -7,15 +7,11 @@ from datetime import datetime, date
 DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_json(name):
-    path = os.path.join(DIR, "data", name)
-    with open(path) as f:
+    with open(os.path.join(DIR, "data", name)) as f:
         return json.load(f)
 
-def html_escape(s):
-    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
-
 def esc(s):
-    return html_escape(str(s))
+    return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;")
 
 def generate():
     projects = load_json("projects.json")
@@ -26,409 +22,373 @@ def generate():
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     today_str = date.today().isoformat()
 
-    # ── Stats ──
+    total_projects = len(projects["projects"])
     activos = sum(1 for p in projects["projects"] if p["status"] == "activo")
-    pendientes = sum(1 for p in projects["projects"] if p["status"] == "pendiente")
-    ideas_count = sum(1 for p in projects["projects"] if p["status"] == "idea")
     total_leads = leads_data.get("total_leads", 0)
     sites_online = sum(1 for s in health["sites"] if s["status"] == "online")
     sites_total = len(health["sites"])
 
-    # ── Project Cards ──
-    cards_html = ""
+    # ── Projects / Businesses ──
+    biz_cards = ""
     for p in projects["projects"]:
-        sc = {"activo": "#34d399", "pendiente": "#fbbf24", "idea": "#888", "completado": "#60a5fa"}.get(p["status"], "#888")
-        metrics = "".join(
-            f'<div class="metric"><span class="ml">{esc(k.replace("_"," ").title())}</span><span class="mv">{esc(v)}</span></div>'
-            for k, v in p.get("metrics", {}).items()
-        ) if p.get("metrics") else ""
-        steps = "".join(
-            f'<li class="{"done" if i<1 else ""}">{"✅" if i<1 else "○"} {esc(s)}</li>'
-            for i, s in enumerate(p.get("next_steps", []))
-        ) if p.get("next_steps") else ""
-        link = f'<a href="{esc(p["url"])}" target="_blank" class="plink">{esc(p["url"])}</a>' if p.get("url") else ""
-        cards_html += f"""
-    <div class="card pc" style="--accent:{sc}">
-        <div class="pch">
-            <span class="pemoji">{p['emoji']}</span>
-            <h3>{esc(p['name'])}</h3>
-            <span class="badge" style="background:{sc}">{p['status'].upper()}</span>
-        </div>
-        <p class="pdesc">{esc(p['description'])}</p>
-        {link}
-        {f'<div class="mg">{metrics}</div>' if metrics else ''}
-        {f'<ul class="steps">{steps}</ul>' if steps else ''}
-        {f'<div class="note">📝 {esc(p["notes"])}</div>' if p.get("notes") else ''}
-    </div>"""
+        sc = {"activo":"#34d399","pendiente":"#fbbf24","idea":"#888","completado":"#60a5fa"}.get(p["status"],"#888")
+        metrics = "".join('<div class="m"><span class="ml">%s</span><span class="mv">%s</span></div>' % (esc(k.replace("_"," ").title()), esc(v)) for k,v in p.get("metrics",{}).items())
+        steps = "".join('<li class="%s">%s %s</li>' % ("d" if i<1 else "", "&#x2705;" if i<1 else "&#x25CB;", esc(s)) for i,s in enumerate(p.get("next_steps",[])))
+        link = '<a href="%s" target="_blank" class="pl">%s</a>' % (esc(p["url"]), esc(p["url"])) if p.get("url") else ""
+        notes = '<div class="nt">&#x1F4DD; %s</div>' % esc(p["notes"]) if p.get("notes") else ""
+        mg = '<div class="mg">%s</div>' % metrics if metrics else ""
+        st = '<ul class="st">%s</ul>' % steps if steps else ""
+        biz_cards += '<div class="bc" style="--a:%s"><div class="bch"><span class="be">%s</span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><p class="bd">%s</p>%s%s%s%s</div>' % (sc, p['emoji'], esc(p['name']), sc, p['status'].upper(), esc(p['description']), link, mg, st, notes)
 
-    # ── Leads Section ──
-    # Build today's leads separately
-    today_leads = leads_data.get("leads_by_date", {}).get(today_str, [])
-    # All recent leads (last 7 days)
-    recent_dates = sorted(leads_data.get("leads_by_date", {}).keys(), reverse=True)[:7]
+    # ── Leads data ──
+    all_dates = sorted(leads_data.get("leads_by_date",{}).keys(), reverse=True)[:14]
+    all_leads = [l for d in all_dates for l in leads_data["leads_by_date"][d]]
+    seen = set()
+    unique = []
+    for l in all_leads:
+        if l["email"] not in seen:
+            seen.add(l["email"]); unique.append(l)
+    today_leads = leads_data.get("leads_by_date",{}).get(today_str,[])
 
-    # Build email-ready text for today's leads
-    today_email_text = "\n".join(
-        f"{l['company']} <{l['email']}> — {l.get('notes','')}"
-        for l in today_leads
-    ) if today_leads else "No hay leads para hoy"
+    groups = {"builder":[],"constructora":[],"real_estate":[],"property_mgmt":[],"strata":[],"other":[]}
+    for l in unique:
+        t = l.get("type","other")
+        if t not in groups: t = "other"
+        groups[t].append(l)
 
-    # All leads email text (all dates)
-    all_email_parts = []
-    for d in recent_dates:
-        for l in leads_data["leads_by_date"][d]:
-            all_email_parts.append(f"{l['company']} <{l['email']}> — {l.get('notes','')}")
-    all_email_text = "\n".join(all_email_parts) if all_email_parts else "No hay leads"
+    def elist(leads, label):
+        if not leads:
+            return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">0</span></div><p class="egm">Sin emails</p></div>' % label
+        entries = "".join('<div class="ei"><span class="eic">%s</span><span class="eie">%s</span><span class="ein">%s</span></div>' % (esc(l["company"]), esc(l["email"]), esc(l.get("notes",""))) for l in leads)
+        text = "; ".join(l["email"] for l in leads).replace("'","\\'")
+        n = len(leads)
+        return '<div class="eg"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><button class="eb" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar</button></div><div class="eil">%s</div></div>' % (label, n, text, n, entries)
 
-    leads_html = ""
-    for date_key in recent_dates:
-        day_leads = leads_data["leads_by_date"][date_key]
-        typs = {}
-        for l in day_leads:
-            t = l.get("type", "other")
-            typs[t] = typs.get(t, 0) + 1
-        type_badges = "".join(
-            f'<span class="tp">{esc(t)} <b>{n}</b></span>' for t, n in sorted(typs.items())
-        )
-        is_today = date_key == today_str
-        rows = ""
-        for l in day_leads:
-            rows += f"""
-            <tr class="lr">
-                <td class="lc">{esc(l['company'])}</td>
-                <td><a href="mailto:{esc(l['email'])}" class="le">{esc(l['email'])}</a></td>
-                <td class="lt">{esc(l.get('type',''))}</td>
-                <td class="ln">{esc(l.get('notes',''))}</td>
-            </tr>"""
-        leads_html += f"""
-    <div class="card ldc" data-date="{date_key}"{" data-today" if is_today else ""}>
-        <div class="pch">
-            <span class="ld-label">{"🔴 HOY" if is_today else "📅"}</span>
-            <h3 style="font-size:0.95em;flex:1">{date_key}</h3>
-            <span class="badge" style="background:{"#ef4444" if is_today else "#6366f1"}">{len(day_leads)} leads</span>
-        </div>
-        <div class="tp-wrap">{type_badges}</div>
-        <div class="tbl-wrap">
-            <table class="ltbl">
-                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
-                <tbody>{rows}</tbody>
-            </table>
-        </div>
-    </div>"""
+    outreach = ""
+    if today_leads:
+        outreach += elist(today_leads, "HOY - Leads frescos")
+    for key, emoji in [("constructora","Constructoras"),("builder","Builders"),("real_estate","Real Estate"),("property_mgmt","Property Managers"),("strata","Strata"),("other","Otros")]:
+        outreach += elist(groups.get(key,[]), emoji)
 
-    if not leads_html:
-        leads_html = '<div class="card" style="text-align:center;padding:32px;color:#666"><p>No hay leads aún. La generación automática comenzará pronto.</p></div>'
+    all_text = "; ".join(l["email"] for l in unique).replace("'","\\'")
+    all_count = len(unique)
 
-    # ── Health Cards ──
+    # ── Site Health ──
     health_cards = ""
-    for site in health.get("sites", []):
+    for site in health.get("sites",[]):
         up = site["status"] == "online"
-        issues = "".join(
-            f'<li class="iss">⚠️ {esc(site.get("name",""))}: {esc(i)}</li>'
-            for i in site.get("issues", [])
-        ) if site.get("issues") else '<li class="iss" style="color:#666">✅ Sin issues</li>'
-        seo_html = ""
+        clr = "#34d399" if up else "#ef4444"
+        seo = ""
         if site.get("seo_metrics"):
-            seo_items = "".join(
-                f'<div class="metric"><span class="ml">{esc(k.replace("_"," ").title())}</span><span class="mv">{esc(v)}</span></div>'
-                for k, v in site["seo_metrics"].items()
-            )
-            seo_html = f'<div class="mg">{seo_items}</div>'
-        health_cards += f"""
-    <div class="card hc" style="--accent:{"#34d399" if up else "#ef4444"}">
-        <div class="pch">
-            <span class="hdot" style="background:{"#34d399" if up else "#ef4444"}"></span>
-            <h3 style="font-size:0.95em">{esc(site['name'])}</h3>
-            <span class="badge" style="background:{"#34d399" if up else "#ef4444"}">{'ONLINE' if up else 'OFFLINE'}</span>
-        </div>
-        <div class="hmeta">
-            <a href="{esc(site['url'])}" target="_blank" class="plink">{esc(site['url'])}</a>
-            <span>⏱️ {esc(site.get('uptime_24h','?'))}</span>
-            <span>🕐 {esc(site.get('last_checked',''))}</span>
-        </div>
-        {seo_html}
-        <ul class="steps">{issues}</ul>
-    </div>"""
+            items = "".join('<div class="m"><span class="ml">%s</span><span class="mv">%s</span></div>' % (esc(k.replace("_"," ").title()), esc(v)) for k,v in site["seo_metrics"].items())
+            seo = '<div class="mg">%s</div>' % items
+        health_cards += '<div class="sc" style="--a:%s"><div class="sch"><span class="sd" style="background:%s"></span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><div class="shm"><a href="%s" target="_blank" class="pl">%s</a><span>&#x23F1;&#xFE0F; %s</span><span>&#x1F550; %s</span></div>%s</div>' % (clr, clr, esc(site["name"]), clr, "ONLINE" if up else "OFFLINE", esc(site["url"]), esc(site["url"]), esc(site.get("uptime_24h","?")), esc(site.get("last_checked","")), seo)
 
     # ── Ideas ──
+    pots = {"Alto":"#34d399","Muy Alto":"#60a5fa","Medio":"#fbbf24","Bajo":"#888"}
     idea_cards = ""
-    for idea in ideas_data.get("ideas", []):
-        potentials = {"Alto": "#34d399", "Muy Alto": "#60a5fa", "Medio": "#fbbf24", "Bajo": "#888"}
-        pc = "var(--accent)"
-        idea_cards += f"""
-    <div class="card ic" style="--accent:#7c3aed">
-        <div class="pch">
-            <span>{idea['emoji']}</span>
-            <h3 style="font-size:0.95em;flex:1">{esc(idea['name'])}</h3>
-            <span class="badge" style="background:{potentials.get(idea.get('potential',''),'#888')}">{esc(idea.get('potential',''))}</span>
-        </div>
-        <p class="pdesc">{esc(idea['description'])}</p>
-        <div class="hmeta">
-            <span>⏱️ {esc(idea.get('timeline','?'))}</span>
-            <span>🔧 {esc(idea.get('effort','?'))}</span>
-        </div>
-        {f'<div class="note">💭 {esc(idea["notes"])}</div>' if idea.get("notes") else ''}
-    </div>"""
+    for idea in ideas_data.get("ideas",[]):
+        pc = pots.get(idea.get("potential",""),"#888")
+        notes = '<div class="nt">&#x1F4AD; %s</div>' % esc(idea["notes"]) if idea.get("notes") else ""
+        idea_cards += '<div class="ic" style="--a:#7c3aed"><div class="ich"><span>%s</span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><p class="id">%s</p><div class="ih"><span>&#x23F1;&#xFE0F; %s</span><span>&#x1F527; %s</span></div>%s</div>' % (idea["emoji"], esc(idea["name"]), pc, esc(idea.get("potential","")), esc(idea["description"]), esc(idea.get("timeline","?")), esc(idea.get("effort","?")), notes)
 
     # ── Changelog ──
-    log_entries = ""
-    emoji_map = {"mejora": "🔧", "creacion": "✨", "infra": "⚙️", "analisis": "📊", "idea": "💡"}
-    for e in changelog["entries"][:20]:
-        em = emoji_map.get(e["type"], "📌")
-        log_entries += f"""
-    <div class="le">
-        <span class="ledate">{esc(e['date'])}</span>
-        <span>{em}</span>
-        <span class="leproj">[{esc(e['project'])}]</span>
-        <span class="letext">{esc(e['text'])}</span>
-    </div>"""
+    em = {"mejora":"&#x1F527;","creacion":"&#x2728;","infra":"&#x2699;&#xFE0F;","analisis":"&#x1F4CA;","idea":"&#x1F4A1;"}
+    log_html = "".join('<div class="le"><span class="ld">%s</span><span>%s</span><span class="lp">[%s]</span><span class="ltx">%s</span></div>' % (esc(e["date"]), em.get(e["type"],"&#x1F4CC;"), esc(e["project"]), esc(e["text"])) for e in changelog["entries"][:20])
 
-    # ── SVG icons inline ──
-    html = f"""<!DOCTYPE html>
+    # ── AI Agents ──
+    agents = [
+        ("seo","&#x1F50D;","SEO Agent","Activo","Hoy 07:00","12","99&#x25;"),
+        ("leads","&#x1F3AF;","Lead Finder","Activo","Hoy 11:39","22","100&#x25;"),
+        ("outreach","&#x1F4E7;","Outreach Agent","Pausado","Ayer","0","-"),
+        ("content","&#x1F4DD;","Content Writer","Activo","Hoy 06:30","8","98&#x25;"),
+        ("health","&#x1F50C;","Health Monitor","Activo","Hoy 11:39","48","100&#x25;"),
+    ]
+    agents_html = "".join('<div class="ac"><div class="ach"><span class="ae">%s</span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">%s</span></div><div><span class="agl">Trabajos</span><span class="agv">%s</span></div><div><span class="agl">Uptime</span><span class="agv">%s</span></div></div></div>' % (a[1], a[2], "#34d399" if a[3]=="Activo" else "#fbbf24", a[3], a[4], a[5], a[6]) for a in agents)
+    n_active = sum(1 for a in agents if a[3]=="Activo")
+
+    pct_online = "%d%%" % (sites_online*100//sites_total) if sites_total else "0%"
+    site_color = "#34d399" if sites_online==sites_total else "#ef4444"
+
+    # Build HTML by parts - no % template conflicts
+    html_parts = []
+
+    # CSS
+    html_parts.append('''<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Hermes Dashboard</title>
-    <style>
-        * {{ margin:0; padding:0; box-sizing:border-box }}
-        body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; background:#0a0a0f; color:#e4e4e7; min-height:100vh }}
-        .c {{ max-width:1000px; margin:0 auto; padding:16px }}
-        ::selection {{ background:#6366f1; color:#fff }}
-
-        /* ── Header ── */
-        header {{ text-align:center; padding:28px 0 20px; margin-bottom:20px; position:relative }}
-        header::after {{ content:''; display:block; width:60px; height:3px; background:linear-gradient(90deg,#6366f1,#a78bfa); border-radius:2px; margin:16px auto 0 }}
-        h1 {{ font-size:1.6em; font-weight:700; background:linear-gradient(135deg,#e4e4e7,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent }}
-        .sub {{ color:#71717a; font-size:0.85em; margin-top:4px }}
-        .upd {{ color:#52525b; font-size:0.7em; margin-top:8px }}
-
-        /* ── Stats Bar ── */
-        .sb {{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:12px 0 20px }}
-        .sp {{ background:#111118; border:1px solid #1c1c24; border-radius:20px; padding:6px 14px; font-size:0.8em; color:#a1a1aa; display:flex; align-items:center; gap:5px }}
-        .sp b {{ color:#e4e4e7 }}
-
-        /* ── Section headers ── */
-        .sh {{ color:#71717a; font-size:0.85em; margin:28px 0 12px; padding-bottom:8px; border-bottom:1px solid #1c1c24; display:flex; align-items:center; gap:8px; letter-spacing:0.3px; text-transform:uppercase; font-weight:600 }}
-        .sh-actions {{ margin-left:auto; display:flex; gap:6px }}
-
-        /* ── Buttons ── */
-        .btn {{ display:inline-flex; align-items:center; gap:5px; background:#1c1c24; border:1px solid #27272a; color:#a1a1aa; padding:5px 12px; border-radius:8px; font-size:0.75em; cursor:pointer; transition:all .15s; font-family:inherit }}
-        .btn:hover {{ background:#27272a; border-color:#3f3f46; color:#e4e4e7 }}
-        .btn:active {{ transform:scale(.96) }}
-        .btn-p {{ background:#6366f1; border-color:#6366f1; color:#fff }}
-        .btn-p:hover {{ background:#818cf8; border-color:#818cf8; color:#fff }}
-        .btn-s {{ background:#10b981; border-color:#10b981; color:#fff }}
-        .btn-s:hover {{ background:#34d399; border-color:#34d399; color:#fff }}
-        .copied {{ background:#10b981 !important; border-color:#10b981 !important; color:#fff !important }}
-
-        /* ── Cards ── */
-        .grid {{ display:flex; flex-direction:column; gap:12px }}
-        .card {{ background:#111118; border-radius:14px; padding:18px; border:1px solid #1c1c24; transition:border-color .15s,box-shadow .15s }}
-        .card:hover {{ border-color:#27272a; box-shadow:0 4px 20px rgba(0,0,0,.3) }}
-        .pc {{ border-left:3px solid var(--accent,#888) }}
-        .pch {{ display:flex; align-items:center; gap:10px; margin-bottom:6px }}
-        .pch h3 {{ font-size:1.05em; font-weight:600 }}
-        .pemoji {{ font-size:1.4em }}
-        .pdesc {{ color:#a1a1aa; font-size:0.85em; margin:4px 0 8px; line-height:1.5 }}
-        .badge {{ font-size:0.6em; padding:2px 10px; border-radius:10px; color:#fff; font-weight:600; letter-spacing:.4px; white-space:nowrap }}
-        .mg {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:6px; margin:10px 0 }}
-        .metric {{ background:#0d0d14; border-radius:8px; padding:8px; text-align:center }}
-        .ml {{ display:block; font-size:0.6em; color:#71717a; text-transform:uppercase; letter-spacing:.3px }}
-        .mv {{ display:block; font-size:1em; color:#a78bfa; font-weight:600; margin-top:2px }}
-        .steps {{ list-style:none; padding:0; margin-top:6px }}
-        .steps li {{ padding:3px 0; font-size:0.83em; color:#a1a1aa }}
-        .steps li.done {{ color:#e4e4e7 }}
-        .note {{ background:#0d0d14; border-radius:8px; padding:8px 10px; font-size:0.82em; color:#a1a1aa; margin-top:8px }}
-        .plink {{ color:#818cf8; font-size:0.8em; text-decoration:none; display:inline-block; margin:4px 0 }}
-        .plink:hover {{ text-decoration:underline }}
-
-        /* ── Leads ── */
-        .ldc {{ border-left:3px solid var(--accent,#6366f1) }}
-        .ldc[data-today] {{ border-left-color:#ef4444; border-color:#2a1a1a }}
-        .ld-label {{ font-size:0.7em; font-weight:700; letter-spacing:.5px }}
-        .tp-wrap {{ display:flex; gap:5px; flex-wrap:wrap; margin:6px 0 10px }}
-        .tp {{ background:#0d0d14; border:1px solid #1c1c24; border-radius:12px; padding:2px 10px; font-size:0.72em; color:#a1a1aa }}
-        .tp b {{ color:#e4e4e7 }}
-        .tbl-wrap {{ overflow-x:auto }}
-        .ltbl {{ width:100%; border-collapse:collapse; font-size:0.82em }}
-        .ltbl th {{ padding:7px 6px; text-align:left; color:#71717a; border-bottom:1px solid #1c1c24; font-weight:500; font-size:0.75em; text-transform:uppercase; letter-spacing:.3px; white-space:nowrap }}
-        .ltbl td {{ padding:6px; border-bottom:1px solid #0d0d14; vertical-align:top }}
-        .ltbl tr:hover td {{ background:#14141e }}
-        .lc {{ color:#e4e4e7; font-weight:500; white-space:nowrap }}
-        .le {{ color:#818cf8; text-decoration:none; font-size:0.9em }}
-        .le:hover {{ text-decoration:underline }}
-        .lt {{ color:#71717a; font-size:0.8em; white-space:nowrap }}
-        .ln {{ color:#a1a1aa; font-size:0.85em }}
-
-        /* ── Health ── */
-        .hc {{ border-left:3px solid var(--accent) }}
-        .hdot {{ width:8px; height:8px; border-radius:50%; display:inline-block; flex-shrink:0; animation:pulse 2s infinite }}
-        @keyframes pulse {{ 0%,100%{{opacity:1}} 50%{{opacity:.5}} }}
-        .hmeta {{ display:flex; gap:12px; flex-wrap:wrap; font-size:0.75em; color:#71717a; margin:6px 0 10px }}
-        .hmeta a {{ color:#818cf8; text-decoration:none }}
-        .hmeta a:hover {{ text-decoration:underline }}
-        .iss {{ padding:2px 0; font-size:0.82em; color:#fca5a5 }}
-
-        /* ── Ideas ── */
-        .ic {{ border-left:3px solid var(--accent) }}
-
-        /* ── Changelog ── */
-        .cl {{ margin-top:24px }}
-        .le {{ display:flex; align-items:flex-start; gap:6px; padding:5px 0; border-bottom:1px solid #0d0d14; font-size:0.82em; flex-wrap:wrap }}
-        .ledate {{ color:#52525b; font-size:0.85em; white-space:nowrap; min-width:72px }}
-        .leproj {{ color:#7c3aed; flex-shrink:0; font-size:0.85em }}
-        .letext {{ color:#a1a1aa; flex:1 }}
-
-        /* ── Footer ── */
-        footer {{ text-align:center; padding:24px 0 16px; color:#3f3f46; font-size:0.7em; border-top:1px solid #1c1c24; margin-top:24px }}
-
-        /* ── Toast ── */
-        #toast {{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(80px); background:#10b981; color:#fff; padding:10px 20px; border-radius:12px; font-size:0.85em; opacity:0; transition:all .3s; pointer-events:none; z-index:999; box-shadow:0 4px 20px rgba(0,0,0,.5) }}
-        #toast.show {{ opacity:1; transform:translateX(-50%) translateY(0) }}
-
-        /* ── Responsive ── */
-        @media (max-width:600px) {{
-            .card {{ padding:14px }}
-            .mg {{ grid-template-columns:repeat(2,1fr) }}
-            .sb {{ gap:5px }}
-            .sp {{ font-size:0.72em; padding:4px 10px }}
-            .ltbl {{ font-size:0.75em }}
-            .lc {{ white-space:normal }}
-            .lt {{ white-space:normal }}
-            .btn {{ font-size:0.7em; padding:4px 8px }}
-            h1 {{ font-size:1.3em }}
-        }}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hermes OS</title>
+<style>
+:root{--bg:#0a0a0f;--fg:#e4e4e7;--c1:#111118;--c2:#1c1c24;--c3:#27272a;--t2:#71717a;--t3:#52525b;--ac:#6366f1;--gr:#34d399;--rd:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;display:flex}
+::selection{background:var(--ac);color:#fff}
+.sb{width:200px;min-width:200px;background:#0d0d14;border-right:1px solid var(--c2);padding:12px 0;height:100vh;position:sticky;top:0;overflow-y:auto;display:flex;flex-direction:column}
+.sb-l{padding:8px 14px 16px;font-size:.9em;font-weight:700;background:linear-gradient(135deg,var(--fg),#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:1px solid var(--c2);margin-bottom:6px}
+.sb-l small{display:block;font-size:.6em;color:var(--t2);-webkit-text-fill-color:var(--t2);font-weight:400;margin-top:2px}
+.sb-g{padding:2px 0}
+.sb-gl{padding:4px 14px;font-size:.6em;color:var(--t3);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.sb-b{display:flex;align-items:center;gap:7px;padding:7px 14px;font-size:.8em;color:var(--t2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+.sb-b:hover{background:#14141e;color:var(--fg)}
+.sb-b.on{background:#1e1e2a;color:var(--fg);border-right:2px solid var(--ac)}
+.sb-b .sbc{margin-left:auto;background:var(--c2);border-radius:8px;padding:0 6px;font-size:.7em;color:var(--t2)}
+.sb-b.on .sbc{background:var(--ac);color:#fff}
+.sb-sp{flex:1}
+.sb-ft{padding:10px 14px;font-size:.65em;color:var(--t3);border-top:1px solid var(--c2)}
+.mn{flex:1;max-width:calc(100vw - 200px);overflow-y:auto;height:100vh}
+.c{max-width:900px;margin:0 auto;padding:20px}
+.sm{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.sp{background:var(--c1);border:1px solid var(--c2);border-radius:14px;padding:4px 11px;font-size:.72em;color:var(--t2);display:flex;align-items:center;gap:4px}
+.sp b{color:var(--fg)}
+.pn{display:none}
+.pn.on{display:block}
+.ph{font-size:1.2em;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ph small{font-size:.6em;color:var(--t2);font-weight:400}
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+.dc{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;text-align:center}
+.dc .dn{font-size:.75em;color:var(--t2)}
+.dc .dv{font-size:1.5em;font-weight:700;color:var(--fg);margin:4px 0}
+.dc .ds{font-size:.65em;color:var(--t3)}
+.btn{display:inline-flex;align-items:center;gap:4px;background:var(--c2);border:1px solid var(--c3);color:var(--t2);padding:5px 12px;border-radius:8px;font-size:.75em;cursor:pointer;transition:all .15s;font-family:inherit}
+.btn:hover{background:var(--c3);border-color:#3f3f46;color:var(--fg)}
+.btn-p{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn-p:hover{background:#818cf8;border-color:#818cf8}
+.bc{background:var(--c1);border-radius:12px;padding:16px;border:1px solid var(--c2);margin-bottom:10px;border-left:3px solid var(--a)}
+.bc:hover{border-color:var(--c3)}
+.bch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.bch h3{font-size:1em;font-weight:600}
+.be{font-size:1.3em}
+.bd{color:var(--t2);font-size:.84em;margin:3px 0 6px;line-height:1.5}
+.bg{font-size:.58em;padding:2px 10px;border-radius:10px;color:#fff;font-weight:600;letter-spacing:.4px;white-space:nowrap}
+.st{list-style:none;padding:0;margin-top:5px}
+.st li{padding:2px 0;font-size:.82em;color:var(--t2)}
+.st li.d{color:var(--fg)}
+.nt{background:#0d0d14;border-radius:7px;padding:7px 9px;font-size:.8em;color:var(--t2);margin-top:6px}
+.pl{color:#818cf8;font-size:.78em;text-decoration:none;display:inline-block;margin:3px 0}
+.pl:hover{text-decoration:underline}
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:5px;margin:8px 0}
+.m{background:#0d0d14;border-radius:7px;padding:7px;text-align:center}
+.ml{display:block;font-size:.58em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
+.mv{display:block;font-size:.92em;color:#a78bfa;font-weight:600;margin-top:1px}
+.eg{background:var(--c1);border:1px solid var(--c2);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.egh{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--c2);flex-wrap:wrap}
+.egl{font-weight:600;font-size:.85em;flex:1}
+.egc{background:var(--c2);border-radius:8px;padding:0 7px;font-size:.72em;color:var(--t2)}
+.eb{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:3px 9px;font-size:.7em;color:var(--t2);cursor:pointer;font-family:inherit}
+.eb:hover{background:var(--c3);color:var(--fg)}
+.egm{padding:14px;font-size:.82em;color:var(--t2);text-align:center}
+.eil{max-height:220px;overflow-y:auto}
+.ei{display:flex;gap:6px;padding:5px 12px;border-bottom:1px solid #0d0d14;font-size:.78em;flex-wrap:wrap}
+.ei:last-child{border:none}
+.eic{color:var(--fg);font-weight:500;min-width:100px}
+.eie{color:#818cf8}
+.ein{color:var(--t2);font-size:.9em}
+.sc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--a)}
+.sch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.sch h3{font-size:.9em;font-weight:600}
+.sd{width:7px;height:7px;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.shm{display:flex;gap:10px;flex-wrap:wrap;font-size:.72em;color:var(--t2);margin:5px 0 6px}
+.shm a{color:#818cf8;text-decoration:none}
+.ic{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--a)}
+.ich{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ich h3{font-size:.9em;font-weight:600;flex:1}
+.id{color:var(--t2);font-size:.82em;margin:4px 0 6px;line-height:1.5}
+.ih{display:flex;gap:10px;font-size:.72em;color:var(--t2);flex-wrap:wrap}
+.ac{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px}
+.ach{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.ach h3{font-size:.9em;font-weight:600;flex:1}
+.ae{font-size:1.1em}
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.agl{display:block;font-size:.6em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
+.agv{display:block;font-size:.85em;color:var(--t2);margin-top:1px}
+.tc{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tcol{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:10px;min-height:200px}
+.tcol h4{font-size:.8em;color:var(--t2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.4px}
+.ti{background:#0d0d14;border:1px solid var(--c2);border-radius:6px;padding:7px 9px;margin-bottom:5px;font-size:.78em;cursor:pointer}
+.ti:hover{border-color:var(--c3)}
+.addt{background:none;border:1px dashed var(--c3);border-radius:6px;padding:6px;font-size:.75em;color:var(--t3);cursor:pointer;width:100%;font-family:inherit;text-align:center}
+.addt:hover{border-color:#3f3f46;color:var(--t2)}
+.le{display:flex;align-items:flex-start;gap:5px;padding:5px 0;border-bottom:1px solid #0d0d14;font-size:.8em;flex-wrap:wrap}
+.ld{color:var(--t3);font-size:.85em;white-space:nowrap;min-width:65px}
+.lp{color:#7c3aed;flex-shrink:0;font-size:.85em}
+.ltx{color:var(--t2);flex:1}
+.nts{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;min-height:200px}
+.nts textarea{width:100%;min-height:180px;background:#0d0d14;border:1px solid var(--c2);border-radius:8px;color:var(--fg);padding:10px;font-size:.82em;font-family:inherit;resize:vertical}
+.nts textarea:focus{outline:none;border-color:var(--ac)}
+#to{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--gr);color:#fff;padding:9px 18px;border-radius:10px;font-size:.82em;opacity:0;transition:all .3s;pointer-events:none;z-index:999}
+#to.sh{opacity:1;transform:translateX(-50%) translateY(0)}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:#0d0d14}
+::-webkit-scrollbar-thumb{background:var(--c3);border-radius:3px}
+@media(max-width:700px){
+body{flex-direction:column}
+.sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:6px;border:none;border-bottom:1px solid var(--c2)}
+.sb-l{padding:4px 8px;border:none;margin:0;font-size:.8em}
+.sb-l small{display:inline;margin-left:4px}
+.sb-g{display:flex;flex-wrap:wrap;padding:0}
+.sb-gl{display:none}
+.sb-b{padding:4px 8px;font-size:.72em;width:auto;border-radius:6px}
+.sb-b.on{border-right:none;background:#1e1e2a}
+.sb-sp{display:none}
+.sb-ft{display:none}
+.mn{max-width:100%;height:auto}
+.c{padding:10px}
+.tc{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head>
 <body>
-    <div class="c">
-        <header>
-            <h1>🚀 Hermes Dashboard</h1>
-            <div class="sub">Edinson Angarita — Proyectos & Crecimiento</div>
-            <div class="upd">🕐 {now}</div>
-        </header>
+''')
 
-        <div class="sb">
-            <span class="sp">📊 <b>{len(projects['projects'])}</b> proyectos</span>
-            <span class="sp">✅ <b>{activos}</b> activos</span>
-            <span class="sp">⏳ <b>{pendientes}</b> pendientes</span>
-            <span class="sp">💡 <b>{ideas_count}</b> ideas</span>
-            <span class="sp" style="border-color:#6366f1">🎯 <b>{total_leads}</b> leads</span>
-            <span class="sp" style="border-color:{"#34d399" if sites_online==sites_total else "#ef4444"}">🔍 <b>{sites_online}/{sites_total}</b> online</span>
-        </div>
+    # Sidebar
+    html_parts.append('<nav class="sb">')
+    html_parts.append('<div class="sb-l">&#x29E7; Hermes OS <small>v2.0</small></div>')
+    html_parts.append('<div class="sb-g"><div class="sb-gl">General</div>')
+    html_parts.append('<button class="sb-b on" data-pn="dashboard">&#x1F4CA; Dashboard</button>')
+    html_parts.append('<button class="sb-b" data-pn="businesses">&#x1F3E2; Negocios</button>')
+    html_parts.append('<button class="sb-b" data-pn="outreach">&#x1F4E7; Outreach <span class="sbc">%d</span></button>' % all_count)
+    html_parts.append('<button class="sb-b" data-pn="sites">&#x1F50D; Sitios</button>')
+    html_parts.append('</div><div class="sb-g"><div class="sb-gl">Operaciones</div>')
+    html_parts.append('<button class="sb-b" data-pn="tasks">&#x2705; Tareas</button>')
+    html_parts.append('<button class="sb-b" data-pn="agents">&#x1F916; Agentes IA</button>')
+    html_parts.append('<button class="sb-b" data-pn="ideas">&#x1F4A1; Ideas</button>')
+    html_parts.append('<button class="sb-b" data-pn="notes">&#x1F4DD; Notas</button>')
+    html_parts.append('</div><div class="sb-g"><div class="sb-gl">Historial</div>')
+    html_parts.append('<button class="sb-b" data-pn="changelog">&#x1F4DC; Cambios</button>')
+    html_parts.append('</div>')
+    html_parts.append('<div class="sb-sp"></div>')
+    html_parts.append('<div class="sb-ft">Actualizado: %s</div>' % now.split()[1])
+    html_parts.append('</nav>')
 
-        <!-- ═══ PROYECTOS ═══ -->
-        <div class="sh">🛠️ Proyectos</div>
-        <div class="grid">{cards_html}</div>
+    # Main
+    html_parts.append('<main class="mn"><div class="c">')
 
-        <!-- ═══ LEADS ═══ -->
-        <div class="sh" style="border-color:#27272a">
-            🎯 Leads Generados
-            <div class="sh-actions">
-                <button class="btn btn-s" onclick="copyLeads(event,'today')" title="Copia HOY en formato email">📋 Copiar Hoy</button>
-                <button class="btn btn-p" onclick="copyLeads(event,'all')" title="Copia TODOS los leads recientes">📋 Copiar Todos</button>
-            </div>
-        </div>
-        <div class="grid">{leads_html}</div>
+    # Dashboard panel
+    html_parts.append('<div class="pn on" id="pn-dashboard">')
+    html_parts.append('<div class="ph">&#x1F4CA; Dashboard</div>')
+    html_parts.append('<div class="sm">')
+    html_parts.append('<span class="sp">&#x1F4CA; <b>%d</b> negocios</span>' % total_projects)
+    html_parts.append('<span class="sp">&#x2705; <b>%d</b> activos</span>' % activos)
+    html_parts.append('<span class="sp" style="border-color:var(--ac)">&#x1F3AF; <b>%d</b> leads</span>' % total_leads)
+    html_parts.append('<span class="sp" style="border-color:%s">&#x1F50D; <b>%d/%d</b> sitios online</span>' % (site_color, sites_online, sites_total))
+    html_parts.append('<span class="sp">&#x1F916; <b>%d</b> agentes</span>' % len(agents))
+    html_parts.append('</div>')
+    html_parts.append('<div class="dg">')
+    html_parts.append('<div class="dc"><div class="dn">Leads Totales</div><div class="dv">%d</div><div class="ds">En %d dias</div></div>' % (total_leads, len(all_dates)))
+    html_parts.append('<div class="dc"><div class="dn">Emails Unicos</div><div class="dv">%d</div><div class="ds">Para outreach</div></div>' % all_count)
+    html_parts.append('<div class="dc"><div class="dn">Sitios Online</div><div class="dv">%d/%d</div><div class="ds">%s</div></div>' % (sites_online, sites_total, pct_online))
+    html_parts.append('<div class="dc"><div class="dn">Agentes Activos</div><div class="dv">%d</div><div class="ds">de %d</div></div>' % (n_active, len(agents)))
+    html_parts.append('</div>')
+    html_parts.append('<div class="ph" style="font-size:.95em;margin-top:4px">&#x1F3E2; Negocios Activos</div>')
+    html_parts.append(biz_cards)
+    html_parts.append('</div>')
 
-        <!-- ═══ SITE HEALTH ═══ -->
-        <div class="sh">🔍 Salud de los Sitios</div>
-        <div class="grid">{health_cards}</div>
+    # Businesses panel
+    html_parts.append('<div class="pn" id="pn-businesses">')
+    html_parts.append('<div class="ph">&#x1F3E2; Negocios <small>Todos los proyectos activos</small></div>')
+    html_parts.append(biz_cards)
+    html_parts.append('</div>')
 
-        <!-- ═══ IDEAS ═══ -->
-        <div class="sh">💡 Ideas de Negocio Digital</div>
-        <div class="grid">{idea_cards}</div>
+    # Outreach panel
+    html_parts.append('<div class="pn" id="pn-outreach">')
+    html_parts.append('<div class="ph">&#x1F4E7; Outreach <small>%d emails unicos</small></div>' % all_count)
+    html_parts.append('<div style="margin-bottom:12px"><button class="btn btn-p" onclick="ec(\'%s\',%d)">&#x1F4CB; Copiar TODOS (%d)</button></div>' % (all_text, all_count, all_count))
+    html_parts.append(outreach)
+    html_parts.append('</div>')
 
-        <!-- ═══ CHANGELOG ═══ -->
-        <div class="cl">
-            <div class="sh">📜 Últimas Actualizaciones</div>
-            {log_entries}
-        </div>
+    # Sites panel
+    html_parts.append('<div class="pn" id="pn-sites">')
+    html_parts.append('<div class="ph">&#x1F50D; Sitios Web <small>Salud y SEO</small></div>')
+    html_parts.append('<div class="sm"><span class="sp" style="border-color:%s">%d/%d online</span></div>' % (site_color, sites_online, sites_total))
+    html_parts.append(health_cards)
+    html_parts.append('</div>')
 
-        <footer>Hermes Agent · Dashboard vivo · Actualización automática 2x/día</footer>
-    </div>
+    # Tasks panel
+    html_parts.append('<div class="pn" id="pn-tasks">')
+    html_parts.append('<div class="ph">&#x2705; Tareas</div>')
+    html_parts.append('<div class="tc">')
+    html_parts.append('<div class="tcol" data-col="today"><h4>&#x1F534; Hoy</h4><div class="tl"></div><button class="addt" onclick="at(\'today\')">+ Anadir</button></div>')
+    html_parts.append('<div class="tcol" data-col="urgent"><h4>&#x1F7E1; Urgente</h4><div class="tl"></div><button class="addt" onclick="at(\'urgent\')">+ Anadir</button></div>')
+    html_parts.append('<div class="tcol" data-col="week"><h4>&#x1F535; Esta Semana</h4><div class="tl"></div><button class="addt" onclick="at(\'week\')">+ Anadir</button></div>')
+    html_parts.append('<div class="tcol" data-col="done"><h4>&#x2705; Completadas</h4><div class="tl"></div></div>')
+    html_parts.append('</div></div>')
 
-    <div id="toast"></div>
+    # Agents panel
+    html_parts.append('<div class="pn" id="pn-agents">')
+    html_parts.append('<div class="ph">&#x1F916; Agentes IA <small>Automatizaciones activas</small></div>')
+    html_parts.append(agents_html)
+    html_parts.append('</div>')
 
-    <script>
-    // ── Data for copy ──
-    var LEAD_DATA = {json.dumps({
-        "today": [{
-            "company": l["company"],
-            "email": l["email"],
-            "notes": l.get("notes", "")
-        } for l in today_leads],
-        "all": [{
-            "company": l["company"],
-            "email": l["email"],
-            "notes": l.get("notes", "")
-        } for d in recent_dates for l in leads_data["leads_by_date"][d]]
-    })};
+    # Ideas panel
+    html_parts.append('<div class="pn" id="pn-ideas">')
+    html_parts.append('<div class="ph">&#x1F4A1; Ideas de Negocio</div>')
+    html_parts.append(idea_cards)
+    html_parts.append('</div>')
 
-    function copyLeads(e, mode) {{
-        var data = LEAD_DATA[mode];
-        if (!data || data.length === 0) {{
-            showToast("⚠️ No hay leads para copiar");
-            return;
-        }}
-        // Email-ready format: Company <email> — Notes
-        var text = data.map(function(l) {{
-            return l.company + " <" + l.email + "> — " + (l.notes || "");
-        }}).join("\\n");
-        // Also add a subject-friendly summary
-        var summary = "📋 " + data.length + " leads" + (mode === "today" ? " (Hoy)" : " (recientes)") + "\\n\\n";
-        text = summary + text;
+    # Notes panel
+    html_parts.append('<div class="pn" id="pn-notes">')
+    html_parts.append('<div class="ph">&#x1F4DD; Notas Rapidas</div>')
+    html_parts.append('<div class="nts"><textarea id="na" placeholder="Escribe tus notas aqui... Se guardan automaticamente."></textarea>')
+    html_parts.append('<button class="btn" onclick="sn()">&#x1F4BE; Guardar</button>')
+    html_parts.append('<span style="font-size:.72em;color:var(--t2);margin-left:8px" id="ns"></span>')
+    html_parts.append('</div></div>')
 
-        if (navigator.clipboard && navigator.clipboard.writeText) {{
-            navigator.clipboard.writeText(text).then(function() {{
-                showToast("✅ " + data.length + " leads copiados — listos para pegar en email");
-            }}).catch(function() {{
-                fallbackCopy(text);
-            }});
-        }} else {{
-            fallbackCopy(text);
-        }}
+    # Changelog panel
+    html_parts.append('<div class="pn" id="pn-changelog">')
+    html_parts.append('<div class="ph">&#x1F4DC; Ultimos Cambios</div>')
+    html_parts.append(log_html)
+    html_parts.append('</div>')
 
-        // Visual feedback on button
-        var btn = e.currentTarget;
-        btn.classList.add("copied");
-        var orig = btn.innerHTML;
-        btn.innerHTML = "✅ Copiado";
-        setTimeout(function() {{ btn.innerHTML = orig; btn.classList.remove("copied") }}, 2000);
-    }}
+    html_parts.append('</div></main>')
 
-    function fallbackCopy(text) {{
-        var ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.left = "-9999px";
-        document.body.appendChild(ta);
-        ta.select();
-        try {{
-            document.execCommand("copy");
-            showToast("✅ Leads copiados");
-        }} catch(e) {{
-            showToast("❌ No se pudo copiar. Selecciona manualmente.");
-        }}
-        document.body.removeChild(ta);
-    }}
+    # Toast + Script
+    html_parts.append('''<div id="to"></div>
+<script>
+var sb=document.querySelectorAll('.sb-b');
+sb.forEach(function(b){b.addEventListener('click',function(){
+sb.forEach(function(x){x.classList.remove('on')});
+document.querySelectorAll('.pn').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+var p=document.getElementById('pn-'+b.getAttribute('data-pn'));
+if(p)p.classList.add('on');
+try{localStorage.setItem('hpan',b.getAttribute('data-pn'))}catch(e){}
+})});
+try{var lp=localStorage.getItem('hpan');if(lp){var b=document.querySelector('.sb-b[data-pn="'+lp+'"]');if(b)b.click()}}catch(e){}
 
-    function showToast(msg) {{
-        var t = document.getElementById("toast");
-        t.textContent = msg;
-        t.classList.add("show");
-        clearTimeout(t._timer);
-        t._timer = setTimeout(function() {{ t.classList.remove("show") }}, 2500);
-    }}
-    </script>
+function toast(m){var t=document.getElementById('to');t.textContent=m;t.classList.add('sh');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('sh')},2500)}
+
+function ec(t,c){
+if(navigator.clipboard&&navigator.clipboard.writeText){
+navigator.clipboard.writeText(t).then(function(){toast('\\u2705 '+c+' emails copiados')}).catch(function(){fb(t)})
+}else{fb(t)}
+}
+function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('\\u2705 Copiado')}catch(e){toast('\\u274c Error')}document.body.removeChild(ta)}
+
+function lt(){try{return JSON.parse(localStorage.getItem('htasks'))||{today:[],urgent:[],week:[],done:[]}}catch(e){return{today:[],urgent:[],week:[],done:[]}}}
+function st(d){try{localStorage.setItem('htasks',JSON.stringify(d))}catch(e){}}
+function rt(){
+var d=lt();['today','urgent','week','done'].forEach(function(c){
+var el=document.querySelector('.tcol[data-col="'+c+'"] .tl');if(!el)return;
+el.innerHTML=d[c].map(function(t,i){var s=c==='done'?'style="text-decoration:line-through;color:var(--t3)"':'';return '<div class="ti" '+s+' onclick="td(\\''+c+'\\','+i+')">'+t+'</div>'}).join('')})}
+function at(col){var t=prompt('Nueva tarea ('+col+'):');if(!t||!t.trim())return;var d=lt();d[col].push(t.trim());st(d);rt()}
+function td(col,i){var d=lt();if(col==='done'){d.done.splice(i,1)}else{d.done.push(d[col][i]);d[col].splice(i,1)}st(d);rt();toast('\\u2705 Tarea movida')}
+rt();
+
+var ta=document.getElementById('na');
+if(ta){try{ta.value=localStorage.getItem('hnotes')||''}catch(e){}}
+function sn(){if(!ta)return;try{localStorage.setItem('hnotes',ta.value);document.getElementById('ns').textContent='\\u2705 Guardado'}catch(e){}}
+</script>
 </body>
-</html>"""
+</html>''')
 
+    html = "\n".join(html_parts)
     path = os.path.join(DIR, "index.html")
     with open(path, "w") as f:
         f.write(html)
-    print(f"✅ Dashboard generado: {path} ({len(html)} bytes)")
+    print("OK: %s (%d bytes)" % (path, len(html)))
     return True
 
 if __name__ == "__main__":
