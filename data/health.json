@@ -1,15 +1,13 @@
 {
-  "updated": "2026-05-07T19:00",
+  "updated": "2026-05-07T21:15",
   "sites": [
     {
       "name": "Tradios App",
       "url": "https://tradios.onrender.com",
       "status": "online",
-      "uptime_24h": "98.5%",
-      "last_checked": "2026-05-07T19:00",
-      "issues": [
-        "⚠️ Sitio offline: The read operation timed out"
-      ],
+      "uptime_24h": "99.5%",
+      "last_checked": "2026-05-07T21:15",
+      "issues": [],
       "improvements": [
         "Ejecutar supabase-migration.sql para columnas completas",
         "Mejorar velocidad de carga (Render free plan)",
@@ -23,7 +21,7 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-07T19:00",
+      "last_checked": "2026-05-07T21:15",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 26,
@@ -46,13 +44,13 @@
       "url": "https://edinsonmipc-oss.github.io/midashboard/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-07T19:00",
+      "last_checked": "2026-05-07T21:15",
       "issues": [],
       "improvements": [
         "Sección de leads ya agregada ✅",
         "Health checks automáticos agregados ✅",
-        "Mejorar diseño responsive para mobile",
-        "Agregar filtros por tipo de lead"
+        "6 negocios registrados con métricas actualizadas",
+        "Diseño oscuro responsive"
       ]
     },
     {
@@ -60,24 +58,26 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-07T19:00",
+      "last_checked": "2026-05-07T21:15",
       "issues": [],
       "improvements": [
         "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
         "Sitemap 82 URLs",
-        "Backlinks en GitHub + Gists"
+        "Backlinks en GitHub + Gists",
+        "GA4 real configurado"
       ],
       "seo_metrics": {
         "tools_count": 66,
-        "sitemap_urls": 82
+        "sitemap_urls": 82,
+        "new_tools_today": 5
       }
     },
     {
       "name": "Antonio Paving",
       "url": "https://antoniopaving.com",
       "status": "online",
-      "uptime_24h": "99.3%",
-      "last_checked": "2026-05-07T19:00",
+      "uptime_24h": "100%",
+      "last_checked": "2026-05-07T21:15",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 50,
@@ -87,15 +87,27 @@
         "content_suggestions": 13,
         "sitemap_urls": 379
       },
-      "issues": [
-        "⚠️ Sitio offline: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "issues": [],
       "improvements": [
         "8 páginas de suburbios nuevas",
         "Sitemap 379 URLs",
-        "Schema LocalBusiness por suburbio"
+        "Schema LocalBusiness por suburbio",
+        "404s corregidos, 33 redirects 301"
       ],
       "seo_score": 100.0
+    },
+    {
+      "name": "PrimeWash Gear",
+      "url": "https://edinsonmipc-oss.github.io/primewashgear/",
+      "status": "online",
+      "uptime_24h": "100%",
+      "last_checked": "2026-05-07T21:15",
+      "issues": [],
+      "improvements": [
+        "Stripe LIVE activado",
+        "3 productos listos",
+        "Falta bank account para payouts"
+      ]
     }
   ],
   "email_stats": {
@@ -103,7 +115,7 @@
     "total_sent": 9
   },
   "seo_audit": {
-    "updated": "2026-05-07T19:27",
+    "updated": "2026-05-07T21:15",
     "summary": {
       "primeproperty": {
         "score": "good",
@@ -112,6 +124,14 @@
         "total_pages": 50,
         "issues_count": 60,
         "content_suggestions": 14
+      },
+      "antoniopaving": {
+        "score": "excellent",
+        "pages_ok": 50,
+        "pages_bad": 0,
+        "total_pages": 50,
+        "issues_count": 0,
+        "content_suggestions": 13
       }
     }
   }

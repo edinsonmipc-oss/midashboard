@@ -1,47 +1,47 @@
 {
-  "updated": "2026-05-02T11:38",
+  "updated": "2026-05-07T21:15",
   "projects": [
     {
       "id": "toolshubpro",
       "name": "ToolshubPro",
       "emoji": "🛠️",
       "status": "activo",
-      "description": "57 herramientas online. Meta: $5k/mes en 6 meses.",
-      "url": "",
+      "description": "66 herramientas online + 5 nuevas (Car Loan, Home Loan, CGT, Budget, Retirement). Sitemap 82 URLs. Meta: $5k/mes en 6 meses.",
+      "url": "https://toolshubpro.com.au",
       "metrics": {
         "herramientas": 66,
-        "meta_ingresos": "$5k/mes",
-        "plazo": "6 meses"
+        "nuevas_hoy": 5,
+        "sitemap_urls": 82,
+        "meta_ingresos": "$5k/mes"
       },
-      "last_update": "2026-05-02",
+      "last_update": "2026-05-07",
       "next_steps": [
-        "Subir ZIP a Hostinger",
-        "Agregar más herramientas populares",
-        "Configurar analytics real"
+        "Esperar indexación de Google (2-4 sem)",
+        "Agregar más herramientas financieras",
+        "Monitorear GSC para keywords"
       ],
-      "notes": "66 herramientas. 5 nuevas. Sitemap 82 URLs."
+      "notes": "66 herramientas. 5 nuevas financieras. Sitemap 82 URLs. Contenido SEO por suburbio."
     },
     {
       "id": "primeproperty",
       "name": "Prime Property Maintenance",
       "emoji": "🏡",
       "status": "activo",
-      "description": "Servicios de mantenimiento de propiedades en Melbourne.",
+      "description": "Servicios de mantenimiento de propiedades en Melbourne. 965 URLs, tráfico creciendo.",
       "url": "https://primepropertymaintenance.au",
       "metrics": {
         "urls_en_sitemap": 965,
         "clicks_28d": 31,
         "impresiones_28d": 3986,
-        "avg_position": 41.87,
-        "ctr": "0.77%"
+        "avg_position": 41.87
       },
-      "last_update": "2026-05-01",
+      "last_update": "2026-05-07",
       "next_steps": [
-        "Agregar GA4 con G-XXXXXXXXXX",
         "Mejorar top-10 keywords",
-        "Construir backlinks"
+        "Subir fotos al GBP",
+        "Construir backlinks AU"
       ],
-      "notes": "965 URLs. Optimizado con GA4 real. Tráfico creciendo."
+      "notes": "965 URLs. GA4 real configurado. SEO audit semanal activo."
     },
     {
       "id": "tradeos",
@@ -51,7 +51,7 @@
       "description": "Plataforma de comercio/negocios.",
       "url": "",
       "metrics": {},
-      "last_update": "2026-04-30",
+      "last_update": "2026-05-07",
       "next_steps": [
         "Desplegar en Hostinger/GitHub Pages",
         "Configurar funcionalidad básica"
@@ -63,49 +63,66 @@
       "name": "Antonio Paving",
       "emoji": "🏗️",
       "status": "activo",
-      "description": "Pavimentación residencial y comercial en Melbourne.",
+      "description": "Pavimentación residencial y comercial en Melbourne. 8 páginas de suburbios nuevas. SEO score 100%.",
       "url": "https://antoniopaving.com",
       "metrics": {
         "servicios": 6,
         "paginas": 379,
-        "ubicacion": "Melbourne VIC"
+        "suburbios_nuevos": 8,
+        "seo_score": "100%"
       },
-      "last_update": "2026-05-01",
+      "last_update": "2026-05-07",
       "next_steps": [
-        "Mejorar SEO de páginas de servicios",
-        "Agregar más fotos de proyectos",
+        "Subir fotos reales al GBP",
+        "Seguir creando páginas por suburbio",
         "Conseguir backlinks AU"
       ],
-      "notes": "8 nuevas páginas de suburbios. Sitemap 379 URLs."
+      "notes": "8 páginas de suburbios. Sitemap 379 URLs. Schema LocalBusiness. 404s corregidos."
     },
     {
       "id": "leadgen",
       "name": "Lead Generation",
       "emoji": "🎯",
       "status": "activo",
-      "description": "Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.",
+      "description": "130 leads encontrados, 51 únicos verificados. Outreach pendiente de activación.",
       "url": "",
       "metrics": {
-        "targets": "Builders, contractors, real estate en Melbourne"
+        "leads_totales": 130,
+        "unicos_verificados": 51,
+        "templates": 2
       },
-      "last_update": "2026-05-01",
+      "last_update": "2026-05-07",
       "next_steps": [
-        "Identificar top 50 builders en Melbourne",
-        "Recolectar emails",
-        "Preparar template de outreach",
-        "Enviar propuestas"
+        "Activar envío automático (req App Password)",
+        "Completar outreach a builders",
+        "Seguir recolectando leads"
       ],
-      "notes": "Idea recién iniciada"
+      "notes": "130 leads en 13 días. Builders, constructoras, real estate. Templates listos."
+    },
+    {
+      "id": "primewashgear",
+      "name": "PrimeWash Gear",
+      "emoji": "🧼",
+      "status": "activo",
+      "description": "Tienda dropshipping de partes para pressure washers. Stripe activo. 3 productos.",
+      "url": "https://edinsonmipc-oss.github.io/primewashgear/",
+      "metrics": {
+        "productos": 3,
+        "stripe": "Live",
+        "pagos": "Pendiente bank account"
+      },
+      "last_update": "2026-05-07",
+      "next_steps": [
+        "Completar bank account en Stripe",
+        "Agregar más productos",
+        "Impulsar tráfico"
+      ],
+      "notes": "LIVE Stripe. 3 packs (Pro $174.99, Starter $99.00, Maintenance $44.99)"
     }
   ],
   "stats": {
-    "total_projects": 5,
-    "activos": 4,
-    "pendientes": 1,
-    "ideas": 1
-  },
-  "toolshubpro": {
-    "tools_count": 60,
-    "categories": 10
+    "total_projects": 6,
+    "activos": 5,
+    "pendientes": 1
   }
 }
