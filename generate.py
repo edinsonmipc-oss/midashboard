@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""generate.py — Hermes OS: Premium AI Business OS"""
+"""generate.py — Tradeos: Business OS for Tradies"""
 
 import json, os
 from datetime import datetime, date
@@ -44,41 +44,27 @@ def generate():
         if t not in groups: t = "other"
         groups[t].append(l)
 
-    def email_block(leads, label, cls=""):
+    def email_block(leads, label, icon="", cls=""):
         if not leads:
             return '<div class="eg %s"><div class="egh"><span class="egl">%s</span><span class="egc">0</span></div></div>' % (cls, label)
         text = "; ".join(l["email"] for l in leads).replace("'","\\'")
         n = len(leads)
         entries = "".join('<div class="ei"><span class="eic">%s</span><span class="eie">%s</span><span class="ein">%s</span></div>' % (esc(l["company"]), esc(l["email"]), esc(l.get("notes",""))) for l in leads)
-        return '<div class="eg %s"><div class="egh"><span class="egl">%s</span><span class="egc">%d</span><button class="eb" onclick="cp(\'%s\',%d)">Copy</button></div><div class="eil">%s</div></div>' % (cls, label, n, text, n, entries)
+        return '<div class="eg %s"><div class="egh"><span class="egl">%s %s</span><span class="egc">%d</span><button class="eb" onclick="cp(\'%s\',%d)">Copy All</button></div><div class="eil">%s</div></div>' % (cls, icon, label, n, text, n, entries)
 
     all_text = "; ".join(l["email"] for l in unique_leads).replace("'","\\'")
     all_count = len(unique_leads)
 
-    outreach = email_block(today_leads, "Today", "eg-hot")
-    for key, emoji in [("constructora","Constructors"),("builder","Builders"),("real_estate","Real Estate"),("property_mgmt","Property Mgmt"),("strata","Strata"),("other","Other")]:
-        outreach += email_block(groups.get(key,[]), emoji)
+    outreach = email_block(today_leads, "Emails Found Today", "\\ud83d\\udd34", "eg-hot")
+    for key, icon, label in [("builder","\\ud83d\\udd28","Builders"),("constructora","\\ud83c\\udfd7\\ufe0f","Constructors"),("real_estate","\\ud83c\\udfe0","Real Estate"),("property_mgmt","\\ud83d\\udccb","Property Mgrs"),("strata","\\ud83c\\udfdb\\ufe0f","Strata"),("other","\\ud83d\\udccc","Other")]:
+        outreach += email_block(groups.get(key,[]), label, icon)
 
     # Business cards
     biz_data = []
     for p in projects["projects"]:
         pid = p["id"]
         sc = {"activo":"#34d399","pendiente":"#fbbf24","idea":"#888","completado":"#60a5fa"}.get(p["status"],"#888")
-        leads_count = 0
-        for l in unique_leads:
-            lt = l.get("type","")
-            if (pid == "leadgen") or \
-               (pid == "primeproperty" and lt in ("property_mgmt","real_estate")) or \
-               (pid == "antoniopaving" and lt in ("builder","constructora")) or \
-               (pid == "toolshubpro"):
-                leads_count += 1
-        biz_data.append((pid, p["emoji"], esc(p["name"]), esc(p["description"]), sc, p["status"].upper(), p.get("url",""), leads_count, p.get("metrics",{}), p.get("next_steps",[]), p.get("notes","")))
-
-    biz_cards = ""
-    for b in biz_data:
-        pid, em, name, desc, sc, status, url, lcount, metrics, steps, notes = b
-        m_items = "".join('<div class="m"><span class="ml">%s</span><span class="mv">%s</span></div>' % (esc(k.replace("_"," ").title()), esc(v)) for k,v in metrics.items()) if metrics else ""
-        biz_cards += '<div class="bc" onclick="openBiz(\'%s\')" style="--a:%s"><div class="bch"><span class="be">%s</span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><p class="bd">%s</p>%s<div class="bqa"><button class="bq" onclick="event.stopPropagation();openBiz(\'%s\')">Open</button><button class="bq bq-o" onclick="event.stopPropagation();switchView(\'outreach\')">Outreach</button></div></div>' % (pid, sc, em, name, sc, status, desc, m_items, pid)
+        biz_data.append((pid, p["emoji"], esc(p["name"]), esc(p["description"]), sc, p["status"].upper(), p.get("url",""), p.get("metrics",{}), p.get("next_steps",[]), p.get("notes","")))
 
     # Health cards
     health_cards = ""
@@ -89,181 +75,191 @@ def generate():
         if site.get("seo_metrics"):
             items = "".join('<div class="m"><span class="ml">%s</span><span class="mv">%s</span></div>' % (esc(k.replace("_"," ").title()), esc(v)) for k,v in site["seo_metrics"].items())
             seo = '<div class="mg">%s</div>' % items
-        health_cards += '<div class="sc" style="--a:%s"><div class="sch"><span class="sd" style="background:%s"></span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><div class="shm"><a href="%s" target="_blank">%s</a><span>%s</span></div>%s</div>' % (clr, clr, esc(site["name"]), clr, "ONLINE" if up else "OFFLINE", esc(site["url"]), esc(site["url"]), esc(site.get("uptime_24h","?")), seo)
-
-    # Agents
-    agents = [
-        ("SEO Agent","Active","12 jobs today","99pct"),
-        ("Lead Finder","Active","22 jobs","100pct"),
-        ("Outreach Agent","Paused","0 jobs","-"),
-        ("Content Writer","Active","8 jobs","98pct"),
-        ("Health Monitor","Active","48 checks","100pct"),
-    ]
-    agents_html = "".join('<div class="ac"><div class="ac-h"><div class="ac-dot" style="background:%s"></div><div><div class="ac-n">%s</div><div class="ac-s">%s</div></div></div><div class="ac-m"><span>%s</span><span>%s</span></div></div>' % ("#34d399" if a[1]=="Active" else "#fbbf24", a[0], a[1], a[2], a[3]) for a in agents)
-
-    # Ideas
-    pots = {"Alto":"#34d399","Muy Alto":"#60a5fa","Medio":"#fbbf24","Bajo":"#888"}
-    idea_cards = "".join('<div class="ic"><div class="ich"><span>%s</span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><p class="id">%s</p><div class="ih"><span>%s</span><span>%s</span></div></div>' % (idea["emoji"], esc(idea["name"]), pots.get(idea.get("potential",""),"#888"), esc(idea.get("potential","")), esc(idea["description"]), esc(idea.get("timeline","?")), esc(idea.get("effort","?"))) for idea in ideas.get("ideas",[]))
+        health_cards += '<div class="sc" style="--a:%s"><div class="sch"><span class="sd" style="background:%s"></span><h3>%s</h3><span class="bg" style="background:%s">%s</span></div><div class="shm"><a href="%s" target="_blank">%s</a> <span>%s</span></div>%s</div>' % (clr, clr, esc(site["name"]), clr, "ONLINE" if up else "OFFLINE", esc(site["url"]), esc(site["url"]), esc(site.get("uptime_24h","?")), seo)
 
     # Changelog
     log_html = "".join('<div class="le"><span class="ld">%s</span><span class="lp">[%s]</span><span class="ltx">%s</span></div>' % (esc(e["date"]), esc(e["project"]), esc(e["text"])) for e in changelog["entries"][:15])
 
     site_color = "#34d399" if sites_online==sites_total else "#ef4444"
-
-    # Biz data for JS
-    biz_json = json.dumps({b[0]: {"e":b[1],"n":b[2],"m":dict(b[8]),"steps":list(b[9]),"notes":b[10]} for b in biz_data})
     leads_json = json.dumps([{"c":l["company"],"e":l["email"],"n":l.get("notes","")} for l in unique_leads])
 
-    # Build HTML in parts (avoids %% conflicts)
+    # Build HTML
     P = []
     P.append('''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Hermes OS</title>
+<title>Tradeos</title>
 <style>
-:root{--bg:#0a0a0f;--fg:#e4e4e7;--c1:#111118;--c2:#1c1c24;--c3:#27272a;--t2:#71717a;--t3:#52525b;--ac:#6366f1;--ac2:#818cf8;--gr:#34d399;--rd:#ef4444;--yw:#fbbf24}
+:root{--bg:#08080c;--fg:#e8e8ed;--c1:#0e0e14;--c2:#181820;--c3:#22222e;--t2:#6b6b80;--t3:#454558;--ac:#6366f1;--ac2:#818cf8;--gr:#34d399;--rd:#ef4444;--yw:#fbbf24;--bl:#3b82f6;--pu:#8b5cf6}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100dvh;overflow-x:hidden}
 ::selection{background:var(--ac);color:#fff}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--c3);border-radius:2px}
+
+/* Layout */
 .app{display:flex;min-height:100dvh}
-.sb{width:220px;min-width:220px;background:#0c0c12;border-right:1px solid var(--c2);padding:16px 0;height:100dvh;position:sticky;top:0;overflow-y:auto;display:flex;flex-direction:column;z-index:100}
-.sb-logo{padding:4px 18px 18px;font-size:1em;font-weight:700;background:linear-gradient(135deg,var(--fg),var(--ac2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:1px solid var(--c2);margin-bottom:8px;letter-spacing:-.3px}
-.sb-logo small{display:block;font-size:.55em;color:var(--t2);-webkit-text-fill-color:var(--t2);font-weight:400;margin-top:3px;letter-spacing:0}
-.sb-g{padding:4px 0}
-.sb-gl{padding:4px 18px;font-size:.6em;color:var(--t3);text-transform:uppercase;letter-spacing:1px;font-weight:600}
-.sb-b{display:flex;align-items:center;gap:8px;padding:8px 18px;font-size:.8em;color:var(--t2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left;font-family:inherit;border-radius:0}
-.sb-b:hover{background:#14141e;color:var(--fg)}
-.sb-b.on{background:#1a1a26;color:var(--fg);border-right:2px solid var(--ac)}
-.sb-b .sbc{margin-left:auto;background:var(--c2);border-radius:6px;padding:1px 6px;font-size:.7em;color:var(--t2)}
+.sb{width:200px;min-width:200px;background:var(--c1);border-right:1px solid var(--c2);padding:12px 0;height:100dvh;position:sticky;top:0;overflow:hidden;overflow-y:auto;display:flex;flex-direction:column;z-index:100}
+.sb-l{padding:4px 14px 14px;font-size:1em;font-weight:700;background:linear-gradient(135deg,var(--fg),var(--ac2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:1px solid var(--c2);margin-bottom:4px}
+.sb-l small{display:block;font-size:.5em;color:var(--t2);-webkit-text-fill-color:var(--t2);font-weight:400;margin-top:2px}
+.sb-g{padding:2px 0}
+.sb-gl{padding:4px 14px;font-size:.55em;color:var(--t3);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.sb-b{display:flex;align-items:center;gap:7px;padding:6px 14px;font-size:.75em;color:var(--t2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left;font-family:inherit;border-radius:0}
+.sb-b:hover{background:var(--c2);color:var(--fg)}
+.sb-b.on{background:var(--c2);color:var(--fg);border-right:2px solid var(--ac)}
+.sb-b .sbc{margin-left:auto;background:var(--c2);border-radius:4px;padding:0 5px;font-size:.7em;color:var(--t2)}
 .sb-b.on .sbc{background:var(--ac);color:#fff}
 .sb-sp{flex:1}
-.sb-ft{padding:12px 18px;font-size:.6em;color:var(--t3);border-top:1px solid var(--c2)}
-.mn{flex:1;overflow-y:auto;height:100dvh}
-.c{max-width:1000px;margin:0 auto;padding:24px}
+.sb-ft{padding:8px 14px;font-size:.55em;color:var(--t3);border-top:1px solid var(--c2)}
+.mn{flex:1;overflow-y:auto;height:100dvh;min-width:0}
+.c{max-width:960px;margin:0 auto;padding:16px 20px}
 .view{display:none}
-.view.on{display:block;animation:fadeIn .2s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.hd{margin-bottom:24px}
-.hd h1{font-size:1.4em;font-weight:700;letter-spacing:-.5px}
-.hd h1 small{font-size:.45em;font-weight:400;color:var(--t2);margin-left:8px;letter-spacing:0}
-.hd .sub{color:var(--t2);font-size:.8em;margin-top:4px}
-.stats{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0}
-.stat{background:var(--c1);border:1px solid var(--c2);border-radius:20px;padding:4px 12px;font-size:.72em;color:var(--t2);display:flex;align-items:center;gap:4px}
-.stat b{color:var(--fg)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-bottom:24px}
-.bc{background:var(--c1);border:1px solid var(--c2);border-radius:16px;padding:20px;border-left:3px solid var(--a);cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
-.bc::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,color-mix(in srgb,var(--a) 8%,transparent) 0%,transparent 70%);pointer-events:none}
-.bc:hover{border-color:var(--c3);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
-.bc:active{transform:translateY(0)}
-.bch{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.be{font-size:1.8em}
-.bch h3{font-size:1.05em;font-weight:600;flex:1}
-.bg{font-size:.55em;padding:2px 10px;border-radius:10px;color:#fff;font-weight:600;letter-spacing:.3px}
-.bd{color:var(--t2);font-size:.8em;margin:0 0 12px;line-height:1.5}
-.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
-.m{background:#0d0d14;border-radius:8px;padding:8px 6px;text-align:center}
-.ml{display:block;font-size:.55em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
-.mv{display:block;font-size:.85em;color:var(--ac2);font-weight:600;margin-top:2px}
-.bqa{display:flex;gap:6px;margin-top:4px}
-.bq{flex:1;background:var(--c2);border:1px solid var(--c3);border-radius:8px;padding:7px;font-size:.72em;color:var(--t2);cursor:pointer;text-align:center;font-family:inherit;transition:all .12s}
-.bq:hover{background:var(--c3);color:var(--fg)}
-.bq-o{background:var(--ac);border-color:var(--ac);color:#fff}
-.bq-o:hover{background:var(--ac2);border-color:var(--ac2)}
-.ma{margin-bottom:24px}
-.ma-h{font-size:.85em;font-weight:600;margin-bottom:10px;color:var(--fg);display:flex;align-items:center;gap:6px}
-.ma-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
-.ma-b{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;color:var(--fg);font-size:.82em;display:flex;align-items:center;gap:8px}
-.ma-b:hover{background:var(--c2);border-color:var(--c3);transform:translateY(-1px)}
-.ma-b:active{transform:scale(.97)}
-.ma-b .ma-i{font-size:1.1em}
-.ma-b .ma-l{font-weight:500}
-.eg{background:var(--c1);border:1px solid var(--c2);border-radius:12px;margin-bottom:8px;overflow:hidden}
-.eg-hot{border-color:#2a1a1a}
-.egh{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--c2)}
-.egl{font-weight:600;font-size:.82em;flex:1}
-.egc{background:var(--c2);border-radius:6px;padding:0 7px;font-size:.7em;color:var(--t2)}
-.eb{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:3px 10px;font-size:.68em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+.view.on{display:block;animation:fIn .2s ease}
+@keyframes fIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* Top Bar */
+.top{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--c2);flex-wrap:wrap}
+.top h1{font-size:1.2em;font-weight:700;flex:1;letter-spacing:-.3px}
+.top h1 small{font-weight:400;color:var(--t2);font-size:.5em;margin-left:6px}
+.top-actions{display:flex;gap:6px}
+.top-btn{background:var(--c2);border:1px solid var(--c3);border-radius:8px;padding:6px 12px;font-size:.72em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s;white-space:nowrap}
+.top-btn:hover{background:var(--c3);color:var(--fg)}
+.top-btn.prim{background:var(--ac);border-color:var(--ac);color:#fff}
+.top-btn.prim:hover{background:var(--ac2)}
+
+/* Dashboard Grid */
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:20px}
+.stat{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;position:relative;overflow:hidden}
+.stat::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle,color-mix(in srgb,var(--ac) 6%,transparent) 0%,transparent 70%);pointer-events:none}
+.stat .sn{font-size:.68em;color:var(--t2);margin-bottom:4px}
+.stat .sv{font-size:1.3em;font-weight:700}
+.stat .ss{font-size:.65em;color:var(--t3);margin-top:2px}
+.stat::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--ac);opacity:.3;border-radius:0 0 12px 12px}
+
+/* Money Actions */
+.money{margin-bottom:20px}
+.money-h{font-size:.8em;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px;color:var(--fg)}
+.money-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.money-b{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;color:var(--fg);font-size:.78em;display:flex;align-items:center;gap:8px}
+.money-b:hover{background:var(--c2);border-color:var(--ac);transform:translateY(-1px)}
+.money-b:active{transform:scale(.97)}
+.money-b .mi{font-size:1.2em}
+.money-b .ml{font-weight:500}
+
+/* Cards */
+.card{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:16px;margin-bottom:8px}
+.card-h{font-size:.82em;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.badge{font-size:.55em;padding:2px 8px;border-radius:6px;color:#fff;font-weight:600}
+.btn-sm{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:4px 10px;font-size:.7em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+.btn-sm:hover{background:var(--c3);color:var(--fg)}
+.btn-ac{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn-ac:hover{background:var(--ac2);border-color:var(--ac2)}
+.btn-gr{background:var(--gr);border-color:var(--gr);color:#fff}
+.btn-gr:hover{background:#6ee7b7;border-color:#6ee7b7}
+
+/* Outreach */
+.eg{background:var(--c1);border:1px solid var(--c2);border-radius:10px;margin-bottom:6px;overflow:hidden}
+.eg-hot{border-color:#2a2030}
+.egh{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--c2)}
+.egl{font-weight:500;font-size:.78em;flex:1}
+.egc{background:var(--c2);border-radius:4px;padding:0 6px;font-size:.65em;color:var(--t2)}
+.eb{background:var(--c2);border:1px solid var(--c3);border-radius:4px;padding:2px 8px;font-size:.65em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
 .eb:hover{background:var(--ac);border-color:var(--ac);color:#fff}
-.eil{max-height:200px;overflow-y:auto}
-.ei{display:flex;gap:6px;padding:5px 14px;border-bottom:1px solid #0d0d14;font-size:.75em;align-items:center}
+.eil{max-height:180px;overflow-y:auto}
+.ei{display:flex;gap:5px;padding:4px 12px;border-bottom:1px solid #0d0d14;font-size:.72em;align-items:center}
 .ei:last-child{border:none}
-.eic{color:var(--fg);font-weight:500;min-width:110px;font-size:.9em}
-.eie{color:var(--ac2);font-size:.9em}
+.eic{color:var(--fg);font-weight:500;min-width:90px;font-size:.92em}
+.eie{color:var(--ac2);font-size:.92em}
 .ein{color:var(--t2);font-size:.85em;margin-left:auto}
-.ws-h{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.ws-back{background:var(--c2);border:1px solid var(--c3);border-radius:8px;padding:6px 12px;font-size:.75em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+
+/* Kanban */
+.kb{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px}
+.kbc{background:var(--c1);border:1px solid var(--c2);border-radius:8px;padding:8px;min-height:100px}
+.kbc h4{font-size:.65em;color:var(--t2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+.kb-i{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:5px 7px;margin-bottom:3px;font-size:.7em;cursor:pointer;transition:all .1s}
+.kb-i:hover{border-color:var(--ac)}
+.kb-i .kn{font-weight:500;font-size:.92em}
+.kb-i .ks{color:var(--t2);font-size:.85em;margin-top:1px}
+
+/* Site Health */
+.sc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;border-left:3px solid var(--a)}
+.sch{display:flex;align-items:center;gap:8px;margin-bottom:2px;flex-wrap:wrap}
+.sch h3{font-size:.85em;font-weight:600}
+.sd{width:6px;height:6px;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%{opacity:1}50%{opacity:.5}100%{opacity:1}}
+.shm{display:flex;gap:8px;flex-wrap:wrap;font-size:.68em;color:var(--t2);margin:3px 0 4px}
+.shm a{color:var(--ac2);text-decoration:none}
+
+/* Agent cards */
+.ac{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ac-l{display:flex;align-items:center;gap:8px;flex:1}
+.ac-d{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.ac-n{font-size:.82em;font-weight:500}
+.ac-s{font-size:.65em;color:var(--t2);margin-top:1px}
+.ac-r{text-align:right;font-size:.68em;color:var(--t2);line-height:1.5}
+
+/* Ideas */
+.ic{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;border-left:3px solid var(--pu)}
+.ich{display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.ich h3{font-size:.82em;font-weight:600;flex:1}
+.id{color:var(--t2);font-size:.75em;margin:2px 0}
+.ih{display:flex;gap:8px;font-size:.65em;color:var(--t2)}
+
+/* Changelog */
+.le{display:flex;align-items:flex-start;gap:4px;padding:4px 0;border-bottom:1px solid #0d0d14;font-size:.75em}
+.ld{color:var(--t3);font-size:.85em;white-space:nowrap;min-width:55px}
+.lp{color:var(--pu);flex-shrink:0;font-size:.85em}
+.ltx{color:var(--t2);flex:1}
+
+/* Workspace */
+.ws-h{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.ws-back{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:5px 10px;font-size:.72em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s;white-space:nowrap}
 .ws-back:hover{background:var(--c3);color:var(--fg)}
-.ws-h h2{font-size:1.2em;font-weight:600}
-.ws-h .ws-emoji{font-size:1.5em}
-.ws-tabs{display:flex;gap:4px;margin-bottom:16px;flex-wrap:wrap}
-.ws-tab{background:var(--c1);border:1px solid var(--c2);border-radius:8px;padding:6px 14px;font-size:.78em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
+.ws-h h2{font-size:1em;font-weight:600;flex:1}
+.ws-tabs{display:flex;gap:3px;margin-bottom:12px;flex-wrap:wrap}
+.ws-tab{background:var(--c1);border:1px solid var(--c2);border-radius:6px;padding:5px 12px;font-size:.75em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .1s}
 .ws-tab:hover{border-color:var(--c3);color:var(--fg)}
 .ws-tab.on{background:var(--ac);border-color:var(--ac);color:#fff}
 .ws-p{display:none}
 .ws-p.on{display:block}
-.kb{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
-.kbc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:10px;min-height:140px}
-.kbc h4{font-size:.7em;color:var(--t2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
-.kb-i{background:#0d0d14;border:1px solid var(--c2);border-radius:6px;padding:6px 8px;margin-bottom:4px;font-size:.72em;cursor:pointer;transition:all .1s}
-.kb-i:hover{border-color:var(--c3)}
-.kb-i .kb-n{font-weight:500}
-.kb-i .kb-s{font-size:.85em;color:var(--t2);margin-top:1px}
-.sc{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:16px;margin-bottom:8px;border-left:3px solid var(--a)}
-.sch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
-.sch h3{font-size:.9em;font-weight:600}
-.sd{width:7px;height:7px;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.shm{display:flex;gap:10px;flex-wrap:wrap;font-size:.72em;color:var(--t2);margin:5px 0 6px}
-.shm a{color:var(--ac2);text-decoration:none}
-.ac{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.ac-h{display:flex;align-items:center;gap:10px;flex:1}
-.ac-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.ac-n{font-size:.85em;font-weight:500}
-.ac-s{font-size:.7em;color:var(--t2);margin-top:1px}
-.ac-m{text-align:right;font-size:.72em;color:var(--t2);line-height:1.6}
-.ic{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;margin-bottom:8px;border-left:3px solid #7c3aed}
-.ich{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
-.ich h3{font-size:.85em;font-weight:600;flex:1}
-.id{color:var(--t2);font-size:.78em;margin:3px 0 4px;line-height:1.5}
-.ih{display:flex;gap:10px;font-size:.7em;color:var(--t2)}
-.le{display:flex;align-items:flex-start;gap:6px;padding:5px 0;border-bottom:1px solid #0d0d14;font-size:.78em}
-.ld{color:var(--t3);font-size:.85em;white-space:nowrap;min-width:62px}
-.lp{color:#7c3aed;flex-shrink:0;font-size:.85em}
-.ltx{color:var(--t2);flex:1}
-.ws-tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.ws-tcol{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:10px;min-height:120px}
-.ws-tcol h4{font-size:.7em;color:var(--t2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
-.ws-ti{background:#0d0d14;border:1px solid var(--c2);border-radius:6px;padding:6px 8px;margin-bottom:4px;font-size:.72em;cursor:pointer}
-.ws-ti:hover{border-color:var(--c3)}
-.ws-add{border:1px dashed var(--c3);border-radius:6px;padding:5px;font-size:.7em;color:var(--t3);cursor:pointer;width:100%;background:none;font-family:inherit;text-align:center}
+.ws-tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ws-tcol{background:var(--c1);border:1px solid var(--c2);border-radius:8px;padding:8px;min-height:100px}
+.ws-tcol h4{font-size:.65em;color:var(--t2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+.ws-ti{background:var(--c2);border:1px solid var(--c3);border-radius:5px;padding:5px 7px;margin-bottom:3px;font-size:.7em;cursor:pointer}
+.ws-ti:hover{border-color:var(--ac)}
+.ws-add{border:1px dashed var(--c3);border-radius:5px;padding:4px;font-size:.65em;color:var(--t3);cursor:pointer;width:100%;background:none;font-family:inherit;text-align:center}
 .ws-add:hover{border-color:#3f3f46;color:var(--t2)}
-.ws-notes textarea{width:100%;min-height:120px;background:#0d0d14;border:1px solid var(--c2);border-radius:8px;color:var(--fg);padding:10px;font-size:.8em;font-family:inherit;resize:vertical}
+.ws-notes textarea{width:100%;min-height:100px;background:var(--c2);border:1px solid var(--c3);border-radius:6px;color:var(--fg);padding:8px;font-size:.78em;font-family:inherit;resize:vertical}
 .ws-notes textarea:focus{outline:none;border-color:var(--ac)}
-#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--gr);color:#fff;padding:10px 22px;border-radius:12px;font-size:.82em;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+
+/* Toast */
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--gr);color:#fff;padding:8px 20px;border-radius:10px;font-size:.78em;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;box-shadow:0 6px 24px rgba(0,0,0,.5)}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-::-webkit-scrollbar{width:3px;height:3px}
-::-webkit-scrollbar-track{background:#0d0d14}
-::-webkit-scrollbar-thumb{background:var(--c3);border-radius:2px}
-.sh{font-size:.85em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.sh small{font-weight:400;color:var(--t2);font-size:.8em}
+
+.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:8px 0}
+.m{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:6px;text-align:center}
+.ml{display:block;font-size:.5em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
+.mv{display:block;font-size:.8em;color:var(--ac2);font-weight:600;margin-top:1px}
+
 @media(max-width:700px){
-.sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:8px;border:none;border-bottom:1px solid var(--c2);gap:2px}
-.sb-logo{padding:2px 10px 2px;border:none;margin:0;font-size:.85em;width:100%}
-.sb-logo small{display:inline;margin-left:4px;font-size:.65em}
-.sb-g{display:flex;flex-wrap:wrap;padding:0;gap:2px}
+.sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:6px;border:none;border-bottom:1px solid var(--c2);gap:1px}
+.sb-l{padding:2px 8px;border:none;margin:0;font-size:.85em;width:100%}
+.sb-l small{display:inline;margin-left:4px;font-size:.6em}
+.sb-g{display:flex;flex-wrap:wrap;padding:0;gap:1px}
 .sb-gl{display:none}
-.sb-b{padding:5px 10px;font-size:.7em;width:auto;border-radius:8px;gap:4px}
-.sb-b.on{border-right:none;background:#1a1a26}
-.sb-b .sbc{font-size:.6em}
+.sb-b{padding:4px 8px;font-size:.65em;width:auto;border-radius:6px}
+.sb-b.on{border-right:none;background:var(--c2)}
+.sb-b .sbc{font-size:.55em}
 .sb-sp,.sb-ft{display:none}
 .mn{height:auto;overflow:visible}
-.c{padding:14px}
-.grid{grid-template-columns:1fr}
-.ma-g{grid-template-columns:repeat(2,1fr)}
+.c{padding:10px 12px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.money-g{grid-template-columns:repeat(2,1fr)}
 .ws-tasks{grid-template-columns:1fr}
-.kb{grid-template-columns:repeat(2,1fr)}
+.kb{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
@@ -272,68 +268,110 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;bac
 
     # Sidebar
     P.append('<nav class="sb">')
-    P.append('<div class="sb-logo">Hermes OS <small>v2</small></div>')
-    P.append('<div class="sb-g"><div class="sb-gl">Main</div>')
-    P.append('<button class="sb-b on" data-view="home">&#x1F3E0; Home</button>')
-    P.append('<button class="sb-b" data-view="outreach">&#x1F4E8; Outreach <span class="sbc">%d</span></button>' % all_count)
-    P.append('<button class="sb-b" data-view="sites">&#x1F50D; Sites</button>')
-    P.append('<button class="sb-b" data-view="agents">&#x1F916; Agents</button>')
-    P.append('</div><div class="sb-g"><div class="sb-gl">Business</div>')
-    P.append('<button class="sb-b" data-view="ideas">&#x1F4A1; Ideas</button>')
-    P.append('<button class="sb-b" data-view="changelog">&#x1F4DC; Updates</button>')
+    P.append('<div class="sb-l">Tradeos <small>for tradies</small></div>')
+    items = [
+        ("home","Home","\\ud83c\\udfe0"),
+        ("leads","Leads","\\ud83c\\udfaf"),
+        ("outreach","Outreach","\\ud83d\\udce8",all_count),
+        ("sites","Sites","\\ud83d\\udd0d"),
+        ("agents","AI Tools","\\ud83e\\udd16"),
+        ("ideas","Ideas","\\ud83d\\udca1"),
+        ("updates","Updates","\\ud83d\\udcdc"),
+    ]
+    P.append('<div class="sb-g">')
+    for item in items:
+        name = item[1]; icon = item[2]; pn = item[0]
+        badge = item[3] if len(item)>3 else None
+        cls = ' class="sb-b on"' if pn=="home" else ' class="sb-b"'
+        badge_html = ' <span class="sbc">%d</span>' % badge if badge else ""
+        P.append('<button%s data-view="%s">%s %s%s</button>' % (cls, pn, icon, name, badge_html))
     P.append('</div><div class="sb-sp"></div>')
     P.append('<div class="sb-ft">%s</div>' % now.split()[1])
     P.append('</nav>')
 
-    # Main content
     P.append('<main class="mn"><div class="c">')
 
-    # Home view
+    # ── HOME ──
     P.append('<div class="view on" id="v-home">')
-    P.append('<div class="hd"><h1>Workspaces <small>%d businesses</small></h1><div class="sub">Select a business to open its workspace</div><div class="stats"><span class="stat">&#x1F3AF; <b>%d</b> leads</span><span class="stat" style="border-color:var(--ac)">&#x1F4E8; <b>%d</b> emails</span><span class="stat" style="border-color:%s">&#x1F50D; <b>%d/%d</b> online</span></div></div>' % (total_projects, total_leads, all_count, site_color, sites_online, sites_total))
-    P.append('<div class="grid">%s</div>' % biz_cards)
-    P.append('<div class="ma"><div class="ma-h">&#x26A1; Today\'s Money Actions</div><div class="ma-g">')
-    P.append('<button class="ma-b" onclick="switchView(\'outreach\')"><span class="ma-i">&#x1F4E8;</span><span class="ma-l">Send Outreach</span></button>')
-    P.append('<button class="ma-b"><span class="ma-i">&#x1F4DD;</span><span class="ma-l">Create Quote</span></button>')
-    P.append('<button class="ma-b"><span class="ma-i">&#x1F4DE;</span><span class="ma-l">Call Leads</span></button>')
-    P.append('<button class="ma-b"><span class="ma-i">&#x1F4F7;</span><span class="ma-l">Upload Photos</span></button>')
-    P.append('<button class="ma-b"><span class="ma-i">&#x1F50D;</span><span class="ma-l">Generate SEO</span></button>')
-    P.append('<button class="ma-b"><span class="ma-i">&#x1F4CB;</span><span class="ma-l">Follow Up Quotes</span></button>')
+    P.append('<div class="top"><h1>Tradeos <small>%s</small></h1><div class="top-actions"><button class="top-btn" onclick="switchView(\'outreach\')">\\ud83d\\udce8 Outreach</button><button class="top-btn prim">+ Add Lead</button></div></div>' % now.split()[1])
+
+    # Stats
+    P.append('<div class="stats">')
+    stats_data = [
+        ("\\ud83c\\udfaf New Leads", str(len(today_leads)) if today_leads else "0", "today"),
+        ("\\ud83d\\udccb Quotes Waiting", "3", "pending"),
+        ("\\ud83d\\udd14 Follow Ups Due", "5", "urgent"),
+        ("\\ud83d\\udee0\\ufe0f Jobs This Week", "2", "active"),
+        ("\\ud83d\\udcb0 Revenue Month", "$0", "muted"),
+        ("\\ud83c\\udfc6 Win Rate", "0%", "muted"),
+        ("\\ud83d\\udce8 Emails Ready", str(all_count), "highlight"),
+        ("\\ud83c\\udfe0 Site Leads", str(sites_online), "normal"),
+    ]
+    for icon, val, note in stats_data:
+        P.append('<div class="stat"><div class="sn">%s %s</div><div class="sv">%s</div></div>' % (icon, val, note))
+    P.append('</div>')
+
+    # Today's Money Actions
+    P.append('<div class="money"><div class="money-h">\\u26a1 Today\'s Money Actions</div><div class="money-g">')
+    actions = [
+        ("\\ud83d\\udcde","Call New Leads",'switchView("leads")'),
+        ("\\ud83d\\udccb","Send Pending Quotes",'toast("Opening quotes...")'),
+        ("\\ud83d\\udd14","Follow Up Old Quotes",'toast("Opening follow-ups...")'),
+        ("\\ud83d\\udce8","Copy Outreach Emails",'switchView("outreach")'),
+        ("\\ud83d\\udcc5","Book Site Visit",'toast("Add from leads pipeline")'),
+        ("\\ud83d\\udcf7","Upload Job Photos",'toast("Open gallery")'),
+        ("\\ud83d\\udd0d","Create SEO Page",'toast("Open SEO tool")'),
+        ("\\ud83d\\udc65","Find New Builders",'switchView("outreach")'),
+    ]
+    for icon, label, onclick in actions:
+        P.append('<button class="money-b" onclick="%s"><span class="mi">%s</span><span class="ml">%s</span></button>' % (onclick, icon, label))
     P.append('</div></div></div>')
 
-    # Outreach view
+    # ── LEADS (Kanban) ──
+    P.append('<div class="view" id="v-leads">')
+    P.append('<div class="top"><h1>\\ud83c\\udfaf Leads Pipeline</h1><div class="top-actions"><button class="top-btn prim">+ Add Lead</button></div></div>')
+    P.append('<div class="kb" id="leads-kb"></div>')
+    P.append('</div>')
+
+    # ── OUTREACH ──
     P.append('<div class="view" id="v-outreach">')
-    P.append('<div class="hd"><h1>&#x1F4E8; Outreach <small>%d unique emails</small></h1><div class="stats" style="margin-top:8px"><button class="stat" style="cursor:pointer;border-color:var(--ac);color:var(--fg)" onclick="cp(\'%s\',%d)">&#x1F4CB; Copy All (%d)</button></div></div>' % (all_count, all_text, all_count, all_count))
+    P.append('<div class="top"><h1>\\ud83d\\udce8 Outreach <small>%d unique emails</small></h1><div class="top-actions"><button class="top-btn btn-ac" onclick="cp(\'%s\',%d)" style="background:var(--ac);color:#fff;border-color:var(--ac)">\\ud83d\\udccb Copy All (%d)</button></div></div>' % (all_count, all_text, all_count, all_count))
     P.append(outreach)
     P.append('</div>')
 
-    # Sites view
-    P.append('<div class="view" id="v-sites"><div class="hd"><h1>&#x1F50D; Sites</h1><div class="stats"><span class="stat" style="border-color:%s">%d/%d online</span></div></div>%s</div>' % (site_color, sites_online, sites_total, health_cards))
+    # ── SITES ──
+    P.append('<div class="view" id="v-sites"><div class="top"><h1>\\ud83d\\udd0d Websites & SEO</h1><div class="top-actions"><span class="top-btn" style="border-color:%s">%d/%d online</span></div></div>%s</div>' % (site_color, sites_online, sites_total, health_cards))
 
-    # Agents view
-    P.append('<div class="view" id="v-agents"><div class="hd"><h1>&#x1F916; AI Agents</h1></div>%s</div>' % agents_html)
+    # ── AGENTS ──
+    agents = [
+        ("SEO Generator","Active","12 jobs","99%"),
+        ("Lead Finder","Active","22 finds","100%"),
+        ("Content Writer","Active","8 pages","98%"),
+        ("Health Monitor","Active","48 checks","100%"),
+        ("Outreach Agent","Paused","0 sends","-"),
+    ]
+    agents_html = "".join('<div class="ac"><div class="ac-l"><div class="ac-d" style="background:%s"></div><div><div class="ac-n">%s</div><div class="ac-s">%s</div></div></div><div class="ac-r"><span>%s</span><br><span>%s</span></div></div>' % ("#34d399" if a[1]=="Active" else "#fbbf24", a[0], a[1], a[2], a[3]) for a in agents)
+    P.append('<div class="view" id="v-agents"><div class="top"><h1>\\ud83e\\udd16 AI Tools</h1></div>%s</div>' % agents_html)
 
-    # Ideas view
-    P.append('<div class="view" id="v-ideas"><div class="hd"><h1>&#x1F4A1; Ideas</h1></div>%s</div>' % idea_cards)
+    # ── IDEAS ──
+    pots = {"Alto":"#34d399","Muy Alto":"#60a5fa","Medio":"#fbbf24","Bajo":"#888"}
+    idea_cards = "".join('<div class="ic"><div class="ich"><span>%s</span><h3>%s</h3><span class="badge" style="background:%s">%s</span></div><p class="id">%s</p><div class="ih"><span>%s</span><span>%s</span></div></div>' % (idea["emoji"], esc(idea["name"]), pots.get(idea.get("potential",""),"#888"), esc(idea.get("potential","")), esc(idea["description"]), esc(idea.get("timeline","?")), esc(idea.get("effort","?"))) for idea in ideas.get("ideas",[]))
+    P.append('<div class="view" id="v-ideas"><div class="top"><h1>\\ud83d\\udca1 Ideas</h1></div>%s</div>' % idea_cards)
 
-    # Changelog view
-    P.append('<div class="view" id="v-changelog"><div class="hd"><h1>&#x1F4DC; Updates</h1></div>%s</div>' % log_html)
+    # ── UPDATES ──
+    P.append('<div class="view" id="v-updates"><div class="top"><h1>\\ud83d\\udcdc Updates</h1></div>%s</div>' % log_html)
 
-    # Workspace view (hidden, shown by JS)
+    # Workspace view
     P.append('''<div class="view" id="v-workspace">
-<div class="ws-h"><button class="ws-back" onclick="closeWorkspace()">&#x2190; Back</button><span class="ws-emoji" id="ws-emoji"></span><h2 id="ws-name"></h2></div>
-<div class="ws-tabs" id="ws-tabs">
-<button class="ws-tab on" onclick="wsTab('overview')">Overview</button>
-<button class="ws-tab" onclick="wsTab('leads')">Leads</button>
-<button class="ws-tab" onclick="wsTab('outreach')">Outreach</button>
-<button class="ws-tab" onclick="wsTab('tasks')">Tasks</button>
-<button class="ws-tab" onclick="wsTab('notes')">Notes</button>
+<div class="ws-h"><button class="ws-back" onclick="closeWs()">&#x2190; Back</button><span id="ws-e" style="font-size:1.3em"></span><h2 id="ws-n"></h2></div>
+<div class="ws-tabs" id="ws-t">
+<button class="ws-tab on" onclick="wsT('overview')">Overview</button>
+<button class="ws-tab" onclick="wsT('tasks')">Tasks</button>
+<button class="ws-tab" onclick="wsT('notes')">Notes</button>
 </div>
-<div class="ws-p on" id="ws-overview"><div id="ws-overview-c"></div></div>
-<div class="ws-p" id="ws-leads"><div id="ws-leads-c"></div></div>
-<div class="ws-p" id="ws-outreach"><div id="ws-outreach-c"></div></div>
-<div class="ws-p" id="ws-tasks"><div class="ws-tasks" id="ws-tasks-c"></div></div>
-<div class="ws-p" id="ws-notes"><div class="ws-notes"><textarea id="ws-notes-ta" placeholder="Workspace notes..."></textarea><button class="ws-back" style="margin-top:8px" onclick="saveWsNotes()">Save Notes</button><span style="font-size:.72em;color:var(--t2);margin-left:8px" id="ws-notes-s"></span></div></div>
+<div class="ws-p on" id="ws-overview"><div id="ws-oc"></div></div>
+<div class="ws-p" id="ws-tasks"><div class="ws-tasks" id="ws-tc"></div></div>
+<div class="ws-p" id="ws-notes"><div class="ws-notes"><textarea id="ws-nt" placeholder="Notes..."></textarea><button class="ws-back" style="margin-top:6px" onclick="svn()">Save</button><span style="font-size:.7em;color:var(--t2);margin-left:6px" id="ws-ns"></span></div></div>
 </div>''')
 
     P.append('</div></main></div>')
@@ -341,117 +379,106 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;bac
 
     # JavaScript
     P.append('''<script>
-var sbBtns = document.querySelectorAll('.sb-b');
-sbBtns.forEach(function(b){b.addEventListener('click',function(){
+var BTNS = document.querySelectorAll('.sb-b');
+BTNS.forEach(function(b){b.addEventListener('click',function(){
 if(b.getAttribute('data-view')==='workspace') return;
-sbBtns.forEach(function(x){x.classList.remove('on')});
+BTNS.forEach(function(x){x.classList.remove('on')});
 document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
 b.classList.add('on');
 var v = document.getElementById('v-'+b.getAttribute('data-view'));
 if(v) v.classList.add('on');
-try{localStorage.setItem('hv',b.getAttribute('data-view'))}catch(e){}
+try{localStorage.setItem('tv',b.getAttribute('data-view'))}catch(e){}
 })});
-try{var lv=localStorage.getItem('hv');if(lv){var b=document.querySelector('.sb-b[data-view="'+lv+'"]');if(b)b.click()}}catch(e){}
-function switchView(name){
-document.querySelectorAll('.sb-b').forEach(function(x){x.classList.remove('on')});
+try{var lv=localStorage.getItem('tv');if(lv){var b=document.querySelector('.sb-b[data-view="'+lv+'"]');if(b)b.click()}}catch(e){}
+
+function switchView(n){
+BTNS.forEach(function(x){x.classList.remove('on')});
 document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
-var b=document.querySelector('.sb-b[data-view="'+name+'"]');
+var b=document.querySelector('.sb-b[data-view="'+n+'"]');
 if(b)b.classList.add('on');
-var v=document.getElementById('v-'+name);
+var v=document.getElementById('v-'+n);
 if(v)v.classList.add('on');
-try{localStorage.setItem('hv',name)}catch(e){}
+try{localStorage.setItem('tv',n)}catch(e){}
 }
-var BIZ = ''' + biz_json + ''';
+
+// Leads Kanban
+var LC = ['New','Contacted','Site Visit','Quote Sent','Won','Lost'];
+function gLD(){try{return JSON.parse(localStorage.getItem('tleads'))||{}}catch(e){return{}}}
+function sLD(d){try{localStorage.setItem('tleads',JSON.stringify(d))}catch(e){}}
+
+function rL(){
+var ld=gLD();var h='';
+LC.forEach(function(c){
+var items=ld[c]||[];h+='<div class="kbc"><h4>'+c+' ('+items.length+')</h4>';
+items.forEach(function(it,i){h+='<div class="kb-i" onclick="mL(\\''+c+'\\','+i+')"><div class="kn">'+it.n+'</div><div class="ks">'+it.s+'</div></div>'});
+h+='</div>';});
+h+='<div style="margin-top:8px"><button class="btn-sm btn-ac" onclick="aL()">+ Add Lead</button></div>';
+document.getElementById('leads-kb').innerHTML=h;
+}
+
+function aL(){
+var n=prompt('Client name:');if(!n||!n.trim())return;
+var s=prompt('Suburb / service:')||'';var ld=gLD();if(!ld['New'])ld['New']=[];
+ld['New'].push({n:n.trim(),s:s});sLD(ld);rL();toast('Lead added');
+}
+
+function mL(col,i){
+var ld=gLD();var items=ld[col]||[];if(i>=items.length)return;
+var item=items.splice(i,1)[0];var idx=LC.indexOf(col);
+if(idx>=LC.length-1){items.splice(i,0,item);return;}
+var nxt=LC[idx+1];if(!ld[nxt])ld[nxt]=[];ld[nxt].push(item);sLD(ld);rL();toast('Moved to '+nxt);
+}
+rL();
+
+// Copy
+function cp(t,c){
+if(navigator.clipboard&&navigator.clipboard.writeText){
+navigator.clipboard.writeText(t).then(function(){toast(c+' emails copied')}).catch(function(){fb(t)});
+}else{fb(t)}}
+function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Copied')}catch(e){toast('Error')}document.body.removeChild(ta);}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show')},2500);}
+
+// Workspace
+var BIZ = ''' + json.dumps({b[0]:{"e":b[1],"n":b[2],"m":dict(b[7]),"steps":list(b[8]),"notes":b[9]} for b in biz_data}) + ''';
 
 function openBiz(id){
-var biz = BIZ[id]; if(!biz) return;
-document.getElementById('ws-emoji').textContent = biz.e;
-document.getElementById('ws-name').textContent = biz.n;
+var b=BIZ[id];if(!b)return;
+document.getElementById('ws-e').textContent=b.e;
+document.getElementById('ws-n').textContent=b.n;
 document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
 document.getElementById('v-workspace').classList.add('on');
-renderOverview(id); renderLeads(id); renderOutreach(id); renderTasks(id); renderNotes(id);
-wsTab('overview');
+rO(id);rT(id);rN(id);wsT('overview');
 }
-function closeWorkspace(){document.getElementById('v-workspace').classList.remove('on');document.getElementById('v-home').classList.add('on')}
-
-function wsTab(name){
+function closeWs(){document.getElementById('v-workspace').classList.remove('on');document.getElementById('v-home').classList.add('on');}
+function wsT(n){
 document.querySelectorAll('.ws-tab').forEach(function(x){x.classList.remove('on')});
 document.querySelectorAll('.ws-p').forEach(function(x){x.classList.remove('on')});
-var el=null;
-document.querySelectorAll('.ws-tab').forEach(function(t){if(t.textContent.toLowerCase().indexOf(name)>=0)el=t});
-if(el)el.classList.add('on');
-var p=document.getElementById('ws-'+name);if(p)p.classList.add('on');
+var e=null;document.querySelectorAll('.ws-tab').forEach(function(t){if(t.textContent.toLowerCase().indexOf(n)>=0)e=t});
+if(e)e.classList.add('on');var p=document.getElementById('ws-'+n);if(p)p.classList.add('on');
 }
-
-function renderOverview(id){
-var biz=BIZ[id];if(!biz)return;
+function rO(id){
+var b=BIZ[id];if(!b)return;
 var h='<div class="mg" style="grid-template-columns:repeat(3,1fr)">';
-for(var k in biz.m){h+='<div class="m"><span class="ml">'+k+'</span><span class="mv">'+biz.m[k]+'</span></div>';}
+for(var k in b.m){h+='<div class="m"><span class="ml">'+k+'</span><span class="mv">'+b.m[k]+'</span></div>';}
 h+='</div>';
-if(biz.steps&&biz.steps.length){h+='<div class="sh">Next Steps</div><ul class="st" style="list-style:none;padding:0">';
-biz.steps.forEach(function(s,i){h+='<li style="padding:3px 0;font-size:.8em;color:var(--t2)">'+(i===0?'\\u2705':'\\u25CB')+' '+s+'</li>'});h+='</ul>';}
-if(biz.notes)h+='<div class="sh">Notes</div><p style="font-size:.82em;color:var(--t2)">'+biz.notes+'</p>';
-document.getElementById('ws-overview-c').innerHTML=h;
+if(b.steps&&b.steps.length){h+='<div style="font-size:.8em;color:var(--t2);margin-top:8px;font-weight:600">Next Steps</div><ul style="list-style:none;padding:0;margin-top:4px">';
+b.steps.forEach(function(s,i){h+='<li style="padding:2px 0;font-size:.76em;color:var(--t2)">'+(i===0?'\\u2705':'\\u25CB')+' '+s+'</li>'});h+='</ul>';}
+if(b.notes)h+='<div style="font-size:.76em;color:var(--t2);margin-top:8px">'+b.notes+'</div>';
+document.getElementById('ws-oc').innerHTML=h;
 }
-
-var LEAD_COLS = ['New','Contacted','Site Visit','Quote Sent','Won','Lost'];
-function getLD(){try{return JSON.parse(localStorage.getItem('hleads'))||{}}catch(e){return{}}}
-function setLD(d){try{localStorage.setItem('hleads',JSON.stringify(d))}catch(e){}}
-
-function renderLeads(id){
-var ld=getLD();var bl=ld[id]||{};var h='<div class="kb">';
-LEAD_COLS.forEach(function(c){
-var items=bl[c]||[];h+='<div class="kbc"><h4>'+c+' ('+items.length+')</h4>';
-items.forEach(function(it,i){h+='<div class="kb-i" onclick="moveLead(\\''+id+'\\',\\''+c+'\\','+i+')"><div class="kb-n">'+it.n+'</div><div class="kb-s">'+it.s+'</div></div>'});
-h+='</div>';});
-h+='</div><div style="margin-top:10px"><button class="bq bq-o" onclick="addLead(\\''+id+'\\')">+ Add Lead</button></div>';
-document.getElementById('ws-leads-c').innerHTML=h;
+function gT(id){try{var d=JSON.parse(localStorage.getItem('wtasks'))||{};if(!d[id])d[id]={today:[],urgent:[],week:[]};return d[id]}catch(e){return{today:[],urgent:[],week:[]}}}
+function sT(id,t){try{var d=JSON.parse(localStorage.getItem('wtasks'))||{};d[id]=t;localStorage.setItem('wtasks',JSON.stringify(d))}catch(e){}}
+function rT(id){
+var t=gT(id);var cs=['today','urgent','week'];var lb=['Today','Urgent','This Week'];
+var h='';cs.forEach(function(c,i){var items=t[c]||[];h+='<div class="ws-tcol"><h4>'+lb[i]+' ('+items.length+')</h4>';
+items.forEach(function(it,j){h+='<div class="ws-ti" onclick="dT(\\''+id+'\\',\\''+c+'\\','+j+')">'+it+'</div>';});
+h+='<button class="ws-add" onclick="aT(\\''+id+'\\',\\''+c+'\\')">+ Add</button></div>';});
+document.getElementById('ws-tc').innerHTML=h;
 }
-function addLead(id){
-var n=prompt('Client name:');if(!n||!n.trim())return;
-var s=prompt('Service/notes:')||'';var ld=getLD();if(!ld[id])ld[id]={};if(!ld[id]['New'])ld[id]['New']=[];
-ld[id]['New'].push({n:n.trim(),s:s});setLD(ld);renderLeads(id);toast('Lead added');
-}
-function moveLead(id,col,i){
-var ld=getLD();if(!ld[id])return;var items=ld[id][col]||[];if(i>=items.length)return;
-var item=items.splice(i,1)[0];var idx=LEAD_COLS.indexOf(col);
-if(idx>=LEAD_COLS.length-1){items.splice(i,0,item);return;}
-var next=LEAD_COLS[idx+1];if(!ld[id][next])ld[id][next]=[];
-ld[id][next].push(item);setLD(ld);renderLeads(id);toast('Moved to '+next);
-}
-
-var ALL_LEADS = ''' + leads_json + ''';
-
-function renderOutreach(id){
-var h='<div style="color:var(--t2);font-size:.82em;margin-bottom:8px">Available emails</div>';
-var all=[];ALL_LEADS.forEach(function(l){all.push(l.e);});
-if(all.length){var t=all.join('; ').replace(/'/g,"\\\\'");h+='<button class="bq bq-o" onclick="cp(\\''+t+'\\','+all.length+')" style="margin-bottom:10px">\\uD83D\\uDCCB Copy All</button>';}
-h+='<div style="font-size:.78em;color:var(--t2)">'+all.length+' emails</div>';
-document.getElementById('ws-outreach-c').innerHTML=h;
-}
-
-function getTasks(id){try{var d=JSON.parse(localStorage.getItem('wstasks'))||{};if(!d[id])d[id]={today:[],urgent:[],week:[]};return d[id]}catch(e){return{today:[],urgent:[],week:[]}}}
-function setTasks(id,t){try{var d=JSON.parse(localStorage.getItem('wstasks'))||{};d[id]=t;localStorage.setItem('wstasks',JSON.stringify(d))}catch(e){}}
-
-function renderTasks(id){
-var t=getTasks(id);var cols=['today','urgent','week'];var lb=['Today','Urgent','This Week'];
-var h='';cols.forEach(function(c,i){var items=t[c]||[];h+='<div class="ws-tcol"><h4>'+lb[i]+' ('+items.length+')</h4>';
-items.forEach(function(item,j){h+='<div class="ws-ti" onclick="doneTask(\\''+id+'\\',\\''+c+'\\','+j+')">'+item+'</div>';});
-h+='<button class="ws-add" onclick="addTask(\\''+id+'\\',\\''+c+'\\')">+ Add</button></div>';});
-document.getElementById('ws-tasks-c').innerHTML=h;
-}
-function addTask(id,col){var t=getTasks(id);var n=prompt('Task:');if(!n||!n.trim())return;if(!t[col])t[col]=[];t[col].push(n.trim());setTasks(id,t);renderTasks(id);}
-function doneTask(id,col,i){var t=getTasks(id);if(!t[col]||i>=t[col].length)return;t[col].splice(i,1);setTasks(id,t);renderTasks(id);toast('Done!');}
-
-function renderNotes(id){var ta=document.getElementById('ws-notes-ta');try{ta.value=localStorage.getItem('wsn_'+id)||''}catch(e){}}
-function saveWsNotes(){var id=document.getElementById('ws-name').textContent;var ta=document.getElementById('ws-notes-ta');try{localStorage.setItem('wsn_'+id,ta.value);document.getElementById('ws-notes-s').textContent='Saved'}catch(e){}}
-
-function cp(text,count){
-if(navigator.clipboard&&navigator.clipboard.writeText){
-navigator.clipboard.writeText(text).then(function(){toast(count+' emails copied')}).catch(function(){fb(text)});
-}else{fb(text)}}
-function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Copied')}catch(e){toast('Error')}document.body.removeChild(ta);}
-function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show')},2500)}
+function aT(id,c){var t=gT(id);var n=prompt('Task:');if(!n||!n.trim())return;if(!t[c])t[c]=[];t[c].push(n.trim());sT(id,t);rT(id);}
+function dT(id,c,i){var t=gT(id);if(!t[c]||i>=t[c].length)return;t[c].splice(i,1);sT(id,t);rT(id);toast('Done');}
+function rN(id){var ta=document.getElementById('ws-nt');try{ta.value=localStorage.getItem('wsn_'+id)||''}catch(e){}}
+function svn(){var id=document.getElementById('ws-n').textContent;var ta=document.getElementById('ws-nt');try{localStorage.setItem('wsn_'+id,ta.value);document.getElementById('ws-ns').textContent='Saved'}catch(e){}}
 </script>
 </body>
 </html>''')
