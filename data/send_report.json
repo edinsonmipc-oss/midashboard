@@ -67,6 +67,74 @@
           "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
         }
       ]
+    },
+    {
+      "date": "2026-05-08",
+      "time": "2026-05-08T08:00",
+      "sent": 10,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@hansenyuncken.com.au",
+          "company": "Hansen Yuncken",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "projects@marshallwhite.com.au",
+          "company": "Marshall White",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "enquiries@built.com.au",
+          "company": "Built",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "property@savills.com.au",
+          "company": "Savills Australia",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        }
+      ]
     }
   ]
 }
