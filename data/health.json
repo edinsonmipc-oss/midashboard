@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-07T11:21",
+  "updated": "2026-05-07T11:39",
   "sites": [
     {
       "name": "Tradios App",
       "url": "https://tradios.onrender.com",
-      "status": "offline",
+      "status": "online",
       "uptime_24h": "98.5%",
-      "last_checked": "2026-05-07T11:21",
+      "last_checked": "2026-05-07T11:39",
       "issues": [
         "⚠️ Sitio offline: The read operation timed out"
       ],
@@ -23,7 +23,7 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-07T11:21",
+      "last_checked": "2026-05-07T11:39",
       "seo_metrics": {
         "pages_indexed": 965,
         "clicks_28d": 31,
@@ -44,7 +44,7 @@
       "url": "https://edinsonmipc-oss.github.io/midashboard/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-07T11:21",
+      "last_checked": "2026-05-07T11:39",
       "issues": [],
       "improvements": [
         "Sección de leads ya agregada ✅",
@@ -58,7 +58,7 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-07T11:21",
+      "last_checked": "2026-05-07T11:39",
       "issues": [],
       "improvements": [
         "Agregar más herramientas (meta: 80)",

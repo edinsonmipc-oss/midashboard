@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-06T19:01",
-  "total_leads": 100,
+  "updated": "2026-05-07T11:39",
+  "total_leads": 110,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -824,6 +824,88 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera"
+      }
+    ],
+    "2026-05-07_batch10": [
+      {
+        "company": "Simonds Homes",
+        "email": "trades@simonds.com.au",
+        "website": "simonds.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Necesitan tradies para subcontratos"
+      },
+      {
+        "company": "PRDnationwide",
+        "email": "commercial@prd.com.au",
+        "website": "prd.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Gestionan propiedades comerciales"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Proyectos comerciales y residenciales"
+      },
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "website": "laingorourke.com.au",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos de construcción en Melbourne"
+      },
+      {
+        "company": "First National Real Estate",
+        "email": "commercial@fnre.com.au",
+        "website": "fnre.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "notes": "Necesitan mantenimiento regular"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "notes": "Necesitan servicios regulares"
+      },
+      {
+        "company": "Henley Homes",
+        "email": "trades@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Constructora de viviendas en Melbourne"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "notes": "Grandes proyectos de construcción en Melbourne"
+      },
+      {
+        "company": "CBRE Australia",
+        "email": "facilities@cbre.com.au",
+        "website": "cbre.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "notes": "Multiples propiedades en su cartera"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "notes": "Necesitan tradies para subcontratos"
       }
     ]
   }
