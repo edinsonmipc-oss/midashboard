@@ -2,944 +2,1036 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hermes Dashboard — Edinson</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hermes Dashboard</title>
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#0a0a0f; color:#e0e0e0; min-height:100vh; }
-        .container { max-width:960px; margin:0 auto; padding:16px; }
-        header { text-align:center; padding:24px 0 16px; border-bottom:1px solid #1a1a2e; margin-bottom:20px; }
-        header h1 { font-size:1.5em; background:linear-gradient(135deg,#4af,#7b68ee); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        header .subtitle { color:#666; font-size:0.85em; margin-top:4px; }
-        header .updated { color:#555; font-size:0.75em; margin-top:8px; }
-        header .url { margin-top:6px; }
-        header .url a { color:#4af; font-size:0.8em; text-decoration:none; opacity:0.7; }
-        .grid { display:flex; flex-direction:column; gap:16px; }
-        .card { background:#11111a; border-radius:12px; padding:16px; border:1px solid #1a1a2e; }
-        .card-header { display:flex; align-items:center; gap:10px; margin-bottom:4px; flex-wrap:wrap; }
-        .card-header h2 { font-size:1.1em; flex:1; }
-        .badge { font-size:0.65em; padding:2px 8px; border-radius:8px; color:white; font-weight:600; letter-spacing:0.5px; }
-        .metrics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:8px; margin:10px 0; }
-        .metric { background:#0d0d16; border-radius:8px; padding:8px; text-align:center; }
-        .metric-label { display:block; font-size:0.65em; color:#888; text-transform:capitalize; }
-        .metric-value { display:block; font-size:1em; color:#4af; font-weight:600; margin-top:2px; }
-        .section-title { color:#888; font-size:0.85em; margin:12px 0 6px; text-transform:uppercase; letter-spacing:1px; }
-        .steps { list-style:none; padding:0; }
-        .steps li { padding:4px 0; font-size:0.9em; color:#ccc; }
-        .note { background:#1a1a2e; border-radius:6px; padding:8px; font-size:0.85em; color:#888; margin-top:8px; }
-        .changelog { margin-top:20px; }
-        .log-entry { display:flex; align-items:flex-start; gap:6px; padding:6px 0; border-bottom:1px solid #0d0d16; font-size:0.85em; flex-wrap:wrap; }
-        .log-date { color:#555; font-size:0.8em; white-space:nowrap; min-width:80px; }
-        .log-emoji { flex-shrink:0; }
-        .log-project { color:#7b68ee; flex-shrink:0; }
-        .log-text { color:#aaa; flex:1; }
-        .stats-bar { display:flex; gap:12px; justify-content:center; margin:12px 0; flex-wrap:wrap; }
-        .stat-pill { background:#11111a; border:1px solid #1a1a2e; border-radius:16px; padding:4px 12px; font-size:0.8em; }
-        .section-header { color:#888; font-size:1em; margin:24px 0 12px; padding-bottom:6px; border-bottom:1px solid #1a1a2e; display:flex; align-items:center; gap:8px; }
-        @media (max-width:480px) {
-            .metrics-grid { grid-template-columns:repeat(2,1fr); }
-            .card-header h2 { font-size:1em; }
+        * { margin:0; padding:0; box-sizing:border-box }
+        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; background:#0a0a0f; color:#e4e4e7; min-height:100vh }
+        .c { max-width:1000px; margin:0 auto; padding:16px }
+        ::selection { background:#6366f1; color:#fff }
+
+        /* ── Header ── */
+        header { text-align:center; padding:28px 0 20px; margin-bottom:20px; position:relative }
+        header::after { content:''; display:block; width:60px; height:3px; background:linear-gradient(90deg,#6366f1,#a78bfa); border-radius:2px; margin:16px auto 0 }
+        h1 { font-size:1.6em; font-weight:700; background:linear-gradient(135deg,#e4e4e7,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
+        .sub { color:#71717a; font-size:0.85em; margin-top:4px }
+        .upd { color:#52525b; font-size:0.7em; margin-top:8px }
+
+        /* ── Stats Bar ── */
+        .sb { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:12px 0 20px }
+        .sp { background:#111118; border:1px solid #1c1c24; border-radius:20px; padding:6px 14px; font-size:0.8em; color:#a1a1aa; display:flex; align-items:center; gap:5px }
+        .sp b { color:#e4e4e7 }
+
+        /* ── Section headers ── */
+        .sh { color:#71717a; font-size:0.85em; margin:28px 0 12px; padding-bottom:8px; border-bottom:1px solid #1c1c24; display:flex; align-items:center; gap:8px; letter-spacing:0.3px; text-transform:uppercase; font-weight:600 }
+        .sh-actions { margin-left:auto; display:flex; gap:6px }
+
+        /* ── Buttons ── */
+        .btn { display:inline-flex; align-items:center; gap:5px; background:#1c1c24; border:1px solid #27272a; color:#a1a1aa; padding:5px 12px; border-radius:8px; font-size:0.75em; cursor:pointer; transition:all .15s; font-family:inherit }
+        .btn:hover { background:#27272a; border-color:#3f3f46; color:#e4e4e7 }
+        .btn:active { transform:scale(.96) }
+        .btn-p { background:#6366f1; border-color:#6366f1; color:#fff }
+        .btn-p:hover { background:#818cf8; border-color:#818cf8; color:#fff }
+        .btn-s { background:#10b981; border-color:#10b981; color:#fff }
+        .btn-s:hover { background:#34d399; border-color:#34d399; color:#fff }
+        .copied { background:#10b981 !important; border-color:#10b981 !important; color:#fff !important }
+
+        /* ── Cards ── */
+        .grid { display:flex; flex-direction:column; gap:12px }
+        .card { background:#111118; border-radius:14px; padding:18px; border:1px solid #1c1c24; transition:border-color .15s,box-shadow .15s }
+        .card:hover { border-color:#27272a; box-shadow:0 4px 20px rgba(0,0,0,.3) }
+        .pc { border-left:3px solid var(--accent,#888) }
+        .pch { display:flex; align-items:center; gap:10px; margin-bottom:6px }
+        .pch h3 { font-size:1.05em; font-weight:600 }
+        .pemoji { font-size:1.4em }
+        .pdesc { color:#a1a1aa; font-size:0.85em; margin:4px 0 8px; line-height:1.5 }
+        .badge { font-size:0.6em; padding:2px 10px; border-radius:10px; color:#fff; font-weight:600; letter-spacing:.4px; white-space:nowrap }
+        .mg { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:6px; margin:10px 0 }
+        .metric { background:#0d0d14; border-radius:8px; padding:8px; text-align:center }
+        .ml { display:block; font-size:0.6em; color:#71717a; text-transform:uppercase; letter-spacing:.3px }
+        .mv { display:block; font-size:1em; color:#a78bfa; font-weight:600; margin-top:2px }
+        .steps { list-style:none; padding:0; margin-top:6px }
+        .steps li { padding:3px 0; font-size:0.83em; color:#a1a1aa }
+        .steps li.done { color:#e4e4e7 }
+        .note { background:#0d0d14; border-radius:8px; padding:8px 10px; font-size:0.82em; color:#a1a1aa; margin-top:8px }
+        .plink { color:#818cf8; font-size:0.8em; text-decoration:none; display:inline-block; margin:4px 0 }
+        .plink:hover { text-decoration:underline }
+
+        /* ── Leads ── */
+        .ldc { border-left:3px solid var(--accent,#6366f1) }
+        .ldc[data-today] { border-left-color:#ef4444; border-color:#2a1a1a }
+        .ld-label { font-size:0.7em; font-weight:700; letter-spacing:.5px }
+        .tp-wrap { display:flex; gap:5px; flex-wrap:wrap; margin:6px 0 10px }
+        .tp { background:#0d0d14; border:1px solid #1c1c24; border-radius:12px; padding:2px 10px; font-size:0.72em; color:#a1a1aa }
+        .tp b { color:#e4e4e7 }
+        .tbl-wrap { overflow-x:auto }
+        .ltbl { width:100%; border-collapse:collapse; font-size:0.82em }
+        .ltbl th { padding:7px 6px; text-align:left; color:#71717a; border-bottom:1px solid #1c1c24; font-weight:500; font-size:0.75em; text-transform:uppercase; letter-spacing:.3px; white-space:nowrap }
+        .ltbl td { padding:6px; border-bottom:1px solid #0d0d14; vertical-align:top }
+        .ltbl tr:hover td { background:#14141e }
+        .lc { color:#e4e4e7; font-weight:500; white-space:nowrap }
+        .le { color:#818cf8; text-decoration:none; font-size:0.9em }
+        .le:hover { text-decoration:underline }
+        .lt { color:#71717a; font-size:0.8em; white-space:nowrap }
+        .ln { color:#a1a1aa; font-size:0.85em }
+
+        /* ── Health ── */
+        .hc { border-left:3px solid var(--accent) }
+        .hdot { width:8px; height:8px; border-radius:50%; display:inline-block; flex-shrink:0; animation:pulse 2s infinite }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+        .hmeta { display:flex; gap:12px; flex-wrap:wrap; font-size:0.75em; color:#71717a; margin:6px 0 10px }
+        .hmeta a { color:#818cf8; text-decoration:none }
+        .hmeta a:hover { text-decoration:underline }
+        .iss { padding:2px 0; font-size:0.82em; color:#fca5a5 }
+
+        /* ── Ideas ── */
+        .ic { border-left:3px solid var(--accent) }
+
+        /* ── Changelog ── */
+        .cl { margin-top:24px }
+        .le { display:flex; align-items:flex-start; gap:6px; padding:5px 0; border-bottom:1px solid #0d0d14; font-size:0.82em; flex-wrap:wrap }
+        .ledate { color:#52525b; font-size:0.85em; white-space:nowrap; min-width:72px }
+        .leproj { color:#7c3aed; flex-shrink:0; font-size:0.85em }
+        .letext { color:#a1a1aa; flex:1 }
+
+        /* ── Footer ── */
+        footer { text-align:center; padding:24px 0 16px; color:#3f3f46; font-size:0.7em; border-top:1px solid #1c1c24; margin-top:24px }
+
+        /* ── Toast ── */
+        #toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(80px); background:#10b981; color:#fff; padding:10px 20px; border-radius:12px; font-size:0.85em; opacity:0; transition:all .3s; pointer-events:none; z-index:999; box-shadow:0 4px 20px rgba(0,0,0,.5) }
+        #toast.show { opacity:1; transform:translateX(-50%) translateY(0) }
+
+        /* ── Responsive ── */
+        @media (max-width:600px) {
+            .card { padding:14px }
+            .mg { grid-template-columns:repeat(2,1fr) }
+            .sb { gap:5px }
+            .sp { font-size:0.72em; padding:4px 10px }
+            .ltbl { font-size:0.75em }
+            .lc { white-space:normal }
+            .lt { white-space:normal }
+            .btn { font-size:0.7em; padding:4px 8px }
+            h1 { font-size:1.3em }
         }
-        table { width:100%; border-collapse:collapse; font-size:0.85em; }
-        th { padding:6px 4px; text-align:left; color:#888; border-bottom:1px solid #1a1a2e; }
-        td { padding:5px 4px; border-bottom:1px solid #0d0d16; }
-        tr:hover td { background:#14141e; }
-        .tabs { display:flex; gap:4px; margin:12px 0; flex-wrap:wrap; }
-        .tab { background:#11111a; border:1px solid #1a1a2e; border-radius:8px; padding:6px 14px; font-size:0.8em; color:#888; cursor:pointer; }
-        .tab.active { border-color:#4af; color:#4af; }
-        .tab:hover { border-color:#555; }
-        .copy-btn { background:#1a1a2e; border:none; border-radius:4px; color:#4af; font-size:0.75em; padding:2px 6px; cursor:pointer; }
-        .copy-btn:hover { background:#2a2a3e; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="c">
         <header>
             <h1>🚀 Hermes Dashboard</h1>
-            <div class="subtitle">Edinson Angarita — Proyectos & Crecimiento</div>
-            <div class="url"><a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank">🔗 edinsonmipc-oss.github.io/midashboard</a></div>
-            <div class="updated">🕐 Actualizado: 2026-05-07 11:39 (actualización automática 2x/día)</div>
-            <div class="stats-bar">
-                <span class="stat-pill">📊 5 proyectos</span>
-                <span class="stat-pill" style="border-color:limegreen">✅ 3 activos</span>
-                <span class="stat-pill" style="border-color:orange">⏳ 1 pendientes</span>
-                <span class="stat-pill" style="border-color:#888">💡 1 ideas</span>
-                <span class="stat-pill" style="border-color:#ff6b6b">🎯 110 leads</span>
-            </div>
+            <div class="sub">Edinson Angarita — Proyectos & Crecimiento</div>
+            <div class="upd">🕐 2026-05-07 11:44</div>
         </header>
 
-        <h3 class="section-header">🛠️ Proyectos</h3>
-        <div class="grid">
-    <div class="card" style="border-left: 4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.5em">🛠️</span>
-            <h2>ToolshubPro</h2>
-            <span class="badge" style="background:limegreen">ACTIVO</span>
+        <div class="sb">
+            <span class="sp">📊 <b>5</b> proyectos</span>
+            <span class="sp">✅ <b>3</b> activos</span>
+            <span class="sp">⏳ <b>1</b> pendientes</span>
+            <span class="sp">💡 <b>1</b> ideas</span>
+            <span class="sp" style="border-color:#6366f1">🎯 <b>110</b> leads</span>
+            <span class="sp" style="border-color:#34d399">🔍 <b>4/4</b> online</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">57 herramientas online. Meta: $5k/mes en 6 meses.</p>
+
+        <!-- ═══ PROYECTOS ═══ -->
+        <div class="sh">🛠️ Proyectos</div>
+        <div class="grid">
+    <div class="card pc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="pemoji">🛠️</span>
+            <h3>ToolshubPro</h3>
+            <span class="badge" style="background:#34d399">ACTIVO</span>
+        </div>
+        <p class="pdesc">57 herramientas online. Meta: $5k/mes en 6 meses.</p>
         
-        <div class="metrics-grid"><div class="metric"><span class="metric-label">Herramientas</span><span class="metric-value">60</span></div><div class="metric"><span class="metric-label">Meta Ingresos</span><span class="metric-value">$5k/mes</span></div><div class="metric"><span class="metric-label">Plazo</span><span class="metric-value">6 meses</span></div></div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps"><li>✅ Subir ZIP a Hostinger</li><li>⬜ Agregar más herramientas populares</li><li>⬜ Configurar analytics real</li></ul>
+        <div class="mg"><div class="metric"><span class="ml">Herramientas</span><span class="mv">60</span></div><div class="metric"><span class="ml">Meta Ingresos</span><span class="mv">$5k/mes</span></div><div class="metric"><span class="ml">Plazo</span><span class="mv">6 meses</span></div></div>
+        <ul class="steps"><li class="done">✅ Subir ZIP a Hostinger</li><li class="">○ Agregar más herramientas populares</li><li class="">○ Configurar analytics real</li></ul>
         <div class="note">📝 60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator</div>
     </div>
-    <div class="card" style="border-left: 4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.5em">🏡</span>
-            <h2>Prime Property Maintenance</h2>
-            <span class="badge" style="background:limegreen">ACTIVO</span>
+    <div class="card pc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="pemoji">🏡</span>
+            <h3>Prime Property Maintenance</h3>
+            <span class="badge" style="background:#34d399">ACTIVO</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">Servicios de mantenimiento de propiedades en Melbourne.</p>
-        <a href="https://primepropertymaintenance.au" target="_blank" style="color:#4af;font-size:0.85em">🌐 https://primepropertymaintenance.au</a>
-        <div class="metrics-grid"><div class="metric"><span class="metric-label">Urls En Sitemap</span><span class="metric-value">965</span></div><div class="metric"><span class="metric-label">Clicks 28D</span><span class="metric-value">31</span></div><div class="metric"><span class="metric-label">Impresiones 28D</span><span class="metric-value">3986</span></div><div class="metric"><span class="metric-label">Avg Position</span><span class="metric-value">41.87</span></div><div class="metric"><span class="metric-label">Ctr</span><span class="metric-value">0.77%</span></div></div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps"><li>✅ Agregar GA4 con G-XXXXXXXXXX</li><li>⬜ Mejorar top-10 keywords</li><li>⬜ Construir backlinks</li></ul>
+        <p class="pdesc">Servicios de mantenimiento de propiedades en Melbourne.</p>
+        <a href="https://primepropertymaintenance.au" target="_blank" class="plink">https://primepropertymaintenance.au</a>
+        <div class="mg"><div class="metric"><span class="ml">Urls En Sitemap</span><span class="mv">965</span></div><div class="metric"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="metric"><span class="ml">Impresiones 28D</span><span class="mv">3986</span></div><div class="metric"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="metric"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div>
+        <ul class="steps"><li class="done">✅ Agregar GA4 con G-XXXXXXXXXX</li><li class="">○ Mejorar top-10 keywords</li><li class="">○ Construir backlinks</li></ul>
         <div class="note">📝 965 URLs, tráfico creciendo</div>
     </div>
-    <div class="card" style="border-left: 4px solid orange">
-        <div class="card-header">
-            <span style="font-size:1.5em">📦</span>
-            <h2>Tradeos</h2>
-            <span class="badge" style="background:orange">PENDIENTE</span>
+    <div class="card pc" style="--accent:#fbbf24">
+        <div class="pch">
+            <span class="pemoji">📦</span>
+            <h3>Tradeos</h3>
+            <span class="badge" style="background:#fbbf24">PENDIENTE</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">Plataforma de comercio/negocios.</p>
+        <p class="pdesc">Plataforma de comercio/negocios.</p>
         
-        <div class="metrics-grid"><div class="metric" style="color:#666">Sin métricas aún</div></div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps"><li>✅ Desplegar en Hostinger/GitHub Pages</li><li>⬜ Configurar funcionalidad básica</li></ul>
+        
+        <ul class="steps"><li class="done">✅ Desplegar en Hostinger/GitHub Pages</li><li class="">○ Configurar funcionalidad básica</li></ul>
         <div class="note">📝 Requiere deploy y pruebas</div>
     </div>
-    <div class="card" style="border-left: 4px solid #888">
-        <div class="card-header">
-            <span style="font-size:1.5em">🏗️</span>
-            <h2>Antonio Paving</h2>
+    <div class="card pc" style="--accent:#888">
+        <div class="pch">
+            <span class="pemoji">🏗️</span>
+            <h3>Antonio Paving</h3>
             <span class="badge" style="background:#888">IDEA</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">Servicios de pavimentación y construcción.</p>
+        <p class="pdesc">Servicios de pavimentación y construcción.</p>
         
-        <div class="metrics-grid"><div class="metric" style="color:#666">Sin métricas aún</div></div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps"><li>✅ Definir servicios exactos</li><li>⬜ Crear sitio web</li><li>⬜ Buscar leads: builders, contractors</li></ul>
+        
+        <ul class="steps"><li class="done">✅ Definir servicios exactos</li><li class="">○ Crear sitio web</li><li class="">○ Buscar leads: builders, contractors</li></ul>
         <div class="note">📝 Nuevo proyecto, en fase de definición</div>
     </div>
-    <div class="card" style="border-left: 4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.5em">🎯</span>
-            <h2>Lead Generation</h2>
-            <span class="badge" style="background:limegreen">ACTIVO</span>
+    <div class="card pc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="pemoji">🎯</span>
+            <h3>Lead Generation</h3>
+            <span class="badge" style="background:#34d399">ACTIVO</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.</p>
+        <p class="pdesc">Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.</p>
         
-        <div class="metrics-grid"><div class="metric"><span class="metric-label">Targets</span><span class="metric-value">Builders, contractors, real estate en Melbourne</span></div></div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps"><li>✅ Identificar top 50 builders en Melbourne</li><li>⬜ Recolectar emails</li><li>⬜ Preparar template de outreach</li><li>⬜ Enviar propuestas</li></ul>
+        <div class="mg"><div class="metric"><span class="ml">Targets</span><span class="mv">Builders, contractors, real estate en Melbourne</span></div></div>
+        <ul class="steps"><li class="done">✅ Identificar top 50 builders en Melbourne</li><li class="">○ Recolectar emails</li><li class="">○ Preparar template de outreach</li><li class="">○ Enviar propuestas</li></ul>
         <div class="note">📝 Idea recién iniciada</div>
     </div></div>
 
-        <h3 class="section-header">🎯 Leads Generados</h3>
+        <!-- ═══ LEADS ═══ -->
+        <div class="sh" style="border-color:#27272a">
+            🎯 Leads Generados
+            <div class="sh-actions">
+                <button class="btn btn-s" onclick="copyLeads(event,'today')" title="Copia HOY en formato email">📋 Copiar Hoy</button>
+                <button class="btn btn-p" onclick="copyLeads(event,'all')" title="Copia TODOS los leads recientes">📋 Copiar Todos</button>
+            </div>
+        </div>
         <div class="grid">
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-07_batch10</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-07_batch10">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-07_batch10</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 3</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 3</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 1</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 2</span><span class="stat-pill" style="border-color:#ff6b6b">strata: 1</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Simonds Homes</td>
-                <td><a href="mailto:trades@simonds.com.au" style="color:#4af;font-size:0.85em">trades@simonds.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">simonds.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan tradies para subcontratos</td>
+        <div class="tp-wrap"><span class="tp">builder <b>3</b></span><span class="tp">constructora <b>3</b></span><span class="tp">property_mgmt <b>1</b></span><span class="tp">real_estate <b>2</b></span><span class="tp">strata <b>1</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Simonds Homes</td>
+                <td><a href="mailto:trades@simonds.com.au" class="le">trades@simonds.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Necesitan tradies para subcontratos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">PRDnationwide</td>
-                <td><a href="mailto:commercial@prd.com.au" style="color:#4af;font-size:0.85em">commercial@prd.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">prd.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">PRDnationwide</td>
+                <td><a href="mailto:commercial@prd.com.au" class="le">commercial@prd.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hickory Group</td>
-                <td><a href="mailto:projects@hickory.com.au" style="color:#4af;font-size:0.85em">projects@hickory.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hickory.com.au</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Hickory Group</td>
+                <td><a href="mailto:projects@hickory.com.au" class="le">projects@hickory.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Laing O'Rourke</td>
-                <td><a href="mailto:supplychain@laingorourke.com.au" style="color:#4af;font-size:0.85em">supplychain@laingorourke.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">laingorourke.com.au</td>
-                <td style="color:#888;font-size:0.8em">Grandes proyectos de construcción en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Laing O'Rourke</td>
+                <td><a href="mailto:supplychain@laingorourke.com.au" class="le">supplychain@laingorourke.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Grandes proyectos de construcción en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">First National Real Estate</td>
-                <td><a href="mailto:commercial@fnre.com.au" style="color:#4af;font-size:0.85em">commercial@fnre.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">fnre.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan mantenimiento regular</td>
+            <tr class="lr">
+                <td class="lc">First National Real Estate</td>
+                <td><a href="mailto:commercial@fnre.com.au" class="le">commercial@fnre.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Necesitan mantenimiento regular</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">ACE Body Corporate</td>
-                <td><a href="mailto:info@acebodycorporate.com.au" style="color:#4af;font-size:0.85em">info@acebodycorporate.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">acebodycorporate.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">ACE Body Corporate</td>
+                <td><a href="mailto:info@acebodycorporate.com.au" class="le">info@acebodycorporate.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Henley Homes</td>
-                <td><a href="mailto:trades@henley.com.au" style="color:#4af;font-size:0.85em">trades@henley.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">henley.com.au</td>
-                <td style="color:#888;font-size:0.8em">Constructora de viviendas en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Henley Homes</td>
+                <td><a href="mailto:trades@henley.com.au" class="le">trades@henley.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Constructora de viviendas en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Downer Group</td>
-                <td><a href="mailto:procurement@downergroup.com" style="color:#4af;font-size:0.85em">procurement@downergroup.com</a></td>
-                <td style="color:#888;font-size:0.8em">downergroup.com</td>
-                <td style="color:#888;font-size:0.8em">Grandes proyectos de construcción en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Downer Group</td>
+                <td><a href="mailto:procurement@downergroup.com" class="le">procurement@downergroup.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Grandes proyectos de construcción en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">CBRE Australia</td>
-                <td><a href="mailto:facilities@cbre.com.au" style="color:#4af;font-size:0.85em">facilities@cbre.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">cbre.com.au</td>
-                <td style="color:#888;font-size:0.8em">Multiples propiedades en su cartera</td>
+            <tr class="lr">
+                <td class="lc">CBRE Australia</td>
+                <td><a href="mailto:facilities@cbre.com.au" class="le">facilities@cbre.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Multiples propiedades en su cartera</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Metricon</td>
-                <td><a href="mailto:trades@metricon.com.au" style="color:#4af;font-size:0.85em">trades@metricon.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">metricon.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan tradies para subcontratos</td>
+            <tr class="lr">
+                <td class="lc">Metricon</td>
+                <td><a href="mailto:trades@metricon.com.au" class="le">trades@metricon.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Necesitan tradies para subcontratos</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-06_batch9</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-06_batch9">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-06_batch9</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 2</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 3</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 3</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 2</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Carlton Homes</td>
-                <td><a href="mailto:info@carltonhomes.com.au" style="color:#4af;font-size:0.85em">info@carltonhomes.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">carltonhomes.com.au</td>
-                <td style="color:#888;font-size:0.8em">Constructora de viviendas en Melbourne</td>
+        <div class="tp-wrap"><span class="tp">builder <b>2</b></span><span class="tp">constructora <b>3</b></span><span class="tp">property_mgmt <b>3</b></span><span class="tp">real_estate <b>2</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Carlton Homes</td>
+                <td><a href="mailto:info@carltonhomes.com.au" class="le">info@carltonhomes.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Constructora de viviendas en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Downer Group</td>
-                <td><a href="mailto:procurement@downergroup.com" style="color:#4af;font-size:0.85em">procurement@downergroup.com</a></td>
-                <td style="color:#888;font-size:0.8em">downergroup.com</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Downer Group</td>
+                <td><a href="mailto:procurement@downergroup.com" class="le">procurement@downergroup.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Savills Australia</td>
-                <td><a href="mailto:property@savills.com.au" style="color:#4af;font-size:0.85em">property@savills.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">savills.com.au</td>
-                <td style="color:#888;font-size:0.8em">Multiples propiedades en su cartera</td>
+            <tr class="lr">
+                <td class="lc">Savills Australia</td>
+                <td><a href="mailto:property@savills.com.au" class="le">property@savills.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Multiples propiedades en su cartera</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Probuild</td>
-                <td><a href="mailto:estimating@probuild.com.au" style="color:#4af;font-size:0.85em">estimating@probuild.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">probuild.com.au</td>
-                <td style="color:#888;font-size:0.8em">Buscan subcontratistas calificados</td>
+            <tr class="lr">
+                <td class="lc">Probuild</td>
+                <td><a href="mailto:estimating@probuild.com.au" class="le">estimating@probuild.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Buscan subcontratistas calificados</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">LJ Hooker</td>
-                <td><a href="mailto:commercial@ljhooker.com" style="color:#4af;font-size:0.85em">commercial@ljhooker.com</a></td>
-                <td style="color:#888;font-size:0.8em">ljhooker.com</td>
-                <td style="color:#888;font-size:0.8em">Necesitan mantenimiento regular</td>
+            <tr class="lr">
+                <td class="lc">LJ Hooker</td>
+                <td><a href="mailto:commercial@ljhooker.com" class="le">commercial@ljhooker.com</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Necesitan mantenimiento regular</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">CBRE Australia</td>
-                <td><a href="mailto:facilities@cbre.com.au" style="color:#4af;font-size:0.85em">facilities@cbre.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">cbre.com.au</td>
-                <td style="color:#888;font-size:0.8em">Administran propiedades comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">CBRE Australia</td>
+                <td><a href="mailto:facilities@cbre.com.au" class="le">facilities@cbre.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Administran propiedades comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Dexus</td>
-                <td><a href="mailto:leasing@dexus.com" style="color:#4af;font-size:0.85em">leasing@dexus.com</a></td>
-                <td style="color:#888;font-size:0.8em">dexus.com</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Dexus</td>
+                <td><a href="mailto:leasing@dexus.com" class="le">leasing@dexus.com</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Metricon</td>
-                <td><a href="mailto:trades@metricon.com.au" style="color:#4af;font-size:0.85em">trades@metricon.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">metricon.com.au</td>
-                <td style="color:#888;font-size:0.8em">Constructora de viviendas en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Metricon</td>
+                <td><a href="mailto:trades@metricon.com.au" class="le">trades@metricon.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Constructora de viviendas en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">John Holland</td>
-                <td><a href="mailto:suppliers@johnholland.com.au" style="color:#4af;font-size:0.85em">suppliers@johnholland.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">johnholland.com.au</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">John Holland</td>
+                <td><a href="mailto:suppliers@johnholland.com.au" class="le">suppliers@johnholland.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Knight Frank Australia</td>
-                <td><a href="mailto:property@knightfrank.com.au" style="color:#4af;font-size:0.85em">property@knightfrank.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">knightfrank.com.au</td>
-                <td style="color:#888;font-size:0.8em">Multiples propiedades en su cartera</td>
+            <tr class="lr">
+                <td class="lc">Knight Frank Australia</td>
+                <td><a href="mailto:property@knightfrank.com.au" class="le">property@knightfrank.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Multiples propiedades en su cartera</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-06_batch8</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-06_batch8">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-06_batch8</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">constructora: 4</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 5</span><span class="stat-pill" style="border-color:#ff6b6b">strata: 1</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Century 21</td>
-                <td><a href="mailto:commercial@century21.com.au" style="color:#4af;font-size:0.85em">commercial@century21.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">century21.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan mantenimiento regular</td>
+        <div class="tp-wrap"><span class="tp">constructora <b>4</b></span><span class="tp">real_estate <b>5</b></span><span class="tp">strata <b>1</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Century 21</td>
+                <td><a href="mailto:commercial@century21.com.au" class="le">commercial@century21.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Necesitan mantenimiento regular</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hansen Yuncken</td>
-                <td><a href="mailto:info@hansenyuncken.com.au" style="color:#4af;font-size:0.85em">info@hansenyuncken.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hansenyuncken.com.au</td>
-                <td style="color:#888;font-size:0.8em">Grandes proyectos de construcción en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Hansen Yuncken</td>
+                <td><a href="mailto:info@hansenyuncken.com.au" class="le">info@hansenyuncken.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Grandes proyectos de construcción en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Lendlease</td>
-                <td><a href="mailto:suppliers@lendlease.com" style="color:#4af;font-size:0.85em">suppliers@lendlease.com</a></td>
-                <td style="color:#888;font-size:0.8em">lendlease.com</td>
-                <td style="color:#888;font-size:0.8em">Contratistas principales nivel 1</td>
+            <tr class="lr">
+                <td class="lc">Lendlease</td>
+                <td><a href="mailto:suppliers@lendlease.com" class="le">suppliers@lendlease.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Contratistas principales nivel 1</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Downer Group</td>
-                <td><a href="mailto:procurement@downergroup.com" style="color:#4af;font-size:0.85em">procurement@downergroup.com</a></td>
-                <td style="color:#888;font-size:0.8em">downergroup.com</td>
-                <td style="color:#888;font-size:0.8em">Contratistas principales nivel 1</td>
+            <tr class="lr">
+                <td class="lc">Downer Group</td>
+                <td><a href="mailto:procurement@downergroup.com" class="le">procurement@downergroup.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Contratistas principales nivel 1</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">PICA Group</td>
-                <td><a href="mailto:info@picagroup.com.au" style="color:#4af;font-size:0.85em">info@picagroup.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">picagroup.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">PICA Group</td>
+                <td><a href="mailto:info@picagroup.com.au" class="le">info@picagroup.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hockingstuart</td>
-                <td><a href="mailto:commercial@hockingstuart.com.au" style="color:#4af;font-size:0.85em">commercial@hockingstuart.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hockingstuart.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Hockingstuart</td>
+                <td><a href="mailto:commercial@hockingstuart.com.au" class="le">commercial@hockingstuart.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Brookfield Multiplex</td>
-                <td><a href="mailto:procurement@brookfieldmultiplex.com" style="color:#4af;font-size:0.85em">procurement@brookfieldmultiplex.com</a></td>
-                <td style="color:#888;font-size:0.8em">brookfieldmultiplex.com</td>
-                <td style="color:#888;font-size:0.8em">Buscan subcontratistas calificados</td>
+            <tr class="lr">
+                <td class="lc">Brookfield Multiplex</td>
+                <td><a href="mailto:procurement@brookfieldmultiplex.com" class="le">procurement@brookfieldmultiplex.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Buscan subcontratistas calificados</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Charter Hall</td>
-                <td><a href="mailto:leasing@charterhall.com.au" style="color:#4af;font-size:0.85em">leasing@charterhall.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">charterhall.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Charter Hall</td>
+                <td><a href="mailto:leasing@charterhall.com.au" class="le">leasing@charterhall.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">First National Real Estate</td>
-                <td><a href="mailto:commercial@fnre.com.au" style="color:#4af;font-size:0.85em">commercial@fnre.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">fnre.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">First National Real Estate</td>
+                <td><a href="mailto:commercial@fnre.com.au" class="le">commercial@fnre.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">McGrath Estate Agents</td>
-                <td><a href="mailto:commercial@mcgrath.com.au" style="color:#4af;font-size:0.85em">commercial@mcgrath.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">mcgrath.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">McGrath Estate Agents</td>
+                <td><a href="mailto:commercial@mcgrath.com.au" class="le">commercial@mcgrath.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-05_batch7</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-05_batch7">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-05_batch7</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 2</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 1</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 1</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 5</span><span class="stat-pill" style="border-color:#ff6b6b">strata: 1</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Hansen Yuncken</td>
-                <td><a href="mailto:info@hansenyuncken.com.au" style="color:#4af;font-size:0.85em">info@hansenyuncken.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hansenyuncken.com.au</td>
-                <td style="color:#888;font-size:0.8em">Grandes proyectos de construcción en Melbourne</td>
+        <div class="tp-wrap"><span class="tp">builder <b>2</b></span><span class="tp">constructora <b>1</b></span><span class="tp">property_mgmt <b>1</b></span><span class="tp">real_estate <b>5</b></span><span class="tp">strata <b>1</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Hansen Yuncken</td>
+                <td><a href="mailto:info@hansenyuncken.com.au" class="le">info@hansenyuncken.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Grandes proyectos de construcción en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hockingstuart</td>
-                <td><a href="mailto:commercial@hockingstuart.com.au" style="color:#4af;font-size:0.85em">commercial@hockingstuart.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hockingstuart.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Hockingstuart</td>
+                <td><a href="mailto:commercial@hockingstuart.com.au" class="le">commercial@hockingstuart.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Mirvac</td>
-                <td><a href="mailto:info@mirvac.com" style="color:#4af;font-size:0.85em">info@mirvac.com</a></td>
-                <td style="color:#888;font-size:0.8em">mirvac.com</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Mirvac</td>
+                <td><a href="mailto:info@mirvac.com" class="le">info@mirvac.com</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">AVJennings</td>
-                <td><a href="mailto:info@avjennings.com.au" style="color:#4af;font-size:0.85em">info@avjennings.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">avjennings.com.au</td>
-                <td style="color:#888;font-size:0.8em">Volumen alto de proyectos</td>
+            <tr class="lr">
+                <td class="lc">AVJennings</td>
+                <td><a href="mailto:info@avjennings.com.au" class="le">info@avjennings.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Volumen alto de proyectos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Henley Homes</td>
-                <td><a href="mailto:trades@henley.com.au" style="color:#4af;font-size:0.85em">trades@henley.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">henley.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan tradies para subcontratos</td>
+            <tr class="lr">
+                <td class="lc">Henley Homes</td>
+                <td><a href="mailto:trades@henley.com.au" class="le">trades@henley.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Necesitan tradies para subcontratos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Ray White</td>
-                <td><a href="mailto:commercial@raywhite.com" style="color:#4af;font-size:0.85em">commercial@raywhite.com</a></td>
-                <td style="color:#888;font-size:0.8em">raywhite.com</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Ray White</td>
+                <td><a href="mailto:commercial@raywhite.com" class="le">commercial@raywhite.com</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">ISPT</td>
-                <td><a href="mailto:property@ispt.com.au" style="color:#4af;font-size:0.85em">property@ispt.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">ispt.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">ISPT</td>
+                <td><a href="mailto:property@ispt.com.au" class="le">property@ispt.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">ACE Body Corporate</td>
-                <td><a href="mailto:info@acebodycorporate.com.au" style="color:#4af;font-size:0.85em">info@acebodycorporate.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">acebodycorporate.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">ACE Body Corporate</td>
+                <td><a href="mailto:info@acebodycorporate.com.au" class="le">info@acebodycorporate.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Savills Australia</td>
-                <td><a href="mailto:property@savills.com.au" style="color:#4af;font-size:0.85em">property@savills.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">savills.com.au</td>
-                <td style="color:#888;font-size:0.8em">Administran propiedades comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Savills Australia</td>
+                <td><a href="mailto:property@savills.com.au" class="le">property@savills.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Administran propiedades comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Fletchers Real Estate</td>
-                <td><a href="mailto:property@fletcher.com.au" style="color:#4af;font-size:0.85em">property@fletcher.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">fletcher.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan mantenimiento regular</td>
+            <tr class="lr">
+                <td class="lc">Fletchers Real Estate</td>
+                <td><a href="mailto:property@fletcher.com.au" class="le">property@fletcher.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Necesitan mantenimiento regular</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-05_batch6</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-05_batch6">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-05_batch6</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 2</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 2</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 1</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 4</span><span class="stat-pill" style="border-color:#ff6b6b">strata: 1</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Colliers International</td>
-                <td><a href="mailto:property@colliers.com.au" style="color:#4af;font-size:0.85em">property@colliers.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">colliers.com.au</td>
-                <td style="color:#888;font-size:0.8em">Multiples propiedades en su cartera</td>
+        <div class="tp-wrap"><span class="tp">builder <b>2</b></span><span class="tp">constructora <b>2</b></span><span class="tp">property_mgmt <b>1</b></span><span class="tp">real_estate <b>4</b></span><span class="tp">strata <b>1</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Colliers International</td>
+                <td><a href="mailto:property@colliers.com.au" class="le">property@colliers.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Multiples propiedades en su cartera</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Mirvac</td>
-                <td><a href="mailto:partnerships@mirvac.com" style="color:#4af;font-size:0.85em">partnerships@mirvac.com</a></td>
-                <td style="color:#888;font-size:0.8em">mirvac.com</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Mirvac</td>
+                <td><a href="mailto:partnerships@mirvac.com" class="le">partnerships@mirvac.com</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Downer Group</td>
-                <td><a href="mailto:procurement@downergroup.com" style="color:#4af;font-size:0.85em">procurement@downergroup.com</a></td>
-                <td style="color:#888;font-size:0.8em">downergroup.com</td>
-                <td style="color:#888;font-size:0.8em">Buscan subcontratistas calificados</td>
+            <tr class="lr">
+                <td class="lc">Downer Group</td>
+                <td><a href="mailto:procurement@downergroup.com" class="le">procurement@downergroup.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Buscan subcontratistas calificados</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">ACE Body Corporate</td>
-                <td><a href="mailto:info@acebodycorporate.com.au" style="color:#4af;font-size:0.85em">info@acebodycorporate.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">acebodycorporate.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">ACE Body Corporate</td>
+                <td><a href="mailto:info@acebodycorporate.com.au" class="le">info@acebodycorporate.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Century 21</td>
-                <td><a href="mailto:commercial@century21.com.au" style="color:#4af;font-size:0.85em">commercial@century21.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">century21.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Century 21</td>
+                <td><a href="mailto:commercial@century21.com.au" class="le">commercial@century21.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Stockland</td>
-                <td><a href="mailto:community@stockland.com.au" style="color:#4af;font-size:0.85em">community@stockland.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">stockland.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Stockland</td>
+                <td><a href="mailto:community@stockland.com.au" class="le">community@stockland.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hansen Yuncken</td>
-                <td><a href="mailto:info@hansenyuncken.com.au" style="color:#4af;font-size:0.85em">info@hansenyuncken.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hansenyuncken.com.au</td>
-                <td style="color:#888;font-size:0.8em">Contratistas principales nivel 1</td>
+            <tr class="lr">
+                <td class="lc">Hansen Yuncken</td>
+                <td><a href="mailto:info@hansenyuncken.com.au" class="le">info@hansenyuncken.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Contratistas principales nivel 1</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Kay &amp; Burton</td>
-                <td><a href="mailto:commercial@kayburton.com.au" style="color:#4af;font-size:0.85em">commercial@kayburton.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">kayburton.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Kay &amp; Burton</td>
+                <td><a href="mailto:commercial@kayburton.com.au" class="le">commercial@kayburton.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">AVJennings</td>
-                <td><a href="mailto:info@avjennings.com.au" style="color:#4af;font-size:0.85em">info@avjennings.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">avjennings.com.au</td>
-                <td style="color:#888;font-size:0.8em">Volumen alto de proyectos</td>
+            <tr class="lr">
+                <td class="lc">AVJennings</td>
+                <td><a href="mailto:info@avjennings.com.au" class="le">info@avjennings.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Volumen alto de proyectos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Simonds Homes</td>
-                <td><a href="mailto:trades@simonds.com.au" style="color:#4af;font-size:0.85em">trades@simonds.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">simonds.com.au</td>
-                <td style="color:#888;font-size:0.8em">Constructora de viviendas en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Simonds Homes</td>
+                <td><a href="mailto:trades@simonds.com.au" class="le">trades@simonds.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Constructora de viviendas en Melbourne</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-04_batch5</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-04_batch5">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-04_batch5</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 2</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 4</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 1</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 3</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Colliers International</td>
-                <td><a href="mailto:property@colliers.com.au" style="color:#4af;font-size:0.85em">property@colliers.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">colliers.com.au</td>
-                <td style="color:#888;font-size:0.8em">Administran propiedades comerciales y residenciales</td>
+        <div class="tp-wrap"><span class="tp">builder <b>2</b></span><span class="tp">constructora <b>4</b></span><span class="tp">property_mgmt <b>1</b></span><span class="tp">real_estate <b>3</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Colliers International</td>
+                <td><a href="mailto:property@colliers.com.au" class="le">property@colliers.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Administran propiedades comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Cbus Property</td>
-                <td><a href="mailto:info@cbusproperty.com.au" style="color:#4af;font-size:0.85em">info@cbusproperty.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">cbusproperty.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan mantenimiento regular</td>
+            <tr class="lr">
+                <td class="lc">Cbus Property</td>
+                <td><a href="mailto:info@cbusproperty.com.au" class="le">info@cbusproperty.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Necesitan mantenimiento regular</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Kane Constructions</td>
-                <td><a href="mailto:projects@kane.com.au" style="color:#4af;font-size:0.85em">projects@kane.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">kane.com.au</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Kane Constructions</td>
+                <td><a href="mailto:projects@kane.com.au" class="le">projects@kane.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Porter Davis</td>
-                <td><a href="mailto:supplier@porterdavis.com.au" style="color:#4af;font-size:0.85em">supplier@porterdavis.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">porterdavis.com.au</td>
-                <td style="color:#888;font-size:0.8em">Volumen alto de proyectos</td>
+            <tr class="lr">
+                <td class="lc">Porter Davis</td>
+                <td><a href="mailto:supplier@porterdavis.com.au" class="le">supplier@porterdavis.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Volumen alto de proyectos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Laing O'Rourke</td>
-                <td><a href="mailto:supplychain@laingorourke.com.au" style="color:#4af;font-size:0.85em">supplychain@laingorourke.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">laingorourke.com.au</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Laing O'Rourke</td>
+                <td><a href="mailto:supplychain@laingorourke.com.au" class="le">supplychain@laingorourke.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Lendlease</td>
-                <td><a href="mailto:suppliers@lendlease.com" style="color:#4af;font-size:0.85em">suppliers@lendlease.com</a></td>
-                <td style="color:#888;font-size:0.8em">lendlease.com</td>
-                <td style="color:#888;font-size:0.8em">Contratistas principales nivel 1</td>
+            <tr class="lr">
+                <td class="lc">Lendlease</td>
+                <td><a href="mailto:suppliers@lendlease.com" class="le">suppliers@lendlease.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Contratistas principales nivel 1</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hickory Group</td>
-                <td><a href="mailto:projects@hickory.com.au" style="color:#4af;font-size:0.85em">projects@hickory.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hickory.com.au</td>
-                <td style="color:#888;font-size:0.8em">Buscan subcontratistas calificados</td>
+            <tr class="lr">
+                <td class="lc">Hickory Group</td>
+                <td><a href="mailto:projects@hickory.com.au" class="le">projects@hickory.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Buscan subcontratistas calificados</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Stockland</td>
-                <td><a href="mailto:community@stockland.com.au" style="color:#4af;font-size:0.85em">community@stockland.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">stockland.com.au</td>
-                <td style="color:#888;font-size:0.8em">Portfolio grande en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Stockland</td>
+                <td><a href="mailto:community@stockland.com.au" class="le">community@stockland.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Portfolio grande en Melbourne</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Charter Hall</td>
-                <td><a href="mailto:leasing@charterhall.com.au" style="color:#4af;font-size:0.85em">leasing@charterhall.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">charterhall.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Charter Hall</td>
+                <td><a href="mailto:leasing@charterhall.com.au" class="le">leasing@charterhall.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">AVJennings</td>
-                <td><a href="mailto:info@avjennings.com.au" style="color:#4af;font-size:0.85em">info@avjennings.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">avjennings.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan tradies para subcontratos</td>
+            <tr class="lr">
+                <td class="lc">AVJennings</td>
+                <td><a href="mailto:info@avjennings.com.au" class="le">info@avjennings.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Necesitan tradies para subcontratos</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div>
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — 2026-05-04_batch4</h2>
-            <span class="badge" style="background:#ff6b6b">10 leads</span>
+    <div class="card ldc" data-date="2026-05-04_batch4">
+        <div class="pch">
+            <span class="ld-label">📅</span>
+            <h3 style="font-size:0.95em;flex:1">2026-05-04_batch4</h3>
+            <span class="badge" style="background:#6366f1">10 leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0"><span class="stat-pill" style="border-color:#ff6b6b">builder: 2</span><span class="stat-pill" style="border-color:#ff6b6b">constructora: 3</span><span class="stat-pill" style="border-color:#ff6b6b">property_mgmt: 1</span><span class="stat-pill" style="border-color:#ff6b6b">real_estate: 2</span><span class="stat-pill" style="border-color:#ff6b6b">strata: 2</span></div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td style="color:#e0e0e0">Multiplex</td>
-                <td><a href="mailto:subcontractors@multiplex.com" style="color:#4af;font-size:0.85em">subcontractors@multiplex.com</a></td>
-                <td style="color:#888;font-size:0.8em">multiplex.global</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+        <div class="tp-wrap"><span class="tp">builder <b>2</b></span><span class="tp">constructora <b>3</b></span><span class="tp">property_mgmt <b>1</b></span><span class="tp">real_estate <b>2</b></span><span class="tp">strata <b>2</b></span></div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>
+            <tr class="lr">
+                <td class="lc">Multiplex</td>
+                <td><a href="mailto:subcontractors@multiplex.com" class="le">subcontractors@multiplex.com</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">PICA Group</td>
-                <td><a href="mailto:info@picagroup.com.au" style="color:#4af;font-size:0.85em">info@picagroup.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">picagroup.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">PICA Group</td>
+                <td><a href="mailto:info@picagroup.com.au" class="le">info@picagroup.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">ACE Body Corporate</td>
-                <td><a href="mailto:info@acebodycorporate.com.au" style="color:#4af;font-size:0.85em">info@acebodycorporate.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">acebodycorporate.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan servicios regulares</td>
+            <tr class="lr">
+                <td class="lc">ACE Body Corporate</td>
+                <td><a href="mailto:info@acebodycorporate.com.au" class="le">info@acebodycorporate.com.au</a></td>
+                <td class="lt">strata</td>
+                <td class="ln">Necesitan servicios regulares</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Cbus Property</td>
-                <td><a href="mailto:info@cbusproperty.com.au" style="color:#4af;font-size:0.85em">info@cbusproperty.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">cbusproperty.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Cbus Property</td>
+                <td><a href="mailto:info@cbusproperty.com.au" class="le">info@cbusproperty.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">AVJennings</td>
-                <td><a href="mailto:info@avjennings.com.au" style="color:#4af;font-size:0.85em">info@avjennings.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">avjennings.com.au</td>
-                <td style="color:#888;font-size:0.8em">Necesitan tradies para subcontratos</td>
+            <tr class="lr">
+                <td class="lc">AVJennings</td>
+                <td><a href="mailto:info@avjennings.com.au" class="le">info@avjennings.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Necesitan tradies para subcontratos</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Watpac</td>
-                <td><a href="mailto:projects@watpac.com.au" style="color:#4af;font-size:0.85em">projects@watpac.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">watpac.com.au</td>
-                <td style="color:#888;font-size:0.8em">Buscan subcontratistas calificados</td>
+            <tr class="lr">
+                <td class="lc">Watpac</td>
+                <td><a href="mailto:projects@watpac.com.au" class="le">projects@watpac.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Buscan subcontratistas calificados</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Hansen Yuncken</td>
-                <td><a href="mailto:info@hansenyuncken.com.au" style="color:#4af;font-size:0.85em">info@hansenyuncken.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">hansenyuncken.com.au</td>
-                <td style="color:#888;font-size:0.8em">Proyectos comerciales y residenciales</td>
+            <tr class="lr">
+                <td class="lc">Hansen Yuncken</td>
+                <td><a href="mailto:info@hansenyuncken.com.au" class="le">info@hansenyuncken.com.au</a></td>
+                <td class="lt">constructora</td>
+                <td class="ln">Proyectos comerciales y residenciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Century 21</td>
-                <td><a href="mailto:commercial@century21.com.au" style="color:#4af;font-size:0.85em">commercial@century21.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">century21.com.au</td>
-                <td style="color:#888;font-size:0.8em">Gestionan propiedades comerciales</td>
+            <tr class="lr">
+                <td class="lc">Century 21</td>
+                <td><a href="mailto:commercial@century21.com.au" class="le">commercial@century21.com.au</a></td>
+                <td class="lt">real_estate</td>
+                <td class="ln">Gestionan propiedades comerciales</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Savills Australia</td>
-                <td><a href="mailto:property@savills.com.au" style="color:#4af;font-size:0.85em">property@savills.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">savills.com.au</td>
-                <td style="color:#888;font-size:0.8em">Multiples propiedades en su cartera</td>
+            <tr class="lr">
+                <td class="lc">Savills Australia</td>
+                <td><a href="mailto:property@savills.com.au" class="le">property@savills.com.au</a></td>
+                <td class="lt">property_mgmt</td>
+                <td class="ln">Multiples propiedades en su cartera</td>
             </tr>
-            <tr>
-                <td style="color:#e0e0e0">Metricon</td>
-                <td><a href="mailto:trades@metricon.com.au" style="color:#4af;font-size:0.85em">trades@metricon.com.au</a></td>
-                <td style="color:#888;font-size:0.8em">metricon.com.au</td>
-                <td style="color:#888;font-size:0.8em">Constructora de viviendas en Melbourne</td>
+            <tr class="lr">
+                <td class="lc">Metricon</td>
+                <td><a href="mailto:trades@metricon.com.au" class="le">trades@metricon.com.au</a></td>
+                <td class="lt">builder</td>
+                <td class="ln">Constructora de viviendas en Melbourne</td>
             </tr></tbody>
-        </table>
+            </table>
+        </div>
     </div></div>
 
-        <h3 class="section-header">💡 Ideas de Negocio Digital</h3>
+        <!-- ═══ SITE HEALTH ═══ -->
+        <div class="sh">🔍 Salud de los Sitios</div>
         <div class="grid">
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">🎯</span>
-            <h2 style="font-size:0.95em">LeadGen SaaS para Tradies</h2>
-            <span class="badge" style="background:#7b68ee">ALTO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card hc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="hdot" style="background:#34d399"></span>
+            <h3 style="font-size:0.95em">Tradios App</h3>
+            <span class="badge" style="background:#34d399">ONLINE</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">Plataforma SaaS que genera leads automáticamente para tradespeople australianos usando web scraping + IA. Los tradies pagan suscripción mensual y reciben leads calificados por Zona.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>⏱️ 2-3 meses</span>
-            <span>🔧 Esfuerzo: Medio</span>
+        <div class="hmeta">
+            <a href="https://tradios.onrender.com" target="_blank" class="plink">https://tradios.onrender.com</a>
+            <span>⏱️ 98.5%</span>
+            <span>🕐 2026-05-07T11:39</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Se puede construir sobre la infraestructura de scraping que ya tenemos. Monetización: $29-$99/mes.</div>
+        
+        <ul class="steps"><li class="iss">⚠️ Tradios App: ⚠️ Sitio offline: The read operation timed out</li></ul>
     </div>
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">🤖</span>
-            <h2 style="font-size:0.95em">AI Quote Bot para WhatsApp</h2>
-            <span class="badge" style="background:#7b68ee">ALTO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card hc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="hdot" style="background:#34d399"></span>
+            <h3 style="font-size:0.95em">Prime Property Maintenance</h3>
+            <span class="badge" style="background:#34d399">ONLINE</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">Bot de WhatsApp que genera cotizaciones automáticas para tradies. El cliente describe el trabajo, el bot calcula precio basado en materiales + mano de obra y envía cotización.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
+        <div class="hmeta">
+            <a href="https://primepropertymaintenance.au" target="_blank" class="plink">https://primepropertymaintenance.au</a>
+            <span>⏱️ 99.2%</span>
+            <span>🕐 2026-05-07T11:39</span>
+        </div>
+        <div class="mg"><div class="metric"><span class="ml">Pages Indexed</span><span class="mv">965</span></div><div class="metric"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="metric"><span class="ml">Impressions 28D</span><span class="mv">3986</span></div><div class="metric"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="metric"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div>
+        <ul class="steps"><li class="iss" style="color:#666">✅ Sin issues</li></ul>
+    </div>
+    <div class="card hc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="hdot" style="background:#34d399"></span>
+            <h3 style="font-size:0.95em">Dashboard (GitHub Pages)</h3>
+            <span class="badge" style="background:#34d399">ONLINE</span>
+        </div>
+        <div class="hmeta">
+            <a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank" class="plink">https://edinsonmipc-oss.github.io/midashboard/</a>
+            <span>⏱️ 100%</span>
+            <span>🕐 2026-05-07T11:39</span>
+        </div>
+        
+        <ul class="steps"><li class="iss" style="color:#666">✅ Sin issues</li></ul>
+    </div>
+    <div class="card hc" style="--accent:#34d399">
+        <div class="pch">
+            <span class="hdot" style="background:#34d399"></span>
+            <h3 style="font-size:0.95em">ToolshubPro</h3>
+            <span class="badge" style="background:#34d399">ONLINE</span>
+        </div>
+        <div class="hmeta">
+            <a href="https://toolshubpro.com.au" target="_blank" class="plink">https://toolshubpro.com.au</a>
+            <span>⏱️ 99.5%</span>
+            <span>🕐 2026-05-07T11:39</span>
+        </div>
+        
+        <ul class="steps"><li class="iss" style="color:#666">✅ Sin issues</li></ul>
+    </div></div>
+
+        <!-- ═══ IDEAS ═══ -->
+        <div class="sh">💡 Ideas de Negocio Digital</div>
+        <div class="grid">
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>🎯</span>
+            <h3 style="font-size:0.95em;flex:1">LeadGen SaaS para Tradies</h3>
+            <span class="badge" style="background:#34d399">Alto</span>
+        </div>
+        <p class="pdesc">Plataforma SaaS que genera leads automáticamente para tradespeople australianos usando web scraping + IA. Los tradies pagan suscripción mensual y reciben leads calificados por Zona.</p>
+        <div class="hmeta">
+            <span>⏱️ 2-3 meses</span>
+            <span>🔧 Medio</span>
+        </div>
+        <div class="note">💭 Se puede construir sobre la infraestructura de scraping que ya tenemos. Monetización: $29-$99/mes.</div>
+    </div>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>🤖</span>
+            <h3 style="font-size:0.95em;flex:1">AI Quote Bot para WhatsApp</h3>
+            <span class="badge" style="background:#34d399">Alto</span>
+        </div>
+        <p class="pdesc">Bot de WhatsApp que genera cotizaciones automáticas para tradies. El cliente describe el trabajo, el bot calcula precio basado en materiales + mano de obra y envía cotización.</p>
+        <div class="hmeta">
             <span>⏱️ 1-2 meses</span>
-            <span>🔧 Esfuerzo: Medio</span>
+            <span>🔧 Medio</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Integración con WhatsApp Business API + IA. Se puede ofrecer como feature de Tradios.</div>
+        <div class="note">💭 Integración con WhatsApp Business API + IA. Se puede ofrecer como feature de Tradios.</div>
     </div>
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">🔄</span>
-            <h2 style="font-size:0.95em">Marketplace de Tradies</h2>
-            <span class="badge" style="background:#7b68ee">MUY ALTO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>🔄</span>
+            <h3 style="font-size:0.95em;flex:1">Marketplace de Tradies</h3>
+            <span class="badge" style="background:#60a5fa">Muy Alto</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">Plataforma donde homeowners encuentran tradies verificados. Similar a hipages pero con IA que empareja clientes con tradies basado en ubicación, rating y disponibilidad.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
+        <p class="pdesc">Plataforma donde homeowners encuentran tradies verificados. Similar a hipages pero con IA que empareja clientes con tradies basado en ubicación, rating y disponibilidad.</p>
+        <div class="hmeta">
             <span>⏱️ 4-6 meses</span>
-            <span>🔧 Esfuerzo: Alto</span>
+            <span>🔧 Alto</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Modelo de negocio: comisión por lead ($5-$20) o membresía premium. Competencia: hipages, Airtasker, ServiceSeeking.</div>
+        <div class="note">💭 Modelo de negocio: comisión por lead ($5-$20) o membresía premium. Competencia: hipages, Airtasker, ServiceSeeking.</div>
     </div>
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">📝</span>
-            <h2 style="font-size:0.95em">SEO Content Factory para Tradies</h2>
-            <span class="badge" style="background:#7b68ee">MEDIO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>📝</span>
+            <h3 style="font-size:0.95em;flex:1">SEO Content Factory para Tradies</h3>
+            <span class="badge" style="background:#fbbf24">Medio</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">Servicio automatizado que genera contenido SEO para páginas web de tradies: blogs, landing pages, Google Business Profile posts, todo con IA.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
+        <p class="pdesc">Servicio automatizado que genera contenido SEO para páginas web de tradies: blogs, landing pages, Google Business Profile posts, todo con IA.</p>
+        <div class="hmeta">
             <span>⏱️ 1 mes</span>
-            <span>🔧 Esfuerzo: Bajo</span>
+            <span>🔧 Bajo</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Ya tenemos la experiencia con primepropertymaintenance.au. Se puede automatizar con Python + OpenAI.</div>
+        <div class="note">💭 Ya tenemos la experiencia con primepropertymaintenance.au. Se puede automatizar con Python + OpenAI.</div>
     </div>
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">📋</span>
-            <h2 style="font-size:0.95em">App de Inspecciones para Propiedades</h2>
-            <span class="badge" style="background:#7b68ee">ALTO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>📋</span>
+            <h3 style="font-size:0.95em;flex:1">App de Inspecciones para Propiedades</h3>
+            <span class="badge" style="background:#34d399">Alto</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">App mobile para que property managers e inspectores hagan reportes de inspección con fotos, checklist, y firma digital. Genera PDF automáticamente.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
+        <p class="pdesc">App mobile para que property managers e inspectores hagan reportes de inspección con fotos, checklist, y firma digital. Genera PDF automáticamente.</p>
+        <div class="hmeta">
             <span>⏱️ 2-3 meses</span>
-            <span>🔧 Esfuerzo: Medio</span>
+            <span>🔧 Medio</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Nichos: property managers, real estate agents, building inspectors. Precio: $15-$30/reporte o $99/mes.</div>
+        <div class="note">💭 Nichos: property managers, real estate agents, building inspectors. Precio: $15-$30/reporte o $99/mes.</div>
     </div>
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">📦</span>
-            <h2 style="font-size:0.95em">Productos Digitales para Tradies</h2>
-            <span class="badge" style="background:#7b68ee">MEDIO</span>
-            <span class="badge" style="background:#888;font-size:0.6em">IDEA</span>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>📦</span>
+            <h3 style="font-size:0.95em;flex:1">Productos Digitales para Tradies</h3>
+            <span class="badge" style="background:#fbbf24">Medio</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">Vender templates, checklists, guías, y plantillas descargables para tradies: contracts, scope of work, inspection reports, quote templates. Todo descargable en PDF/Word.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
+        <p class="pdesc">Vender templates, checklists, guías, y plantillas descargables para tradies: contracts, scope of work, inspection reports, quote templates. Todo descargable en PDF/Word.</p>
+        <div class="hmeta">
             <span>⏱️ 2-4 semanas</span>
-            <span>🔧 Esfuerzo: Bajo</span>
+            <span>🔧 Bajo</span>
         </div>
-        <div class="note" style="margin-top:8px">💭 Plataforma: Gumroad o Shopify. Bajo esfuerzo, buen revenue pasivo potencial.</div>
+        <div class="note">💭 Plataforma: Gumroad o Shopify. Bajo esfuerzo, buen revenue pasivo potencial.</div>
     </div></div>
 
-        <h3 class="section-header">🔍 Salud del Sitio & Mejoras</h3>
-        <div class="grid">
-    <div class="card" style="border-left:4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.2em">✅</span>
-            <h2 style="font-size:0.95em">Tradios App</h2>
-            <span class="badge" style="background:limegreen">ONLINE</span>
-        </div>
-        <div style="display:flex;gap:12px;margin:8px 0;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>🔗 <a href="https://tradios.onrender.com" target="_blank" style="color:#4af">https://tradios.onrender.com</a></span>
-            <span>⏱️ Uptime: 98.5%</span>
-            <span>🕐 2026-05-07T11:39</span>
-        </div>
-        
-        <div class="section-title">⚠️ Issues</div>
-        <ul class="steps"><li style="color:#ff6b6b;font-size:0.85em">⚠️ ⚠️ Sitio offline: The read operation timed out</li></ul>
-        <div class="section-title">💡 Mejoras Sugeridas</div>
-        <ul class="steps"><li style="color:#aaa;font-size:0.85em">💡 Ejecutar supabase-migration.sql para columnas completas</li><li style="color:#aaa;font-size:0.85em">💡 Mejorar velocidad de carga (Render free plan)</li><li style="color:#aaa;font-size:0.85em">💡 Agregar SSL personalizado</li><li style="color:#aaa;font-size:0.85em">💡 Traducir más páginas a inglés</li><li style="color:#aaa;font-size:0.85em">💡 Agregar PWA install prompt</li></ul>
-    </div>
-    <div class="card" style="border-left:4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.2em">✅</span>
-            <h2 style="font-size:0.95em">Prime Property Maintenance</h2>
-            <span class="badge" style="background:limegreen">ONLINE</span>
-        </div>
-        <div style="display:flex;gap:12px;margin:8px 0;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>🔗 <a href="https://primepropertymaintenance.au" target="_blank" style="color:#4af">https://primepropertymaintenance.au</a></span>
-            <span>⏱️ Uptime: 99.2%</span>
-            <span>🕐 2026-05-07T11:39</span>
-        </div>
-        <div class="metrics-grid" style="margin-top:8px"><div class="metric"><span class="metric-label">Pages Indexed</span><span class="metric-value">965</span></div><div class="metric"><span class="metric-label">Clicks 28D</span><span class="metric-value">31</span></div><div class="metric"><span class="metric-label">Impressions 28D</span><span class="metric-value">3986</span></div><div class="metric"><span class="metric-label">Avg Position</span><span class="metric-value">41.87</span></div><div class="metric"><span class="metric-label">Ctr</span><span class="metric-value">0.77%</span></div></div>
-        <div class="section-title">⚠️ Issues</div>
-        <ul class="steps"><li style="color:#888;font-size:0.85em">✅ Sin issues</li></ul>
-        <div class="section-title">💡 Mejoras Sugeridas</div>
-        <ul class="steps"><li style="color:#aaa;font-size:0.85em">💡 Mejorar top-10 keywords para subir posición promedio</li><li style="color:#aaa;font-size:0.85em">💡 Construir backlinks (directorios, partnerships locales)</li><li style="color:#aaa;font-size:0.85em">💡 Agregar más contenido por suburbio de Melbourne</li><li style="color:#aaa;font-size:0.85em">💡 Optimizar Google Business Profile con fotos</li></ul>
-    </div>
-    <div class="card" style="border-left:4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.2em">✅</span>
-            <h2 style="font-size:0.95em">Dashboard (GitHub Pages)</h2>
-            <span class="badge" style="background:limegreen">ONLINE</span>
-        </div>
-        <div style="display:flex;gap:12px;margin:8px 0;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>🔗 <a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank" style="color:#4af">https://edinsonmipc-oss.github.io/midashboard/</a></span>
-            <span>⏱️ Uptime: 100%</span>
-            <span>🕐 2026-05-07T11:39</span>
-        </div>
-        
-        <div class="section-title">⚠️ Issues</div>
-        <ul class="steps"><li style="color:#888;font-size:0.85em">✅ Sin issues</li></ul>
-        <div class="section-title">💡 Mejoras Sugeridas</div>
-        <ul class="steps"><li style="color:#aaa;font-size:0.85em">💡 Sección de leads ya agregada ✅</li><li style="color:#aaa;font-size:0.85em">💡 Health checks automáticos agregados ✅</li><li style="color:#aaa;font-size:0.85em">💡 Mejorar diseño responsive para mobile</li><li style="color:#aaa;font-size:0.85em">💡 Agregar filtros por tipo de lead</li></ul>
-    </div>
-    <div class="card" style="border-left:4px solid limegreen">
-        <div class="card-header">
-            <span style="font-size:1.2em">✅</span>
-            <h2 style="font-size:0.95em">ToolshubPro</h2>
-            <span class="badge" style="background:limegreen">ONLINE</span>
-        </div>
-        <div style="display:flex;gap:12px;margin:8px 0;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>🔗 <a href="https://toolshubpro.com.au" target="_blank" style="color:#4af">https://toolshubpro.com.au</a></span>
-            <span>⏱️ Uptime: 99.5%</span>
-            <span>🕐 2026-05-07T11:39</span>
-        </div>
-        
-        <div class="section-title">⚠️ Issues</div>
-        <ul class="steps"><li style="color:#888;font-size:0.85em">✅ Sin issues</li></ul>
-        <div class="section-title">💡 Mejoras Sugeridas</div>
-        <ul class="steps"><li style="color:#aaa;font-size:0.85em">💡 Agregar más herramientas (meta: 80)</li><li style="color:#aaa;font-size:0.85em">💡 Mejorar SEO de las páginas de herramientas</li><li style="color:#aaa;font-size:0.85em">💡 Agregar analytics para tracking de uso</li></ul>
-    </div></div>
-
-        <div class="changelog">
-            <h3 style="margin-bottom:8px;color:#888;font-size:0.9em;">📜 Changelog — Últimas actualizaciones</h3>
+        <!-- ═══ CHANGELOG ═══ -->
+        <div class="cl">
+            <div class="sh">📜 Últimas Actualizaciones</div>
             
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[toolshubpro]</span>
-        <span class="log-text">Agregadas 3 herramientas nuevas: Currency Converter (16 monedas), QR Code Generator, Date Duration Calculator</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>🔧</span>
+        <span class="leproj">[toolshubpro]</span>
+        <span class="letext">Agregadas 3 herramientas nuevas: Currency Converter (16 monedas), QR Code Generator, Date Duration Calculator</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">⚙️</span>
-        <span class="log-project">[toolshubpro]</span>
-        <span class="log-text">Sitemap.xml generado con 74 URLs + robots.txt — SEO listo</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>⚙️</span>
+        <span class="leproj">[toolshubpro]</span>
+        <span class="letext">Sitemap.xml generado con 74 URLs + robots.txt — SEO listo</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">⚙️</span>
-        <span class="log-project">[toolshubpro]</span>
-        <span class="log-text">ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>⚙️</span>
+        <span class="leproj">[toolshubpro]</span>
+        <span class="letext">ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[toolshubpro]</span>
-        <span class="log-text">YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org (muerto) por nuestro servidor con yt-dlp</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>🔧</span>
+        <span class="leproj">[toolshubpro]</span>
+        <span class="letext">YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org (muerto) por nuestro servidor con yt-dlp</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">📊</span>
-        <span class="log-project">[toolshubpro]</span>
-        <span class="log-text">Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan correctamente</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>📊</span>
+        <span class="leproj">[toolshubpro]</span>
+        <span class="letext">Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan correctamente</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[dashboard]</span>
-        <span class="log-text">Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>🔧</span>
+        <span class="leproj">[dashboard]</span>
+        <span class="letext">Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-02</span>
-        <span class="log-emoji">⚙️</span>
-        <span class="log-project">[dashboard]</span>
-        <span class="log-text">Dashboard desplegado en GitHub Pages + túnel Cloudflare como respaldo</span>
+    <div class="le">
+        <span class="ledate">2026-05-02</span>
+        <span>⚙️</span>
+        <span class="leproj">[dashboard]</span>
+        <span class="letext">Dashboard desplegado en GitHub Pages + túnel Cloudflare como respaldo</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">SEO: FAQPage schema agregado a páginas top-10/15</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>🔧</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">SEO: FAQPage schema agregado a páginas top-10/15</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>🔧</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">SEO: Sitemap actualizado con 82 URLs y prioridades 0.8-0.85</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>🔧</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">SEO: Sitemap actualizado con 82 URLs y prioridades 0.8-0.85</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">Imágenes optimizadas a WebP (de 20MB a 8.7MB)</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>🔧</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">Imágenes optimizadas a WebP (de 20MB a 8.7MB)</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">🔧</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">WhatsApp reemplazado por SMS/call/email para Australia</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>🔧</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">WhatsApp reemplazado por SMS/call/email para Australia</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">📊</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">Análisis competitivo: competidores con 10-30 URLs vs 965 URLs propias</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>📊</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">Análisis competitivo: competidores con 10-30 URLs vs 965 URLs propias</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-05-01</span>
-        <span class="log-emoji">📊</span>
-        <span class="log-project">[primeproperty]</span>
-        <span class="log-text">Análisis Google Search Console: 31 clicks, 3986 impresiones en 28 días</span>
+    <div class="le">
+        <span class="ledate">2026-05-01</span>
+        <span>📊</span>
+        <span class="leproj">[primeproperty]</span>
+        <span class="letext">Análisis Google Search Console: 31 clicks, 3986 impresiones en 28 días</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-04-30</span>
-        <span class="log-emoji">✨</span>
-        <span class="log-project">[dashboard]</span>
-        <span class="log-text">Dominio midashboard.xyz comprado en Namecheap ($0.90)</span>
+    <div class="le">
+        <span class="ledate">2026-04-30</span>
+        <span>✨</span>
+        <span class="leproj">[dashboard]</span>
+        <span class="letext">Dominio midashboard.xyz comprado en Namecheap ($0.90)</span>
     </div>
-    <div class="log-entry">
-        <span class="log-date">2026-04-30</span>
-        <span class="log-emoji">✨</span>
-        <span class="log-project">[dashboard]</span>
-        <span class="log-text">Dashboard creado en Flask con vista general + 3 proyectos</span>
+    <div class="le">
+        <span class="ledate">2026-04-30</span>
+        <span>✨</span>
+        <span class="leproj">[dashboard]</span>
+        <span class="letext">Dashboard creado en Flask con vista general + 3 proyectos</span>
     </div>
         </div>
 
-        <footer style="text-align:center;padding:24px 0 16px;color:#444;font-size:0.75em;border-top:1px solid #1a1a2e;margin-top:24px;">
-            Hermes Agent · Dashboard vivo · Actualización automática 2 veces al día
-        </footer>
+        <footer>Hermes Agent · Dashboard vivo · Actualización automática 2x/día</footer>
     </div>
+
+    <div id="toast"></div>
+
+    <script>
+    // ── Data for copy ──
+    var LEAD_DATA = {"today": [], "all": [{"company": "Simonds Homes", "email": "trades@simonds.com.au", "notes": "Necesitan tradies para subcontratos"}, {"company": "PRDnationwide", "email": "commercial@prd.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "Hickory Group", "email": "projects@hickory.com.au", "notes": "Proyectos comerciales y residenciales"}, {"company": "Laing O'Rourke", "email": "supplychain@laingorourke.com.au", "notes": "Grandes proyectos de construcci\u00f3n en Melbourne"}, {"company": "First National Real Estate", "email": "commercial@fnre.com.au", "notes": "Necesitan mantenimiento regular"}, {"company": "ACE Body Corporate", "email": "info@acebodycorporate.com.au", "notes": "Necesitan servicios regulares"}, {"company": "Henley Homes", "email": "trades@henley.com.au", "notes": "Constructora de viviendas en Melbourne"}, {"company": "Downer Group", "email": "procurement@downergroup.com", "notes": "Grandes proyectos de construcci\u00f3n en Melbourne"}, {"company": "CBRE Australia", "email": "facilities@cbre.com.au", "notes": "Multiples propiedades en su cartera"}, {"company": "Metricon", "email": "trades@metricon.com.au", "notes": "Necesitan tradies para subcontratos"}, {"company": "Carlton Homes", "email": "info@carltonhomes.com.au", "notes": "Constructora de viviendas en Melbourne"}, {"company": "Downer Group", "email": "procurement@downergroup.com", "notes": "Proyectos comerciales y residenciales"}, {"company": "Savills Australia", "email": "property@savills.com.au", "notes": "Multiples propiedades en su cartera"}, {"company": "Probuild", "email": "estimating@probuild.com.au", "notes": "Buscan subcontratistas calificados"}, {"company": "LJ Hooker", "email": "commercial@ljhooker.com", "notes": "Necesitan mantenimiento regular"}, {"company": "CBRE Australia", "email": "facilities@cbre.com.au", "notes": "Administran propiedades comerciales y residenciales"}, {"company": "Dexus", "email": "leasing@dexus.com", "notes": "Gestionan propiedades comerciales"}, {"company": "Metricon", "email": "trades@metricon.com.au", "notes": "Constructora de viviendas en Melbourne"}, {"company": "John Holland", "email": "suppliers@johnholland.com.au", "notes": "Proyectos comerciales y residenciales"}, {"company": "Knight Frank Australia", "email": "property@knightfrank.com.au", "notes": "Multiples propiedades en su cartera"}, {"company": "Century 21", "email": "commercial@century21.com.au", "notes": "Necesitan mantenimiento regular"}, {"company": "Hansen Yuncken", "email": "info@hansenyuncken.com.au", "notes": "Grandes proyectos de construcci\u00f3n en Melbourne"}, {"company": "Lendlease", "email": "suppliers@lendlease.com", "notes": "Contratistas principales nivel 1"}, {"company": "Downer Group", "email": "procurement@downergroup.com", "notes": "Contratistas principales nivel 1"}, {"company": "PICA Group", "email": "info@picagroup.com.au", "notes": "Necesitan servicios regulares"}, {"company": "Hockingstuart", "email": "commercial@hockingstuart.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "Brookfield Multiplex", "email": "procurement@brookfieldmultiplex.com", "notes": "Buscan subcontratistas calificados"}, {"company": "Charter Hall", "email": "leasing@charterhall.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "First National Real Estate", "email": "commercial@fnre.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "McGrath Estate Agents", "email": "commercial@mcgrath.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "Hansen Yuncken", "email": "info@hansenyuncken.com.au", "notes": "Grandes proyectos de construcci\u00f3n en Melbourne"}, {"company": "Hockingstuart", "email": "commercial@hockingstuart.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "Mirvac", "email": "info@mirvac.com", "notes": "Gestionan propiedades comerciales"}, {"company": "AVJennings", "email": "info@avjennings.com.au", "notes": "Volumen alto de proyectos"}, {"company": "Henley Homes", "email": "trades@henley.com.au", "notes": "Necesitan tradies para subcontratos"}, {"company": "Ray White", "email": "commercial@raywhite.com", "notes": "Gestionan propiedades comerciales"}, {"company": "ISPT", "email": "property@ispt.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "ACE Body Corporate", "email": "info@acebodycorporate.com.au", "notes": "Necesitan servicios regulares"}, {"company": "Savills Australia", "email": "property@savills.com.au", "notes": "Administran propiedades comerciales y residenciales"}, {"company": "Fletchers Real Estate", "email": "property@fletcher.com.au", "notes": "Necesitan mantenimiento regular"}, {"company": "Colliers International", "email": "property@colliers.com.au", "notes": "Multiples propiedades en su cartera"}, {"company": "Mirvac", "email": "partnerships@mirvac.com", "notes": "Portfolio grande en Melbourne"}, {"company": "Downer Group", "email": "procurement@downergroup.com", "notes": "Buscan subcontratistas calificados"}, {"company": "ACE Body Corporate", "email": "info@acebodycorporate.com.au", "notes": "Necesitan servicios regulares"}, {"company": "Century 21", "email": "commercial@century21.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "Stockland", "email": "community@stockland.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "Hansen Yuncken", "email": "info@hansenyuncken.com.au", "notes": "Contratistas principales nivel 1"}, {"company": "Kay & Burton", "email": "commercial@kayburton.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "AVJennings", "email": "info@avjennings.com.au", "notes": "Volumen alto de proyectos"}, {"company": "Simonds Homes", "email": "trades@simonds.com.au", "notes": "Constructora de viviendas en Melbourne"}, {"company": "Colliers International", "email": "property@colliers.com.au", "notes": "Administran propiedades comerciales y residenciales"}, {"company": "Cbus Property", "email": "info@cbusproperty.com.au", "notes": "Necesitan mantenimiento regular"}, {"company": "Kane Constructions", "email": "projects@kane.com.au", "notes": "Proyectos comerciales y residenciales"}, {"company": "Porter Davis", "email": "supplier@porterdavis.com.au", "notes": "Volumen alto de proyectos"}, {"company": "Laing O'Rourke", "email": "supplychain@laingorourke.com.au", "notes": "Proyectos comerciales y residenciales"}, {"company": "Lendlease", "email": "suppliers@lendlease.com", "notes": "Contratistas principales nivel 1"}, {"company": "Hickory Group", "email": "projects@hickory.com.au", "notes": "Buscan subcontratistas calificados"}, {"company": "Stockland", "email": "community@stockland.com.au", "notes": "Portfolio grande en Melbourne"}, {"company": "Charter Hall", "email": "leasing@charterhall.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "AVJennings", "email": "info@avjennings.com.au", "notes": "Necesitan tradies para subcontratos"}, {"company": "Multiplex", "email": "subcontractors@multiplex.com", "notes": "Proyectos comerciales y residenciales"}, {"company": "PICA Group", "email": "info@picagroup.com.au", "notes": "Necesitan servicios regulares"}, {"company": "ACE Body Corporate", "email": "info@acebodycorporate.com.au", "notes": "Necesitan servicios regulares"}, {"company": "Cbus Property", "email": "info@cbusproperty.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "AVJennings", "email": "info@avjennings.com.au", "notes": "Necesitan tradies para subcontratos"}, {"company": "Watpac", "email": "projects@watpac.com.au", "notes": "Buscan subcontratistas calificados"}, {"company": "Hansen Yuncken", "email": "info@hansenyuncken.com.au", "notes": "Proyectos comerciales y residenciales"}, {"company": "Century 21", "email": "commercial@century21.com.au", "notes": "Gestionan propiedades comerciales"}, {"company": "Savills Australia", "email": "property@savills.com.au", "notes": "Multiples propiedades en su cartera"}, {"company": "Metricon", "email": "trades@metricon.com.au", "notes": "Constructora de viviendas en Melbourne"}]};
+
+    function copyLeads(e, mode) {
+        var data = LEAD_DATA[mode];
+        if (!data || data.length === 0) {
+            showToast("⚠️ No hay leads para copiar");
+            return;
+        }
+        // Email-ready format: Company <email> — Notes
+        var text = data.map(function(l) {
+            return l.company + " <" + l.email + "> — " + (l.notes || "");
+        }).join("\n");
+        // Also add a subject-friendly summary
+        var summary = "📋 " + data.length + " leads" + (mode === "today" ? " (Hoy)" : " (recientes)") + "\n\n";
+        text = summary + text;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() {
+                showToast("✅ " + data.length + " leads copiados — listos para pegar en email");
+            }).catch(function() {
+                fallbackCopy(text);
+            });
+        } else {
+            fallbackCopy(text);
+        }
+
+        // Visual feedback on button
+        var btn = e.currentTarget;
+        btn.classList.add("copied");
+        var orig = btn.innerHTML;
+        btn.innerHTML = "✅ Copiado";
+        setTimeout(function() { btn.innerHTML = orig; btn.classList.remove("copied") }, 2000);
+    }
+
+    function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand("copy");
+            showToast("✅ Leads copiados");
+        } catch(e) {
+            showToast("❌ No se pudo copiar. Selecciona manualmente.");
+        }
+        document.body.removeChild(ta);
+    }
+
+    function showToast(msg) {
+        var t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        clearTimeout(t._timer);
+        t._timer = setTimeout(function() { t.classList.remove("show") }, 2500);
+    }
+    </script>
 </body>
 </html>

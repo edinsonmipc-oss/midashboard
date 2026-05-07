@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""generate.py — Lee data/*.json y genera index.html con leads, ideas y health."""
+"""generate.py — Dashboard vivo con UI interactiva y copy de leads para email"""
 
 import json, os
-from datetime import datetime
+from datetime import datetime, date
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -11,246 +11,417 @@ def load_json(name):
     with open(path) as f:
         return json.load(f)
 
-def status_color(status):
-    return {"activo": "limegreen", "pendiente": "orange", "idea": "#888", "completado": "royalblue"}.get(status, "#888")
-
 def html_escape(s):
-    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+def esc(s):
+    return html_escape(str(s))
 
 def generate():
     projects = load_json("projects.json")
     changelog = load_json("changelog.json")
+    leads_data = load_json("leads.json")
+    health = load_json("health.json")
+    ideas_data = load_json("ideas.json")
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    today_str = date.today().isoformat()
 
-    # --- Project cards ---
-    cards = ""
-    activos = pendientes = ideas = 0
+    # ── Stats ──
+    activos = sum(1 for p in projects["projects"] if p["status"] == "activo")
+    pendientes = sum(1 for p in projects["projects"] if p["status"] == "pendiente")
+    ideas_count = sum(1 for p in projects["projects"] if p["status"] == "idea")
+    total_leads = leads_data.get("total_leads", 0)
+    sites_online = sum(1 for s in health["sites"] if s["status"] == "online")
+    sites_total = len(health["sites"])
+
+    # ── Project Cards ──
+    cards_html = ""
     for p in projects["projects"]:
-        if p["status"] == "activo": activos += 1
-        elif p["status"] == "pendiente": pendientes += 1
-        elif p["status"] == "idea": ideas += 1
-        metrics = "".join(f'<div class="metric"><span class="metric-label">{k.replace("_"," ").title()}</span><span class="metric-value">{v}</span></div>'
-                          for k, v in p.get("metrics", {}).items()) if p.get("metrics") else '<div class="metric" style="color:#666">Sin métricas aún</div>'
-        steps = "".join(f'<li>{"✅" if i < 1 else "⬜"} {html_escape(s)}</li>' for i, s in enumerate(p.get("next_steps", []))) if p.get("next_steps") else '<li style="color:#666">Sin pasos definidos</li>'
-        url_link = f'<a href="{p["url"]}" target="_blank" style="color:#4af;font-size:0.85em">🌐 {p["url"]}</a>' if p.get("url") else ""
-        sc = status_color(p["status"])
-        cards += f"""
-    <div class="card" style="border-left: 4px solid {sc}">
-        <div class="card-header">
-            <span style="font-size:1.5em">{p['emoji']}</span>
-            <h2>{p['name']}</h2>
+        sc = {"activo": "#34d399", "pendiente": "#fbbf24", "idea": "#888", "completado": "#60a5fa"}.get(p["status"], "#888")
+        metrics = "".join(
+            f'<div class="metric"><span class="ml">{esc(k.replace("_"," ").title())}</span><span class="mv">{esc(v)}</span></div>'
+            for k, v in p.get("metrics", {}).items()
+        ) if p.get("metrics") else ""
+        steps = "".join(
+            f'<li class="{"done" if i<1 else ""}">{"✅" if i<1 else "○"} {esc(s)}</li>'
+            for i, s in enumerate(p.get("next_steps", []))
+        ) if p.get("next_steps") else ""
+        link = f'<a href="{esc(p["url"])}" target="_blank" class="plink">{esc(p["url"])}</a>' if p.get("url") else ""
+        cards_html += f"""
+    <div class="card pc" style="--accent:{sc}">
+        <div class="pch">
+            <span class="pemoji">{p['emoji']}</span>
+            <h3>{esc(p['name'])}</h3>
             <span class="badge" style="background:{sc}">{p['status'].upper()}</span>
         </div>
-        <p style="color:#aaa;margin:8px 0 12px">{p['description']}</p>
-        {url_link}
-        <div class="metrics-grid">{metrics}</div>
-        <div class="section-title">📋 Próximos Pasos</div>
-        <ul class="steps">{steps}</ul>
-        {f'<div class="note">📝 {html_escape(p["notes"])}</div>' if p.get("notes") else ''}
+        <p class="pdesc">{esc(p['description'])}</p>
+        {link}
+        {f'<div class="mg">{metrics}</div>' if metrics else ''}
+        {f'<ul class="steps">{steps}</ul>' if steps else ''}
+        {f'<div class="note">📝 {esc(p["notes"])}</div>' if p.get("notes") else ''}
     </div>"""
 
-    total_projects = len(projects["projects"])
+    # ── Leads Section ──
+    # Build today's leads separately
+    today_leads = leads_data.get("leads_by_date", {}).get(today_str, [])
+    # All recent leads (last 7 days)
+    recent_dates = sorted(leads_data.get("leads_by_date", {}).keys(), reverse=True)[:7]
 
-    # --- Changelog ---
-    log_entries = ""
-    for e in changelog["entries"][:25]:
-        emoji = {"mejora": "🔧", "creacion": "✨", "infra": "⚙️", "analisis": "📊", "idea": "💡"}.get(e["type"], "📌")
-        log_entries += f"""
-    <div class="log-entry">
-        <span class="log-date">{e["date"]}</span>
-        <span class="log-emoji">{emoji}</span>
-        <span class="log-project">[{e["project"]}]</span>
-        <span class="log-text">{html_escape(e["text"])}</span>
-    </div>"""
+    # Build email-ready text for today's leads
+    today_email_text = "\n".join(
+        f"{l['company']} <{l['email']}> — {l.get('notes','')}"
+        for l in today_leads
+    ) if today_leads else "No hay leads para hoy"
 
-    # --- Leads section ---
-    leads_data = load_json("leads.json")
-    total_leads = leads_data.get("total_leads", 0)
-    lead_cards = ""
-    for date_key in sorted(leads_data.get("leads_by_date", {}).keys(), reverse=True)[:7]:
+    # All leads email text (all dates)
+    all_email_parts = []
+    for d in recent_dates:
+        for l in leads_data["leads_by_date"][d]:
+            all_email_parts.append(f"{l['company']} <{l['email']}> — {l.get('notes','')}")
+    all_email_text = "\n".join(all_email_parts) if all_email_parts else "No hay leads"
+
+    leads_html = ""
+    for date_key in recent_dates:
         day_leads = leads_data["leads_by_date"][date_key]
         typs = {}
         for l in day_leads:
             t = l.get("type", "other")
             typs[t] = typs.get(t, 0) + 1
-        type_badges = "".join(f'<span class="stat-pill" style="border-color:#ff6b6b">{t}: {n}</span>' for t, n in sorted(typs.items()))
-        lead_rows = ""
+        type_badges = "".join(
+            f'<span class="tp">{esc(t)} <b>{n}</b></span>' for t, n in sorted(typs.items())
+        )
+        is_today = date_key == today_str
+        rows = ""
         for l in day_leads:
-            lead_rows += f"""
-            <tr>
-                <td style="color:#e0e0e0">{html_escape(l['company'])}</td>
-                <td><a href="mailto:{html_escape(l['email'])}" style="color:#4af;font-size:0.85em">{html_escape(l['email'])}</a></td>
-                <td style="color:#888;font-size:0.8em">{html_escape(l.get('website',''))}</td>
-                <td style="color:#888;font-size:0.8em">{html_escape(l.get('notes',''))}</td>
+            rows += f"""
+            <tr class="lr">
+                <td class="lc">{esc(l['company'])}</td>
+                <td><a href="mailto:{esc(l['email'])}" class="le">{esc(l['email'])}</a></td>
+                <td class="lt">{esc(l.get('type',''))}</td>
+                <td class="ln">{esc(l.get('notes',''))}</td>
             </tr>"""
-        lead_cards += f"""
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <div class="card-header">
-            <span style="font-size:1.2em">📅</span>
-            <h2 style="font-size:0.95em">Leads — {date_key}</h2>
-            <span class="badge" style="background:#ff6b6b">{len(day_leads)} leads</span>
+        leads_html += f"""
+    <div class="card ldc" data-date="{date_key}"{" data-today" if is_today else ""}>
+        <div class="pch">
+            <span class="ld-label">{"🔴 HOY" if is_today else "📅"}</span>
+            <h3 style="font-size:0.95em;flex:1">{date_key}</h3>
+            <span class="badge" style="background:{"#ef4444" if is_today else "#6366f1"}">{len(day_leads)} leads</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0">{type_badges}</div>
-        <table style="width:100%;border-collapse:collapse;font-size:0.85em">
-            <thead><tr style="border-bottom:1px solid #1a1a2e">
-                <th style="padding:6px 4px;text-align:left;color:#888">Empresa</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Email</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Web</th>
-                <th style="padding:6px 4px;text-align:left;color:#888">Notas</th>
-            </tr></thead>
-            <tbody>{lead_rows}</tbody>
-        </table>
+        <div class="tp-wrap">{type_badges}</div>
+        <div class="tbl-wrap">
+            <table class="ltbl">
+                <thead><tr><th>Empresa</th><th>Email</th><th>Tipo</th><th>Notas</th></tr></thead>
+                <tbody>{rows}</tbody>
+            </table>
+        </div>
     </div>"""
 
-    if not lead_cards:
-        lead_cards = """
-    <div class="card" style="border-left:4px solid #ff6b6b">
-        <p style="color:#888;text-align:center;padding:12px">No hay leads aún. La generación automática comenzará pronto.</p>
-    </div>"""
+    if not leads_html:
+        leads_html = '<div class="card" style="text-align:center;padding:32px;color:#666"><p>No hay leads aún. La generación automática comenzará pronto.</p></div>'
 
-    # --- Health & Improvements ---
-    health = load_json("health.json")
+    # ── Health Cards ──
     health_cards = ""
     for site in health.get("sites", []):
-        status_icon = "✅" if site["status"] == "online" else "❌"
-        status_clr = "limegreen" if site["status"] == "online" else "#ff6b6b"
-        issues = "".join(f'<li style="color:#ff6b6b;font-size:0.85em">⚠️ {html_escape(i)}</li>' for i in site.get("issues", [])) or '<li style="color:#888;font-size:0.85em">✅ Sin issues</li>'
-        improvements = "".join(f'<li style="color:#aaa;font-size:0.85em">💡 {html_escape(i)}</li>' for i in site.get("improvements", [])) or '<li style="color:#888;font-size:0.85em">Sin mejoras sugeridas</li>'
+        up = site["status"] == "online"
+        issues = "".join(
+            f'<li class="iss">⚠️ {esc(site.get("name",""))}: {esc(i)}</li>'
+            for i in site.get("issues", [])
+        ) if site.get("issues") else '<li class="iss" style="color:#666">✅ Sin issues</li>'
         seo_html = ""
         if site.get("seo_metrics"):
-            seo_items = "".join(f'<div class="metric"><span class="metric-label">{k.replace("_"," ").title()}</span><span class="metric-value">{v}</span></div>' for k,v in site["seo_metrics"].items())
-            seo_html = f'<div class="metrics-grid" style="margin-top:8px">{seo_items}</div>'
+            seo_items = "".join(
+                f'<div class="metric"><span class="ml">{esc(k.replace("_"," ").title())}</span><span class="mv">{esc(v)}</span></div>'
+                for k, v in site["seo_metrics"].items()
+            )
+            seo_html = f'<div class="mg">{seo_items}</div>'
         health_cards += f"""
-    <div class="card" style="border-left:4px solid {status_clr}">
-        <div class="card-header">
-            <span style="font-size:1.2em">{status_icon}</span>
-            <h2 style="font-size:0.95em">{html_escape(site['name'])}</h2>
-            <span class="badge" style="background:{status_clr}">{site['status'].upper()}</span>
+    <div class="card hc" style="--accent:{"#34d399" if up else "#ef4444"}">
+        <div class="pch">
+            <span class="hdot" style="background:{"#34d399" if up else "#ef4444"}"></span>
+            <h3 style="font-size:0.95em">{esc(site['name'])}</h3>
+            <span class="badge" style="background:{"#34d399" if up else "#ef4444"}">{'ONLINE' if up else 'OFFLINE'}</span>
         </div>
-        <div style="display:flex;gap:12px;margin:8px 0;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>🔗 <a href="{site['url']}" target="_blank" style="color:#4af">{site['url']}</a></span>
-            <span>⏱️ Uptime: {site.get('uptime_24h','N/A')}</span>
-            <span>🕐 {site.get('last_checked','')}</span>
+        <div class="hmeta">
+            <a href="{esc(site['url'])}" target="_blank" class="plink">{esc(site['url'])}</a>
+            <span>⏱️ {esc(site.get('uptime_24h','?'))}</span>
+            <span>🕐 {esc(site.get('last_checked',''))}</span>
         </div>
         {seo_html}
-        <div class="section-title">⚠️ Issues</div>
         <ul class="steps">{issues}</ul>
-        <div class="section-title">💡 Mejoras Sugeridas</div>
-        <ul class="steps">{improvements}</ul>
     </div>"""
 
-    # --- Digital Ideas ---
-    ideas_data = load_json("ideas.json")
+    # ── Ideas ──
     idea_cards = ""
     for idea in ideas_data.get("ideas", []):
-        sc = status_color(idea["status"])
+        potentials = {"Alto": "#34d399", "Muy Alto": "#60a5fa", "Medio": "#fbbf24", "Bajo": "#888"}
+        pc = "var(--accent)"
         idea_cards += f"""
-    <div class="card" style="border-left:4px solid #7b68ee">
-        <div class="card-header">
-            <span style="font-size:1.2em">{idea['emoji']}</span>
-            <h2 style="font-size:0.95em">{html_escape(idea['name'])}</h2>
-            <span class="badge" style="background:#7b68ee">{idea.get('potential','').upper()}</span>
-            <span class="badge" style="background:{sc};font-size:0.6em">{idea['status'].upper()}</span>
+    <div class="card ic" style="--accent:#7c3aed">
+        <div class="pch">
+            <span>{idea['emoji']}</span>
+            <h3 style="font-size:0.95em;flex:1">{esc(idea['name'])}</h3>
+            <span class="badge" style="background:{potentials.get(idea.get('potential',''),'#888')}">{esc(idea.get('potential',''))}</span>
         </div>
-        <p style="color:#aaa;margin:8px 0;font-size:0.9em">{html_escape(idea['description'])}</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:0.8em;color:#888">
-            <span>⏱️ {idea.get('timeline','?')}</span>
-            <span>🔧 Esfuerzo: {idea.get('effort','?')}</span>
+        <p class="pdesc">{esc(idea['description'])}</p>
+        <div class="hmeta">
+            <span>⏱️ {esc(idea.get('timeline','?'))}</span>
+            <span>🔧 {esc(idea.get('effort','?'))}</span>
         </div>
-        {f'<div class="note" style="margin-top:8px">💭 ' + html_escape(idea["notes"]) + '</div>' if idea.get("notes") else ''}
+        {f'<div class="note">💭 {esc(idea["notes"])}</div>' if idea.get("notes") else ''}
     </div>"""
 
+    # ── Changelog ──
+    log_entries = ""
+    emoji_map = {"mejora": "🔧", "creacion": "✨", "infra": "⚙️", "analisis": "📊", "idea": "💡"}
+    for e in changelog["entries"][:20]:
+        em = emoji_map.get(e["type"], "📌")
+        log_entries += f"""
+    <div class="le">
+        <span class="ledate">{esc(e['date'])}</span>
+        <span>{em}</span>
+        <span class="leproj">[{esc(e['project'])}]</span>
+        <span class="letext">{esc(e['text'])}</span>
+    </div>"""
+
+    # ── SVG icons inline ──
     html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hermes Dashboard — Edinson</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hermes Dashboard</title>
     <style>
-        * {{ margin:0; padding:0; box-sizing:border-box; }}
-        body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#0a0a0f; color:#e0e0e0; min-height:100vh; }}
-        .container {{ max-width:960px; margin:0 auto; padding:16px; }}
-        header {{ text-align:center; padding:24px 0 16px; border-bottom:1px solid #1a1a2e; margin-bottom:20px; }}
-        header h1 {{ font-size:1.5em; background:linear-gradient(135deg,#4af,#7b68ee); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }}
-        header .subtitle {{ color:#666; font-size:0.85em; margin-top:4px; }}
-        header .updated {{ color:#555; font-size:0.75em; margin-top:8px; }}
-        header .url {{ margin-top:6px; }}
-        header .url a {{ color:#4af; font-size:0.8em; text-decoration:none; opacity:0.7; }}
-        .grid {{ display:flex; flex-direction:column; gap:16px; }}
-        .card {{ background:#11111a; border-radius:12px; padding:16px; border:1px solid #1a1a2e; }}
-        .card-header {{ display:flex; align-items:center; gap:10px; margin-bottom:4px; flex-wrap:wrap; }}
-        .card-header h2 {{ font-size:1.1em; flex:1; }}
-        .badge {{ font-size:0.65em; padding:2px 8px; border-radius:8px; color:white; font-weight:600; letter-spacing:0.5px; }}
-        .metrics-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:8px; margin:10px 0; }}
-        .metric {{ background:#0d0d16; border-radius:8px; padding:8px; text-align:center; }}
-        .metric-label {{ display:block; font-size:0.65em; color:#888; text-transform:capitalize; }}
-        .metric-value {{ display:block; font-size:1em; color:#4af; font-weight:600; margin-top:2px; }}
-        .section-title {{ color:#888; font-size:0.85em; margin:12px 0 6px; text-transform:uppercase; letter-spacing:1px; }}
-        .steps {{ list-style:none; padding:0; }}
-        .steps li {{ padding:4px 0; font-size:0.9em; color:#ccc; }}
-        .note {{ background:#1a1a2e; border-radius:6px; padding:8px; font-size:0.85em; color:#888; margin-top:8px; }}
-        .changelog {{ margin-top:20px; }}
-        .log-entry {{ display:flex; align-items:flex-start; gap:6px; padding:6px 0; border-bottom:1px solid #0d0d16; font-size:0.85em; flex-wrap:wrap; }}
-        .log-date {{ color:#555; font-size:0.8em; white-space:nowrap; min-width:80px; }}
-        .log-emoji {{ flex-shrink:0; }}
-        .log-project {{ color:#7b68ee; flex-shrink:0; }}
-        .log-text {{ color:#aaa; flex:1; }}
-        .stats-bar {{ display:flex; gap:12px; justify-content:center; margin:12px 0; flex-wrap:wrap; }}
-        .stat-pill {{ background:#11111a; border:1px solid #1a1a2e; border-radius:16px; padding:4px 12px; font-size:0.8em; }}
-        .section-header {{ color:#888; font-size:1em; margin:24px 0 12px; padding-bottom:6px; border-bottom:1px solid #1a1a2e; display:flex; align-items:center; gap:8px; }}
-        @media (max-width:480px) {{
-            .metrics-grid {{ grid-template-columns:repeat(2,1fr); }}
-            .card-header h2 {{ font-size:1em; }}
+        * {{ margin:0; padding:0; box-sizing:border-box }}
+        body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; background:#0a0a0f; color:#e4e4e7; min-height:100vh }}
+        .c {{ max-width:1000px; margin:0 auto; padding:16px }}
+        ::selection {{ background:#6366f1; color:#fff }}
+
+        /* ── Header ── */
+        header {{ text-align:center; padding:28px 0 20px; margin-bottom:20px; position:relative }}
+        header::after {{ content:''; display:block; width:60px; height:3px; background:linear-gradient(90deg,#6366f1,#a78bfa); border-radius:2px; margin:16px auto 0 }}
+        h1 {{ font-size:1.6em; font-weight:700; background:linear-gradient(135deg,#e4e4e7,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent }}
+        .sub {{ color:#71717a; font-size:0.85em; margin-top:4px }}
+        .upd {{ color:#52525b; font-size:0.7em; margin-top:8px }}
+
+        /* ── Stats Bar ── */
+        .sb {{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:12px 0 20px }}
+        .sp {{ background:#111118; border:1px solid #1c1c24; border-radius:20px; padding:6px 14px; font-size:0.8em; color:#a1a1aa; display:flex; align-items:center; gap:5px }}
+        .sp b {{ color:#e4e4e7 }}
+
+        /* ── Section headers ── */
+        .sh {{ color:#71717a; font-size:0.85em; margin:28px 0 12px; padding-bottom:8px; border-bottom:1px solid #1c1c24; display:flex; align-items:center; gap:8px; letter-spacing:0.3px; text-transform:uppercase; font-weight:600 }}
+        .sh-actions {{ margin-left:auto; display:flex; gap:6px }}
+
+        /* ── Buttons ── */
+        .btn {{ display:inline-flex; align-items:center; gap:5px; background:#1c1c24; border:1px solid #27272a; color:#a1a1aa; padding:5px 12px; border-radius:8px; font-size:0.75em; cursor:pointer; transition:all .15s; font-family:inherit }}
+        .btn:hover {{ background:#27272a; border-color:#3f3f46; color:#e4e4e7 }}
+        .btn:active {{ transform:scale(.96) }}
+        .btn-p {{ background:#6366f1; border-color:#6366f1; color:#fff }}
+        .btn-p:hover {{ background:#818cf8; border-color:#818cf8; color:#fff }}
+        .btn-s {{ background:#10b981; border-color:#10b981; color:#fff }}
+        .btn-s:hover {{ background:#34d399; border-color:#34d399; color:#fff }}
+        .copied {{ background:#10b981 !important; border-color:#10b981 !important; color:#fff !important }}
+
+        /* ── Cards ── */
+        .grid {{ display:flex; flex-direction:column; gap:12px }}
+        .card {{ background:#111118; border-radius:14px; padding:18px; border:1px solid #1c1c24; transition:border-color .15s,box-shadow .15s }}
+        .card:hover {{ border-color:#27272a; box-shadow:0 4px 20px rgba(0,0,0,.3) }}
+        .pc {{ border-left:3px solid var(--accent,#888) }}
+        .pch {{ display:flex; align-items:center; gap:10px; margin-bottom:6px }}
+        .pch h3 {{ font-size:1.05em; font-weight:600 }}
+        .pemoji {{ font-size:1.4em }}
+        .pdesc {{ color:#a1a1aa; font-size:0.85em; margin:4px 0 8px; line-height:1.5 }}
+        .badge {{ font-size:0.6em; padding:2px 10px; border-radius:10px; color:#fff; font-weight:600; letter-spacing:.4px; white-space:nowrap }}
+        .mg {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:6px; margin:10px 0 }}
+        .metric {{ background:#0d0d14; border-radius:8px; padding:8px; text-align:center }}
+        .ml {{ display:block; font-size:0.6em; color:#71717a; text-transform:uppercase; letter-spacing:.3px }}
+        .mv {{ display:block; font-size:1em; color:#a78bfa; font-weight:600; margin-top:2px }}
+        .steps {{ list-style:none; padding:0; margin-top:6px }}
+        .steps li {{ padding:3px 0; font-size:0.83em; color:#a1a1aa }}
+        .steps li.done {{ color:#e4e4e7 }}
+        .note {{ background:#0d0d14; border-radius:8px; padding:8px 10px; font-size:0.82em; color:#a1a1aa; margin-top:8px }}
+        .plink {{ color:#818cf8; font-size:0.8em; text-decoration:none; display:inline-block; margin:4px 0 }}
+        .plink:hover {{ text-decoration:underline }}
+
+        /* ── Leads ── */
+        .ldc {{ border-left:3px solid var(--accent,#6366f1) }}
+        .ldc[data-today] {{ border-left-color:#ef4444; border-color:#2a1a1a }}
+        .ld-label {{ font-size:0.7em; font-weight:700; letter-spacing:.5px }}
+        .tp-wrap {{ display:flex; gap:5px; flex-wrap:wrap; margin:6px 0 10px }}
+        .tp {{ background:#0d0d14; border:1px solid #1c1c24; border-radius:12px; padding:2px 10px; font-size:0.72em; color:#a1a1aa }}
+        .tp b {{ color:#e4e4e7 }}
+        .tbl-wrap {{ overflow-x:auto }}
+        .ltbl {{ width:100%; border-collapse:collapse; font-size:0.82em }}
+        .ltbl th {{ padding:7px 6px; text-align:left; color:#71717a; border-bottom:1px solid #1c1c24; font-weight:500; font-size:0.75em; text-transform:uppercase; letter-spacing:.3px; white-space:nowrap }}
+        .ltbl td {{ padding:6px; border-bottom:1px solid #0d0d14; vertical-align:top }}
+        .ltbl tr:hover td {{ background:#14141e }}
+        .lc {{ color:#e4e4e7; font-weight:500; white-space:nowrap }}
+        .le {{ color:#818cf8; text-decoration:none; font-size:0.9em }}
+        .le:hover {{ text-decoration:underline }}
+        .lt {{ color:#71717a; font-size:0.8em; white-space:nowrap }}
+        .ln {{ color:#a1a1aa; font-size:0.85em }}
+
+        /* ── Health ── */
+        .hc {{ border-left:3px solid var(--accent) }}
+        .hdot {{ width:8px; height:8px; border-radius:50%; display:inline-block; flex-shrink:0; animation:pulse 2s infinite }}
+        @keyframes pulse {{ 0%,100%{{opacity:1}} 50%{{opacity:.5}} }}
+        .hmeta {{ display:flex; gap:12px; flex-wrap:wrap; font-size:0.75em; color:#71717a; margin:6px 0 10px }}
+        .hmeta a {{ color:#818cf8; text-decoration:none }}
+        .hmeta a:hover {{ text-decoration:underline }}
+        .iss {{ padding:2px 0; font-size:0.82em; color:#fca5a5 }}
+
+        /* ── Ideas ── */
+        .ic {{ border-left:3px solid var(--accent) }}
+
+        /* ── Changelog ── */
+        .cl {{ margin-top:24px }}
+        .le {{ display:flex; align-items:flex-start; gap:6px; padding:5px 0; border-bottom:1px solid #0d0d14; font-size:0.82em; flex-wrap:wrap }}
+        .ledate {{ color:#52525b; font-size:0.85em; white-space:nowrap; min-width:72px }}
+        .leproj {{ color:#7c3aed; flex-shrink:0; font-size:0.85em }}
+        .letext {{ color:#a1a1aa; flex:1 }}
+
+        /* ── Footer ── */
+        footer {{ text-align:center; padding:24px 0 16px; color:#3f3f46; font-size:0.7em; border-top:1px solid #1c1c24; margin-top:24px }}
+
+        /* ── Toast ── */
+        #toast {{ position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(80px); background:#10b981; color:#fff; padding:10px 20px; border-radius:12px; font-size:0.85em; opacity:0; transition:all .3s; pointer-events:none; z-index:999; box-shadow:0 4px 20px rgba(0,0,0,.5) }}
+        #toast.show {{ opacity:1; transform:translateX(-50%) translateY(0) }}
+
+        /* ── Responsive ── */
+        @media (max-width:600px) {{
+            .card {{ padding:14px }}
+            .mg {{ grid-template-columns:repeat(2,1fr) }}
+            .sb {{ gap:5px }}
+            .sp {{ font-size:0.72em; padding:4px 10px }}
+            .ltbl {{ font-size:0.75em }}
+            .lc {{ white-space:normal }}
+            .lt {{ white-space:normal }}
+            .btn {{ font-size:0.7em; padding:4px 8px }}
+            h1 {{ font-size:1.3em }}
         }}
-        table {{ width:100%; border-collapse:collapse; font-size:0.85em; }}
-        th {{ padding:6px 4px; text-align:left; color:#888; border-bottom:1px solid #1a1a2e; }}
-        td {{ padding:5px 4px; border-bottom:1px solid #0d0d16; }}
-        tr:hover td {{ background:#14141e; }}
-        .tabs {{ display:flex; gap:4px; margin:12px 0; flex-wrap:wrap; }}
-        .tab {{ background:#11111a; border:1px solid #1a1a2e; border-radius:8px; padding:6px 14px; font-size:0.8em; color:#888; cursor:pointer; }}
-        .tab.active {{ border-color:#4af; color:#4af; }}
-        .tab:hover {{ border-color:#555; }}
-        .copy-btn {{ background:#1a1a2e; border:none; border-radius:4px; color:#4af; font-size:0.75em; padding:2px 6px; cursor:pointer; }}
-        .copy-btn:hover {{ background:#2a2a3e; }}
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="c">
         <header>
             <h1>🚀 Hermes Dashboard</h1>
-            <div class="subtitle">Edinson Angarita — Proyectos & Crecimiento</div>
-            <div class="url"><a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank">🔗 edinsonmipc-oss.github.io/midashboard</a></div>
-            <div class="updated">🕐 Actualizado: {now} (actualización automática 2x/día)</div>
-            <div class="stats-bar">
-                <span class="stat-pill">📊 {total_projects} proyectos</span>
-                <span class="stat-pill" style="border-color:limegreen">✅ {activos} activos</span>
-                <span class="stat-pill" style="border-color:orange">⏳ {pendientes} pendientes</span>
-                <span class="stat-pill" style="border-color:#888">💡 {ideas} ideas</span>
-                <span class="stat-pill" style="border-color:#ff6b6b">🎯 {total_leads} leads</span>
-            </div>
+            <div class="sub">Edinson Angarita — Proyectos & Crecimiento</div>
+            <div class="upd">🕐 {now}</div>
         </header>
 
-        <h3 class="section-header">🛠️ Proyectos</h3>
-        <div class="grid">{cards}</div>
+        <div class="sb">
+            <span class="sp">📊 <b>{len(projects['projects'])}</b> proyectos</span>
+            <span class="sp">✅ <b>{activos}</b> activos</span>
+            <span class="sp">⏳ <b>{pendientes}</b> pendientes</span>
+            <span class="sp">💡 <b>{ideas_count}</b> ideas</span>
+            <span class="sp" style="border-color:#6366f1">🎯 <b>{total_leads}</b> leads</span>
+            <span class="sp" style="border-color:{"#34d399" if sites_online==sites_total else "#ef4444"}">🔍 <b>{sites_online}/{sites_total}</b> online</span>
+        </div>
 
-        <h3 class="section-header">🎯 Leads Generados</h3>
-        <div class="grid">{lead_cards}</div>
+        <!-- ═══ PROYECTOS ═══ -->
+        <div class="sh">🛠️ Proyectos</div>
+        <div class="grid">{cards_html}</div>
 
-        <h3 class="section-header">💡 Ideas de Negocio Digital</h3>
-        <div class="grid">{idea_cards}</div>
+        <!-- ═══ LEADS ═══ -->
+        <div class="sh" style="border-color:#27272a">
+            🎯 Leads Generados
+            <div class="sh-actions">
+                <button class="btn btn-s" onclick="copyLeads(event,'today')" title="Copia HOY en formato email">📋 Copiar Hoy</button>
+                <button class="btn btn-p" onclick="copyLeads(event,'all')" title="Copia TODOS los leads recientes">📋 Copiar Todos</button>
+            </div>
+        </div>
+        <div class="grid">{leads_html}</div>
 
-        <h3 class="section-header">🔍 Salud del Sitio & Mejoras</h3>
+        <!-- ═══ SITE HEALTH ═══ -->
+        <div class="sh">🔍 Salud de los Sitios</div>
         <div class="grid">{health_cards}</div>
 
-        <div class="changelog">
-            <h3 style="margin-bottom:8px;color:#888;font-size:0.9em;">📜 Changelog — Últimas actualizaciones</h3>
+        <!-- ═══ IDEAS ═══ -->
+        <div class="sh">💡 Ideas de Negocio Digital</div>
+        <div class="grid">{idea_cards}</div>
+
+        <!-- ═══ CHANGELOG ═══ -->
+        <div class="cl">
+            <div class="sh">📜 Últimas Actualizaciones</div>
             {log_entries}
         </div>
 
-        <footer style="text-align:center;padding:24px 0 16px;color:#444;font-size:0.75em;border-top:1px solid #1a1a2e;margin-top:24px;">
-            Hermes Agent · Dashboard vivo · Actualización automática 2 veces al día
-        </footer>
+        <footer>Hermes Agent · Dashboard vivo · Actualización automática 2x/día</footer>
     </div>
+
+    <div id="toast"></div>
+
+    <script>
+    // ── Data for copy ──
+    var LEAD_DATA = {json.dumps({
+        "today": [{
+            "company": l["company"],
+            "email": l["email"],
+            "notes": l.get("notes", "")
+        } for l in today_leads],
+        "all": [{
+            "company": l["company"],
+            "email": l["email"],
+            "notes": l.get("notes", "")
+        } for d in recent_dates for l in leads_data["leads_by_date"][d]]
+    })};
+
+    function copyLeads(e, mode) {{
+        var data = LEAD_DATA[mode];
+        if (!data || data.length === 0) {{
+            showToast("⚠️ No hay leads para copiar");
+            return;
+        }}
+        // Email-ready format: Company <email> — Notes
+        var text = data.map(function(l) {{
+            return l.company + " <" + l.email + "> — " + (l.notes || "");
+        }}).join("\\n");
+        // Also add a subject-friendly summary
+        var summary = "📋 " + data.length + " leads" + (mode === "today" ? " (Hoy)" : " (recientes)") + "\\n\\n";
+        text = summary + text;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {{
+            navigator.clipboard.writeText(text).then(function() {{
+                showToast("✅ " + data.length + " leads copiados — listos para pegar en email");
+            }}).catch(function() {{
+                fallbackCopy(text);
+            }});
+        }} else {{
+            fallbackCopy(text);
+        }}
+
+        // Visual feedback on button
+        var btn = e.currentTarget;
+        btn.classList.add("copied");
+        var orig = btn.innerHTML;
+        btn.innerHTML = "✅ Copiado";
+        setTimeout(function() {{ btn.innerHTML = orig; btn.classList.remove("copied") }}, 2000);
+    }}
+
+    function fallbackCopy(text) {{
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try {{
+            document.execCommand("copy");
+            showToast("✅ Leads copiados");
+        }} catch(e) {{
+            showToast("❌ No se pudo copiar. Selecciona manualmente.");
+        }}
+        document.body.removeChild(ta);
+    }}
+
+    function showToast(msg) {{
+        var t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        clearTimeout(t._timer);
+        t._timer = setTimeout(function() {{ t.classList.remove("show") }}, 2500);
+    }}
+    </script>
 </body>
 </html>"""
 
