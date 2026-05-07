@@ -1,345 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Tradeos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hermes OS</title>
 <style>
-:root{--bg:#08080c;--fg:#e8e8ed;--c1:#0e0e14;--c2:#181820;--c3:#22222e;--t2:#6b6b80;--t3:#454558;--ac:#6366f1;--ac2:#818cf8;--gr:#34d399;--rd:#ef4444;--yw:#fbbf24;--bl:#3b82f6;--pu:#8b5cf6}
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100dvh;overflow-x:hidden}
+:root{--bg:#0a0a0f;--fg:#e4e4e7;--c1:#111118;--c2:#1c1c24;--c3:#27272a;--t2:#71717a;--t3:#52525b;--ac:#6366f1;--gr:#34d399;--rd:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;display:flex}
 ::selection{background:var(--ac);color:#fff}
-::-webkit-scrollbar{width:3px;height:3px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--c3);border-radius:2px}
-
-/* Layout */
-.app{display:flex;min-height:100dvh}
-.sb{width:200px;min-width:200px;background:var(--c1);border-right:1px solid var(--c2);padding:12px 0;height:100dvh;position:sticky;top:0;overflow:hidden;overflow-y:auto;display:flex;flex-direction:column;z-index:100}
-.sb-l{padding:4px 14px 14px;font-size:1em;font-weight:700;background:linear-gradient(135deg,var(--fg),var(--ac2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:1px solid var(--c2);margin-bottom:4px}
-.sb-l small{display:block;font-size:.5em;color:var(--t2);-webkit-text-fill-color:var(--t2);font-weight:400;margin-top:2px}
+.sb{width:200px;min-width:200px;background:#0d0d14;border-right:1px solid var(--c2);padding:12px 0;height:100vh;position:sticky;top:0;overflow-y:auto;display:flex;flex-direction:column}
+.sb-l{padding:8px 14px 16px;font-size:.9em;font-weight:700;background:linear-gradient(135deg,var(--fg),#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;border-bottom:1px solid var(--c2);margin-bottom:6px}
+.sb-l small{display:block;font-size:.6em;color:var(--t2);-webkit-text-fill-color:var(--t2);font-weight:400;margin-top:2px}
 .sb-g{padding:2px 0}
-.sb-gl{padding:4px 14px;font-size:.55em;color:var(--t3);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
-.sb-b{display:flex;align-items:center;gap:7px;padding:6px 14px;font-size:.75em;color:var(--t2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left;font-family:inherit;border-radius:0}
-.sb-b:hover{background:var(--c2);color:var(--fg)}
-.sb-b.on{background:var(--c2);color:var(--fg);border-right:2px solid var(--ac)}
-.sb-b .sbc{margin-left:auto;background:var(--c2);border-radius:4px;padding:0 5px;font-size:.7em;color:var(--t2)}
+.sb-gl{padding:4px 14px;font-size:.6em;color:var(--t3);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.sb-b{display:flex;align-items:center;gap:7px;padding:7px 14px;font-size:.8em;color:var(--t2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+.sb-b:hover{background:#14141e;color:var(--fg)}
+.sb-b.on{background:#1e1e2a;color:var(--fg);border-right:2px solid var(--ac)}
+.sb-b .sbc{margin-left:auto;background:var(--c2);border-radius:8px;padding:0 6px;font-size:.7em;color:var(--t2)}
 .sb-b.on .sbc{background:var(--ac);color:#fff}
 .sb-sp{flex:1}
-.sb-ft{padding:8px 14px;font-size:.55em;color:var(--t3);border-top:1px solid var(--c2)}
-.mn{flex:1;overflow-y:auto;height:100dvh;min-width:0}
-.c{max-width:960px;margin:0 auto;padding:16px 20px}
-.view{display:none}
-.view.on{display:block;animation:fIn .2s ease}
-@keyframes fIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-
-/* Top Bar */
-.top{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--c2);flex-wrap:wrap}
-.top h1{font-size:1.2em;font-weight:700;flex:1;letter-spacing:-.3px}
-.top h1 small{font-weight:400;color:var(--t2);font-size:.5em;margin-left:6px}
-.top-actions{display:flex;gap:6px}
-.top-btn{background:var(--c2);border:1px solid var(--c3);border-radius:8px;padding:6px 12px;font-size:.72em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s;white-space:nowrap}
-.top-btn:hover{background:var(--c3);color:var(--fg)}
-.top-btn.prim{background:var(--ac);border-color:var(--ac);color:#fff}
-.top-btn.prim:hover{background:var(--ac2)}
-
-/* Dashboard Grid */
-.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:20px}
-.stat{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;position:relative;overflow:hidden}
-.stat::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle,color-mix(in srgb,var(--ac) 6%,transparent) 0%,transparent 70%);pointer-events:none}
-.stat .sn{font-size:.68em;color:var(--t2);margin-bottom:4px}
-.stat .sv{font-size:1.3em;font-weight:700}
-.stat .ss{font-size:.65em;color:var(--t3);margin-top:2px}
-.stat::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--ac);opacity:.3;border-radius:0 0 12px 12px}
-
-/* Money Actions */
-.money{margin-bottom:20px}
-.money-h{font-size:.8em;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px;color:var(--fg)}
-.money-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
-.money-b{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;color:var(--fg);font-size:.78em;display:flex;align-items:center;gap:8px}
-.money-b:hover{background:var(--c2);border-color:var(--ac);transform:translateY(-1px)}
-.money-b:active{transform:scale(.97)}
-.money-b .mi{font-size:1.2em}
-.money-b .ml{font-weight:500}
-
-/* Cards */
-.card{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:16px;margin-bottom:8px}
-.card-h{font-size:.82em;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.badge{font-size:.55em;padding:2px 8px;border-radius:6px;color:#fff;font-weight:600}
-.btn-sm{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:4px 10px;font-size:.7em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
-.btn-sm:hover{background:var(--c3);color:var(--fg)}
-.btn-ac{background:var(--ac);border-color:var(--ac);color:#fff}
-.btn-ac:hover{background:var(--ac2);border-color:var(--ac2)}
-.btn-gr{background:var(--gr);border-color:var(--gr);color:#fff}
-.btn-gr:hover{background:#6ee7b7;border-color:#6ee7b7}
-
-/* Outreach */
-.eg{background:var(--c1);border:1px solid var(--c2);border-radius:10px;margin-bottom:6px;overflow:hidden}
-.eg-hot{border-color:#2a2030}
-.egh{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--c2)}
-.egl{font-weight:500;font-size:.78em;flex:1}
-.egc{background:var(--c2);border-radius:4px;padding:0 6px;font-size:.65em;color:var(--t2)}
-.eb{background:var(--c2);border:1px solid var(--c3);border-radius:4px;padding:2px 8px;font-size:.65em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s}
-.eb:hover{background:var(--ac);border-color:var(--ac);color:#fff}
-.eil{max-height:180px;overflow-y:auto}
-.ei{display:flex;gap:5px;padding:4px 12px;border-bottom:1px solid #0d0d14;font-size:.72em;align-items:center}
+.sb-ft{padding:10px 14px;font-size:.65em;color:var(--t3);border-top:1px solid var(--c2)}
+.mn{flex:1;max-width:calc(100vw - 200px);overflow-y:auto;height:100vh}
+.c{max-width:900px;margin:0 auto;padding:20px}
+.sm{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.sp{background:var(--c1);border:1px solid var(--c2);border-radius:14px;padding:4px 11px;font-size:.72em;color:var(--t2);display:flex;align-items:center;gap:4px}
+.sp b{color:var(--fg)}
+.pn{display:none}
+.pn.on{display:block}
+.ph{font-size:1.2em;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ph small{font-size:.6em;color:var(--t2);font-weight:400}
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+.dc{background:var(--c1);border:1px solid var(--c2);border-radius:12px;padding:14px;text-align:center}
+.dc .dn{font-size:.75em;color:var(--t2)}
+.dc .dv{font-size:1.5em;font-weight:700;color:var(--fg);margin:4px 0}
+.dc .ds{font-size:.65em;color:var(--t3)}
+.btn{display:inline-flex;align-items:center;gap:4px;background:var(--c2);border:1px solid var(--c3);color:var(--t2);padding:5px 12px;border-radius:8px;font-size:.75em;cursor:pointer;transition:all .15s;font-family:inherit}
+.btn:hover{background:var(--c3);border-color:#3f3f46;color:var(--fg)}
+.btn-p{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn-p:hover{background:#818cf8;border-color:#818cf8}
+.bc{background:var(--c1);border-radius:12px;padding:16px;border:1px solid var(--c2);margin-bottom:10px;border-left:3px solid var(--a)}
+.bc:hover{border-color:var(--c3)}
+.bch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.bch h3{font-size:1em;font-weight:600}
+.be{font-size:1.3em}
+.bd{color:var(--t2);font-size:.84em;margin:3px 0 6px;line-height:1.5}
+.bg{font-size:.58em;padding:2px 10px;border-radius:10px;color:#fff;font-weight:600;letter-spacing:.4px;white-space:nowrap}
+.st{list-style:none;padding:0;margin-top:5px}
+.st li{padding:2px 0;font-size:.82em;color:var(--t2)}
+.st li.d{color:var(--fg)}
+.nt{background:#0d0d14;border-radius:7px;padding:7px 9px;font-size:.8em;color:var(--t2);margin-top:6px}
+.pl{color:#818cf8;font-size:.78em;text-decoration:none;display:inline-block;margin:3px 0}
+.pl:hover{text-decoration:underline}
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:5px;margin:8px 0}
+.m{background:#0d0d14;border-radius:7px;padding:7px;text-align:center}
+.ml{display:block;font-size:.58em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
+.mv{display:block;font-size:.92em;color:#a78bfa;font-weight:600;margin-top:1px}
+.eg{background:var(--c1);border:1px solid var(--c2);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.egh{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--c2);flex-wrap:wrap}
+.egl{font-weight:600;font-size:.85em;flex:1}
+.egc{background:var(--c2);border-radius:8px;padding:0 7px;font-size:.72em;color:var(--t2)}
+.eb{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:3px 9px;font-size:.7em;color:var(--t2);cursor:pointer;font-family:inherit}
+.eb:hover{background:var(--c3);color:var(--fg)}
+.egm{padding:14px;font-size:.82em;color:var(--t2);text-align:center}
+.eil{max-height:220px;overflow-y:auto}
+.ei{display:flex;gap:6px;padding:5px 12px;border-bottom:1px solid #0d0d14;font-size:.78em;flex-wrap:wrap}
 .ei:last-child{border:none}
-.eic{color:var(--fg);font-weight:500;min-width:90px;font-size:.92em}
-.eie{color:var(--ac2);font-size:.92em}
-.ein{color:var(--t2);font-size:.85em;margin-left:auto}
-
-/* Kanban */
-.kb{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px}
-.kbc{background:var(--c1);border:1px solid var(--c2);border-radius:8px;padding:8px;min-height:100px}
-.kbc h4{font-size:.65em;color:var(--t2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
-.kb-i{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:5px 7px;margin-bottom:3px;font-size:.7em;cursor:pointer;transition:all .1s}
-.kb-i:hover{border-color:var(--ac)}
-.kb-i .kn{font-weight:500;font-size:.92em}
-.kb-i .ks{color:var(--t2);font-size:.85em;margin-top:1px}
-
-/* Site Health */
-.sc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;border-left:3px solid var(--a)}
-.sch{display:flex;align-items:center;gap:8px;margin-bottom:2px;flex-wrap:wrap}
-.sch h3{font-size:.85em;font-weight:600}
-.sd{width:6px;height:6px;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
-@keyframes pulse{0%{opacity:1}50%{opacity:.5}100%{opacity:1}}
-.shm{display:flex;gap:8px;flex-wrap:wrap;font-size:.68em;color:var(--t2);margin:3px 0 4px}
-.shm a{color:var(--ac2);text-decoration:none}
-
-/* Agent cards */
-.ac{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.ac-l{display:flex;align-items:center;gap:8px;flex:1}
-.ac-d{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.ac-n{font-size:.82em;font-weight:500}
-.ac-s{font-size:.65em;color:var(--t2);margin-top:1px}
-.ac-r{text-align:right;font-size:.68em;color:var(--t2);line-height:1.5}
-
-/* Ideas */
-.ic{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:12px;margin-bottom:6px;border-left:3px solid var(--pu)}
-.ich{display:flex;align-items:center;gap:6px;margin-bottom:2px}
-.ich h3{font-size:.82em;font-weight:600;flex:1}
-.id{color:var(--t2);font-size:.75em;margin:2px 0}
-.ih{display:flex;gap:8px;font-size:.65em;color:var(--t2)}
-
-/* Changelog */
-.le{display:flex;align-items:flex-start;gap:4px;padding:4px 0;border-bottom:1px solid #0d0d14;font-size:.75em}
-.ld{color:var(--t3);font-size:.85em;white-space:nowrap;min-width:55px}
-.lp{color:var(--pu);flex-shrink:0;font-size:.85em}
+.eic{color:var(--fg);font-weight:500;min-width:100px}
+.eie{color:#818cf8}
+.ein{color:var(--t2);font-size:.9em}
+.sc{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--a)}
+.sch{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.sch h3{font-size:.9em;font-weight:600}
+.sd{width:7px;height:7px;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.shm{display:flex;gap:10px;flex-wrap:wrap;font-size:.72em;color:var(--t2);margin:5px 0 6px}
+.shm a{color:#818cf8;text-decoration:none}
+.ic{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--a)}
+.ich{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ich h3{font-size:.9em;font-weight:600;flex:1}
+.id{color:var(--t2);font-size:.82em;margin:4px 0 6px;line-height:1.5}
+.ih{display:flex;gap:10px;font-size:.72em;color:var(--t2);flex-wrap:wrap}
+.ac{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;margin-bottom:8px}
+.ach{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.ach h3{font-size:.9em;font-weight:600;flex:1}
+.ae{font-size:1.1em}
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.agl{display:block;font-size:.6em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
+.agv{display:block;font-size:.85em;color:var(--t2);margin-top:1px}
+.tc{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tcol{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:10px;min-height:200px}
+.tcol h4{font-size:.8em;color:var(--t2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.4px}
+.ti{background:#0d0d14;border:1px solid var(--c2);border-radius:6px;padding:7px 9px;margin-bottom:5px;font-size:.78em;cursor:pointer}
+.ti:hover{border-color:var(--c3)}
+.addt{background:none;border:1px dashed var(--c3);border-radius:6px;padding:6px;font-size:.75em;color:var(--t3);cursor:pointer;width:100%;font-family:inherit;text-align:center}
+.addt:hover{border-color:#3f3f46;color:var(--t2)}
+.le{display:flex;align-items:flex-start;gap:5px;padding:5px 0;border-bottom:1px solid #0d0d14;font-size:.8em;flex-wrap:wrap}
+.ld{color:var(--t3);font-size:.85em;white-space:nowrap;min-width:65px}
+.lp{color:#7c3aed;flex-shrink:0;font-size:.85em}
 .ltx{color:var(--t2);flex:1}
-
-/* Workspace */
-.ws-h{display:flex;align-items:center;gap:8px;margin-bottom:14px}
-.ws-back{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:5px 10px;font-size:.72em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .12s;white-space:nowrap}
-.ws-back:hover{background:var(--c3);color:var(--fg)}
-.ws-h h2{font-size:1em;font-weight:600;flex:1}
-.ws-tabs{display:flex;gap:3px;margin-bottom:12px;flex-wrap:wrap}
-.ws-tab{background:var(--c1);border:1px solid var(--c2);border-radius:6px;padding:5px 12px;font-size:.75em;color:var(--t2);cursor:pointer;font-family:inherit;transition:all .1s}
-.ws-tab:hover{border-color:var(--c3);color:var(--fg)}
-.ws-tab.on{background:var(--ac);border-color:var(--ac);color:#fff}
-.ws-p{display:none}
-.ws-p.on{display:block}
-.ws-tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.ws-tcol{background:var(--c1);border:1px solid var(--c2);border-radius:8px;padding:8px;min-height:100px}
-.ws-tcol h4{font-size:.65em;color:var(--t2);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
-.ws-ti{background:var(--c2);border:1px solid var(--c3);border-radius:5px;padding:5px 7px;margin-bottom:3px;font-size:.7em;cursor:pointer}
-.ws-ti:hover{border-color:var(--ac)}
-.ws-add{border:1px dashed var(--c3);border-radius:5px;padding:4px;font-size:.65em;color:var(--t3);cursor:pointer;width:100%;background:none;font-family:inherit;text-align:center}
-.ws-add:hover{border-color:#3f3f46;color:var(--t2)}
-.ws-notes textarea{width:100%;min-height:100px;background:var(--c2);border:1px solid var(--c3);border-radius:6px;color:var(--fg);padding:8px;font-size:.78em;font-family:inherit;resize:vertical}
-.ws-notes textarea:focus{outline:none;border-color:var(--ac)}
-
-/* Toast */
-#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--gr);color:#fff;padding:8px 20px;border-radius:10px;font-size:.78em;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;box-shadow:0 6px 24px rgba(0,0,0,.5)}
-#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:8px 0}
-.m{background:var(--c2);border:1px solid var(--c3);border-radius:6px;padding:6px;text-align:center}
-.ml{display:block;font-size:.5em;color:var(--t2);text-transform:uppercase;letter-spacing:.3px}
-.mv{display:block;font-size:.8em;color:var(--ac2);font-weight:600;margin-top:1px}
-
+.nts{background:var(--c1);border:1px solid var(--c2);border-radius:10px;padding:14px;min-height:200px}
+.nts textarea{width:100%;min-height:180px;background:#0d0d14;border:1px solid var(--c2);border-radius:8px;color:var(--fg);padding:10px;font-size:.82em;font-family:inherit;resize:vertical}
+.nts textarea:focus{outline:none;border-color:var(--ac)}
+#to{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--gr);color:#fff;padding:9px 18px;border-radius:10px;font-size:.82em;opacity:0;transition:all .3s;pointer-events:none;z-index:999}
+#to.sh{opacity:1;transform:translateX(-50%) translateY(0)}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:#0d0d14}
+::-webkit-scrollbar-thumb{background:var(--c3);border-radius:3px}
 @media(max-width:700px){
-.sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:6px;border:none;border-bottom:1px solid var(--c2);gap:1px}
-.sb-l{padding:2px 8px;border:none;margin:0;font-size:.85em;width:100%}
-.sb-l small{display:inline;margin-left:4px;font-size:.6em}
-.sb-g{display:flex;flex-wrap:wrap;padding:0;gap:1px}
+body{flex-direction:column}
+.sb{width:100%;min-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;padding:6px;border:none;border-bottom:1px solid var(--c2)}
+.sb-l{padding:4px 8px;border:none;margin:0;font-size:.8em}
+.sb-l small{display:inline;margin-left:4px}
+.sb-g{display:flex;flex-wrap:wrap;padding:0}
 .sb-gl{display:none}
-.sb-b{padding:4px 8px;font-size:.65em;width:auto;border-radius:6px}
-.sb-b.on{border-right:none;background:var(--c2)}
-.sb-b .sbc{font-size:.55em}
-.sb-sp,.sb-ft{display:none}
-.mn{height:auto;overflow:visible}
-.c{padding:10px 12px}
-.stats{grid-template-columns:repeat(2,1fr)}
-.money-g{grid-template-columns:repeat(2,1fr)}
-.ws-tasks{grid-template-columns:1fr}
-.kb{grid-template-columns:repeat(3,1fr)}
+.sb-b{padding:4px 8px;font-size:.72em;width:auto;border-radius:6px}
+.sb-b.on{border-right:none;background:#1e1e2a}
+.sb-sp{display:none}
+.sb-ft{display:none}
+.mn{max-width:100%;height:auto}
+.c{padding:10px}
+.tc{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
-<div class="app">
+
 <nav class="sb">
-<div class="sb-l">Tradeos <small>for tradies</small></div>
-<div class="sb-g">
-<button class="sb-b on" data-view="home">\ud83c\udfe0 Home</button>
-<button class="sb-b" data-view="leads">\ud83c\udfaf Leads</button>
-<button class="sb-b" data-view="outreach">\ud83d\udce8 Outreach <span class="sbc">50</span></button>
-<button class="sb-b" data-view="sites">\ud83d\udd0d Sites</button>
-<button class="sb-b" data-view="agents">\ud83e\udd16 AI Tools</button>
-<button class="sb-b" data-view="ideas">\ud83d\udca1 Ideas</button>
-<button class="sb-b" data-view="updates">\ud83d\udcdc Updates</button>
-</div><div class="sb-sp"></div>
-<div class="sb-ft">12:14</div>
+<div class="sb-l">&#x29E7; Hermes OS <small>v2.0</small></div>
+<div class="sb-g"><div class="sb-gl">General</div>
+<button class="sb-b on" data-pn="dashboard">&#x1F4CA; Dashboard</button>
+<button class="sb-b" data-pn="businesses">&#x1F3E2; Negocios</button>
+<button class="sb-b" data-pn="outreach">&#x1F4E7; Outreach <span class="sbc">50</span></button>
+<button class="sb-b" data-pn="sites">&#x1F50D; Sitios</button>
+</div><div class="sb-g"><div class="sb-gl">Operaciones</div>
+<button class="sb-b" data-pn="tasks">&#x2705; Tareas</button>
+<button class="sb-b" data-pn="agents">&#x1F916; Agentes IA</button>
+<button class="sb-b" data-pn="ideas">&#x1F4A1; Ideas</button>
+<button class="sb-b" data-pn="notes">&#x1F4DD; Notas</button>
+</div><div class="sb-g"><div class="sb-gl">Historial</div>
+<button class="sb-b" data-pn="changelog">&#x1F4DC; Cambios</button>
+</div>
+<div class="sb-sp"></div>
+<div class="sb-ft">Actualizado: 12:32</div>
 </nav>
 <main class="mn"><div class="c">
-<div class="view on" id="v-home">
-<div class="top"><h1>Tradeos <small>12:14</small></h1><div class="top-actions"><button class="top-btn" onclick="switchView('outreach')">\ud83d\udce8 Outreach</button><button class="top-btn prim">+ Add Lead</button></div></div>
-<div class="stats">
-<div class="stat"><div class="sn">\ud83c\udfaf New Leads 0</div><div class="sv">today</div></div>
-<div class="stat"><div class="sn">\ud83d\udccb Quotes Waiting 3</div><div class="sv">pending</div></div>
-<div class="stat"><div class="sn">\ud83d\udd14 Follow Ups Due 5</div><div class="sv">urgent</div></div>
-<div class="stat"><div class="sn">\ud83d\udee0\ufe0f Jobs This Week 2</div><div class="sv">active</div></div>
-<div class="stat"><div class="sn">\ud83d\udcb0 Revenue Month $0</div><div class="sv">muted</div></div>
-<div class="stat"><div class="sn">\ud83c\udfc6 Win Rate 0%</div><div class="sv">muted</div></div>
-<div class="stat"><div class="sn">\ud83d\udce8 Emails Ready 50</div><div class="sv">highlight</div></div>
-<div class="stat"><div class="sn">\ud83c\udfe0 Site Leads 4</div><div class="sv">normal</div></div>
+<div class="pn on" id="pn-dashboard">
+<div class="ph">&#x1F4CA; Dashboard</div>
+<div class="sm">
+<span class="sp">&#x1F4CA; <b>5</b> negocios</span>
+<span class="sp">&#x2705; <b>3</b> activos</span>
+<span class="sp" style="border-color:var(--ac)">&#x1F3AF; <b>110</b> leads</span>
+<span class="sp" style="border-color:#34d399">&#x1F50D; <b>4/4</b> sitios online</span>
+<span class="sp">&#x1F916; <b>5</b> agentes</span>
 </div>
-<div class="money"><div class="money-h">\u26a1 Today's Money Actions</div><div class="money-g">
-<button class="money-b" onclick="switchView("leads")"><span class="mi">\ud83d\udcde</span><span class="ml">Call New Leads</span></button>
-<button class="money-b" onclick="toast("Opening quotes...")"><span class="mi">\ud83d\udccb</span><span class="ml">Send Pending Quotes</span></button>
-<button class="money-b" onclick="toast("Opening follow-ups...")"><span class="mi">\ud83d\udd14</span><span class="ml">Follow Up Old Quotes</span></button>
-<button class="money-b" onclick="switchView("outreach")"><span class="mi">\ud83d\udce8</span><span class="ml">Copy Outreach Emails</span></button>
-<button class="money-b" onclick="toast("Add from leads pipeline")"><span class="mi">\ud83d\udcc5</span><span class="ml">Book Site Visit</span></button>
-<button class="money-b" onclick="toast("Open gallery")"><span class="mi">\ud83d\udcf7</span><span class="ml">Upload Job Photos</span></button>
-<button class="money-b" onclick="toast("Open SEO tool")"><span class="mi">\ud83d\udd0d</span><span class="ml">Create SEO Page</span></button>
-<button class="money-b" onclick="switchView("outreach")"><span class="mi">\ud83d\udc65</span><span class="ml">Find New Builders</span></button>
-</div></div></div>
-<div class="view" id="v-leads">
-<div class="top"><h1>\ud83c\udfaf Leads Pipeline</h1><div class="top-actions"><button class="top-btn prim">+ Add Lead</button></div></div>
-<div class="kb" id="leads-kb"></div>
+<div class="dg">
+<div class="dc"><div class="dn">Leads Totales</div><div class="dv">110</div><div class="ds">En 11 dias</div></div>
+<div class="dc"><div class="dn">Emails Unicos</div><div class="dv">50</div><div class="ds">Para outreach</div></div>
+<div class="dc"><div class="dn">Sitios Online</div><div class="dv">4/4</div><div class="ds">100%</div></div>
+<div class="dc"><div class="dn">Agentes Activos</div><div class="dv">4</div><div class="ds">de 5</div></div>
 </div>
-<div class="view" id="v-outreach">
-<div class="top"><h1>\ud83d\udce8 Outreach <small>50 unique emails</small></h1><div class="top-actions"><button class="top-btn btn-ac" onclick="cp('trades@simonds.com.au; commercial@prd.com.au; projects@hickory.com.au; supplychain@laingorourke.com.au; commercial@fnre.com.au; info@acebodycorporate.com.au; trades@henley.com.au; procurement@downergroup.com; facilities@cbre.com.au; trades@metricon.com.au; info@carltonhomes.com.au; property@savills.com.au; estimating@probuild.com.au; commercial@ljhooker.com; leasing@dexus.com; suppliers@johnholland.com.au; property@knightfrank.com.au; commercial@century21.com.au; info@hansenyuncken.com.au; suppliers@lendlease.com; info@picagroup.com.au; commercial@hockingstuart.com.au; procurement@brookfieldmultiplex.com; leasing@charterhall.com.au; commercial@mcgrath.com.au; info@mirvac.com; info@avjennings.com.au; commercial@raywhite.com; property@ispt.com.au; property@fletcher.com.au; property@colliers.com.au; partnerships@mirvac.com; community@stockland.com.au; commercial@kayburton.com.au; info@cbusproperty.com.au; projects@kane.com.au; supplier@porterdavis.com.au; subcontractors@multiplex.com; projects@watpac.com.au; info@collinssimms.com.au; enquiries@built.com.au; property@goodman.com; property@cushwake.com; info@gpt.com.au; projects@marshallwhite.com.au; info@boutiquehomes.com.au; commercial@jelliscraig.com.au; info@buildcorp.com.au; procurement@frasersproperty.com.au; hire@kennards.com.au',50)" style="background:var(--ac);color:#fff;border-color:var(--ac)">\ud83d\udccb Copy All (50)</button></div></div>
-<div class="eg eg-hot"><div class="egh"><span class="egl">Emails Found Today</span><span class="egc">0</span></div></div><div class="eg "><div class="egh"><span class="egl">\ud83d\udd28 Builders</span><span class="egc">7</span><button class="eb" onclick="cp('trades@simonds.com.au; trades@henley.com.au; trades@metricon.com.au; info@carltonhomes.com.au; info@avjennings.com.au; supplier@porterdavis.com.au; info@boutiquehomes.com.au',7)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">Simonds Homes</span><span class="eie">trades@simonds.com.au</span><span class="ein">Necesitan tradies para subcontratos</span></div><div class="ei"><span class="eic">Henley Homes</span><span class="eie">trades@henley.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div><div class="ei"><span class="eic">Metricon</span><span class="eie">trades@metricon.com.au</span><span class="ein">Necesitan tradies para subcontratos</span></div><div class="ei"><span class="eic">Carlton Homes</span><span class="eie">info@carltonhomes.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div><div class="ei"><span class="eic">AVJennings</span><span class="eie">info@avjennings.com.au</span><span class="ein">Volumen alto de proyectos</span></div><div class="ei"><span class="eic">Porter Davis</span><span class="eie">supplier@porterdavis.com.au</span><span class="ein">Volumen alto de proyectos</span></div><div class="ei"><span class="eic">Boutique Homes</span><span class="eie">info@boutiquehomes.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div></div></div><div class="eg "><div class="egh"><span class="egl">\ud83c\udfd7\ufe0f Constructors</span><span class="egc">13</span><button class="eb" onclick="cp('projects@hickory.com.au; supplychain@laingorourke.com.au; procurement@downergroup.com; estimating@probuild.com.au; suppliers@johnholland.com.au; info@hansenyuncken.com.au; suppliers@lendlease.com; procurement@brookfieldmultiplex.com; projects@kane.com.au; subcontractors@multiplex.com; projects@watpac.com.au; enquiries@built.com.au; info@buildcorp.com.au',13)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">Hickory Group</span><span class="eie">projects@hickory.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Laing O'Rourke</span><span class="eie">supplychain@laingorourke.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Downer Group</span><span class="eie">procurement@downergroup.com</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Probuild</span><span class="eie">estimating@probuild.com.au</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">John Holland</span><span class="eie">suppliers@johnholland.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Hansen Yuncken</span><span class="eie">info@hansenyuncken.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Lendlease</span><span class="eie">suppliers@lendlease.com</span><span class="ein">Contratistas principales nivel 1</span></div><div class="ei"><span class="eic">Brookfield Multiplex</span><span class="eie">procurement@brookfieldmultiplex.com</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">Kane Constructions</span><span class="eie">projects@kane.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Multiplex</span><span class="eie">subcontractors@multiplex.com</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Watpac</span><span class="eie">projects@watpac.com.au</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">Built</span><span class="eie">enquiries@built.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">BuildCorp Australia</span><span class="eie">info@buildcorp.com.au</span><span class="ein">Grandes proyectos comerciales en Melbourne CBD</span></div></div></div><div class="eg "><div class="egh"><span class="egl">\ud83c\udfe0 Real Estate</span><span class="egc">22</span><button class="eb" onclick="cp('commercial@prd.com.au; commercial@fnre.com.au; commercial@ljhooker.com; leasing@dexus.com; commercial@century21.com.au; commercial@hockingstuart.com.au; leasing@charterhall.com.au; commercial@mcgrath.com.au; info@mirvac.com; commercial@raywhite.com; property@ispt.com.au; property@fletcher.com.au; partnerships@mirvac.com; community@stockland.com.au; commercial@kayburton.com.au; info@cbusproperty.com.au; info@collinssimms.com.au; property@goodman.com; info@gpt.com.au; projects@marshallwhite.com.au; commercial@jelliscraig.com.au; procurement@frasersproperty.com.au',22)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">PRDnationwide</span><span class="eie">commercial@prd.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">First National Real Estate</span><span class="eie">commercial@fnre.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">LJ Hooker</span><span class="eie">commercial@ljhooker.com</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Dexus</span><span class="eie">leasing@dexus.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Century 21</span><span class="eie">commercial@century21.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Hockingstuart</span><span class="eie">commercial@hockingstuart.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Charter Hall</span><span class="eie">leasing@charterhall.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">McGrath Estate Agents</span><span class="eie">commercial@mcgrath.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Mirvac</span><span class="eie">info@mirvac.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Ray White</span><span class="eie">commercial@raywhite.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">ISPT</span><span class="eie">property@ispt.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Fletchers Real Estate</span><span class="eie">property@fletcher.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Mirvac</span><span class="eie">partnerships@mirvac.com</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Stockland</span><span class="eie">community@stockland.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Kay &amp; Burton</span><span class="eie">commercial@kayburton.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Cbus Property</span><span class="eie">info@cbusproperty.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Collins Simms</span><span class="eie">info@collinssimms.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Goodman Group</span><span class="eie">property@goodman.com</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">GPT Group</span><span class="eie">info@gpt.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Marshall White</span><span class="eie">projects@marshallwhite.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Jellis Craig</span><span class="eie">commercial@jelliscraig.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Frasers Property Australia</span><span class="eie">procurement@frasersproperty.com.au</span><span class="ein">Grandes desarrollos mixtos</span></div></div></div><div class="eg "><div class="egh"><span class="egl">\ud83d\udccb Property Mgrs</span><span class="egc">5</span><button class="eb" onclick="cp('facilities@cbre.com.au; property@savills.com.au; property@knightfrank.com.au; property@colliers.com.au; property@cushwake.com',5)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">CBRE Australia</span><span class="eie">facilities@cbre.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Savills Australia</span><span class="eie">property@savills.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Knight Frank Australia</span><span class="eie">property@knightfrank.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Colliers International</span><span class="eie">property@colliers.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Cushman &amp; Wakefield</span><span class="eie">property@cushwake.com</span><span class="ein">Administran propiedades comerciales y residenciales</span></div></div></div><div class="eg "><div class="egh"><span class="egl">\ud83c\udfdb\ufe0f Strata</span><span class="egc">2</span><button class="eb" onclick="cp('info@acebodycorporate.com.au; info@picagroup.com.au',2)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">ACE Body Corporate</span><span class="eie">info@acebodycorporate.com.au</span><span class="ein">Necesitan servicios regulares</span></div><div class="ei"><span class="eic">PICA Group</span><span class="eie">info@picagroup.com.au</span><span class="ein">Necesitan servicios regulares</span></div></div></div><div class="eg "><div class="egh"><span class="egl">\ud83d\udccc Other</span><span class="egc">1</span><button class="eb" onclick="cp('hire@kennards.com.au',1)">Copy All</button></div><div class="eil"><div class="ei"><span class="eic">Kennards Hire</span><span class="eie">hire@kennards.com.au</span><span class="ein">Alquiler de equipos de construcción</span></div></div></div>
+<div class="ph" style="font-size:.95em;margin-top:4px">&#x1F3E2; Negocios Activos</div>
+<div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🛠️</span><h3>ToolshubPro</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">57 herramientas online. Meta: $5k/mes en 6 meses.</p><div class="mg"><div class="m"><span class="ml">Herramientas</span><span class="mv">60</span></div><div class="m"><span class="ml">Meta Ingresos</span><span class="mv">$5k/mes</span></div><div class="m"><span class="ml">Plazo</span><span class="mv">6 meses</span></div></div><ul class="st"><li class="d">&#x2705; Subir ZIP a Hostinger</li><li class="">&#x25CB; Agregar más herramientas populares</li><li class="">&#x25CB; Configurar analytics real</li></ul><div class="nt">&#x1F4DD; 60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator</div></div><div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🏡</span><h3>Prime Property Maintenance</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">Servicios de mantenimiento de propiedades en Melbourne.</p><a href="https://primepropertymaintenance.au" target="_blank" class="pl">https://primepropertymaintenance.au</a><div class="mg"><div class="m"><span class="ml">Urls En Sitemap</span><span class="mv">965</span></div><div class="m"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="m"><span class="ml">Impresiones 28D</span><span class="mv">3986</span></div><div class="m"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="m"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div><ul class="st"><li class="d">&#x2705; Agregar GA4 con G-XXXXXXXXXX</li><li class="">&#x25CB; Mejorar top-10 keywords</li><li class="">&#x25CB; Construir backlinks</li></ul><div class="nt">&#x1F4DD; 965 URLs, tráfico creciendo</div></div><div class="bc" style="--a:#fbbf24"><div class="bch"><span class="be">📦</span><h3>Tradeos</h3><span class="bg" style="background:#fbbf24">PENDIENTE</span></div><p class="bd">Plataforma de comercio/negocios.</p><ul class="st"><li class="d">&#x2705; Desplegar en Hostinger/GitHub Pages</li><li class="">&#x25CB; Configurar funcionalidad básica</li></ul><div class="nt">&#x1F4DD; Requiere deploy y pruebas</div></div><div class="bc" style="--a:#888"><div class="bch"><span class="be">🏗️</span><h3>Antonio Paving</h3><span class="bg" style="background:#888">IDEA</span></div><p class="bd">Servicios de pavimentación y construcción.</p><ul class="st"><li class="d">&#x2705; Definir servicios exactos</li><li class="">&#x25CB; Crear sitio web</li><li class="">&#x25CB; Buscar leads: builders, contractors</li></ul><div class="nt">&#x1F4DD; Nuevo proyecto, en fase de definición</div></div><div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🎯</span><h3>Lead Generation</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.</p><div class="mg"><div class="m"><span class="ml">Targets</span><span class="mv">Builders, contractors, real estate en Melbourne</span></div></div><ul class="st"><li class="d">&#x2705; Identificar top 50 builders en Melbourne</li><li class="">&#x25CB; Recolectar emails</li><li class="">&#x25CB; Preparar template de outreach</li><li class="">&#x25CB; Enviar propuestas</li></ul><div class="nt">&#x1F4DD; Idea recién iniciada</div></div>
 </div>
-<div class="view" id="v-sites"><div class="top"><h1>\ud83d\udd0d Websites & SEO</h1><div class="top-actions"><span class="top-btn" style="border-color:#34d399">4/4 online</span></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Tradios App</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://tradios.onrender.com" target="_blank">https://tradios.onrender.com</a> <span>98.5%</span></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Prime Property Maintenance</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://primepropertymaintenance.au" target="_blank">https://primepropertymaintenance.au</a> <span>99.2%</span></div><div class="mg"><div class="m"><span class="ml">Pages Indexed</span><span class="mv">965</span></div><div class="m"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="m"><span class="ml">Impressions 28D</span><span class="mv">3986</span></div><div class="m"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="m"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Dashboard (GitHub Pages)</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank">https://edinsonmipc-oss.github.io/midashboard/</a> <span>100%</span></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>ToolshubPro</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://toolshubpro.com.au" target="_blank">https://toolshubpro.com.au</a> <span>99.5%</span></div></div></div>
-<div class="view" id="v-agents"><div class="top"><h1>\ud83e\udd16 AI Tools</h1></div><div class="ac"><div class="ac-l"><div class="ac-d" style="background:#34d399"></div><div><div class="ac-n">SEO Generator</div><div class="ac-s">Active</div></div></div><div class="ac-r"><span>12 jobs</span><br><span>99%</span></div></div><div class="ac"><div class="ac-l"><div class="ac-d" style="background:#34d399"></div><div><div class="ac-n">Lead Finder</div><div class="ac-s">Active</div></div></div><div class="ac-r"><span>22 finds</span><br><span>100%</span></div></div><div class="ac"><div class="ac-l"><div class="ac-d" style="background:#34d399"></div><div><div class="ac-n">Content Writer</div><div class="ac-s">Active</div></div></div><div class="ac-r"><span>8 pages</span><br><span>98%</span></div></div><div class="ac"><div class="ac-l"><div class="ac-d" style="background:#34d399"></div><div><div class="ac-n">Health Monitor</div><div class="ac-s">Active</div></div></div><div class="ac-r"><span>48 checks</span><br><span>100%</span></div></div><div class="ac"><div class="ac-l"><div class="ac-d" style="background:#fbbf24"></div><div><div class="ac-n">Outreach Agent</div><div class="ac-s">Paused</div></div></div><div class="ac-r"><span>0 sends</span><br><span>-</span></div></div></div>
-<div class="view" id="v-ideas"><div class="top"><h1>\ud83d\udca1 Ideas</h1></div><div class="ic"><div class="ich"><span>🎯</span><h3>LeadGen SaaS para Tradies</h3><span class="badge" style="background:#34d399">Alto</span></div><p class="id">Plataforma SaaS que genera leads automáticamente para tradespeople australianos usando web scraping + IA. Los tradies pagan suscripción mensual y reciben leads calificados por Zona.</p><div class="ih"><span>2-3 meses</span><span>Medio</span></div></div><div class="ic"><div class="ich"><span>🤖</span><h3>AI Quote Bot para WhatsApp</h3><span class="badge" style="background:#34d399">Alto</span></div><p class="id">Bot de WhatsApp que genera cotizaciones automáticas para tradies. El cliente describe el trabajo, el bot calcula precio basado en materiales + mano de obra y envía cotización.</p><div class="ih"><span>1-2 meses</span><span>Medio</span></div></div><div class="ic"><div class="ich"><span>🔄</span><h3>Marketplace de Tradies</h3><span class="badge" style="background:#60a5fa">Muy Alto</span></div><p class="id">Plataforma donde homeowners encuentran tradies verificados. Similar a hipages pero con IA que empareja clientes con tradies basado en ubicación, rating y disponibilidad.</p><div class="ih"><span>4-6 meses</span><span>Alto</span></div></div><div class="ic"><div class="ich"><span>📝</span><h3>SEO Content Factory para Tradies</h3><span class="badge" style="background:#fbbf24">Medio</span></div><p class="id">Servicio automatizado que genera contenido SEO para páginas web de tradies: blogs, landing pages, Google Business Profile posts, todo con IA.</p><div class="ih"><span>1 mes</span><span>Bajo</span></div></div><div class="ic"><div class="ich"><span>📋</span><h3>App de Inspecciones para Propiedades</h3><span class="badge" style="background:#34d399">Alto</span></div><p class="id">App mobile para que property managers e inspectores hagan reportes de inspección con fotos, checklist, y firma digital. Genera PDF automáticamente.</p><div class="ih"><span>2-3 meses</span><span>Medio</span></div></div><div class="ic"><div class="ich"><span>📦</span><h3>Productos Digitales para Tradies</h3><span class="badge" style="background:#fbbf24">Medio</span></div><p class="id">Vender templates, checklists, guías, y plantillas descargables para tradies: contracts, scope of work, inspection reports, quote templates. Todo descargable en PDF/Word.</p><div class="ih"><span>2-4 semanas</span><span>Bajo</span></div></div></div>
-<div class="view" id="v-updates"><div class="top"><h1>\ud83d\udcdc Updates</h1></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[toolshubpro]</span><span class="ltx">Agregadas 3 herramientas nuevas: Currency Converter (16 monedas), QR Code Generator, Date Duration Calculator</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[toolshubpro]</span><span class="ltx">Sitemap.xml generado con 74 URLs + robots.txt — SEO listo</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[toolshubpro]</span><span class="ltx">ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[toolshubpro]</span><span class="ltx">YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org (muerto) por nuestro servidor con yt-dlp</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[toolshubpro]</span><span class="ltx">Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan correctamente</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[dashboard]</span><span class="ltx">Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático</span></div><div class="le"><span class="ld">2026-05-02</span><span class="lp">[dashboard]</span><span class="ltx">Dashboard desplegado en GitHub Pages + túnel Cloudflare como respaldo</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">SEO: FAQPage schema agregado a páginas top-10/15</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">SEO: Sitemap actualizado con 82 URLs y prioridades 0.8-0.85</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">Imágenes optimizadas a WebP (de 20MB a 8.7MB)</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">WhatsApp reemplazado por SMS/call/email para Australia</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">Análisis competitivo: competidores con 10-30 URLs vs 965 URLs propias</span></div><div class="le"><span class="ld">2026-05-01</span><span class="lp">[primeproperty]</span><span class="ltx">Análisis Google Search Console: 31 clicks, 3986 impresiones en 28 días</span></div><div class="le"><span class="ld">2026-04-30</span><span class="lp">[dashboard]</span><span class="ltx">Dominio midashboard.xyz comprado en Namecheap ($0.90)</span></div></div>
-<div class="view" id="v-workspace">
-<div class="ws-h"><button class="ws-back" onclick="closeWs()">&#x2190; Back</button><span id="ws-e" style="font-size:1.3em"></span><h2 id="ws-n"></h2></div>
-<div class="ws-tabs" id="ws-t">
-<button class="ws-tab on" onclick="wsT('overview')">Overview</button>
-<button class="ws-tab" onclick="wsT('tasks')">Tasks</button>
-<button class="ws-tab" onclick="wsT('notes')">Notes</button>
+<div class="pn" id="pn-businesses">
+<div class="ph">&#x1F3E2; Negocios <small>Todos los proyectos activos</small></div>
+<div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🛠️</span><h3>ToolshubPro</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">57 herramientas online. Meta: $5k/mes en 6 meses.</p><div class="mg"><div class="m"><span class="ml">Herramientas</span><span class="mv">60</span></div><div class="m"><span class="ml">Meta Ingresos</span><span class="mv">$5k/mes</span></div><div class="m"><span class="ml">Plazo</span><span class="mv">6 meses</span></div></div><ul class="st"><li class="d">&#x2705; Subir ZIP a Hostinger</li><li class="">&#x25CB; Agregar más herramientas populares</li><li class="">&#x25CB; Configurar analytics real</li></ul><div class="nt">&#x1F4DD; 60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator</div></div><div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🏡</span><h3>Prime Property Maintenance</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">Servicios de mantenimiento de propiedades en Melbourne.</p><a href="https://primepropertymaintenance.au" target="_blank" class="pl">https://primepropertymaintenance.au</a><div class="mg"><div class="m"><span class="ml">Urls En Sitemap</span><span class="mv">965</span></div><div class="m"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="m"><span class="ml">Impresiones 28D</span><span class="mv">3986</span></div><div class="m"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="m"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div><ul class="st"><li class="d">&#x2705; Agregar GA4 con G-XXXXXXXXXX</li><li class="">&#x25CB; Mejorar top-10 keywords</li><li class="">&#x25CB; Construir backlinks</li></ul><div class="nt">&#x1F4DD; 965 URLs, tráfico creciendo</div></div><div class="bc" style="--a:#fbbf24"><div class="bch"><span class="be">📦</span><h3>Tradeos</h3><span class="bg" style="background:#fbbf24">PENDIENTE</span></div><p class="bd">Plataforma de comercio/negocios.</p><ul class="st"><li class="d">&#x2705; Desplegar en Hostinger/GitHub Pages</li><li class="">&#x25CB; Configurar funcionalidad básica</li></ul><div class="nt">&#x1F4DD; Requiere deploy y pruebas</div></div><div class="bc" style="--a:#888"><div class="bch"><span class="be">🏗️</span><h3>Antonio Paving</h3><span class="bg" style="background:#888">IDEA</span></div><p class="bd">Servicios de pavimentación y construcción.</p><ul class="st"><li class="d">&#x2705; Definir servicios exactos</li><li class="">&#x25CB; Crear sitio web</li><li class="">&#x25CB; Buscar leads: builders, contractors</li></ul><div class="nt">&#x1F4DD; Nuevo proyecto, en fase de definición</div></div><div class="bc" style="--a:#34d399"><div class="bch"><span class="be">🎯</span><h3>Lead Generation</h3><span class="bg" style="background:#34d399">ACTIVO</span></div><p class="bd">Buscar empresas grandes (builders, contractors, real estate) y ofrecer servicios vía email.</p><div class="mg"><div class="m"><span class="ml">Targets</span><span class="mv">Builders, contractors, real estate en Melbourne</span></div></div><ul class="st"><li class="d">&#x2705; Identificar top 50 builders en Melbourne</li><li class="">&#x25CB; Recolectar emails</li><li class="">&#x25CB; Preparar template de outreach</li><li class="">&#x25CB; Enviar propuestas</li></ul><div class="nt">&#x1F4DD; Idea recién iniciada</div></div>
 </div>
-<div class="ws-p on" id="ws-overview"><div id="ws-oc"></div></div>
-<div class="ws-p" id="ws-tasks"><div class="ws-tasks" id="ws-tc"></div></div>
-<div class="ws-p" id="ws-notes"><div class="ws-notes"><textarea id="ws-nt" placeholder="Notes..."></textarea><button class="ws-back" style="margin-top:6px" onclick="svn()">Save</button><span style="font-size:.7em;color:var(--t2);margin-left:6px" id="ws-ns"></span></div></div>
+<div class="pn" id="pn-outreach">
+<div class="ph">&#x1F4E7; Outreach <small>50 emails unicos</small></div>
+<div style="margin-bottom:12px"><button class="btn btn-p" onclick="ec('trades@simonds.com.au; commercial@prd.com.au; projects@hickory.com.au; supplychain@laingorourke.com.au; commercial@fnre.com.au; info@acebodycorporate.com.au; trades@henley.com.au; procurement@downergroup.com; facilities@cbre.com.au; trades@metricon.com.au; info@carltonhomes.com.au; property@savills.com.au; estimating@probuild.com.au; commercial@ljhooker.com; leasing@dexus.com; suppliers@johnholland.com.au; property@knightfrank.com.au; commercial@century21.com.au; info@hansenyuncken.com.au; suppliers@lendlease.com; info@picagroup.com.au; commercial@hockingstuart.com.au; procurement@brookfieldmultiplex.com; leasing@charterhall.com.au; commercial@mcgrath.com.au; info@mirvac.com; info@avjennings.com.au; commercial@raywhite.com; property@ispt.com.au; property@fletcher.com.au; property@colliers.com.au; partnerships@mirvac.com; community@stockland.com.au; commercial@kayburton.com.au; info@cbusproperty.com.au; projects@kane.com.au; supplier@porterdavis.com.au; subcontractors@multiplex.com; projects@watpac.com.au; info@collinssimms.com.au; enquiries@built.com.au; property@goodman.com; property@cushwake.com; info@gpt.com.au; projects@marshallwhite.com.au; info@boutiquehomes.com.au; commercial@jelliscraig.com.au; info@buildcorp.com.au; procurement@frasersproperty.com.au; hire@kennards.com.au',50)">&#x1F4CB; Copiar TODOS (50)</button></div>
+<div class="eg"><div class="egh"><span class="egl">Constructoras</span><span class="egc">13</span><button class="eb" onclick="ec('projects@hickory.com.au; supplychain@laingorourke.com.au; procurement@downergroup.com; estimating@probuild.com.au; suppliers@johnholland.com.au; info@hansenyuncken.com.au; suppliers@lendlease.com; procurement@brookfieldmultiplex.com; projects@kane.com.au; subcontractors@multiplex.com; projects@watpac.com.au; enquiries@built.com.au; info@buildcorp.com.au',13)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">Hickory Group</span><span class="eie">projects@hickory.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Laing O'Rourke</span><span class="eie">supplychain@laingorourke.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Downer Group</span><span class="eie">procurement@downergroup.com</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Probuild</span><span class="eie">estimating@probuild.com.au</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">John Holland</span><span class="eie">suppliers@johnholland.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Hansen Yuncken</span><span class="eie">info@hansenyuncken.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">Lendlease</span><span class="eie">suppliers@lendlease.com</span><span class="ein">Contratistas principales nivel 1</span></div><div class="ei"><span class="eic">Brookfield Multiplex</span><span class="eie">procurement@brookfieldmultiplex.com</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">Kane Constructions</span><span class="eie">projects@kane.com.au</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Multiplex</span><span class="eie">subcontractors@multiplex.com</span><span class="ein">Proyectos comerciales y residenciales</span></div><div class="ei"><span class="eic">Watpac</span><span class="eie">projects@watpac.com.au</span><span class="ein">Buscan subcontratistas calificados</span></div><div class="ei"><span class="eic">Built</span><span class="eie">enquiries@built.com.au</span><span class="ein">Grandes proyectos de construcción en Melbourne</span></div><div class="ei"><span class="eic">BuildCorp Australia</span><span class="eie">info@buildcorp.com.au</span><span class="ein">Grandes proyectos comerciales en Melbourne CBD</span></div></div></div><div class="eg"><div class="egh"><span class="egl">Builders</span><span class="egc">7</span><button class="eb" onclick="ec('trades@simonds.com.au; trades@henley.com.au; trades@metricon.com.au; info@carltonhomes.com.au; info@avjennings.com.au; supplier@porterdavis.com.au; info@boutiquehomes.com.au',7)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">Simonds Homes</span><span class="eie">trades@simonds.com.au</span><span class="ein">Necesitan tradies para subcontratos</span></div><div class="ei"><span class="eic">Henley Homes</span><span class="eie">trades@henley.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div><div class="ei"><span class="eic">Metricon</span><span class="eie">trades@metricon.com.au</span><span class="ein">Necesitan tradies para subcontratos</span></div><div class="ei"><span class="eic">Carlton Homes</span><span class="eie">info@carltonhomes.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div><div class="ei"><span class="eic">AVJennings</span><span class="eie">info@avjennings.com.au</span><span class="ein">Volumen alto de proyectos</span></div><div class="ei"><span class="eic">Porter Davis</span><span class="eie">supplier@porterdavis.com.au</span><span class="ein">Volumen alto de proyectos</span></div><div class="ei"><span class="eic">Boutique Homes</span><span class="eie">info@boutiquehomes.com.au</span><span class="ein">Constructora de viviendas en Melbourne</span></div></div></div><div class="eg"><div class="egh"><span class="egl">Real Estate</span><span class="egc">22</span><button class="eb" onclick="ec('commercial@prd.com.au; commercial@fnre.com.au; commercial@ljhooker.com; leasing@dexus.com; commercial@century21.com.au; commercial@hockingstuart.com.au; leasing@charterhall.com.au; commercial@mcgrath.com.au; info@mirvac.com; commercial@raywhite.com; property@ispt.com.au; property@fletcher.com.au; partnerships@mirvac.com; community@stockland.com.au; commercial@kayburton.com.au; info@cbusproperty.com.au; info@collinssimms.com.au; property@goodman.com; info@gpt.com.au; projects@marshallwhite.com.au; commercial@jelliscraig.com.au; procurement@frasersproperty.com.au',22)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">PRDnationwide</span><span class="eie">commercial@prd.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">First National Real Estate</span><span class="eie">commercial@fnre.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">LJ Hooker</span><span class="eie">commercial@ljhooker.com</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Dexus</span><span class="eie">leasing@dexus.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Century 21</span><span class="eie">commercial@century21.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Hockingstuart</span><span class="eie">commercial@hockingstuart.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Charter Hall</span><span class="eie">leasing@charterhall.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">McGrath Estate Agents</span><span class="eie">commercial@mcgrath.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Mirvac</span><span class="eie">info@mirvac.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Ray White</span><span class="eie">commercial@raywhite.com</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">ISPT</span><span class="eie">property@ispt.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Fletchers Real Estate</span><span class="eie">property@fletcher.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Mirvac</span><span class="eie">partnerships@mirvac.com</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Stockland</span><span class="eie">community@stockland.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Kay &amp; Burton</span><span class="eie">commercial@kayburton.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Cbus Property</span><span class="eie">info@cbusproperty.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Collins Simms</span><span class="eie">info@collinssimms.com.au</span><span class="ein">Gestionan propiedades comerciales</span></div><div class="ei"><span class="eic">Goodman Group</span><span class="eie">property@goodman.com</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">GPT Group</span><span class="eie">info@gpt.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Marshall White</span><span class="eie">projects@marshallwhite.com.au</span><span class="ein">Necesitan mantenimiento regular</span></div><div class="ei"><span class="eic">Jellis Craig</span><span class="eie">commercial@jelliscraig.com.au</span><span class="ein">Portfolio grande en Melbourne</span></div><div class="ei"><span class="eic">Frasers Property Australia</span><span class="eie">procurement@frasersproperty.com.au</span><span class="ein">Grandes desarrollos mixtos</span></div></div></div><div class="eg"><div class="egh"><span class="egl">Property Managers</span><span class="egc">5</span><button class="eb" onclick="ec('facilities@cbre.com.au; property@savills.com.au; property@knightfrank.com.au; property@colliers.com.au; property@cushwake.com',5)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">CBRE Australia</span><span class="eie">facilities@cbre.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Savills Australia</span><span class="eie">property@savills.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Knight Frank Australia</span><span class="eie">property@knightfrank.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Colliers International</span><span class="eie">property@colliers.com.au</span><span class="ein">Multiples propiedades en su cartera</span></div><div class="ei"><span class="eic">Cushman &amp; Wakefield</span><span class="eie">property@cushwake.com</span><span class="ein">Administran propiedades comerciales y residenciales</span></div></div></div><div class="eg"><div class="egh"><span class="egl">Strata</span><span class="egc">2</span><button class="eb" onclick="ec('info@acebodycorporate.com.au; info@picagroup.com.au',2)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">ACE Body Corporate</span><span class="eie">info@acebodycorporate.com.au</span><span class="ein">Necesitan servicios regulares</span></div><div class="ei"><span class="eic">PICA Group</span><span class="eie">info@picagroup.com.au</span><span class="ein">Necesitan servicios regulares</span></div></div></div><div class="eg"><div class="egh"><span class="egl">Otros</span><span class="egc">1</span><button class="eb" onclick="ec('hire@kennards.com.au',1)">&#x1F4CB; Copiar</button></div><div class="eil"><div class="ei"><span class="eic">Kennards Hire</span><span class="eie">hire@kennards.com.au</span><span class="ein">Alquiler de equipos de construcción</span></div></div></div>
 </div>
-</div></main></div>
-<div id="toast"></div>
+<div class="pn" id="pn-sites">
+<div class="ph">&#x1F50D; Sitios Web <small>Salud y SEO</small></div>
+<div class="sm"><span class="sp" style="border-color:#34d399">4/4 online</span></div>
+<div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Tradios App</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://tradios.onrender.com" target="_blank" class="pl">https://tradios.onrender.com</a><span>&#x23F1;&#xFE0F; 98.5%</span><span>&#x1F550; 2026-05-07T11:39</span></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Prime Property Maintenance</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://primepropertymaintenance.au" target="_blank" class="pl">https://primepropertymaintenance.au</a><span>&#x23F1;&#xFE0F; 99.2%</span><span>&#x1F550; 2026-05-07T11:39</span></div><div class="mg"><div class="m"><span class="ml">Pages Indexed</span><span class="mv">965</span></div><div class="m"><span class="ml">Clicks 28D</span><span class="mv">31</span></div><div class="m"><span class="ml">Impressions 28D</span><span class="mv">3986</span></div><div class="m"><span class="ml">Avg Position</span><span class="mv">41.87</span></div><div class="m"><span class="ml">Ctr</span><span class="mv">0.77%</span></div></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>Dashboard (GitHub Pages)</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://edinsonmipc-oss.github.io/midashboard/" target="_blank" class="pl">https://edinsonmipc-oss.github.io/midashboard/</a><span>&#x23F1;&#xFE0F; 100%</span><span>&#x1F550; 2026-05-07T11:39</span></div></div><div class="sc" style="--a:#34d399"><div class="sch"><span class="sd" style="background:#34d399"></span><h3>ToolshubPro</h3><span class="bg" style="background:#34d399">ONLINE</span></div><div class="shm"><a href="https://toolshubpro.com.au" target="_blank" class="pl">https://toolshubpro.com.au</a><span>&#x23F1;&#xFE0F; 99.5%</span><span>&#x1F550; 2026-05-07T11:39</span></div></div>
+</div>
+<div class="pn" id="pn-tasks">
+<div class="ph">&#x2705; Tareas</div>
+<div class="tc">
+<div class="tcol" data-col="today"><h4>&#x1F534; Hoy</h4><div class="tl"></div><button class="addt" onclick="at('today')">+ Anadir</button></div>
+<div class="tcol" data-col="urgent"><h4>&#x1F7E1; Urgente</h4><div class="tl"></div><button class="addt" onclick="at('urgent')">+ Anadir</button></div>
+<div class="tcol" data-col="week"><h4>&#x1F535; Esta Semana</h4><div class="tl"></div><button class="addt" onclick="at('week')">+ Anadir</button></div>
+<div class="tcol" data-col="done"><h4>&#x2705; Completadas</h4><div class="tl"></div></div>
+</div></div>
+<div class="pn" id="pn-agents">
+<div class="ph">&#x1F916; Agentes IA <small>Automatizaciones activas</small></div>
+<div class="ac"><div class="ach"><span class="ae">&#x1F50D;</span><h3>SEO Agent</h3><span class="bg" style="background:#34d399">Activo</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">Hoy 07:00</span></div><div><span class="agl">Trabajos</span><span class="agv">12</span></div><div><span class="agl">Uptime</span><span class="agv">99&#x25;</span></div></div></div><div class="ac"><div class="ach"><span class="ae">&#x1F3AF;</span><h3>Lead Finder</h3><span class="bg" style="background:#34d399">Activo</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">Hoy 11:39</span></div><div><span class="agl">Trabajos</span><span class="agv">22</span></div><div><span class="agl">Uptime</span><span class="agv">100&#x25;</span></div></div></div><div class="ac"><div class="ach"><span class="ae">&#x1F4E7;</span><h3>Outreach Agent</h3><span class="bg" style="background:#fbbf24">Pausado</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">Ayer</span></div><div><span class="agl">Trabajos</span><span class="agv">0</span></div><div><span class="agl">Uptime</span><span class="agv">-</span></div></div></div><div class="ac"><div class="ach"><span class="ae">&#x1F4DD;</span><h3>Content Writer</h3><span class="bg" style="background:#34d399">Activo</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">Hoy 06:30</span></div><div><span class="agl">Trabajos</span><span class="agv">8</span></div><div><span class="agl">Uptime</span><span class="agv">98&#x25;</span></div></div></div><div class="ac"><div class="ach"><span class="ae">&#x1F50C;</span><h3>Health Monitor</h3><span class="bg" style="background:#34d399">Activo</span></div><div class="ag"><div><span class="agl">Ultima ejecucion</span><span class="agv">Hoy 11:39</span></div><div><span class="agl">Trabajos</span><span class="agv">48</span></div><div><span class="agl">Uptime</span><span class="agv">100&#x25;</span></div></div></div>
+</div>
+<div class="pn" id="pn-ideas">
+<div class="ph">&#x1F4A1; Ideas de Negocio</div>
+<div class="ic" style="--a:#7c3aed"><div class="ich"><span>🎯</span><h3>LeadGen SaaS para Tradies</h3><span class="bg" style="background:#34d399">Alto</span></div><p class="id">Plataforma SaaS que genera leads automáticamente para tradespeople australianos usando web scraping + IA. Los tradies pagan suscripción mensual y reciben leads calificados por Zona.</p><div class="ih"><span>&#x23F1;&#xFE0F; 2-3 meses</span><span>&#x1F527; Medio</span></div><div class="nt">&#x1F4AD; Se puede construir sobre la infraestructura de scraping que ya tenemos. Monetización: $29-$99/mes.</div></div><div class="ic" style="--a:#7c3aed"><div class="ich"><span>🤖</span><h3>AI Quote Bot para WhatsApp</h3><span class="bg" style="background:#34d399">Alto</span></div><p class="id">Bot de WhatsApp que genera cotizaciones automáticas para tradies. El cliente describe el trabajo, el bot calcula precio basado en materiales + mano de obra y envía cotización.</p><div class="ih"><span>&#x23F1;&#xFE0F; 1-2 meses</span><span>&#x1F527; Medio</span></div><div class="nt">&#x1F4AD; Integración con WhatsApp Business API + IA. Se puede ofrecer como feature de Tradios.</div></div><div class="ic" style="--a:#7c3aed"><div class="ich"><span>🔄</span><h3>Marketplace de Tradies</h3><span class="bg" style="background:#60a5fa">Muy Alto</span></div><p class="id">Plataforma donde homeowners encuentran tradies verificados. Similar a hipages pero con IA que empareja clientes con tradies basado en ubicación, rating y disponibilidad.</p><div class="ih"><span>&#x23F1;&#xFE0F; 4-6 meses</span><span>&#x1F527; Alto</span></div><div class="nt">&#x1F4AD; Modelo de negocio: comisión por lead ($5-$20) o membresía premium. Competencia: hipages, Airtasker, ServiceSeeking.</div></div><div class="ic" style="--a:#7c3aed"><div class="ich"><span>📝</span><h3>SEO Content Factory para Tradies</h3><span class="bg" style="background:#fbbf24">Medio</span></div><p class="id">Servicio automatizado que genera contenido SEO para páginas web de tradies: blogs, landing pages, Google Business Profile posts, todo con IA.</p><div class="ih"><span>&#x23F1;&#xFE0F; 1 mes</span><span>&#x1F527; Bajo</span></div><div class="nt">&#x1F4AD; Ya tenemos la experiencia con primepropertymaintenance.au. Se puede automatizar con Python + OpenAI.</div></div><div class="ic" style="--a:#7c3aed"><div class="ich"><span>📋</span><h3>App de Inspecciones para Propiedades</h3><span class="bg" style="background:#34d399">Alto</span></div><p class="id">App mobile para que property managers e inspectores hagan reportes de inspección con fotos, checklist, y firma digital. Genera PDF automáticamente.</p><div class="ih"><span>&#x23F1;&#xFE0F; 2-3 meses</span><span>&#x1F527; Medio</span></div><div class="nt">&#x1F4AD; Nichos: property managers, real estate agents, building inspectors. Precio: $15-$30/reporte o $99/mes.</div></div><div class="ic" style="--a:#7c3aed"><div class="ich"><span>📦</span><h3>Productos Digitales para Tradies</h3><span class="bg" style="background:#fbbf24">Medio</span></div><p class="id">Vender templates, checklists, guías, y plantillas descargables para tradies: contracts, scope of work, inspection reports, quote templates. Todo descargable en PDF/Word.</p><div class="ih"><span>&#x23F1;&#xFE0F; 2-4 semanas</span><span>&#x1F527; Bajo</span></div><div class="nt">&#x1F4AD; Plataforma: Gumroad o Shopify. Bajo esfuerzo, buen revenue pasivo potencial.</div></div>
+</div>
+<div class="pn" id="pn-notes">
+<div class="ph">&#x1F4DD; Notas Rapidas</div>
+<div class="nts"><textarea id="na" placeholder="Escribe tus notas aqui... Se guardan automaticamente."></textarea>
+<button class="btn" onclick="sn()">&#x1F4BE; Guardar</button>
+<span style="font-size:.72em;color:var(--t2);margin-left:8px" id="ns"></span>
+</div></div>
+<div class="pn" id="pn-changelog">
+<div class="ph">&#x1F4DC; Ultimos Cambios</div>
+<div class="le"><span class="ld">2026-05-02</span><span>&#x1F527;</span><span class="lp">[toolshubpro]</span><span class="ltx">Agregadas 3 herramientas nuevas: Currency Converter (16 monedas), QR Code Generator, Date Duration Calculator</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x2699;&#xFE0F;</span><span class="lp">[toolshubpro]</span><span class="ltx">Sitemap.xml generado con 74 URLs + robots.txt — SEO listo</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x2699;&#xFE0F;</span><span class="lp">[toolshubpro]</span><span class="ltx">ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x1F527;</span><span class="lp">[toolshubpro]</span><span class="ltx">YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org (muerto) por nuestro servidor con yt-dlp</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x1F4CA;</span><span class="lp">[toolshubpro]</span><span class="ltx">Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan correctamente</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x1F527;</span><span class="lp">[dashboard]</span><span class="ltx">Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático</span></div><div class="le"><span class="ld">2026-05-02</span><span>&#x2699;&#xFE0F;</span><span class="lp">[dashboard]</span><span class="ltx">Dashboard desplegado en GitHub Pages + túnel Cloudflare como respaldo</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F527;</span><span class="lp">[primeproperty]</span><span class="ltx">SEO: FAQPage schema agregado a páginas top-10/15</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F527;</span><span class="lp">[primeproperty]</span><span class="ltx">Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F527;</span><span class="lp">[primeproperty]</span><span class="ltx">SEO: Sitemap actualizado con 82 URLs y prioridades 0.8-0.85</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F527;</span><span class="lp">[primeproperty]</span><span class="ltx">Imágenes optimizadas a WebP (de 20MB a 8.7MB)</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F527;</span><span class="lp">[primeproperty]</span><span class="ltx">WhatsApp reemplazado por SMS/call/email para Australia</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F4CA;</span><span class="lp">[primeproperty]</span><span class="ltx">Análisis competitivo: competidores con 10-30 URLs vs 965 URLs propias</span></div><div class="le"><span class="ld">2026-05-01</span><span>&#x1F4CA;</span><span class="lp">[primeproperty]</span><span class="ltx">Análisis Google Search Console: 31 clicks, 3986 impresiones en 28 días</span></div><div class="le"><span class="ld">2026-04-30</span><span>&#x2728;</span><span class="lp">[dashboard]</span><span class="ltx">Dominio midashboard.xyz comprado en Namecheap ($0.90)</span></div><div class="le"><span class="ld">2026-04-30</span><span>&#x2728;</span><span class="lp">[dashboard]</span><span class="ltx">Dashboard creado en Flask con vista general + 3 proyectos</span></div>
+</div>
+</div></main>
+<div id="to"></div>
 <script>
-var BTNS = document.querySelectorAll('.sb-b');
-BTNS.forEach(function(b){b.addEventListener('click',function(){
-if(b.getAttribute('data-view')==='workspace') return;
-BTNS.forEach(function(x){x.classList.remove('on')});
-document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
+var sb=document.querySelectorAll('.sb-b');
+sb.forEach(function(b){b.addEventListener('click',function(){
+sb.forEach(function(x){x.classList.remove('on')});
+document.querySelectorAll('.pn').forEach(function(x){x.classList.remove('on')});
 b.classList.add('on');
-var v = document.getElementById('v-'+b.getAttribute('data-view'));
-if(v) v.classList.add('on');
-try{localStorage.setItem('tv',b.getAttribute('data-view'))}catch(e){}
+var p=document.getElementById('pn-'+b.getAttribute('data-pn'));
+if(p)p.classList.add('on');
+try{localStorage.setItem('hpan',b.getAttribute('data-pn'))}catch(e){}
 })});
-try{var lv=localStorage.getItem('tv');if(lv){var b=document.querySelector('.sb-b[data-view="'+lv+'"]');if(b)b.click()}}catch(e){}
+try{var lp=localStorage.getItem('hpan');if(lp){var b=document.querySelector('.sb-b[data-pn="'+lp+'"]');if(b)b.click()}}catch(e){}
 
-function switchView(n){
-BTNS.forEach(function(x){x.classList.remove('on')});
-document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
-var b=document.querySelector('.sb-b[data-view="'+n+'"]');
-if(b)b.classList.add('on');
-var v=document.getElementById('v-'+n);
-if(v)v.classList.add('on');
-try{localStorage.setItem('tv',n)}catch(e){}
-}
+function toast(m){var t=document.getElementById('to');t.textContent=m;t.classList.add('sh');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('sh')},2500)}
 
-// Leads Kanban
-var LC = ['New','Contacted','Site Visit','Quote Sent','Won','Lost'];
-function gLD(){try{return JSON.parse(localStorage.getItem('tleads'))||{}}catch(e){return{}}}
-function sLD(d){try{localStorage.setItem('tleads',JSON.stringify(d))}catch(e){}}
-
-function rL(){
-var ld=gLD();var h='';
-LC.forEach(function(c){
-var items=ld[c]||[];h+='<div class="kbc"><h4>'+c+' ('+items.length+')</h4>';
-items.forEach(function(it,i){h+='<div class="kb-i" onclick="mL(\''+c+'\','+i+')"><div class="kn">'+it.n+'</div><div class="ks">'+it.s+'</div></div>'});
-h+='</div>';});
-h+='<div style="margin-top:8px"><button class="btn-sm btn-ac" onclick="aL()">+ Add Lead</button></div>';
-document.getElementById('leads-kb').innerHTML=h;
-}
-
-function aL(){
-var n=prompt('Client name:');if(!n||!n.trim())return;
-var s=prompt('Suburb / service:')||'';var ld=gLD();if(!ld['New'])ld['New']=[];
-ld['New'].push({n:n.trim(),s:s});sLD(ld);rL();toast('Lead added');
-}
-
-function mL(col,i){
-var ld=gLD();var items=ld[col]||[];if(i>=items.length)return;
-var item=items.splice(i,1)[0];var idx=LC.indexOf(col);
-if(idx>=LC.length-1){items.splice(i,0,item);return;}
-var nxt=LC[idx+1];if(!ld[nxt])ld[nxt]=[];ld[nxt].push(item);sLD(ld);rL();toast('Moved to '+nxt);
-}
-rL();
-
-// Copy
-function cp(t,c){
+function ec(t,c){
 if(navigator.clipboard&&navigator.clipboard.writeText){
-navigator.clipboard.writeText(t).then(function(){toast(c+' emails copied')}).catch(function(){fb(t)});
-}else{fb(t)}}
-function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Copied')}catch(e){toast('Error')}document.body.removeChild(ta);}
-function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show')},2500);}
+navigator.clipboard.writeText(t).then(function(){toast('\u2705 '+c+' emails copiados')}).catch(function(){fb(t)})
+}else{fb(t)}
+}
+function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('\u2705 Copiado')}catch(e){toast('\u274c Error')}document.body.removeChild(ta)}
 
-// Workspace
-var BIZ = {"toolshubpro": {"e": "\ud83d\udee0\ufe0f", "n": "ToolshubPro", "m": {"herramientas": 60, "meta_ingresos": "$5k/mes", "plazo": "6 meses"}, "steps": ["Subir ZIP a Hostinger", "Agregar m\u00e1s herramientas populares", "Configurar analytics real"], "notes": "60 herramientas funcionales. 3 nuevas agregadas: Currency Converter, QR Code, Date Calculator"}, "primeproperty": {"e": "\ud83c\udfe1", "n": "Prime Property Maintenance", "m": {"urls_en_sitemap": 965, "clicks_28d": 31, "impresiones_28d": 3986, "avg_position": 41.87, "ctr": "0.77%"}, "steps": ["Agregar GA4 con G-XXXXXXXXXX", "Mejorar top-10 keywords", "Construir backlinks"], "notes": "965 URLs, tr\u00e1fico creciendo"}, "tradeos": {"e": "\ud83d\udce6", "n": "Tradeos", "m": {}, "steps": ["Desplegar en Hostinger/GitHub Pages", "Configurar funcionalidad b\u00e1sica"], "notes": "Requiere deploy y pruebas"}, "antoniopaving": {"e": "\ud83c\udfd7\ufe0f", "n": "Antonio Paving", "m": {}, "steps": ["Definir servicios exactos", "Crear sitio web", "Buscar leads: builders, contractors"], "notes": "Nuevo proyecto, en fase de definici\u00f3n"}, "leadgen": {"e": "\ud83c\udfaf", "n": "Lead Generation", "m": {"targets": "Builders, contractors, real estate en Melbourne"}, "steps": ["Identificar top 50 builders en Melbourne", "Recolectar emails", "Preparar template de outreach", "Enviar propuestas"], "notes": "Idea reci\u00e9n iniciada"}};
+function lt(){try{return JSON.parse(localStorage.getItem('htasks'))||{today:[],urgent:[],week:[],done:[]}}catch(e){return{today:[],urgent:[],week:[],done:[]}}}
+function st(d){try{localStorage.setItem('htasks',JSON.stringify(d))}catch(e){}}
+function rt(){
+var d=lt();['today','urgent','week','done'].forEach(function(c){
+var el=document.querySelector('.tcol[data-col="'+c+'"] .tl');if(!el)return;
+el.innerHTML=d[c].map(function(t,i){var s=c==='done'?'style="text-decoration:line-through;color:var(--t3)"':'';return '<div class="ti" '+s+' onclick="td(\''+c+'\','+i+')">'+t+'</div>'}).join('')})}
+function at(col){var t=prompt('Nueva tarea ('+col+'):');if(!t||!t.trim())return;var d=lt();d[col].push(t.trim());st(d);rt()}
+function td(col,i){var d=lt();if(col==='done'){d.done.splice(i,1)}else{d.done.push(d[col][i]);d[col].splice(i,1)}st(d);rt();toast('\u2705 Tarea movida')}
+rt();
 
-function openBiz(id){
-var b=BIZ[id];if(!b)return;
-document.getElementById('ws-e').textContent=b.e;
-document.getElementById('ws-n').textContent=b.n;
-document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
-document.getElementById('v-workspace').classList.add('on');
-rO(id);rT(id);rN(id);wsT('overview');
-}
-function closeWs(){document.getElementById('v-workspace').classList.remove('on');document.getElementById('v-home').classList.add('on');}
-function wsT(n){
-document.querySelectorAll('.ws-tab').forEach(function(x){x.classList.remove('on')});
-document.querySelectorAll('.ws-p').forEach(function(x){x.classList.remove('on')});
-var e=null;document.querySelectorAll('.ws-tab').forEach(function(t){if(t.textContent.toLowerCase().indexOf(n)>=0)e=t});
-if(e)e.classList.add('on');var p=document.getElementById('ws-'+n);if(p)p.classList.add('on');
-}
-function rO(id){
-var b=BIZ[id];if(!b)return;
-var h='<div class="mg" style="grid-template-columns:repeat(3,1fr)">';
-for(var k in b.m){h+='<div class="m"><span class="ml">'+k+'</span><span class="mv">'+b.m[k]+'</span></div>';}
-h+='</div>';
-if(b.steps&&b.steps.length){h+='<div style="font-size:.8em;color:var(--t2);margin-top:8px;font-weight:600">Next Steps</div><ul style="list-style:none;padding:0;margin-top:4px">';
-b.steps.forEach(function(s,i){h+='<li style="padding:2px 0;font-size:.76em;color:var(--t2)">'+(i===0?'\u2705':'\u25CB')+' '+s+'</li>'});h+='</ul>';}
-if(b.notes)h+='<div style="font-size:.76em;color:var(--t2);margin-top:8px">'+b.notes+'</div>';
-document.getElementById('ws-oc').innerHTML=h;
-}
-function gT(id){try{var d=JSON.parse(localStorage.getItem('wtasks'))||{};if(!d[id])d[id]={today:[],urgent:[],week:[]};return d[id]}catch(e){return{today:[],urgent:[],week:[]}}}
-function sT(id,t){try{var d=JSON.parse(localStorage.getItem('wtasks'))||{};d[id]=t;localStorage.setItem('wtasks',JSON.stringify(d))}catch(e){}}
-function rT(id){
-var t=gT(id);var cs=['today','urgent','week'];var lb=['Today','Urgent','This Week'];
-var h='';cs.forEach(function(c,i){var items=t[c]||[];h+='<div class="ws-tcol"><h4>'+lb[i]+' ('+items.length+')</h4>';
-items.forEach(function(it,j){h+='<div class="ws-ti" onclick="dT(\''+id+'\',\''+c+'\','+j+')">'+it+'</div>';});
-h+='<button class="ws-add" onclick="aT(\''+id+'\',\''+c+'\')">+ Add</button></div>';});
-document.getElementById('ws-tc').innerHTML=h;
-}
-function aT(id,c){var t=gT(id);var n=prompt('Task:');if(!n||!n.trim())return;if(!t[c])t[c]=[];t[c].push(n.trim());sT(id,t);rT(id);}
-function dT(id,c,i){var t=gT(id);if(!t[c]||i>=t[c].length)return;t[c].splice(i,1);sT(id,t);rT(id);toast('Done');}
-function rN(id){var ta=document.getElementById('ws-nt');try{ta.value=localStorage.getItem('wsn_'+id)||''}catch(e){}}
-function svn(){var id=document.getElementById('ws-n').textContent;var ta=document.getElementById('ws-nt');try{localStorage.setItem('wsn_'+id,ta.value);document.getElementById('ws-ns').textContent='Saved'}catch(e){}}
+var ta=document.getElementById('na');
+if(ta){try{ta.value=localStorage.getItem('hnotes')||''}catch(e){}}
+function sn(){if(!ta)return;try{localStorage.setItem('hnotes',ta.value);document.getElementById('ns').textContent='\u2705 Guardado'}catch(e){}}
 </script>
 </body>
 </html>
