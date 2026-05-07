@@ -63,10 +63,14 @@
       "last_checked": "2026-05-07T19:00",
       "issues": [],
       "improvements": [
-        "Agregar más herramientas (meta: 80)",
-        "Mejorar SEO de las páginas de herramientas",
-        "Agregar analytics para tracking de uso"
-      ]
+        "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
+        "Sitemap 82 URLs",
+        "Backlinks en GitHub + Gists"
+      ],
+      "seo_metrics": {
+        "tools_count": 66,
+        "sitemap_urls": 82
+      }
     },
     {
       "name": "Antonio Paving",
@@ -80,15 +84,16 @@
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
-        "content_suggestions": 13
+        "content_suggestions": 13,
+        "sitemap_urls": 379
       },
       "issues": [
         "⚠️ Sitio offline: <urlopen error [Errno -2] Name or service not known>"
       ],
       "improvements": [
-        "Mejorar velocidad de carga (CSS minificado ✅)",
-        "Agregar Google Business Profile",
-        "Conseguir reseñas de clientes"
+        "8 páginas de suburbios nuevas",
+        "Sitemap 379 URLs",
+        "Schema LocalBusiness por suburbio"
       ],
       "seo_score": 100.0
     }
