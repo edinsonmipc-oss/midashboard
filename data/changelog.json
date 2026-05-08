@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date": "2026-05-08T15:32",
+      "type": "mejora",
+      "project": "Tradeos",
+      "text": "Redise\u00f1o completo premium SaaS: sidebar colapsable con grupos, CMD+K command palette, dashboard con widgets modulares, sistema de dise\u00f1o oscuro premium, animaciones, responsive mobile."
+    },
+    {
       "date": "2026-05-08T14:40",
       "type": "creacion",
       "project": "Gumroad",

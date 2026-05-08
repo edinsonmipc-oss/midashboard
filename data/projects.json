@@ -47,7 +47,7 @@
       "id": "tradeos",
       "name": "Tradeos",
       "emoji": "\ud83d\udce6",
-      "status": "pendiente",
+      "status": "activo",
       "description": "Plataforma de comercio/negocios.",
       "url": "",
       "metrics": {
@@ -57,11 +57,12 @@
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Agregar gst column a DB",
-        "Probar en producci\u00f3n",
-        "Beta users"
+        "Desplegar en Render",
+        "Agregar m\u00e1s widgets al dashboard",
+        "Mejorar pipeline kanban",
+        "Probar en producci\u00f3n"
       ],
-      "notes": "App simplificada: sidebar 19\u219211, 4 p\u00e1ginas duplicadas redirigidas, AI Assistant integrado, bugfix gst"
+      "notes": "Redise\u00f1o completo 08/05. Nuevo: sidebar premium, CMD+K, dashboard widgets, design system oscuro."
     },
     {
       "id": "antoniopaving",
