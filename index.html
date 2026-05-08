@@ -447,6 +447,35 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   .jcard.swiping .swipe-hint{opacity:1}
 }
 
+/* ═══ QUICK JOB MODAL ═══ */
+#qj-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:var(--space-4)}
+#qj-overlay.open{display:flex}
+#qj-box{width:100%;max-width:400px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-xl);overflow:hidden;box-shadow:var(--shadow-lg);animation:fadeUp .25s ease}
+#qj-h{display:flex;align-items:center;padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--card-border)}
+#qj-h h3{font-size:14px;font-weight:600;flex:1}
+#qj-h button{background:none;border:none;color:var(--fg3);font-size:18px;cursor:pointer;font-family:inherit;line-height:1}
+#qj-body{padding:var(--space-4) var(--space-5)}
+.qj-row{margin-bottom:var(--space-3)}
+.qj-row label{display:block;font-size:11px;color:var(--fg3);margin-bottom:3px;font-weight:500}
+.qj-row input,.qj-row select{width:100%;padding:var(--space-2) var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-sm);color:var(--fg);font-size:13px;font-family:inherit;outline:none;transition:border var(--ts)}
+.qj-row input:focus,.qj-row select:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.qj-row .qj-types{display:flex;gap:var(--space-1);flex-wrap:wrap}
+.qj-types .qj-type{padding:var(--space-1) var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-full);font-size:11px;cursor:pointer;transition:all var(--ts);font-family:inherit;color:var(--fg3)}
+.qj-types .qj-type:hover{border-color:var(--card-border-hov);color:var(--fg2)}
+.qj-types .qj-type.sel{background:var(--accent-subtle);border-color:var(--accent);color:var(--accent)}
+
+/* ═══ DAILY SUMMARY ═══ */
+#daily-summary{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:2000;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-xl);padding:var(--space-6);max-width:360px;width:92%;box-shadow:var(--shadow-lg),0 0 60px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:all .35s cubic-bezier(.4,0,.2,1);text-align:center}
+#daily-summary.sh{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+#daily-summary .ds-head{font-size:28px;margin-bottom:var(--space-3)}
+#daily-summary .ds-title{font-size:16px;font-weight:700;margin-bottom:var(--space-1)}
+#daily-summary .ds-items{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--space-2);margin:var(--space-4) 0}
+#daily-summary .ds-item{background:var(--bg3);border-radius:var(--rad);padding:var(--space-2)}
+#daily-summary .ds-item .ds-num{font-size:22px;font-weight:700}
+#daily-summary .ds-item .ds-label{font-size:10px;color:var(--fg3)}
+#daily-summary .ds-btn{padding:var(--space-2) var(--space-5);background:var(--accent);border:none;border-radius:var(--rad);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all var(--ts)}
+#daily-summary .ds-btn:hover{background:var(--accent-hov);box-shadow:var(--shadow-glow)}
+
 /* ═══ UNDO SYSTEM ═══ */
 #undo-bar{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(100px);z-index:950;background:var(--card);border:1px solid var(--card-border);backdrop-filter:blur(16px);padding:var(--space-3) var(--space-5);border-radius:var(--rad-xl);font-size:12.5px;color:var(--fg);opacity:0;transition:all .35s cubic-bezier(.4,0,.2,1);box-shadow:var(--shadow-lg),0 0 40px rgba(0,0,0,.3);display:flex;align-items:center;gap:var(--space-3);pointer-events:none;z-index:1001}
 #undo-bar.sh{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
@@ -749,7 +778,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 <!-- ═══ QUICK ACTION FAB ═══ -->
 <div id="fab">
   <div id="fab-menu">
-    <div class="fab-item" onclick="switchPanel('jobs');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> New Job</div>
+    <div class="fab-item" onclick="openQJ();toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> New Job</div>
     <div class="fab-item" onclick="switchPanel('quotes');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> New Quote</div>
     <div class="fab-item" onclick="switchPanel('leads');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> New Lead</div>
     <div class="fab-item" onclick="switchPanel('photos');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Add Photo</div>
@@ -1158,6 +1187,36 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
       <p class="text-muted" style="font-size:10px;margin-top:6px">Your feedback helps make TRADIOS better for everyone.</p>
     </div>
   </div>
+</div>
+
+<!-- ═══ QUICK JOB MODAL ═══ -->
+<div id="qj-overlay">
+  <div id="qj-box">
+    <div id="qj-h"><h3>New Job</h3><button onclick="closeQJ()">✕</button></div>
+    <div id="qj-body">
+      <div class="qj-row"><label>Client Name</label><input id="qj-name" placeholder="e.g. John Holland" autofocus></div>
+      <div class="qj-row"><label>Service</label><div class="qj-types" id="qj-types">
+        <div class="qj-type" onclick="selectQJType(this,'paving')">Paving</div>
+        <div class="qj-type" onclick="selectQJType(this,'decking')">Decking</div>
+        <div class="qj-type" onclick="selectQJType(this,'fencing')">Fencing</div>
+        <div class="qj-type sel" onclick="selectQJType(this,'general')">General</div>
+        <div class="qj-type" onclick="selectQJType(this,'cleaning')">Cleaning</div>
+        <div class="qj-type" onclick="selectQJType(this,'handyman')">Handyman</div>
+      </div></div>
+      <div class="qj-row"><label>Amount ($)</label><input id="qj-amount" type="number" placeholder="0" value="0" min="0"></div>
+      <div class="qj-row"><label>Details</label><input id="qj-detail" placeholder="Location or brief description"></div>
+      <button class="auth-btn" onclick="createQuickJob()">Create Job</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAILY SUMMARY ═══ -->
+<div id="daily-summary">
+  <div class="ds-head">👋</div>
+  <div class="ds-title" id="ds-title">Good morning!</div>
+  <p class="text-muted" id="ds-sub" style="font-size:12px;margin-bottom:var(--space-2)">Here's your business today</p>
+  <div class="ds-items" id="ds-items"></div>
+  <button class="ds-btn" onclick="closeDailySummary()">Let's go →</button>
 </div>
 <div id="tmo"><div id="tmp">
   <div id="tmh"><h3 id="tpl-title">Template</h3><button id="tmx" onclick="closeTpl()">✕</button></div>
@@ -2333,6 +2392,153 @@ function initSwipes(){
   },{passive:true})
 }
 
+/* ═══ QUICK JOB MODAL ═══ */
+let qjType='general';
+function openQJ(){
+  document.getElementById('qj-overlay').classList.add('open');
+  setTimeout(()=>document.getElementById('qj-name')?.focus(),100)
+}
+function closeQJ(){document.getElementById('qj-overlay').classList.remove('open')}
+function selectQJType(el,type){
+  document.querySelectorAll('.qj-types .qj-type').forEach(b=>b.classList.remove('sel'));
+  el.classList.add('sel');qjType=type
+}
+function createQuickJob(){
+  const name=document.getElementById('qj-name').value.trim();
+  const amount=parseFloat(document.getElementById('qj-amount').value)||0;
+  const detail=document.getElementById('qj-detail').value.trim()||'New job';
+  if(!name){toast('⚠️ Enter a client name');document.getElementById('qj-name').focus();return}
+  const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+  data.lead.push({name,type:qjType,amount,detail});
+  saveJobs(data);renderJobs();renderDashboard();renderCalendar();
+  addAudit('create','📦 Created job: '+name+' ('+qjType+', $'+amount.toLocaleString()+')');
+  closeQJ();
+  toast('✅ '+name+' added to New Leads');
+  trackUsage('quick-job')
+}
+// CMD+K quick commands
+function addQuickCommands(){
+  const cmds=[
+    {id:'_qj',name:'New Job...',desc:'Quick-create a job',icon:'📦',action:()=>openQJ()},
+    {id:'_qq',name:'New Quote...',desc:'Go to AI Quote Generator',icon:'📋',action:()=>switchPanel('quotes')},
+    {id:'_ql',name:'New Lead...',desc:'Go to Leads CRM',icon:'👥',action:()=>switchPanel('leads')},
+    {id:'_summary',name:'Business Summary',desc:'AI-powered summary',icon:'📊',action:()=>aiSuggest('Show business summary')},
+    {id:'_sync',name:'Force Sync',desc:'Sync data to cloud',icon:'🔄',action:()=>{processSyncQueue();toast('🔄 Syncing...')}},
+    {id:'_feedback',name:'Send Feedback',desc:'Report bug or suggest idea',icon:'📬',action:()=>openFeedback()},
+    {id:'_followup',name:'Schedule Follow-up',desc:'Set a reminder',icon:'⏰',action:()=>aiSuggest('Schedule follow-up in 30 minutes')}
+  ];
+  window._cmdQuick=cmds;
+  const origFilter=filterCmd;
+  filterCmd=function(val){
+    const q=(val||'').toLowerCase();
+    const pages=CMD_PAGES.filter(r=>r.name.toLowerCase().includes(q)||r.desc.toLowerCase().includes(q));
+    const quick=cmds.filter(r=>r.name.toLowerCase().includes(q)||r.desc.toLowerCase().includes(q));
+    const results=q?[...quick,...pages]:pages;
+    cmdIdx=0;
+    const el=document.getElementById('cmd-results');
+    if(!results.length){el.innerHTML='<div id="cmd-empty">No results found</div>';return}
+    el.innerHTML=results.map((r,i)=>{
+      if(r.action)return '<div class="cmd-item'+(i===0?' sel':'')+'" data-idx="'+i+'" onclick="runQuickCmd(\''+r.id+'\')"><div class="cmd-icon">'+r.icon+'</div><div class="cmd-info"><div class="cmd-name">'+r.name+'</div><div class="cmd-desc">'+r.desc+'</div></div><span class="cmd-badge">Quick</span></div>';
+      return '<div class="cmd-item'+(i===0?' sel':'')+'" data-idx="'+i+'" onclick="switchPanel(\''+r.id+'\')"><div class="cmd-icon">'+r.icon+'</div><div class="cmd-info"><div class="cmd-name">'+r.name+'</div><div class="cmd-desc">'+r.desc+'</div></div></div>'
+    }).join('')
+  }
+}
+function runQuickCmd(id){
+  const cmd=window._cmdQuick?.find(c=>c.id===id);
+  if(cmd&&cmd.action){closeCmd();cmd.action()}
+}
+
+/* ═══ DAILY SUMMARY ═══ */
+const SUMMARY_KEY='tradeos_summary_date';
+function showDailySummary(){
+  const last=localStorage.getItem(SUMMARY_KEY);
+  const today=new Date().toDateString();
+  if(last===today)return;
+  const data=getJobs();
+  if(!data)return;
+  const active=data.progress?.length||0;
+  const leads=data.lead?.length||0;
+  const quotes=data.quoted?.length||0;
+  const completed=data.completed?.length||0;
+  if(active+leads+quotes+completed===0)return;
+  const hour=new Date().getHours();
+  const greeting=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';
+  document.getElementById('ds-title').textContent=greeting+'!';
+  document.getElementById('ds-items').innerHTML=
+    '<div class="ds-item"><div class="ds-num" style="color:var(--accent)">'+active+'</div><div class="ds-label">Active</div></div>'+
+    '<div class="ds-item"><div class="ds-num" style="color:var(--yellow)">'+leads+'</div><div class="ds-label">Leads</div></div>'+
+    '<div class="ds-item"><div class="ds-num" style="color:var(--green)">'+completed+'</div><div class="ds-label">Done</div></div>';
+  document.getElementById('daily-summary').classList.add('sh');
+  localStorage.setItem(SUMMARY_KEY,today);
+  trackUsage('daily-summary')
+}
+function closeDailySummary(){document.getElementById('daily-summary').classList.remove('sh')}
+
+/* ═══ AI IMPROVEMENTS ═══ */
+// Enhanced addAIMsg with model indicator
+const _origAddAIMsg=addAIMsg;
+addAIMsg=function(role,content){
+  const c=document.getElementById('ai-msgs');
+  const d=document.createElement('div');d.className='ai-msg '+role;
+  if(role==='bot'){
+    d.innerHTML='<div class="msg-label">TRADIOS AI <span style="font-weight:400;color:var(--fg4);font-size:8px">· Gemini 2.0 Flash</span></div><div class="msg-content">'+content+'</div>'
+  }else{
+    d.innerHTML=content
+  }
+  c.appendChild(d);c.scrollTop=c.scrollHeight
+};
+// Enhanced sendAI with better error handling
+const _enhancedSendAI=sendAI;
+sendAI=async function(){
+  if(!AI_KEY){
+    const key=prompt('🔑 Enter your OpenRouter API key to use AI features:\n\n(Get one free at openrouter.ai/keys)');
+    if(!key)return;
+    AI_KEY=key;localStorage.setItem('tradeos_ai_key',key)
+  }
+  const inp=document.getElementById('ai-input');const msg=inp.value.trim();
+  if(!msg)return;inp.value='';document.getElementById('ai-send-btn').disabled=true;
+  
+  const toolResult=processAIToolCall(msg);
+  if(toolResult){
+    addAIMsg('user',msg);
+    addAIMsg('bot',toolResult);
+    aiHistory.push({role:'user',content:msg},{role:'assistant',content:toolResult});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+    document.getElementById('ai-send-btn').disabled=false;
+    if(toolResult.startsWith('✅'))notify('TRADIOS AI',toolResult);
+    trackUsage('ai-tool');
+    return
+  }
+  
+  addAIMsg('user',msg);showAITyping();
+  aiHistory.push({role:'user',content:msg});
+  const msgs=[{role:'system',content:'You are TRADIOS AI, the AI assistant for an Australian tradie operating system. Help tradies with: generating quotes, managing jobs, finding leads, writing professional emails, creating estimates, scheduling work, and general business advice. Be concise, practical, and direct. Australian English only. Keep responses under 200 words unless generating a detailed quote.'},...aiHistory.slice(-20)];
+  try{
+    const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY,'HTTP-Referer':'https://tradios.app'},
+      body:JSON.stringify({model:'google/gemini-2.0-flash-lite',messages:msgs,max_tokens:800})
+    });
+    hideAITyping();
+    if(!r.ok){
+      if(r.status===401)addAIMsg('bot','⚠️ Invalid API key. Go to openrouter.ai/keys to get a free key.');
+      else addAIMsg('bot','⚠️ AI temporarily unavailable. Please try again.');
+      document.getElementById('ai-send-btn').disabled=false;
+      return
+    }
+    const d=await r.json();
+    const reply=d.choices?.[0]?.message?.content||'⚠️ No response from AI';
+    addAIMsg('bot',reply);
+    aiHistory.push({role:'assistant',content:reply});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+    trackUsage('ai-chat')
+  }catch(e){
+    hideAITyping();
+    if(!navigator.onLine)addAIMsg('bot','📡 You\'re offline. AI features need internet connection.');
+    else addAIMsg('bot','⚠️ Connection error. Please try again.')
+  }
+  document.getElementById('ai-send-btn').disabled=false
+};
+
 /* ═══ UNDO SYSTEM ═══ */
 let undoStack=null;
 let undoTimer=null;
@@ -2661,8 +2867,10 @@ function init(){
   initSwipes();
   // Onboarding after auth
   setTimeout(()=>{
-    if(sbUser)startOnboarding()
-  },1000)
+    if(sbUser){startOnboarding();showDailySummary()}
+  },1000);
+  // Quick commands for CMD+K
+  addQuickCommands()
 }
 
 document.addEventListener('DOMContentLoaded',init);
