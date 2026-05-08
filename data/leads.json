@@ -1,121 +1,11 @@
 {
-  "updated": "2026-05-08T07:00",
+  "updated": "2026-05-08T19:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
   "leads_by_date": {
-    "2026-05-02": [
-      {
-        "company": "BuildCorp Australia",
-        "email": "info@buildcorp.com.au",
-        "website": "buildcorp.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Grandes proyectos comerciales en Melbourne CBD",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "L\u00edderes en construcci\u00f3n modular",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "Mirvac Real Estate",
-        "email": "partnerships@mirvac.com",
-        "website": "mirvac.com",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Desarrollos residenciales premium",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)",
-        "contacted": "2026-05-08T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Frasers Property Australia",
-        "email": "procurement@frasersproperty.com.au",
-        "website": "frasersproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Grandes desarrollos mixtos",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Metricon Homes",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas #1 en Australia",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-08T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Porter Davis Homes",
-        "email": "supplier@porterdavis.com.au",
-        "website": "porterdavis.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas Melbourne",
-        "verified": "invalid",
-        "verified_reason": "no_mx"
-      },
-      {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Desarrollador de comunidades master-planned",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "Kennards Hire",
-        "email": "hire@kennards.com.au",
-        "website": "kennards.com.au",
-        "type": "construction_supply",
-        "contact": "",
-        "notes": "Alquiler de equipos de construcci\u00f3n",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "Cbus Property",
-        "email": "info@cbusproperty.com.au",
-        "website": "cbusproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Desarrollos comerciales de alta calidad",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
-      }
-    ],
     "2026-05-03_batch1": [
       {
         "company": "Metricon",
@@ -365,7 +255,7 @@
         "website": "built.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-08T08:00",
@@ -761,7 +651,7 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (2 servers)"
       },
@@ -875,7 +765,7 @@
         "website": "hansenyuncken.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (2 servers)"
       },
@@ -1099,7 +989,7 @@
         "website": "laingorourke.com.au",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (2 servers)"
       },
@@ -1139,7 +1029,7 @@
         "website": "downergroup.com",
         "type": "constructora",
         "contact": "",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (1 servers)"
       },
@@ -1386,7 +1276,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (1 servers)"
       },
@@ -1474,7 +1364,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "MX OK (2 servers)"
       },
@@ -1488,6 +1378,108 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
         "verified_reason": "MX OK (1 servers)"
+      }
+    ],
+    "2026-05-08_batch14": [
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Fletchers Real Estate",
+        "email": "property@fletcher.com.au",
+        "website": "fletcher.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "website": "stockland.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Volumen alto de proyectos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Porter Davis",
+        "email": "supplier@porterdavis.com.au",
+        "website": "porterdavis.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Volumen alto de proyectos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Watpac",
+        "email": "projects@watpac.com.au",
+        "website": "watpac.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "First National Real Estate",
+        "email": "commercial@fnre.com.au",
+        "website": "fnre.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
       }
     ]
   }
