@@ -341,6 +341,65 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .ar-meta{font-size:10px;color:var(--fg4);display:flex;gap:var(--space-2);margin-top:1px}
 .ar-proj{font-size:9.5px;font-weight:600;color:var(--accent)}
 
+/* ═══ STABILITY & OFFLINE ═══ */
+#sync-bar{position:fixed;top:0;left:0;right:0;z-index:3000;padding:4px 12px;font-size:10px;font-weight:500;text-align:center;transform:translateY(-100%);transition:transform .3s ease}
+#sync-bar.show{transform:translateY(0)}
+#sync-bar.online{background:var(--green);color:#fff}
+#sync-bar.offline{background:var(--red);color:#fff}
+#sync-bar.syncing{background:var(--accent);color:#fff}
+#sync-bar.error{background:var(--orange);color:#fff}
+.sync-status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;vertical-align:middle}
+
+/* ═══ AUTOMATION BUILDER ═══ */
+.auto-grid{display:grid;gap:var(--space-2)}
+.auto-card{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);padding:var(--space-3) var(--space-4);transition:all var(--ts);cursor:default}
+.auto-card:hover{background:var(--card);border-color:var(--card-border-hov)}
+.auto-card-h{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-2)}
+.auto-card-h .auto-icon{width:32px;height:32px;border-radius:var(--rad-sm);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:14px}
+.auto-card h4{font-size:13px;font-weight:600;flex:1}
+.auto-card .auto-desc{font-size:11px;color:var(--fg3);line-height:1.4;margin-bottom:var(--space-2)}
+.auto-card .auto-trigger{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:600}
+.auto-card .auto-trigger.time{background:var(--accent-subtle);color:var(--accent)}
+.auto-card .auto-trigger.status{background:var(--green-bg);color:var(--green)}
+.auto-card .auto-trigger.lead{background:var(--yellow-bg);color:var(--yellow)}
+.auto-toggle{position:relative;width:36px;height:20px;background:var(--fg4);border-radius:var(--rad-full);cursor:pointer;transition:all var(--ts);flex-shrink:0;border:none}
+.auto-toggle.on{background:var(--accent)}
+.auto-toggle::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:all var(--ts)}
+.auto-toggle.on::after{left:18px}
+
+/* ═══ PHOTO UPLOAD QUEUE ═══ */
+.upload-queue{position:fixed;bottom:92px;right:24px;width:320px;max-height:300px;overflow-y:auto;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);box-shadow:var(--shadow-lg);z-index:910;display:none;animation:cmdSlide .2s ease}
+.upload-queue.open{display:block}
+.uq-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--card-border);font-size:11px}
+.uq-item:last-child{border:none}
+.uq-item .uq-name{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--fg2)}
+.uq-item .uq-progress{font-size:9px;color:var(--fg3);min-width:40px;text-align:right}
+.uq-item .uq-bar{width:60px;height:4px;background:var(--bg3);border-radius:var(--rad-full);overflow:hidden}
+.uq-item .uq-bar-fill{height:100%;background:var(--accent);border-radius:var(--rad-full);transition:width .3s ease}
+.uq-item .uq-status{font-size:10px;font-weight:600}
+.uq-item .uq-status.done{color:var(--green)}
+.uq-item .uq-status.fail{color:var(--red)}
+
+/* ═══ MOBILE TOUCH UX ═══ */
+@media(hover:none){
+  .jcard{cursor:default;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  .dqa-btn,.btn,.sb-btn,.bn-btn{touch-action:manipulation}
+  .cal-day{min-height:50px}
+  .photo-card{aspect-ratio:1}
+  .ai-action-btn{padding:6px 14px;font-size:12px}
+}
+.smooth-transition{transition:all .2s cubic-bezier(.4,0,.2,1)}
+@media(max-width:768px){
+  .mg{grid-template-columns:repeat(2,1fr)}
+  .wg{grid-template-columns:1fr}
+  .c{padding:var(--space-2) var(--space-3)}
+  .top{padding:var(--space-2) var(--space-3)}
+  #ai-panel{right:8px;width:calc(100vw - 16px);max-width:100vw;bottom:80px;height:60vh}
+  #ai-bubble{bottom:80px;right:16px;width:50px;height:50px}
+  .jcard{padding:var(--space-2)}
+  .jcard .jc-amount{font-size:11px}
+}
+
 /* ═══ AI ASSISTANT ═══ */
 #ai-bubble{position:fixed;bottom:24px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
 #ai-bubble:hover{transform:scale(1.08);box-shadow:0 6px 28px var(--accent-glow)}
@@ -644,6 +703,9 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <button class="sb-btn" data-pn="photos" onclick="switchPanel('photos')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photos<span class="sbc" id="p-badge">0</span>
   </button>
+  <button class="sb-btn" data-pn="automations" onclick="switchPanel('automations')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Automations<span class="sbc" id="a-badge">0</span>
+  </button>
   <button class="sb-btn" data-pn="agents" onclick="switchPanel('agents')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8"/><rect x="14" y="2" width="8" height="8"/><rect x="2" y="14" width="8" height="8"/><path d="M18 18v0a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>AI Agents
   </button>
@@ -892,6 +954,16 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <div class="tk" id="task-board"></div>
 </div>
 
+<!-- ══════ AUTOMATIONS ══════ -->
+<div class="pn" id="pn-automations">
+  <div class="sh"><h2>Automations</h2><span class="shl">IF/THEN rules · Auto follow-ups</span></div>
+  <div class="flex block gap-2">
+    <button class="btn btn-p btn-sm" onclick="addAutomation()">+ New Rule</button>
+    <span class="text-muted" id="auto-count">0 rules</span>
+  </div>
+  <div class="auto-grid" id="auto-grid"></div>
+</div>
+
 <!-- ══════ AGENTS ══════ -->
 <div class="pn" id="pn-agents">
   <div class="sh"><h2>AI Agents</h2><span class="shl">Automations running 24/7</span></div>
@@ -953,6 +1025,8 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 </div>
 
 <div id="to"></div>
+<div id="sync-bar"></div>
+<div class="upload-queue" id="upload-queue"></div>
 <div id="tmo"><div id="tmp">
   <div id="tmh"><h3 id="tpl-title">Template</h3><button id="tmx" onclick="closeTpl()">✕</button></div>
   <div id="tmb"></div>
@@ -1003,7 +1077,7 @@ function switchPanel(id){
   document.querySelectorAll('.pn').forEach(p=>p.classList.remove('on'));
   const pn=document.getElementById('pn-'+id);if(pn)pn.classList.add('on');
   document.querySelectorAll('.sb-btn,.bn-btn').forEach(b=>b.classList.toggle('on',b.dataset.pn===id));
-  const titles={dashboard:['Dashboard','Overview'],leads:['Leads CRM','Outreach'],quotes:['AI Quotes','Generator'],jobs:['Job CRM','Drag & Drop'],calendar:['Calendar','Schedule'],photos:['Photos','Gallery'],sites:['Site Health','Monitoring'],businesses:['Businesses','Projects'],tasks:['Tasks','Kanban'],agents:['AI Agents','Automations'],notes:['Notes','Quick Notes'],changelog:['Changelog','History']};
+  const titles={dashboard:['Dashboard','Overview'],leads:['Leads CRM','Outreach'],quotes:['AI Quotes','Generator'],jobs:['Job CRM','Drag & Drop'],calendar:['Calendar','Schedule'],photos:['Photos','Gallery'],automations:['Automations','Rules'],sites:['Site Health','Monitoring'],businesses:['Businesses','Projects'],tasks:['Tasks','Kanban'],agents:['AI Agents','Automations'],notes:['Notes','Quick Notes'],changelog:['Changelog','History']};
   const t=titles[id]||[id,''];
   document.getElementById('page-title').textContent=t[0];
   document.getElementById('page-sub').textContent=t[1];
@@ -1022,6 +1096,7 @@ const CMD_PAGES=[
   {id:'jobs',name:'Job CRM',desc:'Drag & drop job board',icon:'🔨'},
   {id:'calendar',name:'Calendar',desc:'Job schedule',icon:'📅'},
   {id:'photos',name:'Photos',desc:'Before & after gallery',icon:'📸'},
+  {id:'automations',name:'Automations',desc:'IF/THEN rules',icon:'⚡'},
   {id:'sites',name:'Site Health',desc:'Monitor websites',icon:'🌐'},
   {id:'businesses',name:'Businesses',desc:'All projects',icon:'🏢'},
   {id:'tasks',name:'Tasks',desc:'Kanban board',icon:'✅'},
@@ -1725,7 +1800,214 @@ function registerFollowUps(){
   },5*60*1000)
 }
 
-/* ═══ WORKSPACE SWITCHING ═══ */
+/* ═══ STABILITY SYSTEM ═══ */
+let isOnline=navigator.onLine;
+const SYNC_QUEUE_KEY='tradeos_sync_queue';
+let syncRetryTimer=null;
+
+function showSyncBar(msg,type){
+  const el=document.getElementById('sync-bar');
+  el.textContent=msg;el.className='show '+type;
+  clearTimeout(el._hide);el._hide=setTimeout(()=>el.classList.remove('show'),4000)
+}
+function initStability(){
+  window.addEventListener('online',()=>{isOnline=true;showSyncBar('✅ Back online — syncing...','online');processSyncQueue()});
+  window.addEventListener('offline',()=>{isOnline=false;showSyncBar('📡 Offline — changes saved locally','offline')});
+  // Periodic sync check
+  setInterval(()=>{if(isOnline)processSyncQueue()},30000)
+}
+function addToSyncQueue(op){
+  const queue=JSON.parse(localStorage.getItem(SYNC_QUEUE_KEY)||'[]');
+  queue.push({...op,id:Date.now(),retries:0});
+  localStorage.setItem(SYNC_QUEUE_KEY,JSON.stringify(queue));
+  if(isOnline)processSyncQueue()
+}
+async function processSyncQueue(){
+  if(!isOnline||!sb)return;
+  const queue=JSON.parse(localStorage.getItem(SYNC_QUEUE_KEY)||'[]');
+  if(!queue.length)return;
+  const pending=queue.filter(q=>q.retries<5);
+  if(pending.length!==queue.length){
+    const failed=queue.filter(q=>q.retries>=5);
+    localStorage.setItem(SYNC_QUEUE_KEY,JSON.stringify(failed));
+    if(failed.length)showSyncBar('⚠️ '+failed.length+' operation(s) failed after 5 retries','error');
+    return
+  }
+  showSyncBar('🔄 Syncing '+queue.length+' changes...','syncing');
+  const remaining=[];
+  for(const op of queue){
+    try{
+      if(op.table==='jobs'&&op.data){
+        const {error}=await sb.from('jobs').upsert(op.data,{onConflict:'id'});
+        if(error)throw error
+      }
+    }catch(e){
+      op.retries++;remaining.push(op)
+    }
+  }
+  localStorage.setItem(SYNC_QUEUE_KEY,JSON.stringify(remaining));
+  if(!remaining.length)showSyncBar('✅ All changes synced','online');
+  else if(remaining.length<queue.length)showSyncBar('⚠️ '+(queue.length-remaining.length)+' synced, '+remaining.length+' pending','error')
+}
+function safeDataOp(fn){
+  return function(...args){
+    try{return fn.apply(this,args)}
+    catch(e){console.log('Data op failed:',e);showSyncBar('⚠️ Operation error — retrying...','error');return null}
+  }
+}
+// Wrap critical functions
+const _origSaveJobs=saveJobs;
+saveJobs=function(data){
+  const result=_origSaveJobs(data);
+  if(isOnline&&sb&&sbUser){
+    addToSyncQueue({table:'jobs',data:flattenJobs(data).map(j=>({...j,business_id:sbUser.id}))})
+  }
+  return result
+};
+
+/* ═══ AUTOMATION BUILDER ═══ */
+const AUTOMATIONS_KEY='tradeos_automations';
+function getAutoRules(){return JSON.parse(localStorage.getItem(AUTOMATIONS_KEY)||'[]')}
+function saveAutoRules(r){localStorage.setItem(AUTOMATIONS_KEY,JSON.stringify(r))}
+
+const PREBUILT_RULES=[
+  {id:'auto-1',name:'New Lead Alert',desc:'Notify when a new job is created in the Lead column',trigger:'status',condition:'lead',action:'notify',icon:'🔔',enabled:true},
+  {id:'auto-2',name:'Quote Follow-up',desc:'Remind to follow up if a quote is pending for over 24h',trigger:'time',condition:'quoted',action:'remind',icon:'⏰',enabled:true},
+  {id:'auto-3',name:'Payment Request',desc:'Send Stripe payment link when job moves to Completed',trigger:'status',condition:'completed',action:'payment',icon:'💳',enabled:false},
+  {id:'auto-4',name:'Weekly Summary',desc:'Get a business summary notification every Friday',trigger:'time',condition:'friday',action:'summary',icon:'📊',enabled:false}
+];
+
+function initAutomations(){
+  if(!localStorage.getItem(AUTOMATIONS_KEY)){
+    saveAutoRules(PREBUILT_RULES)
+  }
+  renderAutomations();
+  // Start automation watcher
+  setInterval(checkAutomations,60000)
+}
+
+function renderAutomations(){
+  const rules=getAutoRules();
+  document.getElementById('a-badge').textContent=rules.filter(r=>r.enabled).length;
+  document.getElementById('auto-count').textContent=rules.length+' rules';
+  const grid=document.getElementById('auto-grid');
+  grid.innerHTML=rules.map(r=>'<div class="auto-card"><div class="auto-card-h"><div class="auto-icon">'+r.icon+'</div><h4>'+r.name+'</h4><button class="auto-toggle'+(r.enabled?' on':'')+'" onclick="toggleAutoRule(\''+r.id+'\')"></button></div><div class="auto-desc">'+r.desc+'</div><span class="auto-trigger '+(r.trigger==='time'?'time':r.trigger==='status'?'status':'lead')+'">'+(r.trigger==='time'?'⏰ Scheduled':r.trigger==='status'?'🔁 On Status Change':'👤 On Lead')+'</span></div>').join('')
+}
+
+function toggleAutoRule(id){
+  const rules=getAutoRules();
+  const r=rules.find(x=>x.id===id);
+  if(r){r.enabled=!r.enabled;saveAutoRules(rules);renderAutomations();toast(r.enabled?'✅ '+r.name+' enabled':'⏸️ '+r.name+' disabled')}
+}
+
+function addAutomation(){
+  const name=prompt('Rule name:');
+  if(!name)return;
+  const rules=getAutoRules();
+  rules.push({id:'auto-'+Date.now(),name,desc:'Custom rule',trigger:'status',condition:'lead',action:'notify',icon:'⚡',enabled:true});
+  saveAutoRules(rules);renderAutomations();toast('⚡ Rule created')
+}
+
+function checkAutomations(){
+  const rules=getAutoRules().filter(r=>r.enabled);
+  const data=getJobs();
+  if(!data)return;
+  rules.forEach(r=>{
+    if(r.action==='notify'&&r.condition==='lead'&&data.lead?.length>0){
+      notify('⚡ '+r.name,data.lead.length+' leads waiting')
+    }
+    if(r.action==='remind'&&r.condition==='quoted'&&data.quoted?.length>0){
+      notify('⏰ '+r.name,data.quoted.length+' quotes pending')
+    }
+    if(r.action==='summary'&&new Date().getDay()===5){
+      const all=Object.values(data).flat();
+      notify('📊 Weekly Summary',all.length+' jobs · $'+all.reduce((s,j)=>s+(j.amount||0),0).toLocaleString())
+    }
+  })
+}
+
+/* ═══ SUPABASE PHOTO STORAGE ═══ */
+let photoUploadQueue=[];
+
+async function uploadPhotoToStorage(dataUrl,label){
+  if(!sb||!sbUser){toast('⚠️ Sign in to upload photos');return}
+  const id='upload-queue';const el=document.getElementById(id);el.classList.add('open');
+  const itemId='uq-'+Date.now();
+  el.innerHTML+='<div class="uq-item" id="'+itemId+'"><span class="uq-name">'+label+'</span><div class="uq-bar"><div class="uq-bar-fill" style="width:0%"></div></div><span class="uq-status" id="'+itemId+'-status">0%</span></div>';
+  try{
+    // Compress
+    const compressed=await compressImage(dataUrl,800,0.6);
+    const blob=dataURLToBlob(compressed);
+    const fileName='photos/'+sbUser.id+'/'+Date.now()+'.jpg';
+    const {error}=await sb.storage.from('tradeos').upload(fileName,blob,{contentType:'image/jpeg',upsert:true});
+    if(error)throw error;
+    const {data:{publicUrl}}=sb.storage.from('tradeos').getPublicUrl(fileName);
+    // Save to localStorage with URL
+    const photos=getPhotos();
+    photos.push({data:compressed,url:publicUrl,label,type:'after',date:new Date().toISOString()});
+    savePhotos(photos);renderPhotos();
+    document.getElementById(itemId+'-status').textContent='✅';document.getElementById(itemId+'-status').className='uq-status done';
+    setTimeout(()=>{const e=document.getElementById(itemId);if(e){e.style.opacity='0';setTimeout(()=>e.remove(),300)}},1500)
+  }catch(e){
+    document.getElementById(itemId+'-status').textContent='❌';document.getElementById(itemId+'-status').className='uq-status fail';
+    console.log('Upload failed:',e);toast('⚠️ Upload failed')
+  }
+}
+
+function compressImage(dataUrl,maxW,quality){
+  return new Promise((resolve)=>{
+    const img=new Image();img.onload=()=>{
+      let w=img.width,h=img.height;
+      if(w>maxW){h*=maxW/w;w=maxW}
+      const c=document.createElement('canvas');c.width=w;c.height=h;
+      const ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);
+      resolve(c.toDataURL('image/jpeg',quality))
+    };img.src=dataUrl
+  })
+}
+function dataURLToBlob(dataUrl){
+  const parts=dataUrl.split(',');const mime=parts[0].match(/:(.*?);/)[1];
+  const b64=atob(parts[1]);const arr=new Uint8Array(b64.length);
+  for(let i=0;i<b64.length;i++)arr[i]=b64.charCodeAt(i);
+  return new Blob([arr],{type:mime})
+}
+
+// Override uploadPhotos to use Supabase Storage
+const _origUploadPhotos=uploadPhotos;
+uploadPhotos=function(files){
+  Array.from(files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=async function(e){
+      if(sb&&sbUser)await uploadPhotoToStorage(e.target.result,file.name);
+      else{
+        const photos=getPhotos();
+        photos.push({data:e.target.result,label:file.name,type:'after',date:new Date().toISOString()});
+        savePhotos(photos);renderPhotos()
+      }
+    };
+    reader.readAsDataURL(file)
+  });
+  toast('📸 '+files.length+' photo(s) queued')
+};
+const _origCapturePhoto=capturePhoto;
+capturePhoto=function(){
+  const v=document.getElementById('camera-video');const c=document.getElementById('camera-canvas');
+  c.width=v.videoWidth;c.height=v.videoHeight;
+  const ctx=c.getContext('2d');
+  if(facingMode==='user'){ctx.translate(c.width,0);ctx.scale(-1,1)}
+  ctx.drawImage(v,0,0,c.width,c.height);
+  const data=c.toDataURL('image/jpeg',0.7);
+  capturedPhotos.push(data);
+  if(sb&&sbUser)uploadPhotoToStorage(data,'Photo '+(getPhotos().length+1));
+  else{
+    const photos=getPhotos();
+    photos.push({data,label:'Photo '+(photos.length+1),type:'after',date:new Date().toISOString()});
+    savePhotos(photos);renderPhotos()
+  }
+  toast('📸 Photo captured!')
+};
+
+/* ═══ INIT UPDATES ═══ */
 let currentWorkspace='all';
 function switchWorkspace(ws){
   currentWorkspace=ws;
@@ -1910,7 +2192,10 @@ function init(){
   const dl=document.getElementById('q-client-list');
   if(dl)uniqueLeads.forEach(l=>{if(l.company){const o=document.createElement('option');o.value=l.company;dl.appendChild(o)}});
   // Init Supabase after everything else
-  initSupabase()
+  initSupabase();
+  // Stability + automations
+  initStability();
+  initAutomations()
 }
 
 document.addEventListener('DOMContentLoaded',init);
