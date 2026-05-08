@@ -400,6 +400,53 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   .jcard .jc-amount{font-size:11px}
 }
 
+/* ═══ ONBOARDING ═══ */
+#onboard-overlay{position:fixed;inset:0;background:var(--bg);z-index:3000;display:none;align-items:center;justify-content:center;overflow-y:auto;padding:var(--space-4)}
+#onboard-overlay.open{display:flex}
+#onboard-box{width:100%;max-width:440px;padding:var(--space-8) var(--space-6);text-align:center;animation:fadeUp .3s ease}
+#onboard-box .ob-step{font-size:10px;font-weight:600;color:var(--fg4);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--space-2)}
+#onboard-box h2{font-size:20px;font-weight:700;margin-bottom:var(--space-2)}
+#onboard-box .ob-desc{font-size:13px;color:var(--fg3);margin-bottom:var(--space-5);line-height:1.5}
+.ob-field{width:100%;padding:var(--space-3) var(--space-4);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);color:var(--fg);font-size:14px;font-family:inherit;outline:none;transition:border var(--ts);margin-bottom:var(--space-3);text-align:center}
+.ob-field:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.ob-services{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-4)}
+.ob-service{padding:var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);cursor:pointer;transition:all var(--ts);font-size:12px;color:var(--fg2);font-family:inherit;text-align:center}
+.ob-service:hover{border-color:var(--card-border-hov)}
+.ob-service.sel{background:var(--accent-subtle);border-color:var(--accent);color:var(--accent)}
+.ob-progress{display:flex;gap:var(--space-2);justify-content:center;margin-bottom:var(--space-5)}
+.ob-dot{width:8px;height:8px;border-radius:50%;background:var(--fg4);transition:all var(--ts)}
+.ob-dot.done{background:var(--accent)}
+.ob-dot.active{background:var(--accent);box-shadow:0 0 8px var(--accent-glow)}
+
+/* ═══ QUICK ACTION FAB ═══ */
+#fab{position:fixed;bottom:90px;right:90px;z-index:850;display:flex;flex-direction:column;gap:var(--space-2);align-items:flex-end}
+@media(max-width:768px){#fab{bottom:76px;right:16px}}
+#fab-main{width:48px;height:48px;border-radius:50%;background:var(--accent);border:none;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 4px 16px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
+#fab-main:hover{transform:scale(1.08);box-shadow:0 6px 24px var(--accent-glow)}
+#fab-menu{display:none;flex-direction:column;gap:var(--space-1);align-items:flex-end}
+#fab-menu.open{display:flex;animation:cmdSlide .15s ease}
+.fab-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad);color:var(--fg2);font-size:12px;font-weight:500;cursor:pointer;transition:all var(--ts);font-family:inherit;white-space:nowrap;box-shadow:var(--shadow)}
+.fab-item:hover{background:var(--card-hov);color:var(--fg);border-color:var(--accent)}
+.fab-item svg{width:16px;height:16px}
+
+/* ═══ AUDIT LOG ═══ */
+.audit-item{display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-2) 0;border-bottom:1px solid var(--card-border)}
+.audit-item:last-child{border:none}
+.audit-dot{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.audit-info{flex:1;min-width:0}
+.audit-text{font-size:12px;color:var(--fg2);line-height:1.4}
+.audit-meta{font-size:10px;color:var(--fg4);display:flex;gap:var(--space-2);margin-top:1px}
+.audit-user{font-size:9px;font-weight:600;color:var(--accent)}
+
+/* ═══ SWIPE INDICATORS ═══ */
+@media(hover:none){
+  .jcard{position:relative;overflow:hidden}
+  .jcard .swipe-hint{position:absolute;top:0;bottom:0;display:flex;align-items:center;padding:0 12px;font-size:10px;font-weight:600;color:#fff;transition:opacity .2s;pointer-events:none;opacity:0}
+  .jcard .swipe-hint.left{right:0;background:var(--green);border-radius:0 var(--rad) var(--rad) 0}
+  .jcard .swipe-hint.right{left:0;background:var(--red);border-radius:var(--rad) 0 0 var(--rad)}
+  .jcard.swiping .swipe-hint{opacity:1}
+}
+
 /* ═══ AI ASSISTANT ═══ */
 #ai-bubble{position:fixed;bottom:24px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
 #ai-bubble:hover{transform:scale(1.08);box-shadow:0 6px 28px var(--accent-glow)}
@@ -645,6 +692,29 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
       <div class="auth-switch" id="auth-switch">Don't have an account? <a onclick="toggleAuthMode()">Sign Up</a></div>
     </div>
   </div>
+</div>
+
+<!-- ═══ ONBOARDING ═══ -->
+<div id="onboard-overlay">
+  <div id="onboard-box">
+    <div class="ob-progress" id="ob-progress"></div>
+    <div class="ob-step" id="ob-step">Step 1 of 3</div>
+    <h2 id="ob-title">Welcome to TRADIOS</h2>
+    <p class="ob-desc" id="ob-desc">Let's set up your business in 60 seconds.</p>
+    <div id="ob-content"></div>
+    <button class="auth-btn" id="ob-btn" onclick="nextOnboardStep()">Continue</button>
+  </div>
+</div>
+
+<!-- ═══ QUICK ACTION FAB ═══ -->
+<div id="fab">
+  <div id="fab-menu">
+    <div class="fab-item" onclick="switchPanel('jobs');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> New Job</div>
+    <div class="fab-item" onclick="switchPanel('quotes');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> New Quote</div>
+    <div class="fab-item" onclick="switchPanel('leads');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> New Lead</div>
+    <div class="fab-item" onclick="switchPanel('photos');toggleFab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Add Photo</div>
+  </div>
+  <button id="fab-main" onclick="toggleFab()">+</button>
 </div>
 
 <!-- ═══════════ CMD+K COMMAND PALETTE ═══════════ -->
@@ -1275,9 +1345,7 @@ function saveNotes(){
 
 /* ═══ CHANGELOG ═══ */
 function renderChangelog(){
-  document.getElementById('full-log').innerHTML=LOG_DATA.map(l=>
-    '<div class="tle"><div class="tle-date">'+(l.date+(l.time?' '+l.time:''))+'</div><div class="tle-text"><span class="tle-project">['+l.project+']</span> '+l.text+'</div></div>'
-  ).join('')
+  renderAuditLog()
 }
 
 /* ═══ TEMPLATES ═══ */
@@ -2007,6 +2075,202 @@ capturePhoto=function(){
   toast('📸 Photo captured!')
 };
 
+/* ═══ AUDIT LOG ═══ */
+const AUDIT_KEY='tradeos_audit';
+function addAudit(action,detail){
+  const log=JSON.parse(localStorage.getItem(AUDIT_KEY)||'[]');
+  log.unshift({action,detail,user:sbUser?.email||'local',time:new Date().toISOString(),id:Date.now()});
+  localStorage.setItem(AUDIT_KEY,JSON.stringify(log.slice(0,200)));
+  // Update dashboard activity if visible
+  const mini=document.getElementById('mini-log');
+  if(mini&&mini.children.length>0){
+    const el=document.createElement('div');el.className='ar';
+    el.innerHTML='<div class="ar-dot" style="background:var(--accent)"></div><div class="ar-info"><div class="ar-text">'+detail+'</div><div class="ar-meta"><span class="ar-proj">'+action+'</span><span>Just now</span></div></div>';
+    mini.prepend(el);if(mini.children.length>5)mini.lastElementChild.remove()
+  }
+}
+function renderAuditLog(){
+  const log=JSON.parse(localStorage.getItem(AUDIT_KEY)||'[]');
+  const el=document.getElementById('full-log');
+  if(!el)return;
+  if(!log.length){
+    el.innerHTML='<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-title">No activity yet</div><div class="empty-desc">Start using TRADIOS — every action is recorded here</div></div>';
+    return
+  }
+  el.innerHTML=log.slice(0,50).map(a=>'<div class="audit-item"><div class="audit-dot" style="background:'+(a.action.includes('create')||a.action.includes('add')?'var(--green)':a.action.includes('move')||a.action.includes('update')?'var(--accent)':'var(--yellow)')+'"></div><div class="audit-info"><div class="audit-text">'+a.detail+'</div><div class="audit-meta"><span class="audit-user">'+a.user.split('@')[0]+'</span><span>'+new Date(a.time).toLocaleString()+'</span></div></div></div>').join('')
+}
+// Override job actions to log them
+function auditWrap(fn,name){
+  return function(...args){
+    const result=fn.apply(this,args);
+    if(result!==false)addAudit(name,'Job: '+name.replace(/-/g,' '));
+    return result
+  }
+}
+// Auto-audit on job moves
+const _origDropJob=dropJob;
+dropJob=function(e,toCol){
+  e.preventDefault();e.currentTarget.classList.remove('drag-over');
+  if(dragSrc.col===toCol||dragSrc.idx<0)return;
+  const data=getJobs();
+  const job=data[dragSrc.col].splice(dragSrc.idx,1)[0];
+  if(!job)return;
+  if(!data[toCol])data[toCol]=[];
+  data[toCol].push(job);
+  saveJobs(data);renderJobs();
+  addAudit('move','Moved '+job.name+' from '+JOB_LABELS[dragSrc.col]+' to '+JOB_LABELS[toCol]+' — $'+job.amount.toLocaleString());
+  notifyJobChange(job,dragSrc.col,toCol);
+  toast('📦 '+(toCol==='completed'?'✅':JOB_LABELS[toCol]))
+};
+
+/* ═══ ONBOARDING ═══ */
+const ONBOARD_KEY='tradeos_onboarded';
+let onboardStep=0;
+const ONBOARD_STEPS=[
+  {title:'What\'s your business name?',desc:'This will appear on quotes and invoices.',field:'text',placeholder:'e.g. Antonio PrimeScape Construction',key:'bizName'},
+  {title:'What services do you offer?',desc:'Select all that apply. You can change later.',field:'services',services:['Paving','Decking','Fencing','Landscaping','Concrete','Guttering','Pressure Wash','Handyman','Cleaning','Roofing']},
+  {title:'You\'re all set!',desc:'TRADIOS is ready to go. Here\'s what you can do:',field:'done'}
+];
+let onboardData={};
+function startOnboarding(){
+  if(localStorage.getItem(ONBOARD_KEY))return;
+  onboardStep=0;onboardData={};
+  document.getElementById('onboard-overlay').classList.add('open');
+  renderOnboardStep()
+}
+function renderOnboardStep(){
+  const step=ONBOARD_STEPS[onboardStep];
+  document.getElementById('ob-step').textContent='Step '+(onboardStep+1)+' of '+ONBOARD_STEPS.length;
+  document.getElementById('ob-title').textContent=step.title;
+  document.getElementById('ob-desc').textContent=step.desc;
+  // Progress dots
+  document.getElementById('ob-progress').innerHTML=ONBOARD_STEPS.map((_,i)=>'<div class="ob-dot'+(i<onboardStep?' done':i===onboardStep?' active':'')+'"></div>').join('');
+  const content=document.getElementById('ob-content');
+  const btn=document.getElementById('ob-btn');
+  if(step.field==='text'){
+    content.innerHTML='<input class="ob-field" id="ob-input" placeholder="'+step.placeholder+'" value="'+(onboardData[step.key]||'')+'" autofocus>';
+    btn.textContent='Continue';btn.style.display=''
+  }else if(step.field==='services'){
+    content.innerHTML='<div class="ob-services">'+step.services.map(s=>'<div class="ob-service'+(onboardData.services?.includes(s)?' sel':'')+'" onclick="this.classList.toggle(\'sel\')">'+s+'</div>').join('')+'</div>';
+    btn.textContent='Continue';btn.style.display=''
+  }else if(step.field==='done'){
+    const name=onboardData.bizName||'your business';
+    content.innerHTML='<div style="padding:var(--space-4) 0"><div style="font-size:48px;margin-bottom:var(--space-4)">🎉</div><div class="ob-desc" style="text-align:left">• ✏️ Create & track jobs\n• 📋 AI-powered quotes\n• 💳 Get paid with Stripe\n• 📸 Photo gallery with cloud backup\n• ⚡ Automated follow-ups\n• 🔄 Real-time sync across devices</div></div>';
+    btn.textContent='🚀 Start using TRADIOS'
+  }
+}
+function nextOnboardStep(){
+  const step=ONBOARD_STEPS[onboardStep];
+  if(step.field==='text'){
+    const val=document.getElementById('ob-input')?.value.trim();
+    if(!val&&step.key==='bizName'){/* optional*/}
+    onboardData[step.key]=val||''
+  }
+  if(step.field==='services'){
+    onboardData.services=[...document.querySelectorAll('.ob-service.sel')].map(el=>el.textContent)
+  }
+  if(onboardStep<ONBOARD_STEPS.length-1){
+    onboardStep++;renderOnboardStep()
+  }else{
+    localStorage.setItem(ONBOARD_KEY,JSON.stringify(onboardData));
+    document.getElementById('onboard-overlay').classList.remove('open');
+    addAudit('onboarding','Business setup completed: '+(onboardData.bizName||'Tradie business'));
+    toast('🎉 Welcome to TRADIOS!');
+    // Add services as sample data
+    if(onboardData.services?.length){
+      const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+      onboardData.services.slice(0,3).forEach(s=>{
+        data.lead.push({name:s+' Job',type:s.toLowerCase(),amount:Math.floor(Math.random()*5000)+2000,detail:'New '+s+' project'})
+      });
+      saveJobs(data);renderJobs();renderDashboard()
+    }
+  }
+}
+
+/* ═══ FAB (Quick Actions) ═══ */
+let fabOpen=false;
+function toggleFab(){
+  fabOpen=!fabOpen;
+  document.getElementById('fab-menu').classList.toggle('open',fabOpen);
+  document.getElementById('fab-main').textContent=fabOpen?'✕':'+'
+}
+
+/* ═══ ZERO-ADMIN AUTO EXECUTIONS ═══ */
+function initZeroAdmin(){
+  // Auto-move completed jobs logic (runs every 2 min)
+  setInterval(()=>{
+    const data=getJobs();if(!data)return;
+    // If a job has been in 'completed' for a while, log it
+    // Auto-send payment links for newly completed jobs
+    if(data.completed?.length>0){
+      const rules=getAutoRules();
+      const payRule=rules.find(r=>r.id==='auto-3');
+      if(payRule?.enabled&&data.completed.length>0){
+        const lastJob=data.completed[data.completed.length-1];
+        addAudit('auto','🔔 Payment link ready for '+lastJob.name)
+      }
+    }
+    // Auto-archive old audit entries (>90 days)
+    const audit=JSON.parse(localStorage.getItem(AUDIT_KEY)||'[]');
+    if(audit.length>200){
+      localStorage.setItem(AUDIT_KEY,JSON.stringify(audit.slice(0,200)))
+    }
+  },120000)
+}
+
+/* ═══ SWIPE GESTURES ═══ */
+function initSwipes(){
+  let startX=0,startY=0,isSwiping=false,currentCard=null;
+  document.addEventListener('touchstart',(e)=>{
+    const card=e.target.closest('.jcard');
+    if(!card)return;
+    startX=e.touches[0].clientX;startY=e.touches[0].clientY;
+    isSwiping=false;currentCard=card
+  },{passive:true});
+  document.addEventListener('touchmove',(e)=>{
+    if(!currentCard)return;
+    const dx=e.touches[0].clientX-startX;
+    const dy=e.touches[0].clientY-startY;
+    if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)*1.5){isSwiping=true;currentCard.classList.add('swiping')}
+  },{passive:true});
+  document.addEventListener('touchend',(e)=>{
+    if(!currentCard||!isSwiping)return;
+    const dx=e.changedTouches[0].clientX-startX;
+    currentCard.classList.remove('swiping');
+    if(Math.abs(dx)>80){
+      // Find the column and index of this card
+      const col=currentCard.closest('.jcol');
+      const cards=col?.querySelectorAll('.jcard');
+      const idx=cards?Array.from(cards).indexOf(currentCard):-1;
+      const colKey=col?.dataset.col;
+      if(idx>=0&&colKey){
+        if(dx>0&&colKey!=='completed'){
+          // Swipe right = complete
+          const data=getJobs();
+          if(data[colKey]&&data[colKey][idx]&&colKey!=='completed'){
+            const job=data[colKey].splice(idx,1)[0];
+            data.completed.push(job);
+            saveJobs(data);renderJobs();
+            addAudit('swipe','✅ Swiped '+job.name+' to Completed');
+            toast('✅ '+job.name+' completed!');
+            if(sbUser)createPaymentLink(job)
+          }
+        }else if(dx<0){
+          // Swipe left = delete (move to trash)
+          const data=getJobs();
+          if(data[colKey]&&data[colKey][idx]){
+            const job=data[colKey].splice(idx,1)[0];
+            saveJobs(data);renderJobs();
+            addAudit('swipe','🗑️ Removed '+job.name);
+            toast('🗑️ Removed')
+          }
+        }
+      }
+    }
+    isSwiping=false;currentCard=null
+  },{passive:true})
+}
+
 /* ═══ INIT UPDATES ═══ */
 let currentWorkspace='all';
 function switchWorkspace(ws){
@@ -2195,7 +2459,14 @@ function init(){
   initSupabase();
   // Stability + automations
   initStability();
-  initAutomations()
+  initAutomations();
+  // Zero-admin + swipes
+  initZeroAdmin();
+  initSwipes();
+  // Onboarding after auth
+  setTimeout(()=>{
+    if(sbUser)startOnboarding()
+  },1000)
 }
 
 document.addEventListener('DOMContentLoaded',init);
