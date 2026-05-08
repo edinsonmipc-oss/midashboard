@@ -100,6 +100,8 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   .sb.open{transform:translateX(0);box-shadow:var(--shadow-lg);z-index:200}
   .sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}
   .sb.open~.sb-overlay{display:block}
+  .mn{margin-left:0}
+  .mn.mn-shift{margin-left:var(--sidebar-w)}
 }
 
 /* ═══ BOTTOM NAV (mobile) ═══ */
@@ -1746,6 +1748,7 @@ let currentQuote='';
 function getQuotes(){return JSON.parse(localStorage.getItem(QUOTES_KEY)||'[]')}
 function saveQuoteToLS(q){const a=getQuotes();a.unshift(q);localStorage.setItem(QUOTES_KEY,JSON.stringify(a))}
 async function generateQuote(){
+  trackTiming('quote');
   if(!AI_KEY){
     const key=prompt('🔑 Enter your OpenRouter API key to generate AI quotes:\n\n(Get one free at openrouter.ai/keys)');
     if(!key)return;
@@ -2605,6 +2608,7 @@ function createQuickJob(){
   addAudit('create','📦 Created job: '+name+' ('+qjType+', $'+amount.toLocaleString()+')');
   addOp('create','Created job <b>'+name+'</b> <span style="color:var(--accent)">$'+amount.toLocaleString()+'</span>',{amount,client:name,label:'job',action:"openQJ()",action_label:'+ Another'});
   trackBehavior('job-created',{name,service:qjType,amount});
+  trackTiming('job');
   closeQJ();
   toast('✅ '+name+' added to New Leads');
   trackUsage('quick-job')
@@ -3306,6 +3310,17 @@ function renderTimeline(){
       action:null
     })
   }
+  // Time mode card
+  const mode=getTimeMode();
+  intelCards.push({
+    icon:mode.icon,title:mode.label+' · '+mode.focus,
+    text:mode.desc,action:null
+  });
+  // Timing insight
+  const tInsight=timingInsight();
+  if(tInsight){
+    intelCards.push({icon:tInsight.icon,title:'Timing Insight',text:tInsight.text,action:tInsight.action})
+  }
   // Behavioral insight
   const ins=getBehavioralInsights();
   if(ins.topService){
@@ -3338,6 +3353,13 @@ function renderTimeline(){
     html+='<div class="tl-focus"><div class="focus-icon">'+focusItem.icon+'</div><div class="focus-body"><div class="focus-title">Focus This</div><div class="focus-name">'+focusItem.name+'</div><div class="focus-detail">$'+focusItem.amount.toLocaleString()+' · '+focusItem.service+'</div></div>'+
       '<button class="focus-btn" onclick="aiSuggest(\'Generate a quote for '+focusItem.name+'\')">Quote →</button></div>'
   }
+  // Autopilot cards
+  const autoPatterns=detectAutopilot();
+  autoPatterns.forEach(p=>{
+    const conf=confidenceBadge(p.confidence||50);
+    html+='<div class="tl-intel" style="border-color:var(--accent)"><div class="intel-icon">'+p.icon+'</div><div class="intel-body"><div class="intel-title">'+p.title+' <span style="font-size:9px;color:var(--fg4);font-weight:400">'+conf+'</span></div><div class="intel-text">'+p.desc+'</div></div>'+
+      (p.action?'<button class="intel-action" onclick="'+p.action+'">Enable →</button>':'')+'</div>'
+  });
   if(items.length===0){
     html+='<div class="tl-empty"><div class="tl-empty-icon">📋</div><div class="tl-empty-title">No activity yet today</div><div class="tl-empty-desc">Start working — type <b>⌘K</b> and try <code>new job smith $3000 paving</code></div></div>';
     feed.innerHTML=html;
@@ -3370,6 +3392,8 @@ function renderTimeline(){
       const clientName=op.meta.client||'';
       return '<button class="tl-action" style="border:none;background:var(--accent-subtle);padding:2px 8px;border-radius:4px" onclick="'+a.action(clientName)+';event.stopPropagation()">'+a.icon+' '+a.label+'</button>'
     }).join('')+'</div>':'')+
+    // Memory graph for items with client
+    (op.meta.client?renderMemoryGraph(op.meta.client):'')+
     '</div></div>').join('');
   renderPulse();
   renderContextBar()
@@ -3696,7 +3720,159 @@ function getBehavioralInsights(){
   return{topService:topService?.[0]||null,lastClient:lastClient||null}
 }
 
-/* ═══ COMMAND OS — Context Bar ═══ */
+/* ═══ COGNITION SYSTEM — Time-of-Day Mode ═══ */
+const TIME_MODE={
+  morning:{icon:'🌅',label:'Quote Mode',hours:[6,12],focus:'quotes & leads',desc:'Best time to send quotes'},
+  afternoon:{icon:'☀️',label:'Work Mode',hours:[12,17],focus:'active jobs & booking',desc:'Focus on active work'},
+  evening:{icon:'🌙',label:'Review Mode',hours:[17,21],focus:'review & plan',desc:'Review today, plan tomorrow'},
+  night:{icon:'✨',label:'Calm Mode',hours:[21,6],focus:'rest & reflect',desc:'Time to wind down'}
+};
+function getTimeMode(){
+  const h=new Date().getHours();
+  for(const [key,mode] of Object.entries(TIME_MODE)){
+    const[start,end]=mode.hours;
+    if(start<end?h>=start&&h<end:h>=start||h<end)return{key,...mode}
+  }
+  return{key:'morning',...TIME_MODE.morning}
+}
+
+/* ═══ COGNITION SYSTEM — Confidence Scoring ═══ */
+function confidenceScore(actionType,context){
+  let score=50; // base
+  const ins=getBehavioralInsights();
+  const mem=JSON.parse(localStorage.getItem(BEHAVIOR_KEY)||'{}');
+  const mode=getTimeMode();
+  
+  // Service pattern: high if user does this service often
+  if(context?.service&&ins.topService===context.service)score+=20;
+  
+  // Time alignment: high if this matches the current time mode
+  if(actionType==='quote'&&mode.key==='morning')score+=15;
+  if(actionType==='job'&&mode.key==='afternoon')score+=15;
+  if(actionType==='review'&&mode.key==='evening')score+=15;
+  
+  // Recurrence: high if user has done this before
+  if(context?.client){
+    const clientCount=mem.clients?.filter(c=>c.name===context.client).length||0;
+    if(clientCount>0)score+=clientCount*5;
+  }
+  
+  // Urgency: high if items are piling up
+  const data=getJobs();
+  if(actionType==='lead'&&(data?.lead?.length||0)>3)score+=10;
+  if(actionType==='quote'&&(data?.quoted?.length||0)>1)score+=10;
+  
+  return Math.min(100,Math.max(10,score))
+}
+function confidenceBadge(score){
+  if(score>=80)return'<span style="font-size:8px;font-weight:600;background:var(--green-bg);color:var(--green);padding:1px 6px;border-radius:4px;letter-spacing:.3px">HIGH</span>';
+  if(score>=50)return'<span style="font-size:8px;font-weight:600;background:var(--yellow-bg);color:var(--yellow);padding:1px 6px;border-radius:4px;letter-spacing:.3px">MED</span>';
+  return'<span style="font-size:8px;font-weight:600;background:var(--bg3);color:var(--fg3);padding:1px 6px;border-radius:4px;letter-spacing:.3px">LOW</span>'
+}
+
+/* ═══ COGNITION SYSTEM — Timing Intelligence ═══ */
+const TIMING_KEY='tradeos_timing';
+function trackTiming(actionType){
+  const data=JSON.parse(localStorage.getItem(TIMING_KEY)||'{}');
+  const h=new Date().getHours();
+  const key=actionType;
+  if(!data[key])data[key]=Array(24).fill(0);
+  data[key][h]++;
+  // Keep only 30 days of data by resetting old entries
+  if(!data._date||data._date!==new Date().toDateString()){
+    data._date=new Date().toDateString()
+  }
+  localStorage.setItem(TIMING_KEY,JSON.stringify(data))
+}
+function getBestTimeFor(actionType){
+  const data=JSON.parse(localStorage.getItem(TIMING_KEY)||'{}');
+  const hours=data[actionType];
+  if(!hours||hours.every(h=>h===0))return null;
+  const best=hours.indexOf(Math.max(...hours));
+  const mode=getTimeMode();
+  const currentHour=new Date().getHours();
+  const isNow=Math.abs(best-currentHour)<=1;
+  return{bestHour:best,isNow,frequency:Math.max(...hours)}
+}
+function timingInsight(){
+  // Check if now is your peak time for current mode
+  const mode=getTimeMode();
+  const bestQuote=getBestTimeFor('quote');
+  const bestJob=getBestTimeFor('job');
+  if(bestQuote&&mode.key==='morning'&&!bestQuote.isNow){
+    return{icon:'⏰',text:'Your peak quoting time is <b>'+bestQuote.bestHour+':00</b>',action:null}
+  }
+  if(bestJob&&mode.key==='afternoon'&&!bestJob.isNow){
+    return{icon:'⏰',text:'You usually work on jobs around <b>'+bestJob.bestHour+':00</b>',action:null}
+  }
+  return null
+}
+
+/* ═══ COGNITION SYSTEM — Memory Graph ═══ */
+function getClientHistory(clientName){
+  if(!clientName)return[];
+  const name=clientName.toLowerCase();
+  const all=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
+  const history=[];
+  Object.entries(all).forEach(([date,ops])=>{
+    ops.forEach(op=>{
+      if(op.meta.client&&op.meta.client.toLowerCase()===name){
+        history.push({date,time:op.time,type:op.type,text:op.text})
+      }
+    })
+  });
+  return history.sort((a,b)=>b.date.localeCompare(a.date)||b.time.localeCompare(a.time)).slice(0,10)
+}
+function renderMemoryGraph(clientName){
+  if(!clientName)return'';
+  const history=getClientHistory(clientName);
+  if(history.length<2)return'';
+  const stages={create:'📦',move:'📋',email:'📧',event:'💡',alert:'⚠️'};
+  return'<div style="display:flex;align-items:center;gap:2px;margin-top:3px">'+
+    history.slice(0,5).reverse().map((h,i)=>{
+      const icon=stages[h.type]||'●';
+      const isLast=i===Math.min(4,history.length-1);
+      return'<span title="'+h.date+' '+h.time+': '+h.text.replace(/<[^>]+>/g,'')+'" style="font-size:12px;cursor:pointer'+(isLast?';color:var(--accent)':'')+'">'+icon+'</span>'+
+        (i<Math.min(4,history.length-1)?'<span style="color:var(--fg4);font-size:8px">──</span>':'')
+    }).join('')+'</div>'
+}
+
+/* ═══ COGNITION SYSTEM — Autopilot Detection ═══ */
+const AUTOPILOT_KEY='tradeos_autopilot';
+function detectAutopilot(){
+  const mem=JSON.parse(localStorage.getItem(BEHAVIOR_KEY)||'{}');
+  const data=getJobs();
+  const leadCount=data?.lead?.length||0;
+  const patterns=[];
+  
+  // Pattern: user always quotes after creating a job
+  const createCount=Object.values(mem.services||{}).reduce((a,b)=>a+b,0);
+  if(createCount>=3){
+    patterns.push({
+      icon:'⚡',title:'Auto-quote after job creation',
+      desc:'You always create a quote after adding a job. Want me to auto-suggest it?',
+      action:"showNextActions([{icon:'📋',text:'Auto-quote new jobs',action:'toast(\"✅ Auto-quote enabled\")'}])",
+      confidence:Math.min(createCount*10,90)
+    })
+  }
+  
+  // Pattern: user follows up with leads in the morning
+  if(leadCount>0){
+    const mode=getTimeMode();
+    if(mode.key==='morning'){
+      patterns.push({
+        icon:'🌅',title:'Morning lead review',
+        desc:'You have <b>'+leadCount+' leads</b> — morning is your quoting time',
+        action:"switchPanel('leads')",
+        confidence:70
+      })
+    }
+  }
+  
+  return patterns
+}
+
+/* ═══ COMMAND OS — Context Bar (with Confidence) ═══ */
 function renderContextBar(){
   const bar=document.getElementById('ctx-bar');
   if(!bar)return;
@@ -3705,16 +3881,17 @@ function renderContextBar(){
   const quoted=data?.quoted?.length||0;
   const activeJobs=data?.progress?.length||0;
   const ins=getBehavioralInsights();
+  const mode=getTimeMode();
   const chips=[];
-  if(leads>0)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':'')+' to follow up',action:'switchPanel(\'leads\')',urgent:leads>3});
-  if(quoted>0)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')'});
-  if(activeJobs>0)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5});
-  if(ins.topService)chips.push({label:'⚡ Quick '+ins.topService+' quote',action:"aiSuggest('Generate a quote for "+ins.topService+"')"});
-  if(ins.lastClient)chips.push({label:'↩️ Re-quote '+ins.lastClient.name,action:"aiSuggest('Generate a quote for "+ins.lastClient.name+"')"});
+  if(leads>0)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':'')+' to follow up',action:'switchPanel(\'leads\')',urgent:leads>3,score:confidenceScore('lead',{})});
+  if(quoted>0)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')',score:confidenceScore('quote',{})});
+  if(activeJobs>0)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5,score:confidenceScore('job',{})});
+  if(ins.topService)chips.push({label:'⚡ Quick '+ins.topService+' quote',action:"aiSuggest('Generate a quote for "+ins.topService+"')",score:confidenceScore('quote',{service:ins.topService})});
+  if(ins.lastClient)chips.push({label:'↩️ Re-quote '+ins.lastClient.name,action:"aiSuggest('Generate a quote for "+ins.lastClient.name+"')",score:confidenceScore('quote',{client:ins.lastClient.name})});
   chips.push({label:'⌘ New job...',action:'openQJ()'});
   chips.push({label:'⌘ New quote...',action:'switchPanel(\'quotes\')'});
   if(chips.length===2)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
-  bar.innerHTML='<span class="ctx-label">Actions</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s"><span class="ctx-dot" style="background:'+(c.urgent?'var(--red)':'var(--accent)')+'"></span>'+c.label+'<span class="ctx-cmd">↵</span></button>').join('')
+  bar.innerHTML='<span class="ctx-label">'+mode.icon+' '+mode.label+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+' '+confidenceBadge(c.score)+'</span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
 }
 
 /* ═══ DASHBOARD — Progressive Disclosure ═══ */
