@@ -610,6 +610,37 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .tl-next .next-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);cursor:pointer;transition:all var(--ts);font-size:12px;color:var(--fg2);font-family:inherit}
 .tl-next .next-item:hover{background:var(--card-hov);border-color:var(--accent);color:var(--accent)}
 
+/* ═══ TIMELINE INTELLIGENCE ═══ */
+.tl-intel{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-3) var(--space-4);margin-bottom:var(--space-3);animation:fadeUp .25s ease;display:flex;align-items:center;gap:var(--space-3);cursor:default}
+.tl-intel .intel-icon{font-size:16px;flex-shrink:0;width:28px;height:28px;border-radius:var(--rad-sm);background:var(--card);display:flex;align-items:center;justify-content:center}
+.tl-intel .intel-body{flex:1;min-width:0}
+.tl-intel .intel-title{font-size:11px;font-weight:600;color:var(--fg);margin-bottom:1px}
+.tl-intel .intel-text{font-size:11px;color:var(--fg3);line-height:1.4}
+.tl-intel .intel-action{font-size:10px;font-weight:600;color:var(--accent);cursor:pointer;flex-shrink:0;padding:4px 10px;border:1px solid var(--accent);border-radius:var(--rad-sm);background:var(--accent-subtle);transition:all var(--ts);font-family:inherit}
+.tl-intel .intel-action:hover{background:var(--accent);color:#fff}
+
+/* ═══ TIMELINE — Focus Now ═══ */
+.tl-focus{background:linear-gradient(135deg,var(--card),var(--bg3));border:1px solid var(--accent);border-radius:var(--rad-lg);padding:var(--space-3) var(--space-4);margin-bottom:var(--space-3);display:flex;align-items:center;gap:var(--space-3);animation:fadeUp .25s ease;position:relative;overflow:hidden}
+.tl-focus::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--accent);border-radius:0 var(--rad-sm) var(--rad-sm) 0}
+.tl-focus .focus-icon{font-size:18px;flex-shrink:0}
+.tl-focus .focus-body{flex:1;min-width:0}
+.tl-focus .focus-title{font-size:11px;font-weight:600;color:var(--fg4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.tl-focus .focus-name{font-size:14px;font-weight:700;color:var(--fg);margin-bottom:1px}
+.tl-focus .focus-detail{font-size:11px;color:var(--fg3)}
+.tl-focus .focus-btn{padding:var(--space-1) var(--space-3);background:var(--accent);border:none;border-radius:var(--rad-sm);color:#fff;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;transition:all var(--ts);flex-shrink:0}
+.tl-focus .focus-btn:hover{box-shadow:var(--shadow-glow);transform:scale(1.03)}
+
+/* ═══ INTERRUPTION BANNER ═══ */
+#interrupt-bar{position:fixed;top:0;left:0;right:0;z-index:3000;padding:8px 16px;font-size:12px;font-weight:500;text-align:center;transform:translateY(-100%);transition:transform .4s cubic-bezier(.4,0,.2,1);background:var(--card);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;gap:var(--space-2)}
+#interrupt-bar.sh{transform:translateY(0)}
+#interrupt-bar .inter-icon{font-size:14px}
+#interrupt-bar .inter-text{color:var(--fg2)}
+#interrupt-bar .inter-text b{color:var(--accent)}
+#interrupt-bar .inter-btn{padding:2px 12px;background:var(--accent);border:none;border-radius:var(--rad-sm);color:#fff;font-size:11px;font-weight:600;cursor:pointer;transition:all var(--ts);font-family:inherit}
+#interrupt-bar .inter-btn:hover{box-shadow:var(--shadow-glow)}
+#interrupt-bar .inter-close{background:none;border:none;color:var(--fg3);font-size:16px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit;transition:color var(--ts)}
+#interrupt-bar .inter-close:hover{color:var(--fg)}
+
 /* ═══ INLINE JOB COMMENTS ═══ */
 .jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
 .jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
@@ -1277,6 +1308,8 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
     <button onclick="sendAI()" id="ai-send-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
   </div>
 </div>
+
+<div id="interrupt-bar"></div>
 
 <!-- ═══ CAMERA VIEW ═══ -->
 <div id="camera-view">
@@ -3258,16 +3291,85 @@ function renderTimeline(){
   const all=getOps();
   const today=new Date().toDateString();
   const items=all[today]||[];
+  
+  // Intelligence: yesterday summary
+  const yesterday=new Date(Date.now()-86400000).toDateString();
+  const yesterdayOps=all[yesterday]||[];
+  const intelCards=[];
+  if(yesterdayOps.length>0){
+    const yCount=yesterdayOps.length;
+    const yJobs=yesterdayOps.filter(o=>o.type==='create').length;
+    const yMoves=yesterdayOps.filter(o=>o.type==='move').length;
+    intelCards.push({
+      icon:'📊',title:'Yesterday vs Today',
+      text:yJobs+' jobs created, '+yMoves+' moved yesterday · '+items.length+' actions today',
+      action:null
+    })
+  }
+  // Behavioral insight
+  const ins=getBehavioralInsights();
+  if(ins.topService){
+    const hour=new Date().getHours();
+    const isMorning=hour<12;
+    const insight=isMorning?'Morning is peak quoting time · Most common: <b>'+ins.topService+'</b>':
+      'Most common service: <b>'+ins.topService+'</b>'+(ins.lastClient?' · Last client: '+ins.lastClient.name:'');
+    intelCards.push({icon:'🧠',title:'AI Insight',text:insight,action:ins.lastClient?"aiSuggest('Generate a quote for "+ins.lastClient.name+"')":null,actionLabel:'Quote →'})
+  }
+  
+  // Priority engine: find most valuable lead
+  let focusItem=null;
+  if(data?.lead?.length>0){
+    const sorted=[...data.lead].sort((a,b)=>b.amount-a.amount);
+    const top=sorted[0];
+    if(top&&top.amount>0){
+      focusItem={name:top.name,amount:top.amount,service:top.type||'general',icon:'🎯'}
+    }
+  }
+
+  // Build timeline HTML
+  let html='';
+  // Intelligence cards
+  intelCards.forEach(c=>{
+    html+='<div class="tl-intel"><div class="intel-icon">'+c.icon+'</div><div class="intel-body"><div class="intel-title">'+c.title+'</div><div class="intel-text">'+c.text+'</div></div>'+
+      (c.action?'<button class="intel-action" onclick="'+c.action+'">'+(c.actionLabel||'Go →')+'</button>':'')+'</div>'
+  });
+  // Focus now card
+  if(focusItem){
+    html+='<div class="tl-focus"><div class="focus-icon">'+focusItem.icon+'</div><div class="focus-body"><div class="focus-title">Focus This</div><div class="focus-name">'+focusItem.name+'</div><div class="focus-detail">$'+focusItem.amount.toLocaleString()+' · '+focusItem.service+'</div></div>'+
+      '<button class="focus-btn" onclick="aiSuggest(\'Generate a quote for '+focusItem.name+'\')">Quote →</button></div>'
+  }
   if(items.length===0){
-    feed.innerHTML='<div class="tl-empty"><div class="tl-empty-icon">📋</div><div class="tl-empty-title">No activity yet today</div><div class="tl-empty-desc">Start working — type <b>⌘K</b> and try <code>new job smith $3000 paving</code></div></div>';
+    html+='<div class="tl-empty"><div class="tl-empty-icon">📋</div><div class="tl-empty-title">No activity yet today</div><div class="tl-empty-desc">Start working — type <b>⌘K</b> and try <code>new job smith $3000 paving</code></div></div>';
+    feed.innerHTML=html;
     renderPulse();
     renderContextBar();
     return
   }
-  feed.innerHTML=items.map((op,i)=>'<div class="tl-item tl-'+op.type+'" style="animation-delay:'+(i*0.04)+'s"><span class="tl-time">'+op.time+'</span><div class="tl-dot"></div><div class="tl-body"><div class="tl-text">'+op.text+'</div>'+
+  
+  // Timeline items with enhanced one-tap actions
+  const ACTION_MAP={
+    'create':[
+      {icon:'📋',label:'Quote',action:name=>"aiSuggest('Generate a quote for "+name+"')"},
+      {icon:'📧',label:'Email',action:name=>"composeGmail('','Hello "+name+"','Hi "+name+',')"},
+      {icon:'⏰',label:'Follow-up',action:name=>"aiSuggest('Schedule follow-up for "+name+" in 2 hours')"}
+    ],
+    'move':[
+      {icon:'💳',label:'Payment',action:name=>"(function(){const d=getJobs();for(let k in d){const j=d[k].find(x=>x.name==='"+name+"');if(j){createPaymentLink(j);return}}})()"},
+      {icon:'⭐',label:'Review',action:name=>"(function(){const d=getJobs();for(let k in d){const j=d[k].find(x=>x.name==='"+name+"');if(j){requestReview(j);return}}})()"}
+    ],
+    'email':[
+      {icon:'⏰',label:'Follow-up',action:name=>"aiSuggest('Schedule follow-up in 3 days')"}
+    ]
+  };
+  
+  feed.innerHTML=html+items.map((op,i)=>'<div class="tl-item tl-'+op.type+'" style="animation-delay:'+((i+intelCards.length+1)*0.04)+'s"><span class="tl-time">'+op.time+'</span><div class="tl-dot"></div><div class="tl-body"><div class="tl-text">'+op.text+'</div>'+
     (op.meta.amount?'<div class="tl-meta">$'+op.meta.amount.toLocaleString()+(op.meta.client?' · '+op.meta.client:'')+'</div>':'')+
     (op.meta.label?'<div class="tl-labels"><span class="tl-lb-'+op.meta.label+'">'+op.meta.label+'</span></div>':'')+
-    (op.meta.action?'<a class="tl-action" onclick="'+op.meta.action+'">'+op.meta.action_label+' →</a>':'')+
+    // Enhanced one-tap actions
+    (ACTION_MAP[op.type]?'<div style="display:flex;gap:4px;margin-top:4px">'+ACTION_MAP[op.type].slice(0,2).map(a=>{
+      const clientName=op.meta.client||'';
+      return '<button class="tl-action" style="border:none;background:var(--accent-subtle);padding:2px 8px;border-radius:4px" onclick="'+a.action(clientName)+';event.stopPropagation()">'+a.icon+' '+a.label+'</button>'
+    }).join('')+'</div>':'')+
     '</div></div>').join('');
   renderPulse();
   renderContextBar()
@@ -3332,6 +3434,101 @@ function showNextActions(actions){
   el.style.display='block';
   acts.innerHTML=actions.map(a=>'<button class="next-item" onclick="'+a.action+';el.style.display=\'none\'">'+a.icon+' '+a.text+'</button>').join('')
 }
+
+/* ═══ INTERRUPTION SYSTEM — Gentle Focus Reminder ═══ */
+let interruptTimer=null;
+let interruptDismissed=false;
+function startInterruptTimer(){
+  clearTimeout(interruptTimer);
+  interruptDismissed=false;
+  interruptTimer=setTimeout(checkInterrupt,30000) // 30s idle
+}
+function checkInterrupt(){
+  if(interruptDismissed)return;
+  const data=getJobs();
+  const leads=data?.lead?.length||0;
+  const quoted=data?.quoted?.length||0;
+  const today=new Date().toDateString();
+  const ops=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
+  const todayActions=ops[today]?.length||0;
+  
+  let msg='';
+  let btn='',btnAction='';
+  if(leads>3&&todayActions<5){
+    msg='You have <b>'+leads+' leads</b> waiting — haven\'t checked them yet today';
+    btn='View leads →';btnAction="switchPanel('leads')"
+  }else if(quoted>2&&todayActions<3){
+    msg='<b>'+quoted+' pending quotes</b> to send out';
+    btn='View quotes →';btnAction="switchPanel('jobs')"
+  }else if(leads>0&&todayActions===0){
+    msg='Ready to start? You have <b>'+leads+' leads</b> waiting';
+    btn='Check leads →';btnAction="switchPanel('leads')"
+  }else{return}
+  
+  const bar=document.getElementById('interrupt-bar');
+  if(!bar)return;
+  bar.innerHTML='<span class="inter-icon">💡</span><span class="inter-text">'+msg+'</span>'+
+    (btn?'<button class="inter-btn" onclick="'+btnAction+';bar.classList.remove(\'sh\');startInterruptTimer()">'+btn+'</button>':'')+
+    '<button class="inter-close" onclick="this.parentElement.classList.remove(\'sh\');interruptDismissed=true">✕</button>';
+  bar.classList.add('sh');
+  setTimeout(()=>{
+    if(!interruptDismissed)bar.classList.remove('sh')
+  },8000)
+}
+// Reset timer on any interaction
+document.addEventListener('click',startInterruptTimer);
+document.addEventListener('keydown',startInterruptTimer);
+document.addEventListener('touchstart',startInterruptTimer);
+
+/* ═══ ENHANCED COMMAND PREVIEWS ═══ */
+const _origRenderSmartCmd=renderSmartCmd;
+renderSmartCmd=function(input){
+  const trimmed=input.trim();
+  if(!trimmed){document.getElementById('cmd-mode').textContent='🔍 Pages';filterCmd('');return}
+  
+  // Check chain first
+  const chain=parseChain(trimmed);
+  if(chain){
+    document.getElementById('cmd-mode').textContent='⚡ Chain';
+    const previews=chain.map(p=>{
+      const parsed=parseCommand(p);
+      if(!parsed)return p;
+      const cmd=parsed.command;
+      const pd=parsed.parsed;
+      if(pd.name)return cmd.icon+' '+pd.name+(pd.amount?' · $'+pd.amount:'');
+      return cmd.icon+' '+cmd.desc
+    });
+    document.getElementById('cmd-results').innerHTML='<div class="cmd-item cmd-action sel" onclick="closeCmd();executeChain('+JSON.stringify(chain)+')"><div class="cmd-icon">⛓️</div><div class="cmd-info"><div class="cmd-name">Execute '+chain.length+' commands</div><div>'+previews.join('<span style="color:var(--fg4);margin:0 4px">→</span>')+'</div></div><span class="cmd-badge action">↵ Enter</span></div>'+
+      '<div style="padding:var(--space-2) var(--space-3);font-size:10px;color:var(--fg4)">Chained command: '+chain.length+' steps</div>';
+    lastParsedCmd={command:{action:()=>executeChain(chain)},parsed:{}};
+    return
+  }
+  
+  // Single command
+  const parsed=parseCommand(trimmed);
+  if(parsed){
+    const p=parsed.parsed;
+    const desc=parsed.command.desc;
+    document.getElementById('cmd-mode').textContent='⚡ Action';
+    // Rich preview card
+    let previewHtml='';
+    if(p.name){
+      previewHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px">'+
+        '<div style="background:var(--bg3);border-radius:4px;padding:4px 8px"><span style="font-size:9px;color:var(--fg4)">Client</span><div style="font-size:12px;font-weight:600">'+p.name+'</div></div>'+
+        (p.amount?'<div style="background:var(--bg3);border-radius:4px;padding:4px 8px"><span style="font-size:9px;color:var(--fg4)">Amount</span><div style="font-size:12px;font-weight:600;color:var(--accent)">$'+p.amount.toLocaleString()+'</div></div>':'')+
+        (p.service?'<div style="background:var(--bg3);border-radius:4px;padding:4px 8px"><span style="font-size:9px;color:var(--fg4)">Service</span><div style="font-size:12px;font-weight:600">'+p.service+'</div></div>':'')+
+        (p.email?'<div style="background:var(--bg3);border-radius:4px;padding:4px 8px"><span style="font-size:9px;color:var(--fg4)">To</span><div style="font-size:12px;font-weight:600">'+p.email+'</div></div>':'')+
+        (p.what?'<div style="background:var(--bg3);border-radius:4px;padding:4px 8px"><span style="font-size:9px;color:var(--fg4)">Task</span><div style="font-size:12px;font-weight:600">'+p.what+'</div></div>':'')+
+        '</div>'
+    }
+    document.getElementById('cmd-results').innerHTML='<div class="cmd-item cmd-action sel" onclick="executeSmartCmd()"><div class="cmd-icon" style="font-size:18px">'+parsed.command.icon+'</div><div class="cmd-info"><div class="cmd-name">'+desc+'</div><div style="font-size:11px;color:var(--fg3)">'+previewHtml+'</div></div><span class="cmd-badge action" style="background:var(--accent);color:#fff">↵ Execute</span></div>'+
+      '<div style="padding:var(--space-2) var(--space-3);font-size:10px;color:var(--fg4);display:flex;gap:var(--space-2)"><span>Enter to execute</span><span>Esc to cancel</span></div>';
+    lastParsedCmd=parsed
+  }else{
+    document.getElementById('cmd-mode').textContent='🔍 Pages';
+    filterCmd(trimmed.toLowerCase())
+  }
+};
 
 /* ═══ ENHANCED RENDER FUNCTIONS ═══ */
 function renderDashboard(){
@@ -3583,6 +3780,8 @@ function init(){
       renderTimeline()
     },500)
   }
+  // Start interruption system
+  startInterruptTimer()
 }
 
 document.addEventListener('DOMContentLoaded',init);
