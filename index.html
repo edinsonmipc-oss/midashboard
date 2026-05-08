@@ -15,32 +15,143 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* Base */
-  --bg:#060608;--bg2:#0a0a12;--bg3:#0f0f1a;
-  --card:#12121e;--card-hov:#181828;--card-border:#1e1e32;--card-border-hov:#2a2a44;
-  --fg:#e8e8f0;--fg2:#9494a8;--fg3:#5c5c72;--fg4:#3a3a4e;
-  --accent:#6366f1;--accent-hov:#818cf8;--accent-glow:rgba(99,102,241,.25);
-  --accent-subtle:rgba(99,102,241,.08);
-  --green:#22c55e;--green-bg:rgba(34,197,94,.1);--green-border:rgba(34,197,94,.2);
-  --yellow:#f59e0b;--yellow-bg:rgba(245,158,11,.1);--yellow-border:rgba(245,158,11,.2);
-  --red:#ef4444;--red-bg:rgba(239,68,68,.1);--red-border:rgba(239,68,68,.2);
-  --orange:#f97316;--orange-bg:rgba(249,115,22,.1);
-  --purple:#a855f7;--purple-bg:rgba(168,85,247,.1);
-  --cyan:#06b6d4;--cyan-bg:rgba(6,182,212,.1);
-  /* Spacing */
-  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;
-  /* Radius */
-  --rad-sm:6px;--rad:10px;--rad-lg:14px;--rad-xl:20px;--rad-full:9999px;
-  /* Shadows */
-  --shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow:0 2px 8px rgba(0,0,0,.4);--shadow-lg:0 8px 32px rgba(0,0,0,.5);--shadow-glow:0 0 24px var(--accent-glow);
-  /* Transitions */
-  --ts:.2s cubic-bezier(.4,0,.2,1);--ts-slow:.35s cubic-bezier(.4,0,.2,1);
+  /* Premium dark surfaces — cinematic depth */
+  --bg:#07070a;--bg2:#0a0a12;--bg3:#0e0e1a;
+  --surface:#13131f;--surface-hov:#181828;--surface-border:rgba(30,30,50,.6);--surface-border-hov:rgba(40,40,70,.6);
+  --elevated:#1a1a2a;--elevated-border:rgba(40,40,70,.5);
+  /* Typography — refined hierarchy */
+  --fg:#e4e4f0;--fg2:#8888a0;--fg3:#555570;--fg4:#3a3a50;--fg-muted:#2a2a40;
+  /* Accent — calm operational blue */
+  --accent:#6366f1;--accent-hov:#818cf8;--accent-glow:rgba(99,102,241,.15);
+  --accent-subtle:rgba(99,102,241,.06);--accent-line:rgba(99,102,241,.2);
+  /* Status */
+  --green:#22c55e;--green-bg:rgba(34,197,94,.08);--green-border:rgba(34,197,94,.15);
+  --yellow:#f5a50b;--yellow-bg:rgba(245,165,11,.08);--yellow-border:rgba(245,165,11,.15);
+  --red:#ef4444;--red-bg:rgba(239,68,68,.08);--red-border:rgba(239,68,68,.15);
+  --orange:#f97316;--orange-bg:rgba(249,115,22,.08);
+  --purple:#a855f7;--purple-bg:rgba(168,85,247,.08);
+  --cyan:#06b6d4;--cyan-bg:rgba(6,182,212,.08);
+  /* Shadows — atmospheric depth */
+  --shadow-sm:0 1px 3px rgba(0,0,0,.5);--shadow:0 4px 16px rgba(0,0,0,.4);--shadow-lg:0 8px 40px rgba(0,0,0,.5);
+  --shadow-glow:0 0 30px var(--accent-glow);--shadow-surface:0 2px 12px rgba(0,0,0,.3);
+  /* Motion — spring physics */
+  --ts:.2s cubic-bezier(.34,1.56,.64,1);--ts-slow:.4s cubic-bezier(.34,1.56,.64,1);
+  --ts-out:.25s cubic-bezier(.4,0,.2,1);--ts-spring:.5s cubic-bezier(.34,1.56,.64,1);
+  /* Radii — softer */
+  --rad-sm:6px;--rad:10px;--rad-lg:14px;--rad-xl:20px;--rad-full:9999px;--rad-soft:8px;
   /* Layout */
-  --sidebar-w:240px;--sidebar-w-collapsed:0px;--top-h:56px;
-}
+  --sidebar-w:240px;--top-h:52px;--focus-line:2px;
+  /* Typography scale */
+  --fs-xs:10px;--fs-sm:11.5px;--fs-base:13px;--fs-lg:15px;--fs-xl:18px;--fs-2xl:24px;--fs-3xl:32px;
+}/* ══════════════════════════════════════════
+   TRADIOS — new Design System
+   Inspired by Linear, Arc, Raycast, Superhuman
+   ══════════════════════════════════════════ */
 html{scroll-behavior:smooth;height:100%}
 body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;display:flex;overflow:hidden;font-size:13.5px;line-height:1.5;-webkit-font-smoothing:antialiased;height:100%}
 ::selection{background:var(--accent);color:#fff}
+::placeholder{color:var(--fg4)}
+
+/* ══ SURFACES — Premium Layered Depth ══ */
+.sc,.sc-b,.sc-h,.mc,.bc2,.shc,.ac,.lc,.photo-card,.today-card,.tl-intel,.tl-focus,.tl-pulse,.tl-next{background:var(--surface);border:1px solid var(--surface-border);border-radius:var(--rad-lg);box-shadow:var(--shadow-surface);transition:all var(--ts)}
+.sc:hover,.mc:hover,.bc2:hover,.shc:hover,.ac:hover,.lc:hover{border-color:var(--surface-border-hov);box-shadow:var(--shadow)}
+.sb{background:var(--bg2);border-right:1px solid var(--surface-border)}
+.top{background:var(--bg2);border-bottom:1px solid var(--surface-border);height:var(--top-h)}
+#cmd-palette{background:var(--surface);border:1px solid var(--surface-border);box-shadow:var(--shadow-lg)}
+#cmd-input-wrap{border-bottom:1px solid var(--surface-border)}
+#ai-panel{background:var(--surface);border:1px solid var(--surface-border);box-shadow:var(--shadow-lg)}
+#ai-h{border-bottom:1px solid var(--surface-border);background:var(--bg2)}
+#ai-inp{border-top:1px solid var(--surface-border);background:var(--bg2)}
+.sb-ft{border-top:1px solid var(--surface-border)}
+.sb-h{border-bottom:1px solid var(--surface-border)}
+.sb-search{border:1px solid var(--surface-border);background:var(--bg3)}
+#to{background:var(--surface);border:1px solid var(--surface-border)}
+#undo-bar{background:var(--surface);border:1px solid var(--surface-border)}
+#interrupt-bar{background:var(--surface);border-bottom:1px solid var(--surface-border)}
+#feedback-box,.ob-service,.auto-card,.qj-box{background:var(--surface);border:1px solid var(--surface-border)}
+#daily-summary,#eod-summary{background:var(--surface);border:1px solid var(--surface-border)}
+
+/* ══ ICONS — Monochrome System ═══ */
+.ico{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Inter',sans-serif;line-height:1;color:var(--fg3)}
+.ico-sm{width:16px;height:16px;font-size:11px;border-radius:var(--rad-sm)}
+.ico-md{width:24px;height:24px;font-size:13px;border-radius:var(--rad)}
+.ico-lg{width:32px;height:32px;font-size:16px;border-radius:var(--rad)}
+.ico-accent{background:var(--accent-subtle);color:var(--accent)}
+.ico-green{background:var(--green-bg);color:var(--green)}
+.ico-red{background:var(--red-bg);color:var(--red)}
+.ico-surface{background:var(--bg3);color:var(--fg3)}
+.ico-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.ico-dot.accent{background:var(--accent)}
+.ico-dot.green{background:var(--green)}
+.ico-dot.red{background:var(--red)}
+.ico-dot.orange{background:var(--orange)}
+.ico-dot.purple{background:var(--purple)}
+
+/* ══ TYPOGRAPHY — Refined Hierarchy ═══ */
+.tl-h h2{font-size:var(--fs-lg);font-weight:700;letter-spacing:-.3px}
+.tl-h .tl-meta{font-size:var(--fs-xs);color:var(--fg3)}
+.tl-item .tl-text{font-size:var(--fs-sm);line-height:1.45;color:var(--fg2)}
+.tl-item .tl-text b{color:var(--fg);font-weight:600}
+.tl-item .tl-time{font-size:var(--fs-xs);font-weight:500;color:var(--fg4);min-width:36px}
+.tl-item .tl-meta{font-size:var(--fs-xs);color:var(--fg4)}
+.tl-intel .intel-title{font-size:var(--fs-xs);font-weight:600;color:var(--fg);letter-spacing:.2px}
+.tl-intel .intel-text{font-size:var(--fs-xs);color:var(--fg3);line-height:1.4}
+.tl-focus .focus-title{font-size:9px;font-weight:600;color:var(--fg4);text-transform:uppercase;letter-spacing:.5px}
+.tl-focus .focus-name{font-size:var(--fs-lg);font-weight:700;color:var(--fg);letter-spacing:-.2px}
+.tl-focus .focus-detail{font-size:var(--fs-xs);color:var(--fg3)}
+.sh h2{font-size:var(--fs-lg);font-weight:700;letter-spacing:-.3px}
+.cmd-item .cmd-name{font-size:var(--fs-sm);font-weight:500;color:var(--fg)}
+.cmd-item .cmd-desc{font-size:var(--fs-xs);color:var(--fg3)}
+.mc-v{font-size:var(--fs-2xl);font-weight:700;letter-spacing:-.6px}
+.mc-l{font-size:var(--fs-xs);color:var(--fg3);font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.sb-logo{font-size:var(--fs-lg);font-weight:800;letter-spacing:-.5px}
+.sb-btn{font-size:var(--fs-sm);font-weight:500;color:var(--fg2)}
+.sb-label{font-size:8.5px;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:1px}
+
+/* ══ MOTION — Spring Physics & Delayed Reveals ═══ */
+.tl-item{opacity:0;animation:tlSlide .35s cubic-bezier(.34,1.56,.64,1) forwards}
+@keyframes tlSlide{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:translateX(0)}}
+.tl-intel,.tl-focus{animation:slideUp .3s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes slideUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+#cmd-palette{animation:cmdSpring .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes cmdSpring{from{opacity:0;transform:scale(.96) translateY(-12px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.sh{animation:softIn .3s ease both}
+@keyframes softIn{from{opacity:0}to{opacity:1}}
+.btn:active,.ctx-item:active,.sb-btn:active,.dqa-btn:active{transform:scale(.97);transition:transform .1s cubic-bezier(.34,1.56,.64,1)}
+.btn,.ctx-item,.sb-btn,.dqa-btn{transition:all var(--ts)}
+.jcard{transition:all .12s cubic-bezier(.34,1.56,.64,1)}
+.jcard:hover{transform:translateY(-1px)}
+.mc{transition:all var(--ts)}
+.mc:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+/* ══ FOCUS LIGHTING — Cinematic Illumination ═══ */
+.tl-focus{background:linear-gradient(135deg,var(--surface),var(--bg3));border-color:var(--accent-line);box-shadow:0 0 30px var(--accent-glow),var(--shadow-surface)}
+.tl-focus::before{content:'';position:absolute;top:0;left:0;bottom:0;width:var(--focus-line);background:var(--accent);border-radius:0 var(--rad-sm) var(--rad-sm) 0}
+.mc{position:relative;overflow:hidden}
+.mc::after{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity var(--ts)}
+.mc:hover::after{opacity:1}
+.tl-item .tl-dot{width:7px;height:7px;border-radius:50%;margin-top:3px;flex-shrink:0;transition:all var(--ts)}
+.tl-item:hover .tl-dot{transform:scale(1.3)}
+.tl-item.tl-event .tl-dot{background:var(--accent)}
+.tl-item.tl-create .tl-dot{background:var(--green)}
+.tl-item.tl-email .tl-dot{background:var(--purple)}
+.tl-item.tl-alert .tl-dot{background:var(--red)}
+.tl-item.tl-move .tl-dot{background:var(--orange)}
+.mc-icon{position:absolute;right:16px;top:16px;font-size:22px;opacity:.06;pointer-events:none}
+.sh .shl{font-size:var(--fs-xs);color:var(--fg3)}
+
+/* ══ ATMOSPHERIC ADAPTATION ═══ */
+body.energy-low{--accent-glow:rgba(99,102,241,.08);--shadow-glow:0 0 16px var(--accent-glow);--fg2:#7a7a90;--fg3:#4a4a60}
+body.energy-low .tl-item .tl-dot{box-shadow:none}
+body.energy-low .tl-focus{background:var(--surface);border-color:var(--surface-border);box-shadow:var(--shadow-surface)}
+body.energy-low .tl-focus::before{opacity:.4}
+body.energy-low .mc::after{opacity:0!important}
+body.energy-very-low{--accent-glow:rgba(99,102,241,.04);--shadow-glow:none;--fg2:#6a6a7a;--fg3:#3a3a50;--fg4:#2a2a3e;--surface-border:rgba(30,30,50,.3)}
+body.energy-very-low .tl-focus{display:none}
+body.energy-very-low .tl-intel{background:var(--bg3);border-color:transparent}
+body.energy-very-low .tl-intel .intel-action{display:none}
+body.energy-very-low .ctx-item{opacity:.5}
+body.energy-very-low #ctx-bar .ctx-label{display:none}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--fg4);border-radius:var(--rad-full)}
@@ -3341,7 +3452,65 @@ document.addEventListener('keydown',function(e){
   }
 });
 
-/* ═══ OPERATIONS TIMELINE — Daily Log ═══ */
+/* ═══ ICON SYSTEM — Monochrome operational symbols ═══ */
+const I=m=>{
+  const map={
+    // actions
+    'create':'+','job':'◆','quote':'◇','email':'@','sms':'◈','call':'◈',
+    'followup':'◉','remind':'◉','schedule':'◉','sync':'↻','search':'◉',
+    'find':'◉','send':'↑','copy':'◇','save':'▣',
+    // status
+    'done':'✓','active':'●','pending':'○','waiting':'○','urgent':'!',
+    'lead':'↓','leads':'↓','prospect':'↓',
+    'alert':'!','warning':'△','error':'▲','success':'✓',
+    // navigation
+    'back':'←','forward':'→','up':'↑','down':'↓','home':'⌂',
+    'menu':'☰','close':'×','open':'+','more':'⋯',
+    // objects
+    'job':'◆','jobs':'◆','board':'▣','task':'○','tasks':'○',
+    'note':'✎','notes':'✎','photo':'○','photos':'○','calendar':'▣',
+    'site':'◎','sites':'◎','business':'▣','businesses':'▣','changelog':'⋯',
+    // tools
+    'cmd':'⌘','command':'⌘','kbd':'⌘','key':'⌘',
+    'payment':'⊡','pay':'⊡','review':'★','star':'★',
+    'paymentlink':'⊡',
+    // time
+    'today':'◎','morning':'◐','afternoon':'◑','evening':'◓','night':'◒',
+    'time':'◉','clock':'◉',
+    // people
+    'user':'◎','users':'◎◎','person':'◎','people':'◎◎','client':'◎',
+    'lead':'↓','team':'◎◎',
+    // misc
+    'summary':'≡','report':'≡','overview':'≡',
+    'focus':'◎','target':'◎','aim':'◎',
+    'insight':'⊙','intel':'⊙','ai':'⊙','brain':'⊙',
+    'idea':'◉','light':'◉','tip':'◉',
+    'automation':'▶','auto':'▶','play':'▶','run':'▶',
+    'settings':'⚙','config':'⚙',
+    'question':'?','help':'?','info':'◉',
+    'upgrade':'↑','install':'↓','download':'↓',
+    'link':'↗','external':'↗','goto':'→',
+    'plus':'+','add':'+','new':'+','create':'+',
+    'delete':'×','remove':'×','trash':'×',
+    // Labels
+    'high':'◉','med':'○','low':'○',
+    'quote_label':'Q','job_label':'J','lead_label':'L','email_label':'@',
+    // Mood
+    'calm':'✦','quiet':'✦','silent':'✦',
+    'welcome':'◠','greeting':'◠',
+    'pulse':'◉',
+    'chain':'⛓','multi':'⛓',
+    'morning_icon':'◐','afternoon_icon':'◑','evening_icon':'◓','night_icon':'◒',
+    // operational
+    'focus_label':'◎','attention':'◎','priority':'◎',
+    'yesterday':'◐','today_icon':'◎','tomorrow':'◑',
+    'complete':'✓','done_label':'✓','finished':'✓',
+    'active_label':'●',
+    'trend_up':'↑','trend_down':'↓'
+  };
+  const k=m?.toLowerCase().replace(/[^a-z0-9]/g,'')||'';
+  return map[k]||'○'
+};
 const OPS_KEY='tradeos_operations';
 function getOps(){
   const today=new Date().toDateString();
@@ -3381,7 +3550,7 @@ function renderTimeline(){
     const yJobs=yesterdayOps.filter(o=>o.type==='create').length;
     const yMoves=yesterdayOps.filter(o=>o.type==='move').length;
     intelCards.push({
-      icon:'📊',title:'Yesterday vs Today',
+      icon:I('insight'),title:'Yesterday vs Today',
       text:yJobs+' jobs created, '+yMoves+' moved yesterday · '+items.length+' actions today',
       action:null
     })
@@ -3389,13 +3558,13 @@ function renderTimeline(){
   // Time mode card
   const mode=getTimeMode();
   intelCards.push({
-    icon:mode.icon,title:mode.label+' · '+mode.focus,
+    icon:I('time'),title:mode.label+' · '+mode.focus,
     text:mode.desc,action:null
   });
   // Timing insight
   const tInsight=timingInsight();
   if(tInsight){
-    intelCards.push({icon:tInsight.icon,title:'Timing Insight',text:tInsight.text,action:tInsight.action})
+    intelCards.push({icon:I('time'),title:'Timing Insight',text:tInsight.text,action:tInsight.action})
   }
   // Behavioral insight
   const ins=getBehavioralInsights();
@@ -3404,7 +3573,7 @@ function renderTimeline(){
     const isMorning=hour<12;
     const insight=isMorning?'Morning is peak quoting time · Most common: <b>'+ins.topService+'</b>':
       'Most common service: <b>'+ins.topService+'</b>'+(ins.lastClient?' · Last client: '+ins.lastClient.name:'');
-    intelCards.push({icon:'🧠',title:'AI Insight',text:insight,action:ins.lastClient?"aiSuggest('Generate a quote for "+ins.lastClient.name+"')":null,actionLabel:'Quote →'})
+    intelCards.push({icon:I('insight'),title:'AI Insight',text:insight,action:ins.lastClient?"aiSuggest('Generate a quote for "+ins.lastClient.name+"')":null,actionLabel:I('goto')})
   }
   
   // Priority engine: find most valuable lead
@@ -3413,7 +3582,7 @@ function renderTimeline(){
     const sorted=[...data.lead].sort((a,b)=>b.amount-a.amount);
     const top=sorted[0];
     if(top&&top.amount>0){
-      focusItem={name:top.name,amount:top.amount,service:top.type||'general',icon:'🎯'}
+      focusItem={name:top.name,amount:top.amount,service:top.type||'general',icon:I('focus')}
     }
   }
 
@@ -3488,8 +3657,8 @@ function renderPulse(){
   const leads=data?.lead?.length||0;
   const quoted=data?.quoted?.length||0;
   const items=[];
-  if(leads>3)items.push({icon:'📥',text:leads+' leads waiting for quotes',action:"switchPanel('leads')",btn:'View leads'});
-  if(quoted>1)items.push({icon:'💬',text:quoted+' pending quotes to send',action:"switchPanel('jobs')",btn:'View quotes'});
+  if(leads>3)items.push({icon:I('lead'),text:leads+' leads waiting for quotes',action:"switchPanel('leads')",btn:'View leads'});
+  if(quoted>1)items.push({icon:I('quote'),text:quoted+' pending quotes to send',action:"switchPanel('jobs')",btn:'View quotes'});
   if(items.length===0){pulse.classList.remove('sh');return}
   pulse.classList.add('sh');
   pulse.innerHTML='<div class="pulse-head"><span class="pulse-dot"></span> Needs Attention</div>'+
@@ -3930,7 +4099,7 @@ function detectAutopilot(){
   const createCount=Object.values(mem.services||{}).reduce((a,b)=>a+b,0);
   if(createCount>=3){
     patterns.push({
-      icon:'⚡',title:'Auto-quote after job creation',
+      icon:I('auto'),title:'Auto-quote after job creation',
       desc:'You always create a quote after adding a job. Want me to auto-suggest it?',
       action:"showNextActions([{icon:'📋',text:'Auto-quote new jobs',action:'toast(\"✅ Auto-quote enabled\")'}])",
       confidence:Math.min(createCount*10,90)
@@ -3942,7 +4111,7 @@ function detectAutopilot(){
     const mode=getTimeMode();
     if(mode.key==='morning'){
       patterns.push({
-        icon:'🌅',title:'Morning lead review',
+        icon:I('morning_icon'),title:'Morning lead review',
         desc:'You have <b>'+leadCount+' leads</b> — morning is your quoting time',
         action:"switchPanel('leads')",
         confidence:70
@@ -3965,20 +4134,20 @@ function renderContextBar(){
   const mode=getTimeMode();
   const chips=[];
   // Only show suggestions with MED/HIGH confidence — reduces noise
-  if(leads>0){const s=confidenceScore('lead',{});if(s>=50)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':''),action:'switchPanel(\'leads\')',urgent:leads>3,score:s})}
-  if(quoted>0){const s=confidenceScore('quote',{});if(s>=50)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')',score:s})}
-  if(activeJobs>0){const s=confidenceScore('job',{});if(s>=50)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5,score:s})}
-  if(ins.topService){const s=confidenceScore('quote',{service:ins.topService});if(s>=50)chips.push({label:'⚡ '+ins.topService,action:"aiSuggest('Generate a quote for "+ins.topService+"')",score:s})}
+  if(leads>0){const s=confidenceScore('lead',{});if(s>=50)chips.push({label:I('lead')+' '+leads+' lead'+(leads>1?'s':''),action:'switchPanel(\'leads\')',urgent:leads>3,score:s})}
+  if(quoted>0){const s=confidenceScore('quote',{});if(s>=50)chips.push({label:I('quote')+' '+quoted+' pending'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')',score:s})}
+  if(activeJobs>0){const s=confidenceScore('job',{});if(s>=50)chips.push({label:I('job')+' '+activeJobs+' active'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5,score:s})}
+  if(ins.topService){const s=confidenceScore('quote',{service:ins.topService});if(s>=50)chips.push({label:I('new')+' '+ins.topService+' quote',action:"aiSuggest('Generate a quote for "+ins.topService+"')",score:s})}
   // Always keep these quiet essentials
-  chips.push({label:'⌘ New job',action:'openQJ()'});
-  chips.push({label:'⌘ Search',action:'openCmd()'});
-  if(chips.length<=3)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
+  chips.push({label:I('cmd')+' New job',action:'openQJ()'});
+  chips.push({label:I('cmd')+' Search',action:'openCmd()'});
+  if(chips.length<=3)chips.push({label:I('summary')+' Summary',action:"aiSuggest('Show business summary')"});
   // If nothing relevant, show silent state
   if(chips.length<=2){
-    bar.innerHTML='<div class="silent-state" style="padding:var(--space-3);display:flex;align-items:center;gap:var(--space-3);text-align:left"><span style="font-size:16px;opacity:.5">✦</span><div><div style="font-size:11px;color:var(--fg3)">All quiet</div><div style="font-size:10px;color:var(--fg4)">'+mode.desc+'</div></div></div>';
+    bar.innerHTML='<div class="silent-state" style="padding:var(--space-3);display:flex;align-items:center;gap:var(--space-3);text-align:left"><span style="font-size:16px;opacity:.5">'+I('calm')+'</span><div><div style="font-size:11px;color:var(--fg3)">All quiet</div><div style="font-size:10px;color:var(--fg4)">'+mode.desc+'</div></div></div>';
     return
   }
-  bar.innerHTML='<span class="ctx-label" style="opacity:.6">'+mode.icon+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+'</span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
+  bar.innerHTML='<span class="ctx-label" style="opacity:.6">'+I(mode.key+'_icon')+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+'</span>':c.label)+'<span class="ctx-cmd">'+I('cmd')+'</span></button>').join('')
 }
 
 /* ═══ COGNITIVE OPERATIONAL — Energy-Sensitive Tones ═══ */
@@ -4007,7 +4176,7 @@ function renderSilenceState(){
     evening:'Good day\'s work. Ready for tomorrow? <b>⌘K</b> to prep',
     night:'Time to rest. Everything\'s ready for morning'
   };
-  feed.innerHTML='<div class="silent-state"><div class="silent-icon">'+(mode.key==='night'?'🌙':mode.key==='evening'?'🌆':'☀️')+'</div><div class="silent-title">'+mode.label+'</div><div class="silent-desc">'+(greetings[mode.key]||greetings.morning)+'</div></div>'
+  feed.innerHTML='<div class="silent-state"><div class="silent-icon">'+I(mode.key+'_icon')+'</div><div class="silent-title">'+mode.label+'</div><div class="silent-desc">'+(greetings[mode.key]||greetings.morning)+'</div></div>'
 }
 
 /* ═══ COGNITIVE OPERATIONAL — Attention Awareness ═══ */
@@ -4065,9 +4234,9 @@ function renderEODPrep(){
   el.innerHTML=
     '<div class="reflect-card"><div class="reflect-icon">'+icon+'</div><div class="reflect-title">Time to wrap up</div><div class="reflect-text">'+msg+'</div>'+
     '<div class="reflect-actions">'+
-      (leads>0?'<button class="reflect-btn" onclick="switchPanel(\'leads\')">📥 '+leads+' leads for tomorrow</button>':'')+
-      (quoted>0?'<button class="reflect-btn" onclick="switchPanel(\'jobs\')">💬 '+quoted+' quotes to send</button>':'')+
-      '<button class="reflect-btn soft" onclick="this.parentElement.parentElement.classList.remove(\'sh\')">✓ All good</button>'+
+      (leads>0?'<button class="reflect-btn" onclick="switchPanel(\'leads\')">'+I('lead')+' '+leads+' leads for tomorrow</button>':'')+
+      (quoted>0?'<button class="reflect-btn" onclick="switchPanel(\'jobs\')">'+I('quote')+' '+quoted+' quotes to send</button>':'')+
+      '<button class="reflect-btn soft" onclick="this.parentElement.parentElement.classList.remove(\'sh\')">'+I('done')+' All good</button>'+
     '</div></div>'
 }
 
