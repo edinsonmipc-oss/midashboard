@@ -1,121 +1,11 @@
 {
-  "updated": "2026-05-08T19:00",
+  "updated": "2026-05-09T07:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
   "leads_by_date": {
-    "2026-05-03_batch1": [
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "LJ Hooker",
-        "email": "commercial@ljhooker.com",
-        "website": "ljhooker.com",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "notes": "Buscan contractors para mantenimiento",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "Hockingstuart",
-        "email": "commercial@hockingstuart.com.au",
-        "website": "hockingstuart.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Boutique Homes",
-        "email": "info@boutiquehomes.com.au",
-        "website": "boutiquehomes.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-08T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Dexus",
-        "email": "leasing@dexus.com",
-        "website": "dexus.com",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "Jellis Craig",
-        "email": "commercial@jelliscraig.com.au",
-        "website": "jelliscraig.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "Brookfield Multiplex",
-        "email": "procurement@brookfieldmultiplex.com",
-        "website": "brookfieldmultiplex.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "Knight Frank Australia",
-        "email": "property@knightfrank.com.au",
-        "website": "knightfrank.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
-      }
-    ],
     "2026-05-03_batch2": [
       {
         "company": "PICA Group",
@@ -1479,6 +1369,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-09_batch14": [
+      {
+        "company": "Burbank Homes",
+        "email": "supplier@burbank.com.au",
+        "website": "burbank.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "website": "carltonhomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "website": "goodman.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Barry Plant",
+        "email": "property@barryplant.com.au",
+        "website": "barryplant.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Boutique Homes",
+        "email": "info@boutiquehomes.com.au",
+        "website": "boutiquehomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Volumen alto de proyectos",
+        "verified": "unknown"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran edificios y propiedades",
+        "verified": "unknown"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "unknown"
       }
     ]
