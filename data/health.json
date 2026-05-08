@@ -12,7 +12,7 @@
         "Ejecutar supabase-migration.sql para columnas completas",
         "Mejorar velocidad de carga (Render free plan)",
         "Agregar SSL personalizado",
-        "Traducir más páginas a inglés",
+        "Traducir m\u00e1s p\u00e1ginas a ingl\u00e9s",
         "Agregar PWA install prompt"
       ]
     },
@@ -32,9 +32,9 @@
       },
       "issues": [],
       "improvements": [
-        "Mejorar top-10 keywords para subir posición promedio",
+        "Mejorar top-10 keywords para subir posici\u00f3n promedio",
         "Construir backlinks (directorios, partnerships locales)",
-        "Agregar más contenido por suburbio de Melbourne",
+        "Agregar m\u00e1s contenido por suburbio de Melbourne",
         "Optimizar Google Business Profile con fotos"
       ],
       "seo_score": 0.0
@@ -47,10 +47,10 @@
       "last_checked": "2026-05-08T08:00",
       "issues": [],
       "improvements": [
-        "Sección de leads ya agregada ✅",
-        "Health checks automáticos agregados ✅",
-        "6 negocios registrados con métricas actualizadas",
-        "Diseño oscuro responsive"
+        "Secci\u00f3n de leads ya agregada \u2705",
+        "Health checks autom\u00e1ticos agregados \u2705",
+        "6 negocios registrados con m\u00e9tricas actualizadas",
+        "Dise\u00f1o oscuro responsive"
       ]
     },
     {
@@ -88,7 +88,7 @@
       },
       "issues": [],
       "improvements": [
-        "8 páginas de suburbios nuevas",
+        "8 p\u00e1ginas de suburbios nuevas",
         "Sitemap 379 URLs",
         "Schema LocalBusiness por suburbio",
         "404s corregidos, 33 redirects 301"
@@ -110,8 +110,9 @@
     }
   ],
   "email_stats": {
-    "last_send": "2026-05-08T08:00",
-    "total_sent": 18
+    "last_send": "2026-05-08T11:36",
+    "total_sent": 18,
+    "sent_today": 9
   },
   "seo_audit": {
     "updated": "2026-05-08T08:00",

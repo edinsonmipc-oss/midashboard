@@ -47,8 +47,7 @@ def save_json(path, data):
 def render_body(template_body, company, from_name, signature):
     """Reemplaza [COMPANY] y personaliza el body."""
     body = template_body.replace("[COMPANY]", company)
-    # Add footer
-    body += f"\n\n---\n{signature}"
+    # Templates are self-contained with full signature — no extra footer needed
     return body
 
 def render_html_body(body):
