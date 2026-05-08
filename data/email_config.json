@@ -1,26 +1,25 @@
 {
   "sender_email": "antonioprimemaintenance@gmail.com",
-  "sender_name": "Antonio Paving",
+  "sender_name": "Antonio PrimeScape Construction",
   "smtp_server": "smtp.gmail.com",
   "smtp_port": 587,
   "use_tls": true,
   "password": "pvir coud cwng udvs",
   "gmail_app_password": "pvir coud cwng udvs",
-  "daily_limit": 10,
+  "daily_limit": 8,
   "min_delay_seconds": 180,
-  "max_delay_seconds": 420,
+  "max_delay_seconds": 300,
   "business_addresses": {
     "antoniopaving": {
-      "from_name": "Antonio Paving",
-      "from_email": "info@antoniopaving.com.au",
-      "signature": "Antonio Paving\nhttps://antoniopaving.com\ninfo@antoniopaving.com.au"
+      "from_name": "Antonio PrimeScape Construction",
+      "from_email": "antonioprimemaintenance@gmail.com",
+      "signature": "Antonio PrimeScape Construction\nantoniopaving.com | 0406 170 544"
     },
     "primeproperty": {
       "from_name": "Prime Property Maintenance",
-      "from_email": "info@primepropertymaintenance.au",
-      "signature": "Prime Property Maintenance\nhttps://primepropertymaintenance.au\ninfo@primepropertymaintenance.au"
+      "from_email": "antonioprimemaintenance@gmail.com",
+      "signature": "Prime Property Maintenance\nprimepropertymaintenance.au | 0468 166 249"
     }
   },
-  "setup_instructions": "Para activar el env\u00edo autom\u00e1tico:\n1. Ve a https://myaccount.google.com/security\n2. Activa 'Verificaci\u00f3n en dos pasos' si no est\u00e1 activada\n3. Ve a 'Contrase\u00f1as de aplicaciones'\n4. Crea una nueva app password para 'Correo'\n5. Copia la contrase\u00f1a de 16 caracteres a 'gmail_app_password' en este archivo\n6. El sender_email debe ser el Gmail que gener\u00f3 la app password",
   "smtp_username": "antonioprimemaintenance@gmail.com"
 }
