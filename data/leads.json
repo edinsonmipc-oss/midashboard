@@ -15,7 +15,7 @@
         "contact": "",
         "notes": "Grandes proyectos comerciales en Melbourne CBD",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Hickory Group",
@@ -25,7 +25,7 @@
         "contact": "",
         "notes": "L\u00edderes en construcci\u00f3n modular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Mirvac Real Estate",
@@ -35,7 +35,7 @@
         "contact": "",
         "notes": "Desarrollos residenciales premium",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -47,7 +47,7 @@
         "contact": "",
         "notes": "Grandes desarrollos mixtos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Lendlease",
@@ -57,7 +57,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -69,7 +69,7 @@
         "contact": "",
         "notes": "Constructora de viviendas #1 en Australia",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -80,8 +80,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas Melbourne",
-        "verified": "risky",
-        "verified_reason": "DNS check failed"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "Stockland",
@@ -91,7 +91,7 @@
         "contact": "",
         "notes": "Desarrollador de comunidades master-planned",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Kennards Hire",
@@ -101,7 +101,7 @@
         "contact": "",
         "notes": "Alquiler de equipos de construcci\u00f3n",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Cbus Property",
@@ -111,7 +111,7 @@
         "contact": "",
         "notes": "Desarrollos comerciales de alta calidad",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       }
@@ -125,7 +125,7 @@
         "contact": "",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "LJ Hooker",
@@ -135,7 +135,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "ACE Body Corporate",
@@ -145,7 +145,7 @@
         "contact": "",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Hockingstuart",
@@ -155,7 +155,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -167,7 +167,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -179,7 +179,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -191,7 +191,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Jellis Craig",
@@ -201,7 +201,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Brookfield Multiplex",
@@ -211,7 +211,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Knight Frank Australia",
@@ -221,7 +221,7 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       }
@@ -235,7 +235,7 @@
         "contact": "",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -247,7 +247,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Cushman & Wakefield",
@@ -257,7 +257,7 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Kay & Burton",
@@ -267,7 +267,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -279,7 +279,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -291,7 +291,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "GPT Group",
@@ -301,7 +301,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -313,7 +313,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (3 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -325,7 +325,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Kane Constructions",
@@ -335,7 +335,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-03_batch3": [
@@ -347,7 +347,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Collins Simms",
@@ -356,8 +356,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "Built",
@@ -367,7 +367,7 @@
         "contact": "",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -379,7 +379,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Colliers International",
@@ -389,7 +389,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Cbus Property",
@@ -399,7 +399,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Ray White",
@@ -409,7 +409,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Goodman Group",
@@ -419,7 +419,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "First National Real Estate",
@@ -428,8 +428,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "Probuild",
@@ -439,7 +439,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       }
     ],
     "2026-05-04_batch4": [
@@ -451,7 +451,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "PICA Group",
@@ -461,7 +461,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "ACE Body Corporate",
@@ -471,7 +471,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Cbus Property",
@@ -481,7 +481,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "AVJennings",
@@ -491,7 +491,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Watpac",
@@ -501,7 +501,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Hansen Yuncken",
@@ -511,7 +511,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -523,7 +523,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       },
       {
         "company": "Savills Australia",
@@ -533,7 +533,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -545,7 +545,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-04_batch5": [
@@ -557,7 +557,7 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Cbus Property",
@@ -567,7 +567,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Kane Constructions",
@@ -577,7 +577,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Porter Davis",
@@ -586,8 +586,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Volumen alto de proyectos",
-        "verified": "risky",
-        "verified_reason": "DNS check failed"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "Laing O'Rourke",
@@ -597,7 +597,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Lendlease",
@@ -607,7 +607,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Hickory Group",
@@ -617,7 +617,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Stockland",
@@ -627,7 +627,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Charter Hall",
@@ -637,7 +637,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "AVJennings",
@@ -647,7 +647,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-05_batch6": [
@@ -659,7 +659,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Mirvac",
@@ -669,7 +669,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Downer Group",
@@ -679,7 +679,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -691,7 +691,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Century 21",
@@ -701,7 +701,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       },
       {
         "company": "Stockland",
@@ -711,7 +711,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Hansen Yuncken",
@@ -721,7 +721,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Kay & Burton",
@@ -731,7 +731,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "AVJennings",
@@ -741,7 +741,7 @@
         "contact": "",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Simonds Homes",
@@ -751,7 +751,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       }
     ],
     "2026-05-05_batch7": [
@@ -763,7 +763,7 @@
         "contact": "",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Hockingstuart",
@@ -773,7 +773,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Mirvac",
@@ -783,7 +783,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -795,7 +795,7 @@
         "contact": "",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Henley Homes",
@@ -805,7 +805,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Ray White",
@@ -815,7 +815,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "ISPT",
@@ -825,7 +825,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "ACE Body Corporate",
@@ -835,7 +835,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Savills Australia",
@@ -845,7 +845,7 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Fletchers Real Estate",
@@ -855,7 +855,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       }
     ],
     "2026-05-06_batch8": [
@@ -867,7 +867,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       },
       {
         "company": "Hansen Yuncken",
@@ -877,7 +877,7 @@
         "contact": "",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Lendlease",
@@ -887,7 +887,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Downer Group",
@@ -897,7 +897,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "PICA Group",
@@ -907,7 +907,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Hockingstuart",
@@ -917,7 +917,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Brookfield Multiplex",
@@ -927,7 +927,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Charter Hall",
@@ -937,7 +937,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "First National Real Estate",
@@ -946,8 +946,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "McGrath Estate Agents",
@@ -957,7 +957,7 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       }
     ],
     "2026-05-06_batch9": [
@@ -969,7 +969,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       },
       {
         "company": "Downer Group",
@@ -979,7 +979,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Savills Australia",
@@ -989,7 +989,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Probuild",
@@ -999,7 +999,7 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "LJ Hooker",
@@ -1009,7 +1009,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "CBRE Australia",
@@ -1019,7 +1019,7 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Dexus",
@@ -1029,7 +1029,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Metricon",
@@ -1039,7 +1039,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "John Holland",
@@ -1049,7 +1049,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Knight Frank Australia",
@@ -1059,7 +1059,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-07_batch10": [
@@ -1071,7 +1071,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "PRDnationwide",
@@ -1081,7 +1081,7 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Hickory Group",
@@ -1091,7 +1091,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Laing O'Rourke",
@@ -1101,7 +1101,7 @@
         "contact": "",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "First National Real Estate",
@@ -1110,8 +1110,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       },
       {
         "company": "ACE Body Corporate",
@@ -1121,7 +1121,7 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Henley Homes",
@@ -1131,7 +1131,7 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Downer Group",
@@ -1141,7 +1141,7 @@
         "contact": "",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "CBRE Australia",
@@ -1151,7 +1151,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Metricon",
@@ -1161,7 +1161,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-07_batch11": [
@@ -1173,7 +1173,7 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "LJ Hooker",
@@ -1183,7 +1183,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Hansen Yuncken",
@@ -1193,7 +1193,7 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Metricon",
@@ -1203,7 +1203,7 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1213,7 +1213,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Strata Title Management",
@@ -1223,7 +1223,7 @@
         "contact": "",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Colliers International",
@@ -1233,7 +1233,7 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Marshall White",
@@ -1243,7 +1243,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (3 servers)"
       },
       {
         "company": "Hockingstuart",
@@ -1253,7 +1253,7 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Porter Davis",
@@ -1262,8 +1262,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "risky",
-        "verified_reason": "DNS check failed"
+        "verified": "invalid",
+        "verified_reason": "no_mx"
       }
     ],
     "2026-05-07_batch12": [
@@ -1276,7 +1276,7 @@
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "GPT Group",
@@ -1287,7 +1287,7 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Lendlease",
@@ -1298,7 +1298,7 @@
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Century 21",
@@ -1309,7 +1309,7 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (5 servers)"
       },
       {
         "company": "John Holland",
@@ -1320,7 +1320,7 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Downer Group",
@@ -1331,7 +1331,7 @@
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Ray White",
@@ -1342,7 +1342,7 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Metricon",
@@ -1353,7 +1353,7 @@
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Frasers Property",
@@ -1364,7 +1364,7 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "ISPT",
@@ -1375,7 +1375,7 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       }
     ],
     "2026-05-08_batch13": [
@@ -1388,7 +1388,7 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "AVJennings",
@@ -1399,7 +1399,7 @@
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Cushman & Wakefield",
@@ -1410,7 +1410,7 @@
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Colliers International",
@@ -1421,7 +1421,7 @@
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Charter Hall",
@@ -1432,7 +1432,7 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "Metricon",
@@ -1443,7 +1443,7 @@
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "PRDnationwide",
@@ -1454,7 +1454,7 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       },
       {
         "company": "ACE Body Corporate",
@@ -1465,7 +1465,7 @@
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Laing O'Rourke",
@@ -1476,7 +1476,7 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (2 servers)"
       },
       {
         "company": "Kay & Burton",
@@ -1487,7 +1487,7 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "MX OK (1 servers)"
       }
     ]
   }
