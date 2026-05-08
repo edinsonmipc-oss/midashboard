@@ -339,7 +339,128 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .ar-text{font-size:12px;color:var(--fg2);line-height:1.4}
 .ar-meta{font-size:10px;color:var(--fg4);display:flex;gap:var(--space-2);margin-top:1px}
 .ar-proj{font-size:9.5px;font-weight:600;color:var(--accent)}
+
+/* ═══ AI ASSISTANT ═══ */
+#ai-bubble{position:fixed;bottom:24px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
+#ai-bubble:hover{transform:scale(1.08);box-shadow:0 6px 28px var(--accent-glow)}
+#ai-bubble .pulse{position:absolute;width:100%;height:100%;border-radius:50%;border:2px solid var(--accent);animation:aiPulse 2s infinite;opacity:.4}
+@keyframes aiPulse{0%{transform:scale(1);opacity:.4}100%{transform:scale(1.5);opacity:0}}
+#ai-panel{position:fixed;bottom:92px;right:24px;width:380px;max-width:94vw;height:520px;max-height:70vh;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-xl);box-shadow:var(--shadow-lg),0 0 40px rgba(0,0,0,.3);display:none;flex-direction:column;z-index:900;overflow:hidden;animation:cmdSlide .2s ease}
+#ai-panel.open{display:flex}
+#ai-h{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--card-border);background:var(--bg2)}
+#ai-h .ai-av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+#ai-h h3{font-size:13px;font-weight:600;flex:1}
+#ai-h .ai-status{font-size:10px;color:var(--green);display:flex;align-items:center;gap:4px}
+#ai-h .ai-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green)}
+#ai-h .ai-close{background:none;border:none;color:var(--fg3);cursor:pointer;font-size:18px;padding:2px;font-family:inherit;line-height:1}
+#ai-msgs{flex:1;overflow-y:auto;padding:var(--space-3);display:flex;flex-direction:column;gap:var(--space-2)}
+.ai-msg{max-width:85%;padding:var(--space-2) var(--space-3);border-radius:var(--rad-lg);font-size:12.5px;line-height:1.5;animation:msgIn .2s ease}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0)}}
+.ai-msg.user{background:var(--accent);color:#fff;align-self:flex-end;border-bottom-right-radius:var(--rad-sm)}
+.ai-msg.bot{background:var(--bg3);color:var(--fg2);align-self:flex-start;border-bottom-left-radius:var(--rad-sm)}
+.ai-msg.bot .msg-label{font-size:9px;color:var(--fg4);margin-bottom:2px;font-weight:600;text-transform:uppercase}
+.ai-msg .msg-content p{margin:4px 0}
+.ai-msg .msg-content code{padding:1px 5px;background:var(--card);border-radius:4px;font-size:11px;color:var(--accent)}
+.ai-msg .msg-content strong{font-weight:600;color:var(--fg)}
+#ai-inp{display:flex;gap:var(--space-2);padding:var(--space-3);border-top:1px solid var(--card-border);background:var(--bg2)}
+#ai-inp input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-2) var(--space-3);color:var(--fg);font-size:12.5px;font-family:inherit;outline:none;transition:border var(--ts)}
+#ai-inp input:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+#ai-inp button{width:36px;height:36px;border-radius:50%;background:var(--accent);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--ts);flex-shrink:0}
+#ai-inp button:hover{background:var(--accent-hov);transform:scale(1.05)}#ai-inp button:disabled{opacity:.4;cursor:not-allowed}
+#ai-inp button svg{width:16px;height:16px}
+.ai-suggestions{display:flex;gap:var(--space-1);flex-wrap:wrap;padding:var(--space-1) var(--space-3) var(--space-2)}
+.ai-suggestions button{font-size:10px;padding:3px 10px;background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-full);color:var(--fg3);cursor:pointer;transition:all var(--ts);font-family:inherit}
+.ai-suggestions button:hover{background:var(--card-hov);border-color:var(--accent);color:var(--accent)}
+.ai-typing{display:flex;gap:4px;padding:6px 12px;align-items:center;align-self:flex-start}
+.ai-typing span{width:6px;height:6px;border-radius:50%;background:var(--fg4);animation:typing 1.2s infinite}
+.ai-typing span:nth-child(2){animation-delay:.2s}.ai-typing span:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
+
+/* ═══ AI QUOTES ═══ */
+.qf{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+@media(max-width:768px){.qf{grid-template-columns:1fr}}
+.qf-group{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4)}
+.qf-group h3{font-size:12px;font-weight:600;color:var(--fg3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:var(--space-3)}
+.qf-field{margin-bottom:var(--space-2)}
+.qf-field label{display:block;font-size:11px;color:var(--fg3);margin-bottom:3px;font-weight:500}
+.qf-field input,.qf-field select,.qf-field textarea{width:100%;background:var(--bg);border:1px solid var(--card-border);border-radius:var(--rad);padding:var(--space-2) var(--space-3);color:var(--fg);font-size:12.5px;font-family:inherit;outline:none;transition:border var(--ts)}
+.qf-field input:focus,.qf-field select:focus,.qf-field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-glow)}
+.qf-field textarea{min-height:70px;resize:vertical}
+.qf-services{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-1)}
+.qf-service{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-1) var(--space-2);background:var(--bg);border:1px solid var(--card-border);border-radius:var(--rad-sm);cursor:pointer;transition:all var(--ts);font-size:11px;color:var(--fg2);font-family:inherit}
+.qf-service:hover{border-color:var(--card-border-hov)}
+.qf-service.sel{background:var(--accent-subtle);border-color:var(--accent);color:var(--accent)}
+.qf-service input{display:none}
+.qr{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4);margin-top:var(--space-3);white-space:pre-wrap;font-size:13px;line-height:1.7;color:var(--fg2);display:none}
+.qr.sh{display:block;animation:fadeUp .3s ease}
+.qr h4{color:var(--fg);font-size:16px;font-weight:700;margin-bottom:var(--space-2)}
+.qr table{width:100%;border-collapse:collapse;margin:var(--space-2) 0;font-size:12px}
+.qr table th,.qr table td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--card-border)}
+.qr table th{color:var(--fg3);font-weight:600;font-size:11px;text-transform:uppercase}
+.qr table td{color:var(--fg2)}
+.qr .qr-total{font-size:18px;font-weight:700;color:var(--accent);text-align:right;margin-top:var(--space-2)}
+.qr .qr-header{text-align:center;margin-bottom:var(--space-3);padding-bottom:var(--space-3);border-bottom:2px solid var(--card-border)}
+.qr .qr-header h2{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.qr .qr-header p{font-size:11px;color:var(--fg3)}
+.qr .qr-terms{font-size:11px;color:var(--fg3);margin-top:var(--space-3);border-top:1px solid var(--card-border);padding-top:var(--space-3)}
+
+/* ═══ JOB CRM (Drag & Drop) ═══ */
+.jc{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-2)}
+@media(max-width:1100px){.jc{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.jc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:450px){.jc{grid-template-columns:1fr}}
+.jcol{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);padding:var(--space-2);min-height:100px}
+.jcol-h{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-2);padding:0 var(--space-1)}
+.jcol-h h4{font-size:10px;color:var(--fg4);text-transform:uppercase;letter-spacing:.5px;font-weight:600;flex:1}
+.jcol-h .jc-count{font-size:9px;font-weight:600;background:var(--card);padding:1px 7px;border-radius:var(--rad-full);color:var(--fg3)}
+.jcard{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad);padding:var(--space-2) var(--space-3);margin-bottom:var(--space-1);cursor:grab;transition:all var(--ts);font-size:11.5px}
+.jcard:hover{border-color:var(--card-border-hov);background:var(--card-hov);transform:translateY(-1px)}
+.jcard.dragging{opacity:.5;transform:scale(.95)}
+.jcard .jc-name{font-weight:600;color:var(--fg);font-size:12px;margin-bottom:2px}
+.jcard .jc-detail{font-size:10px;color:var(--fg3);display:flex;gap:var(--space-2);align-items:center;flex-wrap:wrap}
+.jcard .jc-amount{font-size:12px;font-weight:700;color:var(--accent)}
+.jcard .jc-badge{font-size:8px;font-weight:600;padding:1px 6px;border-radius:4px;text-transform:uppercase}
+.jcard .jc-badge.paving{background:var(--accent-subtle);color:var(--accent)}
+.jcard .jc-badge.fencing{background:var(--green-bg);color:var(--green)}
+.jcard .jc-badge.decking{background:var(--orange-bg);color:var(--orange)}
+.jcard .jc-badge.cleaning{background:var(--cyan-bg);color:var(--cyan)}
+.jcard .jc-badge.handyman{background:var(--purple-bg);color:var(--purple)}
+.jcol.drag-over{background:var(--card-hov);border-color:var(--accent)}
+.jcol.drag-over .jcol-h h4{color:var(--accent)}
+
+/* ═══ PHOTO WORKFLOW ═══ */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:var(--space-2)}
+@media(max-width:500px){.pg{grid-template-columns:repeat(2,1fr)}}
+.photo-card{position:relative;border-radius:var(--rad-lg);overflow:hidden;background:var(--bg3);border:1px solid var(--card-border);aspect-ratio:4/3;cursor:pointer;transition:all var(--ts)}
+.photo-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.photo-card img{width:100%;height:100%;object-fit:cover}
+.photo-card .photo-label{position:absolute;bottom:0;left:0;right:0;padding:var(--space-1) var(--space-2);background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:10px;color:var(--fg);font-weight:500}
+.photo-card .photo-badge{position:absolute;top:6px;right:6px;font-size:9px;font-weight:600;padding:1px 6px;border-radius:4px}
+.photo-card .photo-badge.before{background:var(--yellow-bg);color:var(--yellow)}
+.photo-card .photo-badge.after{background:var(--green-bg);color:var(--green)}
+.photo-uploader{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-6);border:2px dashed var(--card-border);border-radius:var(--rad-lg);cursor:pointer;transition:all var(--ts);text-align:center;min-height:120px;color:var(--fg3);font-size:12px}
+.photo-uploader:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-subtle)}
+.camera-btn{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-5);background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);color:var(--fg2);cursor:pointer;transition:all var(--ts);font-family:inherit;font-size:13px}
+.camera-btn:hover{background:var(--card-hov);border-color:var(--accent);color:var(--fg)}
+.camera-btn svg{width:20px;height:20px}
+#camera-view{position:fixed;inset:0;z-index:1100;background:#000;display:none;flex-direction:column}
+#camera-view.open{display:flex}
+#camera-view video{flex:1;object-fit:cover;width:100%}
+#camera-controls{display:flex;justify-content:center;gap:var(--space-6);padding:var(--space-4);background:rgba(0,0,0,.5)}
+#camera-controls button{width:56px;height:56px;border-radius:50%;border:3px solid #fff;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;transition:all var(--ts)}
+#camera-controls button:hover{background:rgba(255,255,255,.1)}
+#camera-controls .capture-btn{width:72px;height:72px;background:#fff;border:4px solid #fff}
+.capture-btn:hover{background:#eee!important}
+#camera-controls .close-cam{border-color:var(--red);color:var(--red)}
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:var(--rad);overflow:hidden;margin:var(--space-2) 0}
+.before-after img{width:100%;height:120px;object-fit:cover}
+.ba-label{position:absolute;bottom:4px;left:4px;font-size:8px;font-weight:600;padding:1px 6px;border-radius:4px;background:rgba(0,0,0,.6);color:#fff}
 </style>
+<link rel="manifest" id="manifest-link">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TRADIOS">
+<meta name="theme-color" content="#060608">
 </head>
 <body>
 
@@ -382,8 +503,17 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 </div>
 <div class="sb-sec">
   <div class="sb-label">Operations</div>
+  <button class="sb-btn" data-pn="quotes" onclick="switchPanel('quotes')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Quotes<span class="sbc" id="q-badge">0</span>
+  </button>
+  <button class="sb-btn" data-pn="jobs" onclick="switchPanel('jobs')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Jobs<span class="sbc" id="j-badge">0</span>
+  </button>
   <button class="sb-btn" data-pn="tasks" onclick="switchPanel('tasks')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Tasks
+  </button>
+  <button class="sb-btn" data-pn="photos" onclick="switchPanel('photos')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photos<span class="sbc" id="p-badge">0</span>
   </button>
   <button class="sb-btn" data-pn="agents" onclick="switchPanel('agents')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8"/><rect x="14" y="2" width="8" height="8"/><rect x="2" y="14" width="8" height="8"/><path d="M18 18v0a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>AI Agents
@@ -416,6 +546,12 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   </button>
   <button class="bn-btn" data-pn="tasks" onclick="switchPanel('tasks');closeSidebar()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Tasks
+  </button>
+  <button class="bn-btn" data-pn="jobs" onclick="switchPanel('jobs');closeSidebar()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Jobs
+  </button>
+  <button class="bn-btn" data-pn="quotes" onclick="switchPanel('quotes');closeSidebar()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Quotes
   </button>
   <button class="bn-btn" data-pn="sites" onclick="switchPanel('sites');closeSidebar()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Sites
@@ -519,6 +655,77 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <div id="biz-list" class="bg2"></div>
 </div>
 
+<!-- ══════ AI QUOTES ══════ -->
+<div class="pn" id="pn-quotes">
+  <div class="sh"><h2>AI Quote Generator</h2><span class="shl">Create professional quotes in seconds</span></div>
+  <div class="qf">
+    <div class="qf-group">
+      <h3>Client Details</h3>
+      <div class="qf-field"><label>Client / Company</label><input id="q-client" placeholder="e.g. John Holland" list="q-client-list"><datalist id="q-client-list"></datalist></div>
+      <div class="qf-field"><label>Contact Name</label><input id="q-contact" placeholder="Client name"></div>
+      <div class="qf-field"><label>Address / Site</label><input id="q-address" placeholder="Job location"></div>
+    </div>
+    <div class="qf-group">
+      <h3>Scope of Work</h3>
+      <div class="qf-field"><label>Services Required</label><div class="qf-services" id="q-services">
+        <label class="qf-service"><input type="checkbox" value="Brick Paving"> Brick Paving</label>
+        <label class="qf-service"><input type="checkbox" value="Concrete Paving"> Concrete Paving</label>
+        <label class="qf-service"><input type="checkbox" value="Decking"> Decking</label>
+        <label class="qf-service"><input type="checkbox" value="Fencing"> Fencing</label>
+        <label class="qf-service"><input type="checkbox" value="Landscaping"> Landscaping</label>
+        <label class="qf-service"><input type="checkbox" value="Gutter Cleaning"> Gutter Cleaning</label>
+        <label class="qf-service"><input type="checkbox" value="Pressure Washing"> Pressure Washing</label>
+        <label class="qf-service"><input type="checkbox" value="Handyman"> Handyman</label>
+      </div></div>
+      <div class="qf-field"><label>Scope Description</label><textarea id="q-scope" placeholder="Brief description of work..."></textarea></div>
+    </div>
+    <div class="qf-group">
+      <h3>Pricing</h3>
+      <div class="qf-field"><label>Estimated Days</label><input id="q-days" type="number" value="3" min="0.5" step="0.5"></div>
+      <div class="qf-field"><label>Labor Rate ($/hr)</label><input id="q-rate" type="number" value="75" min="0"></div>
+      <div class="qf-field"><label>Material Cost ($)</label><input id="q-materials" type="number" value="0" min="0"></div>
+    </div>
+    <div class="qf-group" style="display:flex;flex-direction:column;justify-content:flex-end">
+      <h3>Generate</h3>
+      <button class="btn btn-p w-full" onclick="generateQuote()" id="q-gen-btn" style="padding:14px;font-size:14px;justify-content:center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Generate AI Quote
+      </button>
+      <div style="margin-top:8px;display:flex;gap:8px">
+        <button class="btn w-full" onclick="copyQuote()" id="q-copy-btn" style="display:none;justify-content:center">📋 Copy Quote</button>
+        <button class="btn btn-g w-full" onclick="saveQuote()" id="q-save-btn" style="display:none;justify-content:center">💾 Save Quote</button>
+      </div>
+      <div style="margin-top:12px"><span class="text-muted" id="q-history-label"><a href="#" onclick="showQuoteHistory();return false" style="color:var(--accent);text-decoration:none">📋 Quote History →</a></span></div>
+    </div>
+  </div>
+  <div class="qr" id="qr"></div>
+</div>
+
+<!-- ══════ JOBS CRM ══════ -->
+<div class="pn" id="pn-jobs">
+  <div class="sh"><h2>Job CRM</h2><span class="shl">Drag & drop to update status · <a href="#" onclick="addSampleJobs();return false" style="color:var(--accent);text-decoration:none">Add sample jobs</a></span></div>
+  <div class="jc" id="job-board"></div>
+</div>
+
+<!-- ══════ PHOTOS ══════ -->
+<div class="pn" id="pn-photos">
+  <div class="sh"><h2>Photo Gallery</h2><span class="shl">Before & after · Job photos</span></div>
+  <div class="flex block gap-2">
+    <button class="camera-btn" onclick="openCamera()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Take Photo
+    </button>
+    <label class="camera-btn" style="cursor:pointer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Upload Photo
+      <input type="file" accept="image/*" multiple style="display:none" onchange="uploadPhotos(this.files)">
+    </label>
+    <select id="photo-filter" class="btn btn-sm" onchange="renderPhotos()">
+      <option value="all">All Photos</option>
+      <option value="before">Before</option>
+      <option value="after">After</option>
+    </select>
+  </div>
+  <div class="pg" id="photo-grid"></div>
+</div>
+
 <!-- ══════ TASKS ══════ -->
 <div class="pn" id="pn-tasks">
   <div class="sh"><h2>Tasks</h2><span class="shl">Kanban · Click to complete</span></div>
@@ -549,8 +756,39 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <div class="sc"><div class="sc-b"><div id="full-log" class="tl"></div></div></div>
 </div>
 
-</div><!-- .c -->
+</div><!-- /.c -->
 </main>
+
+<!-- ═══ AI ASSISTANT ═══ -->
+<button id="ai-bubble" onclick="toggleAI()" aria-label="AI Assistant">
+  <div class="pulse"></div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px;height:26px"><path d="M12 2a4 4 0 0 1 4 4v1h1a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4h-1v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4v-1H7a4 4 0 0 1-4-4v-1a4 4 0 0 1 4-4h1V6a4 4 0 0 1 4-4z"/></svg>
+</button>
+<div id="ai-panel">
+  <div id="ai-h"><div class="ai-av">AI</div><h3>AI Assistant</h3><span class="ai-status">Online</span><button class="ai-close" onclick="toggleAI()">✕</button></div>
+  <div id="ai-msgs"><div class="ai-msg bot"><div class="msg-label">TRADIOS AI</div><div class="msg-content">👋 Hey! I'm your AI assistant. Ask me to generate a quote, find a lead, or help with anything tradie-related.</div></div></div>
+  <div class="ai-suggestions">
+    <button onclick="aiSuggest('Generate a quote for brick paving job')">📋 Generate quote</button>
+    <button onclick="aiSuggest('Show me pending leads')">👥 Show leads</button>
+    <button onclick="aiSuggest('Create a job for fencing in Glen Waverley')">🔨 Create job</button>
+    <button onclick="aiSuggest('Help me write an email to a builder')">✉️ Write email</button>
+  </div>
+  <div id="ai-inp">
+    <input id="ai-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendAI()">
+    <button onclick="sendAI()" id="ai-send-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+  </div>
+</div>
+
+<!-- ═══ CAMERA VIEW ═══ -->
+<div id="camera-view">
+  <video id="camera-video" autoplay playsinline></video>
+  <div id="camera-controls">
+    <button class="close-cam" onclick="closeCamera()">✕</button>
+    <button class="capture-btn" onclick="capturePhoto()"></button>
+    <button onclick="flipCamera()" style="border-color:var(--fg3);width:44px;height:44px;font-size:16px">🔄</button>
+  </div>
+  <canvas id="camera-canvas" style="display:none"></canvas>
+</div>
 
 <div id="to"></div>
 <div id="tmo"><div id="tmp">
@@ -603,7 +841,7 @@ function switchPanel(id){
   document.querySelectorAll('.pn').forEach(p=>p.classList.remove('on'));
   const pn=document.getElementById('pn-'+id);if(pn)pn.classList.add('on');
   document.querySelectorAll('.sb-btn,.bn-btn').forEach(b=>b.classList.toggle('on',b.dataset.pn===id));
-  const titles={dashboard:['Dashboard','Overview'],leads:['Leads CRM','Outreach'],sites:['Site Health','Monitoring'],businesses:['Businesses','Projects'],tasks:['Tasks','Kanban'],agents:['AI Agents','Automations'],notes:['Notes','Quick Notes'],changelog:['Changelog','History']};
+  const titles={dashboard:['Dashboard','Overview'],leads:['Leads CRM','Outreach'],quotes:['AI Quotes','Generator'],jobs:['Job CRM','Drag & Drop'],photos:['Photos','Gallery'],sites:['Site Health','Monitoring'],businesses:['Businesses','Projects'],tasks:['Tasks','Kanban'],agents:['AI Agents','Automations'],notes:['Notes','Quick Notes'],changelog:['Changelog','History']};
   const t=titles[id]||[id,''];
   document.getElementById('page-title').textContent=t[0];
   document.getElementById('page-sub').textContent=t[1];
@@ -615,7 +853,19 @@ function toggleSidebar(){document.getElementById('sb').classList.toggle('open')}
 function closeSidebar(){document.getElementById('sb').classList.remove('open')}
 
 /* ═══ CMD+K ═══ */
-const CMD_PAGES=[{id:'dashboard',name:'Dashboard',desc:'Overview & metrics',icon:'🏠'},{id:'leads',name:'Leads CRM',desc:'Contacts & outreach',icon:'👥'},{id:'sites',name:'Site Health',desc:'Monitor websites',icon:'🌐'},{id:'businesses',name:'Businesses',desc:'All projects',icon:'🏢'},{id:'tasks',name:'Tasks',desc:'Kanban board',icon:'✅'},{id:'agents',name:'AI Agents',desc:'Automations',icon:'🤖'},{id:'notes',name:'Notes',desc:'Quick notes',icon:'📝'},{id:'changelog',name:'Changelog',desc:'Recent updates',icon:'📋'}];
+const CMD_PAGES=[
+  {id:'dashboard',name:'Dashboard',desc:'Overview & metrics',icon:'🏠'},
+  {id:'leads',name:'Leads CRM',desc:'Contacts & outreach',icon:'👥'},
+  {id:'quotes',name:'AI Quotes',desc:'Generate quotes with AI',icon:'📋'},
+  {id:'jobs',name:'Job CRM',desc:'Drag & drop job board',icon:'🔨'},
+  {id:'photos',name:'Photos',desc:'Before & after gallery',icon:'📸'},
+  {id:'sites',name:'Site Health',desc:'Monitor websites',icon:'🌐'},
+  {id:'businesses',name:'Businesses',desc:'All projects',icon:'🏢'},
+  {id:'tasks',name:'Tasks',desc:'Kanban board',icon:'✅'},
+  {id:'agents',name:'AI Agents',desc:'Automations',icon:'🤖'},
+  {id:'notes',name:'Notes',desc:'Quick notes',icon:'📝'},
+  {id:'changelog',name:'Changelog',desc:'Recent updates',icon:'📋'}
+];
 function openCmd(){
   document.getElementById('cmd-overlay').classList.add('open');
   const inp=document.getElementById('cmd-input');inp.value='';inp.focus();
@@ -811,14 +1061,253 @@ function copyAllEmails(){
   navigator.clipboard.writeText(emails).then(()=>toast('📋 '+uniqueLeads.length+' emails copied!')).catch(()=>{const ta=document.createElement('textarea');ta.value=emails;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);toast('📋 Copied!')})
 }
 
+/* ═══ AI ASSISTANT ═══ */
+let AI_KEY=localStorage.getItem('tradeos_ai_key')||'';
+let aiOpen=false;
+let aiHistory=JSON.parse(localStorage.getItem('tradeos_ai_history')||'[]');
+function toggleAI(){const p=document.getElementById('ai-panel');aiOpen=!aiOpen;p.classList.toggle('open',aiOpen);if(aiOpen)document.getElementById('ai-input').focus()}
+function addAIMsg(role,content){
+  const c=document.getElementById('ai-msgs');
+  const d=document.createElement('div');d.className='ai-msg '+role;
+  d.innerHTML=role==='bot'?'<div class="msg-label">TRADIOS AI</div><div class="msg-content">'+content+'</div>':content;
+  c.appendChild(d);c.scrollTop=c.scrollHeight
+}
+function showAITyping(){
+  const c=document.getElementById('ai-msgs');
+  const d=document.createElement('div');d.className='ai-typing';d.id='ai-typing';
+  d.innerHTML='<span></span><span></span><span></span>';
+  c.appendChild(d);c.scrollTop=c.scrollHeight
+}
+function hideAITyping(){const t=document.getElementById('ai-typing');if(t)t.remove()}
+function aiSuggest(t){document.getElementById('ai-input').value=t;sendAI()}
+async function sendAI(){
+  if(!AI_KEY){
+    const key=prompt('🔑 Enter your OpenRouter API key to use AI features:\n\n(Get one free at openrouter.ai/keys)');
+    if(!key)return;
+    AI_KEY=key;localStorage.setItem('tradeos_ai_key',key)
+  }
+  const inp=document.getElementById('ai-input');const msg=inp.value.trim();
+  if(!msg)return;inp.value='';document.getElementById('ai-send-btn').disabled=true;
+  addAIMsg('user',msg);showAITyping();
+  aiHistory.push({role:'user',content:msg});
+  const msgs=[{role:'system',content:'You are TRADIOS AI, the AI assistant for an Australian tradie operating system. Help tradies with: generating quotes, managing jobs, finding leads, writing professional emails, creating estimates, scheduling work, and general business advice. Be concise, practical, and direct. Australian English only. Keep responses under 200 words unless generating a detailed quote.'},...aiHistory.slice(-20)];
+  try{
+    const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY,'HTTP-Referer':'https://tradios.app'},
+      body:JSON.stringify({model:'google/gemini-2.0-flash-lite',messages:msgs,max_tokens:800})
+    });
+    hideAITyping();
+    if(!r.ok){addAIMsg('bot','⚠️ AI temporarily unavailable. Please try again.');return}
+    const d=await r.json();
+    const reply=d.choices[0].message.content;
+    addAIMsg('bot',reply);
+    aiHistory.push({role:'assistant',content:reply});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+  }catch(e){
+    hideAITyping();addAIMsg('bot','⚠️ Connection error. Please check your internet and try again.')
+  }
+  document.getElementById('ai-send-btn').disabled=false
+}
+
+/* ═══ AI QUOTE GENERATOR ═══ */
+const QUOTES_KEY='tradeos_quotes';
+let currentQuote='';
+function getQuotes(){return JSON.parse(localStorage.getItem(QUOTES_KEY)||'[]')}
+function saveQuoteToLS(q){const a=getQuotes();a.unshift(q);localStorage.setItem(QUOTES_KEY,JSON.stringify(a))}
+async function generateQuote(){
+  if(!AI_KEY){
+    const key=prompt('🔑 Enter your OpenRouter API key to generate AI quotes:\n\n(Get one free at openrouter.ai/keys)');
+    if(!key)return;
+    AI_KEY=key;localStorage.setItem('tradeos_ai_key',key)
+  }
+  const btn=document.getElementById('q-gen-btn');const client=document.getElementById('q-client').value.trim();
+  if(!client){toast('⚠️ Enter a client name');return}
+  const services=[...document.querySelectorAll('#q-services input:checked')].map(i=>i.value);
+  const scope=document.getElementById('q-scope').value.trim();
+  const days=parseFloat(document.getElementById('q-days').value)||3;
+  const rate=parseFloat(document.getElementById('q-rate').value)||75;
+  const mats=parseFloat(document.getElementById('q-materials').value)||0;
+  const labor=days*8*rate;const total=labor+mats;
+  btn.disabled=true;btn.textContent='⏳ Generating...';
+  const prompt=`Generate a professional tradie quote (HTML format) for:
+Client: ${client}
+${document.getElementById('q-contact').value?'Contact: '+document.getElementById('q-contact').value+'\n':''}
+Services: ${services.join(', ')||'Tradie services'}
+Scope: ${scope||'As discussed'}
+Labor: ${days} days × 8 hrs × $${rate}/hr = $${labor}
+Materials: $${mats}
+Total: $${total}
+
+Format as HTML with: company header (TRADIOS - Trading as Antonio PrimeScape), client details section, services table with pricing, total highlighted, payment terms (50% deposit, balance on completion), 7-day validity, ABN 39 104 568 456. Use the QR class CSS (h4 for header, table for pricing, qr-total for total). Australian style.`;
+  try{
+    const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY,'HTTP-Referer':'https://tradios.app'},
+      body:JSON.stringify({model:'google/gemini-2.0-flash-lite',messages:[{role:'user',content:prompt}],max_tokens:1500})
+    });
+    const d=await r.json();const html=d.choices[0].message.content;
+    const qr=document.getElementById('qr');
+    qr.innerHTML=html;qr.classList.add('sh');
+    currentQuote=html;
+    document.getElementById('q-copy-btn').style.display='';document.getElementById('q-save-btn').style.display='';
+    toast('✅ Quote generated!');
+    const qData={client,services,scope,days,rate,mats,total,html,date:new Date().toISOString()};
+    saveQuoteToLS(qData);
+    document.getElementById('q-badge').textContent=getQuotes().length;
+  }catch(e){toast('⚠️ Failed to generate quote. Check API key.')}
+  btn.disabled=false;btn.textContent='✓ Generate AI Quote'
+}
+function copyQuote(){
+  const text=currentQuote.replace(/<[^>]*>/g,'').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
+  navigator.clipboard.writeText(text).then(()=>toast('📋 Quote copied!'))
+}
+function saveQuote(){
+  if(currentQuote){toast('💾 Quote saved to history');document.getElementById('q-badge').textContent=getQuotes().length}
+}
+function showQuoteHistory(){
+  const q=getQuotes();if(!q.length){toast('No quotes yet');return}
+  const el=document.getElementById('qr');el.classList.add('sh');
+  el.innerHTML='<h4>Quote History ('+q.length+')</h4>'+q.slice(0,10).map((q,i)=>'<div style="padding:8px 0;border-bottom:1px solid var(--card-border)"><strong>'+q.client+'</strong> · $'+q.total.toLocaleString()+' · <span class="text-muted">'+new Date(q.date).toLocaleDateString()+'</span></div>').join('')+
+  '<p class="text-muted" style="margin-top:8px">Saved locally · <a href="#" onclick="document.getElementById(\'qr\').innerHTML=\'\';document.getElementById(\'qr\').classList.remove(\'sh\');return false" style="color:var(--accent)">Close</a></p>'
+}
+
+/* ═══ JOB CRM ═══ */
+const JOBS_KEY='tradeos_jobs';
+const JOB_COLS=['lead','quoted','booked','progress','completed'];
+const JOB_LABELS={lead:'📥 New Lead',quoted:'💬 Quote Sent',booked:'📅 Booked',progress:'🔧 In Progress',completed:'✅ Completed'};
+const JOB_BADGES={paving:'paving',fencing:'fencing',decking:'decking',cleaning:'cleaning',handyman:'handyman'};
+function getJobs(){return JSON.parse(localStorage.getItem(JOBS_KEY)||'null')}
+function saveJobs(j){localStorage.setItem(JOBS_KEY,JSON.stringify(j))}
+function initJobs(){
+  if(!getJobs()){
+    saveJobs({
+      lead:[{name:'John Holland',type:'paving',amount:8500,detail:'Glen Waverley - Brick paving'},{name:'Metricon',type:'paving',amount:12000,detail:'Chadstone - Driveway'}],
+      quoted:[{name:'AVJennings',type:'paving',amount:6500,detail:'Box Hill - Concrete paving'}],
+      booked:[{name:'Brookfield',type:'decking',amount:9500,detail:'Camberwell - Merbau decking'}],
+      progress:[{name:'Hickory Group',type:'fencing',amount:3200,detail:'Mount Waverley - Colorbond'}],
+      completed:[{name:'Stockland',type:'cleaning',amount:1800,detail:'Glen Waverley - Pressure wash'}]
+    })
+  }
+  renderJobs()
+}
+function renderJobs(){
+  const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+  let total=0;Object.values(data).forEach(a=>total+=a.length);
+  document.getElementById('j-badge').textContent=total;
+  const board=document.getElementById('job-board');
+  board.innerHTML=JOB_COLS.map(col=>'<div class="jcol" data-col="'+col+'" ondrop="dropJob(event,\''+col+'\')" ondragover="dragOver(event)" ondragleave="dragLeave(event)"><div class="jcol-h"><h4>'+JOB_LABELS[col]+'</h4><span class="jc-count">'+(data[col]?.length||0)+'</span></div>'+
+    (data[col]||[]).map((j,i)=>'<div class="jcard" draggable="true" ondragstart="dragStart(event,'+i+',\''+col+'\')" onclick="showJobDetail(\''+col+'\','+i+')"><div class="jc-name">'+j.name+'</div><div class="jc-detail"><span class="jc-amount">$'+j.amount.toLocaleString()+'</span><span class="jc-badge '+(JOB_BADGES[j.type]||'handyman')+'">'+j.type+'</span></div><div class="text-muted" style="font-size:9px;margin-top:2px">'+j.detail+'</div></div>').join('')+
+    '</div>').join('')
+}
+let dragSrc={idx:-1,col:''};
+function dragStart(e,idx,col){dragSrc={idx,col};e.target.classList.add('dragging');e.dataTransfer.effectAllowed='move'}
+function dragOver(e){e.preventDefault();e.currentTarget.classList.add('drag-over');e.dataTransfer.dropEffect='move'}
+function dragLeave(e){e.currentTarget.classList.remove('drag-over')}
+function dropJob(e,toCol){
+  e.preventDefault();e.currentTarget.classList.remove('drag-over');
+  if(dragSrc.col===toCol||dragSrc.idx<0)return;
+  const data=getJobs();
+  const job=data[dragSrc.col].splice(dragSrc.idx,1)[0];
+  if(!data[toCol])data[toCol]=[];
+  data[toCol].push(job);
+  saveJobs(data);renderJobs();toast('📦 Job moved to '+JOB_LABELS[toCol])
+}
+function showJobDetail(col,i){
+  const data=getJobs();
+  if(!data[col]||!data[col][i])return;
+  const j=data[col][i];
+  toast('🔍 '+j.name+' - $'+j.amount.toLocaleString()+' ('+j.detail+')')
+}
+function addSampleJobs(){
+  const more={lead:[{name:'Frasers Property',type:'cleaning',amount:2400,detail:'Gutter cleaning - Chadstone'},{name:'Ray White',type:'handyman',amount:800,detail:'General repairs - Box Hill'}],quoted:[],booked:[],progress:[],completed:[]};
+  const data=getJobs();Object.keys(more).forEach(k=>{if(data[k])data[k]=[...data[k],...more[k]]});
+  saveJobs(data);renderJobs();toast('📌 Sample jobs added')
+}
+
+/* ═══ PHOTO WORKFLOW ═══ */
+const PHOTOS_KEY='tradeos_photos';
+function getPhotos(){return JSON.parse(localStorage.getItem(PHOTOS_KEY)||'[]')}
+function savePhotos(p){localStorage.setItem(PHOTOS_KEY,JSON.stringify(p))}
+let cameraStream=null;let facingMode='environment';let capturedPhotos=[];
+function renderPhotos(){
+  const photos=getPhotos();const filter=document.getElementById('photo-filter').value;
+  document.getElementById('p-badge').textContent=photos.length;
+  const filtered=filter==='all'?photos:photos.filter(p=>p.type===filter);
+  const grid=document.getElementById('photo-grid');
+  if(!filtered.length){
+    grid.innerHTML='<div class="photo-uploader" onclick="openCamera()"><span style="font-size:32px">📸</span><span>No photos yet. Take a photo or upload one.</span></div>';return
+  }
+  grid.innerHTML=filtered.map((p,i)=>'<div class="photo-card"><img src="'+p.data+'" alt="'+p.label+'" loading="lazy"><div class="photo-label">'+p.label+(p.job?' · '+p.job:'')+'</div><div class="photo-badge '+p.type+'">'+p.type+'</div><div style="position:absolute;top:6px;left:6px;cursor:pointer;background:var(--red-bg);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);font-weight:700" onclick="event.stopPropagation();deletePhoto('+i+')">✕</div></div>').join('')
+}
+function deletePhoto(i){
+  const p=getPhotos();p.splice(i,1);savePhotos(p);renderPhotos();toast('🗑️ Photo deleted')
+}
+function uploadPhotos(files){
+  Array.from(files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=function(e){
+      const photos=getPhotos();
+      photos.push({data:e.target.result,label:file.name,type:'after',date:new Date().toISOString()});
+      savePhotos(photos);renderPhotos()
+    };
+    reader.readAsDataURL(file)
+  });
+  toast('📸 '+files.length+' photo(s) uploaded')
+}
+async function openCamera(){
+  const v=document.getElementById('camera-view');v.classList.add('open');
+  try{
+    cameraStream=await navigator.mediaDevices.getUserMedia({video:{facingMode,facingMode,width:{ideal:1920},height:{ideal:1080}}});
+    document.getElementById('camera-video').srcObject=cameraStream
+  }catch(e){toast('⚠️ Camera access denied');v.classList.remove('open')}
+}
+function closeCamera(){
+  if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null}
+  document.getElementById('camera-view').classList.remove('open')
+}
+function flipCamera(){facingMode=facingMode==='environment'?'user':'environment';if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());openCamera()}}
+function capturePhoto(){
+  const v=document.getElementById('camera-video');const c=document.getElementById('camera-canvas');
+  c.width=v.videoWidth;c.height=v.videoHeight;
+  const ctx=c.getContext('2d');
+  if(facingMode==='user'){ctx.translate(c.width,0);ctx.scale(-1,1)} // mirror selfie
+  ctx.drawImage(v,0,0,c.width,c.height);
+  const data=c.toDataURL('image/jpeg',0.7);
+  const photos=getPhotos();
+  capturedPhotos.push(data);
+  photos.push({data,label:'Photo '+(photos.length+1),type:'after',date:new Date().toISOString()});
+  savePhotos(photos);renderPhotos();
+  toast('📸 Photo captured!')
+}
+
+/* ═══ PWA ═══ */
+function registerSW(){
+  if('serviceWorker' in navigator){
+    // Use a no-op inline SW registration approach
+    const swCode='self.addEventListener("install",e=>{self.skipWaiting()});self.addEventListener("activate",e=>{e.waitUntil(clients.claim())});self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)).catch(()=>new Response("Offline",{status:503})))})';
+    const blob=new Blob([swCode],{type:'application/javascript'});
+    const url=URL.createObjectURL(blob);
+    navigator.serviceWorker.register(url).then(()=>console.log('SW registered')).catch(e=>console.log('SW skipped'))
+  }
+  // Inline manifest
+  const manifest={name:'TRADIOS',short_name:'TRADIOS',description:'AI Operating System for Tradies',start_url:'.',display:'standalone',background_color:'#060608',theme_color:'#060608',icons:[{src:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512"><rect width="512" height="512" rx="64" fill="#6366f1"/><text x="256" y="320" text-anchor="middle" font-size="280" font-weight="800" font-family="sans-serif" fill="white">T</text></svg>'),sizes:'512x512',type:'image/svg+xml',purpose:'any maskable'}]};
+  const mLink=document.getElementById('manifest-link');
+  if(mLink)mLink.href='data:application/json,'+encodeURIComponent(JSON.stringify(manifest))
+}
+
 /* ═══ INIT ═══ */
 function init(){
   document.getElementById('sb-time').textContent='Updated: '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-  renderDashboard();renderLeads();renderSites();renderBiz();renderTasks();renderAgents();renderNotes();renderChangelog();
+  renderDashboard();renderLeads();renderSites();renderBiz();initJobs();renderTasks();renderAgents();renderNotes();renderChangelog();renderPhotos();
+  document.getElementById('q-badge').textContent=getQuotes().length;
   // Auto-save notes on blur
   document.getElementById('na').addEventListener('blur',saveNotes);
   // Click outside CMD+K
   document.getElementById('cmd-overlay').addEventListener('click',function(e){if(e.target===this)closeCmd()});
+  // Register PWA
+  registerSW();
+  // Populate lead names in quote client input
+  const dl=document.getElementById('q-client-list');
+  if(dl)uniqueLeads.forEach(l=>{if(l.company){const o=document.createElement('option');o.value=l.company;dl.appendChild(o)}})
 }
 document.addEventListener('DOMContentLoaded',init);
 </script>
