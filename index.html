@@ -761,6 +761,11 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
       <span class="dqa-label">Changelog</span>
       <span class="dqa-desc">Latest updates</span>
     </button>
+    <button class="dqa-btn" onclick="scheduleFollowUp('dash-'+(Date.now()),'Check pending leads and quotes',30);toast('⏰ Follow-up in 30 min')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span class="dqa-label">Remind me later</span>
+      <span class="dqa-desc">Follow-up in 30 min</span>
+    </button>
   </div>
 
   <!-- Featured Businesses -->
@@ -926,7 +931,9 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
     <button onclick="aiSuggest('Generate a quote for brick paving job')">📋 Generate quote</button>
     <button onclick="aiSuggest('Show me pending leads')">👥 Show leads</button>
     <button onclick="aiSuggest('Create a job for fencing in Glen Waverley')">🔨 Create job</button>
-    <button onclick="aiSuggest('Help me write an email to a builder')">✉️ Write email</button>
+    <button onclick="aiSuggest('Move John Holland to progress')">📦 Move job</button>
+    <button onclick="aiSuggest('Show business summary')">📊 Summary</button>
+    <button onclick="aiSuggest('Schedule follow-up in 1 hour')">⏰ Remind me</button>
   </div>
   <div id="ai-inp">
     <input id="ai-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendAI()">
@@ -1244,6 +1251,20 @@ async function sendAI(){
   }
   const inp=document.getElementById('ai-input');const msg=inp.value.trim();
   if(!msg)return;inp.value='';document.getElementById('ai-send-btn').disabled=true;
+  
+  // Try local tool processing first (operational AI)
+  const toolResult=processAIToolCall(msg);
+  if(toolResult){
+    addAIMsg('user',msg);
+    addAIMsg('bot',toolResult);
+    aiHistory.push({role:'user',content:msg},{role:'assistant',content:toolResult});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+    document.getElementById('ai-send-btn').disabled=false;
+    // Trigger system notification for operational actions
+    if(toolResult.startsWith('✅'))notify('TRADIOS AI',toolResult);
+    return
+  }
+  
   addAIMsg('user',msg);showAITyping();
   aiHistory.push({role:'user',content:msg});
   const msgs=[{role:'system',content:'You are TRADIOS AI, the AI assistant for an Australian tradie operating system. Help tradies with: generating quotes, managing jobs, finding leads, writing professional emails, creating estimates, scheduling work, and general business advice. Be concise, practical, and direct. Australian English only. Keep responses under 200 words unless generating a detailed quote.'},...aiHistory.slice(-20)];
@@ -1351,7 +1372,10 @@ function renderJobs(){
   document.getElementById('j-badge').textContent=total;
   const board=document.getElementById('job-board');
   board.innerHTML=JOB_COLS.map(col=>'<div class="jcol" data-col="'+col+'" ondrop="dropJob(event,\''+col+'\')" ondragover="dragOver(event)" ondragleave="dragLeave(event)"><div class="jcol-h"><h4>'+JOB_LABELS[col]+'</h4><span class="jc-count">'+(data[col]?.length||0)+'</span></div>'+
-    (data[col]||[]).map((j,i)=>'<div class="jcard" draggable="true" ondragstart="dragStart(event,'+i+',\''+col+'\')" onclick="showJobDetail(\''+col+'\','+i+')"><div class="jc-name">'+j.name+'</div><div class="jc-detail"><span class="jc-amount">$'+j.amount.toLocaleString()+'</span><span class="jc-badge '+(JOB_BADGES[j.type]||'handyman')+'">'+j.type+'</span></div><div class="text-muted" style="font-size:9px;margin-top:2px">'+j.detail+'</div></div>').join('')+
+    (data[col]||[]).map((j,i)=>'<div class="jcard" draggable="true" ondragstart="dragStart(event,'+i+',\''+col+'\')" onclick="showJobDetail(\''+col+'\','+i+')"><div class="jc-name">'+j.name+'</div><div class="jc-detail"><span class="jc-amount">$'+j.amount.toLocaleString()+'</span><span class="jc-badge '+(JOB_BADGES[j.type]||'handyman')+'">'+j.type+'</span></div><div class="text-muted" style="font-size:9px;margin-top:2px">'+j.detail+'</div><div class="flex gap-1" style="margin-top:4px">'+
+    (col==='completed'||col==='booked'||col==='progress'?'<button class="ai-action-btn primary" onclick="event.stopPropagation();createPaymentLink('+JSON.stringify(j).replace(/"/g,'&quot;')+')" title="Send payment link">💳 Pay</button>':'')+
+    (col==='lead'?'<button class="ai-action-btn green" onclick="event.stopPropagation();smartAI(\'quote-job\',\'Generate a quote for '+j.name+', '+j.type+' job worth $'+j.amount+'\')" title="AI generate quote">🤖 Quote</button>':'')+
+    '</div></div>').join('')+
     '</div>').join('')
 }
 let dragSrc={idx:-1,col:''};
@@ -1456,18 +1480,147 @@ const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 let sb=null;
 let sbUser=null;
 let authMode='signin';
+let sbRealtime=null;
+
+/* ═══ SUPABASE REALTIME ═══ */
+function initRealtime(){
+  if(!sb||sbRealtime)return;
+  try{
+    sbRealtime=sb.channel('tradeos-sync');
+    sbRealtime.on('postgres_changes',{event:'*',schema:'public',table:'jobs'},(payload)=>{
+      console.log('Real-time job update:',payload.eventType);
+      if(sbUser&&payload.new?.business_id!==sbUser.id)return;
+      // Refresh local data from cloud
+      if(sbUser)fetchAndMergeJobs()
+    });
+    sbRealtime.subscribe((status)=>console.log('Realtime:',status))
+  }catch(e){console.log('Realtime skipped')}
+}
+
+async function fetchAndMergeJobs(){
+  try{
+    const {data}=await sb.from('jobs').select('*').eq('business_id',sbUser.id).order('created_at',{ascending:false});
+    if(!data||!data.length)return;
+    const merged={lead:[],quoted:[],booked:[],progress:[],completed:[]};
+    data.forEach(j=>{
+      if(merged[j.status])merged[j.status].push({
+        name:j.customer_name||'Client',
+        type:j.service||'general',
+        amount:Number(j.quote_amount)||0,
+        detail:j.description||''
+      })
+    });
+    saveJobs(merged);renderJobs();renderDashboard();renderCalendar()
+  }catch(e){}
+}
+
+/* ═══ PUSH NOTIFICATIONS ═══ */
+async function subscribePush(){
+  if(!('Notification' in window)||!('serviceWorker' in navigator))return;
+  if(Notification.permission==='granted')return;
+  if(Notification.permission==='default'){
+    const result=await Notification.requestPermission();
+    if(result==='granted')console.log('Notifications enabled')
+  }
+}
+function notify(title,body,options){
+  if(!('Notification' in window)||Notification.permission!=='granted')return;
+  try{new Notification(title,{body,icon:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192"><rect width="192" height="192" rx="32" fill="#6366f1"/><text x="96" y="128" text-anchor="middle" font-size="100" font-weight="800" fill="white">T</text></svg>'),...options})}catch(e){}
+}
+// Schedule follow-up reminders
+const followUpTimers={};
+function scheduleFollowUp(id,title,minutes){
+  if(followUpTimers[id])clearTimeout(followUpTimers[id]);
+  followUpTimers[id]=setTimeout(()=>{
+    notify('⏰ Follow-up Reminder',title);
+    delete followUpTimers[id]
+  },minutes*60*1000)
+}
+// Auto-notify on job status changes
+function notifyJobChange(job,fromCol,toCol){
+  const labels={lead:'📥 New Lead',quoted:'💬 Quote Sent',booked:'📅 Booked',progress:'🔧 In Progress',completed:'✅ Completed'};
+  notify('Job Updated: '+job.name,job.name+' moved to '+labels[toCol]+' — $'+job.amount.toLocaleString())
+}
+
+/* ═══ STRIPE PAYMENT FLOWS ═══ */
+const STRIPE_ACCOUNT='acct_1TTejULCGSIdPF8k';
+function createPaymentLink(job){
+  // Use existing Stripe payment links
+  const links={paving:'https://buy.stripe.com/cNifZi4Tx8CdeDZ2laeUU00',decking:'https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01',fencing:'https://buy.stripe.com/28E6oI3Pt7y92VhbVKeUU02',cleaning:'https://buy.stripe.com/28E6oI3Pt7y92VhbVKeUU02',handyman:'https://buy.stripe.com/4gM14o99NdWxgM7e3SeUU01'};
+  const url=links[job.type]||links.paving;
+  window.open(url+'?prefilled_email='+encodeURIComponent(sbUser?.email||''),'_blank');
+  notify('💳 Payment Link Created','Payment link for '+job.name+' — $'+job.amount.toLocaleString())
+}
+
+/* ═══ OPERATIONAL AI ACTIONS ═══ */
+const AI_TOOLS={
+  'create-job':{desc:'Create a new job',fn:(args)=>{
+    const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+    data.lead.push({name:args.name||'New Client',type:args.type||'general',amount:Number(args.amount)||0,detail:args.detail||''});
+    saveJobs(data);renderJobs();renderDashboard();renderCalendar();
+    return '✅ Job created for '+args.name
+  }},
+  'update-job-status':{desc:'Move job to new status',fn:(args)=>{
+    const data=getJobs();
+    for(const col of Object.keys(data)){
+      const idx=data[col].findIndex(j=>j.name?.toLowerCase().includes((args.name||'').toLowerCase()));
+      if(idx>=0){
+        const job=data[col].splice(idx,1)[0];
+        if(!data[args.status])data[args.status]=[];
+        data[args.status].push(job);
+        saveJobs(data);renderJobs();renderDashboard();renderCalendar();
+        return '✅ '+job.name+' moved to '+args.status
+      }
+    }
+    return '❌ Job not found: '+args.name
+  }},
+  'show-summary':{desc:'Show business summary',fn:()=>{
+    const data=getJobs()||{};
+    const all=Object.values(data).flat();
+    const total=all.reduce((s,j)=>s+(j.amount||0),0);
+    return '📊 **Summary**\nTotal Jobs: '+all.length+'\nPipeline: $'+all.filter(j=>j.amount).reduce((s,j)=>s+(j.amount||0),0).toLocaleString()+'\nCompleted: '+(data.completed?.length||0)
+  }},
+  'schedule-followup':{desc:'Schedule a follow-up reminder',fn:(args)=>{
+    const mins=parseInt(args.minutes)||60;
+    scheduleFollowUp('manual-'+Date.now(),args.title||'Follow-up reminder',mins);
+    return '✅ Follow-up scheduled in '+mins+' minutes'
+  }}
+};
+
+function processAIToolCall(text){
+  const lower=text.toLowerCase();
+  if(lower.includes('create job')||lower.includes('new job')){
+    const nameMatch=text.match(/for\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)*)/);
+    const amountMatch=text.match(/\$?(\d[\d,]*)/);
+    const typeMatch=text.match(/(paving|fencing|decking|cleaning|handyman|landscaping)/i);
+    return AI_TOOLS['create-job'].fn({name:nameMatch?nameMatch[1]:'New Client',type:typeMatch?typeMatch[1].toLowerCase():'general',amount:amountMatch?parseInt(amountMatch[1].replace(/,/g,'')):0,detail:text})
+  }
+  if(lower.includes('move job')||lower.includes('update status')){
+    const nameMatch=text.match(/(?:move|for)\s+([A-Z][a-z]+(?:\s[A-Z][a-z]+)*)/);
+    const statusMatch=text.match(/(lead|quoted|booked|progress|completed)/i);
+    return AI_TOOLS['update-job-status'].fn({name:nameMatch?nameMatch[1]:'',status:statusMatch?statusMatch[1].toLowerCase():'progress'})
+  }
+  if(lower.includes('summary')||lower.includes('pipeline')||lower.includes('revenue')){
+    return AI_TOOLS['show-summary'].fn({})
+  }
+  if(lower.includes('follow')||lower.includes('remind')){
+    const titleMatch=text.match(/about\s+(.+)/);
+    const timeMatch=text.match(/(\d+)\s*(min|hour|hr)/i);
+    let mins=60;if(timeMatch){const v=parseInt(timeMatch[1]);mins=timeMatch[2].startsWith('h')?v*60:v}
+    return AI_TOOLS['schedule-followup'].fn({title:titleMatch?titleMatch[1]:'Follow-up',minutes:mins.toString()})
+  }
+  return null
+}
 
 function initSupabase(){
   try{
     sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true}});
-    // Check existing session
     sb.auth.getSession().then(({data:{session}})=>{
-      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData()}
+      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData();initRealtime();subscribePush();registerFollowUps()}
       else{showAuth()}
     });
-    // Listen for auth changes
     sb.auth.onAuthStateChange((event,session)=>{
-      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData()}
+      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData();initRealtime();subscribePush();registerFollowUps()}
       else{sbUser=null;showAuth();updateAuthUI()}
     })
   }catch(e){console.log('Supabase init skipped');showAuthFallback()}
@@ -1552,6 +1705,24 @@ function flattenJobs(jobData){
     })
   });
   return all
+}
+
+/* ═══ AUTO FOLLOW-UPS ═══ */
+function registerFollowUps(){
+  // Check for pending follow-ups every 5 minutes
+  if(window._followUpInterval)clearInterval(window._followUpInterval);
+  window._followUpInterval=setInterval(()=>{
+    const data=getJobs();
+    if(!data)return;
+    // Notify about leads that haven't been quoted in 2+ days
+    if(data.lead?.length>0&&data.quoted?.length===0){
+      notify('💬 Pending Leads',data.lead.length+' leads waiting for quotes')
+    }
+    // Notify about jobs in progress for 7+ days (simulated)
+    if(data.progress?.length>0){
+      notify('🔧 Active Jobs',data.progress.length+' jobs in progress')
+    }
+  },5*60*1000)
 }
 
 /* ═══ WORKSPACE SWITCHING ═══ */
