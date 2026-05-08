@@ -543,6 +543,58 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .jc-comment input:focus{border-color:var(--accent)}
 .jc-comment .jc-cm-count{font-size:8px;color:var(--fg4)}
 
+/* ═══ TODAY MODE ═══ */
+.today-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)}
+@media(max-width:768px){.today-grid{grid-template-columns:1fr}}
+.today-card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4);transition:all var(--ts)}
+.today-card:hover{background:var(--card-hov);border-color:var(--card-border-hov);transform:translateY(-1px)}
+.today-card .tc-head{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)}
+.today-card .tc-head .tc-icon{width:32px;height:32px;border-radius:var(--rad-sm);background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:14px}
+.today-card .tc-head h3{font-size:13px;font-weight:600;flex:1}
+.today-card .tc-head .tc-count{font-size:10px;font-weight:600;background:var(--bg3);padding:1px 8px;border-radius:var(--rad-full)}
+.today-card .tc-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) 0;border-bottom:1px solid var(--card-border);font-size:12px}
+.today-card .tc-item:last-child{border:none}
+.today-card .tc-item .tc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.today-card .tc-item .tc-name{flex:1;font-weight:500;color:var(--fg)}
+.today-card .tc-item .tc-val{font-size:11px;font-weight:600;color:var(--fg3)}
+
+/* ═══ FOCUS MODE ═══ */
+#focus-overlay{position:fixed;inset:0;z-index:1500;background:var(--bg);display:none;flex-direction:column;animation:fadeIn .2s ease}
+#focus-overlay.open{display:flex}
+#focus-h{display:flex;align-items:center;padding:var(--space-4) var(--space-5);border-bottom:1px solid var(--card-border);background:var(--bg2)}
+#focus-h h2{font-size:16px;font-weight:700;flex:1}
+#focus-h button{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-sm);padding:var(--space-1) var(--space-3);color:var(--fg2);cursor:pointer;font-size:12px;font-family:inherit;transition:all var(--ts)}
+#focus-h button:hover{background:var(--card-hov);color:var(--fg)}
+#focus-body{flex:1;overflow-y:auto;padding:var(--space-5);max-width:700px;margin:0 auto;width:100%}
+.focus-meta{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-bottom:var(--space-4)}
+.focus-meta-item{background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);padding:var(--space-3)}
+.focus-meta-item .fm-label{font-size:10px;color:var(--fg4);text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.focus-meta-item .fm-val{font-size:18px;font-weight:700}
+.focus-actions{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-4)}
+.focus-actions button{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-4);background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad);color:var(--fg2);font-size:12px;cursor:pointer;font-family:inherit;transition:all var(--ts)}
+.focus-actions button:hover{background:var(--card-hov);border-color:var(--accent);color:var(--fg)}
+.focus-timeline{margin-top:var(--space-4)}
+
+/* ═══ END-OF-DAY SUMMARY ═══ */
+#eod-summary{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:2000;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-xl);padding:var(--space-6);max-width:380px;width:92%;box-shadow:var(--shadow-lg),0 0 60px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:all .35s cubic-bezier(.4,0,.2,1);text-align:center}
+#eod-summary.sh{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+#eod-summary .eod-icon{font-size:36px;margin-bottom:var(--space-3)}
+#eod-summary .eod-title{font-size:18px;font-weight:700;margin-bottom:2px}
+#eod-summary .eod-date{font-size:12px;color:var(--fg3);margin-bottom:var(--space-3)}
+#eod-summary .eod-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);margin-bottom:var(--space-4)}
+#eod-summary .eod-stat{background:var(--bg3);border-radius:var(--rad);padding:var(--space-3)}
+#eod-summary .eod-stat .eod-num{font-size:24px;font-weight:700}
+#eod-summary .eod-stat .eod-label{font-size:10px;color:var(--fg3);margin-top:2px}
+#eod-summary .eod-msg{font-size:12px;color:var(--fg2);padding:var(--space-3);background:var(--bg3);border-radius:var(--rad);margin-bottom:var(--space-3);line-height:1.5}
+#eod-summary .eod-btn{padding:var(--space-2) var(--space-5);background:var(--accent);border:none;border-radius:var(--rad);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all var(--ts)}
+#eod-summary .eod-btn:hover{background:var(--accent-hov);box-shadow:var(--shadow-glow)}
+
+/* ═══ PROGRESSIVE DISCLOSURE ═══ */
+.prog-hint{font-size:10px;color:var(--fg4);cursor:pointer;display:inline-flex;align-items:center;gap:3px;padding:2px 0;transition:color var(--ts)}
+.prog-hint:hover{color:var(--fg2)}
+.prog-content{display:none}
+.prog-content.open{display:block;animation:fadeIn .2s ease}
+
 /* ═══ AI ASSISTANT ═══ */
 #ai-bubble{position:fixed;bottom:24px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
 #ai-bubble:hover{transform:scale(1.08);box-shadow:0 6px 28px var(--accent-glow)}
@@ -953,6 +1005,10 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 <div class="pn on" id="pn-dashboard">
   <div class="sh"><h2>Dashboard</h2><span class="shl"><span id="dash-date"></span></span></div>
 
+  <!-- Today Priority Section -->
+  <div class="sh"><h2>🗓️ Today</h2><span class="shl">What needs attention</span></div>
+  <div class="today-grid block" id="today-grid"></div>
+
   <div class="qs">
     <div class="qs-item"><b id="m-leads">0</b> Leads</div>
     <div class="qs-item"><b id="m-sites">0/0</b> Sites Online</div>
@@ -1245,6 +1301,26 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <p class="text-muted" id="ds-sub" style="font-size:12px;margin-bottom:var(--space-2)">Here's your business today</p>
   <div class="ds-items" id="ds-items"></div>
   <button class="ds-btn" onclick="closeDailySummary()">Let's go →</button>
+</div>
+
+<!-- ═══ END-OF-DAY SUMMARY ═══ -->
+<div id="eod-summary">
+  <div class="eod-icon">📋</div>
+  <div class="eod-title">Today's Summary</div>
+  <div class="eod-date" id="eod-date">May 8, 2026</div>
+  <div class="eod-stats" id="eod-stats"></div>
+  <div class="eod-msg" id="eod-msg">Great work today! See you tomorrow.</div>
+  <button class="eod-btn" onclick="closeEOD()">Thanks, let's wrap up →</button>
+</div>
+
+<!-- ═══ FOCUS MODE ═══ -->
+<div id="focus-overlay">
+  <div id="focus-h"><h2 id="focus-title">Job Details</h2><button onclick="closeFocus()">Close</button></div>
+  <div id="focus-body">
+    <div class="focus-meta" id="focus-meta"></div>
+    <div class="focus-actions" id="focus-actions"></div>
+    <div class="focus-timeline" id="focus-timeline"></div>
+  </div>
 </div>
 <div id="tmo"><div id="tmp">
   <div id="tmh"><h3 id="tpl-title">Template</h3><button id="tmx" onclick="closeTpl()">✕</button></div>
@@ -2786,6 +2862,175 @@ function showEmptyState(containerId,icon,title,desc,action){
     (action?'<button class="btn btn-p btn-sm" style="margin-top:12px" onclick="'+action.fn+'">'+action.label+'</button>':'')+'</div>'
 }
 
+/* ═══ TODAY MODE ═══ */
+function renderToday(){
+  const data=getJobs();
+  if(!data)return;
+  const now=new Date();
+  const hour=now.getHours();
+  const greeting=hour<12?'🌅 Morning':hour<17?'☀️ Afternoon':'🌙 Evening';
+  const leads=data.lead||[];
+  const quoted=data.quoted||[];
+  const active=data.progress||[];
+  const booked=data.booked||[];
+  const todayTotal=leads.length+quoted.length+active.length+booked.length;
+  const grid=document.getElementById('today-grid');
+  if(!grid)return;
+  if(todayTotal===0){
+    grid.innerHTML='<div class="sc" style="grid-column:1/-1"><div class="sc-b empty-state"><div class="empty-icon" style="font-size:28px">✅</div><div class="empty-title">All clear today</div><div class="empty-desc">No pending tasks. Enjoy your '+greeting.toLowerCase()+'!</div></div></div>';
+    return
+  }
+  grid.innerHTML=
+    '<div class="today-card"><div class="tc-head"><div class="tc-icon">📥</div><h3>New Leads</h3><span class="tc-count" style="background:var(--accent-subtle);color:var(--accent)">'+leads.length+'</span></div>'+
+    leads.slice(0,3).map(j=>'<div class="tc-item"><div class="tc-dot" style="background:var(--accent)"></div><span class="tc-name">'+j.name+'</span><span class="tc-val">$'+j.amount.toLocaleString()+'</span></div>').join('')+
+    (leads.length>3?'<div class="tc-item"><span class="text-muted">+'+(leads.length-3)+' more</span></div>':'')+
+    '</div>'+
+    '<div class="today-card"><div class="tc-head"><div class="tc-icon">💬</div><h3>Pending Quotes</h3><span class="tc-count" style="background:var(--yellow-bg);color:var(--yellow)">'+quoted.length+'</span></div>'+
+    quoted.slice(0,3).map(j=>'<div class="tc-item"><div class="tc-dot" style="background:var(--yellow)"></div><span class="tc-name">'+j.name+'</span><span class="tc-val">$'+j.amount.toLocaleString()+'</span></div>').join('')+
+    (quoted.length>3?'<div class="tc-item"><span class="text-muted">+'+(quoted.length-3)+' more</span></div>':'')+
+    '</div>'+
+    '<div class="today-card"><div class="tc-head"><div class="tc-icon">🔧</div><h3>In Progress</h3><span class="tc-count" style="background:var(--orange-bg);color:var(--orange)">'+active.length+'</span></div>'+
+    active.slice(0,3).map(j=>'<div class="tc-item"><div class="tc-dot" style="background:var(--orange)"></div><span class="tc-name">'+j.name+'</span><span class="tc-val">$'+j.amount.toLocaleString()+'</span></div>').join('')+
+    (active.length>3?'<div class="tc-item"><span class="text-muted">+'+(active.length-3)+' more</span></div>':'')+
+    '</div>'+
+    '<div class="today-card"><div class="tc-head"><div class="tc-icon">📅</div><h3>Booked</h3><span class="tc-count" style="background:var(--green-bg);color:var(--green)">'+booked.length+'</span></div>'+
+    booked.slice(0,3).map(j=>'<div class="tc-item"><div class="tc-dot" style="background:var(--green)"></div><span class="tc-name">'+j.name+'</span><span class="tc-val">$'+j.amount.toLocaleString()+'</span></div>').join('')+
+    (booked.length>3?'<div class="tc-item"><span class="text-muted">+'+(booked.length-3)+' more</span></div>':'')+
+    '</div>'
+}
+
+/* ═══ AI MEMORY ═══ */
+function getAIContext(){
+  const onboard=JSON.parse(localStorage.getItem(ONBOARD_KEY)||'{}');
+  const data=getJobs()||{};
+  const totalJobs=Object.values(data).flat().length;
+  return 'Business: '+(onboard.bizName||'a tradie business')+'. Services: '+(onboard.services?.join(', ')||'various')+'. Active jobs: '+totalJobs+'.'
+}
+// Enhanced sendAI with memory
+const _memSendAI=sendAI;
+sendAI=async function(){
+  if(!AI_KEY){
+    const key=prompt('🔑 Enter your OpenRouter AI key');
+    if(!key)return;AI_KEY=key;localStorage.setItem('tradeos_ai_key',key)
+  }
+  const inp=document.getElementById('ai-input');const msg=inp.value.trim();
+  if(!msg)return;inp.value='';document.getElementById('ai-send-btn').disabled=true;
+  const toolResult=processAIToolCall(msg);
+  if(toolResult){
+    addAIMsg('user',msg);addAIMsg('bot',toolResult);
+    aiHistory.push({role:'user',content:msg},{role:'assistant',content:toolResult});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+    document.getElementById('ai-send-btn').disabled=false;
+    if(toolResult.startsWith('✅'))notify('TRADIOS AI',toolResult);return
+  }
+  addAIMsg('user',msg);showAITyping();
+  aiHistory.push({role:'user',content:msg});
+  const context=getAIContext();
+  const msgs=[{role:'system',content:'You are TRADIOS AI, the AI assistant for '+context+' Help with: quotes, jobs, leads, emails, estimates. Be concise, practical, Australian English. Keep responses under 200 words.'},...aiHistory.slice(-20)];
+  try{
+    const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+AI_KEY},
+      body:JSON.stringify({model:'google/gemini-2.0-flash-lite',messages:msgs,max_tokens:800})
+    });
+    hideAITyping();
+    if(!r.ok){addAIMsg('bot','⚠️ AI unavailable');document.getElementById('ai-send-btn').disabled=false;return}
+    const d=await r.json();
+    const reply=d.choices?.[0]?.message?.content||'⚠️ No response';
+    addAIMsg('bot',reply);
+    aiHistory.push({role:'assistant',content:reply});
+    localStorage.setItem('tradeos_ai_history',JSON.stringify(aiHistory.slice(-50)));
+  }catch(e){hideAITyping();addAIMsg('bot','📡 Connection error')}
+  document.getElementById('ai-send-btn').disabled=false
+};
+
+/* ═══ FOCUS MODE ═══ */
+function openFocus(col,i){
+  const data=getJobs();if(!data[col]||!data[col][i])return;
+  const j=data[col][i];
+  document.getElementById('focus-title').textContent=j.name;
+  document.getElementById('focus-meta').innerHTML=
+    '<div class="focus-meta-item"><div class="fm-label">Status</div><div class="fm-val" style="font-size:14px">'+JOB_LABELS[col]+'</div></div>'+
+    '<div class="focus-meta-item"><div class="fm-label">Amount</div><div class="fm-val" style="color:var(--accent);font-size:20px">$'+j.amount.toLocaleString()+'</div></div>'+
+    '<div class="focus-meta-item"><div class="fm-label">Service</div><div class="fm-val" style="font-size:14px;text-transform:capitalize">'+j.type+'</div></div>'+
+    '<div class="focus-meta-item"><div class="fm-label">Details</div><div class="fm-val" style="font-size:12px;font-weight:400;color:var(--fg2)">'+j.detail+'</div></div>';
+  document.getElementById('focus-actions').innerHTML=
+    '<button onclick="closeFocus();createPaymentLink('+JSON.stringify(j).replace(/"/g,'&quot;')+')">💳 Send Payment</button>'+
+    '<button onclick="closeFocus();composeGmail(\'\',\'Quote for '+j.name+'\',\'Hi '+j.name+',\\n\\n\')">✉️ Send Email</button>'+
+    '<button onclick="closeFocus();requestReview('+JSON.stringify(j).replace(/"/g,'&quot;')+')">⭐ Request Review</button>';
+  document.getElementById('focus-timeline').innerHTML='<h4 style="font-size:12px;color:var(--fg3);margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:.5px">Timeline</h4>'+showTimeline(col,i,true);
+  document.getElementById('focus-overlay').classList.add('open');
+  trackUsage('focus-mode')
+}
+function closeFocus(){document.getElementById('focus-overlay').classList.remove('open')}
+
+/* ═══ END-OF-DAY SUMMARY ═══ */
+const EOD_KEY='tradeos_eod_date';
+function showEODSummary(){
+  const last=localStorage.getItem(EOD_KEY);
+  const today=new Date().toDateString();
+  if(last===today)return;
+  const hour=new Date().getHours();
+  if(hour<17)return; // Only after 5pm
+  const data=getJobs();if(!data)return;
+  const totalLeads=data.lead?.length||0;
+  const totalQuoted=data.quoted?.length||0;
+  const totalActive=data.progress?.length||0;
+  const totalDone=data.completed?.length||0;
+  const totalRevenue=data.completed?.reduce((s,j)=>s+(j.amount||0),0)||0;
+  if(totalLeads+totalQuoted+totalActive+totalDone===0)return;
+  document.getElementById('eod-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  document.getElementById('eod-stats').innerHTML=
+    '<div class="eod-stat"><div class="eod-num" style="color:var(--yellow)">'+totalLeads+'</div><div class="eod-label">Leads</div></div>'+
+    '<div class="eod-stat"><div class="eod-num" style="color:var(--accent)">'+totalQuoted+'</div><div class="eod-label">Quotes</div></div>'+
+    '<div class="eod-stat"><div class="eod-num" style="color:var(--orange)">'+totalActive+'</div><div class="eod-label">Active</div></div>'+
+    '<div class="eod-stat"><div class="eod-num" style="color:var(--green)">$'+totalRevenue.toLocaleString()+'</div><div class="eod-label">Revenue</div></div>';
+  const msgs=[
+    'Great work today! You moved '+totalDone+' jobs to completion.',
+    totalLeads>0?'You have '+totalLeads+' leads to follow up tomorrow.':'All leads processed — nice!',
+    totalQuoted>0?'Don\'t forget '+totalQuoted+' quotes waiting for responses.':'All quotes are up to date.'
+  ];
+  document.getElementById('eod-msg').innerHTML=msgs.join('<br>');
+  document.getElementById('eod-summary').classList.add('sh');
+  localStorage.setItem(EOD_KEY,today);
+  trackUsage('eod-summary')
+}
+function closeEOD(){document.getElementById('eod-summary').classList.remove('sh')}
+
+// Update showTimeline to support inline rendering
+const _timelineShowTimeline=showTimeline;
+showTimeline=function(col,i,inline){
+  if(inline){
+    const data=getJobs();if(!data[col]||!data[col][i])return '';
+    const j=data[col][i];
+    const stages=['lead','quoted','booked','progress','completed'];
+    const labels={lead:'📥 Lead Created',quoted:'💬 Quote Sent',booked:'📅 Booked',progress:'🔧 In Progress',completed:'✅ Completed'};
+    const currentIdx=stages.indexOf(col);
+    return '<div class="client-tl">'+stages.map((s,idx)=>{
+      const status=idx<currentIdx?'done':idx===currentIdx?'current':'pending';
+      return '<div class="tl-step '+status+'"><span class="tl-icon">'+(idx<currentIdx?'✓':'○')+'</span><div class="tl-title">'+labels[s]+'</div><div class="tl-date">'+(idx<=currentIdx?'May '+String(8+idx)+', 2026':'Pending')+'</div></div>'
+    }).join('')+'</div>'
+  }
+  // Original behavior for non-inline
+  showTimeline(col,i)
+};
+
+/* ═══ OPTIMISTIC UI ═══ */
+// createQuickJob now updates instantly
+const _optimisticQJ=createQuickJob;
+createQuickJob=function(){
+  const name=document.getElementById('qj-name').value.trim();
+  const amount=parseFloat(document.getElementById('qj-amount').value)||0;
+  const detail=document.getElementById('qj-detail').value.trim()||'New job';
+  if(!name){toast('⚠️ Enter a client name');document.getElementById('qj-name').focus();return}
+  const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+  data.lead.unshift({name,type:qjType,amount,detail}); // unshift for newest first
+  saveJobs(data);renderJobs();renderDashboard();renderCalendar();
+  addAudit('create','📦 Created job: '+name);
+  closeQJ();toast('✅ '+name+' added!');
+  trackUsage('quick-job');
+  document.getElementById('qj-name').value='';document.getElementById('qj-amount').value='0';document.getElementById('qj-detail').value=''
+};
+
 /* ═══ INIT UPDATES ═══ */
 let currentWorkspace='all';
 function switchWorkspace(ws){
@@ -2959,6 +3204,8 @@ function renderDashboard(){
 
   // Render analytics
   renderAnalytics();
+  // Today mode
+  renderToday();
   // Usage analytics
   renderUsageAnalytics()
 }
@@ -2982,7 +3229,7 @@ function init(){
   initSwipes();
   // Onboarding after auth
   setTimeout(()=>{
-    if(sbUser){startOnboarding();showDailySummary()}
+    if(sbUser){startOnboarding();showDailySummary();setTimeout(showEODSummary,2000)}
   },1000);
   // Quick commands for CMD+K
   addQuickCommands();
