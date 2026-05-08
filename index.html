@@ -676,6 +676,48 @@ body.calm-mode .tl-pulse .pulse-dot{animation:none;opacity:.4}
 .eod-prep .eodp-btn{padding:var(--space-1) var(--space-3);background:var(--accent-subtle);border:1px solid var(--accent);border-radius:var(--rad-sm);color:var(--accent);cursor:pointer;font-size:10px;font-weight:500;font-family:inherit;transition:all var(--ts);margin-top:var(--space-3);width:100%}
 .eod-prep .eodp-btn:hover{background:var(--accent);color:#fff}
 
+/* ═══ SILENCE ENGINE — Quiet States ═══ */
+.silent-state{text-align:center;padding:var(--space-6) var(--space-4);color:var(--fg3)}
+.silent-state .silent-icon{font-size:24px;margin-bottom:var(--space-2);opacity:.5}
+.silent-state .silent-title{font-size:13px;font-weight:500;color:var(--fg2);margin-bottom:2px}
+.silent-state .silent-desc{font-size:11px;color:var(--fg4);line-height:1.4}
+.silent-state .silent-action{display:inline-flex;align-items:center;gap:4px;padding:var(--space-1) var(--space-3);margin-top:var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad-full);color:var(--fg3);font-size:11px;cursor:pointer;font-family:inherit;transition:all var(--ts)}
+.silent-state .silent-action:hover{background:var(--card);border-color:var(--accent);color:var(--accent)}
+
+/* ═══ ENERGY-SENSITIVE TONES ═══ */
+body.energy-low{--accent-glow:rgba(99,102,241,.08);--shadow-glow:0 0 12px var(--accent-glow);--fg:var(--fg);--fg2:#8888a0;--fg3:#4c4c62}
+body.energy-low .tl-item{border-bottom-color:rgba(30,30,50,.2)}
+body.energy-low .tl-focus{background:var(--bg3);border-color:var(--card-border)}
+body.energy-low .tl-focus::before{opacity:.3}
+body.energy-low .intel-action{opacity:.5}
+body.energy-low .ctx-item{opacity:.6}
+body.energy-low .confidence-badge{opacity:.3}
+body.energy-very-low{--accent-glow:rgba(99,102,241,.04);--shadow-glow:none;--fg2:#6a6a80;--fg3:#3a3a4e}
+body.energy-very-low .tl-item{border-bottom-color:rgba(30,30,50,.1)}
+body.energy-very-low .ctx-bar{display:none}
+body.energy-very-low .tl-focus{display:none}
+body.energy-very-low .ctx-item{opacity:.4}
+body.energy-very-low .tl-intel{background:var(--bg3);border-color:transparent}
+body.energy-very-low .tl-intel .intel-action{display:none}
+
+/* ═══ EMOTIONAL REFLECTION — Human EOD ═══ */
+.reflect-card{background:linear-gradient(135deg,var(--bg3),var(--card));border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4) var(--space-5);margin-top:var(--space-3);text-align:center;animation:fadeUp .4s ease}
+.reflect-card .reflect-icon{font-size:28px;margin-bottom:var(--space-2)}
+.reflect-card .reflect-title{font-size:15px;font-weight:600;color:var(--fg);margin-bottom:2px}
+.reflect-card .reflect-text{font-size:12px;color:var(--fg3);line-height:1.5;margin-bottom:var(--space-3)}
+.reflect-card .reflect-actions{display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap}
+.reflect-card .reflect-btn{padding:var(--space-1) var(--space-4);background:var(--accent-subtle);border:1px solid var(--accent);border-radius:var(--rad-full);color:var(--accent);cursor:pointer;font-size:11px;font-family:inherit;transition:all var(--ts);font-weight:500}
+.reflect-card .reflect-btn:hover{background:var(--accent);color:#fff}
+.reflect-card .reflect-btn.soft{padding:var(--space-1) var(--space-3);background:var(--bg3);border-color:var(--card-border);color:var(--fg3)}
+.reflect-card .reflect-btn.soft:hover{background:var(--card);border-color:var(--card-border-hov);color:var(--fg2)}
+
+/* ═══ REDUCED DENSITY — Cleaner Timeline ═══ */
+.tl-item.compact{padding:var(--space-1) 0}
+.tl-item.compact .tl-text{font-size:11.5px}
+.tl-item.compact .tl-meta{font-size:9px}
+.tl-item.compact .tl-action{font-size:9px}
+.tl-item:last-of-type{border-bottom:none!important}
+
 /* ═══ INLINE JOB COMMENTS ═══ */
 .jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
 .jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
@@ -3395,10 +3437,12 @@ function renderTimeline(){
       (p.action?'<button class="intel-action" onclick="'+p.action+'">Enable →</button>':'')+'</div>'
   });
   if(items.length===0){
-    html+='<div class="tl-empty"><div class="tl-empty-icon">📋</div><div class="tl-empty-title">No activity yet today</div><div class="tl-empty-desc">Start working — type <b>⌘K</b> and try <code>new job smith $3000 paving</code></div></div>';
     feed.innerHTML=html;
+    renderSilenceState();
     renderPulse();
     renderContextBar();
+    updateEnergyTones();
+    renderEODPrep();
     return
   }
   
@@ -3431,7 +3475,8 @@ function renderTimeline(){
     '</div></div>').join('');
   renderPulse();
   renderContextBar();
-  updateCalmMode();
+  updateEnergyTones();
+  renderSilenceState();
   renderEODPrep()
 }
 
@@ -3908,7 +3953,7 @@ function detectAutopilot(){
   return patterns
 }
 
-/* ═══ COMMAND OS — Context Bar (with Confidence) ═══ */
+/* ═══ COMMAND OS — Context Bar (Reduced Noise) ═══ */
 function renderContextBar(){
   const bar=document.getElementById('ctx-bar');
   if(!bar)return;
@@ -3919,26 +3964,50 @@ function renderContextBar(){
   const ins=getBehavioralInsights();
   const mode=getTimeMode();
   const chips=[];
-  if(leads>0)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':'')+' to follow up',action:'switchPanel(\'leads\')',urgent:leads>3,score:confidenceScore('lead',{})});
-  if(quoted>0)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')',score:confidenceScore('quote',{})});
-  if(activeJobs>0)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5,score:confidenceScore('job',{})});
-  if(ins.topService)chips.push({label:'⚡ Quick '+ins.topService+' quote',action:"aiSuggest('Generate a quote for "+ins.topService+"')",score:confidenceScore('quote',{service:ins.topService})});
-  if(ins.lastClient)chips.push({label:'↩️ Re-quote '+ins.lastClient.name,action:"aiSuggest('Generate a quote for "+ins.lastClient.name+"')",score:confidenceScore('quote',{client:ins.lastClient.name})});
-  chips.push({label:'⌘ New job...',action:'openQJ()'});
-  chips.push({label:'⌘ New quote...',action:'switchPanel(\'quotes\')'});
-if(chips.length===2)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
-  bar.innerHTML='<span class="ctx-label">'+mode.icon+' '+mode.label+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+' '+confidenceBadge(c.score)+'<span class="trust-why"><span class="why-icon">?</span><span class="why-tip">Reason: '+(c.score>=80?'Strong behavioral match + time alignment':'Moderate pattern match')+' ('+c.score+'%)</span></span></span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
+  // Only show suggestions with MED/HIGH confidence — reduces noise
+  if(leads>0){const s=confidenceScore('lead',{});if(s>=50)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':''),action:'switchPanel(\'leads\')',urgent:leads>3,score:s})}
+  if(quoted>0){const s=confidenceScore('quote',{});if(s>=50)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')',score:s})}
+  if(activeJobs>0){const s=confidenceScore('job',{});if(s>=50)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5,score:s})}
+  if(ins.topService){const s=confidenceScore('quote',{service:ins.topService});if(s>=50)chips.push({label:'⚡ '+ins.topService,action:"aiSuggest('Generate a quote for "+ins.topService+"')",score:s})}
+  // Always keep these quiet essentials
+  chips.push({label:'⌘ New job',action:'openQJ()'});
+  chips.push({label:'⌘ Search',action:'openCmd()'});
+  if(chips.length<=3)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
+  // If nothing relevant, show silent state
+  if(chips.length<=2){
+    bar.innerHTML='<div class="silent-state" style="padding:var(--space-3);display:flex;align-items:center;gap:var(--space-3);text-align:left"><span style="font-size:16px;opacity:.5">✦</span><div><div style="font-size:11px;color:var(--fg3)">All quiet</div><div style="font-size:10px;color:var(--fg4)">'+mode.desc+'</div></div></div>';
+    return
+  }
+  bar.innerHTML='<span class="ctx-label" style="opacity:.6">'+mode.icon+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+'</span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
 }
 
-/* ═══ COGNITIVE OPERATIONAL — Calm Mode Activation ═══ */
-function updateCalmMode(){
-  const mode=getTimeMode();
+/* ═══ COGNITIVE OPERATIONAL — Energy-Sensitive Tones ═══ */
+function updateEnergyTones(){
+  const h=new Date().getHours();
   const body=document.body;
-  if(mode.key==='night'||mode.key==='evening'){
-    body.classList.add('calm-mode')
-  }else{
-    body.classList.remove('calm-mode')
-  }
+  body.classList.remove('energy-low','energy-very-low','calm-mode');
+  // After 18:00 — gradually dim
+  if(h>=18&&h<21)body.classList.add('energy-low');
+  else if(h>=21||h<6)body.classList.add('energy-very-low');
+  else if(h>=17)body.classList.add('calm-mode')
+}
+
+/* ═══ SILENCE ENGINE — Quiet Timeline State ═══ */
+function renderSilenceState(){
+  const feed=document.getElementById('tl-feed');
+  if(!feed)return;
+  const all=getOps();
+  const today=new Date().toDateString();
+  const items=all[today]||[];
+  if(items.length>0)return; // Don't override if there's activity
+  const mode=getTimeMode();
+  const greetings={
+    morning:'Start your day — type <b>⌘K</b> to create a job or quote',
+    afternoon:'Quiet afternoon. <b>⌘K</b> to get started',
+    evening:'Good day\'s work. Ready for tomorrow? <b>⌘K</b> to prep',
+    night:'Time to rest. Everything\'s ready for morning'
+  };
+  feed.innerHTML='<div class="silent-state"><div class="silent-icon">'+(mode.key==='night'?'🌙':mode.key==='evening'?'🌆':'☀️')+'</div><div class="silent-title">'+mode.label+'</div><div class="silent-desc">'+(greetings[mode.key]||greetings.morning)+'</div></div>'
 }
 
 /* ═══ COGNITIVE OPERATIONAL — Attention Awareness ═══ */
@@ -3983,16 +4052,27 @@ function renderEODPrep(){
   const ops=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
   const todayCount=ops[today]?.length||0;
   if(todayCount===0&&leads===0&&active===0){el.classList.remove('sh');return}
+  
+  // Emotional reflection: human message based on activity
+  let icon='🌙',msg='';
+  if(todayCount===0)msg='A quiet day. Tomorrow\'s a fresh start.';
+  else if(completed>=5)msg='Solid day. '+completed+' jobs done. You earned the rest.';
+  else if(leads>quoted)msg=leads+' leads waiting. Ready for a productive morning?';
+  else if(active>0)msg=active+' job'+(active>1?'s':'')+' still active. Tomorrow morning, you\'ll know where to start.';
+  else msg='Good work today. Everything\'s in good shape for tomorrow.';
+  
   el.classList.add('sh');
-  el.innerHTML='<div class="eodp-head">🌙 Today\'s Wrap · Tomorrow\'s Prep</div>'+
-    '<div class="eodp-grid">'+
-    '<div class="eodp-item"><div class="eodp-icon">📥</div><div class="eodp-label">Leads for morning</div><div class="eodp-val">'+leads+' to follow up</div></div>'+
-    '<div class="eodp-item"><div class="eodp-icon">💬</div><div class="eodp-label">Quotes to send</div><div class="eodp-val">'+quoted+' pending</div></div>'+
-    '<div class="eodp-item"><div class="eodp-icon">🔧</div><div class="eodp-label">Active jobs</div><div class="eodp-val">'+active+' in progress</div></div>'+
-    '<div class="eodp-item"><div class="eodp-icon">✅</div><div class="eodp-label">Completed today</div><div class="eodp-val">'+completed+' done</div></div>'+
-    '</div>'+
-    (leads>0?'<button class="eodp-btn" onclick="switchPanel(\'leads\')">📋 Prepare leads for tomorrow →</button>':'')
+  el.innerHTML=
+    '<div class="reflect-card"><div class="reflect-icon">'+icon+'</div><div class="reflect-title">Time to wrap up</div><div class="reflect-text">'+msg+'</div>'+
+    '<div class="reflect-actions">'+
+      (leads>0?'<button class="reflect-btn" onclick="switchPanel(\'leads\')">📥 '+leads+' leads for tomorrow</button>':'')+
+      (quoted>0?'<button class="reflect-btn" onclick="switchPanel(\'jobs\')">💬 '+quoted+' quotes to send</button>':'')+
+      '<button class="reflect-btn soft" onclick="this.parentElement.parentElement.classList.remove(\'sh\')">✓ All good</button>'+
+    '</div></div>'
 }
+
+/* ═══ COGNITIVE OPERATIONAL — Soft Interruption ═══ */
+const _origCheckInterrupt=checkInterrupt;
 
 /* ═══ DASHBOARD — Progressive Disclosure ═══ */
 let dashMoreOpen=false;
