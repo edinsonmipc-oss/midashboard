@@ -1,11 +1,17 @@
 {
   "entries": [
     {
+      "date": "2026-05-08T13:53",
+      "type": "creacion",
+      "project": "Gumroad",
+      "text": "8 productos digitales PUBLICADOS en Gumroad. Safety Pack $37, Quote Bundle $29, AI Guide $27, BAS Kit $22, AI tools $9.99-$14.99"
+    },
+    {
       "date": "2026-05-08",
       "time": "02:10",
       "project": "tradeos",
       "type": "mejora",
-      "text": "App simplificada: sidebar 19→11 items, duplicados redirigidos, AI Assistant integrado"
+      "text": "App simplificada: sidebar 19\u219211 items, duplicados redirigidos, AI Assistant integrado"
     },
     {
       "date": "2026-05-08",
@@ -19,7 +25,7 @@
       "time": "02:03",
       "project": "tradeos",
       "type": "creacion",
-      "text": "AI Assistant creado con fallback Gemini→OpenRouter→offline + chat flotante en app"
+      "text": "AI Assistant creado con fallback Gemini\u2192OpenRouter\u2192offline + chat flotante en app"
     },
     {
       "date": "2026-05-07",
@@ -47,21 +53,21 @@
       "time": "19:00",
       "project": "antoniopaving",
       "type": "creacion",
-      "text": "8 páginas de suburbios creadas + sitemap 379 URLs + SEO score 100%"
+      "text": "8 p\u00e1ginas de suburbios creadas + sitemap 379 URLs + SEO score 100%"
     },
     {
       "date": "2026-05-07",
       "time": "18:00",
       "project": "antoniopaving",
       "type": "mejora",
-      "text": "29 páginas 404 corregidas + 33 redirects 301 + robots.txt optimizado"
+      "text": "29 p\u00e1ginas 404 corregidas + 33 redirects 301 + robots.txt optimizado"
     },
     {
       "date": "2026-05-07",
       "time": "17:00",
       "project": "primeproperty",
       "type": "mejora",
-      "text": "11 páginas 404 corregidas (suburbios con tráfico GSC perdido recuperado)"
+      "text": "11 p\u00e1ginas 404 corregidas (suburbios con tr\u00e1fico GSC perdido recuperado)"
     },
     {
       "date": "2026-05-07",
@@ -75,7 +81,7 @@
       "time": "15:00",
       "project": "leads",
       "type": "creacion",
-      "text": "130 leads recolectados, 51 únicos verificados, templates de outreach listos"
+      "text": "130 leads recolectados, 51 \u00fanicos verificados, templates de outreach listos"
     },
     {
       "date": "2026-05-02",
@@ -89,14 +95,14 @@
       "time": "12:30",
       "project": "toolshubpro",
       "type": "infra",
-      "text": "Sitemap.xml generado con 74 URLs + robots.txt — SEO listo"
+      "text": "Sitemap.xml generado con 74 URLs + robots.txt \u2014 SEO listo"
     },
     {
       "date": "2026-05-02",
       "time": "12:30",
       "project": "toolshubpro",
       "type": "infra",
-      "text": "ZIP final creado (0.5MB, 87 archivos) — listo para subir a Hostinger"
+      "text": "ZIP final creado (0.5MB, 87 archivos) \u2014 listo para subir a Hostinger"
     },
     {
       "date": "2026-05-02",
@@ -117,7 +123,7 @@
       "time": "11:38",
       "project": "dashboard",
       "type": "mejora",
-      "text": "Rediseño completo del dashboard: estructura de proyecto vivo con datos JSON + generador automático"
+      "text": "Redise\u00f1o completo del dashboard: estructura de proyecto vivo con datos JSON + generador autom\u00e1tico"
     },
     {
       "date": "2026-05-02",
@@ -131,14 +137,14 @@
       "time": "18:00",
       "project": "primeproperty",
       "type": "mejora",
-      "text": "SEO: FAQPage schema agregado a páginas top-10/15"
+      "text": "SEO: FAQPage schema agregado a p\u00e1ginas top-10/15"
     },
     {
       "date": "2026-05-01",
       "time": "17:30",
       "project": "primeproperty",
       "type": "mejora",
-      "text": "Blog creado: 3 artículos (landscaping, gutter replacement, building maintenance)"
+      "text": "Blog creado: 3 art\u00edculos (landscaping, gutter replacement, building maintenance)"
     }
   ]
 }

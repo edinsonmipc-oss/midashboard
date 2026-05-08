@@ -4,7 +4,7 @@
     {
       "id": "toolshubpro",
       "name": "ToolshubPro",
-      "emoji": "🛠️",
+      "emoji": "\ud83d\udee0\ufe0f",
       "status": "activo",
       "description": "66 herramientas online + 5 nuevas (Car Loan, Home Loan, CGT, Budget, Retirement). Sitemap 82 URLs. Meta: $5k/mes en 6 meses.",
       "url": "https://toolshubpro.com.au",
@@ -16,8 +16,8 @@
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Esperar indexación de Google (2-4 sem)",
-        "Agregar más herramientas financieras",
+        "Esperar indexaci\u00f3n de Google (2-4 sem)",
+        "Agregar m\u00e1s herramientas financieras",
         "Monitorear GSC para keywords"
       ],
       "notes": "66 herramientas. 5 nuevas financieras. Sitemap 82 URLs. Contenido SEO por suburbio."
@@ -25,9 +25,9 @@
     {
       "id": "primeproperty",
       "name": "Prime Property Maintenance",
-      "emoji": "🏡",
+      "emoji": "\ud83c\udfe1",
       "status": "activo",
-      "description": "Servicios de mantenimiento de propiedades en Melbourne. 965 URLs, tráfico creciendo.",
+      "description": "Servicios de mantenimiento de propiedades en Melbourne. 965 URLs, tr\u00e1fico creciendo.",
       "url": "https://primepropertymaintenance.au",
       "metrics": {
         "urls_en_sitemap": 965,
@@ -46,7 +46,7 @@
     {
       "id": "tradeos",
       "name": "Tradeos",
-      "emoji": "📦",
+      "emoji": "\ud83d\udce6",
       "status": "pendiente",
       "description": "Plataforma de comercio/negocios.",
       "url": "",
@@ -58,17 +58,17 @@
       "last_update": "2026-05-07",
       "next_steps": [
         "Agregar gst column a DB",
-        "Probar en producción",
+        "Probar en producci\u00f3n",
         "Beta users"
       ],
-      "notes": "App simplificada: sidebar 19→11, 4 páginas duplicadas redirigidas, AI Assistant integrado, bugfix gst"
+      "notes": "App simplificada: sidebar 19\u219211, 4 p\u00e1ginas duplicadas redirigidas, AI Assistant integrado, bugfix gst"
     },
     {
       "id": "antoniopaving",
       "name": "Antonio Paving",
-      "emoji": "🏗️",
+      "emoji": "\ud83c\udfd7\ufe0f",
       "status": "activo",
-      "description": "Pavimentación residencial y comercial en Melbourne. 8 páginas de suburbios nuevas. SEO score 100%.",
+      "description": "Pavimentaci\u00f3n residencial y comercial en Melbourne. 8 p\u00e1ginas de suburbios nuevas. SEO score 100%.",
       "url": "https://antoniopaving.com",
       "metrics": {
         "servicios": 6,
@@ -79,17 +79,17 @@
       "last_update": "2026-05-07",
       "next_steps": [
         "Subir fotos reales al GBP",
-        "Seguir creando páginas por suburbio",
+        "Seguir creando p\u00e1ginas por suburbio",
         "Conseguir backlinks AU"
       ],
-      "notes": "8 páginas de suburbios. Sitemap 379 URLs. Schema LocalBusiness. 404s corregidos."
+      "notes": "8 p\u00e1ginas de suburbios. Sitemap 379 URLs. Schema LocalBusiness. 404s corregidos."
     },
     {
       "id": "leadgen",
       "name": "Lead Generation",
-      "emoji": "🎯",
+      "emoji": "\ud83c\udfaf",
       "status": "activo",
-      "description": "130 leads encontrados, 51 únicos verificados. Outreach pendiente de activación.",
+      "description": "130 leads encontrados, 51 \u00fanicos verificados. Outreach pendiente de activaci\u00f3n.",
       "url": "",
       "metrics": {
         "leads_totales": 130,
@@ -98,16 +98,16 @@
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Activar envío automático (req App Password)",
+        "Activar env\u00edo autom\u00e1tico (req App Password)",
         "Completar outreach a builders",
         "Seguir recolectando leads"
       ],
-      "notes": "130 leads en 13 días. Builders, constructoras, real estate. Templates listos."
+      "notes": "130 leads en 13 d\u00edas. Builders, constructoras, real estate. Templates listos."
     },
     {
       "id": "primewashgear",
       "name": "PrimeWash Gear",
-      "emoji": "🧼",
+      "emoji": "\ud83e\uddfc",
       "status": "activo",
       "description": "Tienda dropshipping de partes para pressure washers. Stripe activo. 3 productos.",
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
@@ -119,32 +119,33 @@
       "last_update": "2026-05-07",
       "next_steps": [
         "Completar bank account en Stripe",
-        "Agregar más productos",
-        "Impulsar tráfico"
+        "Agregar m\u00e1s productos",
+        "Impulsar tr\u00e1fico"
       ],
       "notes": "LIVE Stripe. 3 packs (Pro $174.99, Starter $99.00, Maintenance $44.99)"
     },
     {
       "id": "claude-skills",
-      "name": "Claude Skills Pack",
-      "emoji": "🧠",
+      "name": "Gumroad Digital Products",
+      "emoji": "\ud83e\udde0",
       "status": "activo",
-      "description": "5 templates de IA para tradies AU. Basado en método Adrián Sáenz.",
+      "description": "9 productos digitales en Gumroad (Safety Pack $37, Quote Bundle $29, AI Guide $27, etc). Todos publicados y vendiendo.",
       "url": "",
       "metrics": {
-        "skills": 5,
-        "precio_min": "$19",
-        "precio_max": "$47",
-        "target": "Tradies AU"
+        "productos": 8,
+        "precios": "$2.99 - $37",
+        "ventas": 0,
+        "ingresos": "$0",
+        "status": "LIVE"
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Landing page de venta",
-        "Publicar en Gumroad",
-        "Promocionar a 51 leads",
-        "Video demo"
+        "Promocionar a leads de email outreach",
+        "Agregar thumbnails a cada producto",
+        "Compartir en redes sociales",
+        "$100 min antes de cobrar primer payout"
       ],
-      "notes": "5 skills. Pack completo sugerido: $97 AUD."
+      "notes": "8 productos publicados. Gumroad acct: edinsonmipc@gmail.com. Token en config."
     }
   ],
   "stats": {
