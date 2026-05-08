@@ -516,6 +516,33 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .ua-item .ua-bar{height:3px;background:var(--fg4);border-radius:var(--rad-full);overflow:hidden;margin-top:var(--space-1)}
 .ua-item .ua-bar-fill{height:100%;background:var(--accent);border-radius:var(--rad-full)}
 
+/* ═══ MICRO INTERACTIONS ═══ */
+.btn:active,.dqa-btn:active,.fab-item:active,.sb-btn:active,.bn-btn:active{transform:scale(.97)}
+.jcard{transition:all .15s cubic-bezier(.4,0,.2,1)}
+.mc,.sc,.bc2,.shc,.ac,.lc,.photo-card{transition:all .2s cubic-bezier(.4,0,.2,1)}
+.smooth-fade{animation:fadeIn .2s ease}
+@keyframes pop{0%{transform:scale(.8);opacity:0}50%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
+.pop-in{animation:pop .25s ease}
+
+/* ═══ TOUCH RIPPLE ═══ */
+@media(hover:none){
+  .ripple{position:relative;overflow:hidden}
+  .ripple::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.15);transform:scale(0);opacity:0;pointer-events:none;width:100px;height:100px;margin-left:-50px;margin-top:-50px;left:var(--rx,50%);top:var(--ry,50%)}
+  .ripple:active::after{animation:rippleAnim .4s ease-out}
+}
+@keyframes rippleAnim{0%{transform:scale(0);opacity:.5}100%{transform:scale(3);opacity:0}}
+
+/* ═══ STREAK ═══ */
+#streak{display:flex;align-items:center;gap:var(--space-1);font-size:10px;color:var(--fg4);padding:var(--space-1) var(--space-3);background:var(--bg3);border-radius:var(--rad-full)}
+#streak .streak-fire{font-size:12px}
+#streak .streak-num{font-weight:600;color:var(--orange)}
+
+/* ═══ INLINE JOB COMMENTS ═══ */
+.jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
+.jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
+.jc-comment input:focus{border-color:var(--accent)}
+.jc-comment .jc-cm-count{font-size:8px;color:var(--fg4)}
+
 /* ═══ AI ASSISTANT ═══ */
 #ai-bubble{position:fixed;bottom:24px;right:24px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 20px var(--accent-glow);transition:all var(--ts-slow);display:flex;align-items:center;justify-content:center}
 #ai-bubble:hover{transform:scale(1.08);box-shadow:0 6px 28px var(--accent-glow)}
@@ -931,6 +958,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
     <div class="qs-item"><b id="m-sites">0/0</b> Sites Online</div>
     <div class="qs-item"><b id="m-biz">0</b> Businesses</div>
     <div class="qs-item"><b id="m-agents">0</b> AI Agents</div>
+    <div id="streak"><span class="streak-fire">🔥</span> Day <span class="streak-num" id="streak-num">1</span></div>
   </div>
 
   <div class="mg" id="dash-metrics"></div>
@@ -2671,6 +2699,93 @@ function showSkeleton(containerId){
   el.innerHTML='<div class="sk-wrap"><div class="sk-line w60"></div><div class="sk-line w80"></div><div class="sk-line w40"></div><div class="sk-block"></div><div class="sk-grid"><div class="sk-card"></div><div class="sk-card"></div></div></div>'
 }
 
+/* ═══ STREAK TRACKING ═══ */
+const STREAK_KEY='tradeos_streak';
+function updateStreak(){
+  const data=JSON.parse(localStorage.getItem(STREAK_KEY)||'{"count":0,"last":""}');
+  const today=new Date().toDateString();
+  if(data.last===today)return data.count;
+  const yesterday=new Date(Date.now()-86400000).toDateString();
+  if(data.last===yesterday)data.count++;
+  else if(data.last!==today)data.count=1;
+  data.last=today;
+  localStorage.setItem(STREAK_KEY,JSON.stringify(data));
+  document.getElementById('streak-num').textContent=data.count;
+  return data.count
+}
+
+/* ═══ AUTO-SAVE INDICATOR ═══ */
+function showSaved(el){
+  const orig=el.textContent;
+  el.textContent='✓ Saved';el.style.color='var(--green)';
+  setTimeout(()=>{el.textContent=orig;el.style.color=''},1500)
+}
+
+/* ═══ INLINE JOB COMMENTS ═══ */
+const COMMENTS_KEY='tradeos_comments';
+function getComments(jobName){
+  const all=JSON.parse(localStorage.getItem(COMMENTS_KEY)||'{}');
+  return all[jobName]||''
+}
+function saveComment(jobName,text){
+  const all=JSON.parse(localStorage.getItem(COMMENTS_KEY)||'{}');
+  all[jobName]=text;
+  localStorage.setItem(COMMENTS_KEY,JSON.stringify(all))
+}
+
+// Enhanced renderJobs with comments
+const _enhancedRenderJobs=renderJobs;
+renderJobs=function(){
+  const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+  let total=0;Object.values(data).forEach(a=>total+=a.length);
+  document.getElementById('j-badge').textContent=total;
+  const board=document.getElementById('job-board');
+  board.innerHTML=JOB_COLS.map(col=>'<div class="jcol" data-col="'+col+'" ondrop="dropJob(event,\''+col+'\')" ondragover="dragOver(event)" ondragleave="dragLeave(event)"><div class="jcol-h"><h4>'+JOB_LABELS[col]+'</h4><span class="jc-count">'+(data[col]?.length||0)+'</span></div>'+
+    (data[col]||[]).map((j,i)=>{
+      const comments=getComments(j.name);
+      return '<div class="jcard" draggable="true" ondragstart="dragStart(event,'+i+',\''+col+'\')"><div class="jc-name">'+j.name+'</div><div class="jc-detail"><span class="jc-amount">$'+j.amount.toLocaleString()+'</span><span class="jc-badge '+(JOB_BADGES[j.type]||'handyman')+'">'+j.type+'</span></div><div class="text-muted" style="font-size:9px;margin-top:2px">'+j.detail+'</div><div class="flex gap-1" style="margin-top:4px">'+
+      (col==='completed'||col==='booked'||col==='progress'?'<button class="ai-action-btn primary" onclick="event.stopPropagation();createPaymentLink('+JSON.stringify(j).replace(/"/g,'&quot;')+')" title="Send payment link">💳 Pay</button>':'')+
+      (col==='lead'?'<button class="ai-action-btn green" onclick="event.stopPropagation();smartAI(\'quote-job\',\'Generate a quote for '+j.name+', '+j.type+' job worth $'+j.amount+'\')" title="AI generate quote">🤖 Quote</button>':'')+
+      '</div>'+
+      '<div class="jc-comment"><input placeholder="Add note..." value="'+comments+'" onchange="saveComment(\''+j.name+'\',this.value)" onfocus="event.stopPropagation()"><span class="jc-cm-count">'+(comments?comments.length+'c':'')+'</span></div>'+
+      '</div>'
+    }).join('')+
+    '</div>').join('')
+};
+
+/* ═══ AI PANEL CONTEXT ═══ */
+const _origToggleAI=toggleAI;
+toggleAI=function(){
+  const p=document.getElementById('ai-panel');aiOpen=!aiOpen;p.classList.toggle('open',aiOpen);
+  if(aiOpen){
+    document.getElementById('ai-input').focus();
+    // Add context based on current panel
+    const activePanel=document.querySelector('.pn.on');
+    if(activePanel){
+      const id=activePanel.id.replace('pn-','');
+      const contexts={
+        'dashboard':'Looking at the dashboard. ',
+        'jobs':'Looking at the job board. ',
+        'leads':'Managing leads. ',
+        'quotes':'Creating a quote. ',
+        'calendar':'Checking the calendar. ',
+        'photos':'Working with photos. ',
+        'automations':'Setting up automations. '
+      };
+      const ctx=contexts[id];
+      if(ctx)document.getElementById('ai-input').placeholder=ctx+'Ask me anything...'
+    }
+  }
+};
+
+/* ═══ BETTER EMPTY STATES ═══ */
+function showEmptyState(containerId,icon,title,desc,action){
+  const el=document.getElementById(containerId);
+  if(!el)return;
+  el.innerHTML='<div class="empty-state pop-in"><div class="empty-icon">'+icon+'</div><div class="empty-title">'+title+'</div><div class="empty-desc">'+desc+'</div>'+
+    (action?'<button class="btn btn-p btn-sm" style="margin-top:12px" onclick="'+action.fn+'">'+action.label+'</button>':'')+'</div>'
+}
+
 /* ═══ INIT UPDATES ═══ */
 let currentWorkspace='all';
 function switchWorkspace(ws){
@@ -2870,7 +2985,9 @@ function init(){
     if(sbUser){startOnboarding();showDailySummary()}
   },1000);
   // Quick commands for CMD+K
-  addQuickCommands()
+  addQuickCommands();
+  // Streak tracking
+  updateStreak()
 }
 
 document.addEventListener('DOMContentLoaded',init);
