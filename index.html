@@ -643,6 +643,39 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 #interrupt-bar .inter-close{background:none;border:none;color:var(--fg3);font-size:16px;cursor:pointer;line-height:1;padding:0 4px;font-family:inherit;transition:color var(--ts)}
 #interrupt-bar .inter-close:hover{color:var(--fg)}
 
+/* ═══ COGNITIVE OPERATIONAL — Calm Mode ═══ */
+body.calm-mode{--accent-glow:rgba(99,102,241,.12);--shadow-glow:0 0 16px var(--accent-glow)}
+body.calm-mode .tl-item .tl-dot{box-shadow:none!important}
+body.calm-mode .tl-focus{background:var(--card);border-color:var(--card-border)}
+body.calm-mode .tl-focus::before{opacity:.5}
+body.calm-mode .cmd-item.cmd-action{background:var(--bg3)}
+body.calm-mode .mc::after{opacity:0!important}
+body.calm-mode .pulse-dot{animation:none!important;opacity:.4}
+body.calm-mode #ai-bubble .pulse{opacity:0}
+body.calm-mode .tl-intel{background:var(--card)}
+body.calm-mode .tl-item{border-bottom-color:rgba(30,30,50,.3)}
+body.calm-mode .tl-pulse .pulse-dot{animation:none;opacity:.4}
+
+/* ═══ COGNITIVE OPERATIONAL — Trust Explanations ═══ */
+.trust-why{position:relative;display:inline-flex;align-items:center;gap:2px;cursor:help}
+.trust-why .why-icon{font-size:9px;color:var(--fg4);width:14px;height:14px;border-radius:50%;background:var(--bg3);display:inline-flex;align-items:center;justify-content:center;transition:all var(--ts)}
+.trust-why:hover .why-icon{background:var(--accent-subtle);color:var(--accent)}
+.trust-why .why-tip{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad);padding:4px 8px;font-size:10px;color:var(--fg2);white-space:nowrap;box-shadow:var(--shadow);z-index:10;font-weight:400;line-height:1.4}
+.trust-why:hover .why-tip{display:block;animation:fadeUp .15s ease}
+.ctx-item .trust-why .why-tip{bottom:auto;top:calc(100% + 4px)}
+
+/* ═══ COGNITIVE OPERATIONAL — EOD Orchestration ═══ */
+.eod-prep{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-3) var(--space-4);margin-top:var(--space-3);display:none;animation:fadeUp .3s ease}
+.eod-prep.sh{display:block}
+.eod-prep .eodp-head{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3);font-size:12px;font-weight:600}
+.eod-prep .eodp-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)}
+.eod-prep .eodp-item{background:var(--bg3);border-radius:var(--rad);padding:var(--space-2) var(--space-3);font-size:11px}
+.eod-prep .eodp-item .eodp-icon{font-size:14px;margin-bottom:2px}
+.eod-prep .eodp-item .eodp-label{color:var(--fg3);font-size:10px;margin-bottom:1px}
+.eod-prep .eodp-item .eodp-val{font-weight:600;color:var(--fg)}
+.eod-prep .eodp-btn{padding:var(--space-1) var(--space-3);background:var(--accent-subtle);border:1px solid var(--accent);border-radius:var(--rad-sm);color:var(--accent);cursor:pointer;font-size:10px;font-weight:500;font-family:inherit;transition:all var(--ts);margin-top:var(--space-3);width:100%}
+.eod-prep .eodp-btn:hover{background:var(--accent);color:#fff}
+
 /* ═══ INLINE JOB COMMENTS ═══ */
 .jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
 .jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
@@ -1135,6 +1168,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
     <div class="sh"><h2>What's Next?</h2></div>
     <div class="flex gap-2" id="tl-next-actions"></div>
   </div>
+  <div class="eod-prep" id="eod-prep"></div>
 </div>
 
 <!-- ══════ LEADS ══════ -->
@@ -3396,7 +3430,9 @@ function renderTimeline(){
     (op.meta.client?renderMemoryGraph(op.meta.client):'')+
     '</div></div>').join('');
   renderPulse();
-  renderContextBar()
+  renderContextBar();
+  updateCalmMode();
+  renderEODPrep()
 }
 
 /* ═══ TIMELINE — Pulse (what needs attention) ═══ */
@@ -3890,8 +3926,72 @@ function renderContextBar(){
   if(ins.lastClient)chips.push({label:'↩️ Re-quote '+ins.lastClient.name,action:"aiSuggest('Generate a quote for "+ins.lastClient.name+"')",score:confidenceScore('quote',{client:ins.lastClient.name})});
   chips.push({label:'⌘ New job...',action:'openQJ()'});
   chips.push({label:'⌘ New quote...',action:'switchPanel(\'quotes\')'});
-  if(chips.length===2)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
-  bar.innerHTML='<span class="ctx-label">'+mode.icon+' '+mode.label+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+' '+confidenceBadge(c.score)+'</span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
+if(chips.length===2)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
+  bar.innerHTML='<span class="ctx-label">'+mode.icon+' '+mode.label+'</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s">'+(c.score?'<span style="display:flex;align-items:center;gap:3px">'+c.label+' '+confidenceBadge(c.score)+'<span class="trust-why"><span class="why-icon">?</span><span class="why-tip">Reason: '+(c.score>=80?'Strong behavioral match + time alignment':'Moderate pattern match')+' ('+c.score+'%)</span></span></span>':c.label)+'<span class="ctx-cmd">↵</span></button>').join('')
+}
+
+/* ═══ COGNITIVE OPERATIONAL — Calm Mode Activation ═══ */
+function updateCalmMode(){
+  const mode=getTimeMode();
+  const body=document.body;
+  if(mode.key==='night'||mode.key==='evening'){
+    body.classList.add('calm-mode')
+  }else{
+    body.classList.remove('calm-mode')
+  }
+}
+
+/* ═══ COGNITIVE OPERATIONAL — Attention Awareness ═══ */
+let lastActiveTime=Date.now();
+function trackAttention(){
+  lastActiveTime=Date.now()
+}
+function getIdleMinutes(){
+  return(Math.floor((Date.now()-lastActiveTime)/60000))
+}
+function isUserActive(){
+  return getIdleMinutes()<3
+}
+document.addEventListener('click',trackAttention);
+document.addEventListener('keydown',trackAttention);
+document.addEventListener('touchstart',trackAttention);
+document.addEventListener('mousemove',()=>{if(!window._mouseTracked){window._mouseTracked=true;trackAttention();setTimeout(()=>window._mouseTracked=false,5000)}});
+
+/* ═══ COGNITIVE OPERATIONAL — Soft Interruption ═══ */
+const _origCheckInterrupt=checkInterrupt;
+checkInterrupt=function(){
+  if(interruptDismissed)return;
+  if(document.body.classList.contains('calm-mode'))return;
+  if(isUserActive()){startInterruptTimer();return}
+  const mode=getTimeMode();
+  if(mode.key==='evening'||mode.key==='night')return;
+  _origCheckInterrupt()
+};
+
+/* ═══ COGNITIVE OPERATIONAL — EOD Orchestration ═══ */
+function renderEODPrep(){
+  const el=document.getElementById('eod-prep');
+  if(!el)return;
+  const mode=getTimeMode();
+  if(mode.key!=='evening'&&mode.key!=='night'){el.classList.remove('sh');return}
+  const data=getJobs();
+  const leads=data?.lead?.length||0;
+  const quoted=data?.quoted?.length||0;
+  const active=data?.progress?.length||0;
+  const completed=data?.completed?.length||0;
+  const today=new Date().toDateString();
+  const ops=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
+  const todayCount=ops[today]?.length||0;
+  if(todayCount===0&&leads===0&&active===0){el.classList.remove('sh');return}
+  el.classList.add('sh');
+  el.innerHTML='<div class="eodp-head">🌙 Today\'s Wrap · Tomorrow\'s Prep</div>'+
+    '<div class="eodp-grid">'+
+    '<div class="eodp-item"><div class="eodp-icon">📥</div><div class="eodp-label">Leads for morning</div><div class="eodp-val">'+leads+' to follow up</div></div>'+
+    '<div class="eodp-item"><div class="eodp-icon">💬</div><div class="eodp-label">Quotes to send</div><div class="eodp-val">'+quoted+' pending</div></div>'+
+    '<div class="eodp-item"><div class="eodp-icon">🔧</div><div class="eodp-label">Active jobs</div><div class="eodp-val">'+active+' in progress</div></div>'+
+    '<div class="eodp-item"><div class="eodp-icon">✅</div><div class="eodp-label">Completed today</div><div class="eodp-val">'+completed+' done</div></div>'+
+    '</div>'+
+    (leads>0?'<button class="eodp-btn" onclick="switchPanel(\'leads\')">📋 Prepare leads for tomorrow →</button>':'')
 }
 
 /* ═══ DASHBOARD — Progressive Disclosure ═══ */
