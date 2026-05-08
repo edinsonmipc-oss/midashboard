@@ -562,6 +562,54 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .prog-bar .prog-count{font-weight:600;color:var(--fg2);margin-left:auto;background:var(--card);padding:0 6px;border-radius:4px;font-size:10px}
 .prog-bar.open{background:var(--card);border-color:var(--card-border)}
 
+/* ═══ TIMELINE — Operational Feed ═══ */
+.tl-h{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:var(--space-4);gap:var(--space-3)}
+.tl-feed{display:flex;flex-direction:column;gap:2px}
+.tl-item{display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-2) 0;border-bottom:1px solid var(--card-border);opacity:0;animation:tlIn .3s ease forwards}
+.tl-item:last-child{border:none}
+@keyframes tlIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+.tl-item .tl-time{font-size:10px;color:var(--fg4);min-width:40px;font-weight:500;flex-shrink:0;padding-top:2px}
+.tl-item .tl-dot{width:8px;height:8px;border-radius:50%;margin-top:3px;flex-shrink:0}
+.tl-item .tl-body{flex:1;min-width:0}
+.tl-item .tl-body .tl-text{font-size:12.5px;color:var(--fg2);line-height:1.4}
+.tl-item .tl-body .tl-text b{color:var(--fg);font-weight:600}
+.tl-item .tl-body .tl-meta{font-size:10px;color:var(--fg4);margin-top:1px;display:flex;gap:var(--space-2)}
+.tl-item .tl-body .tl-action{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--accent);cursor:pointer;transition:opacity var(--ts);text-decoration:none;font-weight:500;margin-top:2px}
+.tl-item .tl-body .tl-action:hover{opacity:.7}
+.tl-item.tl-event .tl-dot{background:var(--accent);box-shadow:0 0 6px var(--accent-glow)}
+.tl-item.tl-create .tl-dot{background:var(--green);box-shadow:0 0 6px rgba(34,197,94,.3)}
+.tl-item.tl-email .tl-dot{background:var(--purple);box-shadow:0 0 6px rgba(168,85,247,.3)}
+.tl-item.tl-alert .tl-dot{background:var(--red);box-shadow:0 0 6px rgba(239,68,68,.3)}
+.tl-item.tl-move .tl-dot{background:var(--orange);box-shadow:0 0 6px rgba(249,115,22,.3)}
+.tl-item .tl-labels{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px}
+.tl-item .tl-labels span{font-size:8.5px;font-weight:600;padding:1px 6px;border-radius:4px;text-transform:uppercase;letter-spacing:.3px}
+.tl-item .tl-labels .tl-lb-job{background:var(--accent-subtle);color:var(--accent)}
+.tl-item .tl-labels .tl-lb-lead{background:var(--green-bg);color:var(--green)}
+.tl-item .tl-labels .tl-lb-email{background:var(--purple-bg);color:var(--purple)}
+.tl-item .tl-labels .tl-lb-done{background:var(--green-bg);color:var(--green)}
+.tl-empty{padding:var(--space-10) var(--space-4);text-align:center;color:var(--fg3)}
+.tl-empty .tl-empty-icon{font-size:32px;margin-bottom:var(--space-3);opacity:.4}
+.tl-empty .tl-empty-title{font-size:15px;font-weight:600;color:var(--fg2);margin-bottom:var(--space-1)}
+.tl-empty .tl-empty-desc{font-size:12px;color:var(--fg3);margin-bottom:var(--space-4)}
+
+/* ═══ TIMELINE — Pulse (needs attention) ═══ */
+.tl-pulse{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4);margin-top:var(--space-3);display:none}
+.tl-pulse.sh{display:block;animation:fadeUp .3s ease}
+.tl-pulse .pulse-head{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3);font-size:13px;font-weight:600}
+.tl-pulse .pulse-head .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulseDot 1.5s infinite}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.3}}
+.tl-pulse .pulse-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) 0;border-bottom:1px solid var(--card-border);font-size:12px}
+.tl-pulse .pulse-item:last-child{border:none}
+.tl-pulse .pulse-item .pulse-name{flex:1;font-weight:500;color:var(--fg)}
+.tl-pulse .pulse-item .pulse-val{font-size:11px;font-weight:600;color:var(--fg3)}
+.tl-pulse .pulse-item .pulse-btn{padding:2px 10px;background:var(--accent-subtle);border:1px solid var(--accent);border-radius:var(--rad-sm);color:var(--accent);cursor:pointer;font-size:10px;font-family:inherit;font-weight:500;transition:all var(--ts)}
+.tl-pulse .pulse-item .pulse-btn:hover{background:var(--accent);color:#fff}
+
+/* ═══ TIMELINE — What's Next ═══ */
+.tl-next{background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);padding:var(--space-4);margin-top:var(--space-3)}
+.tl-next .next-item{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);cursor:pointer;transition:all var(--ts);font-size:12px;color:var(--fg2);font-family:inherit}
+.tl-next .next-item:hover{background:var(--card-hov);border-color:var(--accent);color:var(--accent)}
+
 /* ═══ INLINE JOB COMMENTS ═══ */
 .jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
 .jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
@@ -1028,82 +1076,32 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 
 <!-- ══════ DASHBOARD ══════ -->
 <div class="pn on" id="pn-dashboard">
-  <div class="sh"><h2>Dashboard</h2><span class="shl"><span id="dash-date"></span></span></div>
-
-  <!-- Today Priority Section -->
-  <div class="sh"><h2>🗓️ Today</h2><span class="shl" id="today-sub">What matters now</span></div>
-  <div class="today-grid block" id="today-grid"></div>
+  <!-- Timeline Header -->
+  <div class="tl-h">
+    <div>
+      <h2 style="font-size:17px;font-weight:700;letter-spacing:-.3px">Today's Timeline</h2>
+      <span class="text-muted" style="font-size:11px" id="tl-sub">Loading...</span>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <span id="streak" style="display:none"><span class="streak-fire">🔥</span> Day <span class="streak-num" id="streak-num">1</span></span>
+      <button class="btn btn-p btn-sm" onclick="openCmd()" style="gap:4px"><span style="font-size:10px;background:rgba(255,255,255,.2);padding:0 4px;border-radius:3px">⌘K</span> Command</button>
+    </div>
+  </div>
 
   <!-- Context Bar — AI-suggested actions -->
   <div id="ctx-bar"></div>
 
-  <!-- Quick metrics row -->
-  <div class="qs">
-    <div class="qs-item"><b id="m-leads">0</b> Leads</div>
-    <div class="qs-item"><b id="m-sites">0/0</b> Sites Online</div>
-    <div class="qs-item"><b id="m-biz">0</b> Businesses</div>
-    <div class="qs-item"><b id="m-agents">0</b> AI Agents</div>
-    <div id="streak"><span class="streak-fire">🔥</span> Day <span class="streak-num" id="streak-num">1</span></div>
-    <div class="qs-item" style="cursor:pointer" onclick="openCmd()"><span class="kbd" style="font-size:9px;background:var(--card);padding:1px 5px;border-radius:4px">⌘K</span> Command</div>
+  <!-- Timeline Feed -->
+  <div class="tl-feed block" id="tl-feed"></div>
+
+  <!-- Pulse: what needs attention NOW -->
+  <div class="tl-pulse" id="tl-pulse"></div>
+
+  <!-- After action: suggested next steps -->
+  <div class="tl-next" id="tl-next" style="display:none">
+    <div class="sh"><h2>What's Next?</h2></div>
+    <div class="flex gap-2" id="tl-next-actions"></div>
   </div>
-
-  <div class="mg" id="dash-metrics"></div>
-
-  <!-- Progressive: More details → -->
-  <button class="prog-bar" id="dash-more-btn" onclick="toggleDashMore()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-    More details
-    <span class="prog-count" id="dash-more-count">5 sections</span>
-  </button>
-  <div class="prog-content" id="dash-more">
-
-  <!-- Pipeline & Revenue Analytics -->
-  <div class="sh"><h2>Pipeline & Revenue</h2><span class="shl" id="pipeline-sub">Loading...</span></div>
-  <div class="analytics-grid block" id="analytics-grid"></div>
-
-  <!-- Quick Actions -->
-  <div class="sh"><h2>Quick Actions</h2></div>
-  <div class="dqa block">
-    <button class="dqa-btn" onclick="switchPanel('leads')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <span class="dqa-label">View Leads</span>
-      <span class="dqa-desc">Outreach ready</span>
-    </button>
-    <button class="dqa-btn" onclick="switchPanel('sites')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      <span class="dqa-label">Site Health</span>
-      <span class="dqa-desc">6 sites monitored</span>
-    </button>
-    <button class="dqa-btn" onclick="switchPanel('tasks')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      <span class="dqa-label">Task Board</span>
-      <span class="dqa-desc">Kanban view</span>
-    </button>
-    <button class="dqa-btn" onclick="switchPanel('changelog')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <span class="dqa-label">Changelog</span>
-      <span class="dqa-desc">Latest updates</span>
-    </button>
-    <button class="dqa-btn" onclick="scheduleFollowUp('dash-'+(Date.now()),'Check pending leads and quotes',30);toast('⏰ Follow-up in 30 min')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <span class="dqa-label">Remind me later</span>
-      <span class="dqa-desc">Follow-up in 30 min</span>
-    </button>
-  </div><!-- /.dqa -->
-</div><!-- /.prog-content#dash-more -->
-
-
-  <!-- Featured Businesses -->
-  <div class="sh"><h2>Featured</h2><span class="shl">Priority this week</span></div>
-  <div class="bg2 block" id="featured-biz"></div>
-
-  <!-- Recent Activity -->
-  <div class="sh"><h2>Recent Activity</h2><a class="sh-link" onclick="switchPanel('changelog')">View all →</a></div>
-  <div class="sc"><div class="sc-b"><div id="mini-log"></div></div></div>
-
-  <!-- Usage Analytics -->
-  <div class="sh"><h2>Usage This Week</h2></div>
-  <div class="ua-grid block" id="ua-grid"></div>
 </div>
 
 <!-- ══════ LEADS ══════ -->
@@ -1464,8 +1462,11 @@ function cmdKeydown(e){
   if(e.key==='ArrowUp'){e.preventDefault();const items=document.querySelectorAll('.cmd-item');if(items.length){cmdIdx=(cmdIdx-1+items.length)%items.length;items.forEach((el,i)=>el.classList.toggle('sel',i===cmdIdx))}}
   if(e.key==='Enter'){
     e.preventDefault();
-    // Try smart command first
+    // Try chain first
     const inp=document.getElementById('cmd-input');
+    const chain=parseChain(inp.value);
+    if(chain){closeCmd();executeChain(chain);return}
+    // Then smart command
     const parsed=parseCommand(inp.value);
     if(parsed){lastParsedCmd=parsed;executeSmartCmd();return}
     // Fall back to selected page
@@ -2569,6 +2570,7 @@ function createQuickJob(){
   data.lead.push({name,type:qjType,amount,detail});
   saveJobs(data);renderJobs();renderDashboard();renderCalendar();
   addAudit('create','📦 Created job: '+name+' ('+qjType+', $'+amount.toLocaleString()+')');
+  addOp('create','Created job <b>'+name+'</b> <span style="color:var(--accent)">$'+amount.toLocaleString()+'</span>',{amount,client:name,label:'job',action:"openQJ()",action_label:'+ Another'});
   trackBehavior('job-created',{name,service:qjType,amount});
   closeQJ();
   toast('✅ '+name+' added to New Leads');
@@ -2738,6 +2740,7 @@ dropJob=function(e,toCol){
   data[toCol].push(job);
   saveJobs(data);renderJobs();
   addAudit('move','Moved '+job.name+' from '+JOB_LABELS[dragSrc.col]+' to '+JOB_LABELS[toCol]);
+  addOp('move','Moved <b>'+job.name+'</b> from '+JOB_LABELS[dragSrc.col]+' to '+JOB_LABELS[toCol],{client:job.name,amount:job.amount,label:'job'});
   notifyJobChange(job,dragSrc.col,toCol);
   showUndo('Moved '+job.name+' to '+JOB_LABELS[toCol],()=>{
     // Undo: move back
@@ -3225,47 +3228,114 @@ document.addEventListener('keydown',function(e){
   }
 });
 
+/* ═══ OPERATIONS TIMELINE — Daily Log ═══ */
+const OPS_KEY='tradeos_operations';
+function getOps(){
+  const today=new Date().toDateString();
+  const all=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
+  if(!all[today])all[today]=[];
+  return all
+}
+function addOp(type,text,meta){
+  const all=getOps();
+  const today=new Date().toDateString();
+  all[today].unshift({type,text,meta:meta||{},time:new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})});
+  if(all[today].length>50)all[today]=all[today].slice(0,50);
+  localStorage.setItem(OPS_KEY,JSON.stringify(all));
+  renderTimeline()
+}
+function renderTimeline(){
+  // Update streak & meta
+  const data=getJobs();
+  updateStreak();
+  const leadCount=data?.lead?.length||0;
+  const activeCount=data?.progress?.length||0;
+  const totalJobs=Object.values(data||{}).reduce((a,b)=>a+(b?.length||0),0);
+  document.getElementById('tl-sub').textContent=leadCount+' leads · '+activeCount+' active · '+totalJobs+' total jobs';
+  // Render timeline feed
+  const feed=document.getElementById('tl-feed');
+  if(!feed)return;
+  const all=getOps();
+  const today=new Date().toDateString();
+  const items=all[today]||[];
+  if(items.length===0){
+    feed.innerHTML='<div class="tl-empty"><div class="tl-empty-icon">📋</div><div class="tl-empty-title">No activity yet today</div><div class="tl-empty-desc">Start working — type <b>⌘K</b> and try <code>new job smith $3000 paving</code></div></div>';
+    renderPulse();
+    renderContextBar();
+    return
+  }
+  feed.innerHTML=items.map((op,i)=>'<div class="tl-item tl-'+op.type+'" style="animation-delay:'+(i*0.04)+'s"><span class="tl-time">'+op.time+'</span><div class="tl-dot"></div><div class="tl-body"><div class="tl-text">'+op.text+'</div>'+
+    (op.meta.amount?'<div class="tl-meta">$'+op.meta.amount.toLocaleString()+(op.meta.client?' · '+op.meta.client:'')+'</div>':'')+
+    (op.meta.label?'<div class="tl-labels"><span class="tl-lb-'+op.meta.label+'">'+op.meta.label+'</span></div>':'')+
+    (op.meta.action?'<a class="tl-action" onclick="'+op.meta.action+'">'+op.meta.action_label+' →</a>':'')+
+    '</div></div>').join('');
+  renderPulse();
+  renderContextBar()
+}
+
+/* ═══ TIMELINE — Pulse (what needs attention) ═══ */
+function renderPulse(){
+  const pulse=document.getElementById('tl-pulse');
+  if(!pulse)return;
+  const data=getJobs();
+  const leads=data?.lead?.length||0;
+  const quoted=data?.quoted?.length||0;
+  const items=[];
+  if(leads>3)items.push({icon:'📥',text:leads+' leads waiting for quotes',action:"switchPanel('leads')",btn:'View leads'});
+  if(quoted>1)items.push({icon:'💬',text:quoted+' pending quotes to send',action:"switchPanel('jobs')",btn:'View quotes'});
+  if(items.length===0){pulse.classList.remove('sh');return}
+  pulse.classList.add('sh');
+  pulse.innerHTML='<div class="pulse-head"><span class="pulse-dot"></span> Needs Attention</div>'+
+    items.map(i=>'<div class="pulse-item"><span>'+i.icon+'</span><span class="pulse-name">'+i.text+'</span><span class="pulse-val"></span><button class="pulse-btn" onclick="'+i.action+'">'+i.btn+'</button></div>').join('')
+}
+
+/* ═══ MULTI-STEP COMMANDS ═══ */
+const CHAIN_SEP=/\s+(and then|and\s+also|then|,|;)\s+/i;
+function parseChain(input){
+  const parts=input.split(CHAIN_SEP).filter(s=>!s.match(/^(and then|and also|then|,|;)$/i)).map(s=>s.trim()).filter(Boolean);
+  return parts.length>1?parts:null
+}
+function executeChain(parts){
+  let count=0;
+  for(const part of parts){
+    const parsed=parseCommand(part);
+    if(parsed){try{parsed.command.action(parsed.parsed);count++}catch(e){}}
+  }
+  if(count>1)toast('✅ '+count+' commands executed');
+  addOp('event','Executed <b>'+count+' commands</b>: '+parts.join(' → '),{})
+}
+
+/* ═══ COMMAND ALIASES (shorter) ═══ */
+// Extended command patterns for COMMANDS array
+const EXTRA_COMMANDS=[
+  {pattern:/^(j|job)\s+(.+?)(?:\s+\$?([\d,]+))?(?:\s+(.+?))?$/i,parse:function(m){
+    return{type:'job',name:m[2].trim(),amount:parseInt((m[3]||'').replace(/,/g,''))||0,service:(m[4]||'general').trim().toLowerCase()}
+  },action:function(p){
+    const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+    data.lead.push({name:p.name,type:p.service,amount:p.amount,detail:'Created via command'});
+    saveJobs(data);renderJobs();renderTimeline();renderCalendar();
+    addAudit('cmd','📦 Command: Job '+p.name);
+    addOp('create','Created job <b>'+p.name+'</b> <span style="color:var(--accent)">$'+p.amount.toLocaleString()+'</span>',{amount:p.amount,client:p.name,label:'job',action:"openQJ()",action_label:'+ Another'});
+    showNextActions([{icon:'📋',text:'Generate quote for '+p.name,action:"aiSuggest('Generate a quote for "+p.name+"')"},{icon:'📧',text:'Email '+p.name,action:"composeGmail('','Hello "+p.name+"','Hi "+p.name+',\\\\n\\\\n')"},{icon:'⏰',text:'Schedule follow-up',action:"aiSuggest('Schedule follow-up for "+p.name+" in 2 hours')"}]);
+    toast('✅ Job "'+p.name+'" created ($'+p.amount.toLocaleString()+')')
+  },desc:'Quick job create (alias)',icon:'⚡'},
+];
+// Merge into COMMANDS array
+if(typeof COMMANDS!=='undefined'){EXTRA_COMMANDS.forEach(c=>COMMANDS.push(c))}
+
+/* ═══ POST-ACTION SUGGESTIONS ═══ */
+function showNextActions(actions){
+  const el=document.getElementById('tl-next');
+  const acts=document.getElementById('tl-next-actions');
+  if(!el||!acts)return;
+  if(!actions||actions.length===0){el.style.display='none';return}
+  el.style.display='block';
+  acts.innerHTML=actions.map(a=>'<button class="next-item" onclick="'+a.action+';el.style.display=\'none\'">'+a.icon+' '+a.text+'</button>').join('')
+}
+
 /* ═══ ENHANCED RENDER FUNCTIONS ═══ */
 function renderDashboard(){
-  const online=SITES_DATA.filter(s=>s.status==='online').length;
-  const total=SITES_DATA.length;
-  const filteredLeads=filterByWorkspace(uniqueLeads);
-  document.getElementById('m-leads').textContent=filteredLeads.length;
-  document.getElementById('m-sites').textContent=online+'/'+total;
-  document.getElementById('m-biz').textContent=BIZ_DATA.length;
-  document.getElementById('m-agents').textContent=AGENTS_DATA.filter(a=>a.status==='Activo').length;
-  document.getElementById('dash-date').textContent= new Date().toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric',year:'numeric'});
-
-  document.getElementById('dash-metrics').innerHTML=
-    '<div class="mc"><div class="mc-icon">👥</div><div class="mc-l">Leads</div><div class="mc-v">'+filteredLeads.length+'</div><div class="mc-s">'+uniqueLeads.length+' total'+'</div></div>'+
-    '<div class="mc"><div class="mc-icon">🏢</div><div class="mc-l">Active</div><div class="mc-v">'+BIZ_DATA.filter(b=>b.status==='activo').length+'</div><div class="mc-s">'+BIZ_DATA.length+' businesses</div></div>'+
-    '<div class="mc"><div class="mc-icon">🌐</div><div class="mc-l">Sites</div><div class="mc-v">'+online+'/'+total+'</div><div class="mc-s">All healthy</div></div>'+
-    '<div class="mc"><div class="mc-icon">🤖</div><div class="mc-l">AI Agents</div><div class="mc-v">'+AGENTS_DATA.filter(a=>a.status==='Activo').length+'</div><div class="mc-s">'+AGENTS_DATA.length+' total</div></div>';
-
-  // Featured businesses
-  const feat=BIZ_DATA.filter(b=>b.status==='activo').slice(0,2);
-  document.getElementById('featured-biz').innerHTML=feat.map(b=>
-    '<div class="bc2" style="--bcz:'+b.color+'"><div class="bc2-h"><span class="emoji">'+b.emoji+'</span><h3>'+b.name+'</h3><span class="st-badge" style="background:var(--green-bg);color:var(--green)">ACTIVE</span></div>'+
-    '<div class="bc2-d">'+b.description+'</div>'+
-    '<div class="bc2-m">'+Object.entries(b.metrics).map(([k,v])=>'<div class="bc2-mitem"><div class="bc2-ml">'+k+'</div><div class="bc2-mv">'+v+'</div></div>').join('')+'</div>'+
-    (b.url&&b.url!=='#'?'<a href="'+b.url+'" target="_blank" class="bc2-url">'+b.url.replace('https://','')+' →</a>':'')+
-    '<div class="bc2-notes">📝 '+b.notes+'</div></div>'
-  ).join('');
-
-  // Mini log
-  document.getElementById('mini-log').innerHTML=LOG_DATA.slice(0,5).map(l=>
-    '<div class="ar"><div class="ar-dot" style="background:'+(l.type==='creacion'?'var(--green)':l.type==='mejora'?'var(--accent)':'var(--yellow)')+'"></div>'+
-    '<div class="ar-info"><div class="ar-text">'+l.text+'</div><div class="ar-meta"><span class="ar-proj">'+l.project+'</span><span>'+(l.date+(l.time?' '+l.time:''))+'</span></div></div></div>'
-  ).join('');
-
-  // Render analytics
-  renderAnalytics();
-  // Today mode
-  renderToday();
-  // Usage analytics
-  renderUsageAnalytics();
-  // Context bar
-  renderContextBar()
+  renderTimeline()
 }
 
 /* ═══ COMMAND OS — Natural Language Command System ═══ */
@@ -3501,7 +3571,18 @@ function init(){
   // Quick commands for CMD+K
   addQuickCommands();
   // Streak tracking
-  updateStreak()
+  updateStreak();
+  // Add welcome event if first time today
+  const today=new Date().toDateString();
+  const ops=JSON.parse(localStorage.getItem(OPS_KEY)||'{}');
+  if(!ops[today]||ops[today].length===0){
+    const hour=new Date().getHours();
+    const greet=hour<12?'🌅 Good morning':hour<17?'☀️ Good afternoon':'🌙 Good evening';
+    setTimeout(()=>{
+      addOp('event',greet+'! <b>'+new Date().toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'})+'</b> · Ready to work',{});
+      renderTimeline()
+    },500)
+  }
 }
 
 document.addEventListener('DOMContentLoaded',init);
