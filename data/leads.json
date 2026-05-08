@@ -105,7 +105,9 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Kane Constructions",
@@ -115,7 +117,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-03_batch3": [
@@ -127,7 +131,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Collins Simms",
@@ -159,7 +165,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Colliers International",
@@ -169,7 +177,9 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Cbus Property",
@@ -531,7 +541,9 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-05_batch7": [
@@ -789,7 +801,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "CBRE Australia",
@@ -1279,7 +1293,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -1289,7 +1304,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Stockland",
@@ -1299,7 +1315,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -1309,7 +1326,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -1319,7 +1337,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -1329,7 +1348,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -1339,7 +1359,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis",
@@ -1349,7 +1370,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "Watpac",
@@ -1359,7 +1381,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "First National Real Estate",
@@ -1369,7 +1392,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-09_batch14": [
@@ -1381,7 +1405,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Carlton Homes",
@@ -1391,7 +1416,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kane Constructions",
@@ -1401,7 +1427,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Collins Simms",
@@ -1411,7 +1438,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Goodman Group",
@@ -1421,7 +1449,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -1431,7 +1460,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Barry Plant",
@@ -1441,7 +1471,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Boutique Homes",
@@ -1451,7 +1482,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -1461,7 +1493,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -1471,7 +1504,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

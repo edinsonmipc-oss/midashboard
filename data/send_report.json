@@ -135,6 +135,62 @@
           "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
         }
       ]
+    },
+    {
+      "date": "2026-05-09",
+      "time": "2026-05-09T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "trades@simonds.com.au",
+          "company": "Simonds Homes",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "supplychain@laingorourke.com.au",
+          "company": "Laing O'Rourke",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
     }
   ]
 }

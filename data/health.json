@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-09T07:00",
+  "updated": "2026-05-09T08:00",
   "sites": [
     {
       "name": "Tradios App",
       "url": "https://tradios.onrender.com",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "issues": [],
       "improvements": [
         "Ejecutar supabase-migration.sql para columnas completas",
@@ -21,7 +21,7 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -44,7 +44,7 @@
       "url": "https://edinsonmipc-oss.github.io/midashboard/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "issues": [],
       "improvements": [
         "Sección de leads ya agregada ✅",
@@ -58,7 +58,7 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "issues": [],
       "improvements": [
         "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
@@ -77,7 +77,7 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -100,7 +100,7 @@
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-09T07:00",
+      "last_checked": "2026-05-09T08:00",
       "issues": [],
       "improvements": [
         "Stripe LIVE activado",
@@ -110,12 +110,11 @@
     }
   ],
   "email_stats": {
-    "last_send": "2026-05-08T11:36",
-    "total_sent": 18,
-    "sent_today": 9
+    "last_send": "2026-05-09T08:00",
+    "total_sent": 17
   },
   "seo_audit": {
-    "updated": "2026-05-08T08:00",
+    "updated": "2026-05-09T08:00",
     "summary": {}
   }
 }
