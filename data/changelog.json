@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "date": "2026-05-08T14:40",
+      "type": "creacion",
+      "project": "Gumroad",
+      "text": "50 productos premium planificados (AU:20, US:15, UK:8, EU:7). 8 fotos IA reales subidas a productos existentes."
+    },
+    {
+      "date": "2026-05-08T14:25",
+      "type": "mejora",
+      "project": "Gumroad",
+      "text": "Redise\u00f1o completo: 8 productos con descripciones HTML premium (cards, highlights, CTAs dark, tipograf\u00eda profesional). Fix al markdown mal renderizado."
+    },
+    {
+      "date": "2026-05-08T14:03",
+      "type": "mejora",
+      "project": "Gumroad",
+      "text": "Portadas profesionales subidas a los 8 productos (branding black/yellow industrial)"
+    },
+    {
       "date": "2026-05-08T13:58",
       "type": "mejora",
       "project": "Gumroad",
