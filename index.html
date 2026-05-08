@@ -537,6 +537,31 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 #streak .streak-fire{font-size:12px}
 #streak .streak-num{font-weight:600;color:var(--orange)}
 
+/* ═══ COMMAND OS — Context Bar ═══ */
+#ctx-bar{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-lg);margin-bottom:var(--space-4);overflow-x:auto;scrollbar-width:none}
+#ctx-bar::-webkit-scrollbar{display:none}
+#ctx-bar .ctx-label{font-size:10px;font-weight:600;color:var(--fg4);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0}
+#ctx-bar .ctx-item{display:flex;align-items:center;gap:var(--space-1);padding:var(--space-1) var(--space-3);border-radius:var(--rad-full);background:var(--bg3);border:1px solid var(--card-border);font-size:11px;color:var(--fg2);cursor:pointer;transition:all var(--ts);white-space:nowrap;flex-shrink:0;font-family:inherit}
+#ctx-bar .ctx-item:hover{background:var(--card-hov);border-color:var(--accent);color:var(--accent)}
+#ctx-bar .ctx-item.urgent{background:var(--red-bg);border-color:var(--red-border);color:var(--red)}
+#ctx-bar .ctx-item.urgent:hover{border-color:var(--red)}
+#ctx-bar .ctx-item .ctx-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+#ctx-bar .ctx-cmd{font-size:8px;color:var(--fg4);margin-left:var(--space-1);padding:1px 4px;background:var(--bg);border-radius:3px;font-weight:600;letter-spacing:.3px}
+
+/* ═══ COMMAND OS — Smart Command Results ═══ */
+.cmd-item.cmd-action{background:var(--accent-subtle);border:1px solid var(--accent);margin:2px 0}
+.cmd-item.cmd-action:hover{background:rgba(99,102,241,.15)}
+.cmd-item .cmd-badge.action{background:var(--accent);color:#fff}
+.cmd-item .cmd-preview{font-size:10px;color:var(--fg3);padding:2px 8px;background:var(--bg3);border-radius:4px;margin-top:2px;font-family:monospace}
+#cmd-mode{font-size:9px;color:var(--fg4);padding:2px 8px;background:var(--bg3);border-radius:4px;font-weight:600}
+
+/* ═══ COMMAND OS — Dashboard Simplification ═══ */
+.prog-bar{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);margin-bottom:var(--space-4);background:var(--bg3);border-radius:var(--rad);cursor:pointer;transition:all var(--ts);color:var(--fg3);font-size:11px;font-family:inherit;border:1px solid transparent}
+.prog-bar:hover{color:var(--fg2);border-color:var(--card-border);background:var(--card)}
+.prog-bar svg{width:14px;height:14px;flex-shrink:0}
+.prog-bar .prog-count{font-weight:600;color:var(--fg2);margin-left:auto;background:var(--card);padding:0 6px;border-radius:4px;font-size:10px}
+.prog-bar.open{background:var(--card);border-color:var(--card-border)}
+
 /* ═══ INLINE JOB COMMENTS ═══ */
 .jc-comment{display:flex;align-items:center;gap:var(--space-1);margin-top:4px;padding:2px 0}
 .jc-comment input{flex:1;background:var(--bg3);border:1px solid var(--card-border);border-radius:4px;padding:2px 6px;font-size:9px;color:var(--fg2);font-family:inherit;outline:none;transition:border var(--ts)}
@@ -870,8 +895,8 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <div id="cmd-palette">
     <div id="cmd-input-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="cmd-input" type="text" placeholder="Search pages, clients, actions..." autofocus oninput="filterCmd(this.value)" onkeydown="cmdKeydown(event)">
-      <span id="cmd-shortcut">ESC</span>
+      <input id="cmd-input" type="text" placeholder="Type a command: 'new job smith $3000' or search..." autofocus oninput="renderSmartCmd(this.value)" onkeydown="cmdKeydown(event)">
+      <span id="cmd-mode">🔍 Pages</span>
     </div>
     <div id="cmd-results"></div>
   </div>
@@ -1006,18 +1031,31 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   <div class="sh"><h2>Dashboard</h2><span class="shl"><span id="dash-date"></span></span></div>
 
   <!-- Today Priority Section -->
-  <div class="sh"><h2>🗓️ Today</h2><span class="shl">What needs attention</span></div>
+  <div class="sh"><h2>🗓️ Today</h2><span class="shl" id="today-sub">What matters now</span></div>
   <div class="today-grid block" id="today-grid"></div>
 
+  <!-- Context Bar — AI-suggested actions -->
+  <div id="ctx-bar"></div>
+
+  <!-- Quick metrics row -->
   <div class="qs">
     <div class="qs-item"><b id="m-leads">0</b> Leads</div>
     <div class="qs-item"><b id="m-sites">0/0</b> Sites Online</div>
     <div class="qs-item"><b id="m-biz">0</b> Businesses</div>
     <div class="qs-item"><b id="m-agents">0</b> AI Agents</div>
     <div id="streak"><span class="streak-fire">🔥</span> Day <span class="streak-num" id="streak-num">1</span></div>
+    <div class="qs-item" style="cursor:pointer" onclick="openCmd()"><span class="kbd" style="font-size:9px;background:var(--card);padding:1px 5px;border-radius:4px">⌘K</span> Command</div>
   </div>
 
   <div class="mg" id="dash-metrics"></div>
+
+  <!-- Progressive: More details → -->
+  <button class="prog-bar" id="dash-more-btn" onclick="toggleDashMore()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    More details
+    <span class="prog-count" id="dash-more-count">5 sections</span>
+  </button>
+  <div class="prog-content" id="dash-more">
 
   <!-- Pipeline & Revenue Analytics -->
   <div class="sh"><h2>Pipeline & Revenue</h2><span class="shl" id="pipeline-sub">Loading...</span></div>
@@ -1051,7 +1089,8 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
       <span class="dqa-label">Remind me later</span>
       <span class="dqa-desc">Follow-up in 30 min</span>
     </button>
-  </div>
+  </div><!-- /.dqa -->
+</div><!-- /.prog-content#dash-more -->
 
   <!-- Featured Businesses -->
   <div class="sh"><h2>Featured</h2><span class="shl">Priority this week</span></div>
@@ -1402,6 +1441,8 @@ const CMD_PAGES=[
 function openCmd(){
   document.getElementById('cmd-overlay').classList.add('open');
   const inp=document.getElementById('cmd-input');inp.value='';inp.focus();
+  document.getElementById('cmd-mode').textContent='🔍 Pages';
+  lastParsedCmd=null;
   renderCmdResults(CMD_PAGES)
 }
 function closeCmd(){document.getElementById('cmd-overlay').classList.remove('open')}
@@ -1420,7 +1461,15 @@ function cmdKeydown(e){
   if(e.key==='Escape'){closeCmd();return}
   if(e.key==='ArrowDown'){e.preventDefault();const items=document.querySelectorAll('.cmd-item');if(items.length){cmdIdx=(cmdIdx+1)%items.length;items.forEach((el,i)=>el.classList.toggle('sel',i===cmdIdx))}}
   if(e.key==='ArrowUp'){e.preventDefault();const items=document.querySelectorAll('.cmd-item');if(items.length){cmdIdx=(cmdIdx-1+items.length)%items.length;items.forEach((el,i)=>el.classList.toggle('sel',i===cmdIdx))}}
-  if(e.key==='Enter'){e.preventDefault();const sel=document.querySelector('.cmd-item.sel');if(sel)sel.click()}
+  if(e.key==='Enter'){
+    e.preventDefault();
+    // Try smart command first
+    const inp=document.getElementById('cmd-input');
+    const parsed=parseCommand(inp.value);
+    if(parsed){lastParsedCmd=parsed;executeSmartCmd();return}
+    // Fall back to selected page
+    const sel=document.querySelector('.cmd-item.sel');if(sel)sel.click()
+  }
 }
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();openCmd()}});
 
@@ -1455,6 +1504,8 @@ function renderDashboard(){
     '<div class="ar"><div class="ar-dot" style="background:'+(l.type==='creacion'?'var(--green)':l.type==='mejora'?'var(--accent)':'var(--yellow)')+'"></div>'+
     '<div class="ar-info"><div class="ar-text">'+l.text+'</div><div class="ar-meta"><span class="ar-proj">'+l.project+'</span><span>'+(l.date+(l.time?' '+l.time:''))+'</span></div></div></div>'
   ).join('');
+  // Context bar
+  renderContextBar()
 }
 
 /* ═══ LEADS ═══ */
@@ -1610,7 +1661,7 @@ function showAITyping(){
   c.appendChild(d);c.scrollTop=c.scrollHeight
 }
 function hideAITyping(){const t=document.getElementById('ai-typing');if(t)t.remove()}
-function aiSuggest(t){document.getElementById('ai-input').value=t;sendAI()}
+function aiSuggest(t){document.getElementById('ai-input').value=t;trackBehavior('ai-ask',t);sendAI()}
 async function sendAI(){
   if(!AI_KEY){
     const key=prompt('🔑 Enter your OpenRouter API key to use AI features:\n\n(Get one free at openrouter.ai/keys)');
@@ -2370,6 +2421,7 @@ function renderOnboardStep(){
   document.getElementById('ob-desc').textContent=step.desc;
   // Progress dots
   document.getElementById('ob-progress').innerHTML=ONBOARD_STEPS.map((_,i)=>'<div class="ob-dot'+(i<onboardStep?' done':i===onboardStep?' active':'')+'"></div>').join('');
+  // Context bar
   const content=document.getElementById('ob-content');
   const btn=document.getElementById('ob-btn');
   if(step.field==='text'){
@@ -2516,6 +2568,7 @@ function createQuickJob(){
   data.lead.push({name,type:qjType,amount,detail});
   saveJobs(data);renderJobs();renderDashboard();renderCalendar();
   addAudit('create','📦 Created job: '+name+' ('+qjType+', $'+amount.toLocaleString()+')');
+  trackBehavior('job-created',{name,service:qjType,amount});
   closeQJ();
   toast('✅ '+name+' added to New Leads');
   trackUsage('quick-job')
@@ -3077,6 +3130,7 @@ function renderAnalytics(){
   const maxVal=Math.max(...stages.map(s=>s.val),1);
   const pc=document.getElementById('pipeline-chart');
   pc.innerHTML=stages.map(s=>'<div class="chart-bar"><div class="chart-bar-val">'+s.val+'</div><div class="chart-bar-fill" style="height:'+((s.val/maxVal)*100)+'%;background:'+s.color+'"></div><div class="chart-bar-label">'+s.label+'</div></div>').join('');
+  // Context bar
 
   // Revenue chart (simulated weekly)
   const revWeeks=[totalRevenue*0.1,totalRevenue*0.15,totalRevenue*0.2,totalRevenue*0.25,totalRevenue*0.18,totalRevenue*0.12];
@@ -3128,6 +3182,7 @@ function renderCalendar(){
       const eventHtml=events.length&&i<allJobs.length?'<div class="cal-event '+((allJobs[i]||{}).type||'paving')+'">'+(allJobs[i]||{}).name||''+'</div>':'';
       return '<div class="cal-day'+(isToday?' today':'')+'"><div class="cal-day-num">'+day+'</div>'+eventHtml+'</div>';
     }).join('');
+  // Context bar
 
   // Upcoming jobs
   const calList=document.getElementById('cal-list');
@@ -3207,8 +3262,219 @@ function renderDashboard(){
   // Today mode
   renderToday();
   // Usage analytics
-  renderUsageAnalytics()
+  renderUsageAnalytics();
+  // Context bar
+  renderContextBar()
 }
+
+/* ═══ COMMAND OS — Natural Language Command System ═══ */
+const COMMANDS=[
+  {pattern:/^(new|create)\s+(job|quote)\s+(.+?)(?:\s+\$?([\d,]+))?(?:\s+(.+?))?$/i,parse:function(m){
+    const type=m[2]==='quote'?'quote':'job';
+    const name=m[3].trim();
+    const amount=parseInt((m[4]||'').replace(/,/g,''))||0;
+    const service=(m[5]||'general').trim().toLowerCase();
+    return{type,name,amount,service}
+  },action:function(p){
+    if(p.type==='job'){
+      const data=getJobs()||{lead:[],quoted:[],booked:[],progress:[],completed:[]};
+      data.lead.push({name:p.name,type:p.service,amount:p.amount,detail:'Created via command'});
+      saveJobs(data);renderJobs();renderDashboard();renderCalendar();
+      addAudit('cmd','📦 Command: New job '+p.name+' ($'+p.amount.toLocaleString()+')');
+      toast('✅ Job "'+p.name+'" created')
+    }else{
+      document.getElementById('q-client').value=p.name;
+      switchPanel('quotes');
+      toast('📋 Opening quote for '+p.name)
+    }
+  },desc:'Create a job or quote',icon:'⚡'},
+  {pattern:/^(find|search|show)\s+(.+)/i,parse:function(m){
+    const q=m[2].trim().toLowerCase();
+    const results=(getJobs()?.lead||[]).concat(getJobs()?.quoted||[]).concat(getJobs()?.progress||[]).concat(getJobs()?.completed||[]).filter(j=>j.name.toLowerCase().includes(q));
+    return{query:q,results}
+  },action:function(p){
+    if(p.results.length===0){toast('🔍 No results found for "'+p.query+'"');return}
+    if(p.results.length===1){
+      const j=p.results[0];openFocus(j);return
+    }
+    // Show in job board
+    switchPanel('jobs');toast('🔍 Found '+p.results.length+' matches')
+  },desc:'Search jobs by name',icon:'🔍'},
+  {pattern:/^(email|mail)\s+(.+)/i,parse:function(m){
+    const target=m[2].trim();
+    const lead=uniqueLeads.find(l=>l.company.toLowerCase().includes(target.toLowerCase()));
+    return{target,email:lead?.email||'',company:lead?.company||target}
+  },action:function(p){
+    if(p.email)composeGmail(p.email,'Hello '+p.company,'Hi '+p.company+',\n\n');
+    else composeGmail('','','')
+  },desc:'Compose an email',icon:'✉️'},
+  {pattern:/^(sms|text|call)\s+(.+)/i,parse:function(m){
+    const target=m[2].trim();
+    const lead=uniqueLeads.find(l=>l.company.toLowerCase().includes(target.toLowerCase()));
+    return{target,company:lead?.company||target}
+  },action:function(p){
+    composeSMS('','Hi '+p.company+', ');
+    trackUsage('cmd-sms')
+  },desc:'Send an SMS',icon:'💬'},
+  {pattern:/^(schedule|remind|followup|follow.up)\s+(.+?)(?:\s+in\s+(\d+)\s*(min|hour|hr))?$/i,parse:function(m){
+    const what=m[2].trim();
+    const num=parseInt(m[3])||30;
+    const unit=m[4]||'min';
+    const mins=unit.startsWith('h')?num*60:num;
+    return{what,mins}
+  },action:function(p){
+    scheduleFollowUp('cmd-'+Date.now(),p.what,p.mins);
+    toast('⏰ Reminder set: "'+p.what+'" in '+p.mins+' min')
+  },desc:'Schedule a reminder',icon:'⏰'},
+  {pattern:/^(summary|overview|report)/i,parse:function(){return{}},action:function(){
+    aiSuggest('Show business summary');
+    trackUsage('cmd-summary')
+  },desc:'Business summary & insights',icon:'📊'},
+  {pattern:/^(today|what.day)/i,parse:function(){return{}},action:function(){
+    switchPanel('dashboard');
+    trackUsage('cmd-today')
+  },desc:'Go to today\'s view',icon:'🗓️'},
+  {pattern:/^(sync|force.sync)/i,parse:function(){return{}},action:function(){
+    processSyncQueue();toast('🔄 Syncing...');
+    trackUsage('cmd-sync')
+  },desc:'Force data sync',icon:'🔄'},
+  {pattern:/^(leads?|prospects)/i,parse:function(){return{}},action:function(){
+    switchPanel('leads');
+    trackUsage('cmd-leads')
+  },desc:'View lead CRM',icon:'👥'},
+  {pattern:/^(jobs?|board)/i,parse:function(){return{}},action:function(){
+    switchPanel('jobs');
+    trackUsage('cmd-jobs')
+  },desc:'View job board',icon:'🔨'},
+  {pattern:/^(quotes?|quote)/i,parse:function(){return{}},action:function(){
+    switchPanel('quotes');
+    trackUsage('cmd-quotes')
+  },desc:'AI quote generator',icon:'📋'},
+  {pattern:/^(help|commands|\?)/i,parse:function(){return{}},action:function(){
+    const list=COMMANDS.map(c=>'<span style="background:var(--bg3);padding:1px 6px;border-radius:4px;font-size:10px;margin:1px">'+c.icon+' '+c.desc+'</span>').join(' ');
+    addAIMsg('bot','<div class="msg-content"><b>Available commands:</b><br>'+list+'<br><br>Try: <code>new job Smith $3000 paving</code></div>');
+    openAI();
+    trackUsage('cmd-help')
+  },desc:'Show all commands',icon:'❓'}
+];
+
+/* ═══ COMMAND OS — Smart CMD+K Integration ═══ */
+function parseCommand(input){
+  if(!input||input.trim().length<2)return null;
+  const trimmed=input.trim();
+  for(const cmd of COMMANDS){
+    const m=trimmed.match(cmd.pattern);
+    if(m){
+      try{return{command:cmd,parsed:cmd.parse(m)}}catch(e){return null}
+    }
+  }
+  return null
+}
+function renderSmartCmd(input){
+  const q=input.trim().toLowerCase();
+  if(!q){filterCmd('');return}
+  const parsed=parseCommand(input);
+  if(parsed){
+    const p=parsed.parsed;
+    const preview=parsed.command.icon+' '+parsed.command.desc+
+      (p.name?' → <span class="cmd-preview">'+p.name+(p.amount?' · $'+p.amount:'')+(p.service?' · '+p.service:'')+'</span>':'')+
+      (p.query?' → <span class="cmd-preview">"'+p.query+'"</span>':'')+
+      (p.email?' → <span class="cmd-preview">'+p.email+'</span>':'')+
+      (p.what?' → <span class="cmd-preview">"'+p.what+'"</span>':'');
+    document.getElementById('cmd-mode').textContent='⚡ Action';
+    const el=document.getElementById('cmd-results');
+    el.innerHTML='<div class="cmd-item cmd-action sel" onclick="executeSmartCmd()"><div class="cmd-icon">'+parsed.command.icon+'</div><div class="cmd-info"><div class="cmd-name">Execute: '+parsed.command.desc+'</div><div>'+preview+'</div></div><span class="cmd-badge action">↵ Enter</span></div>'+
+      '<div style="padding:var(--space-2) var(--space-3);font-size:10px;color:var(--fg4);display:flex;gap:var(--space-2)"><span>Tab to navigate</span><span>Esc to cancel</span></div>'
+  }else{
+    document.getElementById('cmd-mode').textContent='🔍 Pages';
+    filterCmd(q)
+  }
+}
+let lastParsedCmd=null;
+function executeSmartCmd(){
+  const parsed=lastParsedCmd;
+  if(!parsed)return;
+  closeCmd();
+  try{parsed.command.action(parsed.parsed)}catch(e){toast('⚠️ Command error: '+e.message)}
+}
+
+/* ═══ COMMAND OS — Behavioral Memory ═══ */
+const BEHAVIOR_KEY='tradeos_behavior';
+function trackBehavior(type,data){
+  const mem=JSON.parse(localStorage.getItem(BEHAVIOR_KEY)||'{"services":{},"clients":[],"patterns":{}}');
+  if(type==='job-created'){
+    if(data.service)mem.services[data.service]=(mem.services[data.service]||0)+1;
+    if(data.name)mem.clients.unshift({name:data.name,amount:data.amount,time:Date.now()});
+    if(mem.clients.length>20)mem.clients=mem.clients.slice(0,20)
+  }
+  if(type==='panel-view'){
+    const today=new Date().toDateString();
+    if(!mem.patterns[today])mem.patterns[today]={};
+    mem.patterns[today][data.panel]=(mem.patterns[today][data.panel]||0)+1
+  }
+  if(type==='ai-ask'){
+    const cat=data?.toLowerCase().includes('quote')?'quotes':
+      data?.toLowerCase().includes('job')||data?.toLowerCase().includes('lead')?'jobs':'other';
+    const today=new Date().toDateString();
+    if(!mem.patterns[today])mem.patterns[today]={};
+    mem.patterns[today]['ai-'+cat]=(mem.patterns[today]['ai-'+cat]||0)+1
+  }
+  localStorage.setItem(BEHAVIOR_KEY,JSON.stringify(mem))
+}
+function getBehavioralInsights(){
+  const mem=JSON.parse(localStorage.getItem(BEHAVIOR_KEY)||'{}');
+  const topService=Object.entries(mem.services||{}).sort((a,b)=>b[1]-a[1])[0];
+  const lastClient=mem.clients?.[0];
+  return{topService:topService?.[0]||null,lastClient:lastClient||null}
+}
+
+/* ═══ COMMAND OS — Context Bar ═══ */
+function renderContextBar(){
+  const bar=document.getElementById('ctx-bar');
+  if(!bar)return;
+  const data=getJobs();
+  const leads=data?.lead?.length||0;
+  const quoted=data?.quoted?.length||0;
+  const activeJobs=data?.progress?.length||0;
+  const ins=getBehavioralInsights();
+  const chips=[];
+  if(leads>0)chips.push({label:'📥 '+leads+' lead'+(leads>1?'s':'')+' to follow up',action:'switchPanel(\'leads\')',urgent:leads>3});
+  if(quoted>0)chips.push({label:'💬 '+quoted+' pending quote'+(quoted>1?'s':''),action:'switchPanel(\'jobs\')'});
+  if(activeJobs>0)chips.push({label:'🔧 '+activeJobs+' active job'+(activeJobs>1?'s':''),action:'switchPanel(\'jobs\')',urgent:activeJobs>5});
+  if(ins.topService)chips.push({label:'⚡ Quick '+ins.topService+' quote',action:"aiSuggest('Generate a quote for "+ins.topService+"')"});
+  if(ins.lastClient)chips.push({label:'↩️ Re-quote '+ins.lastClient.name,action:"aiSuggest('Generate a quote for "+ins.lastClient.name+"')"});
+  chips.push({label:'⌘ New job...',action:'openQJ()'});
+  chips.push({label:'⌘ New quote...',action:'switchPanel(\'quotes\')'});
+  if(chips.length===2)chips.push({label:'📊 Summary',action:"aiSuggest('Show business summary')"});
+  bar.innerHTML='<span class="ctx-label">Actions</span>'+chips.map((c,i)=>'<button class="ctx-item'+(c.urgent?' urgent':'')+'" onclick="'+c.action+'" style="animation:pop .2s ease;animation-delay:'+(i*0.03)+'s"><span class="ctx-dot" style="background:'+(c.urgent?'var(--red)':'var(--accent)')+'"></span>'+c.label+'<span class="ctx-cmd">↵</span></button>').join('')
+}
+
+/* ═══ DASHBOARD — Progressive Disclosure ═══ */
+let dashMoreOpen=false;
+function toggleDashMore(){
+  dashMoreOpen=!dashMoreOpen;
+  const c=document.getElementById('dash-more');
+  const btn=document.getElementById('dash-more-btn');
+  if(c){c.classList.toggle('open',dashMoreOpen)}
+  if(btn){btn.classList.toggle('open',dashMoreOpen);btn.innerHTML=dashMoreOpen?
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>Show less':
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>More details'+
+    '<span class="prog-count" id="dash-more-count">5 sections</span>'}
+}
+
+/* ═══ AUTO-OPEN AI PANEL ═══ */
+function openAI(){
+  const p=document.getElementById('ai-panel');
+  if(!p.classList.contains('open')){p.classList.add('open');aiOpen=true;document.getElementById('ai-input')?.focus()}
+}
+
+/* ═══ TRACK BEHAVIOR ON PANEL SWITCH ═══ */
+const _origSwitchPanel2=switchPanel;
+switchPanel=function(id){
+  _origSwitchPanel2(id);
+  trackUsage(id);
+  trackBehavior('panel-view',{panel:id})
+};
 
 /* ═══ INIT ═══ */
 function init(){
