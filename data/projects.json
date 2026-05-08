@@ -126,10 +126,10 @@
     },
     {
       "id": "claude-skills",
-      "name": "Gumroad Digital Products",
+      "name": "Gumroad Store",
       "emoji": "\ud83e\udde0",
       "status": "activo",
-      "description": "9 productos digitales en Gumroad (Safety Pack $37, Quote Bundle $29, AI Guide $27, etc). Todos publicados y vendiendo.",
+      "description": "8 productos digitales premium para tradies AU. Portadas profesionales, copy optimizado, dise\u00f1o black/yellow industrial.",
       "url": "",
       "metrics": {
         "productos": 8,
@@ -140,12 +140,11 @@
       },
       "last_update": "2026-05-07",
       "next_steps": [
-        "Promocionar a leads de email outreach",
-        "Agregar thumbnails a cada producto",
-        "Compartir en redes sociales",
-        "$100 min antes de cobrar primer payout"
+        "Subir portadas v2 a cada producto",
+        "Promocionar a leads",
+        "Compartir en redes"
       ],
-      "notes": "8 productos publicados. Gumroad acct: edinsonmipc@gmail.com. Token en config."
+      "notes": "Redise\u00f1o completo 08/05. Copy profesional + portadas v2."
     }
   ],
   "stats": {
