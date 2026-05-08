@@ -6,6 +6,7 @@
 <title>TRADIOS — AI Operating System for Tradies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <style>
 /* ═══════════════════════════════════════════════
    TRADIOS DESIGN SYSTEM v3.0 — 2026 Premium SaaS
@@ -537,6 +538,30 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 /* ═══ KEYBOARD SHORTCUT HINT ═══ */
 .kbd-hint{position:fixed;bottom:90px;right:90px;z-index:800;font-size:9px;color:var(--fg4);text-align:right;pointer-events:none;opacity:.5;line-height:1.4}
 @media(max-width:768px){.kbd-hint{display:none}}
+
+/* ═══ AUTH ═══ */
+#auth-overlay{position:fixed;inset:0;background:var(--bg);z-index:2000;display:flex;align-items:center;justify-content:center;overflow-y:auto;padding:var(--space-4)}
+#auth-overlay.hidden{display:none}
+#auth-box{width:100%;max-width:400px;padding:var(--space-8) var(--space-6);text-align:center}
+#auth-box .auth-logo{width:56px;height:56px;border-radius:var(--rad-lg);background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:#fff;margin:0 auto var(--space-4)}
+#auth-box h1{font-size:22px;font-weight:800;margin-bottom:var(--space-1)}
+#auth-box .auth-sub{font-size:13px;color:var(--fg3);margin-bottom:var(--space-6);line-height:1.5}
+.auth-field{width:100%;padding:var(--space-3) var(--space-4);background:var(--bg3);border:1px solid var(--card-border);border-radius:var(--rad);color:var(--fg);font-size:14px;font-family:inherit;outline:none;transition:border var(--ts);margin-bottom:var(--space-3)}
+.auth-field:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.auth-btn{width:100%;padding:var(--space-3);background:var(--accent);border:none;border-radius:var(--rad);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all var(--ts)}
+.auth-btn:hover{background:var(--accent-hov);box-shadow:var(--shadow-glow)}
+.auth-btn:disabled{opacity:.5;cursor:not-allowed}
+.auth-switch{margin-top:var(--space-4);font-size:12px;color:var(--fg3)}
+.auth-switch a{color:var(--accent);cursor:pointer;text-decoration:none}
+.auth-switch a:hover{opacity:.8}
+.auth-error{color:var(--red);font-size:12px;margin-bottom:var(--space-3);display:none}
+.auth-success{color:var(--green);font-size:12px;margin-bottom:var(--space-3);display:none}
+#auth-user{display:flex;align-items:center;gap:var(--space-2);font-size:12px;color:var(--fg2);padding:var(--space-1) 0}
+#auth-user .auth-email{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#auth-user .logout-btn{font-size:10px;padding:2px 10px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--rad-sm);color:var(--fg3);cursor:pointer;transition:all var(--ts);font-family:inherit}
+#auth-user .logout-btn:hover{background:var(--card-hov);color:var(--red)}
+.auth-sync-status{font-size:10px;color:var(--fg4);display:flex;align-items:center;gap:4px;padding:2px 0}
+.auth-sync-status .sync-dot{width:5px;height:5px;border-radius:50%}
 </style>
 <link rel="manifest" id="manifest-link">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -545,6 +570,23 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 <meta name="theme-color" content="#060608">
 </head>
 <body>
+
+<!-- ═══ AUTH OVERLAY ═══ -->
+<div id="auth-overlay">
+  <div id="auth-box">
+    <div class="auth-logo">T</div>
+    <h1>TRADIOS</h1>
+    <p class="auth-sub" id="auth-sub">AI Operating System for Tradies</p>
+    <div class="auth-error" id="auth-error"></div>
+    <div class="auth-success" id="auth-success"></div>
+    <div id="auth-form">
+      <input class="auth-field" id="auth-email" type="email" placeholder="Email" autocomplete="email">
+      <input class="auth-field" id="auth-pass" type="password" placeholder="Password" autocomplete="current-password">
+      <button class="auth-btn" id="auth-btn" onclick="authAction()">Sign In</button>
+      <div class="auth-switch" id="auth-switch">Don't have an account? <a onclick="toggleAuthMode()">Sign Up</a></div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════ CMD+K COMMAND PALETTE ═══════════ -->
 <div id="cmd-overlay" onclick="if(event.target===this)closeCmd()">
@@ -622,9 +664,9 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
   </button>
 </div>
 <div class="sb-sp"></div>
-<div class="sb-ft">
-  <div class="av">EA</div>
-  <div><div class="un">Edinson</div><div class="ud" id="sb-time">Today</div></div>
+<div class="sb-ft" id="sb-ft">
+  <div class="av" id="sb-av">?</div>
+  <div><div class="un" id="sb-un">Loading...</div><div class="ud" id="sb-ud">Signing in...</div></div>
 </div>
 </nav>
 <div class="sb-overlay" onclick="toggleSidebar()"></div>
@@ -1408,6 +1450,110 @@ function registerSW(){
   if(mLink)mLink.href='data:application/json,'+encodeURIComponent(JSON.stringify(manifest))
 }
 
+/* ═══ SUPABASE BACKEND ═══ */
+const SUPABASE_URL='https://mpgrsobnxpumzyabomaz.supabase.co';
+const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1wZ3Jzb2JueHB1bXp5YWJvbWF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMDM1MjUsImV4cCI6MjA5MTY3OTUyNX0.d28yAWJpPxRU2i2yLQZjsseXv6AWBqKHmoDeRv_NWP8';
+let sb=null;
+let sbUser=null;
+let authMode='signin';
+
+function initSupabase(){
+  try{
+    sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true}});
+    // Check existing session
+    sb.auth.getSession().then(({data:{session}})=>{
+      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData()}
+      else{showAuth()}
+    });
+    // Listen for auth changes
+    sb.auth.onAuthStateChange((event,session)=>{
+      if(session){sbUser=session.user;hideAuth();updateAuthUI();syncAllData()}
+      else{sbUser=null;showAuth();updateAuthUI()}
+    })
+  }catch(e){console.log('Supabase init skipped');showAuthFallback()}
+}
+
+function showAuth(){document.getElementById('auth-overlay').classList.remove('hidden')}
+function hideAuth(){document.getElementById('auth-overlay').classList.add('hidden')}
+function showAuthFallback(){hideAuth();document.getElementById('sb-ud').textContent='Offline mode'}
+
+function toggleAuthMode(){
+  authMode=authMode==='signin'?'signup':'signin';
+  document.getElementById('auth-btn').textContent=authMode==='signin'?'Sign In':'Create Account';
+  document.getElementById('auth-switch').innerHTML=authMode==='signin'?'Don\'t have an account? <a onclick="toggleAuthMode()">Sign Up</a>':'Already have an account? <a onclick="toggleAuthMode()">Sign In</a>';
+  document.getElementById('auth-sub').textContent=authMode==='signin'?'AI Operating System for Tradies':'Create your TRADIOS account'
+}
+
+async function authAction(){
+  const email=document.getElementById('auth-email').value.trim();
+  const pass=document.getElementById('auth-pass').value.trim();
+  const btn=document.getElementById('auth-btn');const err=document.getElementById('auth-error');const success=document.getElementById('auth-success');
+  err.style.display='none';success.style.display='none';
+  if(!email||!pass){err.textContent='Please enter email and password';err.style.display='block';return}
+  btn.disabled=true;btn.textContent='Please wait...';
+  try{
+    let result;
+    if(authMode==='signin'){result=await sb.auth.signInWithPassword({email,pass})}
+    else{result=await sb.auth.signUp({email,pass,options:{data:{full_name:email.split('@')[0]}}});}
+    if(result.error){err.textContent=result.error.message;err.style.display='block';btn.disabled=false;btn.textContent=authMode==='signin'?'Sign In':'Create Account';return}
+    if(authMode==='signup'){success.textContent='Account created! Check your email for confirmation.';success.style.display='block';btn.disabled=false;btn.textContent='Create Account'}
+  }catch(e){err.textContent='Connection error. Check your internet.';err.style.display='block';btn.disabled=false;btn.textContent=authMode==='signin'?'Sign In':'Create Account'}
+}
+
+async function logout(){
+  await sb.auth.signOut();
+  sbUser=null;showAuth()
+}
+
+function updateAuthUI(){
+  if(sbUser){
+    document.getElementById('sb-av').textContent=sbUser.email?.charAt(0).toUpperCase()||'?';
+    document.getElementById('sb-un').textContent=sbUser.email?.split('@')[0]||'User';
+    document.getElementById('sb-ud').innerHTML='<span class="auth-sync-status"><span class="sync-dot" style="background:var(--green)"></span> Cloud sync</span> · <span class="logout-btn" onclick="logout()">Sign out</span>'
+  }else{
+    document.getElementById('sb-av').textContent='?';
+    document.getElementById('sb-un').textContent='Offline';
+    document.getElementById('sb-ud').textContent='Local only'
+  }
+}
+
+/* ═══ DATA SYNC ═══ */
+const SYNC_TABLES=['jobs','leads','quotes','photos','tasks'];
+async function syncAllData(){
+  if(!sb||!sbUser)return;
+  for(const table of SYNC_TABLES){
+    try{await syncTable(table)}catch(e){console.log('Sync '+table+' failed:',e)}
+  }
+}
+async function syncTable(table){
+  const localKey='tradeos_'+table;
+  const localData=localStorage.getItem(localKey);
+  if(!localData)return;
+  // Push local data to Supabase
+  const data=JSON.parse(localData);
+  if(table==='jobs'){
+    await sb.from('jobs').upsert(flattenJobs(data),{onConflict:'id'}).select()
+  }
+}
+function flattenJobs(jobData){
+  const all=[];
+  Object.entries(jobData).forEach(([col,jobs])=>{
+    jobs.forEach((j,i)=>{
+      all.push({
+        business_id:sbUser?.id||'anon',
+        customer_name:j.name||'',
+        service:j.type||'',
+        quote_amount:j.amount||0,
+        status:col,
+        description:j.detail||'',
+        notes:JSON.stringify(j),
+        updated_at:new Date().toISOString()
+      })
+    })
+  });
+  return all
+}
+
 /* ═══ WORKSPACE SWITCHING ═══ */
 let currentWorkspace='all';
 function switchWorkspace(ws){
@@ -1585,14 +1731,15 @@ function renderDashboard(){
 
 /* ═══ INIT ═══ */
 function init(){
-  document.getElementById('sb-time').textContent='Updated: '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
   renderDashboard();renderLeads();renderSites();renderBiz();initJobs();renderTasks();renderAgents();renderNotes();renderChangelog();renderPhotos();renderCalendar();
   document.getElementById('q-badge').textContent=getQuotes().length;
   document.getElementById('na').addEventListener('blur',saveNotes);
   document.getElementById('cmd-overlay').addEventListener('click',function(e){if(e.target===this)closeCmd()});
   registerSW();
   const dl=document.getElementById('q-client-list');
-  if(dl)uniqueLeads.forEach(l=>{if(l.company){const o=document.createElement('option');o.value=l.company;dl.appendChild(o)}})
+  if(dl)uniqueLeads.forEach(l=>{if(l.company){const o=document.createElement('option');o.value=l.company;dl.appendChild(o)}});
+  // Init Supabase after everything else
+  initSupabase()
 }
 
 document.addEventListener('DOMContentLoaded',init);
