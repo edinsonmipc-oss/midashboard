@@ -1,15 +1,168 @@
 {
-  "updated": "2026-05-10T08:00",
+  "updated": "2026-05-10T09:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-10T08:00",
+      "analyzed_at": "2026-05-10T09:00",
       "pages": [
+        {
+          "url": "https://antoniopaving.com/404.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Page Not Found — Antonio PrimeScape Construction",
+          "title_length": 48,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "",
+          "meta_desc_length": 0,
+          "meta_desc_missing": true,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 180,
+          "h1_count": 1,
+          "h2_count": 0,
+          "has_h1": true,
+          "images": 0,
+          "images_with_alt": 0,
+          "links": 5,
+          "has_canonical": false,
+          "keyword_hits": {},
+          "seo_score": 65,
+          "issues": [
+            "❌ Missing meta description",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ No canonical URL"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/blog/bluestone-vs-travertine-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Bluestone vs Travertine Paving Melbourne | Cost Comparison 2026",
+          "title_length": 63,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Bluestone vs travertine paving cost comparison for Melbourne homes. Bluestone $90–$150/m², travertine $100–$170/m². Durability, look & which is best f",
+          "meta_desc_length": 157,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 501,
+          "h1_count": 1,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 31,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (63 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/about.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "About Antonio — Melbourne Paving Specialist",
+          "title_length": 43,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Meet Antonio — owner and operator of Antonio PrimeScape Construction. 10+ years paving Melbourne's south-east. 63 five-star reviews. Based at 10 Elwoo",
+          "meta_desc_length": 155,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 451,
+          "h1_count": 1,
+          "h2_count": 4,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 34,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/blog/brick-vs-concrete-driveway-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Brick vs Concrete Driveway Melbourne | Cost Comparison (63 Reviews)",
+          "title_length": 67,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Brick vs concrete driveway cost in Melbourne. 63 ★ reviews reveal real prices. Compare durability, maintenance & value. Free onsite quote.",
+          "meta_desc_length": 138,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1042,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 31,
+          "has_canonical": true,
+          "keyword_hits": {
+            "exposed aggregate": 2,
+            "concrete driveway": 5
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (67 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/blog/permeable-paving-melbourne-guide.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Permeable Paving Melbourne — Complete Guide (2026) | Antonio PrimeScape",
+          "title_length": 71,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Complete guide to permeable paving in Melbourne. Costs $110–$220/m², best materials, council requirements, and top-rated installers in south-east Melb",
+          "meta_desc_length": 156,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1085,
+          "h1_count": 1,
+          "h2_count": 6,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 35,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 4,
+            "permeable paving": 10
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (71 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-10T08:00",
+          "analyzed_at": "2026-05-10T09:00",
           "title": "Paving & Landscaping Melbourne | 63 ★★★★★ Reviews | Antonio PrimeScape",
           "title_length": 70,
           "title_too_short": false,
@@ -42,9 +195,1443 @@
             "⚠️ Title too long (70 chars)",
             "⚠️ Very thin content (0 words)"
           ]
+        },
+        {
+          "url": "https://antoniopaving.com/blog/sandstone-paving-eastern-suburbs.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Sandstone Paving Eastern Suburbs Melbourne | Cost & Ideas",
+          "title_length": 57,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Sandstone paving across Melbourne's eastern suburbs — Hawthorn, Camberwell, Balwyn, Box Hill, Glen Waverley, Mount Waverley. Costs $120–$180/m², colou",
+          "meta_desc_length": 174,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1041,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 31,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/gallery.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Project Gallery — Paving & Landscaping Melbourne",
+          "title_length": 48,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "See real paving and landscaping projects by Antonio PrimeScape Construction. Brick paving, bluestone, pool paving, decking, crazy paving and landscapi",
+          "meta_desc_length": 153,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 227,
+          "h1_count": 1,
+          "h2_count": 0,
+          "has_h1": true,
+          "images": 31,
+          "images_with_alt": 31,
+          "links": 31,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/paving-notting-hill/index.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Paving Contractor Notting Hill | Free Quote — Antonio PrimeScape",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Paving contractor in Notting Hill — brick paving, bluestone & pool paving. Free same-day quotes. Call 0406 170 544. 63 ⭐ reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 954,
+          "h1_count": 1,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 26,
+          "has_canonical": true,
+          "keyword_hits": {
+            "exposed aggregate": 1,
+            "concrete driveway": 3
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/pricing.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Paving Prices Melbourne 2026 | Brick, Bluestone, Concrete &...",
+          "title_length": 62,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Transparent paving prices for Melbourne 2026. Brick paving $85–$150/m², bluestone $120–$215/m², concrete $60–$120/m², pool paving $100–$220/m². Free w",
+          "meta_desc_length": 157,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 675,
+          "h1_count": 1,
+          "h2_count": 3,
+          "has_h1": true,
+          "images": 1,
+          "images_with_alt": 1,
+          "links": 41,
+          "has_canonical": true,
+          "keyword_hits": {
+            "exposed aggregate": 2,
+            "concrete driveway": 3
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (62 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/bluestone-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Bluestone Paving Melbourne | Patios, Pool Surrounds & Paths —...",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Premium bluestone paving for patios, pool surrounds, paths and entertaining areas. South-east Melbourne. Sawn, honed and natural finishes. Free same-d",
+          "meta_desc_length": 153,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1013,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/brick-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Brick Paving Melbourne | Driveways, Patios & Paths — Antonio...",
+          "title_length": 63,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Expert brick paving for driveways, patios, paths and entertaining areas across Melbourne's south-east. Clay bricks, concrete pavers, herringbone, bask",
+          "meta_desc_length": 153,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1186,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2,
+            "brick paving melbourne": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (63 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Melbourne | Sandstone, Flagstone & Natural Stone...",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Crazy paving in Melbourne using sandstone, flagstone and natural stone. Driveways, garden paths & feature areas. Free quotes. 63 five-star reviews. Ca",
+          "meta_desc_length": 153,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1017,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2,
+            "crazy paving melbourne": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/concrete-driveways.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Concrete Driveways Melbourne | Plain, Exposed Aggregate &...",
+          "title_length": 60,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Concrete driveways, slabs and paths across Melbourne's south-east. Plain, exposed aggregate & coloured concrete. Free quotes. Licensed & insured. Call",
+          "meta_desc_length": 156,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1074,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "exposed aggregate": 10,
+            "concrete driveway": 19
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber Decking Melbourne | Merbau, Hardwood & Treated Pine —...",
+          "title_length": 63,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Custom timber decks in Melbourne's south-east. Merbau, hardwood & treated pine. Freestanding and attached. Free quotes. 63 five-star reviews. Call 040",
+          "meta_desc_length": 160,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 987,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (63 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/driveway-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Driveway Paving Melbourne — Antonio PrimeScape Construction",
+          "title_length": 59,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Brick, bluestone, crazy paving and concrete driveways across Melbourne's south-east. Herringbone pattern for strength. Free quotes. 0406 170 544.",
+          "meta_desc_length": 145,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 585,
+          "h1_count": 1,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 49,
+          "has_canonical": true,
+          "keyword_hits": {
+            "driveway paving": 7
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/landscaping.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Landscaping Melbourne | Garden Design, Retaining Walls & Turf...",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Full landscaping services across Melbourne's south-east. Garden design, retaining walls, turf, garden beds & irrigation. Free quotes. Call 0406 170 54",
+          "meta_desc_length": 152,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 966,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Melbourne | Alfresco & Entertaining Areas —...",
+          "title_length": 59,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Patio and alfresco paving across Melbourne's south-east. Travertine, bluestone, pavers & brick. Free quotes. 63 five-star reviews. Call Antonio on 040",
+          "meta_desc_length": 160,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1026,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Melbourne | Slip-Resistant Stone & Bluestone Pool...",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Slip-resistant pool paving in Melbourne's south-east. Bluestone, travertine, porcelain and stone pool surrounds. Free quotes. 63 five-star reviews. Ca",
+          "meta_desc_length": 153,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 981,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 5,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/5 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/retaining-walls.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Retaining Walls Melbourne — Antonio PrimeScape Construction",
+          "title_length": 59,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Timber sleeper and concrete block retaining walls across Melbourne's south-east. Drainage system behind every wall. Free quotes. 63 five-star reviews.",
+          "meta_desc_length": 150,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 583,
+          "h1_count": 1,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 4,
+          "images_with_alt": 1,
+          "links": 49,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/4 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Melbourne | Large Format Tiles for Patios &...",
+          "title_length": 63,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Large-format porcelain paving for modern patios, alfresco areas and paths across Melbourne's south-east. Low maintenance, stunning finish. Free quotes",
+          "meta_desc_length": 157,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1011,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 4,
+          "images_with_alt": 1,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (63 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/4 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/services/stone-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Stone Paving Melbourne — Antonio PrimeScape Construction",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Sandstone, travertine, flagstone and natural stone paving for paths, patios and driveways. Melbourne south-east. Free quotes. 0406 170 544.",
+          "meta_desc_length": 139,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 577,
+          "h1_count": 1,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 4,
+          "images_with_alt": 1,
+          "links": 49,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 1/4 images have alt text"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashburton-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Ashburton | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Ashburton. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Pr",
+          "meta_desc_length": 178,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1031,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashburton-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Ashburton | Free Quote — Antonio PrimeScape",
+          "title_length": 70,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Ashburton. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1014,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (70 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashburton-pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Ashburton | Free Quote — Antonio PrimeScape",
+          "title_length": 55,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional pool paving, coping stones & waterline tiles in Ashburton. $150–$250/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 991,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashburton-patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Ashburton | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional patio paving & outdoor entertaining areas in Ashburton. $85–$180/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 125,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1003,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashburton-porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Ashburton | Free Quote — Antonio PrimeScape",
+          "title_length": 60,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional porcelain paving for driveways, patios & pool areas in Ashburton. $120–$200/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 136,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 999,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashwood-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Ashwood | Free Quote — Antonio PrimeScape",
+          "title_length": 68,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Ashwood. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 127,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1014,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (68 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashwood-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Ashwood | Free Quote — Antonio PrimeScape",
+          "title_length": 54,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Ashwood. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Prim",
+          "meta_desc_length": 176,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1048,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashwood-patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Ashwood | Free Quote — Antonio PrimeScape",
+          "title_length": 54,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional patio paving & outdoor entertaining areas in Ashwood. $85–$180/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 123,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 995,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashwood-pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Ashwood | Free Quote — Antonio PrimeScape",
+          "title_length": 53,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional pool paving, coping stones & waterline tiles in Ashwood. $150–$250/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 127,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 996,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/ashwood-porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Ashwood | Free Quote — Antonio PrimeScape",
+          "title_length": 58,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional porcelain paving for driveways, patios & pool areas in Ashwood. $120–$200/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 134,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 998,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/balwyn-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Balwyn | Free Quote — Antonio PrimeScape",
+          "title_length": 67,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Balwyn. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 126,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1011,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (67 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/balwyn-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Balwyn | Free Quote — Antonio PrimeScape",
+          "title_length": 53,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Balwyn. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Prime",
+          "meta_desc_length": 175,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1027,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/balwyn-patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Balwyn | Free Quote — Antonio PrimeScape",
+          "title_length": 53,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional patio paving & outdoor entertaining areas in Balwyn. $85–$180/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio ",
+          "meta_desc_length": 180,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 996,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/balwyn-pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Balwyn | Free Quote — Antonio PrimeScape",
+          "title_length": 52,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional pool paving, coping stones & waterline tiles in Balwyn. $150–$250/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 126,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 997,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/balwyn-porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Balwyn | Free Quote — Antonio PrimeScape",
+          "title_length": 57,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional porcelain paving for driveways, patios & pool areas in Balwyn. $120–$200/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 133,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1000,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bangholme-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Bangholme | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Bangholme. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Pr",
+          "meta_desc_length": 178,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1022,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bangholme-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Bangholme | Free Quote — Antonio PrimeScape",
+          "title_length": 70,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Bangholme. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1011,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (70 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bangholme-patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Bangholme | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional patio paving & outdoor entertaining areas in Bangholme. $85–$180/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 125,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 999,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bangholme-pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Bangholme | Free Quote — Antonio PrimeScape",
+          "title_length": 55,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional pool paving, coping stones & waterline tiles in Bangholme. $150–$250/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1002,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bangholme-porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Bangholme | Free Quote — Antonio PrimeScape",
+          "title_length": 60,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional porcelain paving for driveways, patios & pool areas in Bangholme. $120–$200/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 136,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 999,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Bayswater | Free Quote — Antonio PrimeScape",
+          "title_length": 70,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Bayswater. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1008,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 2
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (70 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Bayswater | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Bayswater. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Pr",
+          "meta_desc_length": 178,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1023,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-pool-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pool Paving Bayswater | Free Quote — Antonio PrimeScape",
+          "title_length": 55,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional pool paving, coping stones & waterline tiles in Bayswater. $150–$250/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 991,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-patio-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Patio Paving Bayswater | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional patio paving & outdoor entertaining areas in Bayswater. $85–$180/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 125,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 999,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-porcelain-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Porcelain Paving Bayswater | Free Quote — Antonio PrimeScape",
+          "title_length": 60,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional porcelain paving for driveways, patios & pool areas in Bayswater. $120–$200/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 136,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1001,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/bayswater-retaining-walls.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Retaining Walls Bayswater | 63 ⭐ Reviews — Free Quote",
+          "title_length": 53,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Retaining wall specialist in Bayswater. Timber, concrete sleeper & block retaining walls. 63 five-star reviews. Free quote. Call Antonio: 0406 170 544",
+          "meta_desc_length": 151,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 945,
+          "h1_count": 2,
+          "h2_count": 5,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 27,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/beaumaris-crazy-paving.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Crazy Paving Beaumaris | Free Quote — Antonio PrimeScape",
+          "title_length": 56,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Professional crazy paving & irregular stone paths in Beaumaris. $90–$160/m². Free same-day quotes. 63 five-star reviews. Local contractor — Antonio Pr",
+          "meta_desc_length": 178,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1041,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://antoniopaving.com/suburbs/beaumaris-decking.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Timber & Composite Decking Beaumaris | Free Quote — Antonio PrimeScape",
+          "title_length": 70,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional timber & composite decking for outdoor areas in Beaumaris. $200–$400/m². Free same-day quotes. 63 five-star reviews.",
+          "meta_desc_length": 129,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1010,
+          "h1_count": 1,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 37,
+          "has_canonical": true,
+          "keyword_hits": {
+            "concrete driveway": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (70 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
         }
       ],
-      "issues": [],
+      "issues": [
+        "https://antoniopaving.com/404.html: ❌ Missing meta description",
+        "https://antoniopaving.com/404.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/404.html: ⚠️ No canonical URL",
+        "https://antoniopaving.com/blog/bluestone-vs-travertine-paving.html: ⚠️ Title too long (63 chars)",
+        "https://antoniopaving.com/blog/bluestone-vs-travertine-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/about.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/blog/brick-vs-concrete-driveway-melbourne.html: ⚠️ Title too long (67 chars)",
+        "https://antoniopaving.com/blog/brick-vs-concrete-driveway-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/blog/permeable-paving-melbourne-guide.html: ⚠️ Title too long (71 chars)",
+        "https://antoniopaving.com/blog/permeable-paving-melbourne-guide.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com: ⚠️ Title too long (70 chars)",
+        "https://antoniopaving.com: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/blog/sandstone-paving-eastern-suburbs.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/gallery.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/paving-notting-hill/index.html: ⚠️ Title too long (64 chars)",
+        "https://antoniopaving.com/paving-notting-hill/index.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/pricing.html: ⚠️ Title too long (62 chars)",
+        "https://antoniopaving.com/pricing.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/bluestone-paving.html: ⚠️ Title too long (64 chars)",
+        "https://antoniopaving.com/services/bluestone-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/bluestone-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/brick-paving.html: ⚠️ Title too long (63 chars)",
+        "https://antoniopaving.com/services/brick-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/brick-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/crazy-paving.html: ⚠️ Title too long (64 chars)",
+        "https://antoniopaving.com/services/crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/crazy-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/concrete-driveways.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/concrete-driveways.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/decking.html: ⚠️ Title too long (63 chars)",
+        "https://antoniopaving.com/services/decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/decking.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/driveway-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/driveway-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/landscaping.html: ⚠️ Title too long (64 chars)",
+        "https://antoniopaving.com/services/landscaping.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/landscaping.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/patio-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/pool-paving.html: ⚠️ Title too long (64 chars)",
+        "https://antoniopaving.com/services/pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/pool-paving.html: ⚠️ Only 1/5 images have alt text",
+        "https://antoniopaving.com/services/retaining-walls.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/retaining-walls.html: ⚠️ Only 1/4 images have alt text",
+        "https://antoniopaving.com/services/porcelain-paving.html: ⚠️ Title too long (63 chars)",
+        "https://antoniopaving.com/services/porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/porcelain-paving.html: ⚠️ Only 1/4 images have alt text",
+        "https://antoniopaving.com/services/stone-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/services/stone-paving.html: ⚠️ Only 1/4 images have alt text",
+        "https://antoniopaving.com/suburbs/ashburton-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashburton-decking.html: ⚠️ Title too long (70 chars)",
+        "https://antoniopaving.com/suburbs/ashburton-decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashburton-pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashburton-patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashburton-porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashwood-decking.html: ⚠️ Title too long (68 chars)",
+        "https://antoniopaving.com/suburbs/ashwood-decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashwood-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashwood-patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashwood-pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/ashwood-porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/balwyn-decking.html: ⚠️ Title too long (67 chars)",
+        "https://antoniopaving.com/suburbs/balwyn-decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/balwyn-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/balwyn-patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/balwyn-pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/balwyn-porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bangholme-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bangholme-decking.html: ⚠️ Title too long (70 chars)",
+        "https://antoniopaving.com/suburbs/bangholme-decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bangholme-patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bangholme-pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bangholme-porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-decking.html: ⚠️ Title too long (70 chars)",
+        "https://antoniopaving.com/suburbs/bayswater-decking.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-pool-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-patio-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-porcelain-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/bayswater-retaining-walls.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/beaumaris-crazy-paving.html: ⚠️ Very thin content (0 words)",
+        "https://antoniopaving.com/suburbs/beaumaris-decking.html: ⚠️ Title too long (70 chars)",
+        "https://antoniopaving.com/suburbs/beaumaris-decking.html: ⚠️ Very thin content (0 words)"
+      ],
       "keywords": [
         "paving melbourne",
         "driveway paving",
@@ -57,19 +1644,302 @@
         "crazy paving melbourne",
         "paving services melbourne"
       ],
-      "content_suggestions": [],
-      "sitemap_count": 371,
-      "quick_homepage_score": 85
+      "content_suggestions": [
+        {
+          "title": "Paving Services in South Yarra, Melbourne | Antonio Paving",
+          "slug": "paving-south-yarra-melbourne",
+          "keywords": [
+            "paving south yarra",
+            "driveway paving south yarra"
+          ],
+          "focus_keyword": "paving south yarra melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for South Yarra",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Richmond, Melbourne | Antonio Paving",
+          "slug": "paving-richmond-melbourne",
+          "keywords": [
+            "paving richmond",
+            "driveway paving richmond"
+          ],
+          "focus_keyword": "paving richmond melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Richmond",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Carlton, Melbourne | Antonio Paving",
+          "slug": "paving-carlton-melbourne",
+          "keywords": [
+            "paving carlton",
+            "driveway paving carlton"
+          ],
+          "focus_keyword": "paving carlton melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Carlton",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Fitzroy, Melbourne | Antonio Paving",
+          "slug": "paving-fitzroy-melbourne",
+          "keywords": [
+            "paving fitzroy",
+            "driveway paving fitzroy"
+          ],
+          "focus_keyword": "paving fitzroy melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Fitzroy",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Brunswick, Melbourne | Antonio Paving",
+          "slug": "paving-brunswick-melbourne",
+          "keywords": [
+            "paving brunswick",
+            "driveway paving brunswick"
+          ],
+          "focus_keyword": "paving brunswick melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Brunswick",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Footscray, Melbourne | Antonio Paving",
+          "slug": "paving-footscray-melbourne",
+          "keywords": [
+            "paving footscray",
+            "driveway paving footscray"
+          ],
+          "focus_keyword": "paving footscray melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Footscray",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in St Kilda, Melbourne | Antonio Paving",
+          "slug": "paving-st-kilda-melbourne",
+          "keywords": [
+            "paving st kilda",
+            "driveway paving st kilda"
+          ],
+          "focus_keyword": "paving st kilda melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for St Kilda",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Prahran, Melbourne | Antonio Paving",
+          "slug": "paving-prahran-melbourne",
+          "keywords": [
+            "paving prahran",
+            "driveway paving prahran"
+          ],
+          "focus_keyword": "paving prahran melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Prahran",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Hawthorn, Melbourne | Antonio Paving",
+          "slug": "paving-hawthorn-melbourne",
+          "keywords": [
+            "paving hawthorn",
+            "driveway paving hawthorn"
+          ],
+          "focus_keyword": "paving hawthorn melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Hawthorn",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Paving Services in Kew, Melbourne | Antonio Paving",
+          "slug": "paving-kew-melbourne",
+          "keywords": [
+            "paving kew",
+            "driveway paving kew"
+          ],
+          "focus_keyword": "paving kew melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific landing page for Kew",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Concrete Driveway Paving Melbourne | Antonio Paving",
+          "slug": "concrete-driveway-paving-melbourne",
+          "keywords": [
+            "concrete driveway",
+            "concrete driveway melbourne"
+          ],
+          "focus_keyword": "concrete driveway paving melbourne",
+          "content_type": "service",
+          "reason": "High-volume keyword targeting homeowners",
+          "estimated_competition": "high"
+        },
+        {
+          "title": "How Much Does Driveway Paving Cost in Melbourne?",
+          "slug": "driveway-paving-cost-melbourne",
+          "keywords": [
+            "driveway paving cost",
+            "paving cost melbourne"
+          ],
+          "focus_keyword": "driveway paving cost melbourne",
+          "content_type": "guide",
+          "reason": "Cost guides rank well for local intent",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Commercial Paving Contractors Melbourne | Antonio Paving",
+          "slug": "commercial-paving-contractors-melbourne",
+          "keywords": [
+            "commercial paving",
+            "paving contractors melbourne"
+          ],
+          "focus_keyword": "commercial paving contractors melbourne",
+          "content_type": "service",
+          "reason": "B2B targeting builders and developers",
+          "estimated_competition": "medium"
+        }
+      ],
+      "stats": {
+        "pages_analyzed": 50,
+        "pages_good": 49,
+        "pages_warning": 1,
+        "pages_bad": 0,
+        "missing_meta_descriptions": 1,
+        "missing_titles": 0
+      }
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-10T08:00",
+      "analyzed_at": "2026-05-10T09:00",
       "pages": [
         {
-          "url": "https://primepropertymaintenance.au",
+          "url": "https://primepropertymaintenance.au/pages/blog/deck-maintenance-tips-melbourne.html",
           "status": 200,
-          "analyzed_at": "2026-05-10T08:00",
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Maintenance Tips for Melbourne | Prime Property Maintenance",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Deck Maintenance Tips for Melbourne Homes. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 136,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 365,
+          "h1_count": 1,
+          "h2_count": 3,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/blog.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Blog | Prime Property Maintenance",
+          "title_length": 33,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert property maintenance tips, guides and advice for Melbourne homeowners. Fence repair tips, gardening guides, deck maintenance and more from Prim",
+          "meta_desc_length": 154,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 419,
+          "h1_count": 1,
+          "h2_count": 1,
+          "has_h1": true,
+          "images": 12,
+          "images_with_alt": 12,
+          "links": 69,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/contact.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Contact Us | Prime Property Maintenance Melbourne",
+          "title_length": 49,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Get a free quote from Prime Property Maintenance Melbourne. Call Antonio on 0468 166 249 or fill the form. Responds within 2 hours Mon-Sat.",
+          "meta_desc_length": 139,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 972,
+          "h1_count": 1,
+          "h2_count": 1,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 63,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1,
+            "property maintenance melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/about.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "About Antonio | Prime Property Maintenance Melbourne",
+          "title_length": 52,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Meet Antonio — founder of Prime Property Maintenance Melbourne. 10+ years experience in decking, fencing, lawn mowing and property maintenance. Free q",
+          "meta_desc_length": 156,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1108,
+          "h1_count": 1,
+          "h2_count": 4,
+          "has_h1": true,
+          "images": 9,
+          "images_with_alt": 9,
+          "links": 64,
+          "has_canonical": true,
+          "keyword_hits": {
+            "property maintenance melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/index.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
           "title": "Prime Property Maintenance Melbourne | Decking Fencing Handyman",
           "title_length": 63,
           "title_too_short": false,
@@ -100,9 +1970,918 @@
             "⚠️ Title too long (63 chars)",
             "⚠️ Very thin content (0 words)"
           ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/door-repair-guide-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Door Repair Guide: Common Door Problems & | Prime Property | PPM",
+          "title_length": 64,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Door Repair Guide: Common Door Problems & Fixes. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 142,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 392,
+          "h1_count": 1,
+          "h2_count": 2,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 57,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (64 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/end-of-lease-property-maintenance-guide-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "End of Lease Property Maintenance Guide | Prime Property Maintenance",
+          "title_length": 68,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "End of Lease Property Maintenance Guide Melbourne. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 144,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 338,
+          "h1_count": 1,
+          "h2_count": 2,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (68 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/fence-repair-tips-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Fence Repair Tips for Melbourne | Prime Property Maintenance",
+          "title_length": 60,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Fence Repair Tips for Melbourne Homeowners. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 137,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 393,
+          "h1_count": 1,
+          "h2_count": 3,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/garden-maintenance-tips-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Garden Maintenance Tips for Melbourne | Prime Property Maintenance",
+          "title_length": 66,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Garden Maintenance Tips for Melbourne Gardens. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 140,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 377,
+          "h1_count": 1,
+          "h2_count": 2,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (66 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/pressure-washing-guide-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Pressure Washing Guide for Melbourne | Prime Property Maintenance",
+          "title_length": 65,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Pressure Washing Guide for Melbourne Properties. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 142,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 365,
+          "h1_count": 1,
+          "h2_count": 3,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (65 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/blog/property-maintenance-checklist-melbourne.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Property Maintenance Checklist for | Prime Property Maintenance",
+          "title_length": 63,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Property Maintenance Checklist for Melbourne Homeowners. Expert tips and advice from Melbourne's trusted property maintenance team. Call 0468 166 249.",
+          "meta_desc_length": 150,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 433,
+          "h1_count": 1,
+          "h2_count": 2,
+          "has_h1": true,
+          "images": 3,
+          "images_with_alt": 3,
+          "links": 58,
+          "has_canonical": true,
+          "keyword_hits": {
+            "gutter cleaning melbourne": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Title too long (63 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-box-hill.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-bentleigh.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Building Maintenance Bentleigh Melbourne | Prime Property Maintenance",
+          "title_length": 69,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional building maintenance in Bentleigh Melbourne 3204. Handyman, fence repairs, gutter cleaning, pressure washing and property upkeep. Call 04",
+          "meta_desc_length": 161,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 940,
+          "h1_count": 4,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (69 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-clayton.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-burwood.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Building Maintenance Burwood Melbourne | Prime Property Maintenance",
+          "title_length": 67,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional building maintenance in Burwood Melbourne 3125. Handyman, fence repairs, gutter cleaning, pressure washing and property upkeep. Call 0468",
+          "meta_desc_length": 159,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 945,
+          "h1_count": 4,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (67 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-dandenong.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-bentleigh.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-glen-waverley.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Building Maintenance Glen Waverley Melbourne | Prime Property Maintenance",
+          "title_length": 73,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Professional building maintenance in Glen Waverley Melbourne 3150. Handyman, fence repairs, gutter cleaning, pressure washing and property upkeep. Cal",
+          "meta_desc_length": 165,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 963,
+          "h1_count": 4,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 30,
+          "has_canonical": true,
+          "keyword_hits": {},
+          "seo_score": 85,
+          "issues": [
+            "⚠️ Title too long (73 chars)",
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-brighton.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-blackburn.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Blackburn | Prime Property Maintenance",
+          "title_length": 51,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Blackburn, Melbourne 3130. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 140,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1076,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-box-hill.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Box Hill | Prime Property Maintenance",
+          "title_length": 50,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Box Hill, Melbourne 3128. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 139,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1107,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-burwood.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-chadstone.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-carnegie.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Carnegie | Prime Property Maintenance",
+          "title_length": 50,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Carnegie, Melbourne 3163. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 139,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1077,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-clarinda.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-cheltenham.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Cheltenham | Prime Property Maintenance",
+          "title_length": 52,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Cheltenham, Melbourne 3192. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 141,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1076,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-clayton.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Clayton | Prime Property Maintenance",
+          "title_length": 49,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Clayton, Melbourne 3168. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 138,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1076,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-dandenong.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-glen-waverley.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-doncaster.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Doncaster | Prime Property Maintenance",
+          "title_length": 51,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Doncaster, Melbourne 3108. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 140,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1080,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-glen-iris.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Glen Iris | Prime Property Maintenance",
+          "title_length": 51,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Glen Iris, Melbourne 3146. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 140,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1108,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-hampton.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-keysborough.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-hughesdale.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Hughesdale | Prime Property Maintenance",
+          "title_length": 52,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Hughesdale, Melbourne 3166. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 141,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1077,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mentone.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-malvern-east.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-moorabbin.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mount-waverley.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-murrumbeena.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-noble-park.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mulgrave.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Mulgrave | Prime Property Maintenance",
+          "title_length": 50,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Mulgrave, Melbourne 3170. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 139,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1078,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-notting-hill.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-rowville.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-sandringham.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-springvale-south.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-ormond.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Ormond | Prime Property Maintenance",
+          "title_length": 48,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Ormond, Melbourne 3204. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 137,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1073,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-cleaning-blackburn.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-springvale.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Springvale | Prime Property Maintenance",
+          "title_length": 52,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Springvale, Melbourne 3171. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 141,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1075,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-wheelers-hill.html",
+          "status": 200,
+          "analyzed_at": "2026-05-10T09:00",
+          "title": "Deck Builder Wheelers Hill | Prime Property Maintenance",
+          "title_length": 55,
+          "title_too_short": false,
+          "title_too_long": false,
+          "title_missing": false,
+          "meta_description": "Expert deck builder in Wheelers Hill, Melbourne 3150. New Merbau, Spotted Gum & hardwood decks. Free on-site quotes. Call Antonio: 0468 166 249.",
+          "meta_desc_length": 144,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": false,
+          "word_count": 1107,
+          "h1_count": 3,
+          "h2_count": 7,
+          "has_h1": true,
+          "images": 7,
+          "images_with_alt": 7,
+          "links": 68,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1
+          },
+          "seo_score": 90,
+          "issues": [
+            "⚠️ Very thin content (0 words)"
+          ]
+        },
+        {
+          "url": "https://primepropertymaintenance.au/pages/programmatic/deck-builder-oakleigh.html",
+          "status": 404,
+          "analyzed_at": "2026-05-10T09:00",
+          "seo_score": 0,
+          "issues": [
+            "❌ HTTP 404: Page not accessible"
+          ]
         }
       ],
-      "issues": [],
+      "issues": [
+        "https://primepropertymaintenance.au/pages/blog/deck-maintenance-tips-melbourne.html: ⚠️ Title too long (64 chars)",
+        "https://primepropertymaintenance.au/pages/blog/deck-maintenance-tips-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/blog.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/contact.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/about.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/index.html: ⚠️ Title too long (63 chars)",
+        "https://primepropertymaintenance.au/index.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/door-repair-guide-melbourne.html: ⚠️ Title too long (64 chars)",
+        "https://primepropertymaintenance.au/pages/blog/door-repair-guide-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/end-of-lease-property-maintenance-guide-melbourne.html: ⚠️ Title too long (68 chars)",
+        "https://primepropertymaintenance.au/pages/blog/end-of-lease-property-maintenance-guide-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/fence-repair-tips-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/garden-maintenance-tips-melbourne.html: ⚠️ Title too long (66 chars)",
+        "https://primepropertymaintenance.au/pages/blog/garden-maintenance-tips-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/pressure-washing-guide-melbourne.html: ⚠️ Title too long (65 chars)",
+        "https://primepropertymaintenance.au/pages/blog/pressure-washing-guide-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/blog/property-maintenance-checklist-melbourne.html: ⚠️ Title too long (63 chars)",
+        "https://primepropertymaintenance.au/pages/blog/property-maintenance-checklist-melbourne.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-box-hill.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-bentleigh.html: ⚠️ Title too long (69 chars)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-bentleigh.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-clayton.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-burwood.html: ⚠️ Title too long (67 chars)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-burwood.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-dandenong.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-bentleigh.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-glen-waverley.html: ⚠️ Title too long (73 chars)",
+        "https://primepropertymaintenance.au/pages/programmatic/building-maintenance-glen-waverley.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-brighton.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-blackburn.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-box-hill.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-burwood.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-chadstone.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-carnegie.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-clarinda.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-cheltenham.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-clayton.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-dandenong.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-glen-waverley.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-doncaster.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-glen-iris.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-hampton.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-keysborough.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-hughesdale.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mentone.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-malvern-east.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-moorabbin.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mount-waverley.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-murrumbeena.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-noble-park.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-mulgrave.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-notting-hill.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-rowville.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-sandringham.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-springvale-south.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-ormond.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-cleaning-blackburn.html: ❌ HTTP 404: Page not accessible",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-springvale.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-wheelers-hill.html: ⚠️ Very thin content (0 words)",
+        "https://primepropertymaintenance.au/pages/programmatic/deck-builder-oakleigh.html: ❌ HTTP 404: Page not accessible"
+      ],
       "keywords": [
         "decking melbourne",
         "fence installation",
@@ -115,10 +2894,203 @@
         "fencing contractors melbourne",
         "strata maintenance melbourne"
       ],
-      "content_suggestions": [],
-      "sitemap_count": 968,
-      "quick_homepage_score": 90
+      "content_suggestions": [
+        {
+          "title": "Decking Services in South Yarra | Prime Property Maintenance",
+          "slug": "decking-south-yarra-melbourne",
+          "keywords": [
+            "decking south yarra",
+            "deck builders south yarra"
+          ],
+          "focus_keyword": "decking south yarra melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for South Yarra decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Richmond | Prime Property Maintenance",
+          "slug": "decking-richmond-melbourne",
+          "keywords": [
+            "decking richmond",
+            "deck builders richmond"
+          ],
+          "focus_keyword": "decking richmond melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Richmond decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Carlton | Prime Property Maintenance",
+          "slug": "decking-carlton-melbourne",
+          "keywords": [
+            "decking carlton",
+            "deck builders carlton"
+          ],
+          "focus_keyword": "decking carlton melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Carlton decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Fitzroy | Prime Property Maintenance",
+          "slug": "decking-fitzroy-melbourne",
+          "keywords": [
+            "decking fitzroy",
+            "deck builders fitzroy"
+          ],
+          "focus_keyword": "decking fitzroy melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Fitzroy decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Brunswick | Prime Property Maintenance",
+          "slug": "decking-brunswick-melbourne",
+          "keywords": [
+            "decking brunswick",
+            "deck builders brunswick"
+          ],
+          "focus_keyword": "decking brunswick melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Brunswick decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Footscray | Prime Property Maintenance",
+          "slug": "decking-footscray-melbourne",
+          "keywords": [
+            "decking footscray",
+            "deck builders footscray"
+          ],
+          "focus_keyword": "decking footscray melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Footscray decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in St Kilda | Prime Property Maintenance",
+          "slug": "decking-st-kilda-melbourne",
+          "keywords": [
+            "decking st kilda",
+            "deck builders st kilda"
+          ],
+          "focus_keyword": "decking st kilda melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for St Kilda decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Prahran | Prime Property Maintenance",
+          "slug": "decking-prahran-melbourne",
+          "keywords": [
+            "decking prahran",
+            "deck builders prahran"
+          ],
+          "focus_keyword": "decking prahran melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Prahran decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Hawthorn | Prime Property Maintenance",
+          "slug": "decking-hawthorn-melbourne",
+          "keywords": [
+            "decking hawthorn",
+            "deck builders hawthorn"
+          ],
+          "focus_keyword": "decking hawthorn melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Hawthorn decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Decking Services in Kew | Prime Property Maintenance",
+          "slug": "decking-kew-melbourne",
+          "keywords": [
+            "decking kew",
+            "deck builders kew"
+          ],
+          "focus_keyword": "decking kew melbourne",
+          "content_type": "service-location",
+          "reason": "Location-specific page for Kew decking",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Complete Property Maintenance Melbourne | Prime Property Maintenance",
+          "slug": "property-maintenance-melbourne",
+          "keywords": [
+            "property maintenance melbourne",
+            "strata maintenance"
+          ],
+          "focus_keyword": "property maintenance melbourne",
+          "content_type": "service",
+          "reason": "Main umbrella page for all services",
+          "estimated_competition": "high"
+        },
+        {
+          "title": "Strata Property Maintenance Melbourne | Prime Property Maintenance",
+          "slug": "strata-property-maintenance-melbourne",
+          "keywords": [
+            "strata maintenance melbourne",
+            "body corporate maintenance"
+          ],
+          "focus_keyword": "strata property maintenance melbourne",
+          "content_type": "service",
+          "reason": "Target strata managers and body corporates",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Gutter Cleaning Cost Melbourne | Prime Property Maintenance",
+          "slug": "gutter-cleaning-cost-melbourne",
+          "keywords": [
+            "gutter cleaning cost",
+            "gutter cleaning price melbourne"
+          ],
+          "focus_keyword": "gutter cleaning cost melbourne",
+          "content_type": "guide",
+          "reason": "Cost guide for high-intent search",
+          "estimated_competition": "medium"
+        },
+        {
+          "title": "Fencing Installation Guide Melbourne | Types & Costs",
+          "slug": "fencing-installation-melbourne",
+          "keywords": [
+            "fence installation",
+            "fencing melbourne",
+            "fencing cost melbourne"
+          ],
+          "focus_keyword": "fencing installation melbourne",
+          "content_type": "guide",
+          "reason": "Comprehensive guide for homeowners",
+          "estimated_competition": "medium"
+        }
+      ],
+      "stats": {
+        "pages_analyzed": 50,
+        "pages_good": 26,
+        "pages_warning": 0,
+        "pages_bad": 24,
+        "missing_meta_descriptions": 0,
+        "missing_titles": 0
+      }
     }
   },
-  "summary": {}
+  "summary": {
+    "antoniopaving": {
+      "score": "good",
+      "pages_ok": 49,
+      "pages_bad": 0,
+      "total_pages": 50,
+      "issues_count": 83,
+      "content_suggestions": 13
+    },
+    "primeproperty": {
+      "score": "good",
+      "pages_ok": 26,
+      "pages_bad": 24,
+      "total_pages": 50,
+      "issues_count": 60,
+      "content_suggestions": 14
+    }
+  }
 }
