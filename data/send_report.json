@@ -191,6 +191,62 @@
           "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
         }
       ]
+    },
+    {
+      "date": "2026-05-10",
+      "time": "2026-05-10T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@hickory.com.au",
+          "company": "Hickory Group",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "projects@hickory.com.au",
+          "company": "Hickory Group",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "property@fletcher.com.au",
+          "company": "Fletchers Real Estate",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
     }
   ],
   "2026-05-09": {

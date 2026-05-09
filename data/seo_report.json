@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-09T08:00",
+  "updated": "2026-05-10T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-09T08:00",
+      "analyzed_at": "2026-05-10T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-09T08:00",
+          "analyzed_at": "2026-05-10T08:00",
           "title": "Paving & Landscaping Melbourne | 63 ★★★★★ Reviews | Antonio PrimeScape",
           "title_length": 70,
           "title_too_short": false,
@@ -20,20 +20,20 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 5666,
+          "word_count": 5692,
           "h1_count": 3,
-          "h2_count": 22,
+          "h2_count": 20,
           "has_h1": true,
-          "images": 34,
-          "images_with_alt": 34,
-          "links": 133,
+          "images": 29,
+          "images_with_alt": 29,
+          "links": 136,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 6,
             "driveway paving": 1,
             "exposed aggregate": 2,
             "permeable paving": 1,
-            "concrete driveway": 5,
+            "concrete driveway": 4,
             "brick paving melbourne": 1,
             "crazy paving melbourne": 1
           },
@@ -64,12 +64,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-09T08:00",
+      "analyzed_at": "2026-05-10T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-09T08:00",
+          "analyzed_at": "2026-05-10T08:00",
           "title": "Prime Property Maintenance Melbourne | Decking Fencing Handyman",
           "title_length": 63,
           "title_too_short": false,
@@ -80,13 +80,13 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 2381,
+          "word_count": 2390,
           "h1_count": 4,
           "h2_count": 10,
           "has_h1": true,
           "images": 20,
           "images_with_alt": 20,
-          "links": 110,
+          "links": 113,
           "has_canonical": true,
           "keyword_hits": {
             "fence installation": 1,
