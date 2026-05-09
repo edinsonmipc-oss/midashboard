@@ -192,5 +192,69 @@
         }
       ]
     }
-  ]
+  ],
+  "2026-05-09": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-09T10:31",
+    "details": [
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Cushman & Wakefield",
+        "email": "property@cushwake.com",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
+  }
 }

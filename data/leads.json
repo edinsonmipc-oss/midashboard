@@ -27,7 +27,9 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T10:04",
+        "contact_status": "sent"
       },
       {
         "company": "Cushman & Wakefield",
@@ -37,7 +39,9 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:31",
+        "contact_status": "sent"
       },
       {
         "company": "Kay & Burton",
@@ -71,7 +75,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:09",
+        "contact_status": "sent"
       },
       {
         "company": "GPT Group",
@@ -189,7 +195,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:18",
+        "contact_status": "sent"
       },
       {
         "company": "Ray White",
@@ -199,7 +207,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:22",
+        "contact_status": "sent"
       },
       {
         "company": "Goodman Group",
@@ -209,7 +219,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:27",
+        "contact_status": "sent"
       },
       {
         "company": "First National Real Estate",
@@ -229,7 +241,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-09T10:13",
+        "contact_status": "sent"
       }
     ],
     "2026-05-04_batch4": [
@@ -281,7 +295,9 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-09T10:18",
+        "contact_status": "sent"
       },
       {
         "company": "Watpac",
