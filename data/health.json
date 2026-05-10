@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-11T06:00",
+  "updated": "2026-05-11T07:00",
   "sites": [
     {
       "name": "Tradios App",
       "url": "https://tradios.onrender.com",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-11T06:00",
+      "last_checked": "2026-05-11T07:00",
       "issues": [],
       "improvements": [
         "Ejecutar supabase-migration.sql para columnas completas",
@@ -21,7 +21,7 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-10T19:00",
+      "last_checked": "2026-05-11T07:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 26,
@@ -44,7 +44,7 @@
       "url": "https://edinsonmipc-oss.github.io/midashboard/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-10T19:00",
+      "last_checked": "2026-05-11T07:00",
       "issues": [],
       "improvements": [
         "Sección de leads ya agregada ✅",
@@ -58,7 +58,7 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-10T19:00",
+      "last_checked": "2026-05-11T07:00",
       "issues": [],
       "improvements": [
         "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
@@ -77,7 +77,7 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-10T19:00",
+      "last_checked": "2026-05-11T07:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 49,
@@ -100,7 +100,7 @@
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-10T19:00",
+      "last_checked": "2026-05-11T07:00",
       "issues": [],
       "improvements": [
         "Stripe LIVE activado",
@@ -113,7 +113,7 @@
       "url": "https://toolshubpro.com.au/trading/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-10T22:00",
+      "last_checked": "2026-05-11T07:00",
       "tools_count": 3,
       "issues": [],
       "improvements": [
