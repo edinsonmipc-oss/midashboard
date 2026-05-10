@@ -1,0 +1,50 @@
+{
+  "updated_at": "2026-05-10T12:14:31.508272+00:00",
+  "capital": {
+    "balance": 10.0,
+    "initial": 10.0,
+    "pnl": 0.0,
+    "return_pct": 0.0,
+    "in_trade": true,
+    "total_trades": 0,
+    "win_rate": 0,
+    "current_trade": {
+      "pair": "ETH",
+      "entry_price": 2321.42,
+      "entry_time": "2026-05-10T12:12:47.963946+00:00",
+      "amount_usd": 10.0
+    }
+  },
+  "prices": {
+    "BTC": {
+      "usd": 80806,
+      "change": 0.6279006942179551
+    },
+    "ETH": {
+      "usd": 2321.42,
+      "change": 0.2886967812920725
+    },
+    "SOL": {
+      "usd": 93.4,
+      "change": -0.14911395748474404
+    }
+  },
+  "signals": [
+    {
+      "pair": "BTC",
+      "action": "NEUTRAL",
+      "price": 80806
+    },
+    {
+      "pair": "ETH",
+      "action": "BUY",
+      "price": 2321.42
+    },
+    {
+      "pair": "SOL",
+      "action": "NEUTRAL",
+      "price": 93.4
+    }
+  ],
+  "aud_usd": 0.7254998642640818
+}

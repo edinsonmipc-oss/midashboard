@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Trading Bot — Hermes Dashboard</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:#07070a;color:#e4e4f0;font-family:'Inter','Segoe UI',system-ui,sans-serif;min-height:100vh}
+  .container{max-width:1000px;margin:0 auto;padding:24px}
+  header{padding:24px 0;border-bottom:1px solid rgba(30,30,50,.6);margin-bottom:32px}
+  h1{font-size:24px;font-weight:700;background:linear-gradient(135deg,#818cf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  h1 span{-webkit-text-fill-color:#e4e4f0;font-weight:400}
+  .subtitle{color:#8888a0;font-size:13px;margin-top:4px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+  .card{background:#0e0e1a;border:1px solid rgba(30,30,50,.6);border-radius:10px;padding:20px;transition:.2s}
+  .card:hover{border-color:rgba(99,102,241,.4);box-shadow:0 0 20px rgba(99,102,241,.08)}
+  .card-label{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#555570;margin-bottom:8px}
+  .card-value{font-size:28px;font-weight:700}
+  .card-value.green{color:#22c55e}
+  .card-value.red{color:#ef4444}
+  .card-value.gold{color:#f5a50b}
+  .card-value.neutral{color:#e4e4f0}
+  .row{display:flex;justify-content:space-between;padding:12px 0}
+  .row+.row{border-top:1px solid rgba(30,30,50,.4)}
+  .pair-name{font-weight:600;font-size:14px}
+  .pair-price{font-family:'SF Mono','Fira Code',monospace;font-size:13px}
+  .pair-change{font-size:12px;padding:2px 8px;border-radius:4px}
+  .pair-change.up{color:#22c55e;background:rgba(34,197,94,.08)}
+  .pair-change.down{color:#ef4444;background:rgba(239,68,68,.08)}
+  .signal-badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+  .signal-badge.buy{background:rgba(34,197,94,.12);color:#22c55e}
+  .signal-badge.sell{background:rgba(239,68,68,.12);color:#ef4444}
+  .signal-badge.hold{background:rgba(245,165,11,.12);color:#f5a50b}
+  .trade-active{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(34,197,94,.05));border:1px solid rgba(99,102,241,.3)}
+  .badge{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:11px;font-weight:600}
+  .badge.active{background:rgba(34,197,94,.12);color:#22c55e}
+  .badge.inactive{background:rgba(100,100,130,.1);color:#8888a0}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid rgba(30,30,50,.4);color:#555570;font-size:11px;text-align:center}
+  .last-update{color:#555570;font-size:11px;margin-top:16px}
+  .refresh-btn{background:#13131f;border:1px solid rgba(30,30,50,.6);color:#8888a0;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;transition:.2s}
+  .refresh-btn:hover{background:#181828;border-color:rgba(99,102,241,.3);color:#e4e4f0}
+  #error-msg{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.15);color:#ef4444;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:13px}
+  @media(max-width:600px){.container{padding:12px}.card-value{font-size:22px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🤖 TRADING <span>BOT</span></h1>
+    <div class="subtitle">Monitoreo automático BTC / ETH / SOL | Capital $10 USD</div>
+    <div class="last-update" id="lastUpdate">Cargando...</div>
+  </header>
+
+  <div id="error-msg"></div>
+
+  <div id="cards" class="grid"></div>
+
+  <h2 style="font-size:16px;font-weight:600;margin-bottom:16px">📈 Precios en Vivo</h2>
+  <div class="card" id="pricesCard">
+    <div id="pricesList"><p style="color:#555570">Cargando...</p></div>
+  </div>
+
+  <h2 style="font-size:16px;font-weight:600;margin:24px 0 16px">📊 Señales</h2>
+  <div class="card" id="signalsCard">
+    <div id="signalsList"><p style="color:#555570">Cargando...</p></div>
+  </div>
+
+  <div class="footer">
+    Hermes Trading Bot v2.0 | Datos cada 4 horas
+    <br><button class="refresh-btn" onclick="location.reload()">↻ Actualizar</button>
+  </div>
+</div>
+
+<script>
+async function loadData() {
+  try {
+    const resp = await fetch('./data/trading.json?' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    render(data);
+  } catch(e) {
+    document.getElementById('error-msg').style.display = 'block';
+    document.getElementById('error-msg').textContent = '❌ Error cargando datos: ' + e.message;
+  }
+}
+
+function render(data) {
+  const cap = data.capital || {};
+  const prices = data.prices || {};
+  const signals = data.signals || [];
+  const audusd = data.aud_usd || 0.7255;
+
+  // Last update
+  const ts = data.updated_at ? new Date(data.updated_at + 'Z').toLocaleString('es-ES', {timeZone:'Australia/Sydney'}) : '—';
+  document.getElementById('lastUpdate').textContent = '🕐 Última actualización: ' + ts + ' AEST';
+
+  // Capital cards
+  const cards = document.getElementById('cards');
+  cards.innerHTML = '';
+
+  cards.innerHTML = `
+    <div class="card">
+      <div class="card-label">💰 Balance</div>
+      <div class="card-value ${cap.balance >= 10 ? 'green' : 'neutral'}">$${cap.balance?.toFixed(2) || '10.00'} USD</div>
+    </div>
+    <div class="card">
+      <div class="card-label">📈 Retorno</div>
+      <div class="card-value ${cap.return_pct >= 0 ? 'green' : 'red'}">${cap.return_pct >= 0 ? '+' : ''}${cap.return_pct?.toFixed(1) || '0.0'}%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">🎯 Trades</div>
+      <div class="card-value gold">${cap.total_trades || 0}</div>
+      <div style="font-size:11px;color:#555570;margin-top:4px">Win Rate: ${cap.win_rate || 0}% (${cap.winning_trades || 0}W / ${cap.losing_trades || 0}L)</div>
+    </div>
+    <div class="card ${cap.in_trade ? 'trade-active' : ''}">
+      <div class="card-label">${cap.in_trade ? '🟢 En Trade' : '⏸️ Sin Trade'}</div>
+      <div class="card-value" style="font-size:16px;font-weight:600">${cap.in_trade ? (cap.current_trade?.pair || '—') + ' @ $' + (cap.current_trade?.entry_price?.toLocaleString() || '—') : 'Esperando señal'}</div>
+      <div style="font-size:11px;color:#555570;margin-top:4px">P&L Total: <span style="color:${cap.pnl >= 0 ? '#22c55e' : '#ef4444'}">${cap.pnl >= 0 ? '+' : ''}$${cap.pnl?.toFixed(2) || '0.00'}</span></div>
+    </div>
+  `;
+
+  // Prices
+  const pricesHtml = Object.entries(prices).map(([pair, p]) => {
+    const chg = p.change;
+    const chgClass = chg > 0 ? 'up' : chg < 0 ? 'down' : '';
+    const audVal = p.usd / audusd;
+    const signal = signals.find(s => s.pair === pair);
+    const sigClass = signal?.action === 'BUY' ? 'buy' : signal?.action === 'SELL' ? 'sell' : 'hold';
+    const sigIcon = signal?.action === 'BUY' ? '🟢' : signal?.action === 'SELL' ? '🔴' : '⚪';
+    return `<div class="row">
+      <div>
+        <span class="pair-name">${pair}/USD</span><br>
+        <span class="pair-price">≈ A$${audVal.toFixed(2)}</span>
+      </div>
+      <div style="text-align:right">
+        <div class="pair-price">$${p.usd?.toLocaleString() || '—'}</div>
+        <span class="pair-change ${chgClass}">${chg > 0 ? '+' : ''}${chg?.toFixed(2) || '0'}%</span>
+        ${signal ? `<span class="signal-badge ${sigClass}" style="margin-left:6px">${sigIcon} ${signal.action}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('pricesList').innerHTML = pricesHtml;
+
+  // Signals detail
+  if (signals.length > 0) {
+    const sigHtml = signals.map(s => `<div class="row">
+      <span class="pair-name">${s.pair}</span>
+      <span class="signal-badge ${s.action === 'BUY' ? 'buy' : s.action === 'SELL' ? 'sell' : 'hold'}">${s.action}</span>
+    </div>`).join('');
+    document.getElementById('signalsList').innerHTML = sigHtml;
+  } else {
+    document.getElementById('signalsList').innerHTML = '<p style="color:#555570">No hay señales activas</p>';
+  }
+}
+
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>
