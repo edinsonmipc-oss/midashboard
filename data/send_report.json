@@ -247,6 +247,62 @@
           "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
         }
       ]
+    },
+    {
+      "date": "2026-05-11",
+      "time": "2026-05-11T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@stratatitle.com.au",
+          "company": "Strata Title Management",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "supplychain@laingorourke.com.au",
+          "company": "Laing O'Rourke",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@fnre.com.au",
+          "company": "First National Real Estate",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@raywhite.com",
+          "company": "Ray White",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
     }
   ],
   "2026-05-09": {

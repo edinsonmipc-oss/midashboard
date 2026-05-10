@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-11T07:00",
+  "updated": "2026-05-11T08:00",
   "sites": [
     {
       "name": "Tradios App",
       "url": "https://tradios.onrender.com",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "issues": [],
       "improvements": [
         "Ejecutar supabase-migration.sql para columnas completas",
@@ -21,14 +21,14 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "seo_metrics": {
-        "pages_analyzed": 50,
-        "pages_good": 26,
-        "pages_bad": 24,
+        "pages_analyzed": 0,
+        "pages_good": 0,
+        "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
-        "content_suggestions": 14
+        "content_suggestions": 0
       },
       "issues": [],
       "improvements": [
@@ -37,14 +37,14 @@
         "Agregar más contenido por suburbio de Melbourne",
         "Optimizar Google Business Profile con fotos"
       ],
-      "seo_score": 52.0
+      "seo_score": 0.0
     },
     {
       "name": "Dashboard (GitHub Pages)",
       "url": "https://edinsonmipc-oss.github.io/midashboard/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "issues": [],
       "improvements": [
         "Sección de leads ya agregada ✅",
@@ -58,7 +58,7 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "issues": [],
       "improvements": [
         "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
@@ -77,14 +77,14 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "seo_metrics": {
-        "pages_analyzed": 50,
-        "pages_good": 49,
+        "pages_analyzed": 0,
+        "pages_good": 0,
         "pages_bad": 0,
-        "missing_meta": 1,
+        "missing_meta": 0,
         "missing_titles": 0,
-        "content_suggestions": 13
+        "content_suggestions": 0
       },
       "issues": [],
       "improvements": [
@@ -93,14 +93,14 @@
         "Schema LocalBusiness por suburbio",
         "404s corregidos, 33 redirects 301"
       ],
-      "seo_score": 98.0
+      "seo_score": 0.0
     },
     {
       "name": "PrimeWash Gear",
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "issues": [],
       "improvements": [
         "Stripe LIVE activado",
@@ -113,7 +113,7 @@
       "url": "https://toolshubpro.com.au/trading/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T07:00",
+      "last_checked": "2026-05-11T08:00",
       "tools_count": 3,
       "issues": [],
       "improvements": [
@@ -123,29 +123,12 @@
     }
   ],
   "email_stats": {
-    "last_send": "2026-05-10T08:00",
+    "last_send": "2026-05-11T08:00",
     "total_sent": 21
   },
   "seo_audit": {
-    "updated": "2026-05-10T09:00",
-    "summary": {
-      "antoniopaving": {
-        "score": "good",
-        "pages_ok": 49,
-        "pages_bad": 0,
-        "total_pages": 50,
-        "issues_count": 83,
-        "content_suggestions": 13
-      },
-      "primeproperty": {
-        "score": "good",
-        "pages_ok": 26,
-        "pages_bad": 24,
-        "total_pages": 50,
-        "issues_count": 60,
-        "content_suggestions": 14
-      }
-    }
+    "updated": "2026-05-11T08:00",
+    "summary": {}
   },
   "trading": {
     "updated": "2026-05-10",
