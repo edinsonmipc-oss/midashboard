@@ -76,9 +76,10 @@ def generate():
     JS_DATA_BLOCK += 'var BIZ_COLORS = ' + js(BIZ_COLORS) + ';\n'
     JS_DATA_BLOCK += 'var BIZ_NAMES = ' + js(BIZ_NAMES) + ';\n'
     JS_DATA_BLOCK += 'var BIZ_EMOJIS = ' + js(BIZ_EMOJIS) + ';\n'
+    JS_DATA_BLOCK += 'var TRADING_DATA = ' + js(health.get("trading",{})) + ';\n'
 
-    # Read the HTML template and replace the data placeholder
-    with open(os.path.join(DIR, "index.html")) as f:
+    # Read template and inject data
+    with open(os.path.join(DIR, "template.html")) as f:
         html = f.read()
 
     old_script = "<script>\n// ── Data ──\nvar LEADS = [];\nvar TEMPLATES = [];\nvar BIZ_DATA = [];\nvar SITES_DATA = [];\nvar AGENTS_DATA = [];\nvar LOG_DATA = [];\n</script>"
