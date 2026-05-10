@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-10T22:02",
+  "updated": "2026-05-11T08:02",
   "sites": [
     {
       "name": "Tradios App",
@@ -12,7 +12,7 @@
         "Ejecutar supabase-migration.sql para columnas completas",
         "Mejorar velocidad de carga (Render free plan)",
         "Agregar SSL personalizado",
-        "Traducir m\u00e1s p\u00e1ginas a ingl\u00e9s",
+        "Traducir más páginas a inglés",
         "Agregar PWA install prompt"
       ]
     },
@@ -21,10 +21,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-10T22:02",
+      "last_checked": "2026-05-11T08:02",
       "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
+        "pages_analyzed": 968,
+        "pages_good": 968,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
@@ -32,12 +32,12 @@
       },
       "issues": [],
       "improvements": [
-        "Mejorar top-10 keywords para subir posici\u00f3n promedio",
+        "Mejorar top-10 keywords para subir posición promedio",
         "Construir backlinks (directorios, partnerships locales)",
-        "Agregar m\u00e1s contenido por suburbio de Melbourne",
+        "Agregar más contenido por suburbio de Melbourne",
         "Optimizar Google Business Profile con fotos"
       ],
-      "seo_score": 0.0
+      "seo_score": 100.0
     },
     {
       "name": "Dashboard (GitHub Pages)",
@@ -47,10 +47,10 @@
       "last_checked": "2026-05-11T08:00",
       "issues": [],
       "improvements": [
-        "Secci\u00f3n de leads ya agregada \u2705",
-        "Health checks autom\u00e1ticos agregados \u2705",
-        "6 negocios registrados con m\u00e9tricas actualizadas",
-        "Dise\u00f1o oscuro responsive"
+        "Sección de leads ya agregada ✅",
+        "Health checks automáticos agregados ✅",
+        "6 negocios registrados con métricas actualizadas",
+        "Diseño oscuro responsive"
       ]
     },
     {
@@ -58,7 +58,7 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-10T22:02",
+      "last_checked": "2026-05-11T08:02",
       "issues": [],
       "improvements": [
         "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
@@ -77,10 +77,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-10T22:02",
+      "last_checked": "2026-05-11T08:02",
       "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
+        "pages_analyzed": 371,
+        "pages_good": 371,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
@@ -88,12 +88,12 @@
       },
       "issues": [],
       "improvements": [
-        "8 p\u00e1ginas de suburbios nuevas",
+        "8 páginas de suburbios nuevas",
         "Sitemap 379 URLs",
         "Schema LocalBusiness por suburbio",
         "404s corregidos, 33 redirects 301"
       ],
-      "seo_score": 0.0
+      "seo_score": 100.0
     },
     {
       "name": "PrimeWash Gear",
@@ -117,7 +117,7 @@
       "tools_count": 3,
       "issues": [],
       "improvements": [
-        "M\u00e1s tools en progreso",
+        "Más tools en progreso",
         "15 herramientas planificadas"
       ]
     }
@@ -152,7 +152,7 @@
         "pair": "BTC",
         "price": 80817,
         "action": "BUY",
-        "message": "BUY BTC at $80,817.00 \u2014 Fast SMA (7) crossed above Slow SMA (25) \u2014 bullish crossover; Price near support level $78,568.57 (2.9% above)",
+        "message": "BUY BTC at $80,817.00 — Fast SMA (7) crossed above Slow SMA (25) — bullish crossover; Price near support level $78,568.57 (2.9% above)",
         "indicators": {
           "sma_fast": 80697.19,
           "sma_slow": 78198.66,
@@ -168,7 +168,7 @@
             "type": "BUY",
             "indicator": "SMA_CROSSOVER",
             "value": 2498.52,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) \u2014 bullish crossover"
+            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
           },
           {
             "type": "BUY",
@@ -182,7 +182,7 @@
         "pair": "ETH",
         "price": 2321.79,
         "action": "BUY",
-        "message": "BUY ETH at $2,321.79 \u2014 Fast SMA (7) crossed above Slow SMA (25) \u2014 bullish crossover; Price near support level $2,291.06 (1.3% above)",
+        "message": "BUY ETH at $2,321.79 — Fast SMA (7) crossed above Slow SMA (25) — bullish crossover; Price near support level $2,291.06 (1.3% above)",
         "indicators": {
           "sma_fast": 2325.76,
           "sma_slow": 2321.92,
@@ -198,7 +198,7 @@
             "type": "BUY",
             "indicator": "SMA_CROSSOVER",
             "value": 3.84,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) \u2014 bullish crossover"
+            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
           },
           {
             "type": "BUY",
@@ -212,7 +212,7 @@
         "pair": "SOL",
         "price": 93.42,
         "action": "NEUTRAL",
-        "message": "HOLD SOL at $93.42 \u2014 Mixed signals (buy: 1, sell: 2)",
+        "message": "HOLD SOL at $93.42 — Mixed signals (buy: 1, sell: 2)",
         "indicators": {
           "sma_fast": 90.84,
           "sma_slow": 86.76,
@@ -228,13 +228,13 @@
             "type": "SELL",
             "indicator": "RSI",
             "value": 79.9,
-            "message": "RSI 79.9 \u2014 overbought territory (\u226570)"
+            "message": "RSI 79.9 — overbought territory (≥70)"
           },
           {
             "type": "BUY",
             "indicator": "SMA_CROSSOVER",
             "value": 4.08,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) \u2014 bullish crossover"
+            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
           },
           {
             "type": "SELL",
@@ -246,7 +246,7 @@
             "type": "WARNING",
             "indicator": "VOLATILITY",
             "value": 4.61,
-            "message": "High volatility: \u03c3 = $4.03 (4.6% of price)"
+            "message": "High volatility: σ = $4.03 (4.6% of price)"
           }
         ]
       }
@@ -255,25 +255,32 @@
   },
   "monitor_date": "2026-05-11",
   "daily_check": {
-    "timestamp": "2026-05-10T22:02",
+    "timestamp": "2026-05-11T08:02",
     "sites_checked": [
       "antoniopaving.com",
       "primepropertymaintenance.au",
       "toolshubpro.com.au"
     ],
     "all_online": true,
-    "details": {
+    "404_check": {
       "antoniopaving.com": {
-        "http_code": 200,
-        "time_s": 0.49
+        "total": 371,
+        "ok": 371,
+        "issues": 0,
+        "status": "clean"
       },
       "primepropertymaintenance.au": {
-        "http_code": 200,
-        "time_s": 0.5
+        "total": 968,
+        "ok": 968,
+        "issues": 0,
+        "status": "clean"
       },
       "toolshubpro.com.au": {
-        "http_code": 200,
-        "time_s": 0.51
+        "total": 0,
+        "ok": 0,
+        "issues": 0,
+        "status": "warning",
+        "note": "No URLs found in sitemap"
       }
     }
   }
