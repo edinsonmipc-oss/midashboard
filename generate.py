@@ -77,17 +77,19 @@ def generate():
     JS_DATA_BLOCK += 'var BIZ_NAMES = ' + js(BIZ_NAMES) + ';\n'
     JS_DATA_BLOCK += 'var BIZ_EMOJIS = ' + js(BIZ_EMOJIS) + ';\n'
     JS_DATA_BLOCK += 'var TRADING_DATA = ' + js(health.get("trading",{})) + ';\n'
+    JS_DATA_BLOCK += 'var UPDATED = ' + js(health.get("updated","")) + ';\n'
+    JS_DATA_BLOCK += '// ── End injected data ──\n'
 
     # Read template and inject data
     with open(os.path.join(DIR, "template.html")) as f:
         html = f.read()
 
-    old_script = "<script>\n// ── Data ──\nvar LEADS = [];\nvar TEMPLATES = [];\nvar BIZ_DATA = [];\nvar SITES_DATA = [];\nvar AGENTS_DATA = [];\nvar LOG_DATA = [];\n</script>"
-
-    if old_script in html:
-        html = html.replace(old_script, JS_DATA_BLOCK)
+    # Use a unique marker instead of fragile string matching
+    marker = '<!-- DATA_INJECTION_POINT -->'
+    if marker in html:
+        html = html.replace(marker, JS_DATA_BLOCK)
     else:
-        # Try to find another injection point or just prepend
+        # Fallback: inject before </head>
         html = html.replace("</head>", JS_DATA_BLOCK + "\n</head>")
 
     path = os.path.join(DIR, "index.html")
