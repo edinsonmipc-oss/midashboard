@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-10T07:00",
+  "updated": "2026-05-10T19:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
@@ -1416,15 +1416,54 @@
     ],
     "2026-05-10_batch14": [
       {
-        "company": "Kay & Burton",
-        "email": "commercial@kayburton.com.au",
-        "website": "kayburton.com.au",
+        "company": "Raine & Horne",
+        "email": "commercial@rainehorne.com.au",
+        "website": "rainehorne.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
+      },
+      {
+        "company": "Porter Davis",
+        "email": "supplier@porterdavis.com.au",
+        "website": "porterdavis.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "First National Real Estate",
+        "email": "commercial@fnre.com.au",
+        "website": "fnre.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Watpac",
+        "email": "projects@watpac.com.au",
+        "website": "watpac.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Dexus",
+        "email": "leasing@dexus.com",
+        "website": "dexus.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
       },
       {
         "company": "John Holland",
@@ -1434,96 +1473,47 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
       },
       {
-        "company": "Hockingstuart",
-        "email": "commercial@hockingstuart.com.au",
-        "website": "hockingstuart.com.au",
+        "company": "Charter Hall",
+        "email": "leasing@charterhall.com.au",
+        "website": "charterhall.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
       },
       {
-        "company": "PRDnationwide",
-        "email": "commercial@prd.com.au",
-        "website": "prd.com.au",
-        "type": "real_estate",
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "website": "laingorourke.com.au",
+        "type": "constructora",
         "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
       },
       {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Boutique Homes",
-        "email": "info@boutiquehomes.com.au",
-        "website": "boutiquehomes.com.au",
+        "company": "Simonds Homes",
+        "email": "trades@simonds.com.au",
+        "website": "simonds.com.au",
         "type": "builder",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
       },
       {
-        "company": "GPT Group",
-        "email": "info@gpt.com.au",
-        "website": "gpt.com.au",
+        "company": "Barry Plant",
+        "email": "property@barryplant.com.au",
+        "website": "barryplant.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Kane Constructions",
-        "email": "projects@kane.com.au",
-        "website": "kane.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
       }
     ]
   }
