@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11T07:00",
+  "updated": "2026-05-11T19:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
@@ -1426,70 +1426,14 @@
     ],
     "2026-05-11_batch14": [
       {
-        "company": "Strata Title Management",
-        "email": "info@stratatitle.com.au",
-        "website": "stratatitle.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Kane Constructions",
-        "email": "projects@kane.com.au",
-        "website": "kane.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Boutique Homes",
-        "email": "info@boutiquehomes.com.au",
-        "website": "boutiquehomes.com.au",
+        "company": "Henley Homes",
+        "email": "trades@henley.com.au",
+        "website": "henley.com.au",
         "type": "builder",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "PICA Group",
-        "email": "info@picagroup.com.au",
-        "website": "picagroup.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Buscan contractors para mantenimiento",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Raine & Horne",
-        "email": "commercial@rainehorne.com.au",
-        "website": "rainehorne.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "risky",
-        "verified_reason": "DNS check failed"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
       },
       {
         "company": "Downer Group",
@@ -1498,9 +1442,8 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
       },
       {
         "company": "Hickory Group",
@@ -1510,19 +1453,17 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
       },
       {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "website": "kayburton.com.au",
+        "type": "real_estate",
         "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
       },
       {
         "company": "Cushman & Wakefield",
@@ -1531,9 +1472,58 @@
         "type": "property_mgmt",
         "contact": "",
         "business_target": "primeproperty",
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "unknown"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran edificios y propiedades",
+        "verified": "unknown"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "website": "johnholland.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Fletchers Real Estate",
+        "email": "property@fletcher.com.au",
+        "website": "fletcher.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
       }
     ]
   }
