@@ -1,19 +1,28 @@
 {
-  "updated": "2026-05-11T19:00",
+  "updated": "2026-05-11T21:00",
   "sites": [
     {
-      "name": "Tradios App",
-      "url": "https://tradios.onrender.com",
+      "name": "ToolsHubPro (102 tools)",
+      "url": "https://toolshubpro.com.au",
       "status": "online",
       "uptime_24h": "99.5%",
-      "last_checked": "2026-05-11T19:00",
+      "last_checked": "2026-05-11T21:00",
+      "seo_metrics": {
+        "tools_count": 102,
+        "sitemap_urls": 106,
+        "gsc_impressions_17d": 1487,
+        "gsc_clicks": 1,
+        "gsc_ctr": "0.067%",
+        "best_position": 11.7,
+        "new_tool_today": "OCR Invoice Processor"
+      },
       "issues": [],
       "improvements": [
-        "Ejecutar supabase-migration.sql para columnas completas",
-        "Mejorar velocidad de carga (Render free plan)",
-        "Agregar SSL personalizado",
-        "Traducir más páginas a inglés",
-        "Agregar PWA install prompt"
+        "11 meta descriptions/titles mejorados",
+        "Image Compressor optimizado para pos 3.0",
+        "Image Resizer + PNG to JPG metas mejorados",
+        "Homepage count actualizado: '50+' → '100+' Tools",
+        "OCR Invoice Processor LIVE (invoice-ocr.html)"
       ]
     },
     {
@@ -21,86 +30,69 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "uptime_24h": "99.2%",
-      "last_checked": "2026-05-11T19:00",
+      "last_checked": "2026-05-11T21:00",
       "seo_metrics": {
         "pages_analyzed": 968,
         "pages_good": 968,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
+        "indexed": 858,
+        "gsc_impressions_24h": 183,
+        "gsc_ctr": "0%",
+        "avg_position": 30.15,
+        "mobile_position": 9.88
       },
       "issues": [],
       "improvements": [
-        "Mejorar top-10 keywords para subir posición promedio",
-        "Construir backlinks (directorios, partnerships locales)",
-        "Agregar más contenido por suburbio de Melbourne",
-        "Optimizar Google Business Profile con fotos"
+        "14 redirect rules en .htaccess para 404s de GSC",
+        "Meta description mejorada: pressure-washing-hampton (pos 13.46)",
+        "Homepage title mejorado",
+        "robots.txt verificado (backup dirs bloqueados OK)",
+        "10 reglas adicionales para URL patterns root-level"
       ],
       "seo_score": 100.0
     },
     {
-      "name": "Dashboard (GitHub Pages)",
-      "url": "https://edinsonmipc-oss.github.io/midashboard/",
-      "status": "online",
-      "uptime_24h": "100%",
-      "last_checked": "2026-05-11T19:00",
-      "issues": [],
-      "improvements": [
-        "Sección de leads ya agregada ✅",
-        "Health checks automáticos agregados ✅",
-        "6 negocios registrados con métricas actualizadas",
-        "Diseño oscuro responsive"
-      ]
-    },
-    {
-      "name": "ToolshubPro",
-      "url": "https://toolshubpro.com.au",
-      "status": "online",
-      "uptime_24h": "99.5%",
-      "last_checked": "2026-05-11T19:00",
-      "issues": [],
-      "improvements": [
-        "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement",
-        "Sitemap 82 URLs",
-        "Backlinks en GitHub + Gists",
-        "GA4 real configurado"
-      ],
-      "seo_metrics": {
-        "tools_count": 66,
-        "sitemap_urls": 82,
-        "new_tools_today": 5
-      }
-    },
-    {
-      "name": "Antonio Paving",
+      "name": "Antonio PrimeScape Construction",
       "url": "https://antoniopaving.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T19:00",
+      "last_checked": "2026-05-11T21:00",
       "seo_metrics": {
         "pages_analyzed": 371,
         "pages_good": 371,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
+        "indexed": 985,
+        "gsc_impressions_24h": 189,
+        "gsc_ctr": "0%",
+        "avg_position": 25.5
       },
       "issues": [],
       "improvements": [
-        "8 páginas de suburbios nuevas",
-        "Sitemap 379 URLs",
-        "Schema LocalBusiness por suburbio",
-        "404s corregidos, 33 redirects 301"
+        "10 redirect rules en .htaccess para services viejos (-melbourne → sin sufijo)",
+        ".htaccess reordenado — redirects ahora ANTES del extensionless handler",
+        "4 backup directories eliminados (blog.1634, blog.3856, blog.7880, blog.1634.7122)",
+        "1 blog post restaurado (landscaping-ideas-melbourne.html)",
+        "Canonical tags verificados OK"
       ],
       "seo_score": 100.0
+    },
+    {
+      "name": "Hermes Dashboard",
+      "url": "https://edinsonmipc-oss.github.io/midashboard/",
+      "status": "online",
+      "uptime_24h": "100%",
+      "last_checked": "2026-05-11T21:00",
+      "issues": [],
+      "improvements": [
+        "Data actualizada con nuevos proyectos",
+        "9 proyectos registrados con métricas frescas",
+        "Nuevos proyectos: AI Voice Agent, Tradie SitePilot Corp, Gumroad actualizado"
+      ]
     },
     {
       "name": "PrimeWash Gear",
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T19:00",
+      "last_checked": "2026-05-11T21:00",
       "issues": [],
       "improvements": [
         "Stripe LIVE activado",
@@ -109,16 +101,19 @@
       ]
     },
     {
-      "name": "TradePro AU (Trading Tools)",
-      "url": "https://toolshubpro.com.au/trading/",
+      "name": "Gumroad Store",
+      "url": "https://tradiebusinesstools.gumroad.com",
       "status": "online",
       "uptime_24h": "100%",
-      "last_checked": "2026-05-11T19:00",
-      "tools_count": 3,
-      "issues": [],
+      "last_checked": "2026-05-11T21:00",
+      "metrics": {
+        "productos": 17,
+        "nuevo": "Tradie AI Automation System ($47 AUD)",
+        "shop_page": "https://toolshubpro.com.au/shop.html"
+      },
       "improvements": [
-        "Más tools en progreso",
-        "15 herramientas planificadas"
+        "Nuevo producto creado via API: Tradie AI Automation System — $47 AUD",
+        "URL: tradiebusinesstools.gumroad.com/l/gblqxo (draft)"
       ]
     }
   ],
@@ -127,193 +122,24 @@
     "total_sent": 21
   },
   "seo_audit": {
-    "updated": "2026-05-11T08:00",
-    "summary": {}
-  },
-  "trading": {
-    "updated": "2026-05-10",
-    "prices_usd": {
-      "BTC": 80732,
-      "ETH": 2331.44,
-      "SOL": 95.22
-    },
-    "change_24h": {
-      "BTC": -0.06,
-      "ETH": 0.02,
-      "SOL": 1.93
-    },
-    "prices_aud": {
-      "BTC": 111800.01,
-      "ETH": 3228.65,
-      "SOL": 131.86
-    },
-    "signals": [
-      {
-        "pair": "BTC",
-        "price": 80732,
-        "action": "BUY",
-        "message": "BUY BTC at $80,732.00 — Fast SMA (7) crossed above Slow SMA (25) — bullish crossover; Price near support level $80,193.17 (0.7% above)",
-        "indicators": {
-          "sma_fast": 80900.86,
-          "sma_slow": 79340.06,
-          "rsi_14": 66.5,
-          "support": 80193.17,
-          "resistance": 81456.0,
-          "volatility_pct": 0.54,
-          "std_dev": 439.76,
-          "price_change_pct": -0.89
-        },
-        "details": [
-          {
-            "type": "BUY",
-            "indicator": "SMA_CROSSOVER",
-            "value": 1560.79,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
-          },
-          {
-            "type": "BUY",
-            "indicator": "SUPPORT",
-            "value": 0.67,
-            "message": "Price near support level $80,193.17 (0.7% above)"
-          },
-          {
-            "type": "INFO",
-            "indicator": "VOLATILITY",
-            "value": 0.54,
-            "message": "Low volatility: σ = $439.76 (0.5% of price)"
-          }
-        ]
-      },
-      {
-        "pair": "ETH",
-        "price": 2331.44,
-        "action": "BUY",
-        "message": "BUY ETH at $2,331.44 — Fast SMA (7) crossed above Slow SMA (25) — bullish crossover; Price near support level $2,307.06 (1.1% above)",
-        "indicators": {
-          "sma_fast": 2329.71,
-          "sma_slow": 2319.42,
-          "rsi_14": 52.0,
-          "support": 2307.06,
-          "resistance": 2362.74,
-          "volatility_pct": 0.83,
-          "std_dev": 19.25,
-          "price_change_pct": -1.32
-        },
-        "details": [
-          {
-            "type": "BUY",
-            "indicator": "SMA_CROSSOVER",
-            "value": 10.29,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
-          },
-          {
-            "type": "BUY",
-            "indicator": "SUPPORT",
-            "value": 1.06,
-            "message": "Price near support level $2,307.06 (1.1% above)"
-          },
-          {
-            "type": "INFO",
-            "indicator": "VOLATILITY",
-            "value": 0.83,
-            "message": "Low volatility: σ = $19.25 (0.8% of price)"
-          }
-        ]
-      },
-      {
-        "pair": "SOL",
-        "price": 95.22,
-        "action": "NEUTRAL",
-        "message": "HOLD SOL at $95.22 — Mixed signals (buy: 1, sell: 2)",
-        "indicators": {
-          "sma_fast": 94.15,
-          "sma_slow": 88.72,
-          "rsi_14": 87.3,
-          "support": 92.01,
-          "resistance": 96.38,
-          "volatility_pct": 3.68,
-          "std_dev": 3.37,
-          "price_change_pct": -1.2
-        },
-        "details": [
-          {
-            "type": "SELL",
-            "indicator": "RSI",
-            "value": 87.3,
-            "message": "RSI 87.3 — overbought territory (≥70)"
-          },
-          {
-            "type": "BUY",
-            "indicator": "SMA_CROSSOVER",
-            "value": 5.43,
-            "message": "Fast SMA (7) crossed above Slow SMA (25) — bullish crossover"
-          },
-          {
-            "type": "SELL",
-            "indicator": "RESISTANCE",
-            "value": 1.22,
-            "message": "Price near resistance level $96.38 (1.2% below)"
-          },
-          {
-            "type": "WARNING",
-            "indicator": "VOLATILITY",
-            "value": 3.68,
-            "message": "High volatility: σ = $3.37 (3.7% of price)"
-          }
-        ]
-      }
-    ],
-    "recommendations": [
-      {
-        "action": "BUY",
-        "pair": "BTC",
-        "entry": 80732.0,
-        "target": 84768.6,
-        "stop_loss": 78310.04,
-        "reason": "Cerca del soporte clave, baja volatilidad, entrada segura",
-        "potential_pct": 5.0
-      },
-      {
-        "action": "BUY",
-        "pair": "ETH",
-        "entry": 2319.25,
-        "target": 2448.01,
-        "stop_loss": 2261.5,
-        "reason": "Cerca del soporte clave, baja volatilidad, entrada segura",
-        "potential_pct": 5.6
-      }
-    ],
-    "aud_usd": 0.7221
+    "updated": "2026-05-11T21:00",
+    "summary": {
+      "gsc_analysis_done": "3 sitios analizados (17 ZIPs)",
+      "fixes_applied": "toolshubpro(11 metas) + primeproperty(14 redirects) + antoniopaving(10 redirects, 4 backups removed, 1 blog restored)",
+      "new_tool_built": "OCR Invoice Processor — toolshubpro.com.au/tools/invoice-ocr.html",
+      "new_products": "Tradie AI Automation System — $47 AUD",
+      "org_created": "Tradie SitePilot — 4 departments, 14 roles, 20 cron jobs"
+    }
   },
   "monitor_date": "2026-05-11",
   "daily_check": {
-    "timestamp": "2026-05-11T08:02",
+    "timestamp": "2026-05-11T21:00",
     "sites_checked": [
+      "toolshubpro.com.au",
       "antoniopaving.com",
       "primepropertymaintenance.au",
-      "toolshubpro.com.au"
+      "tradiebusinesstools.gumroad.com"
     ],
-    "all_online": true,
-    "404_check": {
-      "antoniopaving.com": {
-        "total": 371,
-        "ok": 371,
-        "issues": 0,
-        "status": "clean"
-      },
-      "primepropertymaintenance.au": {
-        "total": 968,
-        "ok": 968,
-        "issues": 0,
-        "status": "clean"
-      },
-      "toolshubpro.com.au": {
-        "total": 0,
-        "ok": 0,
-        "issues": 0,
-        "status": "warning",
-        "note": "No URLs found in sitemap"
-      }
-    }
+    "all_online": true
   }
 }

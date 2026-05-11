@@ -1,180 +1,77 @@
 {
+  "updated": "2026-05-11T21:00",
   "entries": [
     {
-      "date": "2026-05-08T15:32",
-      "type": "mejora",
-      "project": "Tradeos",
-      "text": "Redise\u00f1o completo premium SaaS: sidebar colapsable con grupos, CMD+K command palette, dashboard con widgets modulares, sistema de dise\u00f1o oscuro premium, animaciones, responsive mobile."
-    },
-    {
-      "date": "2026-05-08T14:40",
+      "date": "2026-05-11",
       "type": "creacion",
-      "project": "Gumroad",
-      "text": "50 productos premium planificados (AU:20, US:15, UK:8, EU:7). 8 fotos IA reales subidas a productos existentes."
+      "project": "tradie-sitepilot-org",
+      "description": "🏢 TRADIE SITEPILOT — Organización corporativa creada. CEO(DeepSeek) + 4 departamentos (R&D, Marketing, Sales, Ops) + AI Lab. 14 roles. 20 cron jobs. 4 skills de entrenamiento."
     },
     {
-      "date": "2026-05-08T14:25",
+      "date": "2026-05-11",
       "type": "mejora",
-      "project": "Gumroad",
-      "text": "Redise\u00f1o completo: 8 productos con descripciones HTML premium (cards, highlights, CTAs dark, tipograf\u00eda profesional). Fix al markdown mal renderizado."
-    },
-    {
-      "date": "2026-05-08T14:03",
-      "type": "mejora",
-      "project": "Gumroad",
-      "text": "Portadas profesionales subidas a los 8 productos (branding black/yellow industrial)"
-    },
-    {
-      "date": "2026-05-08T13:58",
-      "type": "mejora",
-      "project": "Gumroad",
-      "text": "Redise\u00f1o completo: 8 productos actualizados con copy profesional + portadas industrial branding (black/yellow). Sistema de template reusable creado."
-    },
-    {
-      "date": "2026-05-08T13:53",
-      "type": "creacion",
-      "project": "Gumroad",
-      "text": "8 productos digitales PUBLICADOS en Gumroad. Safety Pack $37, Quote Bundle $29, AI Guide $27, BAS Kit $22, AI tools $9.99-$14.99"
-    },
-    {
-      "date": "2026-05-08",
-      "time": "02:10",
-      "project": "tradeos",
-      "type": "mejora",
-      "text": "App simplificada: sidebar 19\u219211 items, duplicados redirigidos, AI Assistant integrado"
-    },
-    {
-      "date": "2026-05-08",
-      "time": "02:03",
-      "project": "tradeos",
-      "type": "mejora",
-      "text": "Bugfix: quotes.gst column error corregido (cambiado a tax)"
-    },
-    {
-      "date": "2026-05-08",
-      "time": "02:03",
-      "project": "tradeos",
-      "type": "creacion",
-      "text": "AI Assistant creado con fallback Gemini\u2192OpenRouter\u2192offline + chat flotante en app"
-    },
-    {
-      "date": "2026-05-07",
-      "time": "22:04",
-      "project": "claude-skills",
-      "type": "creacion",
-      "text": "5 Claude Skills creados para tradies AU: SEO Auditor, Quote Generator, Lead Automator, Content, GBP"
-    },
-    {
-      "date": "2026-05-07",
-      "time": "21:15",
-      "project": "dashboard",
-      "type": "mejora",
-      "text": "Dashboard actualizado: datos frescos + 6 negocios + PrimeWash Gear agregado"
-    },
-    {
-      "date": "2026-05-07",
-      "time": "20:00",
       "project": "toolshubpro",
+      "description": "🔧 11 meta descriptions/titles mejorados + Homepage count '50+' → '100+' Tools + Image Compressor optimizado pos 3.0 + Image Resizer + PNG to JPG metas mejorados"
+    },
+    {
+      "date": "2026-05-11",
       "type": "creacion",
-      "text": "5 nuevas herramientas: Car Loan, Home Loan, CGT, Budget, Retirement calculators"
+      "project": "toolshubpro",
+      "description": "🆕 OCR Invoice Processor creado — toolshubpro.com.au/tools/invoice-ocr.html. Tesseract.js client-side. Parsea Invoice #, Date, Vendor, Total, GST, ABN."
     },
     {
-      "date": "2026-05-07",
-      "time": "19:00",
-      "project": "antoniopaving",
-      "type": "creacion",
-      "text": "8 p\u00e1ginas de suburbios creadas + sitemap 379 URLs + SEO score 100%"
-    },
-    {
-      "date": "2026-05-07",
-      "time": "18:00",
-      "project": "antoniopaving",
-      "type": "mejora",
-      "text": "29 p\u00e1ginas 404 corregidas + 33 redirects 301 + robots.txt optimizado"
-    },
-    {
-      "date": "2026-05-07",
-      "time": "17:00",
+      "date": "2026-05-11",
+      "type": "fix",
       "project": "primeproperty",
-      "type": "mejora",
-      "text": "11 p\u00e1ginas 404 corregidas (suburbios con tr\u00e1fico GSC perdido recuperado)"
+      "description": "🔧 14 redirect rules para 404s de GSC + Meta description pressure-washing-hampton mejorada + Homepage title mejorado + robots.txt verificado"
     },
     {
-      "date": "2026-05-07",
-      "time": "16:00",
-      "project": "todos",
-      "type": "mejora",
-      "text": "Cross-links entre los 3 sitios (+ backlinks GitHub/Gists)"
+      "date": "2026-05-11",
+      "type": "fix",
+      "project": "antoniopaving",
+      "description": "🔧 10 redirect rules .htaccess + .htaccess reordenado + 4 backups eliminados + 1 blog restaurado + FTP pass actualizada + Canonicals verificados"
     },
     {
-      "date": "2026-05-07",
-      "time": "15:00",
-      "project": "leads",
-      "type": "creacion",
-      "text": "130 leads recolectados, 51 \u00fanicos verificados, templates de outreach listos"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "12:30",
-      "project": "toolshubpro",
-      "type": "mejora",
-      "text": "Agregadas 3 herramientas nuevas: Currency Converter, QR Code Generator, Date Duration Calculator"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "12:30",
-      "project": "toolshubpro",
-      "type": "infra",
-      "text": "Sitemap.xml generado con 74 URLs + robots.txt \u2014 SEO listo"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "12:30",
-      "project": "toolshubpro",
-      "type": "infra",
-      "text": "ZIP final creado (0.5MB, 87 archivos) \u2014 listo para subir a Hostinger"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "12:00",
-      "project": "toolshubpro",
-      "type": "mejora",
-      "text": "YouTube to MP4 y MP3 arreglados: reemplazado yt-download.org por servidor propio con yt-dlp"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "12:00",
-      "project": "toolshubpro",
+      "date": "2026-05-11",
       "type": "analisis",
-      "text": "Verificadas 57 herramientas: solo 2 rotas (YouTube MP4/MP3), las otras 54 funcionan"
+      "project": "todos",
+      "description": "📊 GSC Analysis completo: 17 ZIPs procesados para los 3 sitios. Reportes guardados en /home/edinsonmipc/gsc_analysis/. Quick wins identificados por sitio."
     },
     {
-      "date": "2026-05-02",
-      "time": "11:38",
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "ai-voice-agent",
+      "description": "🤖 AI Voice Agent — Landing page premium + Go-to-Market plan (50 tradies target). Basado en video Dan Martell (S Tier). Pricing $97/$197/$397."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "gumroad-store",
+      "description": "🧠 Tradie AI Automation System — producto Gumroad creado a $47 AUD. URL: tradiebusinesstools.gumroad.com/l/gblqxo (draft). Incluye 10 Claude prompts + lead scraper."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "tradie-sitepilot-org",
+      "description": "📋 Reddit Playbook creado — 5 templates de respuesta para r/smallbusiness. Oportunidades: OCR invoice, websites under $150, cleaning business, GST compliance, invoicing."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "tradie-sitepilot-org",
+      "description": "⏰ Cron jobs configurados: R&D Sprint (Lun/Mie/Vie 4am), Sales Lead Gen (Mar 7am), AI Lab (Jue 8am), Weekly Traffic Builder (Lun 6am), Weekly Report (Lun 9am)"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "tradie-sitepilot-org",
+      "description": "🥇 Skills de entrenamiento creados: tradie-sitepilot-rd, tradie-sitepilot-marketing, tradie-sitepilot-sales, tradie-sitepilot-ops"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
       "project": "dashboard",
-      "type": "mejora",
-      "text": "Redise\u00f1o completo del dashboard: estructura de proyecto vivo con datos JSON + generador autom\u00e1tico"
-    },
-    {
-      "date": "2026-05-02",
-      "time": "11:30",
-      "project": "dashboard",
-      "type": "infra",
-      "text": "Dashboard desplegado en GitHub Pages"
-    },
-    {
-      "date": "2026-05-01",
-      "time": "18:00",
-      "project": "primeproperty",
-      "type": "mejora",
-      "text": "SEO: FAQPage schema agregado a p\u00e1ginas top-10/15"
-    },
-    {
-      "date": "2026-05-01",
-      "time": "17:30",
-      "project": "primeproperty",
-      "type": "mejora",
-      "text": "Blog creado: 3 art\u00edculos (landscaping, gutter replacement, building maintenance)"
+      "description": "📊 Dashboard actualizado con 9 proyectos, métricas GSC fresh, health data, changelog. Todo organizado para el Presidente."
     }
   ]
 }
