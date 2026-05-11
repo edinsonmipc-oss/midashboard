@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src="data.js"></script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#050508;--bg2:#08080f;--bg3:#0c0c18;--surface:#10101e;--surface-hov:#16162a;--surface-border:rgba(30,30,60,.5);--elevated:#1a1a2e;--elevated-border:rgba(40,40,80,.4);--fg:#e8e8f0;--fg2:#8888a8;--fg3:#555570;--fg4:#3a3a50;--accent:#6366f1;--accent-hov:#818cf8;--accent-glow:rgba(99,102,241,.12);--green:#22c55e;--green-bg:rgba(34,197,94,.08);--green-border:rgba(34,197,94,.15);--yellow:#f5a50b;--yellow-bg:rgba(245,165,11,.08);--red:#ef4444;--red-bg:rgba(239,68,68,.08);--orange:#f97316;--orange-bg:rgba(249,115,22,.08);--purple:#a855f7;--purple-bg:rgba(168,85,247,.08);--shadow:0 4px 24px rgba(0,0,0,.5);--shadow-lg:0 8px 48px rgba(0,0,0,.6);--ts:.2s cubic-bezier(.34,1.56,.64,1);--ts-out:.25s cubic-bezier(.4,0,.2,1);--rad-sm:6px;--rad:10px;--rad-lg:14px;--rad-xl:20px;--sidebar-w:220px;--top-h:56px;--fs-xs:10px;--fs-sm:12px;--fs-base:13px;--fs-lg:15px}
@@ -125,6 +125,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </main>
 
+<script src="data.js"></script>
 <script>
 function scrollTo(el) { document.getElementById(el)?.scrollIntoView({behavior:'smooth'}); return false; }
 function fmtNum(n){if(n===undefined||n===null)return'—';if(Math.abs(n)>=1e6)return(n/1e6).toFixed(1)+'M';if(Math.abs(n)>=1e3)return(n/1e3).toFixed(1)+'k';return n.toLocaleString()}
