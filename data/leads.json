@@ -1,129 +1,11 @@
 {
-  "updated": "2026-05-11T19:00",
+  "updated": "2026-05-12T07:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
   "leads_by_date": {
-    "2026-05-04_batch4": [
-      {
-        "company": "Multiplex",
-        "email": "subcontractors@multiplex.com",
-        "website": "multiplex.global",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
-      },
-      {
-        "company": "PICA Group",
-        "email": "info@picagroup.com.au",
-        "website": "picagroup.com.au",
-        "type": "strata",
-        "contact": "",
-        "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-12T00:34",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Cbus Property",
-        "email": "info@cbusproperty.com.au",
-        "website": "cbusproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
-      },
-      {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-09T10:18",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Watpac",
-        "email": "projects@watpac.com.au",
-        "website": "watpac.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-08T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Century 21",
-        "email": "commercial@century21.com.au",
-        "website": "century21.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "MX OK (5 servers)",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Savills Australia",
-        "email": "property@savills.com.au",
-        "website": "savills.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-08T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "MX OK (2 servers)",
-        "contacted": "2026-05-10T08:00",
-        "contact_status": "dry-run"
-      }
-    ],
     "2026-05-04_batch5": [
       {
         "company": "Colliers International",
@@ -1541,6 +1423,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-12_batch14": [
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "CBRE Australia",
+        "email": "facilities@cbre.com.au",
+        "website": "cbre.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Contratan servicios de mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Raine & Horne",
+        "email": "commercial@rainehorne.com.au",
+        "website": "rainehorne.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "website": "johnholland.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "PRDnationwide",
+        "email": "commercial@prd.com.au",
+        "website": "prd.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
         "verified": "unknown"
       }
     ]
