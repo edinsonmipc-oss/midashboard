@@ -4,5 +4,13 @@
   "status_code": 200,
   "healthy": true,
   "checked_at": "2026-05-12T06:00:00Z",
-  "updated": "2026-05-12T07:00"
+  "updated": "2026-05-12T08:00",
+  "seo_audit": {
+    "updated": "2026-05-12T08:00",
+    "summary": {}
+  },
+  "email_stats": {
+    "last_send": "2026-05-12T08:00",
+    "total_sent": 30
+  }
 }

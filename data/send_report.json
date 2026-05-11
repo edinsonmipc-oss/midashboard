@@ -388,6 +388,62 @@
           "time": "2026-05-12T00:42"
         }
       ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "estimating@probuild.com.au",
+          "company": "Probuild",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@mcgrath.com.au",
+          "company": "McGrath Estate Agents",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@avjennings.com.au",
+          "company": "AVJennings",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@brookfieldmultiplex.com",
+          "company": "Brookfield Multiplex",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@hansenyuncken.com.au",
+          "company": "Hansen Yuncken",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@jll.com.au",
+          "company": "JLL Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {

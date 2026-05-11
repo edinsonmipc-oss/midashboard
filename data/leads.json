@@ -117,7 +117,9 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-05_batch6": [
@@ -171,7 +173,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (5 servers)"
+        "verified_reason": "MX OK (5 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Stockland",
@@ -191,7 +195,9 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Kay & Burton",
@@ -407,7 +413,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Charter Hall",
@@ -439,7 +447,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-06_batch9": [
@@ -481,7 +491,9 @@
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "LJ Hooker",
@@ -527,7 +539,9 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "John Holland",
@@ -1110,7 +1124,9 @@
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-12T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "PICA Group",
@@ -1333,7 +1349,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -1343,7 +1360,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -1353,7 +1371,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kay & Burton",
@@ -1363,7 +1382,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -1373,7 +1393,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -1383,7 +1404,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Colliers International",
@@ -1393,7 +1415,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -1403,7 +1426,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -1413,7 +1437,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Collins Simms",
@@ -1423,7 +1448,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-12_batch14": [
@@ -1435,7 +1461,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "CBRE Australia",
@@ -1445,7 +1472,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -1455,7 +1483,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Jellis Craig",
@@ -1465,7 +1494,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Raine & Horne",
@@ -1475,7 +1505,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "John Holland",
@@ -1485,7 +1516,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "LJ Hooker",
@@ -1495,7 +1527,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PRDnationwide",
@@ -1505,7 +1538,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -1515,7 +1549,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kane Constructions",
@@ -1525,7 +1560,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }
