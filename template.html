@@ -6,6 +6,9 @@
 <title>PrimeHermes Dashboard — Command Center</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- DATA_INJECTION_POINT -->
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#050508;--bg2:#08080f;--bg3:#0c0c18;--surface:#10101e;--surface-hov:#16162a;--surface-border:rgba(30,30,60,.5);--elevated:#1a1a2e;--elevated-border:rgba(40,40,80,.4);--fg:#e8e8f0;--fg2:#8888a8;--fg3:#555570;--fg4:#3a3a50;--accent:#6366f1;--accent-hov:#818cf8;--accent-glow:rgba(99,102,241,.12);--green:#22c55e;--green-bg:rgba(34,197,94,.08);--green-border:rgba(34,197,94,.15);--yellow:#f5a50b;--yellow-bg:rgba(245,165,11,.08);--red:#ef4444;--red-bg:rgba(239,68,68,.08);--orange:#f97316;--orange-bg:rgba(249,115,22,.08);--purple:#a855f7;--purple-bg:rgba(168,85,247,.08);--shadow:0 4px 24px rgba(0,0,0,.5);--shadow-lg:0 8px 48px rgba(0,0,0,.6);--ts:.2s cubic-bezier(.34,1.56,.64,1);--ts-out:.25s cubic-bezier(.4,0,.2,1);--rad-sm:6px;--rad:10px;--rad-lg:14px;--rad-xl:20px;--sidebar-w:220px;--top-h:56px;--fs-xs:10px;--fs-sm:12px;--fs-base:13px;--fs-lg:15px}
@@ -72,10 +75,7 @@ a{color:inherit;text-decoration:none}
 .log-item{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--surface-border);font-size:11px}
 .log-item:last-child{border-bottom:none}.log-date{color:var(--fg4);flex-shrink:0;width:90px}.log-msg{color:var(--fg2)}
 </style>
-<!-- DATA_INJECTION_POINT -->
-</head>
-<body>
-<!-- SIDEBAR -->
+
 <aside class="sb">
   <div class="sb-brand">
     <div class="sb-brand-icon">P</div>
@@ -96,9 +96,7 @@ a{color:inherit;text-decoration:none}
   <div class="sb-footer">Tradie SitePilot &copy; 2026</div>
 </aside>
 
-<!-- MAIN CONTENT -->
 <main class="main">
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="topbar-left">
       <h1>Tradie SitePilot Dashboard</h1>
@@ -108,33 +106,19 @@ a{color:inherit;text-decoration:none}
       <span class="topbar-update"><span class="status-dot green"></span> All Systems Online</span>
     </div>
   </div>
-
-  <!-- SUMMARY STATS -->
   <div class="stats" id="statsRow"></div>
-
-  <!-- SITES -->
   <div class="section-title" id="sites">🌐 Monitored Sites</div>
   <div class="grid3" id="sitesGrid"></div>
-
-  <!-- TRADING -->
   <div class="section-title" id="trading">📈 Trading Signals</div>
   <div class="trade-grid" id="tradeGrid"></div>
-
-  <!-- PROJECTS -->
   <div class="section-title" id="projects">🏗️ Business Projects</div>
   <div class="biz-grid" id="bizGrid"></div>
-
-  <!-- AGENTS -->
   <div class="section-title" id="agents">🤖 AI Agents</div>
   <div class="agent-grid" id="agentsGrid"></div>
-
-  <!-- LEADS -->
   <div class="section-title" id="leads">🎯 Recent Leads</div>
   <div class="card">
     <table class="leads-table"><tbody id="leadsList"></tbody></table>
   </div>
-
-  <!-- ACTIVITY LOG -->
   <div class="section-title" id="log">📋 Activity Log</div>
   <div class="card">
     <div class="log-list" id="logList"></div>
@@ -142,25 +126,20 @@ a{color:inherit;text-decoration:none}
 </main>
 
 <script>
+function scrollTo(el) { document.getElementById(el)?.scrollIntoView({behavior:'smooth'}); return false; }
 function fmtNum(n){if(n===undefined||n===null)return'—';if(Math.abs(n)>=1e6)return(n/1e6).toFixed(1)+'M';if(Math.abs(n)>=1e3)return(n/1e3).toFixed(1)+'k';return n.toLocaleString()}
 function fmtDate(d){if(!d)return'';var p=d.split('T')[0].split('-');return p[2]+'/'+p[1]+'/'+p[0].slice(2)}
 function changeStr(v){if(v===undefined||v===null)return'—';var s=(v>0?'+':'')+v.toFixed(2)+'%';return s}
 
 function init(){
-  // ══ UPDATE FIELD ══
   var uf=document.getElementById('updatedField');
   if(typeof UPDATED!=='undefined'&&UPDATED)uf.textContent='Updated '+UPDATED;
-
-  // ══ STATS ══
-  var statsRow=document.getElementById('statsRow');
-  var totalLeads=LEADS?LEADS.length:0;
-  var contacted=LEADS?LEADS.filter(function(l){return l.contacted}).length:0;
-  var sitesTotal=SITES_DATA?SITES_DATA.length:0;
-  var onlineCount=SITES_DATA?SITES_DATA.filter(function(s){return s.status==='online'}).length:0;
-  var totalLogs=LOG_DATA?LOG_DATA.length:0;
-  var tradingCount=0;
-  try{tradingCount=TRADING_DATA.signals?TRADING_DATA.signals.length:0}catch(e){}
-
+  var totalLeads=typeof LEADS!=='undefined'?LEADS.length:0;
+  var contacted=typeof LEADS!=='undefined'?LEADS.filter(function(l){return l.contacted}).length:0;
+  var sitesTotal=typeof SITES_DATA!=='undefined'?SITES_DATA.length:0;
+  var onlineCount=typeof SITES_DATA!=='undefined'?SITES_DATA.filter(function(s){return s.status==='online'}).length:0;
+  var totalLogs=typeof LOG_DATA!=='undefined'?LOG_DATA.length:0;
+  var tradingCount=0; try{tradingCount=window.TRADING_DATA&&TRADING_DATA.signals?TRADING_DATA.signals.length:0}catch(e){}
   var statsList=[
     {icon:'🎯',val:totalLeads,label:'Total Leads',change:'',sub:contacted+' contacted'},
     {icon:'🌐',val:sitesTotal,label:'Monitored Sites',change:'',sub:onlineCount+' online'},
@@ -169,119 +148,28 @@ function init(){
     {icon:'📋',val:totalLogs,label:'Activity Entries',change:'',sub:'Recent'},
     {icon:'✅',val:onlineCount+'/'+sitesTotal,label:'Sites Online',change:'',sub:'Uptime monitor'},
   ];
+  var statsRow=document.getElementById('statsRow');
   statsList.forEach(function(s){
-    statsRow.innerHTML+='<div class="stat">'+
-      '<div class="stat-icon">'+s.icon+'</div>'+
-      '<div class="stat-val">'+s.val+'</div>'+
-      '<div class="stat-label">'+s.label+'</div>'+
-      '<div class="stat-change '+(s.change>0?'up':'')+'">'+(s.change||s.sub)+'</div>'+
-    '</div>';
+    statsRow.innerHTML+='<div class="stat">'+'<div class="stat-icon">'+s.icon+'</div>'+'<div class="stat-val">'+s.val+'</div>'+'<div class="stat-label">'+s.label+'</div>'+'<div class="stat-change '+(s.change>0?'up':'')+'">'+(s.change||s.sub)+'</div>'+'</div>';
   });
-
-  // ══ SITES ══
   var sitesGrid=document.getElementById('sitesGrid');
-  (SITES_DATA||[]).forEach(function(s){
-    var seoScore='';
-    if(s.score!==undefined&&s.score!==null){
-      var cls=s.score>=80?'score-good':s.score>=50?'score-medium':'score-bad';
-      seoScore='<span class="score-badge '+cls+'">'+s.score+'/100</span>';
-    }
-    sitesGrid.innerHTML+='<div class="card site-card">'+
-      '<div class="top">'+
-        '<span class="site-dot '+(s.status==='online'?'online':'offline')+'"></span>'+
-        '<div class="site-name">'+s.name+'</div>'+seoScore+
-      '</div>'+
-      '<div class="site-url">'+(s.url?s.url:'—')+'</div>'+
-      '<div class="site-stats">'+
-        '<span>⏱️ <strong>'+s.uptime+'</strong></span>'+
-        (s.seo&&s.seo.pages_analyzed?'<span>📄 <strong>'+s.seo.pages_analyzed+'</strong> pages</span>':'')+
-      '</div>'+
-    '</div>';
-  });
-
-  // ══ TRADING ══
+  if(typeof SITES_DATA!=='undefined'){SITES_DATA.forEach(function(s){
+    var seoScore='';if(s.score!==undefined&&s.score!==null){var cls=s.score>=80?'score-good':s.score>=50?'score-medium':'score-bad';seoScore='<span class="score-badge '+cls+'">'+s.score+'/100</span>';}
+    sitesGrid.innerHTML+='<div class="card site-card">'+'<div class="top">'+'<span class="site-dot '+(s.status==='online'?'online':'offline')+'"></span>'+'<div class="site-name">'+s.name+'</div>'+seoScore+'</div>'+'<div class="site-url">'+(s.url?s.url:'—')+'</div>'+'<div class="site-stats">'+'<span>⏱<strong>'+s.uptime+'</strong></span>'+(s.seo&&s.seo.pages_analyzed?'<span>📄<strong>'+s.seo.pages_analyzed+'</strong>pages</span>':'')+'</div>'+'</div>';
+  });}
   var tradeGrid=document.getElementById('tradeGrid');
-  try {
-    if(window.TRADING_DATA&&TRADING_DATA.signals){
-      TRADING_DATA.signals.forEach(function(sig){
-        var sigCls=sig.action==='BUY'?'buy':sig.action==='SELL'?'sell':'hold';
-        var sigLabel=sig.action==='BUY'?'🟢 BUY':sig.action==='SELL'?'🔴 SELL':'🟡 HOLD';
-        tradeGrid.innerHTML+='<div class="trade-asset">'+
-          '<div class="trade-symbol">'+sig.pair+'/USD</div>'+
-          '<div class="trade-price">$'+fmtNum(sig.price)+'</div>'+
-          '<div class="trade-change '+(sig.indicators&&sig.indicators.price_change_pct>0?'pos':'neg')+'">'+
-            changeStr(sig.indicators&&sig.indicators.price_change_pct)+
-          '</div>'+
-          '<div class="trade-signal '+sigCls+'">'+sigLabel+'</div>'+
-        '</div>';
-      });
-    } else {
-      tradeGrid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:32px;color:var(--fg3);font-size:13px">📊 No trading data available yet</div>';
-    }
-  } catch(e){
-    tradeGrid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:32px;color:var(--fg3);font-size:13px">📊 Trading data loading...</div>';
-  }
-
-  // ══ PROJECTS ══
+  try{if(window.TRADING_DATA&&TRADING_DATA.signals){TRADING_DATA.signals.forEach(function(sig){var sigCls=sig.action==='BUY'?'buy':sig.action==='SELL'?'sell':'hold';var sigLabel=sig.action==='BUY'?'🟢BUY':sig.action==='SELL'?'🔴SELL':'🟡HOLD';tradeGrid.innerHTML+='<div class="trade-asset">'+'<div class="trade-symbol">'+sig.pair+'/USD</div>'+'<div class="trade-price">$'+fmtNum(sig.price)+'</div>'+'<div class="trade-change '+(sig.indicators&&sig.indicators.price_change_pct>0?'pos':'neg')+'">'+changeStr(sig.indicators&&sig.indicators.price_change_pct)+'</div>'+'<div class="trade-signal '+sigCls+'">'+sigLabel+'</div>'+'</div>';});}else{tradeGrid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:32px;color:var(--fg3);font-size:13px">📊No trading data available yet</div>';}}catch(e){tradeGrid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:32px;color:var(--fg3);font-size:13px">📊Trading data loading...</div>';}
   var bizGrid=document.getElementById('bizGrid');
-  (BIZ_DATA||[]).forEach(function(b){
-    var mHtml='';
-    if(b.metrics){
-      Object.keys(b.metrics).forEach(function(k){
-        mHtml+='<div class="biz-metric"><strong>'+k.replace(/_/g,' ').toUpperCase()+':</strong> '+b.metrics[k]+'</div>';
-      });
-    }
-    bizGrid.innerHTML+='<div class="biz-card">'+
-      '<div class="biz-header">'+
-        '<span class="biz-emoji">'+(b.emoji||'📌')+'</span>'+
-        '<span class="biz-name">'+b.name+'</span>'+
-        '<span class="biz-status">'+b.status+'</span>'+
-      '</div>'+
-      '<div class="biz-desc">'+(b.description||'')+'</div>'+
-      '<div class="biz-metrics">'+mHtml+'</div>'+
-      (b.url?'<div class="biz-links"><a class="biz-link" href="'+b.url+'" target="_blank">🔗 Open</a></div>':'')+
-      (b.next_steps&&b.next_steps.length?'<div class="biz-next"><strong>→ Next:</strong> '+b.next_steps.slice(0,3).join(' · ')+'</div>':'')+
-      (b.notes?'<div class="biz-notes">'+b.notes+'</div>':'')+
-    '</div>';
-  });
-
-  // ══ AGENTS ══
+  if(typeof BIZ_DATA!=='undefined'){BIZ_DATA.forEach(function(b){var mHtml='';if(b.metrics){Object.keys(b.metrics).forEach(function(k){mHtml+='<div class="biz-metric"><strong>'+k.replace(/_/g,' ').toUpperCase()+':</strong> '+b.metrics[k]+'</div>';});}
+    bizGrid.innerHTML+='<div class="biz-card">'+'<div class="biz-header">'+'<span class="biz-emoji">'+(b.emoji||'📌')+'</span>'+'<span class="biz-name">'+b.name+'</span>'+'<span class="biz-status">'+b.status+'</span>'+'</div>'+'<div class="biz-desc">'+(b.description||'')+'</div>'+'<div class="biz-metrics">'+mHtml+'</div>'+(b.url?'<div class="biz-links"><a class="biz-link" href="'+b.url+'" target="_blank">🔗Open</a></div>':'')+(b.next_steps&&b.next_steps.length?'<div class="biz-next"><strong>→Next:</strong>'+b.next_steps.slice(0,3).join('·')+'</div>':'')+(b.notes?'<div class="biz-notes">'+b.notes+'</div>':'')+'</div>';
+  });}
   var agentsGrid=document.getElementById('agentsGrid');
-  (AGENTS_DATA||[]).forEach(function(a){
-    agentsGrid.innerHTML+='<div class="card agent-card">'+
-      '<div class="agent-icon">'+a.icon+'</div>'+
-      '<div class="agent-info">'+
-        '<div class="agent-name">'+a.name+'</div>'+
-        '<div class="agent-meta">'+a.jobs+' jobs · Last: '+a.last+'</div>'+
-      '</div>'+
-      '<div class="agent-status active">Active</div>'+
-    '</div>';
-  });
-
-  // ══ LEADS ══
+  if(typeof AGENTS_DATA!=='undefined'){AGENTS_DATA.forEach(function(a){agentsGrid.innerHTML+='<div class="card agent-card">'+'<div class="agent-icon">'+a.icon+'</div>'+'<div class="agent-info">'+'<div class="agent-name">'+a.name+'</div>'+'<div class="agent-meta">'+a.jobs+' jobs·Last: '+a.last+'</div>'+'</div>'+'<div class="agent-status active">Active</div>'+'</div>';});}
   var leadsList=document.getElementById('leadsList');
-  if(LEADS&&LEADS.length>0){
-    (LEADS||[]).slice(0,15).forEach(function(l){
-      leadsList.innerHTML+='<tr>'+
-        '<td><span class="lead-status '+(l.contacted?'contacted':'new')+'">'+(l.contacted?'✅':'🆕')+'</span></td>'+
-        '<td class="lead-email">'+l.email+'</td>'+
-        '<td class="lead-date">'+fmtDate(l.date)+'</td>'+
-      '</tr>';
-    });
-  } else {
-    leadsList.innerHTML='<tr><td colspan="3" style="padding:20px;text-align:center;color:var(--fg3);font-size:12px">No leads yet</td></tr>';
-  }
-
-  // ══ LOG ══
+  if(typeof LEADS!=='undefined'&&LEADS.length>0){LEADS.slice(0,15).forEach(function(l){leadsList.innerHTML+='<tr>'+'<td><span class="lead-status '+(l.contacted?'contacted':'new')+'">'+(l.contacted?'✅':'🆕')+'</span></td>'+'<td class="lead-email">'+l.email+'</td>'+'<td class="lead-date">'+fmtDate(l.date)+'</td>'+'</tr>';});}else{leadsList.innerHTML='<tr><td colspan="3" style="padding:20px;text-align:center;color:var(--fg3);font-size:12px">No leads yet</td></tr>';}
   var logList=document.getElementById('logList');
-  (LOG_DATA||[]).slice(0,20).forEach(function(l){
-    logList.innerHTML+='<div class="log-item">'+
-      '<span class="log-date">'+fmtDate(l.date)+'</span>'+
-      '<span class="log-msg">'+(l.message||l.text||l.description||'')+'</span>'+
-    '</div>';
-  });
+  if(typeof LOG_DATA!=='undefined'){LOG_DATA.slice(0,20).forEach(function(l){logList.innerHTML+='<div class="log-item">'+'<span class="log-date">'+fmtDate(l.date)+'</span>'+'<span class="log-msg">'+(l.message||l.text||l.description||'')+'</span>'+'</div>';});}
 }
-
 document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
