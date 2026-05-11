@@ -87,10 +87,16 @@ def generate():
     # Use a unique marker instead of fragile string matching
     marker = '<!-- DATA_INJECTION_POINT -->'
     if marker in html:
-        html = html.replace(marker, JS_DATA_BLOCK)
+        # Write data to external file instead
+        data_path = os.path.join(DIR, "data.js")
+        with open(data_path, "w") as df:
+            df.write(JS_DATA_BLOCK)
+        html = html.replace(marker, '<script src="data.js"></script>')
     else:
-        # Fallback: inject before </head>
-        html = html.replace("</head>", JS_DATA_BLOCK + "\n</head>")
+        # Fallback: write to data.js
+        data_path = os.path.join(DIR, "data.js")
+        with open(data_path, "w") as df:
+            df.write(JS_DATA_BLOCK)
 
     path = os.path.join(DIR, "index.html")
     with open(path, "w") as f:
