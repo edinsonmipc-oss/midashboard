@@ -37,7 +37,9 @@
         "contact": "",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Cbus Property",
@@ -221,7 +223,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T00:42",
+        "contact_status": "sent"
       },
       {
         "company": "AVJennings",
@@ -359,7 +363,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Mirvac",
@@ -391,7 +397,9 @@
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Ray White",
@@ -625,7 +633,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T00:38",
+        "contact_status": "sent"
       },
       {
         "company": "Metricon",
@@ -645,7 +655,9 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Knight Frank Australia",
@@ -677,7 +689,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Hickory Group",
@@ -885,7 +899,9 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T00:35",
+        "contact_status": "sent"
       },
       {
         "company": "Lendlease",
@@ -1008,7 +1024,9 @@
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T00:34",
+        "contact_status": "dry-run"
       },
       {
         "company": "Colliers International",

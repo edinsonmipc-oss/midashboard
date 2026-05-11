@@ -303,6 +303,91 @@
           "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
         }
       ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T00:34",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "commercial@prd.com.au",
+          "company": "PRDnationwide",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@henley.com.au",
+          "company": "Henley Homes",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "suppliers@johnholland.com.au",
+          "company": "John Holland",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T00:42",
+      "sent": 3,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:35"
+        },
+        {
+          "email": "leasing@dexus.com",
+          "company": "Dexus",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:38"
+        },
+        {
+          "email": "leasing@charterhall.com.au",
+          "company": "Charter Hall",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:42"
+        }
+      ]
     }
   ],
   "2026-05-09": {
