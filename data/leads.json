@@ -15,7 +15,9 @@
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:36",
+        "contact_status": "sent"
       },
       {
         "company": "Cbus Property",
@@ -25,7 +27,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:23",
+        "contact_status": "sent"
       },
       {
         "company": "Kane Constructions",
@@ -95,7 +99,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T08:27",
+        "contact_status": "sent"
       },
       {
         "company": "Charter Hall",
@@ -141,7 +147,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T08:31",
+        "contact_status": "sent"
       },
       {
         "company": "Downer Group",
@@ -217,7 +225,9 @@
         "contact": "",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:23",
+        "contact_status": "sent"
       },
       {
         "company": "Simonds Homes",
@@ -241,7 +251,9 @@
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:11",
+        "contact_status": "sent"
       },
       {
         "company": "Hockingstuart",
@@ -363,7 +375,9 @@
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:15",
+        "contact_status": "sent"
       },
       {
         "company": "Lendlease",
@@ -373,7 +387,9 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T08:19",
+        "contact_status": "sent"
       },
       {
         "company": "Downer Group",

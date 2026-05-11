@@ -509,5 +509,69 @@
         "status": "sent"
       }
     ]
+  },
+  "2026-05-12": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-12T08:36",
+    "details": [
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Mirvac",
+        "email": "partnerships@mirvac.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
   }
 }
