@@ -89,14 +89,18 @@ def generate():
     if marker in html:
         # Write data to external file instead
         data_path = os.path.join(DIR, "data.js")
+        # Strip script tags for external .js file
+        raw_js = JS_DATA_BLOCK.replace('<script>', '').replace('</script>', '').strip()
         with open(data_path, "w") as df:
-            df.write(JS_DATA_BLOCK)
+            df.write(raw_js)
         html = html.replace(marker, '<script src="data.js"></script>')
     else:
         # Fallback: write to data.js
         data_path = os.path.join(DIR, "data.js")
+        # Strip script tags for external .js file
+        raw_js = JS_DATA_BLOCK.replace('<script>', '').replace('</script>', '').strip()
         with open(data_path, "w") as df:
-            df.write(JS_DATA_BLOCK)
+            df.write(raw_js)
 
     path = os.path.join(DIR, "index.html")
     with open(path, "w") as f:
