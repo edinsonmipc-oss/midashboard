@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-13T08:00",
-  "checked_at": "2026-05-12T08:01:00Z",
+  "updated": "2026-05-12 22:00",
+  "checked_at": "2026-05-12T22:00:31Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,67 +9,78 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.452,
+      "response_time_s": 1.101,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z",
-      "last_checked": "2026-05-13T08:00",
-      "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
-      },
-      "seo_score": 0.0
+      "checked_at": "2026-05-12T22:00:31Z",
+      "last_checked": "2026-05-12 22:00"
     },
     {
       "name": "primepropertymaintenance.au",
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.484,
+      "response_time_s": 0.899,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z",
-      "last_checked": "2026-05-13T08:00",
-      "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
-      },
-      "seo_score": 0.0
+      "checked_at": "2026-05-12T22:00:31Z",
+      "last_checked": "2026-05-12 22:00"
     },
     {
       "name": "toolshubpro.com.au",
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.498,
+      "response_time_s": 0.818,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z",
-      "last_checked": "2026-05-13T08:00"
+      "checked_at": "2026-05-12T22:00:31Z",
+      "last_checked": "2026-05-12 22:00"
     },
     {
       "name": "tradios.onrender.com",
       "url": "https://tradios.onrender.com",
       "status": "online",
       "status_code": 307,
-      "response_time_s": 0.242,
+      "response_time_s": 0.252,
       "healthy": true,
-      "checked_at": "2026-05-12T20:01:01Z",
-      "last_checked": "2026-05-13T08:00"
+      "checked_at": "2026-05-12T22:00:31Z",
+      "last_checked": "2026-05-12 22:00"
     }
   ],
   "trading": {},
   "seo_audit": {
-    "updated": "2026-05-13T08:00",
-    "summary": {}
+    "updated": "2026-05-12 08:01",
+    "summary": {
+      "total_pages_checked": 1339,
+      "broken_links": 0,
+      "issues_found": 0,
+      "status": "all_ok"
+    },
+    "sites": [
+      {
+        "name": "antoniopaving",
+        "total": 371,
+        "ok": 371,
+        "broken": 0,
+        "status": "ok"
+      },
+      {
+        "name": "primeproperty",
+        "total": 968,
+        "ok": 968,
+        "broken": 0,
+        "status": "ok"
+      },
+      {
+        "name": "toolshubpro",
+        "total": 0,
+        "ok": 0,
+        "broken": 0,
+        "note": "No URLs found in sitemap",
+        "status": "sitemap_empty"
+      }
+    ]
   },
   "email_stats": {
-    "last_send": "2026-05-13T08:00",
-    "total_sent": 38
+    "last_send": "2026-05-11 22:01",
+    "total_sent": 30
   }
 }
