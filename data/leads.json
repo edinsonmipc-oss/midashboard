@@ -137,7 +137,9 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T10:40",
+        "contact_status": "sent"
       },
       {
         "company": "Mirvac",
@@ -193,7 +195,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T10:25",
+        "contact_status": "sent"
       },
       {
         "company": "Hansen Yuncken",
@@ -215,7 +219,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T10:30",
+        "contact_status": "sent"
       },
       {
         "company": "AVJennings",
@@ -287,7 +293,9 @@
         "contact": "",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T10:25",
+        "contact_status": "sent"
       },
       {
         "company": "Henley Homes",
@@ -321,7 +329,9 @@
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T10:36",
+        "contact_status": "sent"
       },
       {
         "company": "ACE Body Corporate",
@@ -399,7 +409,9 @@
         "contact": "",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T10:12",
+        "contact_status": "sent"
       },
       {
         "company": "PICA Group",
@@ -487,7 +499,9 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (1 servers)"
+        "verified_reason": "MX OK (1 servers)",
+        "contacted": "2026-05-12T10:16",
+        "contact_status": "sent"
       },
       {
         "company": "Savills Australia",
@@ -613,7 +627,9 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "MX OK (2 servers)"
+        "verified_reason": "MX OK (2 servers)",
+        "contacted": "2026-05-12T10:21",
+        "contact_status": "sent"
       },
       {
         "company": "Laing O'Rourke",

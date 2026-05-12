@@ -514,25 +514,25 @@
     "sent": 8,
     "failed": 0,
     "total": 8,
-    "timestamp": "2026-05-12T08:36",
+    "timestamp": "2026-05-12T10:40",
     "details": [
       {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
         "type": "constructora",
         "template": "antoniopaving",
         "status": "sent"
       },
       {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
         "type": "constructora",
         "template": "antoniopaving",
         "status": "sent"
       },
       {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
         "type": "constructora",
         "template": "antoniopaving",
         "status": "sent"
@@ -545,13 +545,6 @@
         "status": "sent"
       },
       {
-        "company": "Cbus Property",
-        "email": "info@cbusproperty.com.au",
-        "type": "real_estate",
-        "template": "primeproperty",
-        "status": "sent"
-      },
-      {
         "company": "Stockland",
         "email": "community@stockland.com.au",
         "type": "real_estate",
@@ -559,8 +552,15 @@
         "status": "sent"
       },
       {
-        "company": "Mirvac",
-        "email": "partnerships@mirvac.com",
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
         "type": "real_estate",
         "template": "primeproperty",
         "status": "sent"
