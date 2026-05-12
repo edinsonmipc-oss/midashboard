@@ -1,133 +1,11 @@
 {
-  "updated": "2026-05-12T19:00",
+  "updated": "2026-05-13T07:00",
   "total_leads": 140,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
   "leads_by_date": {
-    "2026-05-04_batch5": [
-      {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-12T08:36",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Cbus Property",
-        "email": "info@cbusproperty.com.au",
-        "website": "cbusproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-12T08:23",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Kane Constructions",
-        "email": "projects@kane.com.au",
-        "website": "kane.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-10T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Porter Davis",
-        "email": "supplier@porterdavis.com.au",
-        "website": "porterdavis.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Volumen alto de proyectos",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Laing O'Rourke",
-        "email": "supplychain@laingorourke.com.au",
-        "website": "laingorourke.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-10T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-10T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
-        "contacted": "2026-05-12T08:27",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Charter Hall",
-        "email": "leasing@charterhall.com.au",
-        "website": "charterhall.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
-        "contacted": "2026-05-12T00:42",
-        "contact_status": "sent"
-      },
-      {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
-      }
-    ],
     "2026-05-05_batch6": [
       {
         "company": "Colliers International",
@@ -1583,6 +1461,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-13_batch14": [
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Volumen alto de proyectos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Knight Frank Australia",
+        "email": "property@knightfrank.com.au",
+        "website": "knightfrank.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan servicios regulares",
+        "verified": "unknown"
+      },
+      {
+        "company": "Raine & Horne",
+        "email": "commercial@rainehorne.com.au",
+        "website": "rainehorne.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "website": "century21.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Mirvac",
+        "email": "info@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
         "verified": "unknown"
       }
     ]
