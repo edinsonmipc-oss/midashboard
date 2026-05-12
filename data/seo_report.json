@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-12T08:00",
+  "updated": "2026-05-13T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-12T08:00",
+      "analyzed_at": "2026-05-13T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-12T08:00",
+          "analyzed_at": "2026-05-13T08:00",
           "title": "Paving & Landscaping Melbourne | 63 ★ Reviews | Antonio PrimeScape",
           "title_length": 66,
           "title_too_short": false,
@@ -20,9 +20,9 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 5700,
+          "word_count": 5653,
           "h1_count": 3,
-          "h2_count": 20,
+          "h2_count": 21,
           "has_h1": true,
           "images": 29,
           "images_with_alt": 29,
@@ -33,7 +33,7 @@
             "driveway paving": 1,
             "exposed aggregate": 2,
             "permeable paving": 1,
-            "concrete driveway": 4,
+            "concrete driveway": 3,
             "brick paving melbourne": 1,
             "crazy paving melbourne": 1
           },
@@ -64,12 +64,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-12T08:00",
+      "analyzed_at": "2026-05-13T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-12T08:00",
+          "analyzed_at": "2026-05-13T08:00",
           "title": "Prime Property Maintenance Melbourne | Decking, Fencing, Handyman",
           "title_length": 65,
           "title_too_short": false,
@@ -116,7 +116,7 @@
         "strata maintenance melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 968,
+      "sitemap_count": 971,
       "quick_homepage_score": 90
     }
   },

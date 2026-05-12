@@ -14,8 +14,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:40",
         "contact_status": "sent"
       },
@@ -26,8 +26,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:31",
         "contact_status": "sent"
       },
@@ -38,8 +38,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-07T19:26",
         "contact_status": "dry-run"
       },
@@ -50,8 +50,10 @@
         "type": "strata",
         "contact": "",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Century 21",
@@ -60,8 +62,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       },
@@ -72,8 +74,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:25",
         "contact_status": "sent"
       },
@@ -84,8 +86,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       },
@@ -96,8 +98,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:30",
         "contact_status": "sent"
       },
@@ -108,8 +110,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:23",
         "contact_status": "sent"
       },
@@ -120,8 +122,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-09T08:00",
         "contact_status": "dry-run"
       }
@@ -134,8 +136,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:11",
         "contact_status": "sent"
       },
@@ -146,8 +148,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
       },
@@ -158,8 +160,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
       },
@@ -170,8 +172,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:25",
         "contact_status": "sent"
       },
@@ -182,8 +184,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
       },
@@ -194,8 +196,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-11T08:00",
         "contact_status": "dry-run"
       },
@@ -206,8 +208,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:36",
         "contact_status": "sent"
       },
@@ -218,8 +220,8 @@
         "type": "strata",
         "contact": "",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Savills Australia",
@@ -228,8 +230,10 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Fletchers Real Estate",
@@ -238,8 +242,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-10T08:00",
         "contact_status": "dry-run"
       }
@@ -252,8 +256,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -262,8 +266,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:15",
         "contact_status": "sent"
       },
@@ -274,8 +278,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:19",
         "contact_status": "sent"
       },
@@ -286,8 +290,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:12",
         "contact_status": "sent"
       },
@@ -298,8 +302,10 @@
         "type": "strata",
         "contact": "",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Hockingstuart",
@@ -308,8 +314,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Brookfield Multiplex",
@@ -318,8 +324,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       },
@@ -330,8 +336,10 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "First National Real Estate",
@@ -352,8 +360,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       }
@@ -366,8 +374,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -376,8 +384,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:16",
         "contact_status": "sent"
       },
@@ -388,8 +396,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -398,8 +406,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       },
@@ -410,8 +418,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-09T08:00",
         "contact_status": "dry-run"
       },
@@ -422,8 +430,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-10T08:00",
         "contact_status": "dry-run"
       },
@@ -434,8 +442,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:38",
         "contact_status": "sent"
       },
@@ -446,8 +454,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:00",
         "contact_status": "dry-run"
       },
@@ -458,8 +466,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
       },
@@ -470,8 +478,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-07_batch10": [
@@ -482,8 +490,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PRDnationwide",
@@ -492,8 +500,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
       },
@@ -504,8 +512,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:21",
         "contact_status": "sent"
       },
@@ -516,8 +524,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "First National Real Estate",
@@ -536,8 +544,8 @@
         "type": "strata",
         "contact": "",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Henley Homes",
@@ -546,8 +554,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -556,8 +564,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "CBRE Australia",
@@ -566,8 +574,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -576,8 +584,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-07_batch11": [
@@ -588,8 +596,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "LJ Hooker",
@@ -598,8 +606,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -608,8 +616,8 @@
         "type": "constructora",
         "contact": "",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -618,8 +626,8 @@
         "type": "builder",
         "contact": "",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "McGrath Estate Agents",
@@ -628,8 +636,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Strata Title Management",
@@ -638,8 +646,8 @@
         "type": "strata",
         "contact": "",
         "notes": "Buscan contractors para mantenimiento",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-11T08:00",
         "contact_status": "dry-run"
       },
@@ -650,8 +658,8 @@
         "type": "property_mgmt",
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Marshall White",
@@ -660,8 +668,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hockingstuart",
@@ -670,8 +678,8 @@
         "type": "real_estate",
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis",
@@ -681,7 +689,9 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "no_mx",
-        "verified_reason": "No MX records found"
+        "verified_reason": "No MX records found",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       }
     ],
     "2026-05-07_batch12": [
@@ -693,8 +703,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -704,8 +714,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:35",
         "contact_status": "sent"
       },
@@ -717,8 +727,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -728,8 +738,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -739,8 +749,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -750,8 +760,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -761,8 +771,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -772,8 +782,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Frasers Property",
@@ -783,8 +793,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ISPT",
@@ -794,8 +804,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-08_batch13": [
@@ -807,8 +817,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -818,8 +828,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -829,8 +839,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout",
+        "verified": "verified",
+        "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
       },
@@ -842,8 +852,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Charter Hall",
@@ -853,8 +863,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -864,8 +874,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PRDnationwide",
@@ -875,8 +885,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -886,8 +896,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Laing O'Rourke",
@@ -897,8 +907,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kay & Burton",
@@ -908,8 +918,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-08_batch14": [
@@ -921,8 +931,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -932,8 +942,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Stockland",
@@ -943,8 +953,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -954,8 +964,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -965,8 +975,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -976,8 +986,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -987,8 +997,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis",
@@ -1009,8 +1019,10 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "First National Real Estate",
@@ -1046,8 +1058,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -1057,8 +1069,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Boutique Homes",
@@ -1068,8 +1080,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Frasers Property",
@@ -1079,8 +1091,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Charter Hall",
@@ -1090,8 +1102,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Brookfield Multiplex",
@@ -1101,8 +1113,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -1112,8 +1124,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -1123,8 +1135,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -1134,8 +1146,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-10_batch14": [
@@ -1180,8 +1192,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Dexus",
@@ -1191,8 +1203,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -1202,8 +1214,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Charter Hall",
@@ -1213,8 +1225,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Laing O'Rourke",
@@ -1224,8 +1236,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Simonds Homes",
@@ -1235,8 +1247,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Barry Plant",
@@ -1246,8 +1258,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-11_batch14": [
@@ -1259,8 +1271,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -1270,8 +1282,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -1281,8 +1293,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kay & Burton",
@@ -1292,8 +1304,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -1303,8 +1315,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -1314,8 +1326,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Colliers International",
@@ -1325,8 +1337,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Connection timeout"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "John Holland",
@@ -1336,8 +1348,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -1347,8 +1359,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown",
-        "verified_reason": "Socket error: [Errno 101] Network is unreachable"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Collins Simms",
@@ -1371,7 +1383,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Stockland",
@@ -1381,7 +1394,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -1391,7 +1405,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Brookfield Multiplex",
@@ -1401,7 +1416,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Nelson Alexander",
@@ -1411,7 +1427,10 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T08:00",
+        "contact_status": "dry-run"
       },
       {
         "company": "Dexus",
@@ -1421,7 +1440,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Savills Australia",
@@ -1431,7 +1451,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -1441,7 +1462,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Strata Title Management",
@@ -1451,7 +1473,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -1461,7 +1484,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-13_batch14": [
@@ -1473,7 +1497,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -1483,7 +1508,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -1493,7 +1519,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Knight Frank Australia",
@@ -1503,7 +1530,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ACE Body Corporate",
@@ -1513,7 +1541,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Raine & Horne",
@@ -1523,7 +1552,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1533,7 +1563,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -1543,7 +1574,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -1553,7 +1585,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Marshall White",
@@ -1563,7 +1596,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

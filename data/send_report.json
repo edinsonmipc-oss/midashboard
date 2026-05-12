@@ -444,6 +444,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-13",
+      "time": "2026-05-13T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "leasing@charterhall.com.au",
+          "company": "Charter Hall",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@savills.com.au",
+          "company": "Savills Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {
