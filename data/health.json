@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-12 22:00",
-  "checked_at": "2026-05-12T22:00:31Z",
+  "updated": "2026-05-13 08:01",
+  "checked_at": "2026-05-13T08:01:36Z",
   "total_sites": 4,
   "sites": [
     {
@@ -47,9 +47,9 @@
   ],
   "trading": {},
   "seo_audit": {
-    "updated": "2026-05-12 08:01",
+    "updated": "2026-05-13 08:01",
     "summary": {
-      "total_pages_checked": 1339,
+      "total_pages_checked": 1463,
       "broken_links": 0,
       "issues_found": 0,
       "status": "all_ok"
@@ -64,18 +64,17 @@
       },
       {
         "name": "primeproperty",
-        "total": 968,
-        "ok": 968,
+        "total": 971,
+        "ok": 971,
         "broken": 0,
         "status": "ok"
       },
       {
         "name": "toolshubpro",
-        "total": 0,
-        "ok": 0,
+        "total": 121,
+        "ok": 121,
         "broken": 0,
-        "note": "No URLs found in sitemap",
-        "status": "sitemap_empty"
+        "status": "ok"
       }
     ]
   },
