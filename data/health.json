@@ -1,35 +1,38 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-12 08:01",
+  "updated": "2026-05-12T19:00",
   "checked_at": "2026-05-12T08:01:00Z",
   "total_sites": 3,
   "sites": [
     {
       "name": "antoniopaving.com",
       "url": "https://antoniopaving.com",
-      "status": "up",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.452,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z"
+      "checked_at": "2026-05-12T08:01:00Z",
+      "last_checked": "2026-05-12T19:00"
     },
     {
       "name": "primepropertymaintenance.au",
       "url": "https://primepropertymaintenance.au",
-      "status": "up",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.484,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z"
+      "checked_at": "2026-05-12T08:01:00Z",
+      "last_checked": "2026-05-12T19:00"
     },
     {
       "name": "toolshubpro.com.au",
       "url": "https://toolshubpro.com.au",
-      "status": "up",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.498,
       "healthy": true,
-      "checked_at": "2026-05-12T08:01:00Z"
+      "checked_at": "2026-05-12T08:01:00Z",
+      "last_checked": "2026-05-12T19:00"
     }
   ],
   "trading": {},
