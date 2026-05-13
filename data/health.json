@@ -38,11 +38,11 @@
       "name": "tradios.onrender.com",
       "url": "https://tradios.onrender.com",
       "status": "online",
-      "status_code": 307,
-      "response_time_s": 0.252,
+      "status_code": 200,
+      "response_time_s": 0.3,
       "healthy": true,
-      "checked_at": "2026-05-12T22:00:31Z",
-      "last_checked": "2026-05-12 22:00"
+      "checked_at": "2026-05-14T06:00:00Z",
+      "last_checked": "2026-05-14 06:00"
     }
   ],
   "trading": {},
@@ -79,7 +79,7 @@
     ]
   },
   "email_stats": {
-    "last_send": "2026-05-11 22:01",
-    "total_sent": 30
+    "last_send": "2026-05-13T21:56",
+    "total_sent": 12
   }
 }

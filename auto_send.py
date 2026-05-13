@@ -136,13 +136,13 @@ def get_template(templates_data, business_id):
     return templates_data.get("templates", [{}])[0] if templates_data.get("templates") else None
 
 def load_contacted():
-    """Load the contacted set from leads.json (contacted field)."""
+    """Load the contacted set from leads.json (only truly sent leads)."""
     data = load_json(LEADS_FILE, {})
     contacted = {}
     for batch_key in sorted(data.get("leads_by_date", {}).keys()):
         for lead in data["leads_by_date"][batch_key]:
-            if "contacted" in lead:
-                contacted[lead["email"]] = lead["contacted"]
+            if lead.get("sent") is True or lead.get("contact_status") == "sent":
+                contacted[lead.get("email", "")] = lead.get("contacted", "")
     return contacted
 
 def mark_contacted(email, status="sent"):
@@ -154,6 +154,7 @@ def mark_contacted(email, status="sent"):
             if lead.get("email") == email:
                 lead["contacted"] = now
                 lead["contact_status"] = status
+                lead["sent"] = (status == "sent")
                 save_json(LEADS_FILE, data)
                 return True
     return False
@@ -206,6 +207,20 @@ def send_batch(config, count=8, dry_run=False):
         from_name = biz_addr.get("from_name", config["sender_name"])
         from_email = biz_addr.get("from_email", config["sender_email"])
         signature = biz_addr.get("signature", from_name)
+
+        # ── Pre-send duplicate check: re-read leads.json to confirm not already sent ──
+        leads_data_fresh = load_json(LEADS_FILE, {})
+        already_sent = False
+        for batch_key in sorted(leads_data_fresh.get("leads_by_date", {}).keys()):
+            for lead in leads_data_fresh["leads_by_date"][batch_key]:
+                if lead.get("email") == candidate["email"] and (lead.get("sent") is True or lead.get("contact_status") == "sent"):
+                    already_sent = True
+                    break
+            if already_sent:
+                break
+        if already_sent:
+            log(f"⏭️ SKIPPED (duplicate) → {candidate['email']:35s} ({candidate['company']})")
+            continue
         
         body_text = render_body(tmpl["body"], candidate["company"], from_name, signature)
         body_html = render_html_body(body_text)

@@ -1,6 +1,6 @@
 {
   "updated": "2026-05-13T07:00",
-  "total_leads": 140,
+  "total_leads": 42,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -17,7 +17,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:40",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Mirvac",
@@ -29,7 +30,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:31",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Downer Group",
@@ -40,8 +42,9 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-07T19:26",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "ACE Body Corporate",
@@ -64,8 +67,9 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Stockland",
@@ -77,7 +81,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:25",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Hansen Yuncken",
@@ -101,7 +106,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:30",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "AVJennings",
@@ -113,7 +119,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:23",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Simonds Homes",
@@ -129,18 +136,6 @@
       }
     ],
     "2026-05-05_batch7": [
-      {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:11",
-        "contact_status": "sent"
-      },
       {
         "company": "Hockingstuart",
         "email": "commercial@hockingstuart.com.au",
@@ -164,18 +159,6 @@
         "verified_reason": "Has MX records",
         "contacted": "2026-05-08T08:00",
         "contact_status": "dry-run"
-      },
-      {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T10:25",
-        "contact_status": "sent"
       },
       {
         "company": "Henley Homes",
@@ -211,17 +194,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:36",
-        "contact_status": "sent"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Savills Australia",
@@ -250,30 +224,6 @@
     ],
     "2026-05-06_batch8": [
       {
-        "company": "Century 21",
-        "email": "commercial@century21.com.au",
-        "website": "century21.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:30",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:15",
-        "contact_status": "sent"
-      },
-      {
         "company": "Lendlease",
         "email": "suppliers@lendlease.com",
         "website": "lendlease.com",
@@ -283,19 +233,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T08:19",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T10:12",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "PICA Group",
@@ -308,18 +247,6 @@
         "verified_reason": "Has MX records",
         "contacted": "2026-05-13T08:00",
         "contact_status": "dry-run"
-      },
-      {
-        "company": "Hockingstuart",
-        "email": "commercial@hockingstuart.com.au",
-        "website": "hockingstuart.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:35",
-        "contact_status": "sent"
       },
       {
         "company": "Brookfield Multiplex",
@@ -346,18 +273,6 @@
         "contact_status": "dry-run"
       },
       {
-        "company": "First National Real Estate",
-        "email": "commercial@fnre.com.au",
-        "website": "fnre.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found",
-        "contacted": "2026-05-11T08:00",
-        "contact_status": "dry-run"
-      },
-      {
         "company": "McGrath Estate Agents",
         "email": "commercial@mcgrath.com.au",
         "website": "mcgrath.com.au",
@@ -366,8 +281,9 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-06_batch9": [
@@ -381,31 +297,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-13T10:30",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T10:16",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Savills Australia",
-        "email": "property@savills.com.au",
-        "website": "savills.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:45",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Probuild",
@@ -428,8 +321,9 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-09T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "CBRE Australia",
@@ -453,7 +347,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:38",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Metricon",
@@ -464,8 +359,9 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "John Holland",
@@ -476,8 +372,9 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T00:34",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Knight Frank Australia",
@@ -491,16 +388,6 @@
       }
     ],
     "2026-05-07_batch10": [
-      {
-        "company": "Simonds Homes",
-        "email": "trades@simonds.com.au",
-        "website": "simonds.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "PRDnationwide",
         "email": "commercial@prd.com.au",
@@ -523,7 +410,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T10:21",
-        "contact_status": "sent"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Laing O'Rourke",
@@ -535,126 +423,11 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-13T10:18",
-        "contact_status": "sent"
-      },
-      {
-        "company": "First National Real Estate",
-        "email": "commercial@fnre.com.au",
-        "website": "fnre.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Henley Homes",
-        "email": "trades@henley.com.au",
-        "website": "henley.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:23",
-        "contact_status": "sent"
-      },
-      {
-        "company": "CBRE Australia",
-        "email": "facilities@cbre.com.au",
-        "website": "cbre.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-07_batch11": [
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:26",
-        "contact_status": "sent"
-      },
-      {
-        "company": "LJ Hooker",
-        "email": "commercial@ljhooker.com",
-        "website": "ljhooker.com",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T10:40",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "McGrath Estate Agents",
-        "email": "commercial@mcgrath.com.au",
-        "website": "mcgrath.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "Strata Title Management",
         "email": "info@stratatitle.com.au",
@@ -668,16 +441,6 @@
         "contact_status": "dry-run"
       },
       {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
         "company": "Marshall White",
         "email": "projects@marshallwhite.com.au",
         "website": "marshallwhite.com.au",
@@ -686,42 +449,9 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Hockingstuart",
-        "email": "commercial@hockingstuart.com.au",
-        "website": "hockingstuart.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Porter Davis",
-        "email": "supplier@porterdavis.com.au",
-        "website": "porterdavis.com.au",
-        "type": "builder",
-        "contact": "",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found",
-        "contacted": "2026-05-13T08:00",
-        "contact_status": "dry-run"
       }
     ],
     "2026-05-07_batch12": [
-      {
-        "company": "Probuild",
-        "email": "estimating@probuild.com.au",
-        "website": "probuild.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "GPT Group",
         "email": "info@gpt.com.au",
@@ -733,73 +463,8 @@
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:35",
-        "contact_status": "sent"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Century 21",
-        "email": "commercial@century21.com.au",
-        "website": "century21.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Ray White",
-        "email": "commercial@raywhite.com",
-        "website": "raywhite.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Frasers Property",
@@ -811,42 +476,9 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records"
-      },
-      {
-        "company": "ISPT",
-        "email": "property@ispt.com.au",
-        "website": "ispt.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-08_batch13": [
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "Cushman & Wakefield",
         "email": "property@cushwake.com",
@@ -859,174 +491,9 @@
         "verified_reason": "Has MX records",
         "contacted": "2026-05-12T00:34",
         "contact_status": "dry-run"
-      },
-      {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Contratan servicios de mantenimiento",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Charter Hall",
-        "email": "leasing@charterhall.com.au",
-        "website": "charterhall.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "PRDnationwide",
-        "email": "commercial@prd.com.au",
-        "website": "prd.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Laing O'Rourke",
-        "email": "supplychain@laingorourke.com.au",
-        "website": "laingorourke.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Kay & Burton",
-        "email": "commercial@kayburton.com.au",
-        "website": "kayburton.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-08_batch14": [
-      {
-        "company": "AVJennings",
-        "email": "info@avjennings.com.au",
-        "website": "avjennings.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Fletchers Real Estate",
-        "email": "property@fletcher.com.au",
-        "website": "fletcher.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "GPT Group",
-        "email": "info@gpt.com.au",
-        "website": "gpt.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Porter Davis",
-        "email": "supplier@porterdavis.com.au",
-        "website": "porterdavis.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      },
       {
         "company": "Watpac",
         "email": "projects@watpac.com.au",
@@ -1039,55 +506,9 @@
         "verified_reason": "Has MX records",
         "contacted": "2026-05-13T08:00",
         "contact_status": "dry-run"
-      },
-      {
-        "company": "First National Real Estate",
-        "email": "commercial@fnre.com.au",
-        "website": "fnre.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
       }
     ],
     "2026-05-09_batch14": [
-      {
-        "company": "JLL Australia",
-        "email": "property@jll.com.au",
-        "website": "jll.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "PICA Group",
-        "email": "info@picagroup.com.au",
-        "website": "picagroup.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "Boutique Homes",
         "email": "info@boutiquehomes.com.au",
@@ -1097,175 +518,13 @@
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Frasers Property",
-        "email": "procurement@frasersproperty.com.au",
-        "website": "frasersproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Charter Hall",
-        "email": "leasing@charterhall.com.au",
-        "website": "charterhall.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Brookfield Multiplex",
-        "email": "procurement@brookfieldmultiplex.com",
-        "website": "brookfieldmultiplex.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Cushman & Wakefield",
-        "email": "property@cushwake.com",
-        "website": "cushwake.com",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Probuild",
-        "email": "estimating@probuild.com.au",
-        "website": "probuild.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-10_batch14": [
-      {
-        "company": "Raine & Horne",
-        "email": "commercial@rainehorne.com.au",
-        "website": "rainehorne.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      },
-      {
-        "company": "Porter Davis",
-        "email": "supplier@porterdavis.com.au",
-        "website": "porterdavis.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      },
-      {
-        "company": "First National Real Estate",
-        "email": "commercial@fnre.com.au",
-        "website": "fnre.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      },
-      {
-        "company": "Watpac",
-        "email": "projects@watpac.com.au",
-        "website": "watpac.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Dexus",
-        "email": "leasing@dexus.com",
-        "website": "dexus.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Charter Hall",
-        "email": "leasing@charterhall.com.au",
-        "website": "charterhall.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Laing O'Rourke",
-        "email": "supplychain@laingorourke.com.au",
-        "website": "laingorourke.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Simonds Homes",
-        "email": "trades@simonds.com.au",
-        "website": "simonds.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "Barry Plant",
         "email": "property@barryplant.com.au",
@@ -1278,163 +537,7 @@
         "verified_reason": "Has MX records"
       }
     ],
-    "2026-05-11_batch14": [
-      {
-        "company": "Henley Homes",
-        "email": "trades@henley.com.au",
-        "website": "henley.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Kay & Burton",
-        "email": "commercial@kayburton.com.au",
-        "website": "kayburton.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Cushman & Wakefield",
-        "email": "property@cushwake.com",
-        "website": "cushwake.com",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "PICA Group",
-        "email": "info@picagroup.com.au",
-        "website": "picagroup.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Fletchers Real Estate",
-        "email": "property@fletcher.com.au",
-        "website": "fletcher.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Collins Simms",
-        "email": "info@collinssimms.com.au",
-        "website": "collinssimms.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "no_mx",
-        "verified_reason": "No MX records found"
-      }
-    ],
     "2026-05-12_batch14": [
-      {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Fletchers Real Estate",
-        "email": "property@fletcher.com.au",
-        "website": "fletcher.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Brookfield Multiplex",
-        "email": "procurement@brookfieldmultiplex.com",
-        "website": "brookfieldmultiplex.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
       {
         "company": "Nelson Alexander",
         "email": "property@nelsonalexander.com.au",
@@ -1445,175 +548,9 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T08:00",
-        "contact_status": "dry-run"
-      },
-      {
-        "company": "Dexus",
-        "email": "leasing@dexus.com",
-        "website": "dexus.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Savills Australia",
-        "email": "property@savills.com.au",
-        "website": "savills.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Lendlease",
-        "email": "suppliers@lendlease.com",
-        "website": "lendlease.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Strata Title Management",
-        "email": "info@stratatitle.com.au",
-        "website": "stratatitle.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Mirvac",
-        "email": "info@mirvac.com",
-        "website": "mirvac.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      }
-    ],
-    "2026-05-13_batch14": [
-      {
-        "company": "LJ Hooker",
-        "email": "commercial@ljhooker.com",
-        "website": "ljhooker.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Ray White",
-        "email": "commercial@raywhite.com",
-        "website": "raywhite.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Metricon",
-        "email": "trades@metricon.com.au",
-        "website": "metricon.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Knight Frank Australia",
-        "email": "property@knightfrank.com.au",
-        "website": "knightfrank.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "ACE Body Corporate",
-        "email": "info@acebodycorporate.com.au",
-        "website": "acebodycorporate.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Raine & Horne",
-        "email": "commercial@rainehorne.com.au",
-        "website": "rainehorne.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "risky",
-        "verified_reason": "DNS check failed"
-      },
-      {
-        "company": "McGrath Estate Agents",
-        "email": "commercial@mcgrath.com.au",
-        "website": "mcgrath.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Century 21",
-        "email": "commercial@century21.com.au",
-        "website": "century21.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Mirvac",
-        "email": "info@mirvac.com",
-        "website": "mirvac.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Marshall White",
-        "email": "projects@marshallwhite.com.au",
-        "website": "marshallwhite.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "contacted": "2026-05-13T21:56",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ]
   }
