@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-13 08:01",
+  "updated": "2026-05-14T07:00",
   "checked_at": "2026-05-13T08:01:36Z",
   "total_sites": 4,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 1.101,
       "healthy": true,
       "checked_at": "2026-05-12T22:00:31Z",
-      "last_checked": "2026-05-12 22:00"
+      "last_checked": "2026-05-14T07:00"
     },
     {
       "name": "primepropertymaintenance.au",
@@ -22,7 +22,7 @@
       "response_time_s": 0.899,
       "healthy": true,
       "checked_at": "2026-05-12T22:00:31Z",
-      "last_checked": "2026-05-12 22:00"
+      "last_checked": "2026-05-14T07:00"
     },
     {
       "name": "toolshubpro.com.au",
@@ -32,7 +32,7 @@
       "response_time_s": 0.818,
       "healthy": true,
       "checked_at": "2026-05-12T22:00:31Z",
-      "last_checked": "2026-05-12 22:00"
+      "last_checked": "2026-05-14T07:00"
     },
     {
       "name": "tradios.onrender.com",
@@ -42,7 +42,7 @@
       "response_time_s": 0.3,
       "healthy": true,
       "checked_at": "2026-05-14T06:00:00Z",
-      "last_checked": "2026-05-14 06:00"
+      "last_checked": "2026-05-14T07:00"
     }
   ],
   "trading": {},

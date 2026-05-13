@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-13T07:00",
-  "total_leads": 42,
+  "updated": "2026-05-14T07:00",
+  "total_leads": 52,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -551,6 +551,108 @@
         "contacted": "2026-05-13T21:56",
         "contact_status": "dry-run",
         "sent": false
+      }
+    ],
+    "2026-05-14_batch12": [
+      {
+        "company": "Brookfield Multiplex",
+        "email": "procurement@brookfieldmultiplex.com",
+        "website": "brookfieldmultiplex.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Nelson Alexander",
+        "email": "property@nelsonalexander.com.au",
+        "website": "nelsonalexander.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Cushman & Wakefield",
+        "email": "property@cushwake.com",
+        "website": "cushwake.com",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran edificios y propiedades",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
       }
     ]
   }
