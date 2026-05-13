@@ -169,8 +169,9 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T00:34",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-14T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Ray White",
@@ -257,8 +258,9 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-14T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Charter Hall",
@@ -321,7 +323,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T21:56",
+        "contacted": "2026-05-14T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -334,8 +336,9 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-10T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-14T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Dexus",
@@ -359,7 +362,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T21:56",
+        "contacted": "2026-05-14T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -534,7 +537,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-12_batch14": [
@@ -548,7 +554,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T21:56",
+        "contacted": "2026-05-14T08:00",
         "contact_status": "dry-run",
         "sent": false
       }
@@ -562,7 +568,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Nelson Alexander",
@@ -572,7 +579,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -582,7 +590,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hansen Yuncken",
@@ -592,7 +601,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PICA Group",
@@ -602,7 +612,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran edificios y propiedades",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "McGrath Estate Agents",
@@ -612,7 +623,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -622,7 +634,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -632,7 +645,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -642,7 +656,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -652,7 +667,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

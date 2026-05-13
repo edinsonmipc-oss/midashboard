@@ -556,6 +556,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-14",
+      "time": "2026-05-14T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@brookfieldmultiplex.com",
+          "company": "Brookfield Multiplex",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@barryplant.com.au",
+          "company": "Barry Plant",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@henley.com.au",
+          "company": "Henley Homes",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {
