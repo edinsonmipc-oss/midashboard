@@ -1,0 +1,43 @@
+Delay range: 180-300s
+Pending: const=24 bld=15 re=33 pm=10 strata=7
+Batch: 4 antoniopaving + 4 primeproperty = 8
+Connecting to SMTP...
+SMTP login OK
+
+--- AntonioPrimeScape Construction ---
+
+[1/4] Laing O'Rourke <supplychain@laingorourke.com.au>
+  SENT: Laing O'Rourke <supplychain@laingorourke.com.au> via antoniopaving
+  Delay 250s...
+
+[2/4] Downer Group <procurement@downergroup.com>
+  SENT: Downer Group <procurement@downergroup.com> via antoniopaving
+  Delay 190s...
+
+[3/4] John Holland <suppliers@johnholland.com.au>
+  SENT: John Holland <suppliers@johnholland.com.au> via antoniopaving
+  Delay 221s...
+
+[4/4] Carlton Homes <info@carltonhomes.com.au>
+  SENT: Carlton Homes <info@carltonhomes.com.au> via antoniopaving
+
+--- Prime Property Maintenance ---
+
+[1/4] Century 21 <commercial@century21.com.au>
+  SENT: Century 21 <commercial@century21.com.au> via primeproperty
+  Delay 268s...
+
+[2/4] Hockingstuart <commercial@hockingstuart.com.au>
+  SENT: Hockingstuart <commercial@hockingstuart.com.au> via primeproperty
+  Delay 289s...
+
+[3/4] LJ Hooker <commercial@ljhooker.com>
+  SENT: LJ Hooker <commercial@ljhooker.com> via primeproperty
+  Delay 261s...
+
+[4/4] Savills Australia <property@savills.com.au>
+  SENT: Savills Australia <property@savills.com.au> via primeproperty
+
+=== Sent: 8  Failed: 0 ===
+Updated leads.json (8 contacts).
+Updated send_report.json.

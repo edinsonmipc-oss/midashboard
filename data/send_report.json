@@ -629,5 +629,69 @@
         "status": "sent"
       }
     ]
+  },
+  "2026-05-13": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-13T10:45",
+    "details": [
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Savills Australia",
+        "email": "property@savills.com.au",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
   }
 }

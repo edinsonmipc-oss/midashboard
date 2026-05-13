@@ -257,7 +257,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:30",
+        "contact_status": "sent"
       },
       {
         "company": "Hansen Yuncken",
@@ -315,7 +317,9 @@
         "contact": "",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:35",
+        "contact_status": "sent"
       },
       {
         "company": "Brookfield Multiplex",
@@ -375,7 +379,9 @@
         "contact": "",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:30",
+        "contact_status": "sent"
       },
       {
         "company": "Downer Group",
@@ -397,7 +403,9 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:45",
+        "contact_status": "sent"
       },
       {
         "company": "Probuild",
@@ -525,7 +533,9 @@
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:18",
+        "contact_status": "sent"
       },
       {
         "company": "First National Real Estate",
@@ -565,7 +575,9 @@
         "contact": "",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:23",
+        "contact_status": "sent"
       },
       {
         "company": "CBRE Australia",
@@ -597,7 +609,9 @@
         "contact": "",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:26",
+        "contact_status": "sent"
       },
       {
         "company": "LJ Hooker",
@@ -607,7 +621,9 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-13T10:40",
+        "contact_status": "sent"
       },
       {
         "company": "Hansen Yuncken",
