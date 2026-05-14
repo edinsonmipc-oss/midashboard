@@ -41,3 +41,31 @@ SMTP login OK
 === Sent: 8  Failed: 0 ===
 Updated leads.json (8 contacts).
 Updated send_report.json.
+[2026-05-14 10:02:51] Config loaded: daily_limit=8
+[2026-05-14 10:02:51] Qualifying: antoniopaving=5, primeproperty=8
+[2026-05-14 10:02:51] Selected 8 leads:
+[2026-05-14 10:02:51]   [antoniopaving  ] Brookfield Multiplex           procurement@brookfieldmultiplex.com
+[2026-05-14 10:02:51]   [antoniopaving  ] Hansen Yuncken                 info@hansenyuncken.com.au          
+[2026-05-14 10:02:51]   [antoniopaving  ] Lendlease                      suppliers@lendlease.com            
+[2026-05-14 10:02:51]   [antoniopaving  ] Probuild                       estimating@probuild.com.au         
+[2026-05-14 10:02:51]   [primeproperty  ] Knight Frank Australia         property@knightfrank.com.au        
+[2026-05-14 10:02:51]   [primeproperty  ] Marshall White                 projects@marshallwhite.com.au      
+[2026-05-14 10:02:51]   [primeproperty  ] Frasers Property               procurement@frasersproperty.com.au 
+[2026-05-14 10:02:51]   [primeproperty  ] Nelson Alexander               property@nelsonalexander.com.au    
+[2026-05-14 10:02:54] SMTP connected and logged in
+[2026-05-14 10:02:56] SENT [antoniopaving  ] → procurement@brookfieldmultiplex.com (Brookfield Multiplex)
+[2026-05-14 10:02:56] Waiting 221s before next send...
+[2026-05-14 10:06:50] SENT [antoniopaving  ] → info@hansenyuncken.com.au           (Hansen Yuncken)
+[2026-05-14 10:06:50] Waiting 226s before next send...
+[2026-05-14 10:10:50] SENT [antoniopaving  ] → suppliers@lendlease.com             (Lendlease)
+[2026-05-14 10:10:50] Waiting 246s before next send...
+[2026-05-14 10:15:10] SENT [antoniopaving  ] → estimating@probuild.com.au          (Probuild)
+[2026-05-14 10:15:10] Waiting 300s before next send...
+[2026-05-14 10:20:27] SENT [primeproperty  ] → property@knightfrank.com.au         (Knight Frank Australia)
+[2026-05-14 10:20:27] Waiting 199s before next send...
+[2026-05-14 10:23:58] SENT [primeproperty  ] → projects@marshallwhite.com.au       (Marshall White)
+[2026-05-14 10:23:58] Waiting 203s before next send...
+[2026-05-14 10:27:36] SENT [primeproperty  ] → procurement@frasersproperty.com.au  (Frasers Property)
+[2026-05-14 10:27:36] Waiting 270s before next send...
+[2026-05-14 10:32:24] SENT [primeproperty  ] → property@nelsonalexander.com.au     (Nelson Alexander)
+[2026-05-14 10:32:24] BATCH COMPLETE: 8 sent, 0 errors, 8 attempted

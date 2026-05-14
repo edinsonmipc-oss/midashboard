@@ -93,8 +93,9 @@
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-14T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Kay & Burton",
@@ -233,7 +234,7 @@
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:19",
+        "contacted": "2026-05-14T10:10",
         "contact_status": "sent",
         "sent": true
       },
@@ -258,9 +259,9 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-14T08:00",
-        "contact_status": "dry-run",
-        "sent": false
+        "contacted": "2026-05-14T10:02",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Charter Hall",
@@ -311,8 +312,9 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-14T10:15",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "LJ Hooker",
@@ -387,7 +389,10 @@
         "contact": "",
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:20",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-07_batch10": [
@@ -451,7 +456,10 @@
         "contact": "",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:23",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-07_batch12": [
@@ -478,7 +486,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:27",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-08_batch13": [
@@ -554,9 +565,9 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-14T08:00",
-        "contact_status": "dry-run",
-        "sent": false
+        "contacted": "2026-05-14T10:32",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-14_batch12": [
@@ -569,7 +580,10 @@
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:02",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Nelson Alexander",
@@ -580,7 +594,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:32",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Cushman & Wakefield",
@@ -602,7 +619,10 @@
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "PICA Group",
@@ -635,7 +655,10 @@
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:10",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Ray White",
@@ -657,7 +680,10 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-14T10:15",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Downer Group",
