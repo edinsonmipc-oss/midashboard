@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
   "updated": "2026-05-15T08:00",
-  "checked_at": "2026-05-14T08:01:00Z",
+  "checked_at": "2026-05-15T10:00:00Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 1.11,
+      "response_time_s": 1.01,
       "healthy": true,
-      "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T08:00",
+      "checked_at": "2026-05-15T10:00:00Z",
+      "last_checked": "2026-05-15T10:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -28,10 +28,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.89,
+      "response_time_s": 0.85,
       "healthy": true,
-      "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T08:00",
+      "checked_at": "2026-05-15T10:00:00Z",
+      "last_checked": "2026-05-15T10:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -47,10 +47,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.83,
+      "response_time_s": 0.84,
       "healthy": true,
-      "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T08:00",
+      "checked_at": "2026-05-15T10:00:00Z",
+      "last_checked": "2026-05-15T10:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
