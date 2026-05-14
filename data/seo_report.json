@@ -1,17 +1,17 @@
 {
-  "updated": "2026-05-14T08:00",
+  "updated": "2026-05-15T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-14T08:00",
+      "analyzed_at": "2026-05-15T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-14T08:00",
-          "title": "Paving & Landscaping Melbourne | 63 ★ Reviews | Antonio PrimeScape",
-          "title_length": 66,
+          "analyzed_at": "2026-05-15T08:00",
+          "title": "Paving Melbourne From $70/m² | 63 ★★★★★ Reviews | Antonio PrimeScape",
+          "title_length": 68,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
@@ -20,26 +20,26 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 5653,
+          "word_count": 5528,
           "h1_count": 3,
           "h2_count": 21,
           "has_h1": true,
-          "images": 29,
-          "images_with_alt": 29,
-          "links": 136,
+          "images": 28,
+          "images_with_alt": 28,
+          "links": 138,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 6,
             "driveway paving": 1,
             "exposed aggregate": 2,
-            "permeable paving": 1,
+            "permeable paving": 2,
             "concrete driveway": 3,
             "brick paving melbourne": 1,
             "crazy paving melbourne": 1
           },
           "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (66 chars)",
+            "⚠️ Title too long (68 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
@@ -64,12 +64,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-14T08:00",
+      "analyzed_at": "2026-05-15T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-14T08:00",
+          "analyzed_at": "2026-05-15T08:00",
           "title": "Prime Property Maintenance Melbourne | Decking, Fencing, Handyman",
           "title_length": 65,
           "title_too_short": false,
@@ -80,7 +80,7 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 2390,
+          "word_count": 2396,
           "h1_count": 4,
           "h2_count": 10,
           "has_h1": true,

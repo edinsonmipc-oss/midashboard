@@ -117,8 +117,9 @@
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-15T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Brookfield Multiplex",
@@ -208,7 +209,7 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-14T08:00",
+        "contacted": "2026-05-15T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -234,7 +235,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-14T08:00",
+        "contacted": "2026-05-15T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -247,7 +248,7 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T21:56",
+        "contacted": "2026-05-15T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -373,8 +374,9 @@
         "notes": "Multiples propiedades en su cartera",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-12T00:34",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-15T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-08_batch14": [
@@ -388,8 +390,9 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-13T08:00",
-        "contact_status": "dry-run"
+        "contacted": "2026-05-15T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-09_batch14": [
@@ -576,7 +579,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Lendlease",
@@ -586,7 +590,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Burbank Homes",
@@ -596,7 +601,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hickory Group",
@@ -606,7 +612,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Built",
@@ -616,7 +623,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Boutique Homes",
@@ -626,7 +634,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Carlton Homes",
@@ -636,7 +645,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "McGrath Estate Agents",
@@ -646,7 +656,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Multiplex",
@@ -656,7 +667,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Hockingstuart",
@@ -666,7 +678,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-15_batch14": [
@@ -678,7 +691,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-15T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "PICA Group",
@@ -688,7 +705,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Ray White",
@@ -698,7 +716,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Dexus",
@@ -708,7 +727,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Downer Group",
@@ -718,7 +738,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cushman & Wakefield",
@@ -728,7 +749,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Frasers Property",
@@ -738,7 +760,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -748,7 +771,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "PRDnationwide",
@@ -758,7 +782,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -768,7 +793,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

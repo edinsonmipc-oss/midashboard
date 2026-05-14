@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-15T07:00",
+  "updated": "2026-05-15T08:00",
   "checked_at": "2026-05-14T08:01:00Z",
   "total_sites": 4,
   "sites": [
@@ -12,16 +12,16 @@
       "response_time_s": 1.11,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T07:00",
+      "last_checked": "2026-05-15T08:00",
       "seo_metrics": {
-        "pages_analyzed": 371,
-        "pages_good": 371,
+        "pages_analyzed": 0,
+        "pages_good": 0,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
         "content_suggestions": 0
       },
-      "seo_score": 100.0
+      "seo_score": 0.0
     },
     {
       "name": "primepropertymaintenance.au",
@@ -31,16 +31,16 @@
       "response_time_s": 0.89,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T07:00",
+      "last_checked": "2026-05-15T08:00",
       "seo_metrics": {
-        "pages_analyzed": 974,
-        "pages_good": 974,
+        "pages_analyzed": 0,
+        "pages_good": 0,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
         "content_suggestions": 0
       },
-      "seo_score": 100.0
+      "seo_score": 0.0
     },
     {
       "name": "toolshubpro.com.au",
@@ -50,7 +50,7 @@
       "response_time_s": 0.83,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-15T07:00",
+      "last_checked": "2026-05-15T08:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -69,16 +69,16 @@
       "response_time_s": 0.45,
       "healthy": true,
       "checked_at": "2026-05-15T06:00:00Z",
-      "last_checked": "2026-05-15T07:00"
+      "last_checked": "2026-05-15T08:00"
     }
   ],
   "trading": {},
   "seo_audit": {
-    "updated": "2026-05-14T08:01",
+    "updated": "2026-05-15T08:00",
     "summary": {}
   },
   "email_stats": {
-    "last_send": "2026-05-14T08:01",
-    "total_sent": 12
+    "last_send": "2026-05-15T08:00",
+    "total_sent": 14
   }
 }

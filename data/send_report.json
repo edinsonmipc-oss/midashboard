@@ -612,6 +612,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-15",
+      "time": "2026-05-15T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "suppliers@johnholland.com.au",
+          "company": "John Holland",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "community@stockland.com.au",
+          "company": "Stockland",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {
