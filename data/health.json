@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-15T08:00",
-  "checked_at": "2026-05-15T10:00:00Z",
+  "updated": "2026-05-14T22:01",
+  "checked_at": "2026-05-14T22:01:58Z",
   "total_sites": 4,
   "sites": [
     {
@@ -11,17 +11,17 @@
       "status_code": 200,
       "response_time_s": 1.01,
       "healthy": true,
-      "checked_at": "2026-05-15T10:00:00Z",
-      "last_checked": "2026-05-15T10:00",
+      "checked_at": "2026-05-14T22:01:58Z",
+      "last_checked": "2026-05-14T22:01",
       "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
+        "pages_analyzed": 371,
+        "pages_good": 371,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
         "content_suggestions": 0
       },
-      "seo_score": 0.0
+      "seo_score": 100.0
     },
     {
       "name": "primepropertymaintenance.au",
@@ -30,17 +30,17 @@
       "status_code": 200,
       "response_time_s": 0.85,
       "healthy": true,
-      "checked_at": "2026-05-15T10:00:00Z",
-      "last_checked": "2026-05-15T10:00",
+      "checked_at": "2026-05-14T22:01:58Z",
+      "last_checked": "2026-05-14T22:01",
       "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
+        "pages_analyzed": 974,
+        "pages_good": 974,
         "pages_bad": 0,
         "missing_meta": 0,
         "missing_titles": 0,
         "content_suggestions": 0
       },
-      "seo_score": 0.0
+      "seo_score": 100.0
     },
     {
       "name": "toolshubpro.com.au",
@@ -49,8 +49,8 @@
       "status_code": 200,
       "response_time_s": 0.84,
       "healthy": true,
-      "checked_at": "2026-05-15T10:00:00Z",
-      "last_checked": "2026-05-15T10:00",
+      "checked_at": "2026-05-14T22:01:58Z",
+      "last_checked": "2026-05-14T22:01",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
