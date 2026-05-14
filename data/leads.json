@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-14T07:00",
-  "total_leads": 52,
+  "updated": "2026-05-14T19:00",
+  "total_leads": 62,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -695,6 +695,108 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records"
+      }
+    ],
+    "2026-05-14_batch13": [
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Burbank Homes",
+        "email": "supplier@burbank.com.au",
+        "website": "burbank.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Volumen alto de proyectos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Built",
+        "email": "enquiries@built.com.au",
+        "website": "built.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Boutique Homes",
+        "email": "info@boutiquehomes.com.au",
+        "website": "boutiquehomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "website": "carltonhomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Multiplex",
+        "email": "subcontractors@multiplex.com",
+        "website": "multiplex.global",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "website": "hockingstuart.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
       }
     ]
   }

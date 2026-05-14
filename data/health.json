@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-14T08:01",
+  "updated": "2026-05-14T19:00",
   "checked_at": "2026-05-14T08:01:00Z",
   "total_sites": 4,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 1.11,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-14T08:01",
+      "last_checked": "2026-05-14T19:00",
       "seo_metrics": {
         "pages_analyzed": 371,
         "pages_good": 371,
@@ -31,7 +31,7 @@
       "response_time_s": 0.89,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-14T08:01",
+      "last_checked": "2026-05-14T19:00",
       "seo_metrics": {
         "pages_analyzed": 974,
         "pages_good": 974,
@@ -50,7 +50,7 @@
       "response_time_s": 0.83,
       "healthy": true,
       "checked_at": "2026-05-14T08:01:00Z",
-      "last_checked": "2026-05-14T08:01",
+      "last_checked": "2026-05-14T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -69,7 +69,7 @@
       "response_time_s": 0.3,
       "healthy": true,
       "checked_at": "2026-05-14T06:00:00Z",
-      "last_checked": "2026-05-14T08:01"
+      "last_checked": "2026-05-14T19:00"
     }
   ],
   "trading": {},
