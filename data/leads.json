@@ -1,9 +1,404 @@
 {
-  "updated": "2026-05-15T07:00",
-  "total_leads": 0,
+  "updated": "2026-05-15T19:00",
+  "total_leads": 30,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
-  "leads_by_date": {}
+  "leads_by_date": {
+    "2026-05-15_henley-properties": [
+      {
+        "company": "Henley Properties",
+        "email": "ben.sayers@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Ben Sayers",
+        "title": "Construction Manager",
+        "notes": "Contrata subcontratistas de paving y construcción para proyectos Melbourne. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:39",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "nick.redfern@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Nick Redfern",
+        "title": "Construction Supervisor",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T12:03",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "tim.neilson@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Tim Neilson",
+        "title": "Building Supervisor",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T12:10",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "harmohan.singh@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Harmohan Singh",
+        "title": "Construction Supervisor",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:39",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "darren.dean@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Darren Dean",
+        "title": "General Manager",
+        "notes": "Gerente general Henley Properties - puede derivar a Construction Managers. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T12:00",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "alexander.pangalos@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Alexander Pangalos",
+        "title": "Construction Administrator",
+        "notes": "Administración de construcción - puede ser puerta de entrada. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:30",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "tim.george@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Tim George",
+        "title": "BOQ Estimator",
+        "notes": "Estimador de cantidades - recibe cotizaciones de subcontratistas. Fuente: Wiza.co",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:18",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "mark.glenn@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Mark Glenn",
+        "title": "Construction",
+        "notes": "Rol en construcción Henley Properties. Fuente: RocketReach",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:53",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Henley Properties",
+        "email": "tim.oshea@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
+        "contact": "Tim O'Shea",
+        "title": "Construction",
+        "notes": "Rol en construcción Henley Properties. Fuente: RocketReach",
+        "verified": "verified",
+        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "contacted": "2026-05-15T11:43",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_hickory-group": [
+      {
+        "company": "Hickory Group",
+        "email": "steve.stavrou@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "Steve Stavrou",
+        "title": "Strategic Procurement Director",
+        "notes": "Toma decisiones de contratacion de subcontratistas. Fuente: hickory.com.au",
+        "verified": "verified",
+        "verified_reason": "MX verified - hickory.com.au via Mimecast",
+        "contacted": "2026-05-15T11:49",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Hickory Group",
+        "email": "ben.williams@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "Ben Williams",
+        "title": "Construction Director - Victoria",
+        "notes": "Director de construccion Victoria - contrata sub en Melbourne",
+        "verified": "verified",
+        "verified_reason": "MX verified - hickory.com.au via Mimecast",
+        "contacted": "2026-05-15T11:24",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Hickory Group",
+        "email": "george.abraham@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "George Abraham",
+        "title": "Managing Director",
+        "notes": "Managing Director",
+        "verified": "verified",
+        "verified_reason": "MX verified - hickory.com.au via Mimecast",
+        "contacted": "2026-05-15T11:14",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Hickory Group",
+        "email": "michael.argyrou@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "Michael Argyrou",
+        "title": "Group CEO",
+        "notes": "CEO",
+        "verified": "verified",
+        "verified_reason": "MX verified - hickory.com.au via Mimecast",
+        "contacted": "2026-05-15T11:28",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_hansen-yuncken": [
+      {
+        "company": "Hansen Yuncken",
+        "email": "daniel.crawley@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "Daniel Crawley",
+        "title": "General Manager - Victoria",
+        "notes": "GM Victoria - contrata sub en Melbourne",
+        "verified": "verified",
+        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "contacted": "2026-05-15T12:07",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "george.bardas@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "George Bardas",
+        "title": "CEO",
+        "notes": "CEO",
+        "verified": "verified",
+        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "contacted": "2026-05-15T11:35",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "mark.rosenboom@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "Mark Rosenboom",
+        "title": "Executive General Manager",
+        "notes": "EGM - supervisa construccion",
+        "verified": "verified",
+        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "contacted": "2026-05-15T12:03",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_lendlease": [
+      {
+        "company": "Lendlease",
+        "email": "stephanie.graham@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "Stephanie Graham",
+        "title": "CEO, Construction",
+        "notes": "CEO de Construction. Fuente: lendlease.com",
+        "verified": "verified",
+        "verified_reason": "MX verified",
+        "contacted": "2026-05-15T11:21",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_laing-orourke": [
+      {
+        "company": "Laing O'Rourke",
+        "email": "cathal.orourke@laingorourke.com",
+        "website": "laingorourke.com",
+        "type": "constructora",
+        "contact": "Cathal O'Rourke",
+        "title": "Group CEO",
+        "notes": "CEO. Fuente: laingorourke.com",
+        "verified": "verified",
+        "verified_reason": "MX verified",
+        "contacted": "2026-05-15T11:14",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_downer-group": [
+      {
+        "company": "Downer Group",
+        "email": "doug.moss@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "Doug Moss",
+        "title": "COO Transport & Infrastructure",
+        "notes": "COO Transport - contrata sub para infraestructura",
+        "verified": "verified",
+        "verified_reason": "MX verified",
+        "contacted": "2026-05-15T11:57",
+        "contact_status": "sent",
+        "sent": true
+      },
+      {
+        "company": "Downer Group",
+        "email": "peter.tompkins@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "Peter Tompkins",
+        "title": "MD & CEO",
+        "notes": "CEO",
+        "verified": "verified",
+        "verified_reason": "MX verified",
+        "contacted": "2026-05-15T11:46",
+        "contact_status": "sent",
+        "sent": true
+      }
+    ],
+    "2026-05-15_batch6": [
+      {
+        "company": "CBRE Australia",
+        "email": "facilities@cbre.com.au",
+        "website": "cbre.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Contratan servicios de mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Frasers Property",
+        "email": "procurement@frasersproperty.com.au",
+        "website": "frasersproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Mirvac",
+        "email": "partnerships@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      }
+    ]
+  }
 }
