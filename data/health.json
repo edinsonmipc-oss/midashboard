@@ -66,10 +66,10 @@
       "url": "https://tradios.onrender.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.45,
+      "response_time_s": 0.49,
       "healthy": true,
-      "checked_at": "2026-05-15T06:00:00Z",
-      "last_checked": "2026-05-15T19:00"
+      "checked_at": "2026-05-16T06:00:00Z",
+      "last_checked": "2026-05-16T06:00"
     }
   ],
   "trading": {},
