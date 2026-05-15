@@ -307,7 +307,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "AVJennings",
@@ -317,7 +318,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Jellis Craig",
@@ -327,7 +329,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "PICA Group",
@@ -337,7 +343,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Kane Constructions",
@@ -347,7 +354,11 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Marshall White",
@@ -357,7 +368,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Frasers Property",
@@ -367,7 +379,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "LJ Hooker",
@@ -377,7 +393,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "McGrath Estate Agents",
@@ -387,7 +404,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Mirvac",
@@ -397,7 +418,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       }
     ],
     "2026-05-16_batch7": [
@@ -409,7 +434,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Goodman Group",
@@ -419,7 +445,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -429,7 +456,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Watpac",
@@ -439,7 +467,11 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Frasers Property",
@@ -449,7 +481,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Raine & Horne",
@@ -459,7 +492,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "risky",
+        "verified_reason": "DNS check failed",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Collins Simms",
@@ -469,7 +506,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "GPT Group",
@@ -479,7 +517,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "ACE Body Corporate",
@@ -489,7 +531,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan servicios regulares",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Mirvac",
@@ -499,7 +542,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

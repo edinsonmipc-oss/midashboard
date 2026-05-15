@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-15T08:00",
+  "updated": "2026-05-16T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-15T08:00",
+      "analyzed_at": "2026-05-16T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-15T08:00",
+          "analyzed_at": "2026-05-16T08:00",
           "title": "Paving Melbourne From $70/m² | 63 ★★★★★ Reviews | Antonio PrimeScape",
           "title_length": 68,
           "title_too_short": false,
@@ -64,12 +64,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-15T08:00",
+      "analyzed_at": "2026-05-16T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-15T08:00",
+          "analyzed_at": "2026-05-16T08:00",
           "title": "Prime Property Maintenance Melbourne | Decking, Fencing, Handyman",
           "title_length": 65,
           "title_too_short": false,

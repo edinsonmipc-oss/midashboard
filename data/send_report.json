@@ -668,6 +668,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-16",
+      "time": "2026-05-16T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@frasersproperty.com.au",
+          "company": "Frasers Property",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@mcgrath.com.au",
+          "company": "McGrath Estate Agents",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@jelliscraig.com.au",
+          "company": "Jellis Craig",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@rainehorne.com.au",
+          "company": "Raine & Horne",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {

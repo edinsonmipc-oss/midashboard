@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15T18:00:03.360640+00:00",
+  "updated_at": "2026-05-15T22:00:04.312762+00:00",
   "capital": {
     "balance": 9.67,
     "initial": 10.0,
@@ -17,34 +17,34 @@
   },
   "prices": {
     "BTC": {
-      "usd": 79408,
-      "change": -2.80582506084316
+      "usd": 78960,
+      "change": -2.9757206713620055
     },
     "ETH": {
-      "usd": 2227.79,
-      "change": -3.5187245204798407
+      "usd": 2216.3,
+      "change": -3.5024525790768077
     },
     "SOL": {
-      "usd": 89.7,
-      "change": -3.60758125617641
+      "usd": 89.06,
+      "change": -3.972666765228011
     }
   },
   "signals": [
     {
       "pair": "BTC",
       "action": "NEUTRAL",
-      "price": 79408
+      "price": 78960
     },
     {
       "pair": "ETH",
       "action": "NEUTRAL",
-      "price": 2227.79
+      "price": 2216.3
     },
     {
       "pair": "SOL",
       "action": "NEUTRAL",
-      "price": 89.7
+      "price": 89.06
     }
   ],
-  "aud_usd": 0.7159031404687252
+  "aud_usd": 0.7150999075526271
 }
