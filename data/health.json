@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
   "updated": "2026-05-17T08:00",
-  "checked_at": "2026-05-14T22:01:58Z",
+  "checked_at": "2026-05-16T22:00:30Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,9 +9,9 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.92,
+      "response_time_s": 1.02,
       "healthy": true,
-      "checked_at": "2026-05-15T22:00:31Z",
+      "checked_at": "2026-05-16T22:00:30Z",
       "last_checked": "2026-05-17T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
@@ -36,9 +36,9 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.77,
+      "response_time_s": 0.84,
       "healthy": true,
-      "checked_at": "2026-05-15T22:00:31Z",
+      "checked_at": "2026-05-16T22:00:30Z",
       "last_checked": "2026-05-17T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
@@ -63,9 +63,9 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.82,
+      "response_time_s": 0.83,
       "healthy": true,
-      "checked_at": "2026-05-15T22:00:31Z",
+      "checked_at": "2026-05-16T22:00:30Z",
       "last_checked": "2026-05-17T08:00",
       "seo_metrics": {
         "pages_analyzed": 124,
@@ -113,22 +113,22 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 66515,
-    "checked_at": "2026-05-16T14:10:00Z",
+    "checked_at": "2026-05-16T22:00:30Z",
     "note": "Homepage restaurada (estaba vacía 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 146569,
-    "checked_at": "2026-05-16T14:10:00Z",
+    "size_bytes": 144163,
+    "checked_at": "2026-05-16T22:00:30Z",
     "note": "Todo OK: hero, CSS, OG tags, sitemap 371 URLs, robots.txt"
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 66704,
-    "checked_at": "2026-05-16T14:10:00Z",
+    "checked_at": "2026-05-16T22:00:30Z",
     "note": "Todo OK: CSS, OG tags, sitemap 74 URLs"
   },
-  "last_full_check": "2026-05-16T14:10:00Z"
+  "last_full_check": "2026-05-16T22:00:30Z"
 }
