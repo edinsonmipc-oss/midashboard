@@ -1,7 +1,7 @@
 #!/bin/bash
 HOST="153.92.8.188"
 USER="u228844205.toolshubpro"
-PASS="K7!mQ2#vL9@pX4$z"
+PASS="P8c$J5v#M2uX7aQ4"
 BASE="ftp://$HOST"
 
 # Create directories

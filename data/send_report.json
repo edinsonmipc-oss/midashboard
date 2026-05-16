@@ -780,6 +780,62 @@
           "status": "sent"
         }
       ]
+    },
+    {
+      "date": "2026-05-17",
+      "time": "2026-05-17T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "estimating@probuild.com.au",
+          "company": "Probuild",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@knightfrank.com.au",
+          "company": "Knight Frank Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@raywhite.com",
+          "company": "Ray White",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@jelliscraig.com.au",
+          "company": "Jellis Craig",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
     }
   ],
   "2026-05-09": {

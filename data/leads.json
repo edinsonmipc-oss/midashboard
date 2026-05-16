@@ -337,7 +337,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-16T08:00",
+        "contacted": "2026-05-17T08:00",
         "contact_status": "dry-run",
         "sent": false
       },
@@ -435,7 +435,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-16T08:00",
+        "contacted": "2026-05-17T08:00",
         "contact_status": "dry-run",
         "sent": false
       }
@@ -582,7 +582,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "ACE Body Corporate",
@@ -592,7 +596,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Metricon",
@@ -602,7 +607,11 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Savills Australia",
@@ -612,7 +621,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -622,7 +632,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "LJ Hooker",
@@ -632,7 +646,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Barry Plant",
@@ -642,7 +657,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Porter Davis",
@@ -652,7 +668,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "risky",
+        "verified_reason": "DNS check failed"
       },
       {
         "company": "Henley Homes",
@@ -662,7 +679,8 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Nelson Alexander",
@@ -672,7 +690,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ],
     "2026-05-17_batch9": [
@@ -684,7 +703,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Cbus Property",
@@ -694,7 +714,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Probuild",
@@ -704,7 +725,11 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "Goodman Group",
@@ -714,7 +739,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Knight Frank Australia",
@@ -724,7 +750,11 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T08:00",
+        "contact_status": "dry-run",
+        "sent": false
       },
       {
         "company": "GPT Group",
@@ -734,7 +764,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Century 21",
@@ -744,7 +775,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Barry Plant",
@@ -754,7 +786,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "ISPT",
@@ -764,7 +797,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Fletchers Real Estate",
@@ -774,7 +808,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       }
     ]
   }

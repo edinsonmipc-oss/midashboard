@@ -1,0 +1,34 @@
+{
+  "date": "2026-05-17",
+  "time": "07:37",
+  "status": "ok",
+  "sites": {
+    "antoniopaving": {
+      "status": "ok",
+      "issues": [],
+      "checks": {
+        "links": "ok",
+        "images": "ok",
+        "seo": "ok",
+        "template": "ok"
+      }
+    },
+    "primeproperty": {
+      "status": "ok",
+      "issues": [],
+      "checks": {
+        "images": "ok",
+        "seo": "ok",
+        "template": "ok"
+      }
+    },
+    "toolshubpro": {
+      "status": "ok",
+      "issues": [],
+      "checks": {
+        "seo": "ok"
+      }
+    }
+  },
+  "summary": "✅ All 3 sites clean — zero issues"
+}

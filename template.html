@@ -74,7 +74,7 @@ a{color:inherit;text-decoration:none}
 .log-list{display:flex;flex-direction:column;gap:0}
 .log-item{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--surface-border);font-size:11px}
 .log-item:last-child{border-bottom:none}.log-date{color:var(--fg4);flex-shrink:0;width:90px}.log-msg{color:var(--fg2)}
-@media(max-width:768px){.sb{width:100%;height:auto;min-height:auto;position:relative;left:auto;top:auto;border-right:none;border-bottom:1px solid var(--surface-border);flex-direction:row;padding:8px 12px;overflow-x:auto;gap:4px}.sb-brand{padding:0;border:none;flex-shrink:0;gap:6px}.sb-brand-icon{width:24px;height:24px;font-size:12px}.sb-brand-text{font-size:12px}.sb-brand-sub{display:none}.sb-nav{flex-direction:row;padding:0;overflow-x:auto;gap:0;flex:1}.sb-section{display:none}.sb-item{padding:6px 10px;font-size:11px;white-space:nowrap}.sb-footer{display:none}.main{margin-left:0;padding:12px 12px 40px}.stats{grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:12px}.stat-val{font-size:18px}.grid3,.grid2,.grid4{grid-template-columns:1fr 1fr}.agent-grid{grid-template-columns:repeat(3,1fr)}.trade-grid{grid-template-columns:1fr 1fr}.biz-grid{grid-template-columns:1fr}}
+@media(max-width:768px){body{flex-direction:column}.sb{width:100%;height:auto;min-height:auto;position:relative;left:auto;top:auto;border-right:none;border-bottom:1px solid var(--surface-border);flex-direction:row;padding:8px 12px;overflow-x:auto;gap:4px}.sb-brand{padding:0;border:none;flex-shrink:0;gap:6px}.sb-brand-icon{width:24px;height:24px;font-size:12px}.sb-brand-text{font-size:12px}.sb-brand-sub{display:none}.sb-nav{flex-direction:row;padding:0;overflow-x:auto;gap:0;flex:1}.sb-section{display:none}.sb-item{padding:6px 10px;font-size:11px;white-space:nowrap}.sb-footer{display:none}.main{margin-left:0;padding:12px 12px 40px}.stats{grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:12px}.stat-val{font-size:18px}.grid3,.grid2,.grid4{grid-template-columns:1fr 1fr}.agent-grid{grid-template-columns:repeat(3,1fr)}.trade-grid{grid-template-columns:1fr 1fr}.biz-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.grid3,.grid2,.grid4{grid-template-columns:1fr}.agent-grid{grid-template-columns:repeat(2,1fr)}.trade-grid{grid-template-columns:1fr}.sb-item{font-size:10px;padding:4px 8px}}
 </style>
 
@@ -91,6 +91,7 @@ a{color:inherit;text-decoration:none}
     <div class="sb-section">Business</div>
     <a class="sb-item" href="#projects"><span class="sb-item-icon">🏗️</span> Projects</a>
     <a class="sb-item" href="#agents"><span class="sb-item-icon">🤖</span> Agents</a>
+    <a class="sb-item" href="#qa"><span class="sb-item-icon">✅</span> QA Scan</a>
     <a class="sb-item" href="#leads"><span class="sb-item-icon">🎯</span> Leads</a>
     <div class="sb-section">Activity</div>
     <a class="sb-item" href="#log"><span class="sb-item-icon">📋</span> Activity Log</a>
@@ -117,6 +118,15 @@ a{color:inherit;text-decoration:none}
   <div class="biz-grid" id="bizGrid"></div>
   <div class="section-title" id="agents">🤖 AI Agents</div>
   <div class="agent-grid" id="agentsGrid"></div>
+
+  <div class="section-title" id="qa">✅ Daily QA Scan</div>
+  <div id="qaSection">
+    <div class="card" style="padding:16px;margin-bottom:12px;">
+      <div id="qaSummary" style="font-size:13px;color:var(--fg2);">Loading...</div>
+      <div id="qaDetails" style="margin-top:12px;"></div>
+    </div>
+  </div>
+
   <div class="section-title" id="leads">🎯 Recent Leads</div>
   <div class="card">
     <table class="leads-table"><tbody id="leadsList"></tbody></table>
@@ -168,6 +178,23 @@ function init(){
   });}
   var agentsGrid=document.getElementById('agentsGrid');
   if(typeof AGENTS_DATA!=='undefined'){AGENTS_DATA.forEach(function(a){agentsGrid.innerHTML+='<div class="card agent-card">'+'<div class="agent-icon">'+a.icon+'</div>'+'<div class="agent-info">'+'<div class="agent-name">'+a.name+'</div>'+'<div class="agent-meta">'+a.jobs+' jobs·Last: '+a.last+'</div>'+'</div>'+'<div class="agent-status active">Active</div>'+'</div>';});}
+  
+  // QA Scan
+  if(typeof QA_DATA!=='undefined'){
+    var q=QA_DATA;
+    document.getElementById('qaSummary').innerHTML=(q.status==='ok'?'✅ All Clean':'⚠️ Issues Found')+' — '+q.summary;
+    var det='';
+    Object.keys(q.sites).forEach(function(s){
+      var site=q.sites[s];
+      det+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px;">';
+      det+='<span>'+(site.status==='ok'?'✅':'⚠️')+'</span>';
+      det+='<span style="font-weight:600;">'+s+'</span>';
+      det+='<span style="color:var(--fg3);font-size:11px;">'+Object.keys(site.checks||{}).filter(function(k){return site.checks[k]!=='ok'}).join(', ')+'</span>';
+      det+='<span style="margin-left:auto;font-size:10px;color:var(--fg3);">'+q.date+' '+q.time+'</span>';
+      det+='</div>';
+    });
+    document.getElementById('qaDetails').innerHTML=det;
+  }
   var leadsList=document.getElementById('leadsList');
   if(typeof LEADS!=='undefined'&&LEADS.length>0){LEADS.slice(0,15).forEach(function(l){leadsList.innerHTML+='<tr>'+'<td><span class="lead-status '+(l.contacted?'contacted':'new')+'">'+(l.contacted?'✅':'🆕')+'</span></td>'+'<td class="lead-email">'+l.email+'</td>'+'<td class="lead-date">'+fmtDate(l.date)+'</td>'+'</tr>';});}else{leadsList.innerHTML='<tr><td colspan="3" style="padding:20px;text-align:center;color:var(--fg3);font-size:12px">No leads yet</td></tr>';}
   var logList=document.getElementById('logList');
