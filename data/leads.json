@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-16T19:00",
-  "total_leads": 50,
+  "updated": "2026-05-17T07:00",
+  "total_leads": 60,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -672,6 +672,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-17_batch9": [
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "website": "cbusproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "website": "goodman.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Knight Frank Australia",
+        "email": "property@knightfrank.com.au",
+        "website": "knightfrank.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Multiples propiedades en su cartera",
+        "verified": "unknown"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "website": "century21.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Barry Plant",
+        "email": "property@barryplant.com.au",
+        "website": "barryplant.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
+        "website": "ispt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Fletchers Real Estate",
+        "email": "property@fletcher.com.au",
+        "website": "fletcher.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
         "verified": "unknown"
       }
     ]
