@@ -724,6 +724,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-16",
+      "time": "2026-05-16T10:32",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@avjennings.com.au",
+          "company": "AVJennings",
+          "business": "antoniopaving",
+          "status": "sent"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "projects@marshallwhite.com.au",
+          "company": "Marshall White",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@jll.com.au",
+          "company": "JLL Australia",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@goodman.com",
+          "company": "Goodman Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@cbusproperty.com.au",
+          "company": "Cbus Property",
+          "business": "primeproperty",
+          "status": "sent"
+        }
+      ]
     }
   ],
   "2026-05-09": {

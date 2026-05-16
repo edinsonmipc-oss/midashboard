@@ -308,7 +308,10 @@
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:05",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "AVJennings",
@@ -319,7 +322,10 @@
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:02",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Jellis Craig",
@@ -344,7 +350,10 @@
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Kane Constructions",
@@ -369,7 +378,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Frasers Property",
@@ -394,7 +406,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "McGrath Estate Agents",
@@ -435,7 +450,10 @@
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Goodman Group",
@@ -446,7 +464,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Cbus Property",
@@ -457,7 +478,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Watpac",
@@ -482,7 +506,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-16T10:06",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Raine & Horne",
