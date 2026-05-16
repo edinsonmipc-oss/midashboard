@@ -90,10 +90,10 @@
       "url": "https://tradios.onrender.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.49,
+      "response_time_s": 0.43,
       "healthy": true,
-      "checked_at": "2026-05-16T06:00:00Z",
-      "last_checked": "2026-05-16T19:00"
+      "checked_at": "2026-05-16T20:01:03Z",
+      "last_checked": "2026-05-16T20:00"
     }
   ],
   "trading": {},
@@ -108,5 +108,27 @@
   "crawl_404": {
     "checked_at": "2026-05-16T08:00:06.637208",
     "status": "ok"
-  }
+  },
+  "primepropertymaintenance": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 66515,
+    "checked_at": "2026-05-16T14:10:00Z",
+    "note": "Homepage restaurada (estaba vac\u00eda 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
+  },
+  "antoniopaving": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 146569,
+    "checked_at": "2026-05-16T14:10:00Z",
+    "note": "Todo OK: hero, CSS, OG tags, sitemap 371 URLs, robots.txt"
+  },
+  "toolshubpro": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 66704,
+    "checked_at": "2026-05-16T14:10:00Z",
+    "note": "Todo OK: CSS, OG tags, sitemap 74 URLs"
+  },
+  "last_full_check": "2026-05-16T14:10:00Z"
 }
