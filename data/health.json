@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-17T08:00",
+  "updated": "2026-05-16T22:01",
   "checked_at": "2026-05-16T22:00:30Z",
   "total_sites": 4,
   "sites": [
@@ -23,7 +23,7 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-16T08:00:06.637208",
+        "checked_at": "2026-05-16T22:01:39.242035",
         "pages_checked": 371,
         "pages_ok": 371,
         "pages_with_issues": 0,
@@ -50,7 +50,7 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-16T08:00:06.637208",
+        "checked_at": "2026-05-16T22:01:39.242035",
         "pages_checked": 974,
         "pages_ok": 974,
         "pages_with_issues": 0,
@@ -77,9 +77,9 @@
       },
       "seo_score": 100.0,
       "crawl_check": {
-        "checked_at": "2026-05-16T08:00:06.637208",
-        "pages_checked": 124,
-        "pages_ok": 124,
+        "checked_at": "2026-05-16T22:01:39.242035",
+        "pages_checked": 74,
+        "pages_ok": 74,
         "pages_with_issues": 0,
         "issues": [],
         "healthy": true
@@ -106,7 +106,7 @@
     "total_sent": 29
   },
   "crawl_404": {
-    "checked_at": "2026-05-16T08:00:06.637208",
+    "checked_at": "2026-05-16T22:01:39.242035",
     "status": "ok"
   },
   "primepropertymaintenance": {
@@ -114,7 +114,7 @@
     "http": 200,
     "size_bytes": 66515,
     "checked_at": "2026-05-16T22:00:30Z",
-    "note": "Homepage restaurada (estaba vacía 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
+    "note": "Homepage restaurada (estaba vac\u00eda 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
   },
   "antoniopaving": {
     "status": "ok",

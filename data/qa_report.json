@@ -1,34 +1,47 @@
 {
   "date": "2026-05-17",
-  "time": "07:37",
-  "status": "ok",
+  "time": "08:00",
   "sites": {
     "antoniopaving": {
-      "status": "ok",
-      "issues": [],
-      "checks": {
-        "links": "ok",
-        "images": "ok",
-        "seo": "ok",
-        "template": "ok"
-      }
+      "status": "issues",
+      "issues": [
+        {
+          "severity": "warning",
+          "agent": "image-optimizer",
+          "detail": "12 oversized images found (>80KB): pool-paving.webp (88KB), decking.webp (92KB), brick-paving-4.webp (82KB), project-brick-border.webp (139KB), landscaping-2.webp (183KB), project-landscaping-turf.webp (171KB), project-deck-landscaping.webp (152KB), patio-paving-2.webp (155KB), concrete-path.webp (85KB), bluestone-paving-2.webp (106KB), crazy-paving-garden.webp (210KB)"
+        }
+      ]
     },
     "primeproperty": {
-      "status": "ok",
-      "issues": [],
-      "checks": {
-        "images": "ok",
-        "seo": "ok",
-        "template": "ok"
-      }
+      "status": "issues",
+      "issues": [
+        {
+          "severity": "info",
+          "agent": "seo-guardian",
+          "detail": "/about.html missing schema markup"
+        }
+      ]
     },
     "toolshubpro": {
-      "status": "ok",
-      "issues": [],
-      "checks": {
-        "seo": "ok"
-      }
+      "status": "issues",
+      "issues": [
+        {
+          "severity": "warning",
+          "agent": "seo-guardian",
+          "detail": "Homepage title too long (77 chars)"
+        },
+        {
+          "severity": "warning",
+          "agent": "seo-guardian",
+          "detail": "Homepage missing og:image"
+        },
+        {
+          "severity": "info",
+          "agent": "seo-guardian",
+          "detail": "/about.html missing schema markup"
+        }
+      ]
     }
   },
-  "summary": "✅ All 3 sites clean — zero issues"
+  "summary": "antoniopaving: 12 oversized images | primeproperty: 1 minor SEO issue | toolshubpro: 2 SEO warnings + 1 minor issue"
 }
