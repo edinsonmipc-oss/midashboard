@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-17T19:00",
-  "total_leads": 70,
+  "updated": "2026-05-18T07:00",
+  "total_leads": 80,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -941,6 +941,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-18_batch11": [
+      {
+        "company": "Mirvac",
+        "email": "partnerships@mirvac.com",
+        "website": "mirvac.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Fletchers Real Estate",
+        "email": "property@fletcher.com.au",
+        "website": "fletcher.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "website": "raywhite.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Multiplex",
+        "email": "subcontractors@multiplex.com",
+        "website": "multiplex.global",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Dexus",
+        "email": "leasing@dexus.com",
+        "website": "dexus.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "website": "laingorourke.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Strata Title Management",
+        "email": "info@stratatitle.com.au",
+        "website": "stratatitle.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Buscan contractors para mantenimiento",
         "verified": "unknown"
       }
     ]
