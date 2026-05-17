@@ -65,7 +65,7 @@
   --mono:'JetBrains Mono',monospace;
 }
 html{height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{min-height:100vh;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.5;overflow:hidden;display:flex;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto;text-shadow:0 0 0 rgba(0,0,0,0)}
+body{min-height:100vh;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.5;overflow:hidden;display:flex;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;font-family:inherit}
 ::-webkit-scrollbar{width:4px;height:4px}
@@ -463,20 +463,28 @@ button{cursor:pointer;font-family:inherit}
   .content{padding:14px 16px 40px}
   .topbar{padding:0 16px}
   .site-meta{flex-wrap:wrap;gap:8px}
+  .sidebar-item{font-size:15px;padding:12px 16px}
+  .stat-value{font-size:22px}
+  .topbar-title{font-size:18px}
 }
 @media(max-width:600px){
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:6px}
-  .stat-card{padding:12px 14px}
-  .stat-value{font-size:18px}
-  .agents-grid{grid-template-columns:repeat(2,1fr);gap:6px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .stat-card{padding:14px 16px}
+  .stat-value{font-size:20px}
+  .agents-grid{grid-template-columns:repeat(2,1fr);gap:8px}
   .trade-grid{grid-template-columns:1fr}
   .topbar-sub{display:none}
   .log-item{flex-wrap:wrap;gap:4px}
   .doc-head{flex-direction:column}
-  .leads-table{font-size:10px}
-  .leads-table th,.leads-table td{padding:6px 8px}
+  .leads-table{font-size:11px}
+  .leads-table th,.leads-table td{padding:8px 10px}
   .biz-head{flex-wrap:wrap}
   .sidebar{width:100%}
+  .sidebar-item{font-size:16px;padding:14px 18px}
+  .site-card,.stat-card,.biz-card{padding:14px 16px}
+  .stat-label{font-size:11px}
+  .stat-sub{font-size:10px}
+  .site-name{font-size:14px}
 }
 </style>
 </head>
