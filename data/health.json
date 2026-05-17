@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-17T10:20",
+  "updated": "2026-05-17T19:00",
   "checked_at": "2026-05-16T22:00:30Z",
   "total_sites": 4,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 1.02,
       "healthy": true,
       "checked_at": "2026-05-16T22:00:30Z",
-      "last_checked": "2026-05-17T08:00",
+      "last_checked": "2026-05-17T19:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 47,
@@ -39,7 +39,7 @@
       "response_time_s": 0.84,
       "healthy": true,
       "checked_at": "2026-05-16T22:00:30Z",
-      "last_checked": "2026-05-17T08:00",
+      "last_checked": "2026-05-17T19:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 50,
@@ -66,7 +66,7 @@
       "response_time_s": 0.83,
       "healthy": true,
       "checked_at": "2026-05-16T22:00:30Z",
-      "last_checked": "2026-05-17T08:00",
+      "last_checked": "2026-05-17T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -93,7 +93,7 @@
       "response_time_s": 0.43,
       "healthy": true,
       "checked_at": "2026-05-16T20:01:03Z",
-      "last_checked": "2026-05-17T08:00"
+      "last_checked": "2026-05-17T19:00"
     }
   ],
   "trading": {},
@@ -131,7 +131,7 @@
     "http": 200,
     "size_bytes": 66515,
     "checked_at": "2026-05-16T22:00:30Z",
-    "note": "Homepage restaurada (estaba vac\u00eda 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
+    "note": "Homepage restaurada (estaba vacía 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
   },
   "antoniopaving": {
     "status": "ok",
