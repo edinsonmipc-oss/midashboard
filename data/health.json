@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-17T19:00",
-  "checked_at": "2026-05-16T22:00:30Z",
+  "updated": "2026-05-17T20:00",
+  "checked_at": "2026-05-17T20:00:58Z",
   "total_sites": 4,
   "sites": [
     {
@@ -89,11 +89,12 @@
       "name": "tradios.onrender.com",
       "url": "https://tradios.onrender.com",
       "status": "online",
-      "status_code": 200,
+      "status_code": 307,
+      "redirect_follows_to_200": true,
       "response_time_s": 0.43,
       "healthy": true,
-      "checked_at": "2026-05-16T20:01:03Z",
-      "last_checked": "2026-05-17T19:00"
+      "checked_at": "2026-05-17T20:00:58Z",
+      "last_checked": "2026-05-17T20:00"
     }
   ],
   "trading": {},
