@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="theme-color" content="#03030a"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <title>Hermes OS — Command Center</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════
@@ -54,11 +61,11 @@
   --header-h:56px;
   --transition:.25s cubic-bezier(.34,1.56,.64,1);
   --transition-fast:.15s ease;
-  --font:'Inter',-apple-system,sans-serif;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
   --mono:'JetBrains Mono',monospace;
 }
 html{height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{min-height:100vh;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:13px;line-height:1.5;overflow:hidden;display:flex}
+body{min-height:100vh;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:13px;line-height:1.5;overflow:hidden;display:flex;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;font-family:inherit}
 ::-webkit-scrollbar{width:4px;height:4px}
