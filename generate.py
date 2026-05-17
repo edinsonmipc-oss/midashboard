@@ -78,6 +78,7 @@ def generate():
     JS_DATA_BLOCK += 'var BIZ_EMOJIS = ' + js(BIZ_EMOJIS) + ';\n'
     JS_DATA_BLOCK += 'var TRADING_DATA = ' + js(health.get("trading",{})) + ';\n'
     JS_DATA_BLOCK += 'var QA_DATA = ' + js(load_json("qa_report.json")) + ';\n'
+    JS_DATA_BLOCK += 'var DOCS_DATA = ' + js(load_json("documents.json")) + ';\n'
     JS_DATA_BLOCK += 'var UPDATED = ' + js(health.get("updated","")) + ';\n'
     JS_DATA_BLOCK += '// ── End injected data ──\n'
 

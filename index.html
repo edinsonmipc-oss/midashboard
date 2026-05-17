@@ -171,6 +171,8 @@ a{color:inherit;text-decoration:none}
     <button class="sb-item" data-tab="qa"><span class="sb-item-icon">✅</span> QA Scan</button>
     <div class="sb-label">Data</div>
     <button class="sb-item" data-tab="leads"><span class="sb-item-icon">🎯</span> Leads</button>
+    <div class="sb-label">Files</div>
+    <button class="sb-item" data-tab="docs"><span class="sb-item-icon">📁</span> Documents</button>
     <button class="sb-item" data-tab="log"><span class="sb-item-icon">📋</span> Activity</button>
   </nav>
   <div class="sb-footer">Tradie SitePilot &copy; 2026</div>
@@ -233,6 +235,12 @@ a{color:inherit;text-decoration:none}
     <div class="leads-wrap"><table class="leads-table"><tbody id="leadsList"></tbody></table></div>
   </div>
 
+  <!-- TAB: Documents -->
+  <div class="tab" id="tab-docs">
+    <div class="sec-title">📁 Business Documents</div>
+    <div id="docsGrid"></div>
+  </div>
+
   <!-- TAB: Activity -->
   <div class="tab" id="tab-log">
     <div class="sec-title">📋 Activity Log</div>
@@ -242,7 +250,7 @@ a{color:inherit;text-decoration:none}
 
 <script src="data.js"></script>
 <script>
-var TAB_NAMES={overview:'Dashboard',sites:'Sites & Trading',projects:'Projects',agents:'AI Agents',qa:'QA Scan',leads:'Leads',log:'Activity'};
+var TAB_NAMES={overview:'Dashboard',sites:'Sites & Trading',projects:'Projects',agents:'AI Agents',qa:'QA Scan',leads:'Leads',docs:'Documents',log:'Activity'};
 
 function fmtNum(n){if(n===undefined||n===null)return'—';if(Math.abs(n)>=1e6)return(n/1e6).toFixed(1)+'M';if(Math.abs(n)>=1e3)return(n/1e3).toFixed(1)+'k';return n.toLocaleString()}
 function fmtDate(d){if(!d)return'';var p=d.split('T')[0].split('-');return p[2]+'/'+p[1]+'/'+p[0].slice(2)}
@@ -366,8 +374,34 @@ function init(){
     leadsList.innerHTML='<tr><td colspan="4" class="empty">No leads yet</td></tr>';
   }
 
+  // Documents
+  var docsGrid=document.getElementById('docsGrid');
+  if(typeof DOCS_DATA!=='undefined'&&DOCS_DATA.length>0){
+    docsGrid.innerHTML='';
+    DOCS_DATA.forEach(function(d){
+      var icon=d.type==='insurance'?'🛡️':'📜';
+      var expHtml='';
+      if(d.expiry&&d.expiry!=='N/A (documento de referencia)'){
+        expHtml='<div style="font-size:10px;display:flex;align-items:center;gap:4px"><span style="color:var(--fg4)">⏳ Vence:</span> <span style="color:var(--yellow);font-weight:600">'+d.expiry+'</span></div>';
+      }
+      docsGrid.innerHTML+='<div style="background:var(--surface);border:1px solid var(--border-light);border-radius:var(--rad);padding:14px 16px;margin-bottom:8px">'
+        +'<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">'
+        +'<span style="font-size:20px">'+icon+'</span>'
+        +'<div style="flex:1"><div style="font-size:13px;font-weight:600">'+d.name+'</div>'
+        +'<span style="font-size:9px;color:var(--fg4);background:var(--border-light);padding:2px 7px;border-radius:4px">'+d.category+'</span></div>'
+        +expHtml
+        +'</div>'
+        +'<div style="font-size:11px;color:var(--fg2);line-height:1.5;padding:8px 10px;background:var(--bg2);border-radius:6px;margin-bottom:6px">'
+        +'<strong style="color:var(--fg)">📋 Cubre:</strong> '+d.covers+'</div>'
+        +(d.policy?'<div style="font-size:10px;color:var(--fg4)">🔑 Póliza: <strong style="color:var(--fg3)">'+d.policy+'</strong></div>':'')
+        +(d.holder?'<div style="font-size:10px;color:var(--fg4)">👤 Titular: '+d.holder+'</div>':'')
+        +'</div>';
+    });
+  }else{
+    docsGrid.innerHTML='<div class="empty">No documents uploaded yet</div>';
+  }
+
   // Log
-  var logList=document.getElementById('logList');
   if(typeof LOG_DATA!=='undefined'){
     LOG_DATA.slice(0,15).forEach(function(l){
       logList.innerHTML+='<div class="log-item"><span class="log-date">'+fmtDate(l.date)+'</span><span class="log-msg">'+(l.message||l.text||l.description||'')+'</span></div>';

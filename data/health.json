@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-16T22:01",
+  "updated": "2026-05-17T10:20",
   "checked_at": "2026-05-16T22:00:30Z",
   "total_sites": 4,
   "sites": [
@@ -131,7 +131,7 @@
     "http": 200,
     "size_bytes": 66515,
     "checked_at": "2026-05-16T22:00:30Z",
-    "note": "Homepage restaurada (estaba vacía 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
+    "note": "Homepage restaurada (estaba vac\u00eda 0 bytes), ahora 66.5KB con hero, OG tags, CSS"
   },
   "antoniopaving": {
     "status": "ok",

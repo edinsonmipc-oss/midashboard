@@ -534,7 +534,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:01",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "GPT Group",
@@ -559,7 +562,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan servicios regulares",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:01",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Mirvac",
@@ -570,7 +576,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-16_batch8": [
@@ -597,7 +606,10 @@
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Metricon",
@@ -622,7 +634,10 @@
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Century 21",
@@ -647,7 +662,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Barry Plant",
@@ -658,7 +676,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Porter Davis",
@@ -680,7 +701,10 @@
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:01",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Nelson Alexander",
@@ -691,7 +715,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       }
     ],
     "2026-05-17_batch9": [
@@ -704,7 +731,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-17T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Cbus Property",
