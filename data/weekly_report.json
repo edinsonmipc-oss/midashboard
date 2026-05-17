@@ -1,1 +1,82 @@
-{"report_date": "2026-05-11", "http_status": {"antoniopaving.com": "200", "primepropertymaintenance.au": "200", "toolshubpro.com.au": "200", "tradios.onrender.com": "200"}, "404_audit": {"antoniopaving.com": 0, "primepropertymaintenance.au": 0, "toolshubpro.com.au": 0}, "gumroad_sales": {"total_sales": 0, "total_revenue": 0.00}, "tool_counts": {"toolshubpro": 81}, "page_counts": {"primepropertymaintenance.au": 968}, "cron_health": [{"name": "Tradios App - Health Check Diario", "status": "ok", "error": "No errors"}, {"name": "Dashboard Auto-Update", "status": "ok", "error": "No errors"}, {"name": "Email Outreach - 8 emails diarios", "status": "error", "error": "RuntimeError: Error code: 401 - {'error': {'message': 'Missing Authentication header', 'code': 401}}"}, {"name": "gumroad-sales-monitor", "status": "ok", "error": "No errors"}, {"name": "Marketing - Weekly SEO Audit", "status": "error", "error": "RuntimeError: Error code: 401 - {'error': {'message': 'Missing Authentication header', 'code': 401}}"}, {"name": "Marketing - Daily 404 Check", "status": "ok", "error": "No errors"}, {"name": "Daily Site Monitor — All 3 Sites", "status": "ok", "error": "No errors"}, {"name": "Weekly Business Ecosystem Report", "status": "ok", "error": "No errors"}, {"name": "Trading Daily Report to Telegram", "status": "ok", "error": "No errors"}, {"name": "dashboard-deploy", "status": "ok", "error": "No errors"}] , "issues_summary": [{"site": "Email Outreach - 8 emails diarios", "issue": "401 Error due to Missing Authentication Header"}, {"site": "Marketing - Weekly SEO Audit", "issue": "401 Error due to Missing Authentication Header"}] }
+{
+  "report_date": "2026-05-18",
+  "http_status": {
+    "antoniopaving.com": "200",
+    "primepropertymaintenance.au": "200",
+    "toolshubpro.com.au": "200",
+    "tradios.onrender.com": "200"
+  },
+  "ssl_expiry_days": {
+    "antoniopaving.com": 83,
+    "primepropertymaintenance.au": 35,
+    "toolshubpro.com.au": 62,
+    "tradios.onrender.com": 39
+  },
+  "404_audit": {
+    "antoniopaving.com": 0,
+    "primepropertymaintenance.au": 0,
+    "toolshubpro.com.au": 0
+  },
+  "gumroad_sales": {
+    "total_sales": 0,
+    "total_revenue": 0.00,
+    "products_live": 4,
+    "products_draft": 6
+  },
+  "tool_counts": {
+    "toolshubpro_tool_files": 60,
+    "toolshubpro_sitemap_total": 74
+  },
+  "page_counts": {
+    "antoniopaving.com": 373,
+    "primepropertymaintenance.au": 976,
+    "toolshubpro.com.au": 74
+  },
+  "cron_health": [
+    {"name": "Tradios App - Health Check Diario", "status": "ok", "error": "No errors"},
+    {"name": "Dashboard Auto-Update", "status": "ok", "error": "No errors"},
+    {"name": "Email Outreach - 8 emails diarios", "status": "ok", "error": "No errors"},
+    {"name": "gumroad-sales-monitor", "status": "ok", "error": "No errors"},
+    {"name": "Marketing - Weekly SEO Audit", "status": "ok", "error": "No errors"},
+    {"name": "Marketing - Daily 404 Check", "status": "ok", "error": "No errors"},
+    {"name": "Daily Site Monitor — All 3 Sites", "status": "ok", "error": "No errors"},
+    {"name": "Weekly Business Ecosystem Report", "status": "ok", "error": "No errors"},
+    {"name": "dashboard-deploy", "status": "ok", "error": "No errors"},
+    {"name": "gumroad-sales-monitor", "status": "ok", "error": "No errors"},
+    {"name": "weekly-income-report", "status": "ok", "error": "No errors"},
+    {"name": "daily-site-health", "status": "ok", "error": "No errors"},
+    {"name": "auto-blog-content", "status": "ok", "error": "No errors"},
+    {"name": "Weekly Traffic Builder — 3 Sites", "status": "ok", "error": "No errors"},
+    {"name": "ecosystem-health-report", "status": "never_run", "error": "Created but never executed"},
+    {"name": "R&D Sprint — Build/Improve 1 Tool", "status": "error", "error": "FTP credentials invalid — tool built (Stamp Duty TAS) but not deployed"},
+    {"name": "Sales — Lead Gen + Reddit Scout", "status": "ok", "error": "No errors"},
+    {"name": "AI Lab — Innovation Weekly", "status": "ok", "error": "No errors"},
+    {"name": "Auto-Fix Monitor 3 Sitios", "status": "ok", "error": "No errors"},
+    {"name": "QA-Squad Daily Scan (Dashboard)", "status": "ok", "error": "No errors"},
+    {"name": "crypto-trading-pipeline", "status": "ok", "error": "No errors"}
+  ],
+  "credential_pool": {
+    "status": "healthy",
+    "deepseek_creds": 1,
+    "all_ok": true
+  },
+  "trading_signals": {
+    "BTC": "HOLD (conf: 25)",
+    "ETH": "HOLD (conf: 25)",
+    "balance": 9.67,
+    "in_trade": true
+  },
+  "issues_summary": [
+    {
+      "site": "R&D Sprint — Build/Improve 1 Tool",
+      "issue": "FTP credentials for Hostinger (153.92.8.188) are invalid — Stamp Duty Calculator TAS built but not deployed. Password needs reset via hPanel.",
+      "severity": "low"
+    },
+    {
+      "site": "ecosystem-health-report",
+      "issue": "Scheduled Mon 9am — hasn't run yet this cycle.",
+      "severity": "info"
+    }
+  ],
+  "overall_health": "green"
+}
