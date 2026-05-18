@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-18T07:00",
-  "total_leads": 80,
+  "updated": "2026-05-18T19:00",
+  "total_leads": 90,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -1129,6 +1129,108 @@
         "notes": "Buscan contractors para mantenimiento",
         "verified": "verified",
         "verified_reason": "Has MX records"
+      }
+    ],
+    "2026-05-18_batch12": [
+      {
+        "company": "PICA Group",
+        "email": "info@picagroup.com.au",
+        "website": "picagroup.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Watpac",
+        "email": "projects@watpac.com.au",
+        "website": "watpac.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "website": "downergroup.com",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "Multiplex",
+        "email": "subcontractors@multiplex.com",
+        "website": "multiplex.global",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Grandes proyectos de construcción en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "website": "carltonhomes.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "website": "goodman.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "website": "johnholland.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
       }
     ]
   }
