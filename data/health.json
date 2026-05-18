@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-18T22:01",
+  "updated": "2026-05-18T22:02",
   "checked_at": "2026-05-18T22:01:07Z",
   "total_sites": 4,
   "sites": [
@@ -23,9 +23,9 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T20:01:26Z",
-        "pages_checked": 373,
-        "pages_ok": 373,
+        "checked_at": "2026-05-18T22:02:06Z",
+        "pages_checked": 372,
+        "pages_ok": 372,
         "pages_with_issues": 0,
         "issues": [],
         "healthy": true
@@ -50,7 +50,7 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T20:01:26Z",
+        "checked_at": "2026-05-18T22:02:06Z",
         "pages_checked": 976,
         "pages_ok": 976,
         "pages_with_issues": 0,
@@ -77,7 +77,7 @@
       },
       "seo_score": 100.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T20:01:26Z",
+        "checked_at": "2026-05-18T22:02:06Z",
         "pages_checked": 74,
         "pages_ok": 74,
         "pages_with_issues": 0,
@@ -107,7 +107,7 @@
     "total_sent": 36
   },
   "crawl_404": {
-    "checked_at": "2026-05-18T20:01:26Z",
+    "checked_at": "2026-05-18T22:02:06Z",
     "status": "ok"
   },
   "ssl_expiry": {
