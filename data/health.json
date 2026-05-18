@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-19T08:00",
-  "checked_at": "2026-05-18T20:02:55Z",
+  "updated": "2026-05-18T22:01",
+  "checked_at": "2026-05-18T22:01:07Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.67,
+      "response_time_s": 0.68,
       "healthy": true,
-      "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T08:00",
+      "checked_at": "2026-05-18T22:01:07Z",
+      "last_checked": "2026-05-18T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.83,
+      "response_time_s": 0.91,
       "healthy": true,
-      "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T08:00",
+      "checked_at": "2026-05-18T22:01:07Z",
+      "last_checked": "2026-05-18T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -65,8 +65,8 @@
       "status_code": 200,
       "response_time_s": 0.79,
       "healthy": true,
-      "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T08:00",
+      "checked_at": "2026-05-18T22:01:07Z",
+      "last_checked": "2026-05-18T22:01",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -121,22 +121,22 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 64004,
-    "checked_at": "2026-05-18T20:02:55Z",
-    "note": "Todo OK: homepage 64KB, CSS (premium.css 21KB), OG tags. SSL 35d."
+    "checked_at": "2026-05-18T22:01:07Z",
+    "note": "Todo OK: homepage 64KB, CSS (premium.css 21KB), OG tags. SSL 35d. Response 0.91s."
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 20040,
-    "checked_at": "2026-05-18T20:02:55Z",
-    "note": "Todo OK: hero, CSS inline+external, OG tags, sitemap 59KB, robots.txt. Page rediseñada (~20KB)."
+    "size_bytes": 25373,
+    "checked_at": "2026-05-18T22:01:07Z",
+    "note": "Todo OK: hero, CSS inline+external, OG tags, sitemap 59KB, robots.txt. Page ~25KB. Response 0.68s."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 48812,
-    "checked_at": "2026-05-18T20:02:55Z",
-    "note": "Todo OK: CSS 13KB, OG tags. Sitemap AHORA FUNCIONA (14KB). SSL 62d."
+    "checked_at": "2026-05-18T22:01:07Z",
+    "note": "Todo OK: CSS 13KB, OG tags. Sitemap works (14KB). SSL 62d. Response 0.79s."
   },
   "tradios": {
     "status": "ok",
@@ -145,5 +145,5 @@
     "checked_at": "2026-05-18T20:01:26Z",
     "note": "Healthy after 307 redirect (Render cold start). Response time 3.76s."
   },
-  "last_full_check": "2026-05-18T20:02:55Z"
+  "last_full_check": "2026-05-18T22:01:07Z"
 }
