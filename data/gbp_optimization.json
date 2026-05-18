@@ -1,0 +1,118 @@
+{
+  "updated": "2026-05-07T20:15",
+  "businesses": {
+    "antoniopaving": {
+      "name": "Antonio PrimeScape Construction",
+      "issues": [],
+      "optimization": {
+        "name": "✅ Correcto",
+        "category": "✅ Paving Contractor",
+        "secondary_categories": "Agregar: Concrete Contractor, Landscape Designer, Driveway Contractor...",
+        "description": "Antonio PrimeScape Construction es una empresa familiar con años de experiencia en pavimentación res...",
+        "services_count": 8,
+        "posts_ready": 4,
+        "photo_guide": [
+          "Antes/después de driveways (3-5 fotos)",
+          "Fotos de exposed aggregate terminado (2-3)",
+          "Proyectos comerciales (2-3)",
+          "Equipo trabajando (1-2)",
+          "Logo del negocio (1)"
+        ]
+      },
+      "action_plan": [
+        "Subir 5 fotos profesionales",
+        "Agregar categorías secundarias en GBP",
+        "Publicar 1 post/semana (templates listos: 4)",
+        "Pedir reseñas a clientes satisfechos",
+        "Responder a TODAS las reseñas en 24hs",
+        "Actualizar horarios si es necesario",
+        "Completar atributos del negocio"
+      ],
+      "posts": [
+        {
+          "title": "🔥 Nuevo: Exposed Aggregate Driveway en Mulgrave",
+          "body": "Terminamos este impresionante exposed aggregate driveway en Mulgrave. El cliente quedó encantado con el resultado. ¿Quieres algo similar? Contáctanos para un presupuesto gratis.",
+          "cta": "Contact us",
+          "link": "https://antoniopaving.com"
+        },
+        {
+          "title": "☀️ Verano = Mejor época para pavimentar",
+          "body": "El clima cálido es ideal para trabajos de hormigón y pavimentación. El material cura más rápido y el resultado es más duradero. Agenda tu proyecto ahora antes de que se llene la temporada.",
+          "cta": "Get a quote",
+          "link": "https://antoniopaving.com"
+        },
+        {
+          "title": "🏗️ Trabajando con builders en Melbourne",
+          "body": "Somos el partner de pavimentación para constructoras en Melbourne. Calidad, cumplimiento de plazos y precios competitivos. Si eres builder, contáctanos para tu próximo proyecto.",
+          "cta": "Learn more",
+          "link": "https://antoniopaving.com"
+        },
+        {
+          "title": "🅿️ Transformación completa de entrada de auto",
+          "body": "De entrada de tierra a una calzada de hormigón pulido. Valor +100% a tu propiedad. Invierte en tu casa con un driveway profesional.",
+          "cta": "Get free quote",
+          "link": "https://antoniopaving.com"
+        }
+      ],
+      "review_template": "Hola [CLIENTE], gracias por confiar en Antonio PrimeScape Construction. Nos encantaría saber tu opinión. ¿Podés dejar una reseña en Google? https://search.google.com/local/writereview?placeid=TU_PLACE_ID_AQUI ¡Gracias!",
+      "description_full": "Antonio PrimeScape Construction es una empresa familiar con años de experiencia en pavimentación residencial y comercial en Melbourne. Especializados en calzadas de hormigón, exposed aggregate, pavimento permeable, piedra y ladrillo. Trabajamos con constructores, arquitectos y propietarios para entregar resultados de calidad superior. Servicio profesional, puntual y con presupuesto sin compromiso."
+    },
+    "primeproperty": {
+      "name": "Prime Property Maintenance",
+      "issues": [],
+      "optimization": {
+        "name": "✅ Correcto",
+        "category": "✅ Property Maintenance",
+        "secondary_categories": "Agregar: Deck Builder, Fence Contractor, Pressure Washing Service...",
+        "description": "Prime Property Maintenance es su socio confiable en mantenimiento de propiedades en Melbourne. Ofrec...",
+        "services_count": 8,
+        "posts_ready": 4,
+        "photo_guide": [
+          "Antes/después de decking (3-5 fotos)",
+          "Antes/después de pressure washing (2-3)",
+          "Trabajos de fencing (2-3)",
+          "Equipo trabajando (1-2)",
+          "Propiedades mantenidas (2-3)",
+          "Logo del negocio (1)"
+        ]
+      },
+      "action_plan": [
+        "Subir 6 fotos profesionales",
+        "Agregar categorías secundarias en GBP",
+        "Publicar 1 post/semana (templates listos: 4)",
+        "Pedir reseñas a clientes satisfechos",
+        "Responder a TODAS las reseñas en 24hs",
+        "Actualizar horarios si es necesario",
+        "Completar atributos del negocio"
+      ],
+      "posts": [
+        {
+          "title": "🧹 Gutter Cleaning antes del invierno",
+          "body": "Las tormentas de invierno ya están cerca. No esperes a que las canaletas se tapen. Limpieza profesional de canaletas en toda Melbourne. Prevení filtraciones y daños.",
+          "cta": "Book now",
+          "link": "https://primepropertymaintenance.au"
+        },
+        {
+          "title": "🪵 Nuevo deck en Glen Waverley",
+          "body": "Terminamos este hermoso deck de madera compuesta en Glen Waverley. Sin mantenimiento, duradero, hermoso. Ideal para entretenimiento al aire libre.",
+          "cta": "Get a quote",
+          "link": "https://primepropertymaintenance.au"
+        },
+        {
+          "title": "🏠 Property Managers: ¿Problemas con mantenimiento?",
+          "body": "Respuesta rápida, un solo contacto para todos los servicios. Decking, fencing, gutter, pressure washing, handyman. Un equipo, múltiples servicios. Cotización gratis.",
+          "cta": "Learn more",
+          "link": "https://primepropertymaintenance.au"
+        },
+        {
+          "title": "💧 Pressure Washing transforma tu propiedad",
+          "body": "El hidrolavado profesional puede transformar una entrada, vereda o patio en horas. Resultados visibles al instante. Ideal para preparar propiedades para venta o alquiler.",
+          "cta": "Get free quote",
+          "link": "https://primepropertymaintenance.au"
+        }
+      ],
+      "review_template": "Hola [CLIENTE], gracias por elegir Prime Property Maintenance. ¿Nos ayudas con una reseña en Google? https://search.google.com/local/writereview?placeid=TU_PLACE_ID_AQUI ¡Tu opinión nos ayuda a mejorar!",
+      "description_full": "Prime Property Maintenance es su socio confiable en mantenimiento de propiedades en Melbourne. Ofrecemos servicios profesionales para propiedades comerciales y residenciales: decking, fencing, gutter cleaning, pressure washing, lawn mowing, y reparaciones generales. Trabajamos con agencias inmobiliarias, property managers y propietarios. Respuesta rápida, trabajos de calidad, precios justos."
+    }
+  }
+}

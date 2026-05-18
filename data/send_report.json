@@ -1,0 +1,1089 @@
+{
+  "reports": [
+    {
+      "date": "2026-05-07",
+      "time": "2026-05-07T19:26",
+      "sent": 10,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@boutiquehomes.com.au",
+          "company": "Boutique Homes",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "commercial@kayburton.com.au",
+          "company": "Kay & Burton",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@knightfrank.com.au",
+          "company": "Knight Frank Australia",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "property@ispt.com.au",
+          "company": "ISPT",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "procurement@downergroup.com",
+          "company": "Downer Group",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@cbusproperty.com.au",
+          "company": "Cbus Property",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "time": "2026-05-08T08:00",
+      "sent": 10,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@hansenyuncken.com.au",
+          "company": "Hansen Yuncken",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "projects@marshallwhite.com.au",
+          "company": "Marshall White",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "enquiries@built.com.au",
+          "company": "Built",
+          "business": "antoniopaving",
+          "subject": "Colaboración en Pavimentación - Antonio Paving"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "property@savills.com.au",
+          "company": "Savills Australia",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        },
+        {
+          "email": "info@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Mantenimiento de Propiedades - Prime Property Maintenance"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "time": "2026-05-09T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "trades@simonds.com.au",
+          "company": "Simonds Homes",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "supplychain@laingorourke.com.au",
+          "company": "Laing O'Rourke",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "property@colliers.com.au",
+          "company": "Colliers International",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "time": "2026-05-10T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@hickory.com.au",
+          "company": "Hickory Group",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "suppliers@lendlease.com",
+          "company": "Lendlease",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "projects@hickory.com.au",
+          "company": "Hickory Group",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "property@fletcher.com.au",
+          "company": "Fletchers Real Estate",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "time": "2026-05-11T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@stratatitle.com.au",
+          "company": "Strata Title Management",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "supplychain@laingorourke.com.au",
+          "company": "Laing O'Rourke",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@fnre.com.au",
+          "company": "First National Real Estate",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        },
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving & Bricklaying Subcontractor — Antonio PrimeScape, Notting Hill"
+        },
+        {
+          "email": "commercial@raywhite.com",
+          "company": "Ray White",
+          "business": "primeproperty",
+          "subject": "Property Maintenance in Melbourne SE — Quotes in 2 Hours, Prime Property"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T00:34",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "commercial@prd.com.au",
+          "company": "PRDnationwide",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@henley.com.au",
+          "company": "Henley Homes",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "suppliers@johnholland.com.au",
+          "company": "John Holland",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@hockingstuart.com.au",
+          "company": "Hockingstuart",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T00:42",
+      "sent": 3,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:35"
+        },
+        {
+          "email": "leasing@dexus.com",
+          "company": "Dexus",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:38"
+        },
+        {
+          "email": "leasing@charterhall.com.au",
+          "company": "Charter Hall",
+          "business": "primeproperty",
+          "status": "sent",
+          "time": "2026-05-12T00:42"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "time": "2026-05-12T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "estimating@probuild.com.au",
+          "company": "Probuild",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@mcgrath.com.au",
+          "company": "McGrath Estate Agents",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@avjennings.com.au",
+          "company": "AVJennings",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@brookfieldmultiplex.com",
+          "company": "Brookfield Multiplex",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@hansenyuncken.com.au",
+          "company": "Hansen Yuncken",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@jll.com.au",
+          "company": "JLL Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "time": "2026-05-13T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "leasing@charterhall.com.au",
+          "company": "Charter Hall",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@savills.com.au",
+          "company": "Savills Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "supplier@porterdavis.com.au",
+          "company": "Porter Davis",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "time": "2026-05-13T21:56",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "suppliers@johnholland.com.au",
+          "company": "John Holland",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "procurement@downergroup.com",
+          "company": "Downer Group",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "info@boutiquehomes.com.au",
+          "company": "Boutique Homes",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@mcgrath.com.au",
+          "company": "McGrath Estate Agents",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "time": "2026-05-14T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@nelsonalexander.com.au",
+          "company": "Nelson Alexander",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@brookfieldmultiplex.com",
+          "company": "Brookfield Multiplex",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@barryplant.com.au",
+          "company": "Barry Plant",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@henley.com.au",
+          "company": "Henley Homes",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "time": "2026-05-15T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "suppliers@johnholland.com.au",
+          "company": "John Holland",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@cushwake.com",
+          "company": "Cushman & Wakefield",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "community@stockland.com.au",
+          "company": "Stockland",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "time": "2026-05-16T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "procurement@frasersproperty.com.au",
+          "company": "Frasers Property",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@mcgrath.com.au",
+          "company": "McGrath Estate Agents",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@jelliscraig.com.au",
+          "company": "Jellis Craig",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@rainehorne.com.au",
+          "company": "Raine & Horne",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "time": "2026-05-16T10:32",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "info@avjennings.com.au",
+          "company": "AVJennings",
+          "business": "antoniopaving",
+          "status": "sent"
+        },
+        {
+          "email": "facilities@cbre.com.au",
+          "company": "CBRE Australia",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "projects@marshallwhite.com.au",
+          "company": "Marshall White",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "commercial@ljhooker.com",
+          "company": "LJ Hooker",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@jll.com.au",
+          "company": "JLL Australia",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@goodman.com",
+          "company": "Goodman Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@cbusproperty.com.au",
+          "company": "Cbus Property",
+          "business": "primeproperty",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "time": "2026-05-17T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "trades@metricon.com.au",
+          "company": "Metricon",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "estimating@probuild.com.au",
+          "company": "Probuild",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "property@knightfrank.com.au",
+          "company": "Knight Frank Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@raywhite.com",
+          "company": "Ray White",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@jelliscraig.com.au",
+          "company": "Jellis Craig",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "time": "2026-05-18T08:00",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "projects@kane.com.au",
+          "company": "Kane Constructions",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "projects@watpac.com.au",
+          "company": "Watpac",
+          "business": "antoniopaving",
+          "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne"
+        },
+        {
+          "email": "info@gpt.com.au",
+          "company": "GPT Group",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@raywhite.com",
+          "company": "Ray White",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@knightfrank.com.au",
+          "company": "Knight Frank Australia",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "partnerships@mirvac.com",
+          "company": "Mirvac",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "commercial@century21.com.au",
+          "company": "Century 21",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        },
+        {
+          "email": "property@fletcher.com.au",
+          "company": "Fletchers Real Estate",
+          "business": "primeproperty",
+          "subject": "Property maintenance services - Melbourne SE suburbs"
+        }
+      ]
+    }
+  ],
+  "2026-05-09": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-09T10:31",
+    "details": [
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Cbus Property",
+        "email": "info@cbusproperty.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Ray White",
+        "email": "commercial@raywhite.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Cushman & Wakefield",
+        "email": "property@cushwake.com",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
+  },
+  "2026-05-12": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-12T10:40",
+    "details": [
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
+  },
+  "2026-05-13": {
+    "sent": 8,
+    "failed": 0,
+    "total": 8,
+    "timestamp": "2026-05-13T10:45",
+    "details": [
+      {
+        "company": "Laing O'Rourke",
+        "email": "supplychain@laingorourke.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Downer Group",
+        "email": "procurement@downergroup.com",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "John Holland",
+        "email": "suppliers@johnholland.com.au",
+        "type": "constructora",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Carlton Homes",
+        "email": "info@carltonhomes.com.au",
+        "type": "builder",
+        "template": "antoniopaving",
+        "status": "sent"
+      },
+      {
+        "company": "Century 21",
+        "email": "commercial@century21.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Hockingstuart",
+        "email": "commercial@hockingstuart.com.au",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "type": "real_estate",
+        "template": "primeproperty",
+        "status": "sent"
+      },
+      {
+        "company": "Savills Australia",
+        "email": "property@savills.com.au",
+        "type": "property_mgmt",
+        "template": "primeproperty",
+        "status": "sent"
+      }
+    ]
+  }
+}

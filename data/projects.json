@@ -1,0 +1,213 @@
+{
+  "updated": "2026-05-11T21:00",
+  "projects": [
+    {
+      "id": "toolshubpro",
+      "name": "ToolsHubPro",
+      "emoji": "🔧",
+      "status": "activo",
+      "description": "102 calculadoras online + OCR Invoice Processor nueva. Sitemap 102+ URLs. GSC: 1,487 impresiones en 17 días. Image Compressor en pos 3.0. Meta: $5k/mes AdSense en 6 meses.",
+      "url": "https://toolshubpro.com.au",
+      "metrics": {
+        "herramientas": 102,
+        "nuevas_hoy": 1,
+        "sitemap_urls": 106,
+        "gsc_impresiones_17d": 1487,
+        "gsc_clicks": 1,
+        "meta_ingresos": "$5k/mes"
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Esperar indexación de Google post-GSC fixes",
+        "Crear herramientas faltantes (Stamp Duty WA, SA, ACT)",
+        "Mejorar CTR de Image Compressor (pos 3.0)",
+        "Postear en Reddit el playbook de respuestas"
+      ],
+      "notes": "102 herramientas. 11 metas/titles mejorados. www→non-www redirect OK. Image Compressor pos 3.0 para 'photo compress'."
+    },
+    {
+      "id": "primeproperty",
+      "name": "Prime Property Maintenance",
+      "emoji": "🏡",
+      "status": "activo",
+      "description": "Servicios de mantenimiento en Melbourne SE. 858 páginas indexadas (88%). GSC: 183 impresiones/24h, 0% CTR. 30 404s redirigidos vía .htaccess. Meta description mejorada para pressure-washing-hampton (pos 13.46).",
+      "url": "https://primepropertymaintenance.au",
+      "metrics": {
+        "urls_en_sitemap": 968,
+        "indexadas": 858,
+        "pags_404_redirigidas": 14,
+        "gsc_impresiones_24h": 183,
+        "gsc_ctr": "0%",
+        "avg_position": 30.15
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Mejorar suburb pages (bentleigh, clayton, burwood) con contenido local",
+        "Arreglar 30 404s restantes viejos",
+        "Optimizar mobile (pos 9.88 pero poco tráfico mobile)",
+        "Construir backlinks AU"
+      ],
+      "notes": "14 redirects para 404s de GSC. Meta descriptions mejorados. .htaccess con 10 reglas redirect. Backup dirs bloqueados en robots.txt."
+    },
+    {
+      "id": "tradeos",
+      "name": "Tradeos → Tradie SitePilot",
+      "emoji": "📦",
+      "status": "renombrado",
+      "description": "Renombrado a Tradie SitePilot. Plataforma de comercio/negocios para tradies AU.",
+      "url": "",
+      "metrics": {
+        "paginas_utiles": 11,
+        "ai_features": 4,
+        "sidebar": "Simplified"
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Desplegar en Render",
+        "Agregar más widgets al dashboard",
+        "Mejorar pipeline kanban",
+        "Probar en producción"
+      ],
+      "notes": "Rediseño completo. Sidebar premium, CMD+K, dashboard widgets, design system oscuro."
+    },
+    {
+      "id": "antoniopaving",
+      "name": "Antonio PrimeScape Construction",
+      "emoji": "🏗️",
+      "status": "activo",
+      "description": "Pavimentación #1 en Melbourne. GSC: 985 indexadas (90.4%), 189 imp/24h, 0% CTR. 30 404s + 36 redirects arreglados. .htaccess reordenado. 4 backups dirs eliminados. 1 blog post restaurado.",
+      "url": "https://antoniopaving.com",
+      "metrics": {
+        "servicios": 6,
+        "paginas_indexadas": 985,
+        "gsc_impresiones_24h": 189,
+        "gsc_ctr": "0%",
+        "redirects_arreglados": 10,
+        "backups_eliminados": 4
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Mejorar CTR — posición #1 para 'handyman near me' con 0 clicks",
+        "Crear páginas para 'permeable driveways clayton'",
+        "Subir fotos reales al GBP",
+        "Conseguir backlinks AU"
+      ],
+      "notes": "10 redirect rules en .htaccess. 4 backup dirs eliminados. 1 blog restaurado. FTP pass actualizada. Canonicals OK."
+    },
+    {
+      "id": "leadgen",
+      "name": "Lead Generation",
+      "emoji": "🎯",
+      "status": "activo",
+      "description": "130 leads encontrados, 51 únicos verificados. Nuevo: Tradie Lead Scraper Python script que scrapea TrueLocal, Yell, Hotfrog gratis.",
+      "url": "",
+      "metrics": {
+        "leads_totales": 130,
+        "unicos_verificados": 51,
+        "templates": 2,
+        "scraper_automatico": true
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Activar envío automático email",
+        "Correr lead scraper semanalmente (cron Tues 7am)",
+        "Seguir recolectando leads de tradies AU"
+      ],
+      "notes": "130 leads en 13 días. Builders, constructoras, real estate. Nuevo scraper en tradie_ai_system/tradie_lead_scraper.py"
+    },
+    {
+      "id": "primewashgear",
+      "name": "PrimeWash Gear",
+      "emoji": "🧼",
+      "status": "activo",
+      "description": "Tienda dropshipping de partes para pressure washers. Stripe activo. 3 productos.",
+      "url": "https://edinsonmipc-oss.github.io/primewashgear/",
+      "metrics": {
+        "productos": 3,
+        "stripe": "Live",
+        "pagos": "Pendiente bank account"
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Completar bank account en Stripe",
+        "Agregar más productos",
+        "Impulsar tráfico"
+      ],
+      "notes": "LIVE Stripe. 3 packs (Pro $174.99, Starter $99.00, Maintenance $44.99)"
+    },
+    {
+      "id": "gumroad-store",
+      "name": "Gumroad Store",
+      "emoji": "🧠",
+      "status": "activo",
+      "description": "17 productos digitales premium para tradies AU. Nuevo: Tradie AI Automation System — $47 AUD. Producto en draft.",
+      "url": "https://tradiebusinesstools.gumroad.com",
+      "metrics": {
+        "productos": 17,
+        "nuevo_producto": "Tradie AI Automation System",
+        "precio_nuevo": "$47 AUD",
+        "ventas": 0,
+        "ingresos": "$0",
+        "status": "17 LIVE + 1 draft"
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Publicar Tradie AI System desde dashboard Gumroad",
+        "Subir ZIP files a productos existentes",
+        "Promocionar a leads de la base de datos",
+        "Compartir en Reddit y redes"
+      ],
+      "notes": "17 productos. Nuevo: 'Tradie AI Automation System — 10 Claude Prompts for Tradies' a $47 AUD."
+    },
+    {
+      "id": "ai-voice-agent",
+      "name": "AI Voice Agent",
+      "emoji": "🤖",
+      "status": "lanzamiento",
+      "description": "AI Receptionist para tradies AU. 24/7, booking automático, lead qualification. Pricing: $97/$197/$397 mes. Landing page + plan de mercado listos (50 tradies target en Melbourne).",
+      "url": "",
+      "metrics": {
+        "pricing_tiers": 3,
+        "target_tradies": 50,
+        "landing_page": true,
+        "plan_mercado": true,
+        "clientes": 0
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Investigar APIs gratuitas de AI voice",
+        "Crear demo funcional grabada",
+        "Empezar outreach a los 50 tradies target",
+        "Configurar demo call flow"
+      ],
+      "notes": "S Tier segun Dan Martell. Basado en video 'The Only 14 Ways to Make Money with AI'. Landing page en /home/edinsonmipc/ai_voice_agent_demo.html"
+    },
+    {
+      "id": "tradie-sitepilot-org",
+      "name": "Tradie SitePilot Corp",
+      "emoji": "🏢",
+      "status": "operacional",
+      "description": "Organización corporativa completa. CEO (DeepSeek Flash) + 4 departamentos (R&D, Marketing, Sales, Ops) + AI Lab. 20 cron jobs. 4 skills de entrenamiento. Reporte semanal a Telegram.",
+      "url": "",
+      "metrics": {
+        "departamentos": 4,
+        "roles": 14,
+        "cron_jobs": 20,
+        "skills_entrenamiento": 4,
+        "workers_providers": "Gratis (Groq, OpenRouter, SambaNova)"
+      },
+      "last_update": "2026-05-11",
+      "next_steps": [
+        "Monitorear primer ciclo semanal de cron jobs",
+        "Ajustar KPIs basado en resultados",
+        "Expandir equipos si es necesario"
+      ],
+      "notes": "Estructura: CEO(DeepSeek) → R&D/Marketing/Sales/Ops/AI Lab. Workers usan providers gratis. Reportes a Telegram."
+    }
+  ],
+  "stats": {
+    "total_projects": 9,
+    "activos": 8,
+    "lanzamiento": 1
+  }
+}

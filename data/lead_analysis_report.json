@@ -1,0 +1,817 @@
+{
+  "summary": {
+    "total_leads_in_file": 140,
+    "unique_leads_by_email": 47,
+    "unique_companies": 46,
+    "total_sent_entries_in_report": 95,
+    "unique_sent_emails": 47,
+    "emails_sent_multiple_times": 27
+  },
+  "section1_duplicates": {
+    "total_duplicate_emails_in_leads": 40,
+    "total_duplicate_occurrences": 133,
+    "most_duplicated": [
+      {
+        "email": "procurement@downergroup.com",
+        "company": "Downer Group",
+        "occurrences": 8
+      },
+      {
+        "email": "trades@metricon.com.au",
+        "company": "Metricon",
+        "occurrences": 8
+      },
+      {
+        "email": "suppliers@johnholland.com.au",
+        "company": "John Holland",
+        "occurrences": 6
+      },
+      {
+        "email": "info@acebodycorporate.com.au",
+        "company": "ACE Body Corporate",
+        "occurrences": 5
+      },
+      {
+        "email": "info@hansenyuncken.com.au",
+        "company": "Hansen Yuncken",
+        "occurrences": 5
+      }
+    ],
+    "sent_multiple_times": [
+      {
+        "email": "commercial@hockingstuart.com.au",
+        "times_sent": 5
+      },
+      {
+        "email": "property@colliers.com.au",
+        "times_sent": 5
+      },
+      {
+        "email": "info@picagroup.com.au",
+        "times_sent": 4
+      },
+      {
+        "email": "suppliers@lendlease.com",
+        "times_sent": 4
+      },
+      {
+        "email": "procurement@downergroup.com",
+        "times_sent": 4
+      },
+      {
+        "email": "trades@metricon.com.au",
+        "times_sent": 3
+      },
+      {
+        "email": "property@savills.com.au",
+        "times_sent": 3
+      },
+      {
+        "email": "supplychain@laingorourke.com.au",
+        "times_sent": 3
+      },
+      {
+        "email": "projects@hickory.com.au",
+        "times_sent": 3
+      },
+      {
+        "email": "supplier@porterdavis.com.au",
+        "times_sent": 3
+      }
+    ]
+  },
+  "section2_generic_emails": {
+    "total_role_based_unique": 47,
+    "role_prefixes_found": [
+      "commercial@",
+      "community@",
+      "estimating@",
+      "facilities@",
+      "info@",
+      "leasing@",
+      "partnerships@",
+      "procurement@",
+      "projects@",
+      "property@",
+      "supplier@",
+      "suppliers@",
+      "supplychain@",
+      "trades@"
+    ],
+    "count_by_prefix": {
+      "commercial@": 9,
+      "community@": 1,
+      "estimating@": 1,
+      "facilities@": 1,
+      "info@": 10,
+      "leasing@": 2,
+      "partnerships@": 1,
+      "procurement@": 3,
+      "projects@": 3,
+      "property@": 9,
+      "supplier@": 1,
+      "suppliers@": 2,
+      "supplychain@": 1,
+      "trades@": 3
+    },
+    "no_mx_leads": [],
+    "duplicate_leads_recommended_for_removal": [
+      {
+        "email": "property@colliers.com.au",
+        "company": "Colliers International",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-07_batch11",
+          "2026-05-11_batch14",
+          "2026-05-05_batch6"
+        ]
+      },
+      {
+        "email": "procurement@downergroup.com",
+        "company": "Downer Group",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-05_batch6",
+          "2026-05-06_batch9",
+          "2026-05-07_batch12",
+          "2026-05-08_batch14",
+          "2026-05-12_batch14",
+          "2026-05-11_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "info@acebodycorporate.com.au",
+        "company": "ACE Body Corporate",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-05_batch7",
+          "2026-05-05_batch6",
+          "2026-05-08_batch13",
+          "2026-05-13_batch14"
+        ]
+      },
+      {
+        "email": "commercial@century21.com.au",
+        "company": "Century 21",
+        "batches": [
+          "2026-05-13_batch14",
+          "2026-05-07_batch12",
+          "2026-05-05_batch6",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "community@stockland.com.au",
+        "company": "Stockland",
+        "batches": [
+          "2026-05-12_batch14",
+          "2026-05-05_batch6",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "info@hansenyuncken.com.au",
+        "company": "Hansen Yuncken",
+        "batches": [
+          "2026-05-05_batch7",
+          "2026-05-05_batch6",
+          "2026-05-07_batch11",
+          "2026-05-09_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "commercial@kayburton.com.au",
+        "company": "Kay & Burton",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-11_batch14",
+          "2026-05-05_batch6"
+        ]
+      },
+      {
+        "email": "info@avjennings.com.au",
+        "company": "AVJennings",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-05_batch7",
+          "2026-05-05_batch6",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "trades@simonds.com.au",
+        "company": "Simonds Homes",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-07_batch10",
+          "2026-05-05_batch6"
+        ]
+      },
+      {
+        "email": "commercial@hockingstuart.com.au",
+        "company": "Hockingstuart",
+        "batches": [
+          "2026-05-07_batch11",
+          "2026-05-05_batch7",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "info@mirvac.com",
+        "company": "Mirvac",
+        "batches": [
+          "2026-05-13_batch14",
+          "2026-05-12_batch14",
+          "2026-05-05_batch7"
+        ]
+      },
+      {
+        "email": "trades@henley.com.au",
+        "company": "Henley Homes",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-05_batch7",
+          "2026-05-11_batch14"
+        ]
+      },
+      {
+        "email": "commercial@raywhite.com",
+        "company": "Ray White",
+        "batches": [
+          "2026-05-13_batch14",
+          "2026-05-07_batch12",
+          "2026-05-05_batch7"
+        ]
+      },
+      {
+        "email": "property@ispt.com.au",
+        "company": "ISPT",
+        "batches": [
+          "2026-05-07_batch12",
+          "2026-05-05_batch7"
+        ]
+      },
+      {
+        "email": "property@savills.com.au",
+        "company": "Savills Australia",
+        "batches": [
+          "2026-05-12_batch14",
+          "2026-05-05_batch7",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "property@fletcher.com.au",
+        "company": "Fletchers Real Estate",
+        "batches": [
+          "2026-05-12_batch14",
+          "2026-05-11_batch14",
+          "2026-05-05_batch7",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "suppliers@lendlease.com",
+        "company": "Lendlease",
+        "batches": [
+          "2026-05-07_batch12",
+          "2026-05-12_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "info@picagroup.com.au",
+        "company": "PICA Group",
+        "batches": [
+          "2026-05-11_batch14",
+          "2026-05-09_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "procurement@brookfieldmultiplex.com",
+        "company": "Brookfield Multiplex",
+        "batches": [
+          "2026-05-12_batch14",
+          "2026-05-09_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "leasing@charterhall.com.au",
+        "company": "Charter Hall",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-10_batch14",
+          "2026-05-09_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "commercial@fnre.com.au",
+        "company": "First National Real Estate",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-07_batch10",
+          "2026-05-08_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "commercial@mcgrath.com.au",
+        "company": "McGrath Estate Agents",
+        "batches": [
+          "2026-05-07_batch11",
+          "2026-05-13_batch14",
+          "2026-05-06_batch8"
+        ]
+      },
+      {
+        "email": "estimating@probuild.com.au",
+        "company": "Probuild",
+        "batches": [
+          "2026-05-09_batch14",
+          "2026-05-07_batch12",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "commercial@ljhooker.com",
+        "company": "LJ Hooker",
+        "batches": [
+          "2026-05-13_batch14",
+          "2026-05-07_batch11",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "facilities@cbre.com.au",
+        "company": "CBRE Australia",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "leasing@dexus.com",
+        "company": "Dexus",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-12_batch14",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "trades@metricon.com.au",
+        "company": "Metricon",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-08_batch13",
+          "2026-05-06_batch9",
+          "2026-05-07_batch12",
+          "2026-05-13_batch14",
+          "2026-05-08_batch14",
+          "2026-05-07_batch11",
+          "2026-05-09_batch14"
+        ]
+      },
+      {
+        "email": "suppliers@johnholland.com.au",
+        "company": "John Holland",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-10_batch14",
+          "2026-05-06_batch9",
+          "2026-05-07_batch12",
+          "2026-05-07_batch11",
+          "2026-05-11_batch14"
+        ]
+      },
+      {
+        "email": "property@knightfrank.com.au",
+        "company": "Knight Frank Australia",
+        "batches": [
+          "2026-05-13_batch14",
+          "2026-05-06_batch9"
+        ]
+      },
+      {
+        "email": "commercial@prd.com.au",
+        "company": "PRDnationwide",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-07_batch10"
+        ]
+      },
+      {
+        "email": "projects@hickory.com.au",
+        "company": "Hickory Group",
+        "batches": [
+          "2026-05-07_batch10",
+          "2026-05-11_batch14",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "supplychain@laingorourke.com.au",
+        "company": "Laing O'Rourke",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-10_batch14",
+          "2026-05-07_batch10"
+        ]
+      },
+      {
+        "email": "info@stratatitle.com.au",
+        "company": "Strata Title Management",
+        "batches": [
+          "2026-05-07_batch11",
+          "2026-05-12_batch14"
+        ]
+      },
+      {
+        "email": "projects@marshallwhite.com.au",
+        "company": "Marshall White",
+        "batches": [
+          "2026-05-07_batch11",
+          "2026-05-13_batch14"
+        ]
+      },
+      {
+        "email": "supplier@porterdavis.com.au",
+        "company": "Porter Davis",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-07_batch11",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "info@gpt.com.au",
+        "company": "GPT Group",
+        "batches": [
+          "2026-05-07_batch12",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "procurement@frasersproperty.com.au",
+        "company": "Frasers Property",
+        "batches": [
+          "2026-05-07_batch12",
+          "2026-05-09_batch14"
+        ]
+      },
+      {
+        "email": "property@cushwake.com",
+        "company": "Cushman & Wakefield",
+        "batches": [
+          "2026-05-08_batch13",
+          "2026-05-11_batch14",
+          "2026-05-09_batch14"
+        ]
+      },
+      {
+        "email": "projects@watpac.com.au",
+        "company": "Watpac",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-08_batch14"
+        ]
+      },
+      {
+        "email": "commercial@rainehorne.com.au",
+        "company": "Raine & Horne",
+        "batches": [
+          "2026-05-10_batch14",
+          "2026-05-13_batch14"
+        ]
+      }
+    ]
+  },
+  "section3_clean_leads": {
+    "note": "ALL 47 unique emails use role-based addresses. None are personal/specific addresses.",
+    "unique_role_leads": [
+      {
+        "email": "property@colliers.com.au",
+        "company": "Colliers International",
+        "type": "property_mgmt",
+        "verified": "verified"
+      },
+      {
+        "email": "partnerships@mirvac.com",
+        "company": "Mirvac",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "procurement@downergroup.com",
+        "company": "Downer Group",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "info@acebodycorporate.com.au",
+        "company": "ACE Body Corporate",
+        "type": "strata",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@century21.com.au",
+        "company": "Century 21",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "community@stockland.com.au",
+        "company": "Stockland",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "info@hansenyuncken.com.au",
+        "company": "Hansen Yuncken",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@kayburton.com.au",
+        "company": "Kay & Burton",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "info@avjennings.com.au",
+        "company": "AVJennings",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "trades@simonds.com.au",
+        "company": "Simonds Homes",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@hockingstuart.com.au",
+        "company": "Hockingstuart",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "info@mirvac.com",
+        "company": "Mirvac",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "trades@henley.com.au",
+        "company": "Henley Homes",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@raywhite.com",
+        "company": "Ray White",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "property@ispt.com.au",
+        "company": "ISPT",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "property@savills.com.au",
+        "company": "Savills Australia",
+        "type": "property_mgmt",
+        "verified": "verified"
+      },
+      {
+        "email": "property@fletcher.com.au",
+        "company": "Fletchers Real Estate",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "suppliers@lendlease.com",
+        "company": "Lendlease",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "info@picagroup.com.au",
+        "company": "PICA Group",
+        "type": "strata",
+        "verified": "verified"
+      },
+      {
+        "email": "procurement@brookfieldmultiplex.com",
+        "company": "Brookfield Multiplex",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "leasing@charterhall.com.au",
+        "company": "Charter Hall",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@fnre.com.au",
+        "company": "First National Real Estate",
+        "type": "real_estate",
+        "verified": "no_mx"
+      },
+      {
+        "email": "commercial@mcgrath.com.au",
+        "company": "McGrath Estate Agents",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "info@carltonhomes.com.au",
+        "company": "Carlton Homes",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "estimating@probuild.com.au",
+        "company": "Probuild",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@ljhooker.com",
+        "company": "LJ Hooker",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "facilities@cbre.com.au",
+        "company": "CBRE Australia",
+        "type": "property_mgmt",
+        "verified": "verified"
+      },
+      {
+        "email": "leasing@dexus.com",
+        "company": "Dexus",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "trades@metricon.com.au",
+        "company": "Metricon",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "suppliers@johnholland.com.au",
+        "company": "John Holland",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "property@knightfrank.com.au",
+        "company": "Knight Frank Australia",
+        "type": "property_mgmt",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@prd.com.au",
+        "company": "PRDnationwide",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "projects@hickory.com.au",
+        "company": "Hickory Group",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "supplychain@laingorourke.com.au",
+        "company": "Laing O'Rourke",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "info@stratatitle.com.au",
+        "company": "Strata Title Management",
+        "type": "strata",
+        "verified": "verified"
+      },
+      {
+        "email": "projects@marshallwhite.com.au",
+        "company": "Marshall White",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "supplier@porterdavis.com.au",
+        "company": "Porter Davis",
+        "type": "builder",
+        "verified": "no_mx"
+      },
+      {
+        "email": "info@gpt.com.au",
+        "company": "GPT Group",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "procurement@frasersproperty.com.au",
+        "company": "Frasers Property",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "property@cushwake.com",
+        "company": "Cushman & Wakefield",
+        "type": "property_mgmt",
+        "verified": "verified"
+      },
+      {
+        "email": "projects@watpac.com.au",
+        "company": "Watpac",
+        "type": "constructora",
+        "verified": "verified"
+      },
+      {
+        "email": "property@jll.com.au",
+        "company": "JLL Australia",
+        "type": "property_mgmt",
+        "verified": "no_mx"
+      },
+      {
+        "email": "info@boutiquehomes.com.au",
+        "company": "Boutique Homes",
+        "type": "builder",
+        "verified": "verified"
+      },
+      {
+        "email": "commercial@rainehorne.com.au",
+        "company": "Raine & Horne",
+        "type": "real_estate",
+        "verified": "no_mx"
+      },
+      {
+        "email": "property@barryplant.com.au",
+        "company": "Barry Plant",
+        "type": "real_estate",
+        "verified": "verified"
+      },
+      {
+        "email": "info@collinssimms.com.au",
+        "company": "Collins Simms",
+        "type": "real_estate",
+        "verified": "no_mx"
+      },
+      {
+        "email": "property@nelsonalexander.com.au",
+        "company": "Nelson Alexander",
+        "type": "real_estate",
+        "verified": "verified"
+      }
+    ]
+  },
+  "recommendations": {
+    "high_priority_block": [
+      "ALL unique leads use generic/role-based emails \u2014 NONE have personal contact addresses",
+      "No individual contact names found in the leads database (all 'contact' fields are empty)",
+      "Strongly recommend researching personal emails (firstname.lastname@company.com) for each target",
+      "Alternatively, find department-specific alias (e.g. facilities@, maintenance@, strata@)"
+    ],
+    "medium_priority_remove": [
+      {
+        "email": "commercial@fnre.com.au",
+        "company": "First National Real Estate",
+        "reason": "No MX records"
+      },
+      {
+        "email": "supplier@porterdavis.com.au",
+        "company": "Porter Davis",
+        "reason": "No MX records"
+      },
+      {
+        "email": "property@jll.com.au",
+        "company": "JLL Australia",
+        "reason": "No MX records"
+      },
+      {
+        "email": "commercial@rainehorne.com.au",
+        "company": "Raine & Horne",
+        "reason": "DNS check failed"
+      },
+      {
+        "email": "info@collinssimms.com.au",
+        "company": "Collins Simms",
+        "reason": "No MX records"
+      }
+    ],
+    "dedup_recommendation": "Keep only 1 entry per email in leads.json (de-duplicate across batches). The current file has 140 entries but only 47 unique addresses."
+  }
+}

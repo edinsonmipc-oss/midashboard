@@ -1,0 +1,100 @@
+Delay range: 180-300s
+Pending: const=24 bld=15 re=33 pm=10 strata=7
+Batch: 4 antoniopaving + 4 primeproperty = 8
+Connecting to SMTP...
+SMTP login OK
+
+--- AntonioPrimeScape Construction ---
+
+[1/4] Laing O'Rourke <supplychain@laingorourke.com.au>
+  SENT: Laing O'Rourke <supplychain@laingorourke.com.au> via antoniopaving
+  Delay 250s...
+
+[2/4] Downer Group <procurement@downergroup.com>
+  SENT: Downer Group <procurement@downergroup.com> via antoniopaving
+  Delay 190s...
+
+[3/4] John Holland <suppliers@johnholland.com.au>
+  SENT: John Holland <suppliers@johnholland.com.au> via antoniopaving
+  Delay 221s...
+
+[4/4] Carlton Homes <info@carltonhomes.com.au>
+  SENT: Carlton Homes <info@carltonhomes.com.au> via antoniopaving
+
+--- Prime Property Maintenance ---
+
+[1/4] Century 21 <commercial@century21.com.au>
+  SENT: Century 21 <commercial@century21.com.au> via primeproperty
+  Delay 268s...
+
+[2/4] Hockingstuart <commercial@hockingstuart.com.au>
+  SENT: Hockingstuart <commercial@hockingstuart.com.au> via primeproperty
+  Delay 289s...
+
+[3/4] LJ Hooker <commercial@ljhooker.com>
+  SENT: LJ Hooker <commercial@ljhooker.com> via primeproperty
+  Delay 261s...
+
+[4/4] Savills Australia <property@savills.com.au>
+  SENT: Savills Australia <property@savills.com.au> via primeproperty
+
+=== Sent: 8  Failed: 0 ===
+Updated leads.json (8 contacts).
+Updated send_report.json.
+[2026-05-14 10:02:51] Config loaded: daily_limit=8
+[2026-05-14 10:02:51] Qualifying: antoniopaving=5, primeproperty=8
+[2026-05-14 10:02:51] Selected 8 leads:
+[2026-05-14 10:02:51]   [antoniopaving  ] Brookfield Multiplex           procurement@brookfieldmultiplex.com
+[2026-05-14 10:02:51]   [antoniopaving  ] Hansen Yuncken                 info@hansenyuncken.com.au          
+[2026-05-14 10:02:51]   [antoniopaving  ] Lendlease                      suppliers@lendlease.com            
+[2026-05-14 10:02:51]   [antoniopaving  ] Probuild                       estimating@probuild.com.au         
+[2026-05-14 10:02:51]   [primeproperty  ] Knight Frank Australia         property@knightfrank.com.au        
+[2026-05-14 10:02:51]   [primeproperty  ] Marshall White                 projects@marshallwhite.com.au      
+[2026-05-14 10:02:51]   [primeproperty  ] Frasers Property               procurement@frasersproperty.com.au 
+[2026-05-14 10:02:51]   [primeproperty  ] Nelson Alexander               property@nelsonalexander.com.au    
+[2026-05-14 10:02:54] SMTP connected and logged in
+[2026-05-14 10:02:56] SENT [antoniopaving  ] → procurement@brookfieldmultiplex.com (Brookfield Multiplex)
+[2026-05-14 10:02:56] Waiting 221s before next send...
+[2026-05-14 10:06:50] SENT [antoniopaving  ] → info@hansenyuncken.com.au           (Hansen Yuncken)
+[2026-05-14 10:06:50] Waiting 226s before next send...
+[2026-05-14 10:10:50] SENT [antoniopaving  ] → suppliers@lendlease.com             (Lendlease)
+[2026-05-14 10:10:50] Waiting 246s before next send...
+[2026-05-14 10:15:10] SENT [antoniopaving  ] → estimating@probuild.com.au          (Probuild)
+[2026-05-14 10:15:10] Waiting 300s before next send...
+[2026-05-14 10:20:27] SENT [primeproperty  ] → property@knightfrank.com.au         (Knight Frank Australia)
+[2026-05-14 10:20:27] Waiting 199s before next send...
+[2026-05-14 10:23:58] SENT [primeproperty  ] → projects@marshallwhite.com.au       (Marshall White)
+[2026-05-14 10:23:58] Waiting 203s before next send...
+[2026-05-14 10:27:36] SENT [primeproperty  ] → procurement@frasersproperty.com.au  (Frasers Property)
+[2026-05-14 10:27:36] Waiting 270s before next send...
+[2026-05-14 10:32:24] SENT [primeproperty  ] → property@nelsonalexander.com.au     (Nelson Alexander)
+[2026-05-14 10:32:24] BATCH COMPLETE: 8 sent, 0 errors, 8 attempted
+[2026-05-18 10:14:58] Daily limit: 8, delays: 180-300s
+[2026-05-18 10:14:58] Found 5 antipaving + 12 primeproperty pending leads
+[2026-05-18 10:14:58] Sending 8 emails this batch
+[2026-05-18 10:14:58]   - Metricon                       trades@metricon.com.au             
+[2026-05-18 10:14:58]   - Brookfield Multiplex           procurement@brookfieldmultiplex.com
+[2026-05-18 10:14:58]   - Laing O'Rourke                 supplychain@laingorourke.com.au    
+[2026-05-18 10:14:58]   - Lendlease                      suppliers@lendlease.com            
+[2026-05-18 10:14:58]   - JLL Australia                  property@jll.com.au                
+[2026-05-18 10:14:58]   - ISPT                           property@ispt.com.au               
+[2026-05-18 10:14:58]   - Nelson Alexander               property@nelsonalexander.com.au    
+[2026-05-18 10:14:58]   - Cbus Property                  info@cbusproperty.com.au           
+[2026-05-18 10:14:58] Connecting to SMTP...
+[2026-05-18 10:15:00] SMTP connected as antonioprimemaintenance@gmail.com
+[2026-05-18 10:15:02] ✅ SENT [antoniopaving  ] -> trades@metricon.com.au              (Metricon)
+[2026-05-18 10:15:02] ⏳ Waiting 199s before next...
+[2026-05-18 10:18:34] ✅ SENT [antoniopaving  ] -> procurement@brookfieldmultiplex.com (Brookfield Multiplex)
+[2026-05-18 10:18:34] ⏳ Waiting 184s before next...
+[2026-05-18 10:21:51] ✅ SENT [antoniopaving  ] -> supplychain@laingorourke.com.au     (Laing O'Rourke)
+[2026-05-18 10:21:51] ⏳ Waiting 285s before next...
+[2026-05-18 10:26:56] ✅ SENT [antoniopaving  ] -> suppliers@lendlease.com             (Lendlease)
+[2026-05-18 10:26:56] ⏳ Waiting 251s before next...
+[2026-05-18 10:31:25] ✅ SENT [primeproperty  ] -> property@jll.com.au                 (JLL Australia)
+[2026-05-18 10:31:25] ⏳ Waiting 283s before next...
+[2026-05-18 10:36:29] ✅ SENT [primeproperty  ] -> property@ispt.com.au                (ISPT)
+[2026-05-18 10:36:29] ⏳ Waiting 260s before next...
+[2026-05-18 10:41:04] ✅ SENT [primeproperty  ] -> property@nelsonalexander.com.au     (Nelson Alexander)
+[2026-05-18 10:41:04] ⏳ Waiting 298s before next...
+[2026-05-18 10:46:17] ✅ SENT [primeproperty  ] -> info@cbusproperty.com.au            (Cbus Property)
+[2026-05-18 10:46:18] 📊 DONE: 8 sent, 0 errors

@@ -1,0 +1,149 @@
+{
+  "service": "site-monitor",
+  "updated": "2026-05-18T19:00",
+  "checked_at": "2026-05-18T09:02:00Z",
+  "total_sites": 4,
+  "sites": [
+    {
+      "name": "antoniopaving.com",
+      "url": "https://antoniopaving.com",
+      "status": "online",
+      "status_code": 200,
+      "response_time_s": 1.37,
+      "healthy": true,
+      "checked_at": "2026-05-18T09:02:00Z",
+      "last_checked": "2026-05-18T19:00",
+      "seo_metrics": {
+        "pages_analyzed": 0,
+        "pages_good": 0,
+        "pages_bad": 0,
+        "missing_meta": 0,
+        "missing_titles": 0,
+        "content_suggestions": 0
+      },
+      "seo_score": 0.0,
+      "crawl_check": {
+        "checked_at": "2026-05-18T09:02:00Z",
+        "pages_checked": 373,
+        "pages_ok": 373,
+        "pages_with_issues": 0,
+        "issues": [],
+        "healthy": true
+      }
+    },
+    {
+      "name": "primepropertymaintenance.au",
+      "url": "https://primepropertymaintenance.au",
+      "status": "online",
+      "status_code": 200,
+      "response_time_s": 0.84,
+      "healthy": true,
+      "checked_at": "2026-05-18T09:02:00Z",
+      "last_checked": "2026-05-18T19:00",
+      "seo_metrics": {
+        "pages_analyzed": 0,
+        "pages_good": 0,
+        "pages_bad": 0,
+        "missing_meta": 0,
+        "missing_titles": 0,
+        "content_suggestions": 0
+      },
+      "seo_score": 0.0,
+      "crawl_check": {
+        "checked_at": "2026-05-18T09:02:00Z",
+        "pages_checked": 976,
+        "pages_ok": 976,
+        "pages_with_issues": 0,
+        "issues": [],
+        "healthy": true
+      }
+    },
+    {
+      "name": "toolshubpro.com.au",
+      "url": "https://toolshubpro.com.au",
+      "status": "online",
+      "status_code": 200,
+      "response_time_s": 0.85,
+      "healthy": true,
+      "checked_at": "2026-05-18T09:02:00Z",
+      "last_checked": "2026-05-18T19:00",
+      "seo_metrics": {
+        "pages_analyzed": 124,
+        "pages_good": 124,
+        "pages_bad": 0,
+        "missing_meta": 0,
+        "missing_titles": 0,
+        "content_suggestions": 0
+      },
+      "seo_score": 100.0,
+      "crawl_check": {
+        "checked_at": "2026-05-18T09:02:00Z",
+        "pages_checked": 74,
+        "pages_ok": 74,
+        "pages_with_issues": 0,
+        "issues": [],
+        "healthy": true
+      }
+    },
+    {
+      "name": "tradios.onrender.com",
+      "url": "https://tradios.onrender.com",
+      "status": "online",
+      "status_code": 307,
+      "redirect_follows_to_200": true,
+      "response_time_s": 0.49,
+      "healthy": true,
+      "checked_at": "2026-05-18T09:02:00Z",
+      "last_checked": "2026-05-18T19:00"
+    }
+  ],
+  "trading": {},
+  "seo_audit": {
+    "updated": "2026-05-18T09:02",
+    "summary": {}
+  },
+  "email_stats": {
+    "last_send": "2026-05-18T09:02",
+    "total_sent": 36
+  },
+  "crawl_404": {
+    "checked_at": "2026-05-18T09:02:00Z",
+    "status": "ok"
+  },
+  "ssl_expiry": {
+    "antoniopaving.com": 83,
+    "primepropertymaintenance.au": 35,
+    "toolshubpro.com.au": 62,
+    "tradios.onrender.com": 39,
+    "nearest_expiry_days": 35
+  },
+  "primepropertymaintenance": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 64004,
+    "checked_at": "2026-05-18T09:02:00Z",
+    "note": "Todo OK: homepage 64KB con hero, CSS, OG tags. SSL expires in 35 days."
+  },
+  "antoniopaving": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 144163,
+    "checked_at": "2026-05-18T09:02:00Z",
+    "note": "Todo OK: hero, CSS, 6 OG tags, sitemap 373 URLs, robots.txt 150B"
+  },
+  "toolshubpro": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 66704,
+    "checked_at": "2026-05-18T09:02:00Z",
+    "note": "Todo OK: CSS 13KB, OG tags, sitemap 74 URLs (60 tool files). SSL expires in 62 days."
+  },
+  "tradios": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 22606,
+    "checked_at": "2026-05-18T09:02:00Z",
+    "note": "Healthy after 307 redirect. Dashboard login accessible."
+  },
+  "last_full_check": "2026-05-18T09:02:00Z"
+}

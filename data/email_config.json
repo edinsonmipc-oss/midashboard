@@ -1,0 +1,25 @@
+{
+  "sender_email": "antonioprimemaintenance@gmail.com",
+  "sender_name": "Antonio PrimeScape Construction",
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "use_tls": true,
+  "password": "pvir coud cwng udvs",
+  "gmail_app_password": "pvir coud cwng udvs",
+  "daily_limit": 8,
+  "min_delay_seconds": 180,
+  "max_delay_seconds": 300,
+  "business_addresses": {
+    "antoniopaving": {
+      "from_name": "Antonio PrimeScape Construction",
+      "from_email": "antonioprimemaintenance@gmail.com",
+      "signature": "Antonio PrimeScape Construction\nantoniopaving.com | 0406 170 544"
+    },
+    "primeproperty": {
+      "from_name": "Prime Property Maintenance",
+      "from_email": "antonioprimemaintenance@gmail.com",
+      "signature": "Prime Property Maintenance\nprimepropertymaintenance.au | 0468 166 249"
+    }
+  },
+  "smtp_username": "antonioprimemaintenance@gmail.com"
+}

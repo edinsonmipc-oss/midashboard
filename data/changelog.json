@@ -1,0 +1,77 @@
+{
+  "updated": "2026-05-11T21:00",
+  "entries": [
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "tradie-sitepilot-org",
+      "description": "🏢 TRADIE SITEPILOT — Organización corporativa creada. CEO(DeepSeek) + 4 departamentos (R&D, Marketing, Sales, Ops) + AI Lab. 14 roles. 20 cron jobs. 4 skills de entrenamiento."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "toolshubpro",
+      "description": "🔧 11 meta descriptions/titles mejorados + Homepage count '50+' → '100+' Tools + Image Compressor optimizado pos 3.0 + Image Resizer + PNG to JPG metas mejorados"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "toolshubpro",
+      "description": "🆕 OCR Invoice Processor creado — toolshubpro.com.au/tools/invoice-ocr.html. Tesseract.js client-side. Parsea Invoice #, Date, Vendor, Total, GST, ABN."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "fix",
+      "project": "primeproperty",
+      "description": "🔧 14 redirect rules para 404s de GSC + Meta description pressure-washing-hampton mejorada + Homepage title mejorado + robots.txt verificado"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "fix",
+      "project": "antoniopaving",
+      "description": "🔧 10 redirect rules .htaccess + .htaccess reordenado + 4 backups eliminados + 1 blog restaurado + FTP pass actualizada + Canonicals verificados"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "analisis",
+      "project": "todos",
+      "description": "📊 GSC Analysis completo: 17 ZIPs procesados para los 3 sitios. Reportes guardados en /home/edinsonmipc/gsc_analysis/. Quick wins identificados por sitio."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "ai-voice-agent",
+      "description": "🤖 AI Voice Agent — Landing page premium + Go-to-Market plan (50 tradies target). Basado en video Dan Martell (S Tier). Pricing $97/$197/$397."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "gumroad-store",
+      "description": "🧠 Tradie AI Automation System — producto Gumroad creado a $47 AUD. URL: tradiebusinesstools.gumroad.com/l/gblqxo (draft). Incluye 10 Claude prompts + lead scraper."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "creacion",
+      "project": "tradie-sitepilot-org",
+      "description": "📋 Reddit Playbook creado — 5 templates de respuesta para r/smallbusiness. Oportunidades: OCR invoice, websites under $150, cleaning business, GST compliance, invoicing."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "tradie-sitepilot-org",
+      "description": "⏰ Cron jobs configurados: R&D Sprint (Lun/Mie/Vie 4am), Sales Lead Gen (Mar 7am), AI Lab (Jue 8am), Weekly Traffic Builder (Lun 6am), Weekly Report (Lun 9am)"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "tradie-sitepilot-org",
+      "description": "🥇 Skills de entrenamiento creados: tradie-sitepilot-rd, tradie-sitepilot-marketing, tradie-sitepilot-sales, tradie-sitepilot-ops"
+    },
+    {
+      "date": "2026-05-11",
+      "type": "mejora",
+      "project": "dashboard",
+      "description": "📊 Dashboard actualizado con 9 proyectos, métricas GSC fresh, health data, changelog. Todo organizado para el Presidente."
+    }
+  ]
+}

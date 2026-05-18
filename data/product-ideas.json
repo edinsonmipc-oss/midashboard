@@ -1,0 +1,406 @@
+{
+  "updated": "2026-05-08T14:40",
+  "total": 50,
+  "products": [
+    {
+      "id": "aus-1",
+      "name": "Electrical Safety SWMS Pack",
+      "market": "AU",
+      "price": "$37",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "aus-2",
+      "name": "Plumber's Quote & Contract Bundle",
+      "market": "AU",
+      "price": "$29",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "aus-3",
+      "name": "Builder's Project Management Kit",
+      "market": "AU",
+      "price": "$47",
+      "cat": "Management",
+      "status": "idea"
+    },
+    {
+      "id": "aus-4",
+      "name": "Concretor's Estimation Spreadsheet",
+      "market": "AU",
+      "price": "$27",
+      "cat": "Estimating",
+      "status": "idea"
+    },
+    {
+      "id": "aus-5",
+      "name": "Landscaper's Design & Quote Pack",
+      "market": "AU",
+      "price": "$29",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "aus-6",
+      "name": "Painter's Project Planner & Invoice",
+      "market": "AU",
+      "price": "$22",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "aus-7",
+      "name": "Roofer's Safety & Compliance Kit",
+      "market": "AU",
+      "price": "$37",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "aus-8",
+      "name": "Tradie Vehicle Logbook Bundle",
+      "market": "AU",
+      "price": "$22",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "aus-9",
+      "name": "Subcontractor Agreement Templates",
+      "market": "AU",
+      "price": "$27",
+      "cat": "Legal",
+      "status": "idea"
+    },
+    {
+      "id": "aus-10",
+      "name": "Construction Site Induction Pack",
+      "market": "AU",
+      "price": "$42",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "aus-11",
+      "name": "Tradie Marketing Kit - Social Media",
+      "market": "AU",
+      "price": "$27",
+      "cat": "Marketing",
+      "status": "idea"
+    },
+    {
+      "id": "aus-12",
+      "name": "Builder's Variation & Claim Forms",
+      "market": "AU",
+      "price": "$22",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "aus-13",
+      "name": "Trade Business Plan Template",
+      "market": "AU",
+      "price": "$32",
+      "cat": "Business",
+      "status": "idea"
+    },
+    {
+      "id": "aus-14",
+      "name": "Tradie Website Content Pack",
+      "market": "AU",
+      "price": "$27",
+      "cat": "Marketing",
+      "status": "idea"
+    },
+    {
+      "id": "aus-15",
+      "name": "Construction Daily Log Template",
+      "market": "AU",
+      "price": "$17",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "aus-16",
+      "name": "Tradie Employee Onboarding Kit",
+      "market": "AU",
+      "price": "$32",
+      "cat": "HR",
+      "status": "idea"
+    },
+    {
+      "id": "aus-17",
+      "name": "Plant & Equipment Register",
+      "market": "AU",
+      "price": "$22",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "aus-18",
+      "name": "Tradie Pricing Guide - Melbourne",
+      "market": "AU",
+      "price": "$27",
+      "cat": "Estimating",
+      "status": "idea"
+    },
+    {
+      "id": "aus-19",
+      "name": "Construction Progress Claim Pack",
+      "market": "AU",
+      "price": "$29",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "aus-20",
+      "name": "Tradie Tax Deduction Maximiser",
+      "market": "AU",
+      "price": "$37",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "us-1",
+      "name": "OSHA Safety Compliance Pack",
+      "market": "US",
+      "price": "$39",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "us-2",
+      "name": "Contractor Quote & Invoice Bundle (USA)",
+      "market": "US",
+      "price": "$29",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "us-3",
+      "name": "IRS 1099-NEC Tax Prep for Contractors",
+      "market": "US",
+      "price": "$27",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "us-4",
+      "name": "Construction Lien Waiver Forms",
+      "market": "US",
+      "price": "$22",
+      "cat": "Legal",
+      "status": "idea"
+    },
+    {
+      "id": "us-5",
+      "name": "Contractor Business Plan Template",
+      "market": "US",
+      "price": "$34",
+      "cat": "Business",
+      "status": "idea"
+    },
+    {
+      "id": "us-6",
+      "name": "Construction Safety Toolbox Talks",
+      "market": "US",
+      "price": "$37",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "us-7",
+      "name": "Contractor Change Order Forms",
+      "market": "US",
+      "price": "$17",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "us-8",
+      "name": "Construction Project Bid Kit",
+      "market": "US",
+      "price": "$44",
+      "cat": "Estimating",
+      "status": "idea"
+    },
+    {
+      "id": "us-9",
+      "name": "Contractor Marketing Playbook",
+      "market": "US",
+      "price": "$27",
+      "cat": "Marketing",
+      "status": "idea"
+    },
+    {
+      "id": "us-10",
+      "name": "US Construction Daily Reports",
+      "market": "US",
+      "price": "$19",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "us-11",
+      "name": "Contractor Purchase Order Forms",
+      "market": "US",
+      "price": "$17",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "us-12",
+      "name": "Construction Punch List Templates",
+      "market": "US",
+      "price": "$19",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "us-13",
+      "name": "Subcontractor Performance Reports",
+      "market": "US",
+      "price": "$22",
+      "cat": "Management",
+      "status": "idea"
+    },
+    {
+      "id": "us-14",
+      "name": "Contractor Vehicle Expense Tracker",
+      "market": "US",
+      "price": "$22",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "us-15",
+      "name": "Construction Meeting Minutes Pack",
+      "market": "US",
+      "price": "$19",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "uk-1",
+      "name": "UK CDM Regulations Compliance Pack",
+      "market": "UK",
+      "price": "\u00a335",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "uk-2",
+      "name": "CIS Tax Deduction Pack for Subbies",
+      "market": "UK",
+      "price": "\u00a325",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "uk-3",
+      "name": "UK Builder Quote & Invoice Templates",
+      "market": "UK",
+      "price": "\u00a322",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "uk-4",
+      "name": "CSCS Card Application Guide",
+      "market": "UK",
+      "price": "\u00a317",
+      "cat": "Career",
+      "status": "idea"
+    },
+    {
+      "id": "uk-5",
+      "name": "UK Construction Contract Pack",
+      "market": "UK",
+      "price": "\u00a329",
+      "cat": "Legal",
+      "status": "idea"
+    },
+    {
+      "id": "uk-6",
+      "name": "JCT Contract Summary Guide",
+      "market": "UK",
+      "price": "\u00a327",
+      "cat": "Legal",
+      "status": "idea"
+    },
+    {
+      "id": "uk-7",
+      "name": "UK Site Safety Inspection Forms",
+      "market": "UK",
+      "price": "\u00a332",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "uk-8",
+      "name": "Construction Phase Plan Template",
+      "market": "UK",
+      "price": "\u00a329",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "eu-1",
+      "name": "EU Construction Site Safety Pack",
+      "market": "EU",
+      "price": "\u20ac42",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "eu-2",
+      "name": "VAT-Compliant Invoice Templates EU",
+      "market": "EU",
+      "price": "\u20ac22",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "eu-3",
+      "name": "Multilingual Quote Template Pack",
+      "market": "EU",
+      "price": "\u20ac29",
+      "cat": "Templates",
+      "status": "idea"
+    },
+    {
+      "id": "eu-4",
+      "name": "CE Marking Documentation Kit",
+      "market": "EU",
+      "price": "\u20ac37",
+      "cat": "Compliance",
+      "status": "idea"
+    },
+    {
+      "id": "eu-5",
+      "name": "Construction Project Budget Tracker",
+      "market": "EU",
+      "price": "\u20ac19",
+      "cat": "Finance",
+      "status": "idea"
+    },
+    {
+      "id": "eu-6",
+      "name": "EU Health & Safety Risk Assessments",
+      "market": "EU",
+      "price": "\u20ac35",
+      "cat": "Safety",
+      "status": "idea"
+    },
+    {
+      "id": "eu-7",
+      "name": "Construction Contract Templates EU",
+      "market": "EU",
+      "price": "\u20ac32",
+      "cat": "Legal",
+      "status": "idea"
+    }
+  ]
+}
