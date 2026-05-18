@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-19T07:00",
+  "updated": "2026-05-19T08:00",
   "checked_at": "2026-05-18T20:02:55Z",
   "total_sites": 4,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 0.67,
       "healthy": true,
       "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T07:00",
+      "last_checked": "2026-05-19T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -39,7 +39,7 @@
       "response_time_s": 0.83,
       "healthy": true,
       "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T07:00",
+      "last_checked": "2026-05-19T08:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -66,7 +66,7 @@
       "response_time_s": 0.79,
       "healthy": true,
       "checked_at": "2026-05-18T20:02:55Z",
-      "last_checked": "2026-05-19T07:00",
+      "last_checked": "2026-05-19T08:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -94,12 +94,12 @@
       "response_time_s": 3.76,
       "healthy": true,
       "checked_at": "2026-05-18T20:01:26Z",
-      "last_checked": "2026-05-19T07:00"
+      "last_checked": "2026-05-19T08:00"
     }
   ],
   "trading": {},
   "seo_audit": {
-    "updated": "2026-05-18T20:01",
+    "updated": "2026-05-19T08:00",
     "summary": {}
   },
   "email_stats": {
