@@ -17,6 +17,14 @@ from datetime import datetime, date
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# ── MANDATORY EMAIL VALIDATION PIPELINE ────────────────────────────
+EMAIL_VALIDATOR_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, EMAIL_VALIDATOR_DIR)
+from email_validator import validate_before_send, report_bounce
+
+# ── BRAND ROUTER ───────────────────────────────────────────────────
+from brand_router import classify_lead, render_email
+
 DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(DIR, "data")
 CONFIG_FILE = os.path.join(DATA_DIR, "email_config.json")
@@ -107,19 +115,28 @@ def get_uncontacted_leads(leads_data, contacted_set, count=10):
             # Skip if already contacted
             if email in contacted_set:
                 continue
-            # Skip unverified or invalid
-            if lead.get("verified") == "invalid":
+            # ── MANDATORY VALIDATION GATE ──────────────────────
+            approved, v_result = validate_before_send(email, max_age_hours=1)
+            if not approved:
+                log(f"⛔ VALIDATION FAILED ({v_result['reason']}): {email:35s} ({lead.get('contact', lead.get('company', 'Unknown'))})", "WARN")
+                lead["verified"] = "invalid" if v_result["status"] == "rejected" else "risky"
+                lead["verified_reason"] = v_result["reason"]
                 continue
-            
-            biz_target = lead.get("business_target", "")
-            if not biz_target:
-                # Infer from type
-                biz_target = "antoniopaving" if lead.get("type") in ("builder", "constructora") else "primeproperty"
-            
+
+            # ── BRAND ROUTING ─────────────────────────────────
+            brand_name = ""
+            try:
+                brand_result = classify_lead(lead)
+                biz_target = brand_result["brand"]
+                brand_name = brand_result.get("brand_config", {}).get("name", "")
+            except Exception:
+                biz_target = lead.get("business_target", "primescape")
+
             candidates.append({
                 "email": email,
                 "company": lead.get("company", ""),
                 "business_target": biz_target,
+                "brand_name": brand_name,
                 "type": lead.get("type", ""),
                 "batch_key": batch_key,
             })
@@ -252,6 +269,8 @@ def send_batch(config, count=8, dry_run=False):
             except Exception as e:
                 log(f"❌ {candidate['email']:35s} → Error: {e}", "ERROR")
                 mark_contacted(candidate["email"], f"error: {str(e)[:50]}")
+                # ── Report as bounce for permanent blacklist ──
+                report_bounce(candidate["email"], f"SMTP error: {str(e)[:80]}")
                 errors += 1
         
         # Delay between emails (3-7 min randomized)

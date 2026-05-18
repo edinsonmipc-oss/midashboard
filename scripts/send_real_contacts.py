@@ -1,11 +1,34 @@
 #!/usr/bin/env python3
-"""send_real_contacts.py — Envia emails personalizados a contactos reales.
-Usa SOLO texto plano, SIN emojis, SIN HTML, template probado libre de spam."""
-import json, smtplib, ssl, time, random, os
+"""
+send_real_contacts.py — Branded, personalized email outreach.
+
+MANDATORY PIPELINE (both enforced here):
+  1. EMAIL VALIDATION — email_validator.validate_before_send()
+  2. BRAND ROUTING — brand_router.classify_lead() selects correct brand + template
+
+Rules:
+  builders, developers, constructors → PrimeScape Construction (premium paving)
+  real estate, property mgmt, strata → Prime Property Maintenance (maintenance)
+
+  NEVER mix brands. NEVER use generic addresses. NEVER send unverified.
+"""
+
+import json
+import smtplib
+import ssl
+import time
+import random
+import os
+import sys
 from datetime import datetime
 from email.mime.text import MIMEText
 
+# ── Mandatory imports ──────────────────────────────────────────────
 DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, DIR)
+from email_validator import validate_before_send, report_bounce
+from brand_router import classify_lead, render_email
+
 LEADS_FILE = os.path.join(DIR, "data", "leads.json")
 LOG_FILE = os.path.join(DIR, "data", "send_real.log")
 
@@ -14,29 +37,8 @@ SMTP_CONFIG = {
     "port": 587,
     "email": "antonioprimemaintenance@gmail.com",
     "password": "pvir coud cwng udvs",
-    "from_name": "Antonio Paving",
-    "from_email": "antonioprimemaintenance@gmail.com",
 }
 
-# Templates de texto plano — probados sin spam triggers
-TEMPLATES = {
-    "builder": {
-        "subject": "Paving subcontractor capacity — Melbourne South-East",
-        "body": """Hi {first_name},
-
-This is Antonio from PrimeScape Construction in Notting Hill.
-
-We are a paving subcontractor working across Melbourne's south-east with capacity for new projects this quarter. We handle brick, bluestone, porcelain, and permeable paving for residential and commercial sites.
-
-I noticed {company} works on projects in our area. Would you be open to a brief conversation about your upcoming subcontractor needs?
-
-Cheers,
-Antonio Paving
-PrimeScape Construction
-0412 345 678
-10 Elwood St, Notting Hill VIC 3168""",
-    },
-}
 
 def log(msg, level="INFO"):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -45,10 +47,11 @@ def log(msg, level="INFO"):
     with open(LOG_FILE, "a") as f:
         f.write(line + "\n")
 
-def send_email(to_email, subject, body_text):
+
+def send_email(to_email, subject, body_text, from_name, from_email):
     """Send a plain-text email via Gmail SMTP."""
     msg = MIMEText(body_text, "plain", "utf-8")
-    msg["From"] = f"{SMTP_CONFIG['from_name']} <{SMTP_CONFIG['from_email']}>"
+    msg["From"] = f"{from_name} <{from_email}>"
     msg["To"] = to_email
     msg["Subject"] = subject
     msg["List-Unsubscribe"] = "<mailto:antonioprimemaintenance+unsubscribe@gmail.com>"
@@ -59,85 +62,95 @@ def send_email(to_email, subject, body_text):
     server.starttls(context=ctx)
     server.ehlo()
     server.login(SMTP_CONFIG["email"], SMTP_CONFIG["password"])
-    server.sendmail(SMTP_CONFIG["from_email"], to_email, msg.as_string())
+    server.sendmail(from_email, to_email, msg.as_string())
     server.quit()
     return True
 
-def get_first_name(contact_name):
-    """Extract first name from full name."""
-    if not contact_name:
-        return "there"
-    return contact_name.split()[0]
 
 def main():
-    print("=" * 60)
-    print("SENDING TO REAL CONTACTS - ANTONIO PAVING OUTREACH")
-    print("=" * 60)
+    print("=" * 70)
+    print("📧 BRANDED OUTREACH — SENDING TO REAL CONTACTS")
+    print("=" * 70)
 
     with open(LEADS_FILE) as f:
         data = json.load(f)
 
-    # Collect all uncontacted leads
-    uncontacted = []
+    # Collect uncontacted, validated, branded leads
+    candidates = []
     for batch_key in sorted(data.get("leads_by_date", {}).keys()):
         for lead in data["leads_by_date"][batch_key]:
             email = lead.get("email", "").strip()
-            if not email:
+            if not email or "@" not in email:
                 continue
             if lead.get("sent") is True or lead.get("contact_status") == "sent":
                 continue
-            if lead.get("verified") == "invalid":
+
+            # STEP 1: Email validation gate
+            approved, v_result = validate_before_send(email, max_age_hours=1)
+            if not approved:
+                log(f"⛔ VALIDATION FAILED ({v_result['reason']}): {email:35s} ({lead.get('contact', lead.get('company', 'Unknown'))})", "WARN")
+                lead["verified"] = "invalid" if v_result["status"] == "rejected" else "risky"
+                lead["verified_reason"] = v_result["reason"]
                 continue
 
-            first_name = get_first_name(lead.get("contact", ""))
-            company = lead.get("company", "")
-            lead_type = lead.get("type", "")
-            notes = lead.get("notes", "")
+            # STEP 2: Brand routing
+            brand_result = classify_lead(lead)
+            email_data = render_email(lead, brand_result)
 
-            template_key = "builder" if lead_type in ("builder", "constructora", "strata") else "builder"
-            tmpl = TEMPLATES.get(template_key, TEMPLATES["builder"])
-
-            # Personalizar
-            subject = tmpl["subject"]
-            body = tmpl["body"].format(first_name=first_name, company=company)
-
-            uncontacted.append({
+            candidates.append({
                 "email": email,
-                "company": company,
                 "contact": lead.get("contact", ""),
+                "company": lead.get("company", ""),
                 "title": lead.get("title", ""),
-                "subject": subject,
-                "body": body,
+                "brand": brand_result["brand"],
+                "brand_name": brand_result["brand_config"]["name"],
+                "subject": email_data["subject"],
+                "body": email_data["body"],
+                "from_name": email_data["from_name"],
+                "from_email": email_data["from_email"],
                 "batch_key": batch_key,
             })
 
-    # Shuffle for randomization
-    random.shuffle(uncontacted)
-
-    print(f"\nTotal uncontacted real contacts: {len(uncontacted)}")
-    print()
-
-    if len(uncontacted) == 0:
-        print("No uncontacted leads. All sent already!")
+    if not candidates:
+        print("\nNo valid, uncontacted leads available. All done!")
         return
 
-    # Ask user to confirm first batch
-    batch = uncontacted[:8]  # Send max 8 per run
-    print(f"Sending {len(batch)} emails now...")
+    # Shuffle so brands are interleaved naturally
+    random.shuffle(candidates)
+
+    batch_size = 8
+    batch = candidates[:batch_size]
+
+    print(f"\n📊 {len(candidates)} total candidates | Sending {len(batch)}")
     print()
 
+    # Show the batch summary
+    brand_counts = {}
+    for c in batch:
+        brand_counts[c["brand_name"]] = brand_counts.get(c["brand_name"], 0) + 1
+    for brand_name, count in brand_counts.items():
+        print(f"   {brand_name}: {count} emails")
+
+    print()
     sent_count = 0
     fail_count = 0
 
     for i, contact in enumerate(batch):
-        print(f"[{i+1}/{len(batch)}] Sending to {contact['contact']} ({contact['email']})...")
+        print(f"[{i+1}/{len(batch)}] Sending to {contact['contact']} ({contact['email']})")
+        print(f"    Brand: {contact['brand_name']}")
         print(f"    Subject: {contact['subject']}")
         print(f"    Company: {contact['company']}")
         print()
 
         try:
-            send_email(contact["email"], contact["subject"], contact["body"])
-            log(f"SENT | {contact['email']} | {contact['contact']} | {contact['company']}")
+            send_email(
+                contact["email"],
+                contact["subject"],
+                contact["body"],
+                contact["from_name"],
+                contact["from_email"],
+            )
+            log(f"SENT | {contact['brand']:15s} | {contact['email']:35s} | {contact['contact']:20s} | {contact['company']}")
 
             # Mark as sent in leads.json
             for batch_key in data.get("leads_by_date", {}):
@@ -146,6 +159,8 @@ def main():
                         lead["sent"] = True
                         lead["contacted"] = datetime.now().strftime("%Y-%m-%dT%H:%M")
                         lead["contact_status"] = "sent"
+                        lead["brand"] = contact["brand"]
+                        lead["brand_name"] = contact["brand_name"]
 
             sent_count += 1
 
@@ -153,21 +168,24 @@ def main():
             with open(LEADS_FILE, "w") as f:
                 json.dump(data, f, indent=2)
 
-            # Delay between sends (2-4 min)
+            # Delay between sends
             if i < len(batch) - 1:
                 delay = random.randint(120, 240)
-                print(f"    Waiting {delay}s before next send...")
+                print(f"    ⏳ Waiting {delay}s...")
                 time.sleep(delay)
 
         except Exception as e:
             log(f"FAIL | {contact['email']} | {e}", "ERROR")
+            report_bounce(contact["email"], f"Send error: {str(e)[:80]}")
             fail_count += 1
 
-    print()
-    print("=" * 60)
-    print(f"RESULTS: {sent_count} sent, {fail_count} failed")
-    print(f"Remaining uncontacted: {len(uncontacted) - len(batch)}")
-    print("=" * 60)
+        print()
+
+    print("=" * 70)
+    print(f"📊 RESULTS: {sent_count} sent, {fail_count} failed")
+    print(f"   Remaining candidates: {len(candidates) - len(batch)}")
+    print("=" * 70)
+
 
 if __name__ == "__main__":
     main()

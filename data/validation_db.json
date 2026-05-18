@@ -1,0 +1,1540 @@
+{
+  "validations": [
+    {
+      "email": "facilities@cbre.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (facilities@)",
+      "checked_at": "2026-05-18T10:15:26.409717",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@avjennings.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:26.411382",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@jelliscraig.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.413203",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@picagroup.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:26.414788",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@kane.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:26.416382",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@marshallwhite.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:26.418022",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "procurement@frasersproperty.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (procurement@)",
+      "checked_at": "2026-05-18T10:15:26.419635",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@ljhooker.com",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.421360",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@mcgrath.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.423081",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "partnerships@mirvac.com",
+      "status": "rejected",
+      "detail": "Generic role address (partnerships@)",
+      "checked_at": "2026-05-18T10:15:26.424902",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "doug.moss@downergroup.com",
+      "status": "approved",
+      "detail": "MX OK (1 servers)",
+      "checked_at": "2026-05-18T10:15:26.593749",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "1 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "peter.tompkins@downergroup.com",
+      "status": "approved",
+      "detail": "MX OK (1 servers)",
+      "checked_at": "2026-05-18T10:15:26.739481",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "1 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "daniel.crawley@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:26.891230",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "george.bardas@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.064223",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "mark.rosenboom@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.213688",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "ben.sayers@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.363613",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "nick.redfern@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.512365",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "tim.neilson@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.658182",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "harmohan.singh@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.815123",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "darren.dean@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.975293",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "alexander.pangalos@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.122661",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "tim.george@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.273003",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "mark.glenn@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.418172",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "tim.oshea@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.557593",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "steve.stavrou@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.711458",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "ben.williams@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.881195",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "george.abraham@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.073429",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "michael.argyrou@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.219665",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "cathal.orourke@laingorourke.com",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.460791",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "stephanie.graham@lendlease.com",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.637898",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@jll.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.642679",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@goodman.com",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.646192",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@cbusproperty.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.648560",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@watpac.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:29.651135",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@rainehorne.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.654475",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@collinssimms.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.656955",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@gpt.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.659606",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@acebodycorporate.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.662187",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@mirvac.com",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.664743",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@raywhite.com",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.667400",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "trades@metricon.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.670386",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@savills.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.673133",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@century21.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.675976",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@barryplant.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.678899",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplier@porterdavis.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (supplier@)",
+      "checked_at": "2026-05-18T10:15:29.681750",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "trades@henley.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.684512",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@nelsonalexander.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.687381",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "trades@simonds.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.690397",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@ispt.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.693596",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@hickory.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:29.696811",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "procurement@brookfieldmultiplex.com",
+      "status": "rejected",
+      "detail": "Generic role address (procurement@)",
+      "checked_at": "2026-05-18T10:15:29.699597",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplychain@laingorourke.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (supplychain@)",
+      "checked_at": "2026-05-18T10:15:29.702512",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "estimating@probuild.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (estimating@)",
+      "checked_at": "2026-05-18T10:15:29.706066",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@knightfrank.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.709331",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@fletcher.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.713142",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "suppliers@lendlease.com",
+      "status": "rejected",
+      "detail": "Generic role address (suppliers@)",
+      "checked_at": "2026-05-18T10:15:29.716568",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "subcontractors@multiplex.com",
+      "status": "rejected",
+      "detail": "Generic role address (subcontractors@)",
+      "checked_at": "2026-05-18T10:15:29.720257",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "leasing@dexus.com",
+      "status": "rejected",
+      "detail": "Generic role address (leasing@)",
+      "checked_at": "2026-05-18T10:15:29.723328",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@stratatitle.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.726593",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    }
+  ],
+  "by_email": {
+    "facilities@cbre.com.au": {
+      "email": "facilities@cbre.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (facilities@)",
+      "checked_at": "2026-05-18T10:15:26.409717",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@avjennings.com.au": {
+      "email": "info@avjennings.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:26.411382",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@jelliscraig.com.au": {
+      "email": "commercial@jelliscraig.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.413203",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@picagroup.com.au": {
+      "email": "info@picagroup.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:26.414788",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "projects@kane.com.au": {
+      "email": "projects@kane.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:26.416382",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "projects@marshallwhite.com.au": {
+      "email": "projects@marshallwhite.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:26.418022",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "procurement@frasersproperty.com.au": {
+      "email": "procurement@frasersproperty.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (procurement@)",
+      "checked_at": "2026-05-18T10:15:26.419635",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@ljhooker.com": {
+      "email": "commercial@ljhooker.com",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.421360",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@mcgrath.com.au": {
+      "email": "commercial@mcgrath.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:26.423081",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "partnerships@mirvac.com": {
+      "email": "partnerships@mirvac.com",
+      "status": "rejected",
+      "detail": "Generic role address (partnerships@)",
+      "checked_at": "2026-05-18T10:15:26.424902",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "doug.moss@downergroup.com": {
+      "email": "doug.moss@downergroup.com",
+      "status": "approved",
+      "detail": "MX OK (1 servers)",
+      "checked_at": "2026-05-18T10:15:26.593749",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "1 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "peter.tompkins@downergroup.com": {
+      "email": "peter.tompkins@downergroup.com",
+      "status": "approved",
+      "detail": "MX OK (1 servers)",
+      "checked_at": "2026-05-18T10:15:26.739481",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "1 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "daniel.crawley@hansenyuncken.com.au": {
+      "email": "daniel.crawley@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:26.891230",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "george.bardas@hansenyuncken.com.au": {
+      "email": "george.bardas@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.064223",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "mark.rosenboom@hansenyuncken.com.au": {
+      "email": "mark.rosenboom@hansenyuncken.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.213688",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "ben.sayers@henley.com.au": {
+      "email": "ben.sayers@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.363613",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "nick.redfern@henley.com.au": {
+      "email": "nick.redfern@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.512365",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "tim.neilson@henley.com.au": {
+      "email": "tim.neilson@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.658182",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "harmohan.singh@henley.com.au": {
+      "email": "harmohan.singh@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.815123",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "darren.dean@henley.com.au": {
+      "email": "darren.dean@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:27.975293",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "alexander.pangalos@henley.com.au": {
+      "email": "alexander.pangalos@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.122661",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "tim.george@henley.com.au": {
+      "email": "tim.george@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.273003",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "mark.glenn@henley.com.au": {
+      "email": "mark.glenn@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.418172",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "tim.oshea@henley.com.au": {
+      "email": "tim.oshea@henley.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.557593",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "steve.stavrou@hickory.com.au": {
+      "email": "steve.stavrou@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.711458",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "ben.williams@hickory.com.au": {
+      "email": "ben.williams@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:28.881195",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "george.abraham@hickory.com.au": {
+      "email": "george.abraham@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.073429",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "michael.argyrou@hickory.com.au": {
+      "email": "michael.argyrou@hickory.com.au",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.219665",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "cathal.orourke@laingorourke.com": {
+      "email": "cathal.orourke@laingorourke.com",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.460791",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "stephanie.graham@lendlease.com": {
+      "email": "stephanie.graham@lendlease.com",
+      "status": "approved",
+      "detail": "MX OK (2 servers)",
+      "checked_at": "2026-05-18T10:15:29.637898",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "2 mx records",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@jll.com.au": {
+      "email": "property@jll.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.642679",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@goodman.com": {
+      "email": "property@goodman.com",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.646192",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@cbusproperty.com.au": {
+      "email": "info@cbusproperty.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.648560",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "projects@watpac.com.au": {
+      "email": "projects@watpac.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:29.651135",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@rainehorne.com.au": {
+      "email": "commercial@rainehorne.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.654475",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@collinssimms.com.au": {
+      "email": "info@collinssimms.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.656955",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@gpt.com.au": {
+      "email": "info@gpt.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.659606",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@acebodycorporate.com.au": {
+      "email": "info@acebodycorporate.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.662187",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@mirvac.com": {
+      "email": "info@mirvac.com",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.664743",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@raywhite.com": {
+      "email": "commercial@raywhite.com",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.667400",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "trades@metricon.com.au": {
+      "email": "trades@metricon.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.670386",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@savills.com.au": {
+      "email": "property@savills.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.673133",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "commercial@century21.com.au": {
+      "email": "commercial@century21.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-18T10:15:29.675976",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@barryplant.com.au": {
+      "email": "property@barryplant.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.678899",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "supplier@porterdavis.com.au": {
+      "email": "supplier@porterdavis.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (supplier@)",
+      "checked_at": "2026-05-18T10:15:29.681750",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "trades@henley.com.au": {
+      "email": "trades@henley.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.684512",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@nelsonalexander.com.au": {
+      "email": "property@nelsonalexander.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.687381",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "trades@simonds.com.au": {
+      "email": "trades@simonds.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-18T10:15:29.690397",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@ispt.com.au": {
+      "email": "property@ispt.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.693596",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "projects@hickory.com.au": {
+      "email": "projects@hickory.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (projects@)",
+      "checked_at": "2026-05-18T10:15:29.696811",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "procurement@brookfieldmultiplex.com": {
+      "email": "procurement@brookfieldmultiplex.com",
+      "status": "rejected",
+      "detail": "Generic role address (procurement@)",
+      "checked_at": "2026-05-18T10:15:29.699597",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "supplychain@laingorourke.com.au": {
+      "email": "supplychain@laingorourke.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (supplychain@)",
+      "checked_at": "2026-05-18T10:15:29.702512",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "estimating@probuild.com.au": {
+      "email": "estimating@probuild.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (estimating@)",
+      "checked_at": "2026-05-18T10:15:29.706066",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@knightfrank.com.au": {
+      "email": "property@knightfrank.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.709331",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@fletcher.com.au": {
+      "email": "property@fletcher.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (property@)",
+      "checked_at": "2026-05-18T10:15:29.713142",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "suppliers@lendlease.com": {
+      "email": "suppliers@lendlease.com",
+      "status": "rejected",
+      "detail": "Generic role address (suppliers@)",
+      "checked_at": "2026-05-18T10:15:29.716568",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "subcontractors@multiplex.com": {
+      "email": "subcontractors@multiplex.com",
+      "status": "rejected",
+      "detail": "Generic role address (subcontractors@)",
+      "checked_at": "2026-05-18T10:15:29.720257",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "leasing@dexus.com": {
+      "email": "leasing@dexus.com",
+      "status": "rejected",
+      "detail": "Generic role address (leasing@)",
+      "checked_at": "2026-05-18T10:15:29.723328",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@stratatitle.com.au": {
+      "email": "info@stratatitle.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-18T10:15:29.726593",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    }
+  }
+}

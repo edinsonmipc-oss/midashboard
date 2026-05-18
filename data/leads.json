@@ -15,11 +15,12 @@
         "contact": "Ben Sayers",
         "title": "Construction Manager",
         "notes": "Contrata subcontratistas de paving y construcción para proyectos Melbourne. Fuente: Wiza.co",
-        "verified": "verified",
-        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "verified": "risky",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T11:39",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:11:21.814596"
       },
       {
         "company": "Henley Properties",
@@ -29,11 +30,12 @@
         "contact": "Nick Redfern",
         "title": "Construction Supervisor",
         "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
-        "verified": "verified",
-        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "verified": "approved",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:03",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:14:57.931922"
       },
       {
         "company": "Henley Properties",
@@ -43,11 +45,12 @@
         "contact": "Tim Neilson",
         "title": "Building Supervisor",
         "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
-        "verified": "verified",
-        "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
+        "verified": "approved",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:10",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:14:58.082312"
       },
       {
         "company": "Henley Properties",
@@ -201,11 +204,12 @@
         "contact": "Daniel Crawley",
         "title": "General Manager - Victoria",
         "notes": "GM Victoria - contrata sub en Melbourne",
-        "verified": "verified",
-        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "verified": "risky",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:07",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:13:50.447934"
       },
       {
         "company": "Hansen Yuncken",
@@ -215,11 +219,12 @@
         "contact": "George Bardas",
         "title": "CEO",
         "notes": "CEO",
-        "verified": "verified",
-        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "verified": "approved",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T11:35",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:14:57.626365"
       },
       {
         "company": "Hansen Yuncken",
@@ -229,11 +234,12 @@
         "contact": "Mark Rosenboom",
         "title": "Executive General Manager",
         "notes": "EGM - supervisa construccion",
-        "verified": "verified",
-        "verified_reason": "MX verified - hansenyuncken.com.au",
+        "verified": "approved",
+        "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:03",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:14:57.770666"
       }
     ],
     "2026-05-15_lendlease": [
@@ -277,11 +283,12 @@
         "contact": "Doug Moss",
         "title": "COO Transport & Infrastructure",
         "notes": "COO Transport - contrata sub para infraestructura",
-        "verified": "verified",
-        "verified_reason": "MX verified",
+        "verified": "risky",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-15T11:57",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:45.615811"
       },
       {
         "company": "Downer Group",
@@ -291,11 +298,12 @@
         "contact": "Peter Tompkins",
         "title": "MD & CEO",
         "notes": "CEO",
-        "verified": "verified",
-        "verified_reason": "MX verified",
+        "verified": "risky",
+        "verified_reason": "MX OK (1 servers)",
         "contacted": "2026-05-15T11:46",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:13:30.094263"
       }
     ],
     "2026-05-15_batch6": [
@@ -307,11 +315,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (facilities@)",
         "contacted": "2026-05-16T10:05",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.019670"
       },
       {
         "company": "AVJennings",
@@ -321,11 +330,12 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (info@)",
         "contacted": "2026-05-16T10:02",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.021477"
       },
       {
         "company": "Jellis Craig",
@@ -335,11 +345,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
         "contacted": "2026-05-17T08:00",
         "contact_status": "dry-run",
-        "sent": false
+        "sent": false,
+        "verified_at": "2026-05-18T10:12:03.023023"
       },
       {
         "company": "PICA Group",
@@ -349,11 +360,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (info@)",
         "contacted": "2026-05-16T10:06",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.024690"
       },
       {
         "company": "Kane Constructions",
@@ -363,11 +375,12 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
         "contacted": "2026-05-18T08:00",
         "contact_status": "dry-run",
-        "sent": false
+        "sent": false,
+        "verified_at": "2026-05-18T10:12:03.026605"
       },
       {
         "company": "Marshall White",
@@ -377,11 +390,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
         "contacted": "2026-05-16T10:06",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.028229"
       },
       {
         "company": "Frasers Property",
@@ -391,11 +405,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (procurement@)",
         "contacted": "2026-05-16T08:00",
         "contact_status": "dry-run",
-        "sent": false
+        "sent": false,
+        "verified_at": "2026-05-18T10:12:03.029919"
       },
       {
         "company": "LJ Hooker",
@@ -405,11 +420,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
         "contacted": "2026-05-16T10:06",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.031611"
       },
       {
         "company": "McGrath Estate Agents",
@@ -419,11 +435,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
         "contacted": "2026-05-16T08:00",
         "contact_status": "dry-run",
-        "sent": false
+        "sent": false,
+        "verified_at": "2026-05-18T10:12:03.033383"
       },
       {
         "company": "Mirvac",
@@ -433,11 +450,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (partnerships@)",
         "contacted": "2026-05-18T08:00",
         "contact_status": "dry-run",
-        "sent": false
+        "sent": false,
+        "verified_at": "2026-05-18T10:12:03.035548"
       }
     ],
     "2026-05-16_batch7": [
@@ -451,7 +469,7 @@
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-16T10:06",
+        "contacted": "2026-05-18T10:31",
         "contact_status": "sent",
         "sent": true
       },
@@ -479,7 +497,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-16T10:06",
+        "contacted": "2026-05-18T10:46",
         "contact_status": "sent",
         "sent": true
       },
@@ -505,11 +523,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (procurement@)",
         "contacted": "2026-05-16T10:06",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.029925"
       },
       {
         "company": "Raine & Horne",
@@ -621,9 +640,9 @@
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-17T08:00",
-        "contact_status": "dry-run",
-        "sent": false
+        "contacted": "2026-05-18T10:15",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Savills Australia",
@@ -661,11 +680,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
         "contacted": "2026-05-17T10:12",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.031618"
       },
       {
         "company": "Barry Plant",
@@ -716,7 +736,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
         "verified_reason": "Has MX records",
-        "contacted": "2026-05-17T10:12",
+        "contacted": "2026-05-18T10:41",
         "contact_status": "sent",
         "sent": true
       }
@@ -730,11 +750,12 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records",
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
         "contacted": "2026-05-17T10:12",
         "contact_status": "sent",
-        "sent": true
+        "sent": true,
+        "verified_at": "2026-05-18T10:12:03.031620"
       },
       {
         "company": "Cbus Property",
@@ -745,7 +766,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:46",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Probuild",
@@ -828,7 +852,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:36",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Fletchers Real Estate",
@@ -855,7 +882,10 @@
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:15",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Simonds Homes",
@@ -866,7 +896,10 @@
         "business_target": "antoniopaving",
         "notes": "Volumen alto de proyectos",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:04",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "JLL Australia",
@@ -877,7 +910,10 @@
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:31",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "ISPT",
@@ -888,7 +924,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:36",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Nelson Alexander",
@@ -899,7 +938,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:41",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Marshall White",
@@ -909,8 +951,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
+        "verified_at": "2026-05-18T10:12:03.028239"
       },
       {
         "company": "Hickory Group",
@@ -921,7 +964,10 @@
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:12",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Brookfield Multiplex",
@@ -932,7 +978,10 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:18",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Laing O'Rourke",
@@ -943,7 +992,10 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:21",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "CBRE Australia",
@@ -953,8 +1005,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Multiples propiedades en su cartera",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (facilities@)",
+        "verified_at": "2026-05-18T10:12:03.019682"
       }
     ],
     "2026-05-18_batch11": [
@@ -966,8 +1019,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (partnerships@)",
+        "verified_at": "2026-05-18T10:12:03.035563"
       },
       {
         "company": "Fletchers Real Estate",
@@ -989,7 +1043,10 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:26",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Ray White",
@@ -1010,8 +1067,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
+        "verified_at": "2026-05-18T10:12:03.033393"
       },
       {
         "company": "Marshall White",
@@ -1021,8 +1079,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
+        "verified_at": "2026-05-18T10:12:03.028242"
       },
       {
         "company": "Multiplex",
@@ -1055,7 +1114,10 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-18T10:21",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Strata Title Management",

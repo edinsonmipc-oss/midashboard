@@ -69,3 +69,32 @@ Updated send_report.json.
 [2026-05-14 10:27:36] Waiting 270s before next send...
 [2026-05-14 10:32:24] SENT [primeproperty  ] → property@nelsonalexander.com.au     (Nelson Alexander)
 [2026-05-14 10:32:24] BATCH COMPLETE: 8 sent, 0 errors, 8 attempted
+[2026-05-18 10:14:58] Daily limit: 8, delays: 180-300s
+[2026-05-18 10:14:58] Found 5 antipaving + 12 primeproperty pending leads
+[2026-05-18 10:14:58] Sending 8 emails this batch
+[2026-05-18 10:14:58]   - Metricon                       trades@metricon.com.au             
+[2026-05-18 10:14:58]   - Brookfield Multiplex           procurement@brookfieldmultiplex.com
+[2026-05-18 10:14:58]   - Laing O'Rourke                 supplychain@laingorourke.com.au    
+[2026-05-18 10:14:58]   - Lendlease                      suppliers@lendlease.com            
+[2026-05-18 10:14:58]   - JLL Australia                  property@jll.com.au                
+[2026-05-18 10:14:58]   - ISPT                           property@ispt.com.au               
+[2026-05-18 10:14:58]   - Nelson Alexander               property@nelsonalexander.com.au    
+[2026-05-18 10:14:58]   - Cbus Property                  info@cbusproperty.com.au           
+[2026-05-18 10:14:58] Connecting to SMTP...
+[2026-05-18 10:15:00] SMTP connected as antonioprimemaintenance@gmail.com
+[2026-05-18 10:15:02] ✅ SENT [antoniopaving  ] -> trades@metricon.com.au              (Metricon)
+[2026-05-18 10:15:02] ⏳ Waiting 199s before next...
+[2026-05-18 10:18:34] ✅ SENT [antoniopaving  ] -> procurement@brookfieldmultiplex.com (Brookfield Multiplex)
+[2026-05-18 10:18:34] ⏳ Waiting 184s before next...
+[2026-05-18 10:21:51] ✅ SENT [antoniopaving  ] -> supplychain@laingorourke.com.au     (Laing O'Rourke)
+[2026-05-18 10:21:51] ⏳ Waiting 285s before next...
+[2026-05-18 10:26:56] ✅ SENT [antoniopaving  ] -> suppliers@lendlease.com             (Lendlease)
+[2026-05-18 10:26:56] ⏳ Waiting 251s before next...
+[2026-05-18 10:31:25] ✅ SENT [primeproperty  ] -> property@jll.com.au                 (JLL Australia)
+[2026-05-18 10:31:25] ⏳ Waiting 283s before next...
+[2026-05-18 10:36:29] ✅ SENT [primeproperty  ] -> property@ispt.com.au                (ISPT)
+[2026-05-18 10:36:29] ⏳ Waiting 260s before next...
+[2026-05-18 10:41:04] ✅ SENT [primeproperty  ] -> property@nelsonalexander.com.au     (Nelson Alexander)
+[2026-05-18 10:41:04] ⏳ Waiting 298s before next...
+[2026-05-18 10:46:17] ✅ SENT [primeproperty  ] -> info@cbusproperty.com.au            (Cbus Property)
+[2026-05-18 10:46:18] 📊 DONE: 8 sent, 0 errors

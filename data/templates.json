@@ -1,22 +1,29 @@
 {
   "templates": [
     {
-      "id": "antoniopaving",
-      "name": "Antonio Paving",
-      "business": "antoniopaving",
+      "id": "primescape",
+      "name": "Antonio PrimeScape Construction",
+      "business": "primescape",
       "website": "antoniopaving.com",
-      "audience": "Builders & Construction Companies",
-      "subject": "Paving and bricklaying subcontractor - Notting Hill, Melbourne",
-      "body": "Hi [COMPANY],\n\nI'm Antonio, owner of Antonio PrimeScape Construction in Melbourne's south-east. We've been operating since 2014 with $20M public liability insurance.\n\nWe handle paving, bricklaying, decking and landscaping for builders and construction companies across Melbourne. Every job is owner-operated with a written fixed-price quote after a site visit.\n\nIf you have an upcoming project - new build, extension or commercial job - I'd welcome the chance to quote.\n\nRegards,\nAntonio\n0406 170 544"
+      "instagram": "instagram.com/antonioprimescape",
+      "phone": "0406 170 544",
+      "address": "10 Elwood St, Notting Hill VIC 3168",
+      "audience": "Builders, Developers & Commercial Projects",
+      "tone": "Premium Paving & Outdoor Construction Specialist",
+      "subject": "Premium paving contractor — Melbourne South-East",
+      "body": "Hi [COMPANY],\n\nI'm Antonio, owner of PrimeScape Construction in Notting Hill.\n\nWe specialise in premium outdoor construction — brick paving, bluestone, porcelain, driveways, patios, and retaining walls for both residential and commercial projects across Melbourne's south-east.\n\nWe have capacity for subcontract paving works this quarter and would welcome the opportunity to discuss your upcoming project pipeline.\n\nWould you be open to a brief conversation about how we can add value to your next development?\n\nCheers,\nAntonio\nAntonio PrimeScape Construction\nantoniopaving.com\n0406 170 544"
     },
     {
       "id": "primeproperty",
       "name": "Prime Property Maintenance",
       "business": "primeproperty",
       "website": "primepropertymaintenance.au",
-      "audience": "Real Estate Agents, Property Managers & Strata",
-      "subject": "Property maintenance services - Melbourne SE suburbs",
-      "body": "Hi [COMPANY],\n\nI'm writing from Prime Property Maintenance, based in Notting Hill and covering Melbourne's south-eastern suburbs. We work with real estate agents, property managers and strata committees.\n\nWe handle decking, fencing, gardening, pressure washing, gutter cleaning, general handyman repairs, end-of-lease preparation and small removals. We provide fixed pricing and a quote within two hours.\n\nWe're fully insured with $20M public liability and we're currently taking on new property portfolios.\n\nRegards,\nAntonio\n0468 166 249"
+      "phone": "0468 166 249",
+      "address": "10 Elwood St, Notting Hill VIC 3168",
+      "audience": "Real Estate Agents, Property Managers, Strata & Facilities",
+      "tone": "Reliable Property Maintenance & Facilities Services",
+      "subject": "Property maintenance support — Melbourne South-East",
+      "body": "Hi [COMPANY],\n\nI'm writing from Prime Property Maintenance, based in Notting Hill.\n\nWe provide reliable maintenance services for real estate agencies and property managers across Melbourne's south-east — from routine repairs to end-of-lease make-readies.\n\nWe help keep properties tenant-ready and reduce downtime between leases. All work is fully insured and we report to agency specifications.\n\nWould you be open to a quick chat about becoming your go-to maintenance contact?\n\nCheers,\nAntonio\nPrime Property Maintenance\nprimepropertymaintenance.au\n0468 166 249"
     }
   ]
 }
