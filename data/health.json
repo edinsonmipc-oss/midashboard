@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-19T22:01",
+  "updated": "2026-05-19T22:02",
   "checked_at": "2026-05-19T22:01:32Z",
   "total_sites": 4,
   "sites": [
@@ -23,9 +23,9 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T22:02:06Z",
-        "pages_checked": 372,
-        "pages_ok": 372,
+        "checked_at": "2026-05-20T08:00:49.770781Z",
+        "pages_checked": 376,
+        "pages_ok": 376,
         "pages_with_issues": 0,
         "issues": [],
         "healthy": true
@@ -50,7 +50,7 @@
       },
       "seo_score": 0.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T22:02:06Z",
+        "checked_at": "2026-05-20T08:00:49.770781Z",
         "pages_checked": 976,
         "pages_ok": 976,
         "pages_with_issues": 0,
@@ -77,7 +77,7 @@
       },
       "seo_score": 100.0,
       "crawl_check": {
-        "checked_at": "2026-05-18T22:02:06Z",
+        "checked_at": "2026-05-20T08:00:49.770781Z",
         "pages_checked": 74,
         "pages_ok": 74,
         "pages_with_issues": 0,
@@ -96,8 +96,10 @@
     "total_sent": 8
   },
   "crawl_404": {
-    "checked_at": "2026-05-18T22:02:06Z",
-    "status": "ok"
+    "checked_at": "2026-05-20T08:00:49.770781Z",
+    "status": "ok",
+    "total_pages_checked": 1426,
+    "total_issues": 0
   },
   "ssl_expiry": {
     "antoniopaving.com": 83,
