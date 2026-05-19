@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-20T08:00",
-  "checked_at": "2026-05-18T22:01:07Z",
+  "updated": "2026-05-19T22:01",
+  "checked_at": "2026-05-19T22:01:32Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.68,
+      "response_time_s": 0.72,
       "healthy": true,
-      "checked_at": "2026-05-18T22:01:07Z",
-      "last_checked": "2026-05-20T08:00",
+      "checked_at": "2026-05-19T22:01:32Z",
+      "last_checked": "2026-05-19T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.91,
+      "response_time_s": 0.83,
       "healthy": true,
-      "checked_at": "2026-05-18T22:01:07Z",
-      "last_checked": "2026-05-20T08:00",
+      "checked_at": "2026-05-19T22:01:32Z",
+      "last_checked": "2026-05-19T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -65,8 +65,8 @@
       "status_code": 200,
       "response_time_s": 0.79,
       "healthy": true,
-      "checked_at": "2026-05-18T22:01:07Z",
-      "last_checked": "2026-05-20T08:00",
+      "checked_at": "2026-05-19T22:01:32Z",
+      "last_checked": "2026-05-19T22:01",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -84,17 +84,6 @@
         "issues": [],
         "healthy": true
       }
-    },
-    {
-      "name": "tradios.onrender.com",
-      "url": "https://tradios.onrender.com",
-      "status": "online",
-      "status_code": 200,
-      "redirect_follows_to_200": true,
-      "response_time_s": 0.44,
-      "healthy": true,
-      "checked_at": "2026-05-20T06:00:00Z",
-      "last_checked": "2026-05-20T08:00"
     }
   ],
   "trading": {},
@@ -120,23 +109,23 @@
   "primepropertymaintenance": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 64004,
-    "checked_at": "2026-05-18T22:01:07Z",
-    "note": "Todo OK: homepage 64KB, CSS (premium.css 21KB), OG tags. SSL 35d. Response 0.91s."
+    "size_bytes": 65152,
+    "checked_at": "2026-05-19T22:01:32Z",
+    "note": "All OK: 200, 0.83s, 65KB."
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 25373,
-    "checked_at": "2026-05-18T22:01:07Z",
-    "note": "Todo OK: hero, CSS inline+external, OG tags, sitemap 59KB, robots.txt. Page ~25KB. Response 0.68s."
+    "size_bytes": 33818,
+    "checked_at": "2026-05-19T22:01:32Z",
+    "note": "All OK: 200, 0.72s, 34KB."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 48812,
-    "checked_at": "2026-05-18T22:01:07Z",
-    "note": "Todo OK: CSS 13KB, OG tags. Sitemap works (14KB). SSL 62d. Response 0.79s."
+    "size_bytes": 49457,
+    "checked_at": "2026-05-19T22:01:32Z",
+    "note": "All OK: 200, 0.79s, 49KB."
   },
   "tradios": {
     "status": "ok",
@@ -145,5 +134,5 @@
     "checked_at": "2026-05-20T06:00:00Z",
     "note": "Healthy after 307 redirect. Response time 0.44s."
   },
-  "last_full_check": "2026-05-18T22:01:07Z"
+  "last_full_check": "2026-05-19T22:01:32Z"
 }
