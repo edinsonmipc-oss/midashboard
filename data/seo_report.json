@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-19T08:00",
+  "updated": "2026-05-20T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-19T08:00",
+      "analyzed_at": "2026-05-20T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-19T08:00",
+          "analyzed_at": "2026-05-20T08:00",
           "title": "Paving Melbourne — Premium Brick & Bluestone | Free Quote 0406 170 544",
           "title_length": 70,
           "title_too_short": false,
@@ -20,18 +20,19 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 839,
+          "word_count": 996,
           "h1_count": 2,
-          "h2_count": 7,
+          "h2_count": 8,
           "has_h1": true,
           "images": 14,
           "images_with_alt": 14,
-          "links": 35,
+          "links": 52,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 1,
             "driveway paving": 2,
-            "permeable paving": 2
+            "permeable paving": 3,
+            "concrete driveway": 3
           },
           "seo_score": 85,
           "issues": [
@@ -54,18 +55,18 @@
         "paving services melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 372,
+      "sitemap_count": 376,
       "quick_homepage_score": 85
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-19T08:00",
+      "analyzed_at": "2026-05-20T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-19T08:00",
+          "analyzed_at": "2026-05-20T08:00",
           "title": "Prime Property Maintenance Melbourne | Decking, Fencing, Handyman",
           "title_length": 65,
           "title_too_short": false,
@@ -76,7 +77,7 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 2246,
+          "word_count": 2270,
           "h1_count": 4,
           "h2_count": 10,
           "has_h1": true,
