@@ -892,6 +892,62 @@
           "subject": "Property maintenance services - Melbourne SE suburbs"
         }
       ]
+    },
+    {
+      "date": "2026-05-19",
+      "time": "2026-05-19T10:01",
+      "sent": 8,
+      "errors": 0,
+      "batch": [
+        {
+          "email": "supplychain@laingorourke.com.au",
+          "company": "Laing O'Rourke",
+          "business": "antoniopaving",
+          "status": "sent"
+        },
+        {
+          "email": "trades@henley.com.au",
+          "company": "Henley Homes",
+          "business": "antoniopaving",
+          "status": "sent"
+        },
+        {
+          "email": "property@goodman.com",
+          "company": "Goodman Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@barryplant.com.au",
+          "company": "Barry Plant",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@picagroup.com.au",
+          "company": "PICA Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "info@acebodycorporate.com.au",
+          "company": "ACE Body Corporate",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@goodman.com",
+          "company": "Goodman Group",
+          "business": "primeproperty",
+          "status": "sent"
+        },
+        {
+          "email": "property@ispt.com.au",
+          "company": "ISPT",
+          "business": "primeproperty",
+          "status": "sent"
+        }
+      ]
     }
   ],
   "2026-05-09": {
