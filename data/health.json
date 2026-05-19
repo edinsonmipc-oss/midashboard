@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-19T19:00",
+  "updated": "2026-05-20T06:00",
   "checked_at": "2026-05-18T22:01:07Z",
   "total_sites": 4,
   "sites": [
@@ -91,10 +91,10 @@
       "status": "online",
       "status_code": 200,
       "redirect_follows_to_200": true,
-      "response_time_s": 3.76,
+      "response_time_s": 0.44,
       "healthy": true,
-      "checked_at": "2026-05-18T20:01:26Z",
-      "last_checked": "2026-05-19T19:00"
+      "checked_at": "2026-05-20T06:00:00Z",
+      "last_checked": "2026-05-20T06:00"
     }
   ],
   "trading": {},
@@ -142,8 +142,8 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 22606,
-    "checked_at": "2026-05-18T20:01:26Z",
-    "note": "Healthy after 307 redirect (Render cold start). Response time 3.76s."
+    "checked_at": "2026-05-20T06:00:00Z",
+    "note": "Healthy after 307 redirect. Response time 0.44s."
   },
   "last_full_check": "2026-05-18T22:01:07Z"
 }
