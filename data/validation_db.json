@@ -563,7 +563,7 @@
       "email": "commercial@jelliscraig.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.297935",
+      "checked_at": "2026-05-19T10:00:03.763999",
       "checks": {
         "generic": false,
         "format": false,
@@ -576,7 +576,7 @@
       "email": "projects@kane.com.au",
       "status": "rejected",
       "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-19T08:00:13.302632",
+      "checked_at": "2026-05-19T10:00:03.769188",
       "checks": {
         "generic": false,
         "format": false,
@@ -589,7 +589,7 @@
       "email": "commercial@mcgrath.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.309618",
+      "checked_at": "2026-05-19T10:00:03.773487",
       "checks": {
         "generic": false,
         "format": false,
@@ -602,7 +602,7 @@
       "email": "partnerships@mirvac.com",
       "status": "rejected",
       "detail": "Generic role address (partnerships@)",
-      "checked_at": "2026-05-19T08:00:13.319860",
+      "checked_at": "2026-05-19T10:00:03.778408",
       "checks": {
         "generic": false,
         "format": false,
@@ -615,7 +615,7 @@
       "email": "projects@watpac.com.au",
       "status": "rejected",
       "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-19T08:00:13.324538",
+      "checked_at": "2026-05-19T10:00:03.783078",
       "checks": {
         "generic": false,
         "format": false,
@@ -628,7 +628,7 @@
       "email": "commercial@rainehorne.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.329508",
+      "checked_at": "2026-05-19T10:00:03.787339",
       "checks": {
         "generic": false,
         "format": false,
@@ -641,7 +641,7 @@
       "email": "info@gpt.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.334469",
+      "checked_at": "2026-05-19T10:00:03.792019",
       "checks": {
         "generic": false,
         "format": false,
@@ -654,7 +654,7 @@
       "email": "commercial@raywhite.com",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.339746",
+      "checked_at": "2026-05-19T10:00:03.796979",
       "checks": {
         "generic": false,
         "format": false,
@@ -667,7 +667,7 @@
       "email": "commercial@century21.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.347753",
+      "checked_at": "2026-05-19T10:00:03.801872",
       "checks": {
         "generic": false,
         "format": false,
@@ -680,7 +680,7 @@
       "email": "supplier@porterdavis.com.au",
       "status": "rejected",
       "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-19T08:00:13.356023",
+      "checked_at": "2026-05-19T10:00:03.807583",
       "checks": {
         "generic": false,
         "format": false,
@@ -693,7 +693,7 @@
       "email": "estimating@probuild.com.au",
       "status": "rejected",
       "detail": "Generic role address (estimating@)",
-      "checked_at": "2026-05-19T08:00:13.361508",
+      "checked_at": "2026-05-19T10:00:03.812349",
       "checks": {
         "generic": false,
         "format": false,
@@ -706,7 +706,7 @@
       "email": "property@knightfrank.com.au",
       "status": "rejected",
       "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-19T08:00:13.366408",
+      "checked_at": "2026-05-19T10:00:03.816875",
       "checks": {
         "generic": false,
         "format": false,
@@ -719,7 +719,7 @@
       "email": "property@fletcher.com.au",
       "status": "rejected",
       "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-19T08:00:13.371856",
+      "checked_at": "2026-05-19T10:00:03.822857",
       "checks": {
         "generic": false,
         "format": false,
@@ -732,7 +732,7 @@
       "email": "subcontractors@multiplex.com",
       "status": "rejected",
       "detail": "Generic role address (subcontractors@)",
-      "checked_at": "2026-05-19T08:00:13.377760",
+      "checked_at": "2026-05-19T10:00:03.829363",
       "checks": {
         "generic": false,
         "format": false,
@@ -745,7 +745,7 @@
       "email": "leasing@dexus.com",
       "status": "rejected",
       "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-19T08:00:13.382451",
+      "checked_at": "2026-05-19T10:00:03.833828",
       "checks": {
         "generic": false,
         "format": false,
@@ -758,7 +758,7 @@
       "email": "info@stratatitle.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.387052",
+      "checked_at": "2026-05-19T10:00:03.838376",
       "checks": {
         "generic": false,
         "format": false,
@@ -771,7 +771,7 @@
       "email": "info@hansenyuncken.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.392099",
+      "checked_at": "2026-05-19T10:00:03.843013",
       "checks": {
         "generic": false,
         "format": false,
@@ -784,7 +784,7 @@
       "email": "procurement@downergroup.com",
       "status": "rejected",
       "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-19T08:00:13.397056",
+      "checked_at": "2026-05-19T10:00:03.846910",
       "checks": {
         "generic": false,
         "format": false,
@@ -797,7 +797,7 @@
       "email": "info@carltonhomes.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.402437",
+      "checked_at": "2026-05-19T10:00:03.851043",
       "checks": {
         "generic": false,
         "format": false,
@@ -810,7 +810,7 @@
       "email": "suppliers@johnholland.com.au",
       "status": "rejected",
       "detail": "Generic role address (suppliers@)",
-      "checked_at": "2026-05-19T08:00:13.407299",
+      "checked_at": "2026-05-19T10:00:03.855008",
       "checks": {
         "generic": false,
         "format": false,
@@ -823,7 +823,7 @@
       "email": "info@boutiquehomes.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.412082",
+      "checked_at": "2026-05-19T10:00:03.859826",
       "checks": {
         "generic": false,
         "format": false,
@@ -836,7 +836,7 @@
       "email": "commercial@prd.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.416975",
+      "checked_at": "2026-05-19T10:00:03.864500",
       "checks": {
         "generic": false,
         "format": false,
@@ -849,7 +849,7 @@
       "email": "leasing@charterhall.com.au",
       "status": "rejected",
       "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-19T08:00:13.421678",
+      "checked_at": "2026-05-19T10:00:03.869797",
       "checks": {
         "generic": false,
         "format": false,
@@ -890,7 +890,7 @@
       "email": "commercial@jelliscraig.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.297935",
+      "checked_at": "2026-05-19T10:00:03.763999",
       "checks": {
         "generic": false,
         "format": false,
@@ -916,7 +916,7 @@
       "email": "projects@kane.com.au",
       "status": "rejected",
       "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-19T08:00:13.302632",
+      "checked_at": "2026-05-19T10:00:03.769188",
       "checks": {
         "generic": false,
         "format": false,
@@ -968,7 +968,7 @@
       "email": "commercial@mcgrath.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.309618",
+      "checked_at": "2026-05-19T10:00:03.773487",
       "checks": {
         "generic": false,
         "format": false,
@@ -981,7 +981,7 @@
       "email": "partnerships@mirvac.com",
       "status": "rejected",
       "detail": "Generic role address (partnerships@)",
-      "checked_at": "2026-05-19T08:00:13.319860",
+      "checked_at": "2026-05-19T10:00:03.778408",
       "checks": {
         "generic": false,
         "format": false,
@@ -1293,7 +1293,7 @@
       "email": "projects@watpac.com.au",
       "status": "rejected",
       "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-19T08:00:13.324538",
+      "checked_at": "2026-05-19T10:00:03.783078",
       "checks": {
         "generic": false,
         "format": false,
@@ -1306,7 +1306,7 @@
       "email": "commercial@rainehorne.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.329508",
+      "checked_at": "2026-05-19T10:00:03.787339",
       "checks": {
         "generic": false,
         "format": false,
@@ -1332,7 +1332,7 @@
       "email": "info@gpt.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.334469",
+      "checked_at": "2026-05-19T10:00:03.792019",
       "checks": {
         "generic": false,
         "format": false,
@@ -1371,7 +1371,7 @@
       "email": "commercial@raywhite.com",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.339746",
+      "checked_at": "2026-05-19T10:00:03.796979",
       "checks": {
         "generic": false,
         "format": false,
@@ -1410,7 +1410,7 @@
       "email": "commercial@century21.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.347753",
+      "checked_at": "2026-05-19T10:00:03.801872",
       "checks": {
         "generic": false,
         "format": false,
@@ -1436,7 +1436,7 @@
       "email": "supplier@porterdavis.com.au",
       "status": "rejected",
       "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-19T08:00:13.356023",
+      "checked_at": "2026-05-19T10:00:03.807583",
       "checks": {
         "generic": false,
         "format": false,
@@ -1540,7 +1540,7 @@
       "email": "estimating@probuild.com.au",
       "status": "rejected",
       "detail": "Generic role address (estimating@)",
-      "checked_at": "2026-05-19T08:00:13.361508",
+      "checked_at": "2026-05-19T10:00:03.812349",
       "checks": {
         "generic": false,
         "format": false,
@@ -1553,7 +1553,7 @@
       "email": "property@knightfrank.com.au",
       "status": "rejected",
       "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-19T08:00:13.366408",
+      "checked_at": "2026-05-19T10:00:03.816875",
       "checks": {
         "generic": false,
         "format": false,
@@ -1566,7 +1566,7 @@
       "email": "property@fletcher.com.au",
       "status": "rejected",
       "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-19T08:00:13.371856",
+      "checked_at": "2026-05-19T10:00:03.822857",
       "checks": {
         "generic": false,
         "format": false,
@@ -1592,7 +1592,7 @@
       "email": "subcontractors@multiplex.com",
       "status": "rejected",
       "detail": "Generic role address (subcontractors@)",
-      "checked_at": "2026-05-19T08:00:13.377760",
+      "checked_at": "2026-05-19T10:00:03.829363",
       "checks": {
         "generic": false,
         "format": false,
@@ -1605,7 +1605,7 @@
       "email": "leasing@dexus.com",
       "status": "rejected",
       "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-19T08:00:13.382451",
+      "checked_at": "2026-05-19T10:00:03.833828",
       "checks": {
         "generic": false,
         "format": false,
@@ -1618,7 +1618,7 @@
       "email": "info@stratatitle.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.387052",
+      "checked_at": "2026-05-19T10:00:03.838376",
       "checks": {
         "generic": false,
         "format": false,
@@ -1631,7 +1631,7 @@
       "email": "info@hansenyuncken.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.392099",
+      "checked_at": "2026-05-19T10:00:03.843013",
       "checks": {
         "generic": false,
         "format": false,
@@ -1644,7 +1644,7 @@
       "email": "procurement@downergroup.com",
       "status": "rejected",
       "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-19T08:00:13.397056",
+      "checked_at": "2026-05-19T10:00:03.846910",
       "checks": {
         "generic": false,
         "format": false,
@@ -1657,7 +1657,7 @@
       "email": "info@carltonhomes.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.402437",
+      "checked_at": "2026-05-19T10:00:03.851043",
       "checks": {
         "generic": false,
         "format": false,
@@ -1670,7 +1670,7 @@
       "email": "suppliers@johnholland.com.au",
       "status": "rejected",
       "detail": "Generic role address (suppliers@)",
-      "checked_at": "2026-05-19T08:00:13.407299",
+      "checked_at": "2026-05-19T10:00:03.855008",
       "checks": {
         "generic": false,
         "format": false,
@@ -1683,7 +1683,7 @@
       "email": "info@boutiquehomes.com.au",
       "status": "rejected",
       "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-19T08:00:13.412082",
+      "checked_at": "2026-05-19T10:00:03.859826",
       "checks": {
         "generic": false,
         "format": false,
@@ -1696,7 +1696,7 @@
       "email": "commercial@prd.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T08:00:13.416975",
+      "checked_at": "2026-05-19T10:00:03.864500",
       "checks": {
         "generic": false,
         "format": false,
@@ -1709,7 +1709,7 @@
       "email": "leasing@charterhall.com.au",
       "status": "rejected",
       "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-19T08:00:13.421678",
+      "checked_at": "2026-05-19T10:00:03.869797",
       "checks": {
         "generic": false,
         "format": false,
