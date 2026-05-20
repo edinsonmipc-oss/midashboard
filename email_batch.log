@@ -98,3 +98,13 @@ Updated send_report.json.
 [2026-05-18 10:41:04] ⏳ Waiting 298s before next...
 [2026-05-18 10:46:17] ✅ SENT [primeproperty  ] -> info@cbusproperty.com.au            (Cbus Property)
 [2026-05-18 10:46:18] 📊 DONE: 8 sent, 0 errors
+
+--- Batch 2026-05-20 ---
+[2026-05-20T10:14] OK SENT [primeproperty] -> property@nelsonalexander.com.au (Nelson Alexander)
+[2026-05-20T10:18] OK SENT [primeproperty] -> info@collinssimms.com.au (Collins Simms)
+[2026-05-20T10:22] OK SENT [primeproperty] -> procurement@frasersproperty.com.au (Frasers Property)
+[2026-05-20T10:25] OK SENT [primeproperty] -> commercial@ljhooker.com (LJ Hooker)
+[2026-05-20T10:30] OK SENT [primeproperty] -> property@jll.com.au (JLL Australia)
+[2026-05-20T10:34] OK SENT [primeproperty] -> property@goodman.com (Goodman Group)
+[2026-05-20T10:37] OK SENT [primeproperty] -> property@ispt.com.au (ISPT)
+DONE: 7 sent, 0 errors

@@ -14,7 +14,7 @@
         "type": "builder",
         "contact": "Ben Sayers",
         "title": "Construction Manager",
-        "notes": "Contrata subcontratistas de paving y construcci\u00f3n para proyectos Melbourne. Fuente: Wiza.co",
+        "notes": "Contrata subcontratistas de paving y construcción para proyectos Melbourne. Fuente: Wiza.co",
         "verified": "risky",
         "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T11:39",
@@ -29,7 +29,7 @@
         "type": "builder",
         "contact": "Nick Redfern",
         "title": "Construction Supervisor",
-        "notes": "Supervisa construcci\u00f3n de viviendas Melbourne. Fuente: Wiza.co",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
         "verified": "approved",
         "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:03",
@@ -44,7 +44,7 @@
         "type": "builder",
         "contact": "Tim Neilson",
         "title": "Building Supervisor",
-        "notes": "Supervisa construcci\u00f3n de viviendas Melbourne. Fuente: Wiza.co",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
         "verified": "approved",
         "verified_reason": "MX OK (2 servers)",
         "contacted": "2026-05-15T12:10",
@@ -59,7 +59,7 @@
         "type": "builder",
         "contact": "Harmohan Singh",
         "title": "Construction Supervisor",
-        "notes": "Supervisa construcci\u00f3n de viviendas Melbourne. Fuente: Wiza.co",
+        "notes": "Supervisa construcción de viviendas Melbourne. Fuente: Wiza.co",
         "verified": "verified",
         "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
         "contacted": "2026-05-15T11:39",
@@ -87,7 +87,7 @@
         "type": "builder",
         "contact": "Alexander Pangalos",
         "title": "Construction Administrator",
-        "notes": "Administraci\u00f3n de construcci\u00f3n - puede ser puerta de entrada. Fuente: Wiza.co",
+        "notes": "Administración de construcción - puede ser puerta de entrada. Fuente: Wiza.co",
         "verified": "verified",
         "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
         "contacted": "2026-05-15T11:30",
@@ -115,7 +115,7 @@
         "type": "builder",
         "contact": "Mark Glenn",
         "title": "Construction",
-        "notes": "Rol en construcci\u00f3n Henley Properties. Fuente: RocketReach",
+        "notes": "Rol en construcción Henley Properties. Fuente: RocketReach",
         "verified": "verified",
         "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
         "contacted": "2026-05-15T11:53",
@@ -129,7 +129,7 @@
         "type": "builder",
         "contact": "Tim O'Shea",
         "title": "Construction",
-        "notes": "Rol en construcci\u00f3n Henley Properties. Fuente: RocketReach",
+        "notes": "Rol en construcción Henley Properties. Fuente: RocketReach",
         "verified": "verified",
         "verified_reason": "MX verified - henley.com.au via Mimecast (2 servers)",
         "contacted": "2026-05-15T11:43",
@@ -809,7 +809,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-18T10:18",
@@ -823,7 +823,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "verified",
         "verified_reason": "Has MX records",
         "contacted": "2026-05-18T10:21",
@@ -1015,7 +1015,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (projects@)",
         "verified_at": "2026-05-20T10:00:05.192499"
@@ -1053,7 +1053,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (subcontractors@)",
         "verified_at": "2026-05-20T10:00:05.258879"
@@ -1171,7 +1171,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:14",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "PRDnationwide",
@@ -1258,7 +1261,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:18",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Frasers Property",
@@ -1269,7 +1275,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:22",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Knight Frank Australia",
@@ -1316,7 +1325,10 @@
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:25",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Cushman & Wakefield",
@@ -1363,7 +1375,7 @@
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcci\u00f3n en Melbourne",
+        "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (estimating@)",
         "verified_at": "2026-05-20T10:00:05.232533"
@@ -1401,7 +1413,10 @@
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:30",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Goodman Group",
@@ -1412,7 +1427,10 @@
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:34",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Kay & Burton",
@@ -1435,7 +1453,10 @@
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
         "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified_reason": "Has MX records",
+        "contacted": "2026-05-20T10:37",
+        "contact_status": "sent",
+        "sent": true
       },
       {
         "company": "Century 21",
