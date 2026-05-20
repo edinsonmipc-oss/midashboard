@@ -1,42 +1,42 @@
 {
-  "updated": "2026-05-20T08:00",
+  "updated": "2026-05-21T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-20T08:00",
+      "analyzed_at": "2026-05-21T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-20T08:00",
-          "title": "Paving Melbourne — Premium Brick & Bluestone | Free Quote 0406 170 544",
-          "title_length": 70,
+          "analyzed_at": "2026-05-21T08:00",
+          "title": "Paving Melbourne from $70/m² | 64 ★★★★★ | Brick, Bluestone & More | Free Quote",
+          "title_length": 78,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
-          "meta_description": "Melbourne's premium paving specialists. Brick, bluestone, pool & driveway paving. 63 ★★★★★ reviews. Owner-operated since 2014. Free quote. Call 0406 1",
-          "meta_desc_length": 157,
+          "meta_description": "Melbourne's #1 paving specialists. Brick paving from $70/m², bluestone from $120/m², pool & permeable paving. ★★★★★ 64 Google reviews. Antonio on ever",
+          "meta_desc_length": 188,
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
-          "meta_desc_too_long": false,
-          "word_count": 996,
+          "meta_desc_too_long": true,
+          "word_count": 1538,
           "h1_count": 2,
-          "h2_count": 8,
+          "h2_count": 10,
           "has_h1": true,
-          "images": 14,
-          "images_with_alt": 14,
-          "links": 52,
+          "images": 15,
+          "images_with_alt": 15,
+          "links": 104,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 1,
             "driveway paving": 2,
-            "permeable paving": 3,
+            "permeable paving": 2,
             "concrete driveway": 3
           },
           "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (70 chars)",
+            "⚠️ Title too long (78 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
@@ -55,20 +55,20 @@
         "paving services melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 376,
+      "sitemap_count": 405,
       "quick_homepage_score": 85
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-20T08:00",
+      "analyzed_at": "2026-05-21T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-20T08:00",
-          "title": "Prime Property Maintenance Melbourne | Decking, Fencing, Handyman",
-          "title_length": 65,
+          "analyzed_at": "2026-05-21T08:00",
+          "title": "Prime Property Maintenance Melbourne | Free Quote | Decking, Fencing, Handyman | Call 0468 166 249",
+          "title_length": 98,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
@@ -77,7 +77,7 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 2270,
+          "word_count": 2246,
           "h1_count": 4,
           "h2_count": 10,
           "has_h1": true,
@@ -91,9 +91,9 @@
             "lawn mowing melbourne": 1,
             "property maintenance melbourne": 1
           },
-          "seo_score": 90,
+          "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (65 chars)",
+            "⚠️ Title too long (98 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
@@ -112,8 +112,8 @@
         "strata maintenance melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 976,
-      "quick_homepage_score": 90
+      "sitemap_count": 973,
+      "quick_homepage_score": 85
     }
   },
   "summary": {}

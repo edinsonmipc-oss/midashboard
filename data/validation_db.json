@@ -521,383 +521,6 @@
       }
     },
     {
-      "email": "commercial@jelliscraig.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T10:00:03.763999",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "projects@watpac.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.189034",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@rainehorne.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.197123",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@gpt.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.201670",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@raywhite.com",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.206438",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@century21.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.211311",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "supplier@porterdavis.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-20T10:00:05.215932",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "projects@marshallwhite.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.220633",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "facilities@cbre.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (facilities@)",
-      "checked_at": "2026-05-20T10:00:05.225413",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "estimating@probuild.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (estimating@)",
-      "checked_at": "2026-05-20T10:00:05.230309",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "property@knightfrank.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.235081",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "property@fletcher.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.240575",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "partnerships@mirvac.com",
-      "status": "rejected",
-      "detail": "Generic role address (partnerships@)",
-      "checked_at": "2026-05-20T10:00:05.245339",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@mcgrath.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.251120",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "subcontractors@multiplex.com",
-      "status": "rejected",
-      "detail": "Generic role address (subcontractors@)",
-      "checked_at": "2026-05-20T10:00:05.256507",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "leasing@dexus.com",
-      "status": "rejected",
-      "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-20T10:00:05.261164",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@stratatitle.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.266054",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@hansenyuncken.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.270377",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "procurement@downergroup.com",
-      "status": "rejected",
-      "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-20T10:00:05.274633",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@carltonhomes.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.279266",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "suppliers@johnholland.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (suppliers@)",
-      "checked_at": "2026-05-20T10:00:05.284290",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "projects@kane.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.289394",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@boutiquehomes.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.293962",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@prd.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.298821",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "leasing@charterhall.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-20T10:00:05.303529",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "info@avjennings.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.308181",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "supplier@burbank.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-20T10:00:05.312058",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "property@cushwake.com",
-      "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.316542",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "commercial@kayburton.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.320283",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
       "email": "info@test.com",
       "status": "rejected",
       "detail": "Generic role address (info@)",
@@ -948,14 +571,495 @@
         "smtp": false,
         "bounce": false
       }
+    },
+    {
+      "email": "projects@watpac.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.096517",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@rainehorne.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.107736",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@gpt.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.111985",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@raywhite.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.116143",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@century21.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.120337",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplier@porterdavis.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.124601",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@marshallwhite.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.128885",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "facilities@cbre.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.132963",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "estimating@probuild.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.137199",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@knightfrank.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.141597",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@fletcher.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.146406",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "partnerships@mirvac.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.150617",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@mcgrath.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.155457",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "subcontractors@multiplex.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.159913",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "leasing@dexus.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.163890",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@stratatitle.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.168175",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@hansenyuncken.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.172886",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "procurement@downergroup.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.177307",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@carltonhomes.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.181739",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "suppliers@johnholland.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.185920",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "projects@kane.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.190253",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@boutiquehomes.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.194391",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@prd.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.198878",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "leasing@charterhall.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.203340",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "info@avjennings.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.207651",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplier@burbank.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.211841",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@cushwake.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.217030",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@kayburton.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.221386",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "michael.curtis@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.229699",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "persia.gough@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.233998",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "craig.hunter@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.238486",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "richard.anderson@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.243388",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "pete.howell@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.248030",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "gstevens@kane.com.au",
+      "status": "rejected",
+      "detail": "Suspicious single-word prefix (gstevens)",
+      "checked_at": "2026-05-21T08:00:11.252360",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "jange@arete.com.au",
+      "status": "rejected",
+      "detail": "Suspicious single-word prefix (jange)",
+      "checked_at": "2026-05-21T08:00:11.257091",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "edinson@toolshubpro.com.au",
+      "status": "approved",
+      "detail": "A record only (1 found)",
+      "checked_at": "2026-05-21T08:00:11.940880",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "a-record-only",
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "commercial@jelliscraig.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (commercial@)",
+      "checked_at": "2026-05-21T08:00:11.948370",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
     }
   ],
   "by_email": {
     "facilities@cbre.com.au": {
       "email": "facilities@cbre.com.au",
       "status": "rejected",
-      "detail": "Generic role address (facilities@)",
-      "checked_at": "2026-05-20T10:00:05.225413",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.132963",
       "checks": {
         "generic": false,
         "format": false,
@@ -967,8 +1071,8 @@
     "info@avjennings.com.au": {
       "email": "info@avjennings.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.308181",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.207651",
       "checks": {
         "generic": false,
         "format": false,
@@ -981,7 +1085,7 @@
       "email": "commercial@jelliscraig.com.au",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-19T10:00:03.763999",
+      "checked_at": "2026-05-21T08:00:11.948370",
       "checks": {
         "generic": false,
         "format": false,
@@ -1006,8 +1110,8 @@
     "projects@kane.com.au": {
       "email": "projects@kane.com.au",
       "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.289394",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.190253",
       "checks": {
         "generic": false,
         "format": false,
@@ -1019,8 +1123,8 @@
     "projects@marshallwhite.com.au": {
       "email": "projects@marshallwhite.com.au",
       "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.220633",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.128885",
       "checks": {
         "generic": false,
         "format": false,
@@ -1058,8 +1162,8 @@
     "commercial@mcgrath.com.au": {
       "email": "commercial@mcgrath.com.au",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.251120",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.155457",
       "checks": {
         "generic": false,
         "format": false,
@@ -1071,8 +1175,8 @@
     "partnerships@mirvac.com": {
       "email": "partnerships@mirvac.com",
       "status": "rejected",
-      "detail": "Generic role address (partnerships@)",
-      "checked_at": "2026-05-20T10:00:05.245339",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.150617",
       "checks": {
         "generic": false,
         "format": false,
@@ -1383,8 +1487,8 @@
     "projects@watpac.com.au": {
       "email": "projects@watpac.com.au",
       "status": "rejected",
-      "detail": "Generic role address (projects@)",
-      "checked_at": "2026-05-20T10:00:05.189034",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.096517",
       "checks": {
         "generic": false,
         "format": false,
@@ -1396,8 +1500,8 @@
     "commercial@rainehorne.com.au": {
       "email": "commercial@rainehorne.com.au",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.197123",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.107736",
       "checks": {
         "generic": false,
         "format": false,
@@ -1422,8 +1526,8 @@
     "info@gpt.com.au": {
       "email": "info@gpt.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.201670",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.111985",
       "checks": {
         "generic": false,
         "format": false,
@@ -1461,8 +1565,8 @@
     "commercial@raywhite.com": {
       "email": "commercial@raywhite.com",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.206438",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.116143",
       "checks": {
         "generic": false,
         "format": false,
@@ -1500,8 +1604,8 @@
     "commercial@century21.com.au": {
       "email": "commercial@century21.com.au",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.211311",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.120337",
       "checks": {
         "generic": false,
         "format": false,
@@ -1526,8 +1630,8 @@
     "supplier@porterdavis.com.au": {
       "email": "supplier@porterdavis.com.au",
       "status": "rejected",
-      "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-20T10:00:05.215932",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.124601",
       "checks": {
         "generic": false,
         "format": false,
@@ -1630,8 +1734,8 @@
     "estimating@probuild.com.au": {
       "email": "estimating@probuild.com.au",
       "status": "rejected",
-      "detail": "Generic role address (estimating@)",
-      "checked_at": "2026-05-20T10:00:05.230309",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.137199",
       "checks": {
         "generic": false,
         "format": false,
@@ -1643,8 +1747,8 @@
     "property@knightfrank.com.au": {
       "email": "property@knightfrank.com.au",
       "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.235081",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.141597",
       "checks": {
         "generic": false,
         "format": false,
@@ -1656,8 +1760,8 @@
     "property@fletcher.com.au": {
       "email": "property@fletcher.com.au",
       "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.240575",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.146406",
       "checks": {
         "generic": false,
         "format": false,
@@ -1682,8 +1786,8 @@
     "subcontractors@multiplex.com": {
       "email": "subcontractors@multiplex.com",
       "status": "rejected",
-      "detail": "Generic role address (subcontractors@)",
-      "checked_at": "2026-05-20T10:00:05.256507",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.159913",
       "checks": {
         "generic": false,
         "format": false,
@@ -1695,8 +1799,8 @@
     "leasing@dexus.com": {
       "email": "leasing@dexus.com",
       "status": "rejected",
-      "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-20T10:00:05.261164",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.163890",
       "checks": {
         "generic": false,
         "format": false,
@@ -1708,8 +1812,8 @@
     "info@stratatitle.com.au": {
       "email": "info@stratatitle.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.266054",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.168175",
       "checks": {
         "generic": false,
         "format": false,
@@ -1721,8 +1825,8 @@
     "info@hansenyuncken.com.au": {
       "email": "info@hansenyuncken.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.270377",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.172886",
       "checks": {
         "generic": false,
         "format": false,
@@ -1734,8 +1838,8 @@
     "procurement@downergroup.com": {
       "email": "procurement@downergroup.com",
       "status": "rejected",
-      "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-20T10:00:05.274633",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.177307",
       "checks": {
         "generic": false,
         "format": false,
@@ -1747,8 +1851,8 @@
     "info@carltonhomes.com.au": {
       "email": "info@carltonhomes.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.279266",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.181739",
       "checks": {
         "generic": false,
         "format": false,
@@ -1760,8 +1864,8 @@
     "suppliers@johnholland.com.au": {
       "email": "suppliers@johnholland.com.au",
       "status": "rejected",
-      "detail": "Generic role address (suppliers@)",
-      "checked_at": "2026-05-20T10:00:05.284290",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.185920",
       "checks": {
         "generic": false,
         "format": false,
@@ -1773,8 +1877,8 @@
     "info@boutiquehomes.com.au": {
       "email": "info@boutiquehomes.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-20T10:00:05.293962",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.194391",
       "checks": {
         "generic": false,
         "format": false,
@@ -1786,8 +1890,8 @@
     "commercial@prd.com.au": {
       "email": "commercial@prd.com.au",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.298821",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.198878",
       "checks": {
         "generic": false,
         "format": false,
@@ -1799,8 +1903,8 @@
     "leasing@charterhall.com.au": {
       "email": "leasing@charterhall.com.au",
       "status": "rejected",
-      "detail": "Generic role address (leasing@)",
-      "checked_at": "2026-05-20T10:00:05.303529",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.203340",
       "checks": {
         "generic": false,
         "format": false,
@@ -1812,8 +1916,8 @@
     "supplier@burbank.com.au": {
       "email": "supplier@burbank.com.au",
       "status": "rejected",
-      "detail": "Generic role address (supplier@)",
-      "checked_at": "2026-05-20T10:00:05.312058",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.211841",
       "checks": {
         "generic": false,
         "format": false,
@@ -1825,8 +1929,8 @@
     "property@cushwake.com": {
       "email": "property@cushwake.com",
       "status": "rejected",
-      "detail": "Generic role address (property@)",
-      "checked_at": "2026-05-20T10:00:05.316542",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.217030",
       "checks": {
         "generic": false,
         "format": false,
@@ -1838,8 +1942,8 @@
     "commercial@kayburton.com.au": {
       "email": "commercial@kayburton.com.au",
       "status": "rejected",
-      "detail": "Generic role address (commercial@)",
-      "checked_at": "2026-05-20T10:00:05.320283",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-21T08:00:11.221386",
       "checks": {
         "generic": false,
         "format": false,
@@ -1896,6 +2000,110 @@
         "generic": true,
         "format": true,
         "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "michael.curtis@hickory.com.au": {
+      "email": "michael.curtis@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.229699",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "persia.gough@hickory.com.au": {
+      "email": "persia.gough@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.233998",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "craig.hunter@hickory.com.au": {
+      "email": "craig.hunter@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.238486",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "richard.anderson@hickory.com.au": {
+      "email": "richard.anderson@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.243388",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "pete.howell@hickory.com.au": {
+      "email": "pete.howell@hickory.com.au",
+      "status": "rejected",
+      "detail": "hickory.com.au is on bounce blacklist",
+      "checked_at": "2026-05-21T08:00:11.248030",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "gstevens@kane.com.au": {
+      "email": "gstevens@kane.com.au",
+      "status": "rejected",
+      "detail": "Suspicious single-word prefix (gstevens)",
+      "checked_at": "2026-05-21T08:00:11.252360",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "jange@arete.com.au": {
+      "email": "jange@arete.com.au",
+      "status": "rejected",
+      "detail": "Suspicious single-word prefix (jange)",
+      "checked_at": "2026-05-21T08:00:11.257091",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "edinson@toolshubpro.com.au": {
+      "email": "edinson@toolshubpro.com.au",
+      "status": "approved",
+      "detail": "A record only (1 found)",
+      "checked_at": "2026-05-21T08:00:11.940880",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": "a-record-only",
         "smtp": false,
         "bounce": false
       }
