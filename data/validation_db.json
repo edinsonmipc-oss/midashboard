@@ -896,6 +896,58 @@
         "smtp": false,
         "bounce": false
       }
+    },
+    {
+      "email": "info@test.com",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-20T13:34:21.811758",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "sales@test.com",
+      "status": "rejected",
+      "detail": "Generic role address (sales@)",
+      "checked_at": "2026-05-20T13:34:21.814775",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "john.doe@test.com",
+      "status": "rejected",
+      "detail": "test.com has no MX or A records",
+      "checked_at": "2026-05-20T13:34:22.407985",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "edinson@test.com",
+      "status": "rejected",
+      "detail": "test.com has no MX or A records",
+      "checked_at": "2026-05-20T13:34:22.707388",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
     }
   ],
   "by_email": {
@@ -1791,6 +1843,58 @@
       "checks": {
         "generic": false,
         "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@test.com": {
+      "email": "info@test.com",
+      "status": "rejected",
+      "detail": "Generic role address (info@)",
+      "checked_at": "2026-05-20T13:34:21.811758",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "sales@test.com": {
+      "email": "sales@test.com",
+      "status": "rejected",
+      "detail": "Generic role address (sales@)",
+      "checked_at": "2026-05-20T13:34:21.814775",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "john.doe@test.com": {
+      "email": "john.doe@test.com",
+      "status": "rejected",
+      "detail": "test.com has no MX or A records",
+      "checked_at": "2026-05-20T13:34:22.407985",
+      "checks": {
+        "generic": true,
+        "format": true,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "edinson@test.com": {
+      "email": "edinson@test.com",
+      "status": "rejected",
+      "detail": "test.com has no MX or A records",
+      "checked_at": "2026-05-20T13:34:22.707388",
+      "checks": {
+        "generic": true,
+        "format": true,
         "mx": false,
         "smtp": false,
         "bounce": false

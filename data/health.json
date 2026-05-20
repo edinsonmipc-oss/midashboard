@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-19T22:02",
-  "checked_at": "2026-05-19T22:01:32Z",
+  "updated": "2026-05-20T19:00",
+  "checked_at": "2026-05-20T02:06:28Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.72,
+      "response_time_s": 0.74,
       "healthy": true,
-      "checked_at": "2026-05-19T22:01:32Z",
-      "last_checked": "2026-05-19T22:01",
+      "checked_at": "2026-05-20T02:06:28Z",
+      "last_checked": "2026-05-20T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.83,
+      "response_time_s": 1.27,
       "healthy": true,
-      "checked_at": "2026-05-19T22:01:32Z",
-      "last_checked": "2026-05-19T22:01",
+      "checked_at": "2026-05-20T02:06:28Z",
+      "last_checked": "2026-05-20T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -63,10 +63,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.79,
+      "response_time_s": 0.82,
       "healthy": true,
-      "checked_at": "2026-05-19T22:01:32Z",
-      "last_checked": "2026-05-19T22:01",
+      "checked_at": "2026-05-20T02:06:28Z",
+      "last_checked": "2026-05-20T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -96,38 +96,38 @@
     "total_sent": 8
   },
   "crawl_404": {
-    "checked_at": "2026-05-20T08:00:49.770781Z",
+    "checked_at": "2026-05-20T02:06:28Z",
     "status": "ok",
     "total_pages_checked": 1426,
     "total_issues": 0
   },
   "ssl_expiry": {
-    "antoniopaving.com": 83,
-    "primepropertymaintenance.au": 35,
-    "toolshubpro.com.au": 62,
+    "antoniopaving.com": 81,
+    "primepropertymaintenance.au": 33,
+    "toolshubpro.com.au": 59,
     "tradios.onrender.com": 39,
-    "nearest_expiry_days": 35
+    "nearest_expiry_days": 33
   },
   "primepropertymaintenance": {
     "status": "ok",
     "http": 200,
     "size_bytes": 65152,
-    "checked_at": "2026-05-19T22:01:32Z",
-    "note": "All OK: 200, 0.83s, 65KB."
+    "checked_at": "2026-05-20T02:06:28Z",
+    "note": "All OK: 200, 1.27s, 65KB."
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
     "size_bytes": 33818,
-    "checked_at": "2026-05-19T22:01:32Z",
-    "note": "All OK: 200, 0.72s, 34KB."
+    "checked_at": "2026-05-20T02:06:28Z",
+    "note": "All OK: 200, 0.74s, 34KB."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 49457,
-    "checked_at": "2026-05-19T22:01:32Z",
-    "note": "All OK: 200, 0.79s, 49KB."
+    "checked_at": "2026-05-20T02:06:28Z",
+    "note": "All OK: 200, 0.82s, 49KB."
   },
   "tradios": {
     "status": "ok",
@@ -136,5 +136,5 @@
     "checked_at": "2026-05-20T06:00:00Z",
     "note": "Healthy after 307 redirect. Response time 0.44s."
   },
-  "last_full_check": "2026-05-19T22:01:32Z"
+  "last_full_check": "2026-05-20T02:06:28Z"
 }

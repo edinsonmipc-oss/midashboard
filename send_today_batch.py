@@ -27,9 +27,14 @@ smtp_port = config["smtp_port"]
 
 sys.path.insert(0, DIR)
 import brand_router
+import email_validator  # MANDATORY pre-send validation gate
+
+# Load bounced generic email domains into blacklist (in case not already loaded)
+email_validator.load_bad_domains()
 
 lbd = leads_data.get("leads_by_date", {})
 pending = []
+rejected_before_send = []  # Track emails rejected by validator
 for date_key, leads_list in lbd.items():
     for idx, lead in enumerate(leads_list):
         has_contacted = "contacted" in lead and lead["contacted"]
@@ -37,10 +42,27 @@ for date_key, leads_list in lbd.items():
         company = lead.get("company", "")
         email = lead.get("email", "")
         if not has_contacted and is_verified and email and not company.startswith("Test"):
+            # PRE-SEND VALIDATION GATE: reject generic/blacklisted/disposable emails
+            approved, result = email_validator.validate_before_send(email, max_age_hours=1)
+            if not approved:
+                reason = result.get("reason", "unknown")
+                detail = result.get("detail", "")
+                print(f"  REJECTED [{reason:20s}] {email:40s} ({company}) — {detail[:50]}")
+                rejected_before_send.append({
+                    "company": company,
+                    "email": email,
+                    "reason": reason,
+                    "detail": detail
+                })
+                # Mark lead as invalid so it won't be picked up again
+                lead["verified"] = "invalid"
+                lead["verified_reason"] = f"REJECTED: {reason} — {detail}"
+                lead["rejected_before_send"] = True
+                continue
             pending.append((date_key, idx, lead))
 
 print(f"Config: daily_limit={daily_limit}, delays={min_delay}-{max_delay}s")
-print(f"Found {len(pending)} pending verified leads")
+print(f"Found {len(pending)} pending verified leads ({len(rejected_before_send)} rejected by validator)")
 
 batch = pending[:daily_limit]
 print(f"Sending {len(batch)} emails this batch")
@@ -96,7 +118,7 @@ for i, item in enumerate(routed):
         errors.append({"company": item["company"], "email": item["email"], "error": str(e)})
 
 server.quit()
-print(f"\nDONE: {len(sent_log)} sent, {len(errors)} errors")
+print(f"\nDONE: {len(sent_log)} sent, {len(errors)} errors, {len(rejected_before_send)} rejected (generic/bounced)")
 
 with open(os.path.join(DATA_DIR, "leads.json"), "w") as f:
     json.dump(leads_data, f, indent=2, ensure_ascii=False)
@@ -120,7 +142,9 @@ with open(os.path.join(DIR, "email_batch.log"), "a") as f:
         f.write(f"[{s['time']}] OK SENT [{s['business']}] -> {s['email']} ({s['company']})\n")
     for e in errors:
         f.write(f"[{datetime.now().strftime('%Y-%m-%dT%H:%M')}] FAIL -> {e['email']} ({e['company']}): {e['error']}\n")
-    f.write(f"DONE: {len(sent_log)} sent, {len(errors)} errors\n")
+    for r in rejected_before_send:
+        f.write(f"[{datetime.now().strftime('%Y-%m-%dT%H:%M')}] REJECTED [{r['reason']}] -> {r['email']} ({r['company']}): {r['detail'][:60]}\n")
+    f.write(f"DONE: {len(sent_log)} sent, {len(errors)} errors, {len(rejected_before_send)} rejected\n")
 print("email_batch.log updated")
 
 sys.exit(1 if errors else 0)

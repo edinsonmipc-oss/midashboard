@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-05-20T07:50",
+  "source": "browser_research",
+  "leads": [
+    {
+      "company": "Hickory Group",
+      "contact": "Steve Stavrou",
+      "email": "steve.stavrou@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": true,
+      "notes": "Strategic Procurement Director & Board Member. Previously confirmed working email."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Michael Argyrou",
+      "email": "michael.argyrou@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Group CEO, Co-Founder. Same email pattern as steve.stavrou."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "George Abraham",
+      "email": "george.abraham@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Managing Director & Board Member."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Ben Williams",
+      "email": "ben.williams@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Construction Director - Victoria."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Michael Curtis",
+      "email": "michael.curtis@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Chief Financial Officer."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Persia Gough",
+      "email": "persia.gough@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Chief Marketing and Communications Officer."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Craig Hunter",
+      "email": "craig.hunter@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Chief Information Officer."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Richard Anderson",
+      "email": "richard.anderson@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "General Counsel."
+    },
+    {
+      "company": "Hickory Group",
+      "contact": "Pete Howell",
+      "email": "pete.howell@hickory.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.hickory.com.au/leadership-culture/",
+      "verified": false,
+      "notes": "Chief People Officer."
+    },
+    {
+      "company": "Kane Constructions",
+      "contact": "Gerard Stevens",
+      "email": "gstevens@kane.com.au",
+      "phone": "07 3054 1555",
+      "business_target": "primepropertymaintenance",
+      "source": "https://www.kane.com.au/contact/",
+      "verified": true,
+      "notes": "General Manager, Kane Property Services. Email on contact page."
+    },
+    {
+      "company": "Kane Constructions",
+      "contact": "Jonathan Angelopoulos",
+      "email": "jange@arete.com.au",
+      "phone": "03 8420 1200",
+      "business_target": "primepropertymaintenance",
+      "source": "https://www.kane.com.au/contact/",
+      "verified": true,
+      "notes": "Head of New Business at Arete Australia. Email on contact page."
+    },
+    {
+      "company": "Henley Properties",
+      "contact": "Tim Neilson",
+      "email": "tim.neilson@henley.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.henley.com.au/contact",
+      "verified": true,
+      "notes": "Previously confirmed email from sent batch."
+    },
+    {
+      "company": "Henley Properties",
+      "contact": "Darren Dean",
+      "email": "darren.dean@henley.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "https://www.henley.com.au/contact",
+      "verified": true,
+      "notes": "Previously confirmed email from sent batch."
+    },
+    {
+      "company": "Tradie Business Tools",
+      "contact": "Edinson Angarita",
+      "email": "edinson@toolshubpro.com.au",
+      "phone": "",
+      "business_target": "antoniopaving",
+      "source": "internal",
+      "verified": true,
+      "notes": "Test contact for system validation."
+    }
+  ]
+}
