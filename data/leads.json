@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-21T19:00",
-  "total_leads": 120,
+  "updated": "2026-05-22T07:00",
+  "total_leads": 129,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
@@ -18,22 +18,6 @@
         "verified": "verified",
         "verified_reason": "MX verified",
         "contacted": "2026-05-15T11:21",
-        "contact_status": "sent",
-        "sent": true
-      }
-    ],
-    "2026-05-15_laing-orourke": [
-      {
-        "company": "Laing O'Rourke",
-        "email": "cathal.orourke@laingorourke.com",
-        "website": "laingorourke.com",
-        "type": "constructora",
-        "contact": "Cathal O'Rourke",
-        "title": "Group CEO",
-        "notes": "CEO. Fuente: laingorourke.com",
-        "verified": "verified",
-        "verified_reason": "MX verified",
-        "contacted": "2026-05-15T11:14",
         "contact_status": "sent",
         "sent": true
       }
@@ -1871,6 +1855,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      }
+    ],
+    "2026-05-22_batch14": [
+      {
+        "company": "Strata Title Management",
+        "email": "info@stratatitle.com.au",
+        "website": "stratatitle.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran edificios y propiedades",
+        "verified": "unknown"
+      },
+      {
+        "company": "Nelson Alexander",
+        "email": "property@nelsonalexander.com.au",
+        "website": "nelsonalexander.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Raine & Horne",
+        "email": "commercial@rainehorne.com.au",
+        "website": "rainehorne.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan servicios regulares",
+        "verified": "unknown"
+      },
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Frasers Property",
+        "email": "procurement@frasersproperty.com.au",
+        "website": "frasersproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "PRDnationwide",
+        "email": "commercial@prd.com.au",
+        "website": "prd.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hickory Group",
+        "email": "projects@hickory.com.au",
+        "website": "hickory.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Contratistas principales nivel 1",
+        "verified": "unknown"
+      },
+      {
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
         "verified": "unknown"
       }
     ]
