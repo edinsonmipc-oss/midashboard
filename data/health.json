@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-21T19:00",
-  "checked_at": "2026-05-21T02:01:49Z",
+  "updated": "2026-05-22T00:03",
+  "checked_at": "2026-05-21T14:03:33Z",
   "total_sites": 4,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.84,
+      "response_time_s": 0.87,
       "healthy": true,
-      "checked_at": "2026-05-21T02:01:49Z",
-      "last_checked": "2026-05-21T19:00",
+      "checked_at": "2026-05-21T14:03:33Z",
+      "last_checked": "2026-05-22T00:03",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.88,
+      "response_time_s": 0.91,
       "healthy": true,
-      "checked_at": "2026-05-21T02:01:49Z",
-      "last_checked": "2026-05-21T19:00",
+      "checked_at": "2026-05-21T14:03:33Z",
+      "last_checked": "2026-05-22T00:03",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -63,10 +63,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.81,
+      "response_time_s": 1.72,
       "healthy": true,
-      "checked_at": "2026-05-21T02:01:49Z",
-      "last_checked": "2026-05-21T19:00",
+      "checked_at": "2026-05-21T14:03:33Z",
+      "last_checked": "2026-05-22T00:03",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -102,9 +102,9 @@
     "total_issues": 0
   },
   "ssl_expiry": {
-    "antoniopaving.com": 80,
+    "antoniopaving.com": 79,
     "primepropertymaintenance.au": 32,
-    "toolshubpro.com.au": 59,
+    "toolshubpro.com.au": 58,
     "tradios.onrender.com": 38,
     "nearest_expiry_days": 32
   },
@@ -112,22 +112,22 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 64055,
-    "checked_at": "2026-05-21T02:01:49Z",
-    "note": "All OK: 200, 0.88s, 64KB. OG tags: 8, CSS premium.css OK, sitemap 973 URLs. Size stable."
+    "checked_at": "2026-05-21T14:03:33Z",
+    "note": "All OK: 200, 0.91s, 64KB. OG tags: 8, CSS premium.css OK, sitemap 973 URLs. Size stable."
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
     "size_bytes": 51988,
-    "checked_at": "2026-05-21T02:01:49Z",
-    "note": "All OK: 200, 0.84s, 52KB. OG tags: 3 core, CSS style.css?v=4 OK, hero OK, sitemap 405 URLs (+7.7%), robots.txt OK. Size stable."
+    "checked_at": "2026-05-21T14:03:33Z",
+    "note": "All OK: 200, 0.87s, 52KB. OG tags: 3 core, CSS style.css OK, hero OK, sitemap 407 URLs, robots.txt OK. Size stable."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 54835,
-    "checked_at": "2026-05-21T02:01:49Z",
-    "note": "All OK: 200, 0.81s, 55KB. OG tags: 3 (title, desc, type), CSS assets/style.css OK, sitemap 72 URLs. Size stable."
+    "checked_at": "2026-05-21T14:03:33Z",
+    "note": "All OK: 200, 1.72s, 55KB. OG tags: 3 (title, desc, type), CSS assets/style.css OK, sitemap 72 URLs. Size stable."
   },
   "tradios": {
     "status": "ok",
@@ -136,5 +136,5 @@
     "checked_at": "2026-05-20T22:03:53Z",
     "note": "Healthy after 307 redirect (0.25s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-21T02:01:49Z"
+  "last_full_check": "2026-05-21T14:03:33Z"
 }
