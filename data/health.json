@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-22T22:01",
+  "updated": "2026-05-23T08:02",
   "checked_at": "2026-05-22T22:01:41Z",
   "total_sites": 3,
   "sites": [
@@ -22,9 +22,9 @@
         "content_suggestions": 0
       },
       "crawl_check": {
-        "checked_at": "2026-05-21T22:02:33Z",
-        "pages_checked": 407,
-        "pages_ok": 407,
+        "checked_at": "2026-05-23T08:02:00Z",
+        "pages_checked": 438,
+        "pages_ok": 438,
         "pages_with_issues": 0,
         "issues": [],
         "healthy": true
@@ -49,7 +49,7 @@
         "content_suggestions": 0
       },
       "crawl_check": {
-        "checked_at": "2026-05-21T22:02:33Z",
+        "checked_at": "2026-05-23T08:02:00Z",
         "pages_checked": 973,
         "pages_ok": 973,
         "pages_with_issues": 0,
@@ -76,13 +76,14 @@
         "content_suggestions": 0
       },
       "crawl_check": {
-        "checked_at": "2026-05-21T22:02:33Z",
+        "checked_at": "2026-05-23T08:02:00Z",
         "pages_checked": 72,
         "pages_ok": 72,
         "pages_with_issues": 0,
         "issues": [],
         "healthy": true
-      }
+      },
+      "seo_score": 0.0
     }
   ],
   "trading": {},
@@ -95,9 +96,9 @@
     "total_sent": 20
   },
   "crawl_404": {
-    "checked_at": "2026-05-21T22:02:33Z",
+    "checked_at": "2026-05-23T08:02:00Z",
     "status": "ok",
-    "total_pages_checked": 1452,
+    "total_pages_checked": 1483,
     "total_issues": 0
   },
   "ssl_expiry": {
