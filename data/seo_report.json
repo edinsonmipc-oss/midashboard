@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-22T08:00",
+  "updated": "2026-05-23T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-22T08:00",
+      "analyzed_at": "2026-05-23T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-22T08:00",
+          "analyzed_at": "2026-05-23T08:00",
           "title": "Paving Melbourne from $70/m² | 64 ★★★★★ | Brick, Bluestone & More | Free Quote",
           "title_length": 78,
           "title_too_short": false,
@@ -55,18 +55,18 @@
         "paving services melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 407,
+      "sitemap_count": 438,
       "quick_homepage_score": 85
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-22T08:00",
+      "analyzed_at": "2026-05-23T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-22T08:00",
+          "analyzed_at": "2026-05-23T08:00",
           "title": "Prime Property Maintenance Melbourne | Free Quote | Decking, Fencing, Handyman | Call 0468 166 249",
           "title_length": 98,
           "title_too_short": false,
