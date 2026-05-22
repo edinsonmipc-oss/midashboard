@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-23T08:00",
-  "checked_at": "2026-05-22T14:02:39Z",
+  "updated": "2026-05-22T22:01",
+  "checked_at": "2026-05-22T22:01:41Z",
   "total_sites": 3,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.84,
+      "response_time_s": 0.8,
       "healthy": true,
-      "checked_at": "2026-05-22T14:02:39Z",
-      "last_checked": "2026-05-23T08:00",
+      "checked_at": "2026-05-22T22:01:41Z",
+      "last_checked": "2026-05-22T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.84,
+      "response_time_s": 0.83,
       "healthy": true,
-      "checked_at": "2026-05-22T14:02:39Z",
-      "last_checked": "2026-05-23T08:00",
+      "checked_at": "2026-05-22T22:01:41Z",
+      "last_checked": "2026-05-22T22:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -63,10 +63,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.79,
+      "response_time_s": 0.82,
       "healthy": true,
-      "checked_at": "2026-05-22T14:02:39Z",
-      "last_checked": "2026-05-23T08:00",
+      "checked_at": "2026-05-22T22:01:41Z",
+      "last_checked": "2026-05-22T22:01",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -111,22 +111,22 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 64055,
-    "checked_at": "2026-05-21T22:02:33Z",
-    "note": "All OK: 200, 0.84s, 64KB. Server: LiteSpeed. OG tags present."
+    "checked_at": "2026-05-22T22:01:41Z",
+    "note": "All OK: 200, 0.83s, 62KB. Server: LiteSpeed. OG tags present."
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
     "size_bytes": 51988,
-    "checked_at": "2026-05-21T22:02:33Z",
-    "note": "All OK: 200, 0.84s, 52KB. Server: LiteSpeed. OG tags present."
+    "checked_at": "2026-05-22T22:01:41Z",
+    "note": "All OK: 200, 0.8s, 50KB. Server: LiteSpeed. OG tags present."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 54835,
-    "checked_at": "2026-05-21T22:02:33Z",
-    "note": "All OK: 200, 0.79s, 55KB. Server: LiteSpeed. Sitemap 72 URLs."
+    "checked_at": "2026-05-22T22:01:41Z",
+    "note": "All OK: 200, 0.82s, 53KB. Server: LiteSpeed. Sitemap 72 URLs."
   },
   "tradios": {
     "status": "ok",
@@ -136,5 +136,5 @@
     "checked_at": "2026-05-23T06:00:00Z",
     "note": "Healthy after 307 redirect (0.49s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-23T06:00:00Z"
+  "last_full_check": "2026-05-22T22:01:41Z"
 }
