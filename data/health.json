@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-22T08:02",
+  "updated": "2026-05-22T19:00",
   "checked_at": "2026-05-21T22:02:33Z",
   "total_sites": 3,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 0.84,
       "healthy": true,
       "checked_at": "2026-05-21T22:02:33Z",
-      "last_checked": "2026-05-22T08:02",
+      "last_checked": "2026-05-22T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -38,7 +38,7 @@
       "response_time_s": 0.84,
       "healthy": true,
       "checked_at": "2026-05-21T22:02:33Z",
-      "last_checked": "2026-05-22T08:02",
+      "last_checked": "2026-05-22T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -64,7 +64,7 @@
       "response_time_s": 0.79,
       "healthy": true,
       "checked_at": "2026-05-21T22:02:33Z",
-      "last_checked": "2026-05-22T08:02",
+      "last_checked": "2026-05-22T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
