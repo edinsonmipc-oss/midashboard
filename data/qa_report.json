@@ -1,1 +1,57 @@
-{"date":"2026-05-22","time":"08:00","sites":{"antoniopaving":{"status":"issues_found","issues":[{"type":"image","severity":"warning","detail":"13 oversized images >80KB (largest: brick-paving-4.webp 360KB, bluestone-paving.webp 298KB, antonio-primescape-flagstone-c 299KB)"},{"type":"seo","severity":"warning","detail":"Title tag too long (78 chars)"}]},"primeproperty":{"status":"issues_found","issues":[{"type":"seo","severity":"warning","detail":"Homepage title too long (98 chars)"},{"type":"seo","severity":"warning","detail":"About page missing schema markup"}]},"toolshubpro":{"status":"issues_found","issues":[{"type":"seo","severity":"warning","detail":"Homepage title too long (81 chars)"},{"type":"seo","severity":"warning","detail":"Homepage missing og:image"},{"type":"seo","severity":"warning","detail":"About page missing schema markup"}]}},"summary":"3 sites checked — all have issues. antoniopaving: 13 oversized images + long title. primeproperty: 2 SEO issues. toolshubpro: 3 SEO issues. Template: 2 pages with duplicated FAQ sections (ashwood-pool-paving, clayton-pool-paving)"}
+{
+  "date": "2026-05-23",
+  "time": "08:01",
+  "sites": {
+    "antoniopaving": {
+      "status": "warning",
+      "issues": [
+        "13 oversized images (>80KB) on homepage — largest: brick-paving-4.webp (360KB), bluestone-paving.webp (298KB), patio-paving.webp (204KB)",
+        "Title tag too long (78 chars) — exceeds 70-char ideal",
+        "OG tags reduced to 3 after redesign (missing og:url, og:type) — only og:title, og:description, og:image present",
+        "www.antoniopaving.com does not redirect to non-www (both serve 200 independently)"
+      ],
+      "stats": {
+        "http_status": 200,
+        "content_bytes": 51988,
+        "load_time_s": 0.79,
+        "ssl_days_remaining": 78,
+        "sitemap_urls": 438
+      }
+    },
+    "primeproperty": {
+      "status": "warning",
+      "issues": [
+        "SSL certificate expires in 30 days (Jun 22, 2026) — renew soon",
+        "Title tag too long (98 chars) on homepage",
+        "No testimonial/review section found on homepage",
+        "about.html missing schema markup",
+        "www.primepropertymaintenance.au does not redirect to non-www (both serve 200 independently)"
+      ],
+      "stats": {
+        "http_status": 200,
+        "content_bytes": 64055,
+        "load_time_s": 0.82,
+        "ssl_days_remaining": 30,
+        "sitemap_urls": 973
+      }
+    },
+    "toolshubpro": {
+      "status": "warning",
+      "issues": [
+        "FAQ section duplicated (2x) on ashwood-pool-paving.html and clayton-pool-paving.html",
+        "Title tag too long (81 chars) on homepage",
+        "Missing og:image tag on homepage",
+        "about.html missing schema markup",
+        "No testimonial/review section found on homepage"
+      ],
+      "stats": {
+        "http_status": 200,
+        "content_bytes": 54835,
+        "load_time_s": 0.82,
+        "ssl_days_remaining": 57,
+        "sitemap_urls": 72
+      }
+    }
+  },
+  "summary": "3 sites up — HTTP 200, content sizes healthy (52-64KB), load times under 1s. Issues: antoniopaving has 13 oversized images and missing OG tags; primeproperty SSL expiring in 30 days and long title tag; toolshubpro has FAQ duplication on 2 pages and missing og:image. All link checks passed. Actions needed: image optimization for antoniopaving, SSL renewal for primeproperty, fix FAQs on toolshubpro."
+}
