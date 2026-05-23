@@ -1,19 +1,6 @@
 {
   "validations": [
     {
-      "email": "info@picagroup.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-18T10:15:26.414788",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
       "email": "commercial@ljhooker.com",
       "status": "rejected",
       "detail": "Generic role address (commercial@)",
@@ -339,32 +326,6 @@
       }
     },
     {
-      "email": "procurement@brookfieldmultiplex.com",
-      "status": "rejected",
-      "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-18T10:15:29.699597",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "supplychain@laingorourke.com.au",
-      "status": "rejected",
-      "detail": "Generic role address (supplychain@)",
-      "checked_at": "2026-05-18T10:15:29.702512",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
       "email": "info@test.com",
       "status": "rejected",
       "detail": "Generic role address (info@)",
@@ -495,36 +456,10 @@
       }
     },
     {
-      "email": "trades@simonds.com.au",
-      "status": "rejected",
-      "detail": "Email is on bounce blacklist \u2014 will never retry",
-      "checked_at": "2026-05-22T10:00:09.180071",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
       "email": "procurement@frasersproperty.com.au",
       "status": "rejected",
       "detail": "Email is on bounce blacklist \u2014 will never retry",
       "checked_at": "2026-05-22T10:00:09.186430",
-      "checks": {
-        "generic": false,
-        "format": false,
-        "mx": false,
-        "smtp": false,
-        "bounce": false
-      }
-    },
-    {
-      "email": "property@goodman.com",
-      "status": "rejected",
-      "detail": "Email is on bounce blacklist \u2014 will never retry",
-      "checked_at": "2026-05-22T10:00:09.191903",
       "checks": {
         "generic": false,
         "format": false,
@@ -1117,6 +1052,71 @@
         "smtp": false,
         "bounce": false
       }
+    },
+    {
+      "email": "info@picagroup.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.545428",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplychain@laingorourke.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.553183",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "procurement@brookfieldmultiplex.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.560061",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@goodman.com",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.567260",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "trades@simonds.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.574143",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
     }
   ],
   "by_email": {
@@ -1162,8 +1162,8 @@
     "info@picagroup.com.au": {
       "email": "info@picagroup.com.au",
       "status": "rejected",
-      "detail": "Generic role address (info@)",
-      "checked_at": "2026-05-18T10:15:26.414788",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.545428",
       "checks": {
         "generic": false,
         "format": false,
@@ -1527,7 +1527,7 @@
       "email": "property@goodman.com",
       "status": "rejected",
       "detail": "Email is on bounce blacklist \u2014 will never retry",
-      "checked_at": "2026-05-22T10:00:09.191903",
+      "checked_at": "2026-05-23T10:00:58.567260",
       "checks": {
         "generic": false,
         "format": false,
@@ -1735,7 +1735,7 @@
       "email": "trades@simonds.com.au",
       "status": "rejected",
       "detail": "Email is on bounce blacklist \u2014 will never retry",
-      "checked_at": "2026-05-22T10:00:09.180071",
+      "checked_at": "2026-05-23T10:00:58.574143",
       "checks": {
         "generic": false,
         "format": false,
@@ -1773,8 +1773,8 @@
     "procurement@brookfieldmultiplex.com": {
       "email": "procurement@brookfieldmultiplex.com",
       "status": "rejected",
-      "detail": "Generic role address (procurement@)",
-      "checked_at": "2026-05-18T10:15:29.699597",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.560061",
       "checks": {
         "generic": false,
         "format": false,
@@ -1786,8 +1786,8 @@
     "supplychain@laingorourke.com.au": {
       "email": "supplychain@laingorourke.com.au",
       "status": "rejected",
-      "detail": "Generic role address (supplychain@)",
-      "checked_at": "2026-05-18T10:15:29.702512",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-23T10:00:58.553183",
       "checks": {
         "generic": false,
         "format": false,

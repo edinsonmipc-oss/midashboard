@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T07:00",
+  "updated": "2026-05-23T19:00",
   "total_leads": 138,
   "businesses": [
     "PrimeScape Construction",
@@ -40,7 +40,7 @@
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00",
-        "verified_at": "2026-05-22T10:00:09.194428"
+        "verified_at": "2026-05-23T10:00:58.570288"
       },
       {
         "company": "Cbus Property",
@@ -435,7 +435,7 @@
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00",
-        "verified_at": "2026-05-22T10:00:09.194437"
+        "verified_at": "2026-05-23T10:00:58.570303"
       },
       {
         "company": "Knight Frank Australia",
@@ -573,7 +573,7 @@
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00",
-        "verified_at": "2026-05-22T10:00:09.183108"
+        "verified_at": "2026-05-23T10:00:58.577557"
       },
       {
         "company": "JLL Australia",
@@ -669,13 +669,14 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
-        "verified_reason": "Generic role address (procurement@) — BOUNCED",
+        "verified_reason": "Bounced previously — blacklisted",
         "contacted": "2026-05-18T10:18",
         "contact_status": "sent",
         "sent": true,
         "bounced": true,
         "bounce_reason": "Generic role address",
-        "bounced_at": "2026-05-20T13:00:00"
+        "bounced_at": "2026-05-20T13:00:00",
+        "verified_at": "2026-05-23T10:00:58.563266"
       },
       {
         "company": "Laing O'Rourke",
@@ -686,13 +687,14 @@
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
-        "verified_reason": "Generic role address (supplychain@) — BOUNCED",
+        "verified_reason": "Bounced previously — blacklisted",
         "contacted": "2026-05-18T10:21",
         "contact_status": "sent",
         "sent": true,
         "bounced": true,
         "bounce_reason": "Generic role address",
-        "bounced_at": "2026-05-20T13:00:00"
+        "bounced_at": "2026-05-20T13:00:00",
+        "verified_at": "2026-05-23T10:00:58.556343"
       },
       {
         "company": "CBRE Australia",
@@ -843,13 +845,14 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
-        "verified_reason": "Generic role address (supplychain@) — BOUNCED",
+        "verified_reason": "Bounced previously — blacklisted",
         "contacted": "2026-05-18T10:21",
         "contact_status": "sent",
         "sent": true,
         "bounced": true,
         "bounce_reason": "Generic role address",
-        "bounced_at": "2026-05-20T13:00:00"
+        "bounced_at": "2026-05-20T13:00:00",
+        "verified_at": "2026-05-23T10:00:58.556355"
       },
       {
         "company": "Strata Title Management",
@@ -877,13 +880,14 @@
         "business_target": "primeproperty",
         "notes": "Buscan contractors para mantenimiento",
         "verified": "invalid",
-        "verified_reason": "Generic role address (info@) — BOUNCED",
+        "verified_reason": "Bounced previously — blacklisted",
         "contacted": "2026-05-19T10:01",
         "contact_status": "sent",
         "sent": true,
         "bounced": true,
         "bounce_reason": "Generic role address",
-        "bounced_at": "2026-05-20T13:00:00"
+        "bounced_at": "2026-05-20T13:00:00",
+        "verified_at": "2026-05-23T10:00:58.549213"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1009,7 +1013,7 @@
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00",
-        "verified_at": "2026-05-22T10:00:09.194444"
+        "verified_at": "2026-05-23T10:00:58.570312"
       },
       {
         "company": "John Holland",
@@ -1054,13 +1058,14 @@
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
-        "verified_reason": "Generic role address (supplychain@) — BOUNCED",
+        "verified_reason": "Bounced previously — blacklisted",
         "contacted": "2026-05-19T10:01",
         "contact_status": "sent",
         "sent": true,
         "bounced": true,
         "bounce_reason": "Generic role address",
-        "bounced_at": "2026-05-20T13:00:00"
+        "bounced_at": "2026-05-20T13:00:00",
+        "verified_at": "2026-05-23T10:00:58.556360"
       },
       {
         "company": "Kane Constructions",
@@ -1443,7 +1448,7 @@
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00",
-        "verified_at": "2026-05-22T10:00:09.194449"
+        "verified_at": "2026-05-23T10:00:58.570319"
       },
       {
         "company": "Kay & Burton",
@@ -1750,7 +1755,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-22T10:00:09.183126"
+        "verified_at": "2026-05-23T10:00:58.577580"
       }
     ],
     "2026-05-21_batch14": [
@@ -1764,7 +1769,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-22T10:00:09.183129"
+        "verified_at": "2026-05-23T10:00:58.577583"
       },
       {
         "company": "Century 21",
@@ -1824,7 +1829,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-22T10:00:09.194454"
+        "verified_at": "2026-05-23T10:00:58.570326"
       },
       {
         "company": "Hockingstuart",
@@ -1932,8 +1937,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan servicios regulares",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-23T10:00:58.549240"
       },
       {
         "company": "Built",
@@ -1979,8 +1985,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-23T10:00:58.556374"
       },
       {
         "company": "Brookfield Multiplex",
@@ -1990,46 +1997,51 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-23T10:00:58.563290"
       }
     ],
     "2026-05-23_batch14": [
       {
-        "company": "Strata Title Management",
-        "email": "info@stratatitle.com.au",
-        "website": "stratatitle.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Administran edificios y propiedades",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-23T08:00:09.114803"
-      },
-      {
-        "company": "Stockland",
-        "email": "community@stockland.com.au",
-        "website": "stockland.com.au",
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Portfolio grande en Melbourne",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (community@)",
-        "verified_at": "2026-05-23T08:00:11.542012"
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
       },
       {
-        "company": "First National Real Estate",
-        "email": "commercial@fnre.com.au",
-        "website": "fnre.com.au",
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-23T08:00:11.546776"
+        "verified": "unknown"
+      },
+      {
+        "company": "Burbank Homes",
+        "email": "supplier@burbank.com.au",
+        "website": "burbank.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
+      },
+      {
+        "company": "Colliers International",
+        "email": "property@colliers.com.au",
+        "website": "colliers.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "unknown"
       },
       {
         "company": "Goodman Group",
@@ -2038,33 +2050,28 @@
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
       },
       {
-        "company": "Built",
-        "email": "enquiries@built.com.au",
-        "website": "built.com.au",
+        "company": "Lendlease",
+        "email": "suppliers@lendlease.com",
+        "website": "lendlease.com",
         "type": "constructora",
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (enquiries@)",
-        "verified_at": "2026-05-23T08:00:11.535938"
+        "verified": "unknown"
       },
       {
-        "company": "Mirvac",
-        "email": "partnerships@mirvac.com",
-        "website": "mirvac.com",
-        "type": "real_estate",
+        "company": "Cushman & Wakefield",
+        "email": "property@cushwake.com",
+        "website": "cushwake.com",
+        "type": "property_mgmt",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-23T08:00:09.094904"
+        "notes": "Administran propiedades comerciales y residenciales",
+        "verified": "unknown"
       },
       {
         "company": "McGrath Estate Agents",
@@ -2074,44 +2081,27 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-23T08:00:09.100391"
+        "verified": "unknown"
       },
       {
-        "company": "Simonds Homes",
-        "email": "trades@simonds.com.au",
-        "website": "simonds.com.au",
-        "type": "builder",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Volumen alto de proyectos",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "Fletchers Real Estate",
-        "email": "property@fletcher.com.au",
-        "website": "fletcher.com.au",
+        "company": "Barry Plant",
+        "email": "property@barryplant.com.au",
+        "website": "barryplant.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-23T08:00:09.090059"
+        "verified": "unknown"
       },
       {
-        "company": "Kane Constructions",
-        "email": "projects@kane.com.au",
-        "website": "kane.com.au",
-        "type": "constructora",
+        "company": "Stockland",
+        "email": "community@stockland.com.au",
+        "website": "stockland.com.au",
+        "type": "real_estate",
         "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Contratistas principales nivel 1",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-23T08:00:09.139385"
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
       }
     ]
   }

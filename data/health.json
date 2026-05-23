@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-23T08:02",
+  "updated": "2026-05-23T19:00",
   "checked_at": "2026-05-22T22:01:41Z",
   "total_sites": 3,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 0.8,
       "healthy": true,
       "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-22T22:01",
+      "last_checked": "2026-05-23T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -39,7 +39,7 @@
       "response_time_s": 0.83,
       "healthy": true,
       "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-22T22:01",
+      "last_checked": "2026-05-23T19:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -66,7 +66,7 @@
       "response_time_s": 0.82,
       "healthy": true,
       "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-22T22:01",
+      "last_checked": "2026-05-23T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -116,11 +116,11 @@
     "note": "All OK: 200, 0.83s, 62KB. Server: LiteSpeed. OG tags present."
   },
   "antoniopaving": {
-    "status": "ok",
+    "status": "issues",
     "http": 200,
-    "size_bytes": 51988,
-    "checked_at": "2026-05-22T22:01:41Z",
-    "note": "All OK: 200, 0.8s, 50KB. Server: LiteSpeed. OG tags present."
+    "size_bytes": 75373,
+    "checked_at": "2026-05-23T18:01:00Z",
+    "note": "CRITICAL: OG tags missing (0 vs 3 previously), size +45% (51,988 -> 75,373 B). Last modified May 23."
   },
   "toolshubpro": {
     "status": "ok",
@@ -137,5 +137,5 @@
     "checked_at": "2026-05-23T06:00:00Z",
     "note": "Healthy after 307 redirect (0.49s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-22T22:01:41Z"
+  "last_full_check": "2026-05-23T18:01:00Z"
 }
