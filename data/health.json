@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
   "updated": "2026-05-24T06:00",
-  "checked_at": "2026-05-22T22:01:41Z",
+  "checked_at": "2026-05-24T06:00:00Z",
   "total_sites": 3,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.8,
+      "response_time_s": 0.91,
       "healthy": true,
-      "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-23T19:00",
+      "checked_at": "2026-05-24T06:00:00Z",
+      "last_checked": "2026-05-24T06:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.83,
+      "response_time_s": 0.94,
       "healthy": true,
-      "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-23T19:00",
+      "checked_at": "2026-05-24T06:00:00Z",
+      "last_checked": "2026-05-24T06:00",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -63,10 +63,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.82,
+      "response_time_s": 0.99,
       "healthy": true,
-      "checked_at": "2026-05-22T22:01:41Z",
-      "last_checked": "2026-05-23T19:00",
+      "checked_at": "2026-05-24T06:00:00Z",
+      "last_checked": "2026-05-24T06:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -109,25 +109,25 @@
     "nearest_expiry_days": 32
   },
   "primepropertymaintenance": {
-    "status": "ok",
-    "http": 200,
-    "size_bytes": 64055,
-    "checked_at": "2026-05-22T22:01:41Z",
-    "note": "All OK: 200, 0.83s, 62KB. Server: LiteSpeed. OG tags present."
-  },
-  "antoniopaving": {
     "status": "issues",
     "http": 200,
-    "size_bytes": 75373,
-    "checked_at": "2026-05-23T18:01:00Z",
-    "note": "CRITICAL: OG tags missing (0 vs 3 previously), size +45% (51,988 -> 75,373 B). Last modified May 23."
+    "size_bytes": 101784,
+    "checked_at": "2026-05-24T06:00:00Z",
+    "note": "ISSUE: CSS file 'assets/style.css' returns 404. HTML links to assets/style.css but file doesn't exist. Old CSS at /css/premium.css works (200). Size +58.9% (64KB->101KB). OG tags present. Sitemap 200 (976 URLs). FIX: copy/rename css/premium.css to assets/style.css on server."
+  },
+  "antoniopaving": {
+    "status": "ok",
+    "http": 200,
+    "size_bytes": 86266,
+    "checked_at": "2026-05-24T06:00:00Z",
+    "note": "All OK: 200, 0.91s, 86KB. OG tags present (9 tags). CSS loads. Hero section OK. Sitemap 200 (373 URLs). robots.txt 200. Previous OG tag issue RESOLVED."
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
-    "size_bytes": 54835,
-    "checked_at": "2026-05-22T22:01:41Z",
-    "note": "All OK: 200, 0.82s, 53KB. Server: LiteSpeed. Sitemap 72 URLs."
+    "size_bytes": 103141,
+    "checked_at": "2026-05-24T06:00:00Z",
+    "note": "All OK: 200, 0.99s, 103KB. CSS loads (assets/style.css). OG tags present. Sitemap 200. Size +88% from baseline (55KB->103KB) - likely content growth, no broken assets detected."
   },
   "tradios": {
     "status": "ok",
