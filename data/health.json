@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-24T08:00",
-  "checked_at": "2026-05-24T06:00:00Z",
+  "updated": "2026-05-24T08:01",
+  "checked_at": "2026-05-23T22:01:10Z",
   "total_sites": 3,
   "sites": [
     {
@@ -11,8 +11,8 @@
       "status_code": 200,
       "response_time_s": 0.91,
       "healthy": true,
-      "checked_at": "2026-05-24T06:00:00Z",
-      "last_checked": "2026-05-24T08:00",
+      "checked_at": "2026-05-23T22:01:10Z",
+      "last_checked": "2026-05-24T08:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -36,10 +36,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.94,
+      "response_time_s": 0.93,
       "healthy": true,
-      "checked_at": "2026-05-24T06:00:00Z",
-      "last_checked": "2026-05-24T08:00",
+      "checked_at": "2026-05-23T22:01:10Z",
+      "last_checked": "2026-05-24T08:01",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -63,10 +63,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "online",
       "status_code": 200,
-      "response_time_s": 0.99,
+      "response_time_s": 2.49,
       "healthy": true,
-      "checked_at": "2026-05-24T06:00:00Z",
-      "last_checked": "2026-05-24T08:00",
+      "checked_at": "2026-05-23T22:01:10Z",
+      "last_checked": "2026-05-24T08:01",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -112,22 +112,25 @@
     "status": "issues",
     "http": 200,
     "size_bytes": 101784,
-    "checked_at": "2026-05-24T06:00:00Z",
-    "note": "ISSUE: CSS file 'assets/style.css' returns 404. HTML links to assets/style.css but file doesn't exist. Old CSS at /css/premium.css works (200). Size +58.9% (64KB->101KB). OG tags present. Sitemap 200 (976 URLs). FIX: copy/rename css/premium.css to assets/style.css on server."
+    "checked_at": "2026-05-23T22:01:10Z",
+    "note": "ISSUE: CSS file 'assets/style.css' returns 404. HTML links to assets/style.css but file doesn't exist. Old CSS at /css/premium.css works (200). Size +58.9% (64KB->101KB). OG tags present. Sitemap 200 (976 URLs). FIX: copy/rename css/premium.css to assets/style.css on server.",
+    "response_time_s": 0.928
   },
   "antoniopaving": {
     "status": "ok",
     "http": 200,
     "size_bytes": 86266,
-    "checked_at": "2026-05-24T06:00:00Z",
-    "note": "All OK: 200, 0.91s, 86KB. OG tags present (9 tags). CSS loads. Hero section OK. Sitemap 200 (373 URLs). robots.txt 200. Previous OG tag issue RESOLVED."
+    "checked_at": "2026-05-23T22:01:10Z",
+    "note": "All OK: 200, 0.91s, 86KB. OG tags present (9 tags). CSS loads. Hero section OK. Sitemap 200 (373 URLs). robots.txt 200. Previous OG tag issue RESOLVED.",
+    "response_time_s": 0.911
   },
   "toolshubpro": {
     "status": "ok",
     "http": 200,
     "size_bytes": 103141,
-    "checked_at": "2026-05-24T06:00:00Z",
-    "note": "All OK: 200, 0.99s, 103KB. CSS loads (assets/style.css). OG tags present. Sitemap 200. Size +88% from baseline (55KB->103KB) - likely content growth, no broken assets detected."
+    "checked_at": "2026-05-23T22:01:10Z",
+    "note": "All OK: 200, 0.99s, 103KB. CSS loads (assets/style.css). OG tags present. Sitemap 200. Size +88% from baseline (55KB->103KB) - likely content growth, no broken assets detected.",
+    "response_time_s": 2.488
   },
   "tradios": {
     "status": "ok",
@@ -137,12 +140,12 @@
     "checked_at": "2026-05-24T06:00:00Z",
     "note": "Healthy after 307 redirect (0.55s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-24T06:00:00Z",
+  "last_full_check": "2026-05-23T22:01:10Z",
   "checks": [
     {
       "check": "ftp-credentials",
       "status": "invalid",
-      "error": "530 Login incorrect — all known FTP passwords rejected. Reset via Hostinger hPanel required.",
+      "error": "530 Login incorrect \u2014 all known FTP passwords rejected. Reset via Hostinger hPanel required.",
       "last_tried": "2026-05-24 06:08"
     }
   ]
