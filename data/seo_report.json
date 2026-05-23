@@ -1,42 +1,42 @@
 {
-  "updated": "2026-05-23T08:00",
+  "updated": "2026-05-24T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-23T08:00",
+      "analyzed_at": "2026-05-24T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-23T08:00",
-          "title": "Paving Melbourne from $70/m² | 64 ★★★★★ | Brick, Bluestone & More | Free Quote",
-          "title_length": 78,
+          "analyzed_at": "2026-05-24T08:00",
+          "title": "Paving Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
+          "title_length": 74,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
-          "meta_description": "Melbourne's #1 paving specialists. Brick paving from $70/m², bluestone from $120/m², pool & permeable paving. ★★★★★ 64 Google reviews. Antonio on ever",
-          "meta_desc_length": 188,
+          "meta_description": "Melbourne's trusted paving specialists. Brick paving from $85/m², bluestone from $120/m², pool & permeable paving. ★★★★★ 64 Google reviews. Owner-oper",
+          "meta_desc_length": 187,
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": true,
-          "word_count": 1538,
+          "word_count": 5104,
           "h1_count": 2,
-          "h2_count": 10,
+          "h2_count": 14,
           "has_h1": true,
           "images": 15,
           "images_with_alt": 15,
-          "links": 104,
+          "links": 112,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 1,
-            "driveway paving": 2,
+            "driveway paving": 3,
             "permeable paving": 2,
             "concrete driveway": 3
           },
           "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (78 chars)",
+            "⚠️ Title too long (74 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
@@ -55,45 +55,40 @@
         "paving services melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 438,
+      "sitemap_count": 439,
       "quick_homepage_score": 85
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-23T08:00",
+      "analyzed_at": "2026-05-24T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-23T08:00",
-          "title": "Prime Property Maintenance Melbourne | Free Quote | Decking, Fencing, Handyman | Call 0468 166 249",
-          "title_length": 98,
+          "analyzed_at": "2026-05-24T08:00",
+          "title": "Free Tradie Calculators — Tax, GST, Quote Pricing & Job Costing | ToolsHubPro",
+          "title_length": 77,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
-          "meta_description": "Melbourne trusted property maintenance since 2016. Decking, fencing, gutter cleaning, pressure washing, lawn mowing & handyman. Free quotes. Call 0468",
-          "meta_desc_length": 159,
+          "meta_description": "Australia's smartest online tools platform. 65+ free calculators — GST, income tax, concrete, mortgage & more. Built for tradies. No sign-up. Instant ",
+          "meta_desc_length": 158,
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": false,
-          "word_count": 2246,
+          "word_count": 6424,
           "h1_count": 4,
-          "h2_count": 10,
+          "h2_count": 14,
           "has_h1": true,
-          "images": 20,
-          "images_with_alt": 20,
-          "links": 113,
+          "images": 2,
+          "images_with_alt": 2,
+          "links": 98,
           "has_canonical": true,
-          "keyword_hits": {
-            "gutter cleaning melbourne": 1,
-            "pressure washing melbourne": 1,
-            "lawn mowing melbourne": 1,
-            "property maintenance melbourne": 1
-          },
+          "keyword_hits": {},
           "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (98 chars)",
+            "⚠️ Title too long (77 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
