@@ -1,38 +1,40 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-24",
   "time": "08:01",
   "sites": {
     "antoniopaving": {
       "status": "warning",
       "issues": [
-        "13 oversized images (>80KB) on homepage — largest: brick-paving-4.webp (360KB), bluestone-paving.webp (298KB), patio-paving.webp (204KB)",
-        "Title tag too long (78 chars) — exceeds 70-char ideal",
-        "OG tags reduced to 3 after redesign (missing og:url, og:type) — only og:title, og:description, og:image present",
-        "www.antoniopaving.com does not redirect to non-www (both serve 200 independently)"
+        "13 oversized images (>80KB) on homepage — largest: brick-paving-4.webp (360KB), bluestone-paving.webp (298KB), pool-paving.webp (230KB), antonio-primescape-flagstone-c (299KB)",
+        "about.html missing: meta description, canonical tag, OG tags, schema markup, viewport meta — completely broken SEO on about page",
+        "Title tag too long (78 chars) — exceeds 70-char ideal"
       ],
       "stats": {
         "http_status": 200,
-        "content_bytes": 51988,
-        "load_time_s": 0.79,
-        "ssl_days_remaining": 78,
-        "sitemap_urls": 438
+        "content_bytes": 86266,
+        "load_time_s": 0.90,
+        "ssl_days_remaining": 77,
+        "sitemap_urls": 439,
+        "og_tags": 9,
+        "www_redirect": "fixed"
       }
     },
     "primeproperty": {
-      "status": "warning",
+      "status": "error",
       "issues": [
-        "SSL certificate expires in 30 days (Jun 22, 2026) — renew soon",
-        "Title tag too long (98 chars) on homepage",
-        "No testimonial/review section found on homepage",
-        "about.html missing schema markup",
-        "www.primepropertymaintenance.au does not redirect to non-www (both serve 200 independently)"
+        "⚠️ CRITICAL: Canonical tag on homepage points to toolshubpro.com.au — search engines may attribute all primeproperty content to wrong domain",
+        "1 broken link: blog/tradie-quote-calculator.html → 404 Not Found",
+        "Title tag too long (81 chars) on homepage",
+        "about.html missing schema markup"
       ],
       "stats": {
         "http_status": 200,
-        "content_bytes": 64055,
-        "load_time_s": 0.82,
-        "ssl_days_remaining": 30,
-        "sitemap_urls": 973
+        "content_bytes": 101784,
+        "load_time_s": 0.94,
+        "ssl_days_remaining": 89,
+        "sitemap_urls": 973,
+        "og_tags": 6,
+        "www_redirect": "fixed"
       }
     },
     "toolshubpro": {
@@ -40,18 +42,18 @@
       "issues": [
         "FAQ section duplicated (2x) on ashwood-pool-paving.html and clayton-pool-paving.html",
         "Title tag too long (81 chars) on homepage",
-        "Missing og:image tag on homepage",
-        "about.html missing schema markup",
-        "No testimonial/review section found on homepage"
+        "about.html missing schema markup"
       ],
       "stats": {
         "http_status": 200,
-        "content_bytes": 54835,
-        "load_time_s": 0.82,
-        "ssl_days_remaining": 57,
-        "sitemap_urls": 72
+        "content_bytes": 103141,
+        "load_time_s": 0.99,
+        "ssl_days_remaining": 56,
+        "sitemap_urls": 72,
+        "og_tags": 6,
+        "www_redirect": "ok"
       }
     }
   },
-  "summary": "3 sites up — HTTP 200, content sizes healthy (52-64KB), load times under 1s. Issues: antoniopaving has 13 oversized images and missing OG tags; primeproperty SSL expiring in 30 days and long title tag; toolshubpro has FAQ duplication on 2 pages and missing og:image. All link checks passed. Actions needed: image optimization for antoniopaving, SSL renewal for primeproperty, fix FAQs on toolshubpro."
+  "summary": "3 sites up — all HTTP 200, load times under 1s. 🟢 IMPROVEMENTS: www→non-www redirects FIXED on all 3 sites; antoniopaving OG tags restored from 3→9 (full set); primeproperty SSL renewed (30→89 days). 🔴 NEW ISSUES: primeproperty canonical tag points to toolshubpro.com.au (critical SEO cross-contamination); antoniopaving about.html has zero SEO metadata; 1 broken link on primeproperty (blog/tradie-quote-calculator.html 404). ⚠️ PERSISTENT: 13 oversized images on antoniopaving (savings ~3MB possible); FAQ duplication on 2 toolshubpro pages; long title tags. Actions needed: fix primeproperty canonical, add SEO metadata to antoniopaving about.html, fix broken blog link, compress images."
 }
