@@ -131,16 +131,6 @@
       "bounced_at": "2026-05-20T13:00:00"
     },
     {
-      "email": "projects@hickory.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
-    {
-      "email": "projects@kane.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
-    {
       "email": "projects@marshallwhite.com.au",
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
       "bounced_at": "2026-05-20T13:00:00"
@@ -222,11 +212,6 @@
     },
     {
       "email": "supplychain@laingorourke.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
-    {
-      "email": "trades@henley.com.au",
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
       "bounced_at": "2026-05-20T13:00:00"
     },
@@ -372,16 +357,6 @@
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
       "bounced_at": "2026-05-20T13:00:00"
     },
-    "projects@hickory.com.au": {
-      "email": "projects@hickory.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
-    "projects@kane.com.au": {
-      "email": "projects@kane.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
     "projects@marshallwhite.com.au": {
       "email": "projects@marshallwhite.com.au",
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
@@ -467,11 +442,6 @@
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
       "bounced_at": "2026-05-20T13:00:00"
     },
-    "trades@henley.com.au": {
-      "email": "trades@henley.com.au",
-      "reason": "Generic role address \u2014 bounced. Personal contacts only.",
-      "bounced_at": "2026-05-20T13:00:00"
-    },
     "trades@metricon.com.au": {
       "email": "trades@metricon.com.au",
       "reason": "Generic role address \u2014 bounced. Personal contacts only.",
@@ -504,12 +474,9 @@
     "goodman.com",
     "gpt.com.au",
     "hansenyuncken.com.au",
-    "henley.com.au",
-    "hickory.com.au",
     "ispt.com.au",
     "jll.com.au",
     "johnholland.com.au",
-    "kane.com.au",
     "kayburton.com.au",
     "knightfrank.com.au",
     "laingorourke.com.au",
