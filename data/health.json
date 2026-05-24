@@ -7,11 +7,11 @@
     {
       "name": "antoniopaving.com",
       "url": "https://antoniopaving.com",
-      "status": "online",
-      "status_code": 200,
+      "status": "offline",
+      "status_code": 0,
       "response_time_s": 0.91,
-      "healthy": true,
-      "checked_at": "2026-05-23T22:01:10Z",
+      "healthy": false,
+      "checked_at": "2026-05-24T20:13:57Z",
       "last_checked": "2026-05-24T19:00",
       "seo_metrics": {
         "pages_analyzed": 50,
@@ -34,11 +34,11 @@
     {
       "name": "primepropertymaintenance.au",
       "url": "https://primepropertymaintenance.au",
-      "status": "online",
-      "status_code": 200,
+      "status": "offline",
+      "status_code": 0,
       "response_time_s": 0.93,
-      "healthy": true,
-      "checked_at": "2026-05-23T22:01:10Z",
+      "healthy": false,
+      "checked_at": "2026-05-24T20:13:57Z",
       "last_checked": "2026-05-24T19:00",
       "seo_metrics": {
         "pages_analyzed": 50,
@@ -61,11 +61,11 @@
     {
       "name": "toolshubpro.com.au",
       "url": "https://toolshubpro.com.au",
-      "status": "online",
-      "status_code": 200,
+      "status": "offline",
+      "status_code": 0,
       "response_time_s": 2.49,
-      "healthy": true,
-      "checked_at": "2026-05-23T22:01:10Z",
+      "healthy": false,
+      "checked_at": "2026-05-24T20:13:57Z",
       "last_checked": "2026-05-24T19:00",
       "seo_metrics": {
         "pages_analyzed": 124,
@@ -126,27 +126,27 @@
     "nearest_expiry_days": 32
   },
   "primepropertymaintenance": {
-    "status": "issues",
-    "http": 200,
-    "size_bytes": 101784,
-    "checked_at": "2026-05-23T22:01:10Z",
-    "note": "ISSUE: CSS file 'assets/style.css' returns 404. HTML links to assets/style.css but file doesn't exist. Old CSS at /css/premium.css works (200). Size +58.9% (64KB->101KB). OG tags present. Sitemap 200 (976 URLs). FIX: copy/rename css/premium.css to assets/style.css on server.",
+    "status": "down",
+    "http": 0,
+    "size_bytes": 0,
+    "checked_at": "2026-05-24T20:13:57Z",
+    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
     "response_time_s": 0.928
   },
   "antoniopaving": {
-    "status": "ok",
-    "http": 200,
-    "size_bytes": 86266,
-    "checked_at": "2026-05-23T22:01:10Z",
-    "note": "All OK: 200, 0.91s, 86KB. OG tags present (9 tags). CSS loads. Hero section OK. Sitemap 200 (373 URLs). robots.txt 200. Previous OG tag issue RESOLVED.",
+    "status": "down",
+    "http": 0,
+    "size_bytes": 0,
+    "checked_at": "2026-05-24T20:13:57Z",
+    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
     "response_time_s": 0.911
   },
   "toolshubpro": {
-    "status": "ok",
-    "http": 200,
-    "size_bytes": 103141,
-    "checked_at": "2026-05-23T22:01:10Z",
-    "note": "All OK: 200, 0.99s, 103KB. CSS loads (assets/style.css). OG tags present. Sitemap 200. Size +88% from baseline (55KB->103KB) - likely content growth, no broken assets detected.",
+    "status": "down",
+    "http": 0,
+    "size_bytes": 0,
+    "checked_at": "2026-05-24T20:13:57Z",
+    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
     "response_time_s": 2.488
   },
   "tradios": {
@@ -157,7 +157,7 @@
     "checked_at": "2026-05-24T20:00:28Z",
     "note": "Healthy after 307 redirect (0.44s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-24T20:00:28Z",
+  "last_full_check": "2026-05-24T20:13:57Z",
   "checks": [
     {
       "check": "ftp-credentials",
