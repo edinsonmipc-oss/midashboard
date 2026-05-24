@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-25T06:00",
+  "updated": "2026-05-25T07:00",
   "checked_at": "2026-05-23T22:01:10Z",
   "total_sites": 3,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 0.91,
       "healthy": false,
       "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-24T19:00",
+      "last_checked": "2026-05-25T07:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 47,
@@ -29,7 +29,10 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 94.0
+      "seo_score": 94.0,
+      "issues": [
+        "⚠️ Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+      ]
     },
     {
       "name": "primepropertymaintenance.au",
@@ -39,7 +42,7 @@
       "response_time_s": 0.93,
       "healthy": false,
       "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-24T19:00",
+      "last_checked": "2026-05-25T07:00",
       "seo_metrics": {
         "pages_analyzed": 50,
         "pages_good": 50,
@@ -56,7 +59,10 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 100.0
+      "seo_score": 100.0,
+      "issues": [
+        "⚠️ Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+      ]
     },
     {
       "name": "toolshubpro.com.au",
@@ -66,7 +72,7 @@
       "response_time_s": 2.49,
       "healthy": false,
       "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-24T19:00",
+      "last_checked": "2026-05-25T07:00",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -83,7 +89,10 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 0.0
+      "seo_score": 0.0,
+      "issues": [
+        "⚠️ Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+      ]
     }
   ],
   "trading": {},
@@ -162,7 +171,7 @@
     {
       "check": "ftp-credentials",
       "status": "invalid",
-      "error": "530 Login incorrect \u2014 all known FTP passwords rejected. Reset via Hostinger hPanel required.",
+      "error": "530 Login incorrect — all known FTP passwords rejected. Reset via Hostinger hPanel required.",
       "last_tried": "2026-05-24 06:08"
     }
   ]
