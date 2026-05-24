@@ -1,7 +1,7 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-25T08:02",
-  "checked_at": "2026-05-23T22:01:10Z",
+  "updated": "2026-05-25T08:04",
+  "checked_at": "2026-05-24T22:04:22Z",
   "total_sites": 3,
   "sites": [
     {
@@ -9,10 +9,10 @@
       "url": "https://antoniopaving.com",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 0.91,
+      "response_time_s": 10.03,
       "healthy": false,
-      "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-25T08:00",
+      "checked_at": "2026-05-24T22:04:22Z",
+      "last_checked": "2026-05-25T08:04",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -31,7 +31,8 @@
       },
       "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
+        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
       ]
     },
     {
@@ -39,10 +40,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 0.93,
+      "response_time_s": 10.03,
       "healthy": false,
-      "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-25T08:00",
+      "checked_at": "2026-05-24T22:04:22Z",
+      "last_checked": "2026-05-25T08:04",
       "seo_metrics": {
         "pages_analyzed": 0,
         "pages_good": 0,
@@ -61,7 +62,8 @@
       },
       "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
+        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
       ]
     },
     {
@@ -69,10 +71,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 2.49,
+      "response_time_s": 10.03,
       "healthy": false,
-      "checked_at": "2026-05-24T20:13:57Z",
-      "last_checked": "2026-05-25T08:00",
+      "checked_at": "2026-05-24T22:04:22Z",
+      "last_checked": "2026-05-25T08:04",
       "seo_metrics": {
         "pages_analyzed": 124,
         "pages_good": 124,
@@ -91,7 +93,8 @@
       },
       "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>"
+        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
+        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
       ]
     }
   ],
@@ -105,11 +108,11 @@
     "total_sent": 25
   },
   "crawl_404": {
-    "checked_at": "2026-05-24T22:02:21Z",
+    "checked_at": "2026-05-24T22:04:22Z",
     "status": "ok",
     "total_pages_checked": 0,
     "total_issues": 0,
-    "note": "All 3 sites unreachable (Hostinger network down) \u2014 no pages could be crawled"
+    "note": "All 3 sites unreachable (Hostinger network down) - no pages could be crawled"
   },
   "ssl_expiry": {
     "antoniopaving.com": 79,
@@ -119,28 +122,28 @@
     "nearest_expiry_days": 32
   },
   "primepropertymaintenance": {
-    "status": "down",
+    "status": "offline",
     "http": 0,
     "size_bytes": 0,
-    "checked_at": "2026-05-24T20:13:57Z",
-    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
-    "response_time_s": 0.928
+    "checked_at": "2026-05-24T22:04:22Z",
+    "note": "DOWN - Server unreachable on port 443 (Hostinger IP). Connection timeout after 10s.",
+    "response_time_s": 10.03
   },
   "antoniopaving": {
-    "status": "down",
+    "status": "offline",
     "http": 0,
     "size_bytes": 0,
-    "checked_at": "2026-05-24T20:13:57Z",
-    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
-    "response_time_s": 0.911
+    "checked_at": "2026-05-24T22:04:22Z",
+    "note": "DOWN - Server unreachable on port 443 (Hostinger IP 153.92.8.188). Connection timeout after 10s.",
+    "response_time_s": 10.03
   },
   "toolshubpro": {
-    "status": "down",
+    "status": "offline",
     "http": 0,
     "size_bytes": 0,
-    "checked_at": "2026-05-24T20:13:57Z",
-    "note": "DOWN - Server unreachable on ports 80/443. IP 153.92.8.188 (Hostinger) timeout after 30s.",
-    "response_time_s": 2.488
+    "checked_at": "2026-05-24T22:04:22Z",
+    "note": "DOWN - Server unreachable on port 443 (Hostinger IP). Connection timeout after 10s.",
+    "response_time_s": 10.03
   },
   "tradios": {
     "status": "ok",
@@ -150,7 +153,7 @@
     "checked_at": "2026-05-24T20:00:28Z",
     "note": "Healthy after 307 redirect (0.44s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-24T20:13:57Z",
+  "last_full_check": "2026-05-24T22:04:22Z",
   "checks": [
     {
       "check": "ftp-credentials",
