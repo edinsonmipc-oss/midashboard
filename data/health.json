@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-24T19:00",
+  "updated": "2026-05-25T06:00",
   "checked_at": "2026-05-23T22:01:10Z",
   "total_sites": 3,
   "sites": [
@@ -153,16 +153,16 @@
     "status": "ok",
     "http": 200,
     "size_bytes": 22606,
-    "response_time_s": 0.55,
-    "checked_at": "2026-05-24T06:00:00Z",
-    "note": "Healthy after 307 redirect (0.55s). Final dest returns 200 OK."
+    "response_time_s": 0.44,
+    "checked_at": "2026-05-24T20:00:28Z",
+    "note": "Healthy after 307 redirect (0.44s). Final dest returns 200 OK."
   },
-  "last_full_check": "2026-05-23T22:02:15Z",
+  "last_full_check": "2026-05-24T20:00:28Z",
   "checks": [
     {
       "check": "ftp-credentials",
       "status": "invalid",
-      "error": "530 Login incorrect — all known FTP passwords rejected. Reset via Hostinger hPanel required.",
+      "error": "530 Login incorrect \u2014 all known FTP passwords rejected. Reset via Hostinger hPanel required.",
       "last_tried": "2026-05-24 06:08"
     }
   ]
