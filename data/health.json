@@ -1,26 +1,18 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-25T08:04",
-  "checked_at": "2026-05-24T22:04:22Z",
-  "total_sites": 3,
+  "updated": "2026-05-25T09:00",
+  "checked_at": "2026-05-25T09:00:00Z",
+  "total_sites": 6,
   "sites": [
     {
       "name": "antoniopaving.com",
       "url": "https://antoniopaving.com",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 10.03,
+      "response_time_s": 15.07,
       "healthy": false,
-      "checked_at": "2026-05-24T22:04:22Z",
-      "last_checked": "2026-05-25T08:04",
-      "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
-      },
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 439,
@@ -29,10 +21,8 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
-        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
+        "Sitio offline: Connection timeout after 15s - Hostinger server 153.92.8.188 unreachable (2nd+ day)"
       ]
     },
     {
@@ -40,18 +30,10 @@
       "url": "https://primepropertymaintenance.au",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 10.03,
+      "response_time_s": 15.00,
       "healthy": false,
-      "checked_at": "2026-05-24T22:04:22Z",
-      "last_checked": "2026-05-25T08:04",
-      "seo_metrics": {
-        "pages_analyzed": 0,
-        "pages_good": 0,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
-      },
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 973,
@@ -60,10 +42,8 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
-        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
+        "Sitio offline: Connection timeout after 15s - same Hostinger server (2nd+ day)"
       ]
     },
     {
@@ -71,18 +51,10 @@
       "url": "https://toolshubpro.com.au",
       "status": "offline",
       "status_code": 0,
-      "response_time_s": 10.03,
+      "response_time_s": 15.00,
       "healthy": false,
-      "checked_at": "2026-05-24T22:04:22Z",
-      "last_checked": "2026-05-25T08:04",
-      "seo_metrics": {
-        "pages_analyzed": 124,
-        "pages_good": 124,
-        "pages_bad": 0,
-        "missing_meta": 0,
-        "missing_titles": 0,
-        "content_suggestions": 0
-      },
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 72,
@@ -91,75 +63,107 @@
         "issues": [],
         "healthy": true
       },
-      "seo_score": 0.0,
       "issues": [
-        "\u26a0\ufe0f Sitio offline: <urlopen error [Errno 101] Network is unreachable>",
-        "Sitio offline: Connection timeout - Hostinger server unreachable from WSL"
+        "Sitio offline: Connection timeout after 15s - same Hostinger server (2nd+ day)"
       ]
+    },
+    {
+      "name": "tradios.onrender.com",
+      "url": "https://tradios.onrender.com",
+      "status": "ok",
+      "status_code": 200,
+      "response_time_s": 0.76,
+      "healthy": true,
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
+      "issues": []
+    },
+    {
+      "name": "primewashgear (GitHub Pages)",
+      "url": "https://edinsonmipc-oss.github.io/primewashgear/",
+      "status": "ok",
+      "status_code": 200,
+      "response_time_s": 0.07,
+      "healthy": true,
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
+      "issues": []
+    },
+    {
+      "name": "Gumroad Store",
+      "url": "https://tradiebusinesstools.gumroad.com",
+      "status": "ok",
+      "status_code": 200,
+      "response_time_s": 0.34,
+      "healthy": true,
+      "checked_at": "2026-05-25T09:00:00Z",
+      "last_checked": "2026-05-25T09:00",
+      "issues": []
     }
   ],
-  "trading": {},
+  "trading": {
+    "updated": "2026-05-25T06:31",
+    "sentiment": {
+      "bullish": ["NVDA", "AMZN", "AAPL", "AMD"],
+      "neutral": ["META", "MSFT", "PLTR", "GOOGL", "TSLA"],
+      "bearish": [],
+      "score": "4 Bullish · 0 Bearish · 5 Neutral",
+      "setups_found": 5
+    }
+  },
   "seo_audit": {
-    "updated": "2026-05-25T08:00",
-    "summary": {}
+    "updated": "2026-05-25T09:00",
+    "summary": {
+      "crawl_status": "Last known: antoniopaving 439 ✅, primeproperty 973 ✅, toolshubpro 72 ✅ (all clean as of May 23)"
+    }
   },
   "email_stats": {
     "last_send": "2026-05-25T08:02",
     "total_sent": 25
   },
   "crawl_404": {
-    "checked_at": "2026-05-24T22:04:22Z",
+    "checked_at": "2026-05-25T09:00:00Z",
     "status": "ok",
     "total_pages_checked": 0,
     "total_issues": 0,
-    "note": "All 3 sites unreachable (Hostinger network down) - no pages could be crawled"
+    "note": "All 3 Hostinger sites unreachable - 404 crawl skipped (pending server recovery)"
   },
   "ssl_expiry": {
     "antoniopaving.com": 79,
     "primepropertymaintenance.au": 32,
     "toolshubpro.com.au": 58,
-    "tradios.onrender.com": 38,
+    "tradios.onrender.com": 32,
+    "primewashgear": 42,
+    "gumroad": 81,
     "nearest_expiry_days": 32
   },
-  "primepropertymaintenance": {
-    "status": "offline",
-    "http": 0,
-    "size_bytes": 0,
-    "checked_at": "2026-05-24T22:04:22Z",
-    "note": "DOWN - Server unreachable on port 443 (Hostinger IP). Connection timeout after 10s.",
-    "response_time_s": 10.03
+  "gumroad_sales": {
+    "updated": "2026-05-25T09:00",
+    "total_sales": 0,
+    "revenue_usd": 0.00,
+    "products_live": 9,
+    "note": "No new sales since last check"
   },
-  "antoniopaving": {
-    "status": "offline",
-    "http": 0,
-    "size_bytes": 0,
-    "checked_at": "2026-05-24T22:04:22Z",
-    "note": "DOWN - Server unreachable on port 443 (Hostinger IP 153.92.8.188). Connection timeout after 10s.",
-    "response_time_s": 10.03
+  "wealth_compounder": {
+    "updated": "2026-05-25T08:00",
+    "day": 2,
+    "total_invested": 100,
+    "annual_rate": 18250,
+    "status": "on_track"
   },
-  "toolshubpro": {
-    "status": "offline",
-    "http": 0,
-    "size_bytes": 0,
-    "checked_at": "2026-05-24T22:04:22Z",
-    "note": "DOWN - Server unreachable on port 443 (Hostinger IP). Connection timeout after 10s.",
-    "response_time_s": 10.03
-  },
-  "tradios": {
-    "status": "ok",
-    "http": 200,
-    "size_bytes": 22606,
-    "response_time_s": 0.44,
-    "checked_at": "2026-05-24T20:00:28Z",
-    "note": "Healthy after 307 redirect (0.44s). Final dest returns 200 OK."
-  },
-  "last_full_check": "2026-05-24T22:04:22Z",
+  "last_full_check": "2026-05-25T09:00:00Z",
   "checks": [
     {
       "check": "ftp-credentials",
       "status": "invalid",
-      "error": "530 Login incorrect \u2014 all known FTP passwords rejected. Reset via Hostinger hPanel required.",
+      "error": "530 Login incorrect - all known FTP passwords rejected. Reset via Hostinger hPanel required.",
       "last_tried": "2026-05-24 06:08"
+    },
+    {
+      "check": "hostinger-server",
+      "status": "down",
+      "error": "IP 153.92.8.188 unreachable on ports 80 and 443 since May 24 2026",
+      "last_tried": "2026-05-25T09:00"
     }
   ]
 }

@@ -1,59 +1,74 @@
 {
-  "date": "2026-05-24",
-  "time": "08:01",
+  "date": "2026-05-25",
+  "time": "09:00",
   "sites": {
     "antoniopaving": {
-      "status": "warning",
-      "issues": [
-        "13 oversized images (>80KB) on homepage — largest: brick-paving-4.webp (360KB), bluestone-paving.webp (298KB), pool-paving.webp (230KB), antonio-primescape-flagstone-c (299KB)",
-        "about.html missing: meta description, canonical tag, OG tags, schema markup, viewport meta — completely broken SEO on about page",
-        "Title tag too long (78 chars) — exceeds 70-char ideal"
-      ],
+      "status": "error",
+      "issues": ["Sitio offline — Hostinger server 153.92.8.188 unreachable (2nd+ day)"],
       "stats": {
-        "http_status": 200,
-        "content_bytes": 86266,
-        "load_time_s": 0.90,
-        "ssl_days_remaining": 77,
+        "http_status": 0,
+        "response_time_s": 15.07,
+        "content_size_bytes": 0,
+        "ssl_days_remaining": 79,
         "sitemap_urls": 439,
-        "og_tags": 9,
-        "www_redirect": "fixed"
+        "seo_issues": 0,
+        "last_known_good": "2026-05-23"
       }
     },
     "primeproperty": {
       "status": "error",
-      "issues": [
-        "⚠️ CRITICAL: Canonical tag on homepage points to toolshubpro.com.au — search engines may attribute all primeproperty content to wrong domain",
-        "1 broken link: blog/tradie-quote-calculator.html → 404 Not Found",
-        "Title tag too long (81 chars) on homepage",
-        "about.html missing schema markup"
-      ],
+      "issues": ["Sitio offline — mismo Hostinger server (2nd+ day)", "Homepage BODY aun muestra contenido de toolshubpro (calculadoras)"],
       "stats": {
-        "http_status": 200,
-        "content_bytes": 101784,
-        "load_time_s": 0.94,
-        "ssl_days_remaining": 89,
+        "http_status": 0,
+        "response_time_s": 15.00,
+        "content_size_bytes": 0,
+        "ssl_days_remaining": 32,
         "sitemap_urls": 973,
-        "og_tags": 6,
-        "www_redirect": "fixed"
+        "seo_issues": 1,
+        "last_known_good": "2026-05-23"
       }
     },
     "toolshubpro": {
-      "status": "warning",
-      "issues": [
-        "FAQ section duplicated (2x) on ashwood-pool-paving.html and clayton-pool-paving.html",
-        "Title tag too long (81 chars) on homepage",
-        "about.html missing schema markup"
-      ],
+      "status": "error",
+      "issues": ["Sitio offline — mismo Hostinger server (2nd+ day)"],
+      "stats": {
+        "http_status": 0,
+        "response_time_s": 15.00,
+        "content_size_bytes": 0,
+        "ssl_days_remaining": 58,
+        "sitemap_urls": 72,
+        "seo_issues": 0,
+        "last_known_good": "2026-05-23"
+      }
+    },
+    "tradios": {
+      "status": "ok",
+      "issues": [],
       "stats": {
         "http_status": 200,
-        "content_bytes": 103141,
-        "load_time_s": 0.99,
-        "ssl_days_remaining": 56,
-        "sitemap_urls": 72,
-        "og_tags": 6,
-        "www_redirect": "ok"
+        "response_time_s": 0.76,
+        "content_size_bytes": 22606
+      }
+    },
+    "primewashgear": {
+      "status": "ok",
+      "issues": [],
+      "stats": {
+        "http_status": 200,
+        "response_time_s": 0.07,
+        "content_size_bytes": 28466
+      }
+    },
+    "gumroad": {
+      "status": "ok",
+      "issues": [],
+      "stats": {
+        "http_status": 200,
+        "response_time_s": 0.34,
+        "sales": 0,
+        "products_live": 9
       }
     }
   },
-  "summary": "3 sites up — all HTTP 200, load times under 1s. 🟢 IMPROVEMENTS: www→non-www redirects FIXED on all 3 sites; antoniopaving OG tags restored from 3→9 (full set); primeproperty SSL renewed (30→89 days). 🔴 NEW ISSUES: primeproperty canonical tag points to toolshubpro.com.au (critical SEO cross-contamination); antoniopaving about.html has zero SEO metadata; 1 broken link on primeproperty (blog/tradie-quote-calculator.html 404). ⚠️ PERSISTENT: 13 oversized images on antoniopaving (savings ~3MB possible); FAQ duplication on 2 toolshubpro pages; long title tags. Actions needed: fix primeproperty canonical, add SEO metadata to antoniopaving about.html, fix broken blog link, compress images."
+  "summary": "🚨 3/6 sites DOWN (all Hostinger — same server). ✅ tradios.onrender.com, primewashgear (GitHub Pages), Gumroad store all healthy. Hostinger server IP 153.92.8.188 unreachable since May 24. No new Gumroad sales. Trading: 4 bullish (NVDA, AMZN, AAPL, AMD), 5 neutral. Wealth Compounder: Day 2, $100 invested. All cron jobs healthy except melbourne-paving-ranking-tracker (never ran). Credential pool: OK."
 }
