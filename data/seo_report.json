@@ -1,18 +1,42 @@
 {
-  "updated": "2026-05-25T08:00",
+  "updated": "2026-05-26T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-25T08:00",
+      "analyzed_at": "2026-05-26T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
-          "status": 0,
-          "analyzed_at": "2026-05-25T08:00",
-          "seo_score": 0,
+          "status": 200,
+          "analyzed_at": "2026-05-26T08:00",
+          "title": "Paving Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
+          "title_length": 74,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Melbourne's trusted paving specialists. Brick paving from $85/m², bluestone from $120/m², pool & permeable paving. ★★★★★ 64 Google reviews. Owner-oper",
+          "meta_desc_length": 187,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 5871,
+          "h1_count": 2,
+          "h2_count": 14,
+          "has_h1": true,
+          "images": 15,
+          "images_with_alt": 15,
+          "links": 127,
+          "has_canonical": true,
+          "keyword_hits": {
+            "paving melbourne": 1,
+            "driveway paving": 4,
+            "permeable paving": 2
+          },
+          "seo_score": 85,
           "issues": [
-            "❌ HTTP 0: Page not accessible"
+            "⚠️ Title too long (74 chars)",
+            "⚠️ Very thin content (0 words)"
           ]
         }
       ],
@@ -30,21 +54,45 @@
         "paving services melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 0,
-      "quick_homepage_score": 0
+      "sitemap_count": 439,
+      "quick_homepage_score": 85
     },
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-25T08:01",
+      "analyzed_at": "2026-05-26T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
-          "status": 0,
-          "analyzed_at": "2026-05-25T08:01",
-          "seo_score": 0,
+          "status": 200,
+          "analyzed_at": "2026-05-26T08:00",
+          "title": "Prime Property Maintenance Melbourne — Decking, Fencing, Pressure Washing, Lawn Mowing, Renovations & More | Free Quote",
+          "title_length": 119,
+          "title_too_short": false,
+          "title_too_long": true,
+          "title_missing": false,
+          "meta_description": "Melbourne's trusted property maintenance. Decking, fencing, pressure washing, lawn mowing, garden care, end-of-lease, pergola repairs, renovations & m",
+          "meta_desc_length": 189,
+          "meta_desc_missing": false,
+          "meta_desc_too_short": false,
+          "meta_desc_too_long": true,
+          "word_count": 1145,
+          "h1_count": 2,
+          "h2_count": 8,
+          "has_h1": true,
+          "images": 22,
+          "images_with_alt": 20,
+          "links": 89,
+          "has_canonical": true,
+          "keyword_hits": {
+            "fence installation": 1,
+            "property maintenance melbourne": 1
+          },
+          "seo_score": 80,
           "issues": [
-            "❌ HTTP 0: Page not accessible"
+            "⚠️ Title too long (119 chars)",
+            "⚠️ Very thin content (0 words)",
+            "⚠️ Only 20/22 images have alt text"
           ]
         }
       ],
@@ -62,8 +110,8 @@
         "strata maintenance melbourne"
       ],
       "content_suggestions": [],
-      "sitemap_count": 0,
-      "quick_homepage_score": 0
+      "sitemap_count": 973,
+      "quick_homepage_score": 80
     }
   },
   "summary": {}
