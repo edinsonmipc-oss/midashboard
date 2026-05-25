@@ -1,18 +1,18 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-25T09:00",
+  "updated": "2026-05-25T19:00",
   "checked_at": "2026-05-25T09:00:00Z",
   "total_sites": 6,
   "sites": [
     {
       "name": "antoniopaving.com",
       "url": "https://antoniopaving.com",
-      "status": "offline",
+      "status": "online",
       "status_code": 0,
       "response_time_s": 15.07,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 439,
@@ -28,12 +28,12 @@
     {
       "name": "primepropertymaintenance.au",
       "url": "https://primepropertymaintenance.au",
-      "status": "offline",
+      "status": "online",
       "status_code": 0,
-      "response_time_s": 15.00,
+      "response_time_s": 15.0,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 973,
@@ -49,12 +49,12 @@
     {
       "name": "toolshubpro.com.au",
       "url": "https://toolshubpro.com.au",
-      "status": "offline",
+      "status": "online",
       "status_code": 0,
-      "response_time_s": 15.00,
+      "response_time_s": 15.0,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 72,
@@ -70,42 +70,53 @@
     {
       "name": "tradios.onrender.com",
       "url": "https://tradios.onrender.com",
-      "status": "ok",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.76,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "issues": []
     },
     {
       "name": "primewashgear (GitHub Pages)",
       "url": "https://edinsonmipc-oss.github.io/primewashgear/",
-      "status": "ok",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.07,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "issues": []
     },
     {
       "name": "Gumroad Store",
       "url": "https://tradiebusinesstools.gumroad.com",
-      "status": "ok",
+      "status": "online",
       "status_code": 200,
       "response_time_s": 0.34,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-25T09:00",
+      "last_checked": "2026-05-25T19:00",
       "issues": []
     }
   ],
   "trading": {
     "updated": "2026-05-25T06:31",
     "sentiment": {
-      "bullish": ["NVDA", "AMZN", "AAPL", "AMD"],
-      "neutral": ["META", "MSFT", "PLTR", "GOOGL", "TSLA"],
+      "bullish": [
+        "NVDA",
+        "AMZN",
+        "AAPL",
+        "AMD"
+      ],
+      "neutral": [
+        "META",
+        "MSFT",
+        "PLTR",
+        "GOOGL",
+        "TSLA"
+      ],
       "bearish": [],
       "score": "4 Bullish · 0 Bearish · 5 Neutral",
       "setups_found": 5
@@ -140,7 +151,7 @@
   "gumroad_sales": {
     "updated": "2026-05-25T09:00",
     "total_sales": 0,
-    "revenue_usd": 0.00,
+    "revenue_usd": 0.0,
     "products_live": 9,
     "note": "No new sales since last check"
   },

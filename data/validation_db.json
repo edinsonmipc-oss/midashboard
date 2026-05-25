@@ -701,6 +701,84 @@
         "smtp": false,
         "bounce": false
       }
+    },
+    {
+      "email": "info@picagroup.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.734731",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "trades@henley.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-25T10:00:50.740203",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "procurement@frasersproperty.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.745690",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@jll.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.750613",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "property@ispt.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.755168",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    {
+      "email": "supplychain@laingorourke.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.759482",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
     }
   ],
   "by_email": {
@@ -1398,6 +1476,84 @@
       "status": "rejected",
       "detail": "Email is on bounce blacklist \u2014 will never retry",
       "checked_at": "2026-05-25T08:02:13.574302",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "info@picagroup.com.au": {
+      "email": "info@picagroup.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.734731",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "trades@henley.com.au": {
+      "email": "trades@henley.com.au",
+      "status": "rejected",
+      "detail": "Generic role address (trades@)",
+      "checked_at": "2026-05-25T10:00:50.740203",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "procurement@frasersproperty.com.au": {
+      "email": "procurement@frasersproperty.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.745690",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@jll.com.au": {
+      "email": "property@jll.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.750613",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "property@ispt.com.au": {
+      "email": "property@ispt.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.755168",
+      "checks": {
+        "generic": false,
+        "format": false,
+        "mx": false,
+        "smtp": false,
+        "bounce": false
+      }
+    },
+    "supplychain@laingorourke.com.au": {
+      "email": "supplychain@laingorourke.com.au",
+      "status": "rejected",
+      "detail": "Email is on bounce blacklist \u2014 will never retry",
+      "checked_at": "2026-05-25T10:00:50.759482",
       "checks": {
         "generic": false,
         "format": false,
