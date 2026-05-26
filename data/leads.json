@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T07:00",
+  "updated": "2026-05-26T19:00",
   "total_leads": 141,
   "businesses": [
     "PrimeScape Construction",
@@ -1846,111 +1846,64 @@
     ],
     "2026-05-26_batch14": [
       {
-        "company": "Marshall White",
-        "email": "projects@marshallwhite.com.au",
-        "website": "marshallwhite.com.au",
-        "type": "real_estate",
+        "company": "Henley Homes",
+        "email": "trades@henley.com.au",
+        "website": "henley.com.au",
+        "type": "builder",
         "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:11.546008"
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
       },
       {
-        "company": "Collins Simms",
-        "email": "info@collinssimms.com.au",
-        "website": "collinssimms.com.au",
+        "company": "Watpac",
+        "email": "projects@watpac.com.au",
+        "website": "watpac.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "unknown"
       },
       {
-        "company": "Simonds Homes",
-        "email": "trades@simonds.com.au",
-        "website": "simonds.com.au",
+        "company": "Boutique Homes",
+        "email": "info@boutiquehomes.com.au",
+        "website": "boutiquehomes.com.au",
         "type": "builder",
         "contact": "",
         "business_target": "antoniopaving",
-        "notes": "Necesitan tradies para subcontratos",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:11.097031"
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
       },
       {
-        "company": "Hansen Yuncken",
-        "email": "info@hansenyuncken.com.au",
-        "website": "hansenyuncken.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:10.993030"
-      },
-      {
-        "company": "McGrath Estate Agents",
-        "email": "commercial@mcgrath.com.au",
-        "website": "mcgrath.com.au",
+        "company": "Nelson Alexander",
+        "email": "property@nelsonalexander.com.au",
+        "website": "nelsonalexander.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:10.988017"
+        "verified": "unknown"
       },
       {
-        "company": "Downer Group",
-        "email": "procurement@downergroup.com",
-        "website": "downergroup.com",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:11.001523"
-      },
-      {
-        "company": "Colliers International",
-        "email": "property@colliers.com.au",
-        "website": "colliers.com.au",
-        "type": "property_mgmt",
+        "company": "Goodman Group",
+        "email": "property@goodman.com",
+        "website": "goodman.com",
+        "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Contratan servicios de mantenimiento",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (property@)",
-        "verified_at": "2026-05-26T08:00:11.536626"
-      },
-      {
-        "company": "Strata Title Management",
-        "email": "info@stratatitle.com.au",
-        "website": "stratatitle.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan servicios regulares",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-26T08:00:11.600994"
-      },
-      {
-        "company": "Hickory Group",
-        "email": "projects@hickory.com.au",
-        "website": "hickory.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (projects@)",
-        "verified_at": "2026-05-26T08:00:11.087608"
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
       },
       {
         "company": "Hockingstuart",
@@ -1960,9 +1913,37 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-26T08:00:11.541136"
+        "verified": "unknown"
+      },
+      {
+        "company": "ACE Body Corporate",
+        "email": "info@acebodycorporate.com.au",
+        "website": "acebodycorporate.com.au",
+        "type": "strata",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Buscan contractors para mantenimiento",
+        "verified": "unknown"
+      },
+      {
+        "company": "ISPT",
+        "email": "property@ispt.com.au",
+        "website": "ispt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "AVJennings",
+        "email": "info@avjennings.com.au",
+        "website": "avjennings.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Necesitan tradies para subcontratos",
+        "verified": "unknown"
       }
     ]
   }
