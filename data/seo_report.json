@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-27T08:00",
+  "updated": "2026-05-28T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-27T08:00",
+      "analyzed_at": "2026-05-28T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-27T08:00",
+          "analyzed_at": "2026-05-28T08:00",
           "title": "Paving Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
           "title_length": 74,
           "title_too_short": false,
@@ -60,12 +60,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-27T08:00",
+      "analyzed_at": "2026-05-28T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-27T08:00",
+          "analyzed_at": "2026-05-28T08:00",
           "title": "Prime Property Maintenance Melbourne — Decking, Fencing, Pressure Washing, Lawn Mowing, Renovations & More | Free Quote",
           "title_length": 119,
           "title_too_short": false,
