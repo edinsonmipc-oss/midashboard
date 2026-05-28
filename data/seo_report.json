@@ -1,15 +1,15 @@
 {
-  "updated": "2026-05-28T08:00",
+  "updated": "2026-05-29T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-28T08:00",
+      "analyzed_at": "2026-05-29T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-28T08:00",
+          "analyzed_at": "2026-05-29T08:00",
           "title": "Paving Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
           "title_length": 74,
           "title_too_short": false,
@@ -20,18 +20,20 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": true,
-          "word_count": 5871,
+          "word_count": 5968,
           "h1_count": 2,
           "h2_count": 14,
           "has_h1": true,
-          "images": 15,
-          "images_with_alt": 15,
-          "links": 127,
+          "images": 21,
+          "images_with_alt": 21,
+          "links": 126,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 1,
             "driveway paving": 4,
-            "permeable paving": 2
+            "exposed aggregate": 1,
+            "permeable paving": 3,
+            "concrete driveway": 4
           },
           "seo_score": 85,
           "issues": [
@@ -60,12 +62,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-28T08:00",
+      "analyzed_at": "2026-05-29T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-28T08:00",
+          "analyzed_at": "2026-05-29T08:00",
           "title": "Prime Property Maintenance Melbourne — Decking, Fencing, Pressure Washing, Lawn Mowing, Renovations & More | Free Quote",
           "title_length": 119,
           "title_too_short": false,

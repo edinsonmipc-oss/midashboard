@@ -1,6 +1,6 @@
 {
   "service": "site-monitor",
-  "updated": "2026-05-29T07:00",
+  "updated": "2026-05-29T08:00",
   "checked_at": "2026-05-25T09:00:00Z",
   "total_sites": 6,
   "sites": [
@@ -12,7 +12,7 @@
       "response_time_s": 15.07,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 439,
@@ -42,7 +42,7 @@
       "response_time_s": 15.0,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 973,
@@ -72,7 +72,7 @@
       "response_time_s": 15.0,
       "healthy": false,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "crawl_check": {
         "checked_at": "2026-05-23T22:02:15Z",
         "pages_checked": 72,
@@ -93,7 +93,7 @@
       "response_time_s": 0.76,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "issues": []
     },
     {
@@ -104,7 +104,7 @@
       "response_time_s": 0.07,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "issues": []
     },
     {
@@ -115,7 +115,7 @@
       "response_time_s": 0.34,
       "healthy": true,
       "checked_at": "2026-05-25T09:00:00Z",
-      "last_checked": "2026-05-29T07:00",
+      "last_checked": "2026-05-29T08:00",
       "issues": []
     }
   ],
@@ -141,12 +141,12 @@
     }
   },
   "seo_audit": {
-    "updated": "2026-05-28T08:00",
+    "updated": "2026-05-29T08:00",
     "summary": {}
   },
   "email_stats": {
-    "last_send": "2026-05-28T08:00",
-    "total_sent": 19
+    "last_send": "2026-05-29T08:00",
+    "total_sent": 16
   },
   "crawl_404": {
     "checked_at": "2026-05-25T09:00:00Z",

@@ -17,7 +17,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.432448",
+        "verified_at": "2026-05-29T08:00:14.482518",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -32,7 +32,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.449000",
+        "verified_at": "2026-05-29T08:00:14.486728",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -47,7 +47,7 @@
         "notes": "Contratan servicios de mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.428415",
+        "verified_at": "2026-05-29T08:00:14.490953",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -62,7 +62,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.453381",
+        "verified_at": "2026-05-29T08:00:14.495012",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -113,7 +113,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.444756",
+        "verified_at": "2026-05-29T08:00:14.498937",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -146,7 +146,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.457584",
+        "verified_at": "2026-05-29T08:00:14.502808",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -161,7 +161,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.461623",
+        "verified_at": "2026-05-29T08:00:14.506899",
         "bounced": true,
         "bounce_reason": "Generic role address",
         "bounced_at": "2026-05-20T13:00:00"
@@ -289,11 +289,11 @@
         "business_target": "antoniopaving",
         "source": "internal",
         "verified": "approved",
-        "contacted": "2026-05-28T08:00",
+        "contacted": "2026-05-29T08:00",
         "contact_status": "dry-run",
         "notes": "Test contact for system validation.",
         "verified_reason": "A record only (1 found)",
-        "verified_at": "2026-05-28T08:00:11.877418",
+        "verified_at": "2026-05-29T08:00:15.551820",
         "sent": false
       }
     ],
@@ -308,7 +308,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.465427"
+        "verified_at": "2026-05-29T08:00:14.510958"
       },
       {
         "company": "Mirvac",
@@ -320,7 +320,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.469440"
+        "verified_at": "2026-05-29T08:00:14.515053"
       },
       {
         "company": "Hickory Group",
@@ -332,7 +332,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (projects@)",
-        "verified_at": "2026-05-28T08:00:11.473370"
+        "verified_at": "2026-05-29T08:00:14.519054"
       },
       {
         "company": "Burbank Homes",
@@ -344,7 +344,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.424098"
+        "verified_at": "2026-05-29T08:00:14.523070"
       },
       {
         "company": "Dexus",
@@ -356,7 +356,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.477590"
+        "verified_at": "2026-05-29T08:00:14.527103"
       },
       {
         "company": "GPT Group",
@@ -368,7 +368,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.481521"
+        "verified_at": "2026-05-29T08:00:14.531150"
       },
       {
         "company": "Henley Homes",
@@ -380,7 +380,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (trades@)",
-        "verified_at": "2026-05-28T08:00:11.485458"
+        "verified_at": "2026-05-29T08:00:14.535028"
       },
       {
         "company": "AVJennings",
@@ -392,7 +392,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.419954"
+        "verified_at": "2026-05-29T08:00:14.539053"
       },
       {
         "company": "Charter Hall",
@@ -404,7 +404,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.489779"
+        "verified_at": "2026-05-29T08:00:14.543129"
       },
       {
         "company": "Simonds Homes",
@@ -416,7 +416,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.493797"
+        "verified_at": "2026-05-29T08:00:14.547235"
       }
     ],
     "2026-05-21_batch14": [
@@ -430,7 +430,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.493802"
+        "verified_at": "2026-05-29T08:00:14.547241"
       },
       {
         "company": "Century 21",
@@ -442,7 +442,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.457597"
+        "verified_at": "2026-05-29T08:00:14.502818"
       },
       {
         "company": "Frasers Property",
@@ -454,7 +454,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-25T10:00:50.747963"
+        "verified_at": "2026-05-29T08:00:15.557351"
       },
       {
         "company": "Colliers International",
@@ -466,7 +466,7 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (property@)",
-        "verified_at": "2026-05-28T08:00:11.887349"
+        "verified_at": "2026-05-29T08:00:15.562804"
       },
       {
         "company": "Charter Hall",
@@ -478,7 +478,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.489785"
+        "verified_at": "2026-05-29T08:00:14.543136"
       },
       {
         "company": "Goodman Group",
@@ -502,7 +502,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.891795"
+        "verified_at": "2026-05-29T08:00:15.568039"
       },
       {
         "company": "Mirvac",
@@ -514,7 +514,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.432455"
+        "verified_at": "2026-05-29T08:00:14.482537"
       },
       {
         "company": "Watpac",
@@ -526,7 +526,7 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.896066"
+        "verified_at": "2026-05-29T08:00:15.573395"
       },
       {
         "company": "Nelson Alexander",
@@ -538,7 +538,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.900171"
+        "verified_at": "2026-05-29T08:00:15.578384"
       }
     ],
     "2026-05-22_batch14": [
@@ -552,7 +552,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.453392"
+        "verified_at": "2026-05-29T08:00:14.495025"
       },
       {
         "company": "Marshall White",
@@ -564,7 +564,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.904740"
+        "verified_at": "2026-05-29T08:00:15.583907"
       },
       {
         "company": "Fletchers Real Estate",
@@ -576,7 +576,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.908700"
+        "verified_at": "2026-05-29T08:00:15.589051"
       },
       {
         "company": "Multiplex",
@@ -588,7 +588,7 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.912757"
+        "verified_at": "2026-05-29T08:00:15.594128"
       },
       {
         "company": "PICA Group",
@@ -600,7 +600,7 @@
         "notes": "Necesitan servicios regulares",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.916772"
+        "verified_at": "2026-05-29T08:00:15.599109"
       },
       {
         "company": "Built",
@@ -612,7 +612,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (enquiries@)",
-        "verified_at": "2026-05-28T08:00:11.920674"
+        "verified_at": "2026-05-29T08:00:15.604515"
       },
       {
         "company": "CBRE Australia",
@@ -624,7 +624,7 @@
         "notes": "Contratan servicios de mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.924884"
+        "verified_at": "2026-05-29T08:00:15.609678"
       },
       {
         "company": "Kay & Burton",
@@ -636,7 +636,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.444764"
+        "verified_at": "2026-05-29T08:00:14.498949"
       },
       {
         "company": "Laing O'Rourke",
@@ -648,7 +648,7 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.929279"
+        "verified_at": "2026-05-29T08:00:15.615045"
       },
       {
         "company": "Brookfield Multiplex",
@@ -660,7 +660,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.933236"
+        "verified_at": "2026-05-29T08:00:15.620322"
       }
     ],
     "2026-05-23_batch14": [
@@ -674,7 +674,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.937229"
+        "verified_at": "2026-05-29T08:00:15.626239"
       },
       {
         "company": "Marshall White",
@@ -686,7 +686,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.904747"
+        "verified_at": "2026-05-29T08:00:15.583919"
       },
       {
         "company": "Burbank Homes",
@@ -698,7 +698,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.424104"
+        "verified_at": "2026-05-29T08:00:14.523081"
       },
       {
         "company": "Colliers International",
@@ -710,7 +710,7 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (property@)",
-        "verified_at": "2026-05-28T08:00:11.887363"
+        "verified_at": "2026-05-29T08:00:15.562819"
       },
       {
         "company": "Goodman Group",
@@ -734,7 +734,7 @@
         "notes": "Contratistas principales nivel 1",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.942423"
+        "verified_at": "2026-05-29T08:00:15.632990"
       },
       {
         "company": "Cushman & Wakefield",
@@ -746,7 +746,7 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.440551"
+        "verified_at": "2026-05-29T08:00:15.638510"
       },
       {
         "company": "McGrath Estate Agents",
@@ -758,7 +758,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.946681"
+        "verified_at": "2026-05-29T08:00:15.644409"
       },
       {
         "company": "Barry Plant",
@@ -770,7 +770,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.950564"
+        "verified_at": "2026-05-29T08:00:15.649030"
       },
       {
         "company": "Stockland",
@@ -782,7 +782,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (community@)",
-        "verified_at": "2026-05-28T08:00:11.954561"
+        "verified_at": "2026-05-29T08:00:15.653524"
       }
     ],
     "2026-05-24_batch14": [
@@ -796,7 +796,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.958602"
+        "verified_at": "2026-05-29T08:00:15.658397"
       },
       {
         "company": "First National Real Estate",
@@ -808,7 +808,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.962508"
+        "verified_at": "2026-05-29T08:00:15.662770"
       },
       {
         "company": "Jellis Craig",
@@ -820,7 +820,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.937235"
+        "verified_at": "2026-05-29T08:00:15.626256"
       },
       {
         "company": "ISPT",
@@ -844,7 +844,7 @@
         "notes": "Administran propiedades comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.428426"
+        "verified_at": "2026-05-29T08:00:14.490970"
       },
       {
         "company": "Hansen Yuncken",
@@ -856,7 +856,7 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.966981"
+        "verified_at": "2026-05-29T08:00:15.667909"
       },
       {
         "company": "PICA Group",
@@ -868,7 +868,7 @@
         "notes": "Buscan contractors para mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.916781"
+        "verified_at": "2026-05-29T08:00:15.599126"
       },
       {
         "company": "Frasers Property",
@@ -880,7 +880,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-25T10:00:50.747971"
+        "verified_at": "2026-05-29T08:00:15.557369"
       },
       {
         "company": "ACE Body Corporate",
@@ -892,7 +892,7 @@
         "notes": "Administran edificios y propiedades",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.971187"
+        "verified_at": "2026-05-29T08:00:15.672828"
       },
       {
         "company": "Probuild",
@@ -904,7 +904,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.449016"
+        "verified_at": "2026-05-29T08:00:14.486745"
       }
     ],
     "2026-05-20_personal_outreach": [
@@ -1129,7 +1129,7 @@
         "notes": "Contratistas principales nivel 1",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (enquiries@)",
-        "verified_at": "2026-05-28T08:00:11.920685"
+        "verified_at": "2026-05-29T08:00:15.604532"
       },
       {
         "company": "Downer Group",
@@ -1141,7 +1141,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.975617"
+        "verified_at": "2026-05-29T08:00:15.678262"
       },
       {
         "company": "GPT Group",
@@ -1153,7 +1153,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.481535"
+        "verified_at": "2026-05-29T08:00:14.531165"
       },
       {
         "company": "PICA Group",
@@ -1165,7 +1165,7 @@
         "notes": "Buscan contractors para mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.916785"
+        "verified_at": "2026-05-29T08:00:15.599132"
       },
       {
         "company": "Marshall White",
@@ -1177,7 +1177,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.904755"
+        "verified_at": "2026-05-29T08:00:15.583928"
       },
       {
         "company": "Henley Homes",
@@ -1189,7 +1189,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (trades@)",
-        "verified_at": "2026-05-28T08:00:11.485472"
+        "verified_at": "2026-05-29T08:00:14.535041"
       },
       {
         "company": "Savills Australia",
@@ -1201,7 +1201,7 @@
         "notes": "Contratan servicios de mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.980766"
+        "verified_at": "2026-05-29T08:00:15.684851"
       },
       {
         "company": "Kay & Burton",
@@ -1213,7 +1213,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.444772"
+        "verified_at": "2026-05-29T08:00:14.498957"
       },
       {
         "company": "Carlton Homes",
@@ -1225,7 +1225,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.985157"
+        "verified_at": "2026-05-29T08:00:15.690514"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1237,7 +1237,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.946692"
+        "verified_at": "2026-05-29T08:00:15.644427"
       }
     ],
     "2026-05-25_batch14": [
@@ -1262,7 +1262,7 @@
         "notes": "Contratan servicios de mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.440558"
+        "verified_at": "2026-05-29T08:00:15.638532"
       },
       {
         "company": "Goodman Group",
@@ -1285,7 +1285,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.436418"
+        "verified_at": "2026-05-29T08:00:15.696741"
       },
       {
         "company": "Hockingstuart",
@@ -1297,7 +1297,7 @@
         "notes": "Portfolio grande en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.891811"
+        "verified_at": "2026-05-29T08:00:15.568065"
       },
       {
         "company": "Colliers International",
@@ -1309,7 +1309,7 @@
         "notes": "Multiples propiedades en su cartera",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (property@)",
-        "verified_at": "2026-05-28T08:00:11.887371"
+        "verified_at": "2026-05-29T08:00:15.562827"
       },
       {
         "company": "Mirvac",
@@ -1321,7 +1321,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.469457"
+        "verified_at": "2026-05-29T08:00:14.515069"
       },
       {
         "company": "Probuild",
@@ -1333,7 +1333,7 @@
         "notes": "Grandes proyectos de construcción en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.449022"
+        "verified_at": "2026-05-29T08:00:14.486752"
       },
       {
         "company": "Collins Simms",
@@ -1343,8 +1343,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.703604"
       },
       {
         "company": "Brookfield Multiplex",
@@ -1356,7 +1357,7 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.933250"
+        "verified_at": "2026-05-29T08:00:15.620345"
       }
     ],
     "2026-05-26_batch14": [
@@ -1370,7 +1371,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (trades@)",
-        "verified_at": "2026-05-28T08:00:11.485476"
+        "verified_at": "2026-05-29T08:00:14.535045"
       },
       {
         "company": "Watpac",
@@ -1382,7 +1383,7 @@
         "notes": "Proyectos comerciales y residenciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.896081"
+        "verified_at": "2026-05-29T08:00:15.573414"
       },
       {
         "company": "GPT Group",
@@ -1394,7 +1395,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.481539"
+        "verified_at": "2026-05-29T08:00:14.531170"
       },
       {
         "company": "Boutique Homes",
@@ -1406,7 +1407,7 @@
         "notes": "Constructora de viviendas en Melbourne",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.453404"
+        "verified_at": "2026-05-29T08:00:14.495038"
       },
       {
         "company": "Nelson Alexander",
@@ -1418,7 +1419,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.900186"
+        "verified_at": "2026-05-29T08:00:15.578405"
       },
       {
         "company": "Goodman Group",
@@ -1441,7 +1442,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Generic: Generic role address (commercial@)",
-        "verified_at": "2026-05-28T08:00:11.891815"
+        "verified_at": "2026-05-29T08:00:15.568069"
       },
       {
         "company": "ACE Body Corporate",
@@ -1453,7 +1454,7 @@
         "notes": "Buscan contractors para mantenimiento",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.971199"
+        "verified_at": "2026-05-29T08:00:15.672847"
       },
       {
         "company": "ISPT",
@@ -1476,7 +1477,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.419969"
+        "verified_at": "2026-05-29T08:00:14.539070"
       }
     ],
     "2026-05-27_batch14": [
@@ -1490,7 +1491,7 @@
         "notes": "Buscan subcontratistas calificados",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.966993"
+        "verified_at": "2026-05-29T08:00:15.667925"
       },
       {
         "company": "GPT Group",
@@ -1502,7 +1503,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.481542"
+        "verified_at": "2026-05-29T08:00:14.531173"
       },
       {
         "company": "Savills Australia",
@@ -1514,7 +1515,7 @@
         "notes": "Multiples propiedades en su cartera",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.980775"
+        "verified_at": "2026-05-29T08:00:15.684867"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1526,7 +1527,7 @@
         "notes": "Gestionan propiedades comerciales",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.946698"
+        "verified_at": "2026-05-29T08:00:15.644435"
       },
       {
         "company": "Boutique Homes",
@@ -1538,7 +1539,7 @@
         "notes": "Necesitan tradies para subcontratos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.453407"
+        "verified_at": "2026-05-29T08:00:14.495041"
       },
       {
         "company": "Collins Simms",
@@ -1548,8 +1549,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.703618"
       },
       {
         "company": "ACE Body Corporate",
@@ -1561,7 +1563,7 @@
         "notes": "Administran edificios y propiedades",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.971202"
+        "verified_at": "2026-05-29T08:00:15.672851"
       },
       {
         "company": "Mirvac",
@@ -1573,7 +1575,7 @@
         "notes": "Necesitan mantenimiento regular",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.469461"
+        "verified_at": "2026-05-29T08:00:14.515074"
       },
       {
         "company": "ISPT",
@@ -1596,7 +1598,7 @@
         "notes": "Volumen alto de proyectos",
         "verified": "invalid",
         "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.493816"
+        "verified_at": "2026-05-29T08:00:14.547256"
       }
     ],
     "2026-05-28_batch14": [
@@ -1608,7 +1610,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.557381"
       },
       {
         "company": "McGrath Estate Agents",
@@ -1618,7 +1622,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.644438"
       },
       {
         "company": "Century 21",
@@ -1628,7 +1634,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:14.502833"
       },
       {
         "company": "Kay & Burton",
@@ -1638,7 +1646,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:14.498964"
       },
       {
         "company": "Kane Constructions",
@@ -1648,7 +1658,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
+        "verified_at": "2026-05-29T08:00:15.717801"
       },
       {
         "company": "LJ Hooker",
@@ -1658,7 +1670,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.723510"
       },
       {
         "company": "Collins Simms",
@@ -1668,7 +1682,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.703623"
       },
       {
         "company": "Marshall White",
@@ -1678,7 +1694,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.583936"
       },
       {
         "company": "Metricon",
@@ -1688,7 +1706,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Constructora de viviendas en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:14.510981"
       },
       {
         "company": "Probuild",
@@ -1698,7 +1718,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Buscan subcontratistas calificados",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:14.486758"
       }
     ],
     "2026-05-29_batch14": [
@@ -1710,7 +1732,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Contratan servicios de mantenimiento",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.638543"
       },
       {
         "company": "Brookfield Multiplex",
@@ -1720,7 +1744,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Contratistas principales nivel 1",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.620353"
       },
       {
         "company": "Goodman Group",
@@ -1730,7 +1756,8 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "verified",
+        "verified_reason": "Has MX records"
       },
       {
         "company": "Henley Homes",
@@ -1740,7 +1767,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Necesitan tradies para subcontratos",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (trades@)",
+        "verified_at": "2026-05-29T08:00:14.535051"
       },
       {
         "company": "Dexus",
@@ -1750,7 +1779,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Gestionan propiedades comerciales",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:14.527124"
       },
       {
         "company": "Hockingstuart",
@@ -1760,7 +1791,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (commercial@)",
+        "verified_at": "2026-05-29T08:00:15.568075"
       },
       {
         "company": "Built",
@@ -1770,7 +1803,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Proyectos comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (enquiries@)",
+        "verified_at": "2026-05-29T08:00:15.604545"
       },
       {
         "company": "Kane Constructions",
@@ -1780,7 +1815,9 @@
         "contact": "",
         "business_target": "antoniopaving",
         "notes": "Grandes proyectos de construcción en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Generic: Generic role address (projects@)",
+        "verified_at": "2026-05-29T08:00:15.717813"
       },
       {
         "company": "Savills Australia",
@@ -1790,7 +1827,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Administran propiedades comerciales y residenciales",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.684874"
       },
       {
         "company": "PRDnationwide",
@@ -1800,7 +1839,9 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "unknown"
+        "verified": "invalid",
+        "verified_reason": "Bounced previously — blacklisted",
+        "verified_at": "2026-05-29T08:00:15.696759"
       }
     ]
   }
