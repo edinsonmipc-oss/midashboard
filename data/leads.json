@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T07:00",
+  "updated": "2026-05-28T19:00",
   "total_leads": 141,
   "businesses": [
     "PrimeScape Construction",
@@ -1767,105 +1767,18 @@
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "verified",
-        "verified_reason": "Has MX records"
-      },
-      {
-        "company": "GPT Group",
-        "email": "info@gpt.com.au",
-        "website": "gpt.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Gestionan propiedades comerciales",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.481545"
-      },
-      {
-        "company": "PICA Group",
-        "email": "info@picagroup.com.au",
-        "website": "picagroup.com.au",
-        "type": "strata",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Buscan contractors para mantenimiento",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.916792"
-      },
-      {
-        "company": "John Holland",
-        "email": "suppliers@johnholland.com.au",
-        "website": "johnholland.com.au",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Proyectos comerciales y residenciales",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.958617"
-      },
-      {
-        "company": "Multiplex",
-        "email": "subcontractors@multiplex.com",
-        "website": "multiplex.global",
-        "type": "constructora",
-        "contact": "",
-        "business_target": "antoniopaving",
-        "notes": "Buscan subcontratistas calificados",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.912775"
-      },
-      {
-        "company": "Cbus Property",
-        "email": "info@cbusproperty.com.au",
-        "website": "cbusproperty.com.au",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.997227"
+        "verified": "unknown"
       },
       {
-        "company": "PRDnationwide",
-        "email": "commercial@prd.com.au",
-        "website": "prd.com.au",
+        "company": "McGrath Estate Agents",
+        "email": "commercial@mcgrath.com.au",
+        "website": "mcgrath.com.au",
         "type": "real_estate",
         "contact": "",
         "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.436424"
-      },
-      {
-        "company": "Ray White",
-        "email": "commercial@raywhite.com",
-        "website": "raywhite.com",
-        "type": "real_estate",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Necesitan mantenimiento regular",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:12.001571"
-      },
-      {
-        "company": "Savills Australia",
-        "email": "property@savills.com.au",
-        "website": "savills.com.au",
-        "type": "property_mgmt",
-        "contact": "",
-        "business_target": "primeproperty",
-        "notes": "Multiples propiedades en su cartera",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.980780"
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
       },
       {
         "company": "Century 21",
@@ -1875,9 +1788,77 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Portfolio grande en Melbourne",
-        "verified": "invalid",
-        "verified_reason": "Bounced previously — blacklisted",
-        "verified_at": "2026-05-28T08:00:11.457624"
+        "verified": "unknown"
+      },
+      {
+        "company": "Kay & Burton",
+        "email": "commercial@kayburton.com.au",
+        "website": "kayburton.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Kane Constructions",
+        "email": "projects@kane.com.au",
+        "website": "kane.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "LJ Hooker",
+        "email": "commercial@ljhooker.com",
+        "website": "ljhooker.com",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Portfolio grande en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Collins Simms",
+        "email": "info@collinssimms.com.au",
+        "website": "collinssimms.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Metricon",
+        "email": "trades@metricon.com.au",
+        "website": "metricon.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "Probuild",
+        "email": "estimating@probuild.com.au",
+        "website": "probuild.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Buscan subcontratistas calificados",
+        "verified": "unknown"
       }
     ]
   }
