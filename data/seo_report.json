@@ -1,17 +1,17 @@
 {
-  "updated": "2026-05-29T08:00",
+  "updated": "2026-05-30T08:00",
   "sites": {
     "antoniopaving": {
       "url": "https://antoniopaving.com",
       "name": "Antonio Paving",
-      "analyzed_at": "2026-05-29T08:00",
+      "analyzed_at": "2026-05-30T08:00",
       "pages": [
         {
           "url": "https://antoniopaving.com",
           "status": 200,
-          "analyzed_at": "2026-05-29T08:00",
-          "title": "Paving Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
-          "title_length": 74,
+          "analyzed_at": "2026-05-30T08:00",
+          "title": "Paving Contractor Melbourne | 64 ★★★★★ Reviews | Brick, Bluestone & More | Free Quote",
+          "title_length": 85,
           "title_too_short": false,
           "title_too_long": true,
           "title_missing": false,
@@ -20,24 +20,23 @@
           "meta_desc_missing": false,
           "meta_desc_too_short": false,
           "meta_desc_too_long": true,
-          "word_count": 5968,
+          "word_count": 5909,
           "h1_count": 2,
           "h2_count": 14,
           "has_h1": true,
-          "images": 21,
-          "images_with_alt": 21,
-          "links": 126,
+          "images": 16,
+          "images_with_alt": 16,
+          "links": 128,
           "has_canonical": true,
           "keyword_hits": {
             "paving melbourne": 1,
             "driveway paving": 4,
-            "exposed aggregate": 1,
             "permeable paving": 3,
             "concrete driveway": 4
           },
           "seo_score": 85,
           "issues": [
-            "⚠️ Title too long (74 chars)",
+            "⚠️ Title too long (85 chars)",
             "⚠️ Very thin content (0 words)"
           ]
         }
@@ -62,12 +61,12 @@
     "primeproperty": {
       "url": "https://primepropertymaintenance.au",
       "name": "Prime Property Maintenance",
-      "analyzed_at": "2026-05-29T08:00",
+      "analyzed_at": "2026-05-30T08:00",
       "pages": [
         {
           "url": "https://primepropertymaintenance.au",
           "status": 200,
-          "analyzed_at": "2026-05-29T08:00",
+          "analyzed_at": "2026-05-30T08:00",
           "title": "Prime Property Maintenance Melbourne — Decking, Fencing, Pressure Washing, Lawn Mowing, Renovations & More | Free Quote",
           "title_length": 119,
           "title_too_short": false,
