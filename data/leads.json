@@ -1,141 +1,11 @@
 {
-  "updated": "2026-05-31T19:00",
-  "total_leads": 141,
+  "updated": "2026-06-01T07:00",
+  "total_leads": 143,
   "businesses": [
     "PrimeScape Construction",
     "Prime Property Maintenance"
   ],
   "leads_by_date": {
-    "2026-05-20_hickory-kane-leads": [
-      {
-        "company": "Hickory Group",
-        "contact": "Michael Curtis",
-        "email": "michael.curtis@hickory.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "https://www.hickory.com.au/leadership-culture/",
-        "verified": "approved",
-        "contacted": "2026-05-24T10:19",
-        "contact_status": "sent",
-        "notes": "Chief Financial Officer.",
-        "verified_reason": "MX OK (2 servers)",
-        "verified_at": "2026-05-24T10:16:40.667294",
-        "sent": true
-      },
-      {
-        "company": "Hickory Group",
-        "contact": "Persia Gough",
-        "email": "persia.gough@hickory.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "https://www.hickory.com.au/leadership-culture/",
-        "verified": "approved",
-        "contacted": "2026-05-24T10:19",
-        "contact_status": "sent",
-        "notes": "Chief Marketing and Communications Officer.",
-        "verified_reason": "MX OK (2 servers)",
-        "verified_at": "2026-05-24T10:16:40.833788",
-        "sent": true
-      },
-      {
-        "company": "Hickory Group",
-        "contact": "Craig Hunter",
-        "email": "craig.hunter@hickory.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "https://www.hickory.com.au/leadership-culture/",
-        "verified": "approved",
-        "contacted": "2026-05-24T10:20",
-        "contact_status": "sent",
-        "notes": "Chief Information Officer.",
-        "verified_reason": "MX OK (2 servers)",
-        "verified_at": "2026-05-24T10:16:40.976114",
-        "sent": true
-      },
-      {
-        "company": "Hickory Group",
-        "contact": "Richard Anderson",
-        "email": "richard.anderson@hickory.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "https://www.hickory.com.au/leadership-culture/",
-        "verified": "approved",
-        "contacted": "2026-05-24T10:20",
-        "contact_status": "sent",
-        "notes": "General Counsel.",
-        "verified_reason": "MX OK (2 servers)",
-        "verified_at": "2026-05-24T10:16:41.122511",
-        "sent": true
-      },
-      {
-        "company": "Hickory Group",
-        "contact": "Pete Howell",
-        "email": "pete.howell@hickory.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "https://www.hickory.com.au/leadership-culture/",
-        "verified": "approved",
-        "contacted": "2026-05-24T10:21",
-        "contact_status": "sent",
-        "notes": "Chief People Officer.",
-        "verified_reason": "MX OK (2 servers)",
-        "verified_at": "2026-05-24T10:16:41.287376",
-        "sent": true
-      },
-      {
-        "company": "Kane Constructions",
-        "contact": "Gerard Stevens",
-        "email": "gstevens@kane.com.au",
-        "phone": "07 3054 1555",
-        "type": "primepropertymaintenance",
-        "business_target": "primepropertymaintenance",
-        "source": "https://www.kane.com.au/contact/",
-        "verified": "invalid",
-        "contacted": "2026-05-24T10:21",
-        "contact_status": "sent",
-        "notes": "General Manager, Kane Property Services. Email on contact page.",
-        "verified_reason": "Generic: Suspicious single-word prefix (gstevens)",
-        "verified_at": "2026-05-24T10:16:41.291496",
-        "sent": true
-      },
-      {
-        "company": "Kane Constructions",
-        "contact": "Jonathan Angelopoulos",
-        "email": "jange@arete.com.au",
-        "phone": "03 8420 1200",
-        "type": "primepropertymaintenance",
-        "business_target": "primepropertymaintenance",
-        "source": "https://www.kane.com.au/contact/",
-        "verified": "invalid",
-        "contacted": "2026-05-24T10:21",
-        "contact_status": "sent",
-        "notes": "Head of New Business at Arete Australia. Email on contact page.",
-        "verified_reason": "Generic: Suspicious single-word prefix (jange)",
-        "verified_at": "2026-05-24T10:16:41.294818",
-        "sent": true
-      },
-      {
-        "company": "Tradie Business Tools",
-        "contact": "Edinson Angarita",
-        "email": "edinson@toolshubpro.com.au",
-        "phone": "",
-        "type": "antoniopaving",
-        "business_target": "antoniopaving",
-        "source": "internal",
-        "verified": "approved",
-        "contacted": "2026-05-31T08:00",
-        "contact_status": "dry-run",
-        "notes": "Test contact for system validation.",
-        "verified_reason": "A record only (1 found)",
-        "verified_at": "2026-05-31T08:00:11.714479",
-        "sent": false
-      }
-    ],
     "2026-05-21_batch14": [
       {
         "company": "Simonds Homes",
@@ -1788,6 +1658,108 @@
         "contact": "",
         "business_target": "primeproperty",
         "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      }
+    ],
+    "2026-06-01_batch14": [
+      {
+        "company": "Frasers Property",
+        "email": "procurement@frasersproperty.com.au",
+        "website": "frasersproperty.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Barry Plant",
+        "email": "property@barryplant.com.au",
+        "website": "barryplant.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Porter Davis",
+        "email": "supplier@porterdavis.com.au",
+        "website": "porterdavis.com.au",
+        "type": "builder",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Constructora de viviendas en Melbourne",
+        "verified": "unknown"
+      },
+      {
+        "company": "GPT Group",
+        "email": "info@gpt.com.au",
+        "website": "gpt.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Jellis Craig",
+        "email": "commercial@jelliscraig.com.au",
+        "website": "jelliscraig.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "PRDnationwide",
+        "email": "commercial@prd.com.au",
+        "website": "prd.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "Hansen Yuncken",
+        "email": "info@hansenyuncken.com.au",
+        "website": "hansenyuncken.com.au",
+        "type": "constructora",
+        "contact": "",
+        "business_target": "antoniopaving",
+        "notes": "Proyectos comerciales y residenciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Nelson Alexander",
+        "email": "property@nelsonalexander.com.au",
+        "website": "nelsonalexander.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Gestionan propiedades comerciales",
+        "verified": "unknown"
+      },
+      {
+        "company": "Marshall White",
+        "email": "projects@marshallwhite.com.au",
+        "website": "marshallwhite.com.au",
+        "type": "real_estate",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Necesitan mantenimiento regular",
+        "verified": "unknown"
+      },
+      {
+        "company": "CBRE Australia",
+        "email": "facilities@cbre.com.au",
+        "website": "cbre.com.au",
+        "type": "property_mgmt",
+        "contact": "",
+        "business_target": "primeproperty",
+        "notes": "Administran propiedades comerciales y residenciales",
         "verified": "unknown"
       }
     ]
