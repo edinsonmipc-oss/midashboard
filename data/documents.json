@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Huddle Car Insurance — PDS",
+    "description": "Términos generales del seguro de auto",
+    "covers": "Documento de referencia del seguro de auto Huddle (Hollard Insurance). Cobertura Comprehensive, responsabilidad civil, opciones de pago.",
+    "expiry": "N/A",
+    "policy": "HMCP00306122",
+    "type": "insurance",
+    "category": "🚗 Car Insurance - PDS"
+  },
+  {
+    "name": "Huddle — Certificate of Currency",
+    "description": "Seguro de auto vigente — comprobante",
+    "covers": "Everyday Comprehensive Pay As You Drive. 🚐 2016 VW Caddy (1HH5TY). Valor acordado: $11,000. Exceso: $2,000. Pago total: $1,349.05/año.",
+    "expiry": "25 Feb 2027",
+    "policy": "HMCP00306122",
+    "holder": "Edinson Antonio Angarita Salazar",
+    "type": "certificate",
+    "category": "🚗 Car Insurance - Vigente"
+  },
+  {
+    "name": "Huddle — Certificate of Insurance",
+    "description": "Detalles de póliza — pagos mensuales",
+    "covers": "Póliza Comprehensive. VW Caddy $11,000. Pago: $162.84 luego $107.84/mes. Exceso: $2,000.",
+    "expiry": "25 Feb 2027",
+    "policy": "HMCP00306122",
+    "holder": "Edinson Antonio Angarita Salazar",
+    "type": "certificate",
+    "category": "🚗 Car Insurance - Póliza"
+  },
+  {
+    "name": "AAMI — Certificate of Currency",
+    "description": "Seguro de negocio vigente — comprobante",
+    "covers": "🏢 Mobile Business Insurance. Responsabilidad Civil: $10,000,000. Productos: $10,000,000. Equipos portátiles: $4,000. Landscape gardener. ABN 39 104 568 456.",
+    "expiry": "24 Feb 2027 (4pm)",
+    "policy": "SPD015797299",
+    "holder": "Edinson Antonio Angarita Salazar",
+    "type": "certificate",
+    "category": "🏢 Business Insurance - Vigente"
+  },
+  {
+    "name": "AAMI — Policy Schedule",
+    "description": "Detalles de la póliza del negocio",
+    "covers": "Póliza Business Insurance. Revenue: $50,000. Responsabilidad Civil $10M + Productos $10M. Landscape gardener. Tel: 0406 170 544.",
+    "expiry": "24 Feb 2027 (4pm)",
+    "policy": "SPD015797299",
+    "holder": "Edinson Antonio Angarita Salazar",
+    "type": "certificate",
+    "category": "🏢 Business Insurance - Póliza"
+  },
+  {
+    "name": "AAMI — PDS & Policy Wording",
+    "description": "Términos generales del seguro de negocio",
+    "covers": "Documento de referencia completo (188 páginas). Coberturas: Public Liability, Products Liability, Portable Items, Tax Probe, Commercial Motor.",
+    "expiry": "N/A",
+    "policy": "SPD015797299",
+    "type": "insurance",
+    "category": "🏢 Business Insurance - PDS"
+  },
+  {
+    "name": "AAMI — Direct Debit Agreement",
+    "description": "Acuerdo de débito directo",
+    "covers": "Acuerdo de pago automático. Débito directo desde cuenta bancaria para pagos mensuales del seguro.",
+    "expiry": "N/A",
+    "policy": "SPD015797299",
+    "type": "insurance",
+    "category": "🏢 Business Insurance - Pago"
+  },
+  {
+    "name": "AAMI — Financial Services Guide",
+    "description": "Guía de servicios financieros",
+    "covers": "FSG de AAMI Business Insurance. Información sobre servicios, contacto, resolución de quejas. Tel: 13 22 44.",
+    "expiry": "N/A",
+    "type": "insurance",
+    "category": "🏢 Business Insurance - Guía"
+  }
+]

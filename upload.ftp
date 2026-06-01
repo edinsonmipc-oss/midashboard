@@ -1,0 +1,9 @@
+open 153.92.8.188
+user u228844205 K7!mQ2#vL9@pX4$z
+cd /dashboard
+put index.html index.html
+put data.js data.js
+mkdir data
+cd data
+mput data/*.json
+quit
